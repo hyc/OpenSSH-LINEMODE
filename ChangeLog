@@ -1,5 +1,6 @@
 20030514
  - (djm) Bug #117: Don't lie to PAM about username
+ - (djm) RCSID sync w/ OpenBSD
 
 20030512
  - (djm) Redhat spec: Don't install profile.d scripts when not 
