@@ -352,6 +352,9 @@
 /* Define if you want a different $PATH for the superuser */
 #undef SUPERUSER_PATH
 
+/* Path that unprivileged child will chroot() to in privep mode */
+#undef PRIVSEP_PATH
+
 @BOTTOM@
 
 /* ******************* Shouldn't need to edit below this line ************** */
