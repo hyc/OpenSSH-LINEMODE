@@ -6,6 +6,8 @@
    from Nalin Dahyabhai <nalin@redhat.com>
  - (bal) Missing function prototype in bsd-snprintf.c patch by
    Mark Miller <markm@swoon.net>
+ - (djm) Split out and improve OSF SIA auth code. Patch from Chris Adams
+   <cmadams@hiwaay.net> with a little modification and KNF.
 
 20010213
  - (djm) Only test -S potential EGD sockets if they exist and are readable.
