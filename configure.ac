@@ -860,6 +860,8 @@ AC_CHECK_DECL(tcsendbreak,
 	[#include <termios.h>]
 )
 
+AC_CHECK_DECLS(h_errno, , ,[#include <netdb.h>])
+
 AC_CHECK_FUNCS(setresuid, [
 	dnl Some platorms have setresuid that isn't implemented, test for this
 	AC_MSG_CHECKING(if setresuid seems to work)
