@@ -113,7 +113,8 @@ case "$host" in
 	AC_DEFINE(DISABLE_SHADOW)
 	AC_DEFINE(DISABLE_UTMP)
 	AC_DEFINE(SPT_TYPE,SPT_PSTAT)
-	LIBS="$LIBS -lxnet -lsec -lsecpw"
+	LIBS="$LIBS -lsec -lsecpw"
+	AC_CHECK_LIB(xnet, t_error, ,AC_MSG_ERROR([*** -lxnet needed on HP-UX - check config.log ***]))
 	disable_ptmx_check=yes
 	;;
 *-*-hpux10*)
@@ -128,7 +129,8 @@ case "$host" in
 	AC_DEFINE(DISABLE_SHADOW)
 	AC_DEFINE(DISABLE_UTMP)
 	AC_DEFINE(SPT_TYPE,SPT_PSTAT)
-	LIBS="$LIBS -lxnet -lsec"
+	LIBS="$LIBS -lsec"
+	AC_CHECK_LIB(xnet, t_error, ,AC_MSG_ERROR([*** -lxnet needed on HP-UX - check config.log ***]))
 	;;
 *-*-hpux11*)
 	CPPFLAGS="$CPPFLAGS -D_HPUX_SOURCE -D_XOPEN_SOURCE -D_XOPEN_SOURCE_EXTENDED=1"
@@ -140,7 +142,8 @@ case "$host" in
 	AC_DEFINE(DISABLE_SHADOW)
 	AC_DEFINE(DISABLE_UTMP)
 	AC_DEFINE(SPT_TYPE,SPT_PSTAT)
-	LIBS="$LIBS -lxnet -lsec"
+	LIBS="$LIBS -lsec"
+	AC_CHECK_LIB(xnet, t_error, ,AC_MSG_ERROR([*** -lxnet needed on HP-UX - check config.log ***]))
 	;;
 *-*-irix5*)
 	CPPFLAGS="$CPPFLAGS -I/usr/local/include"
