@@ -1,3 +1,6 @@
+20020625
+ - (stevesk) [INSTALL acconfig.h configure.ac defines.h] remove --with-rsh
+
 20020624
  - OpenBSD CVS Sync
    - deraadt@cvs.openbsd.org 2002/06/23 03:25:50

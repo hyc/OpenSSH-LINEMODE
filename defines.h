@@ -316,14 +316,6 @@ struct winsize {
 # define _PATH_MAILDIR MAILDIR
 #endif /* !defined(_PATH_MAILDIR) && defined(MAILDIR) */
 
-#ifndef _PATH_RSH
-# ifdef RSH_PATH
-#  define _PATH_RSH RSH_PATH
-# else /* RSH_PATH */
-#  define _PATH_RSH "/usr/bin/rsh"
-# endif /* RSH_PATH */
-#endif /* _PATH_RSH */
-
 #ifndef _PATH_NOLOGIN
 # define _PATH_NOLOGIN "/etc/nologin"
 #endif

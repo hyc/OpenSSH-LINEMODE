@@ -228,9 +228,6 @@
 /* Define if xauth is found in your path */
 #undef XAUTH_PATH
 
-/* Define if rsh is found in your path */
-#undef RSH_PATH
-
 /* Define if you want to allow MD5 passwords */
 #undef HAVE_MD5_PASSWORDS
 
