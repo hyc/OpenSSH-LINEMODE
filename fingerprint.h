@@ -1,6 +1,5 @@
 /*
- * Copyright (c) 1999 Theo de Raadt
- * All rights reserved.
+ * Copyright (c) 1999 Markus Friedl.  All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions
@@ -10,6 +9,11 @@
  * 2. Redistributions in binary form must reproduce the above copyright
  *    notice, this list of conditions and the following disclaimer in the
  *    documentation and/or other materials provided with the distribution.
+ * 3. All advertising materials mentioning features or use of this software
+ *    must display the following acknowledgement:
+ *      This product includes software developed by Markus Friedl.
+ * 4. The name of the author may not be used to endorse or promote products
+ *    derived from this software without specific prior written permission.
  *
  * THIS SOFTWARE IS PROVIDED BY THE AUTHOR ``AS IS'' AND ANY EXPRESS OR
  * IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES
@@ -22,37 +26,10 @@
  * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF
  * THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
+/* RCSID("$Id$"); */
 
+#ifndef FINGERPRINT_H
+#define FINGERPRINT_H
 
-#include "includes.h"
-RCSID("$Id$");
-
-#include "xmalloc.h"
-#include "ssh.h"
-
-/*
- * ensure all of data on socket comes through. f==read || f==write
- */
-int
-atomicio(f, fd, s, n)
-	int (*f) ();
-	int fd;
-	void *s;
-	size_t n;
-{
-	int res, pos = 0;
-
-	while (n > pos) {
-		res = (f) (fd, s + pos, n - pos);
-		switch (res) {
-		case -1:
-			if (errno == EINTR || errno == EAGAIN)
-				continue;
-		case 0:
-			return (res);
-		default:
-			pos += res;
-		}
-	}
-	return (pos);
-}
+char   *fingerprint(BIGNUM * e, BIGNUM * n);
+#endif
