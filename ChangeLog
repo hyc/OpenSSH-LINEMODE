@@ -1,3 +1,6 @@
+20010714
+ - (stevesk) change getopt() declaration
+
 20010713
  - (djm) Enable /etc/nologin check on PAM systems, as some lack the 
    pam_nologin module. Report from William Yodlowsky 
