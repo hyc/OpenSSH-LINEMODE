@@ -4,6 +4,8 @@
  - (bal) [configure.ac defines.h loginrec.c sshd.c sshpty.c] Partial sync
    with Cray (mostly #ifdef renaming).  Patch by wendyp@cray.com.
  - (bal) [configure.ac]  Missing ;; from cray patch.
+ - (bal) [monitor_mm.c openbsd-compat/xmmap.h] Move xmmap() defines
+   into it's own header.
 
 20020721
  - (stevesk) [auth-pam.c] merge cosmetic changes from solar's
