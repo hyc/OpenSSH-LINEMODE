@@ -1,5 +1,6 @@
 20020725
  - (djm) Remove some cruft from INSTALL
+ - (djm) Latest config.guess and config.sub from ftp://ftp.gnu.org/gnu/config/
 
 20020723
  - (bal) [bsd-cray.c bsd-cray.h] Part 2 of Cray merger. 
