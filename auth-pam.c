@@ -245,17 +245,6 @@ sshpam_password_change_required(int reqd)
 	}
 }
 
-/* Check ssh internal flags in addition to PAM */
-
-static int
-sshpam_login_allowed(Authctxt *ctxt)
-{
-	if (ctxt->valid && (ctxt->pw->pw_uid != 0 ||
-	    options.permit_root_login == PERMIT_YES))
-		return 1;
-	return 0;
-}
-
 /* Import regular and PAM environment from subprocess */
 static void
 import_environments(Buffer *b)
@@ -713,7 +702,9 @@ sshpam_query(void *ctx, char **name, char **info,
 				**prompts = NULL;
 			}
 			if (type == PAM_SUCCESS) {
-				if (!sshpam_login_allowed(sshpam_authctxt))
+				if (!sshpam_authctxt->valid ||
+				    (sshpam_authctxt->pw->pw_uid == 0 &&
+				    options.permit_root_login != PERMIT_YES))
 					fatal("Internal error: PAM auth "
 					    "succeeded when it should have "
 					    "failed");
@@ -762,7 +753,9 @@ sshpam_respond(void *ctx, u_int num, char **resp)
 		return (-1);
 	}
 	buffer_init(&buffer);
-	if (sshpam_login_allowed(sshpam_authctxt))
+	if (sshpam_authctxt->valid &&
+	    (sshpam_authctxt->pw->pw_uid != 0 ||
+	     options.permit_root_login == PERMIT_YES))
 		buffer_put_cstring(&buffer, *resp);
 	else
 		buffer_put_cstring(&buffer, badpw);
@@ -1125,7 +1118,8 @@ sshpam_auth_passwd(Authctxt *authctxt, const char *password)
 	 * by PermitRootLogin, use an invalid password to prevent leaking
 	 * information via timing (eg if the PAM config has a delay on fail).
 	 */
-	if (!sshpam_login_allowed(authctxt))
+	if (!authctxt->valid || (authctxt->pw->pw_uid == 0 &&
+	     options.permit_root_login != PERMIT_YES))
 		sshpam_password = badpw;
 
 	sshpam_err = pam_set_item(sshpam_handle, PAM_CONV,
@@ -1136,7 +1130,7 @@ sshpam_auth_passwd(Authctxt *authctxt, const char *password)
 
 	sshpam_err = pam_authenticate(sshpam_handle, flags);
 	sshpam_password = NULL;
-	if (sshpam_err == PAM_SUCCESS && sshpam_login_allowed(authctxt)) {
+	if (sshpam_err == PAM_SUCCESS && authctxt->valid) {
 		debug("PAM: password authentication accepted for %.100s",
 		    authctxt->user);
                return 1;
