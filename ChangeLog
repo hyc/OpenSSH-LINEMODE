@@ -113,6 +113,9 @@
    - markus@cvs.openbsd.org 2002/01/10 11:13:29
      [serverloop.c]
      skip client_alive_check until there are channels; ok beck@
+   - markus@cvs.openbsd.org 2002/01/10 11:24:04
+     [clientloop.c]
+     handle SSH2_MSG_GLOBAL_REQUEST (just reply with failure); ok djm@
 
 
 20020121
