@@ -1,6 +1,7 @@
 20010213
  - (bal) added NeXT work around for bsd-snprintf.c in bsd-nextstep.h.
  - (bal) added TODO item to clean up and sort out 'varargs' from 'stdargs'
+ - (djm) Only test -S potential EGD sockets if they exist and are readable.
 
 20010212
  - (djm) Update Redhat specfile to allow --define "skip_x11_askpass 1", 
