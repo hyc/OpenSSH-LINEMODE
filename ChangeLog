@@ -8,6 +8,10 @@
      [sftp-int.c]
      Fix issue pointed out with ls not handling large directories 
      with embeded paths correctly.  OK damien@
+   - hshoexer@cvs.openbsd.org 2004/01/23 19:26:33
+     [cipher.c]
+     rename acss@opebsd.org to acss@openssh.org
+     ok deraadt@
  - (djm) [acss.c acss.h cipher-acss.c] Portable support for ACSS 
    if libcrypto lacks it
 
