@@ -33,6 +33,10 @@
    - djm@cvs.openbsd.org 2004/06/21 22:41:31
      [sftp.1]
      document sort options
+   - djm@cvs.openbsd.org 2004/06/22 01:16:39
+     [sftp.c]
+     don't show .files by default in ls, add -a option to turn them back on;
+     ok markus
 
 20040620
  - (tim) [configure.ac Makefile.in] Only change TEST_SHELL on broken platforms.
