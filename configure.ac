@@ -287,6 +287,7 @@ mips-sony-bsd|mips-sony-newsos4)
 	LDFLAGS="$LDFLAGS"
 	LIBS="$LIBS -lgen -lrsc -lshare -luex -lacm"
 	MANTYPE=cat
+	;;
 *-*-unicos*)
 	no_libsocket=1
 	no_libnsl=1
