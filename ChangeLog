@@ -78,6 +78,7 @@
      [includes.h pathnames.h readconf.c servconf.c]
      move the path for xauth to pathnames.h
  - (bal) configure.in fix for Tru64 (forgeting to reset $LIB)
+ - (bal) ANSIify strmode()
 
 20010606
  - OpenBSD CVS Sync
