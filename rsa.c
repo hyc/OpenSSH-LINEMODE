@@ -49,6 +49,7 @@ rsa_alive()
 {
 	RSA *key;
 
+	seed_rng();
 	key = RSA_generate_key(32, 3, NULL, NULL);
 	if (key == NULL)
 		return (0);
@@ -77,7 +78,7 @@ keygen_progress(int p, int n, void *arg)
 void
 seed_rng()
 {
-	char buf[32];
+	char buf[64];
 
 	get_random_bytes(buf, sizeof(buf));
 	RAND_seed(buf, sizeof(buf));
