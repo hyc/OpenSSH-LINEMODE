@@ -165,6 +165,9 @@
 /* Some versions of /bin/login need the TERM supplied on the commandline */
 #undef LOGIN_NEEDS_TERM
 
+/* Define if your login program cannot handle end of options ("--") */
+#undef LOGIN_NO_ENDOPT
+
 /* Define if you want to specify the path to your lastlog file */
 #undef CONF_LASTLOG_FILE
 
