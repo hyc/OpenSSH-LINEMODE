@@ -79,6 +79,9 @@
    - markus@cvs.openbsd.org 2001/02/28 12:55:07
      [channels.c]
      unify debug messages
+   - deraadt@cvs.openbsd.org 2001/02/28 17:52:54
+     [misc.c]
+     for completeness, copy pw_gecos too
 
 20010304
  - (bal) Remove make-ssh-known-hosts.1 since it's no longer valid.
