@@ -62,7 +62,7 @@ Documentation:
 - Create a Documentation/ directory?
 
 Clean up configure/makefiles:
-- Clean up configure.in - There are a few double #defined variables
+- Clean up configure.ac - There are a few double #defined variables
   left to do.  HAVE_LOGIN is one of them.  Consider NOT looking for
   information in wtmpx or utmpx or any of that stuff if it's not detected
   from the start

@@ -123,7 +123,7 @@
   symbols for the platform.
 
   Use logintest to check which symbols are defined before modifying
-  configure.in and loginrec.c. (You have to build logintest yourself
+  configure.ac and loginrec.c. (You have to build logintest yourself
   with 'make logintest' as it's not built by default.)
 
   Otherwise, patches to the specific method(s) are very helpful!

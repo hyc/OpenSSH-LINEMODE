@@ -454,7 +454,7 @@ struct winsize {
  * Define this to use pipes instead of socketpairs for communicating with the
  * client program.  Socketpairs do not seem to work on all systems.
  *
- * configure.in sets this for a few OS's which are known to have problems
+ * configure.ac sets this for a few OS's which are known to have problems
  * but you may need to set it yourself
  */
 /* #define USE_PIPES 1 */
