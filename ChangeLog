@@ -1,6 +1,8 @@
 20020925
  - (bal) Fix issue where successfull login does not clear failure counts
    in AIX.  Patch by dtucker@zip.com.au ok by djm
+ - (tim) Cray fixes (bug 367) based on patch from Wendy Palm @ cray.
+    This does not include the deattack.c fixes.
 
 20020923
  - (djm) OpenBSD CVS Sync

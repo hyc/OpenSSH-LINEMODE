@@ -34,7 +34,7 @@
  * on UNICOS systems.
  *
  */
-#if defined(_CRAY) && !defined(_CRAYSV2)
+#ifdef _UNICOS
 
 #include <udb.h>
 #include <tmpdir.h>

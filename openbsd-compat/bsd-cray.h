@@ -37,7 +37,7 @@
 #ifndef _BSD_CRAY_H
 #define _BSD_CRAY_H
 
-#if defined(_CRAY) && !defined(_CRAYSV2)
+#ifdef _UNICOS
 void cray_init_job(struct passwd *);		/* init cray job */
 void cray_job_termination_handler(int);		/* process end of job signal */
 void cray_login_failure(char *username, int errcode);

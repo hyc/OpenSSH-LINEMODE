@@ -622,13 +622,13 @@ construct_utmp(struct logininfo *li,
 	switch (li->type) {
 	case LTYPE_LOGIN:
 		ut->ut_type = USER_PROCESS;
-#if defined(_CRAY) && !defined(_CRAYSV2)
+#ifdef _UNICOS
 		cray_set_tmpdir(ut);
 #endif
 		break;
 	case LTYPE_LOGOUT:
 		ut->ut_type = DEAD_PROCESS;
-#if defined(_CRAY) && !defined(_CRAYSV2)
+#ifdef _UNICOS
 		cray_retain_utmp(ut, li->pid);
 #endif
 		break;

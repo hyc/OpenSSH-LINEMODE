@@ -150,6 +150,9 @@
 /* Define if you don't want to use lastlog */
 #undef DISABLE_LASTLOG
 
+/* Define if you don't want to use lastlog in session.c */
+#undef NO_SSH_LASTLOG
+
 /* Define if you don't want to use utmp */
 #undef DISABLE_UTMP
 
