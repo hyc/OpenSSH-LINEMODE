@@ -740,7 +740,7 @@ utmp_write_direct(struct logininfo *li, struct utmp *ut)
 		}
 		
 		(void)lseek(fd, (off_t)(tty * sizeof(struct utmp)), SEEK_SET);
-		if (atomicio(write, fd, ut, sizeof(ut)) != sizeof(ut))
+		if (atomicio(write, fd, ut, sizeof(*ut)) != sizeof(*ut))
 			log("utmp_write_direct: error writing %s: %s",
 			    UTMP_FILE, strerror(errno));
       
