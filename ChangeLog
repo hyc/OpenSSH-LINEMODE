@@ -6,6 +6,8 @@
  - (dtucker) [defines.h] Bug #336: Add CMSG_DATA and CMSG_FIRSTHDR macros if
    not already defined (eg Linux with some versions of libc5), based on those
    from OpenBSD.
+ - (dtucker) [openbsd-compat/bsd-cygwin_util.c openbsd-compat/bsd-cygwin_util.h]
+   Remove incorrect filenames from comments (file names are in Id tags).
 
 20030802
  - (dtucker) [monitor.h monitor_wrap.h] Remove excess ident tags.

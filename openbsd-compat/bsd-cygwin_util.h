@@ -1,8 +1,6 @@
 /* $Id$ */
 
 /*
- * cygwin_util.c
- *
  * Copyright (c) 2000, 2001, Corinna Vinschen <vinschen@cygnus.com>
  *
  * Redistribution and use in source and binary forms, with or without
