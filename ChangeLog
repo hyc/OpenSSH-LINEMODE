@@ -1,3 +1,9 @@
+20010403
+ - OpenBSD CVS Sync
+   - stevesk@cvs.openbsd.org 2001/04/02 14:15:31
+     [sshd.8]
+     typo; ok markus@
+
 20010402
  - (stevesk) log.c openbsd sync; missing newlines
  - (stevesk) sshpty.h openbsd sync; PTY_H -> SSHPTY_H
