@@ -1,6 +1,8 @@
 20040122
  - (dtucker) [configure.ac] Use krb5-config where available for Kerberos/
    GSSAPI detection, libs and includes.  ok djm@
+ - (dtucker) [session.c] Enable AFS support in conjunction with KRB5 not
+   just HEIMDAL.
 
 20040121
  - (djm) OpenBSD CVS Sync
