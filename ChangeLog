@@ -3,6 +3,7 @@
  - (bal) Fixed _DISABLE_VPOSIX in readpassphrase.c.
  - (bal) Updated zlib's home.  Thanks to David Howe <DaveHowe@gmx.co.uk>.
  - (stevesk) remove _REENTRANT #define
+ - (stevesk) session.c: use u_int for envsize
 
 20010628
  - (djm) Sync openbsd-compat with -current libc
