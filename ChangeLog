@@ -26,6 +26,9 @@
      [session.c]
      call ssh_gssapi_storecreds conditionally from do_exec(); 
      with sxw@inf.ed.ac.uk
+   - markus@cvs.openbsd.org 2003/08/31 13:30:18
+     [gss-serv.c]
+     correct string termination in parse_ename(); sxw@inf.ed.ac.uk
 
 20030829
  - (bal) openbsd-compat/ clean up.  Considate headers, add in Id on our
