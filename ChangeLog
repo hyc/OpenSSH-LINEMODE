@@ -23,6 +23,9 @@
    - markus@cvs.openbsd.org 2002/03/30 18:51:15
      [monitor.c serverloop.c sftp-int.c sftp.c sshd.c]
      check waitpid for EINTR; based on patch from peter@ifm.liu.se
+   - markus@cvs.openbsd.org 2002/04/01 22:02:16
+     [sftp-client.c]
+     20480 is an upper limit for older server
 
 20020401
  - (stevesk) [monitor.c] PAM should work again; will *not* work with
