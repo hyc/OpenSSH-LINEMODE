@@ -51,8 +51,6 @@
 #include <sys/exec.h>
 #endif
 
-extern char **environ;
-
 /*------
  * Alternative ways of updating ps display:
  *
@@ -86,6 +84,9 @@ extern char **environ;
 #ifndef SETPROCTITLE_PS_PADDING
 # define SETPROCTITLE_PS_PADDING	' '
 #endif
+#endif /* HAVE_SETPROCTITLE */
+
+extern char **environ;
 
 /*
  * argv clobbering uses existing argv space, all other methods need a buffer
@@ -104,6 +105,7 @@ static char **save_argv;
 
 extern char *__progname;
 
+#ifndef HAVE_SETPROCTITLE
 /*
  * Call this to update the ps status display to a fixed prefix plus an
  * indication of what you're currently doing passed in the argument.
