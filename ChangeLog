@@ -1,5 +1,6 @@
 20010320
- - (bal) glob.c update to added GLOB_LIMITS.
+ - (bal) glob.c update to added GLOB_LIMITS (OpenBSD CVS).
+ - (bal) glob.c update to set gl_pathv to NULL (OpenBSD CVS).
 
 20010319
  - (djm) Seed PRNG at startup, rather than waiting for arc4random calls to 
