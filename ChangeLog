@@ -1,3 +1,6 @@
+20040126
+ - (tim) Typo in regress/README.regress
+
 20040124
  - (djm) Typo in openbsd-compat/bsd-openpty.c; from wendyp AT cray.com
 
