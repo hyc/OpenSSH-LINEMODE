@@ -3,6 +3,8 @@
    sshd_config; ok dtucker@
  - (djm) [configure.ac] Warn if the system has no known way of figuring out 
    which user is on the other end of a Unix domain socket; ok dtucker@
+ - (bal) [openbsd-compat/sys-queue.h] Reintroduce machinary to handle
+   old/broken/incomplete <sys/queue.h>.
 
 20040513
  - (dtucker) [configure.ac] Bug #867: Additional tests for res_query in
