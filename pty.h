@@ -43,4 +43,6 @@ void
 pty_change_window_size(int ptyfd, int row, int col,
     int xpixel, int ypixel);
 
+void	pty_setowner(struct passwd *pw, const char *ttyname);
+
 #endif				/* PTY_H */
