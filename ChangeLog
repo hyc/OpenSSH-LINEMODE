@@ -42,6 +42,9 @@
    - stevesk@cvs.openbsd.org 2002/06/20 20:00:05
      [scp.1 sftp.1]
      ssh_config(5)
+   - stevesk@cvs.openbsd.org 2002/06/20 20:03:34
+     [ssh_config sshd_config]
+     refer to config file man page
  - (bal) Cygwin special handling of empty passwords wrong.  Patch by
    vinschen@redhat.com
 
