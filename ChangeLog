@@ -1,3 +1,7 @@
+20020330
+ - (stevesk) [configure.ac] remove header check for sys/ttcompat.h
+   bug 167
+
 20020327
  - (bal) 'pw' should be 'authctxt->pw' in auth1.c spotted by 
    kent@lysator.liu.se
