@@ -175,6 +175,7 @@
    - deraadt@cvs.openbsd.org 2001/03/05 08:37:27
      [ssh-keyscan.c]
      skip inlining, why bother
+ - (stevesk) sftp.c: handle __progname
 
 20010304
  - (bal) Remove make-ssh-known-hosts.1 since it's no longer valid.
