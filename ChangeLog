@@ -12,6 +12,11 @@
    - markus@cvs.openbsd.org 2003/12/09 17:30:05
      [ssh.c]
      don't modify argv for ssh -o; similar to sshd.c 1.283
+   - markus@cvs.openbsd.org 2003/12/09 21:53:37
+     [readconf.c readconf.h scp.1 servconf.c servconf.h sftp.1 ssh.1]
+     [ssh_config.5 sshconnect.c sshd.c sshd_config.5]
+     rename keepalive to tcpkeepalive; the old name causes too much
+     confusion; ok djm, dtucker; with help from jmc@
 
 20031209
  - (dtucker) OpenBSD CVS Sync
