@@ -17,6 +17,9 @@
      [ssh_config.5 sshconnect.c sshd.c sshd_config.5]
      rename keepalive to tcpkeepalive; the old name causes too much
      confusion; ok djm, dtucker; with help from jmc@
+   - dtucker@cvs.openbsd.org 2003/12/09 23:45:32
+     [clientloop.c]
+     Clear exit code when ssh -N is terminated with a SIGTERM.  ok markus@
 
 20031209
  - (dtucker) OpenBSD CVS Sync
