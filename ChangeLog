@@ -1,3 +1,9 @@
+20010517
+ - OpenBSD CVS Sync
+   - markus@cvs.openbsd.org 2001/05/12 19:53:13
+     [sftp-server.c]
+     readlink does not NULL-terminate; mhe@home.se
+
 20010512
  - OpenBSD CVS Sync
    - markus@cvs.openbsd.org 2001/05/11 14:59:56
