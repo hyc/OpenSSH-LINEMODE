@@ -1,5 +1,10 @@
 20040217
  - (djm) Simplify the license on code I have written. No code changes.
+ - (djm) OpenBSD CVS Sync
+   - djm@cvs.openbsd.org 2004/02/17 05:39:51
+     [sftp-client.c sftp-client.h sftp-glob.c sftp-glob.h sftp-int.c]
+     [sftp-int.h sftp.c]
+     switch to license.template for code written by me (belated, I know...)
 
 20040212
  - (tim) [Makefile.in regress/sftp-badcmds.sh regress/test-exec.sh]
