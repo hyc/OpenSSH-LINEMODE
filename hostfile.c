@@ -231,7 +231,7 @@ check_host_in_hostfile(const char *filename, const char *host,
       }
 
       /* Check if the current key is the same as the given key. */
-      if (kbits == bits && BN_cmp(ke, e) == 0 && BN_cmp(kn, n) == 0)
+      if (BN_cmp(ke, e) == 0 && BN_cmp(kn, n) == 0)
 	{
 	  /* Ok, they match. */
 	  fclose(f);

@@ -50,6 +50,13 @@ ssh_get_authentication_socket()
   sock = socket(AF_UNIX, SOCK_STREAM, 0);
   if (sock < 0)
     return -1;
+
+  /* close on exec */
+  if (fcntl(sock, F_SETFD, 1) == -1)
+    {
+      close(sock);
+      return -1;
+    }
   
   if (connect(sock, (struct sockaddr *)&sunaddr, sizeof(sunaddr)) < 0)
     {
