@@ -1,3 +1,7 @@
+20050306
+ - (dtucker) [monitor.c] Bug #125 comment #47: fix errors returned by monitor
+   when attempting to audit disconnect events.  Reported by Phil Dibowitz.
+
 20050305
  - (djm) [contrib/cygwin/README] Improve Cygwin build documentation. Patch 
    from vinschen at redhat.com
