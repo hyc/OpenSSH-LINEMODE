@@ -303,6 +303,10 @@ struct winsize {
 #define XAUTH_PATH "/usr/X11R6/bin/xauth"
 #endif /* XAUTH_PATH */
 
+#ifndef _PATH_TTY
+# define _PATH_TTY "/dev/tty"
+#endif
+
 /* Macros */
 
 #if defined(HAVE_LOGIN_GETCAPBOOL) && defined(HAVE_LOGIN_CAP_H)
