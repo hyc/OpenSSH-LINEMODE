@@ -40,6 +40,13 @@
      dugsong ok
      XXX isn't it sensitive to the order of -I/usr/include/kerberosIV and
      -I/usr/include/kerberosV?
+   - markus@cvs.openbsd.org 2001/07/11 16:29:59
+     [ssh.c]
+     sort options string, fix -p, add -k
+   - markus@cvs.openbsd.org 2001/07/11 18:26:15
+     [auth.c]
+     no need to call dirname(pw->pw_dir).
+     note that dirname(3) modifies its argument on some systems.
 
 20010711
  - (djm) dirname(3) may modify its argument on glibc and other systems. 
