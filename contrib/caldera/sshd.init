@@ -37,7 +37,7 @@ _status() {
   if [ ! -e $SVIlock ]; then
     # no lock-file => not started == stopped?
     ret=3
-  elif { [ -n "$pidf" ] && [ ! -f "$pidf" ] } || [ -z "$pid" ]; then
+  elif [ -n "$pidf" -a ! -f "$pidf" ] || [ -z "$pid" ]; then
     # pid-file given but not present or no pid => died, but was not stopped
     ret=2
   elif [ -r /proc/$pid/cmdline ] &&

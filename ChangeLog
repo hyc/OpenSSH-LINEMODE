@@ -1,4 +1,10 @@
-20011123
+20011103
+ - (tim) [ contrib/caldera/openssh.spec contrib/caldera/sshd.init] Updates 
+   from Raymund Will <ray@caldera.de>
+   [acconfig.h configure.in] Clean up login checks.
+   Problem reported by Jim Knoble <jmknoble@pobox.com>
+
+20011101
  - (djm) Compat define for OpenSSL < 0.9.6 (No OPENSSL_free)
 
 20011031

@@ -178,9 +178,6 @@
 /* Define if you want to specify the path to your wtmpx file */
 #undef CONF_WTMPX_FILE
 
-/* Define is libutil has login() function */
-#undef HAVE_LIBUTIL_LOGIN
-
 /* Define if you want external askpass support */
 #undef USE_EXTERNAL_ASKPASS
 
