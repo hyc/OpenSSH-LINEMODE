@@ -22,6 +22,9 @@
    - stevesk@cvs.openbsd.org 2001/07/05 20:32:47
      [sshconnect1.c]
      statement after label; ok dugsong@
+   - stevesk@cvs.openbsd.org 2001/07/08 15:23:38
+     [servconf.c]
+     fix ``MaxStartups max''; ok markus@
 
 20010711
  - (djm) dirname(3) may modify its argument on glibc and other systems. 
