@@ -1,3 +1,7 @@
+20031115
+ - (dtucker) [regress/agent-ptrace.sh] Test for GDB output from Solaris and
+   HP-UX, skip test on AIX.
+
 20031113
  - (dtucker) [auth-pam.c] Append newlines to lines output by the
    pam_chauthtok_conv().
