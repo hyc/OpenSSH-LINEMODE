@@ -8,6 +8,10 @@
  - (dtucker) [configure.ac] Bug #893: check for libresolv early on Reliant
    Unix; prevents problems relating to the location of -lresolv in the
    link order.
+ - (dtucker) [session.c] Bug #918: store credentials from gssapi-with-mic
+   authentication early enough to be available to PAM session modules when
+   privsep=yes.  Patch from deengert at anl.gov, ok'ed in principle by Sam
+   Hartman and similar to Debian's ssh-krb5 package.
 
 20050215
  - (dtucker) [config.sh.in] Collect oslevel -r too.
