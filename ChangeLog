@@ -1,3 +1,9 @@
+20010512
+ - OpenBSD CVS Sync
+   - markus@cvs.openbsd.org 2001/05/11 14:59:56
+     [clientloop.c misc.c misc.h]
+     add unset_nonblock for stdout/err flushing in client_loop().
+
 20010511
  - OpenBSD CVS Sync
    - markus@cvs.openbsd.org 2001/05/09 22:51:57
