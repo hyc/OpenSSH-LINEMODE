@@ -3,6 +3,9 @@
    - deraadt@cvs.openbsd.org 2002/06/23 03:25:50
      [tildexpand.c]
      KNF
+   - deraadt@cvs.openbsd.org 2002/06/23 03:26:19
+     [cipher.c key.c]
+     KNF
 
 20020623
  - (stevesk) [configure.ac] bug #255 LOGIN_NEEDS_UTMPX for AIX.
