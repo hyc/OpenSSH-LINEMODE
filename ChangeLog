@@ -3,6 +3,9 @@
    - markus@cvs.openbsd.org 2002/06/11 23:03:54
      [ssh.c]
      remove unused cruft.
+   - markus@cvs.openbsd.org 2002/06/12 01:09:52
+     [ssh.c]
+     ssh_connect returns 0 on success
 
 20020611
  - (bal) ssh-agent.c RCSD fix (|unexpand already done)
