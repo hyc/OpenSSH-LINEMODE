@@ -195,13 +195,13 @@ moduli:
 
 clean:	regressclean
 	rm -f *.o *.a $(TARGETS) logintest config.cache config.log
-	rm -f *.out core
+	rm -f *.out core survey
 	(cd openbsd-compat && $(MAKE) clean)
 
 distclean:	regressclean
 	rm -f *.o *.a $(TARGETS) logintest config.cache config.log
 	rm -f *.out core opensshd.init
-	rm -f Makefile buildpkg.sh config.h config.status ssh_prng_cmds *~
+	rm -f Makefile buildpkg.sh config.h config.status ssh_prng_cmds survey.sh *~
 	rm -rf autom4te.cache
 	(cd openbsd-compat && $(MAKE) distclean)
 	(cd scard && $(MAKE) distclean)
@@ -410,6 +410,15 @@ regressclean:
 	if [ -f regress/Makefile ] && [ -r regress/Makefile ]; then \
 		(cd regress && $(MAKE) clean) \
 	fi
+
+survey: survey.sh ssh
+	@$(SHELL) ./survey.sh > survey
+	@echo 'The survey results have been placed in the file "survey" in the'
+	@echo 'current directory.  Please review the file then send with'
+	@echo '"make send-survey".'
+
+send-survey:	survey
+	mail portable-survey@mindrot.org <survey
 
 package: $(CONFIGFILES) ssh_prng_cmds.out $(MANPAGES) $(TARGETS)
 	if [ "@MAKE_PACKAGE_SUPPORTED@" = yes ]; then \

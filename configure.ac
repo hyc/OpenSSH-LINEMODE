@@ -3020,7 +3020,8 @@ if test "$ac_cv_lib_pam_pam_set_item" = yes ; then
 fi
 
 AC_EXEEXT
-AC_CONFIG_FILES([Makefile buildpkg.sh opensshd.init openbsd-compat/Makefile scard/Makefile ssh_prng_cmds])
+AC_CONFIG_FILES([Makefile buildpkg.sh opensshd.init openbsd-compat/Makefile \
+	scard/Makefile ssh_prng_cmds survey.sh])
 AC_OUTPUT
 
 # Print summary of options
