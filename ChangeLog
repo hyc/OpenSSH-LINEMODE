@@ -93,6 +93,9 @@
      [rsa.c rsa.h ssh-agent.c ssh-keygen.c]
      s/generate_additional_parameters/rsa_generate_additional_parameters/
      http://www.humppa.com/
+   - markus@cvs.openbsd.org 2001/06/27 06:26:36
+     [ssh-add.c]
+     convert to getopt(3)
  
 20010629
  - (bal) Removed net_aton() since we don't use it any more
