@@ -10,6 +10,9 @@
      [session.c ssh.c]
      don't limit xauth pathlen on client side and longer print length on
      server when debug; ok markus@
+   - deraadt@cvs.openbsd.org 2002/05/19 20:54:52
+     [log.h]
+     extra commas in enum not 100% portable
 
 20020604
  - (stevesk) [channels.c] bug #164 patch from YOSHIFUJI Hideaki (changed
