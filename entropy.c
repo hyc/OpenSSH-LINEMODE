@@ -63,6 +63,10 @@ RCSID("$Id$");
 # define RUSAGE_CHILDREN 0
 #endif
 
+#if defined(_POSIX_SAVED_IDS) && !defined(BROKEN_SAVED_UIDS)
+# define SAVED_IDS_WORK_WITH_SETEUID
+#endif
+
 #if defined(EGD_SOCKET) || defined(RANDOM_POOL)
 
 #ifdef EGD_SOCKET

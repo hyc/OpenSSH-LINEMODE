@@ -297,7 +297,7 @@
 #undef NO_X11_UNIX_SOCKETS
 
 /* Needed for SCO and NeXT */
-#undef SAVED_IDS_WORK_WITH_SETEUID
+#undef BROKEN_SAVED_UIDS
 
 @BOTTOM@
 
