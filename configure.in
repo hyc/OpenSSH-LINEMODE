@@ -696,6 +696,7 @@ int main(void)
 		break;
 	], [])
 done
+LIBS="$saved_LIBS"
 
 if test ! -z "$no_rsa" ; then
 	AC_MSG_RESULT(disabled)
@@ -711,7 +712,7 @@ else
 		else
 			RSA_MSG="yes (using RSAref)"
 			AC_MSG_RESULT(using RSAref)
-			LIBS="$saved_LIBS -lcrypto -lRSAglue -lrsaref"
+			LIBS="$LIBS -lcrypto -lRSAglue -lrsaref"
 		fi
 	fi
 fi
