@@ -7,6 +7,8 @@
    <vinschen@redhat.com> and myself.
  - (djm) Close listen_sock on bind() failures. Patch from Arkadiusz
    Miskiewicz <misiek@pld.ORG.PL>
+ - (djm) Robustify EGD/PRNGd code in face of socket closures. Patch from
+   Todd C. Miller <Todd.Miller@courtesan.com>
 
 20010217
  - (bal) OpenBSD Sync:
