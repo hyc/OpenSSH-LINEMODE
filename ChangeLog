@@ -2,6 +2,10 @@
  - Remove make-ssh-known-hosts.pl, ssh-keyscan is better.
  - Document PAM ChallengeResponseAuthentication in sshd.8
  - Disable and comment ChallengeResponseAuthentication in sshd_config
+ - Allow PRNGd entropy collection from localhost TCP socket. Replace
+   "--with-egd-pool" configure option with "--with-prngd-socket" and 
+   "--with-prngd-port" options. Debugged and improved by Lutz Jaenicke
+   <Lutz.Jaenicke@aet.TU-Cottbus.DE>
 
 20010301
  - (djm) Properly add -lcrypt if needed. 

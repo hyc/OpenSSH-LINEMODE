@@ -89,8 +89,11 @@
 /* Location of random number pool  */
 #undef RANDOM_POOL
 
-/* Location of EGD random number socket */
-#undef EGD_SOCKET
+/* Location of PRNGD/EGD random number socket */
+#undef PRNGD_SOCKET
+
+/* Port number of PRNGD/EGD random number socket */
+#undef PRNGD_PORT
 
 /* Builtin PRNG command timeout */
 #undef ENTROPY_TIMEOUT_MSEC

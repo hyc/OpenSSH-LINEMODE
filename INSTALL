@@ -119,8 +119,13 @@ headers, for this to work.
 random numbers (the default is /dev/urandom). Unless you are absolutely
 sure of what you are doing, it is best to leave this alone.
 
---with-egd-pool=/some/file allows you to enable EGD or PRNGD support 
-and to specify a EGD pool socket. Use this if your Unix lacks 
+--with-prngd-socket=/some/file allows you to enable EGD or PRNGD 
+support and to specify a PRNGd socket. Use this if your Unix lacks 
+/dev/random and you don't want to use OpenSSH's builtin entropy 
+collection support.
+
+--with-prngd-port=portnum allows you to enable EGD or PRNGD support 
+and to specify a EGD localhost TCP port. Use this if your Unix lacks 
 /dev/random and you don't want to use OpenSSH's builtin entropy 
 collection support.
 
