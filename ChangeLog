@@ -18,6 +18,11 @@
      Support for generating Diffie-Hellman groups (/etc/moduli) from ssh-keygen.
      Based on code from Phil Karn, William Allen Simpson and Niels Provos.
      ok markus@, thanks jmc@
+   - markus@cvs.openbsd.org 2003/07/29 18:24:00
+     [LICENCE progressmeter.c]
+     replace 4 clause BSD licensed progressmeter code with a replacement
+     from Nils Nordman and myself; ok deraadt@
+     (copied from OpenBSD an re-applied portable changes)
 
 20030730
  - (djm) [auth-pam.c] Don't use crappy APIs like sprintf. Thanks bal
