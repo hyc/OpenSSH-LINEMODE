@@ -7,6 +7,7 @@
  - Update RPM spec files for CVS version.h
  - (stevesk) set the default PAM service name to __progname instead
    of the hard-coded value "sshd"; from Mark D. Roth <roth@feep.net>
+ - (stevesk) document PAM service name change in INSTALL
 
 20010420
  - OpenBSD CVS Sync                         
