@@ -8,6 +8,8 @@
    - djm@cvs.openbsd.org 2005/03/08 23:49:48
      [version.h]
      OpenSSH 4.0
+ - (djm) [contrib/caldera/openssh.spec contrib/redhat/openssh.spec] 
+   [contrib/suse/openssh.spec] Update spec file versions
 
 20050307
  - (dtucker) [configure.ac] Disable gettext search when configuring with
