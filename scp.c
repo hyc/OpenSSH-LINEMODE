@@ -1078,7 +1078,7 @@ alarmtimer(int wait)
 }
 
 void
-updateprogressmeter(void)
+updateprogressmeter(int sig)
 {
 	int save_errno = errno;
 
