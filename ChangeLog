@@ -1,5 +1,7 @@
 20020707
  - (tim) [Makefile.in] use umask instead of chmod on $(PRIVSEP_PATH)
+ - (tim) [acconfig.h configure.ac sshd.c]
+   s/BROKEN_FD_PASSING/DISABLE_FD_PASSING/
 
 20020705
  - (tim) [configure.ac] AIX 4.2.1 has authenticate() in libs.
