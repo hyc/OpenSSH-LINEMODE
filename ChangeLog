@@ -9,6 +9,9 @@
    - markus@cvs.openbsd.org 2001/04/10 12:15:23
      [channels.c]                              
      debug cleanup                             
+   - djm@cvs.openbsd.org 2001/04/11 07:06:22
+     [sftp-int.c]
+     'mget' and 'mput' aliases; ok markus@
 
 20010410
  - OpenBSD CVS Sync
