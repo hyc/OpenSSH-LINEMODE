@@ -1249,7 +1249,7 @@ wtmpx_get_entry(struct logininfo *li)
 	}
 	if (fstat(fd, &st) != 0) {
 		log("wtmpx_get_entry: couldn't stat %s: %s",
-		    WTMP_FILE, strerror(errno));
+		    WTMPX_FILE, strerror(errno));
 		close(fd);
 		return 0;
 	}
