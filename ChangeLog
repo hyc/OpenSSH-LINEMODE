@@ -1,3 +1,10 @@
+20020208
+ - (djm) OpenBSD CVS Sync
+   - markus@cvs.openbsd.org 2002/02/04 12:15:25
+     [sshd.c]
+     add SYSLOG_FACILITY_NOT_SET = -1, SYSLOG_LEVEL_NOT_SET = -1,
+     fixes arm/netbsd; based on patch from bjh21@netbsd.org; ok djm@
+
 20020205
  - (djm) Cleanup after sync:
    - :%s/reverse_mapping_check/verify_reverse_mapping/g
