@@ -1020,7 +1020,9 @@ if test "x$ac_cv_func_getpeereid" != "xyes" ; then
 		[#include <sys/types.h>
 		 #include <sys/socket.h>],
 		[int i = SO_PEERCRED;],
-		[AC_MSG_RESULT(yes)],
+		[ AC_MSG_RESULT(yes)
+		  AC_DEFINE(HAVE_SO_PEERCRED, [], [Have PEERCRED socket option])
+		],
 		[AC_MSG_RESULT(no)
 		NO_PEERCHECK=1]
         )
