@@ -3,6 +3,9 @@
  - (dtucker) [auth-passwd.c openbsd-compat/port-aix.c openbsd-compat/port-aix.h]
    Move AIX specific password authentication code to port-aix.c, call
    authenticate() until reenter flag is clear.
+ - (dtucker) [auth-sia.c configure.ac] Tru64 update from cmadams at hiwaay.net.
+   Use permanently_set_uid for SIA, only define DISABLE_FD_PASSING when SIA
+   is enabled, rely on SIA to check for locked accounts if enabled.  ok djm@
 
 20031121
  - (djm) OpenBSD CVS Sync
