@@ -44,6 +44,7 @@ RCSID("$Id$");
 # include <openssl/evp.h>
 # include <openssl/bio.h>
 # include <openssl/pem.h>
+# include <openssl/hmac.h>
 #endif /* HAVE_OPENSSL */
 #if HAVE_SSL
 # include <ssl/bn.h>
@@ -53,9 +54,9 @@ RCSID("$Id$");
 # include <ssl/evp.h>
 # include <ssl/bio.h>
 # include <ssl/pem.h>
+# include <ssl/hmac.h>
 #endif /* HAVE_SSL */
 
-#include <ssl/hmac.h>
 #include "kex.h"
 #include "key.h"
 
