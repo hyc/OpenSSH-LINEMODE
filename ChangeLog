@@ -149,6 +149,9 @@
    - markus@cvs.openbsd.org 2002/01/11 23:26:30
      [auth-skey.c]
      use snprintf; mouring@
+   - markus@cvs.openbsd.org 2002/01/12 13:10:29
+     [auth-skey.c]
+     undo local change
 
 
 20020121
