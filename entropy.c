@@ -520,6 +520,8 @@ prng_write_seedfile(void) {
 	if (prng_seed_saved)
 		return;
 	
+	prng_seed_saved = 1;
+	
 	pw = getpwuid(getuid());
 	if (pw == NULL)
 		fatal("Couldn't get password entry for current user (%i): %s", 
