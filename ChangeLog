@@ -1,6 +1,9 @@
 20040530
- - (dtucker) [auth-pam.c auth-pam.h auth-passwd.c]: Bug #874: Re-add PAM 
+ - (dtucker) [auth-pam.c auth-pam.h auth-passwd.c] Bug #874: Re-add PAM 
    support for PasswordAuthentication=yes.  ok djm@
+ - (dtucker) [auth-pam.c] Use an invalid password for root if
+   PermitRootLogin != yes or the login is invalid, to prevent leaking
+   information.  Based on Openwall's owl-always-auth patch.  ok djm@
 
 20040527
  - (dtucker) [contrib/caldera/openssh.spec contrib/redhat/openssh.spec

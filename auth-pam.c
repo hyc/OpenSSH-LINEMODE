@@ -1021,6 +1021,7 @@ sshpam_auth_passwd(Authctxt *authctxt, const char *password)
 {
 	int flags = (options.permit_empty_passwd == 0 ?
 	    PAM_DISALLOW_NULL_AUTHTOK : 0);
+	static char badpw[] = "\b\n\r\177INCORRECT";
 
 	if (!options.use_pam || sshpam_handle == NULL)
 		fatal("PAM: %s called when PAM disabled or failed to "
@@ -1028,6 +1029,15 @@ sshpam_auth_passwd(Authctxt *authctxt, const char *password)
 
 	sshpam_password = password;
 	sshpam_authctxt = authctxt;
+
+	/*
+	 * If the user logging in is invalid, or is root but is not permitted
+	 * by PermitRootLogin, use an invalid password to prevent leaking
+	 * information via timing (eg if the PAM config has a delay on fail).
+	 */
+	if (!authctxt->valid || (authctxt->pw->pw_uid == 0 &&
+	     options.permit_root_login != PERMIT_YES))
+		sshpam_password = badpw;
 
 	sshpam_err = pam_set_item(sshpam_handle, PAM_CONV,
 	    (const void *)&passwd_conv);
