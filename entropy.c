@@ -158,11 +158,13 @@ seed_rng(void)
 	
 	debug("Seeding random number generator");
 
-	if (!get_random_bytes(buf, sizeof(buf)) && !RAND_status())
-		fatal("Entropy collection failed and entropy exhausted");
-
-	RAND_add(buf, sizeof(buf), sizeof(buf));
-
+	if (!get_random_bytes(buf, sizeof(buf))) {
+		if (!RAND_status())
+			fatal("Entropy collection failed and entropy exhausted");
+	} else {
+		RAND_add(buf, sizeof(buf), sizeof(buf));
+	}
+	
 	memset(buf, '\0', sizeof(buf));
 }
 
