@@ -9,6 +9,9 @@
      monitor.c sftp-client.c bufaux.h hostfile.c ssh.c sshconnect.c channels.c
      readconf.c bufaux.c sftp.c]
      spacing
+   - deraadt@cvs.openbsd.org 2005/03/10 22:40:38
+     [auth-options.c]
+     spacing
 
 20050313
  - (dtucker) [contrib/cygwin/ssh-host-config] Makes the query for the
