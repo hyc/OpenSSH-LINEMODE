@@ -52,6 +52,10 @@ int innetgr(const char *netgroup, const char *host,
 int seteuid(uid_t euid);
 #endif /* !defined(HAVE_SETEUID) && defined(HAVE_SETREUID) */
 
+#if !defined(HAVE_SETEGID) && defined(HAVE_SETRESGID)
+int setegid(uid_t egid);
+#endif /* !defined(HAVE_SETEGID) && defined(HAVE_SETRESGID) */
+
 #if !defined(HAVE_STRERROR) && defined(HAVE_SYS_ERRLIST) && defined(HAVE_SYS_NERR)
 const char *strerror(int e);
 #endif 
