@@ -60,7 +60,7 @@ RCSID("$Id$");
 
 /* Path to PRNG commands list */
 #ifndef SSH_PRNG_COMMAND_FILE
-# define SSH_PRNG_COMMAND_FILE   ETCDIR "/ssh_prng_cmds"
+# define SSH_PRNG_COMMAND_FILE   SSHDIR "/ssh_prng_cmds"
 #endif
 
 
