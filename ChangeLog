@@ -4,6 +4,8 @@
      [channels.c monitor.c scp.c session.c sftp-client.c sftp-int.c]
      [sftp-server.c ssh-add.c sshconnect2.c]
      fix memory leaks; from dlheine@suif.Stanford.EDU/CLOUSEAU; ok djm@
+ - (djm) One more portable-specific one from dlheine@suif.Stanford.EDU/
+   CLOUSEAU
 
 20030225
  - (djm) Fix some compile errors spotted by dtucker and his fabulous 

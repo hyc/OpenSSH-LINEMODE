@@ -1345,6 +1345,7 @@ syslogin_perform_login(struct logininfo *li)
 	}
 	construct_utmp(li, ut);
 	login(ut);
+	free(ut);
 
 	return 1;
 }
