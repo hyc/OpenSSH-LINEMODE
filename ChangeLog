@@ -8,6 +8,9 @@
      > Ic cannot have that many arguments; spotted by mouring@etoh.eviladmin.org
      Last Ic on the first line should not have a space between it and the final
      comma.
+   - deraadt@cvs.openbsd.org 2002/02/26 19:06:43
+     [sftp.1]
+     no, look closely.  the comma was highlighted. split .Ic even more
 
 20020226
  - (tim) Bug 12 [configure.ac] add sys/bitypes.h to int64_t tests
