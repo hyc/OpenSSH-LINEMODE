@@ -508,7 +508,7 @@ passphrase_again:
 	if (identity_comment) {
 		strlcpy(comment, identity_comment, sizeof(comment));
 	} else {
-	  	/* Create default commend field for the passphrase. */
+		/* Create default commend field for the passphrase. */
 		if (gethostname(hostname, sizeof(hostname)) < 0) {
 			perror("gethostname");
 			exit(1);

@@ -33,7 +33,7 @@ RCSID("$Id$");
  * Tries to authenticate the user using password.  Returns true if
  * authentication succeeds.
  */
-int 
+int
 auth_password(struct passwd * pw, const char *password)
 {
 	extern ServerOptions options;

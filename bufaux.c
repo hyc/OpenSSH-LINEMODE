@@ -1,14 +1,14 @@
 /*
- * 
+ *
  * bufaux.c
- * 
+ *
  * Author: Tatu Ylonen <ylo@cs.hut.fi>
- * 
+ *
  * Copyright (c) 1995 Tatu Ylonen <ylo@cs.hut.fi>, Espoo, Finland
  *                    All rights reserved
- * 
+ *
  * Created: Wed Mar 29 02:24:47 1995 ylo
- * 
+ *
  * Auxiliary functions for storing and retrieving various data types to/from
  * Buffers.
  *

@@ -1,14 +1,14 @@
 /*
- * 
+ *
  * pty.h
- * 
+ *
  * Author: Tatu Ylonen <ylo@cs.hut.fi>
- * 
+ *
  * Copyright (c) 1995 Tatu Ylonen <ylo@cs.hut.fi>, Espoo, Finland
  *                    All rights reserved
- * 
+ *
  * Created: Fri Mar 17 05:03:28 1995 ylo
- * 
+ *
  * Functions for allocating a pseudo-terminal and making it the controlling
  * tty.
  */
@@ -39,7 +39,7 @@ void    pty_release(const char *ttyname);
 void    pty_make_controlling_tty(int *ttyfd, const char *ttyname);
 
 /* Changes the window size associated with the pty. */
-void 
+void
 pty_change_window_size(int ptyfd, int row, int col,
     int xpixel, int ypixel);
 

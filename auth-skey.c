@@ -15,12 +15,12 @@ RCSID("$Id$");
 
 /* from %OpenBSD: skeylogin.c,v 1.32 1999/08/16 14:46:56 millert Exp % */
 
-/* 
+/*
  * try skey authentication,
- * return 1 on success, 0 on failure, -1 if skey is not available 
+ * return 1 on success, 0 on failure, -1 if skey is not available
  */
 
-int 
+int
 auth_skey_password(struct passwd * pw, const char *password)
 {
 	if (strncasecmp(password, "s/key", 5) == 0) {
@@ -53,18 +53,18 @@ auth_skey_password(struct passwd * pw, const char *password)
  */
 static u_int32_t
 hash_collapse(s)
-        u_char *s;
+	u_char *s;
 {
-        int len, target;
+	int len, target;
 	u_int32_t i;
 	
 	if ((strlen(s) % sizeof(u_int32_t)) == 0)
-  		target = strlen(s);    /* Multiple of 4 */
+		target = strlen(s);    /* Multiple of 4 */
 	else
 		target = strlen(s) - (strlen(s) % sizeof(u_int32_t));
-  
+
 	for (i = 0, len = 0; len < target; len += 4)
-        	i ^= ROUND(s + len);
+		i ^= ROUND(s + len);
 
 	return i;
 }

@@ -1,16 +1,16 @@
 /*
- * 
+ *
  * crc32.h
- * 
+ *
  * Author: Tatu Ylonen <ylo@cs.hut.fi>
- * 
+ *
  * Copyright (c) 1992 Tatu Ylonen, Espoo, Finland
  *                    All rights reserved
- * 
+ *
  * Created: Tue Feb 11 14:37:27 1992 ylo
- * 
+ *
  * Functions for computing 32-bit CRC.
- * 
+ *
  */
 
 /* RCSID("$Id$"); */

@@ -34,7 +34,7 @@ xrealloc(void *ptr, size_t new_size)
 	return new_ptr;
 }
 
-void 
+void
 xfree(void *ptr)
 {
 	if (ptr == NULL)

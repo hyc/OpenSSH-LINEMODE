@@ -1,15 +1,15 @@
 /*
- * 
+ *
  * ttymodes.h
- * 
+ *
  * Author: Tatu Ylonen <ylo@cs.hut.fi>
  * 	SGTTY stuff contributed by Janne Snabb <snabb@niksula.hut.fi>
- * 
+ *
  * Copyright (c) 1995 Tatu Ylonen <ylo@cs.hut.fi>, Espoo, Finland
  *                    All rights reserved
- * 
+ *
  * Created: Tue Mar 21 15:42:09 1995 ylo
- * 
+ *
  */
 
 /* RCSID("$Id$"); */

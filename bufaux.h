@@ -1,14 +1,14 @@
 /*
- * 
+ *
  * bufaux.h
- * 
+ *
  * Author: Tatu Ylonen <ylo@cs.hut.fi>
- * 
+ *
  * Copyright (c) 1995 Tatu Ylonen <ylo@cs.hut.fi>, Espoo, Finland
  *                    All rights reserved
- * 
+ *
  * Created: Wed Mar 29 02:18:23 1995 ylo
- * 
+ *
  */
 
 /* RCSID("$Id$"); */

@@ -58,7 +58,7 @@ read_passphrase(const char *prompt, int from_stdin)
 	sigset_t oset, nset;
 	struct sigaction sa, osa;
 	int input, output, echo = 0;
-  
+
 	if (from_stdin) {
 		input = STDIN_FILENO;
 		output = STDERR_FILENO;

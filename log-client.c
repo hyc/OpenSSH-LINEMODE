@@ -1,17 +1,17 @@
 /*
- * 
+ *
  * log-client.c
- * 
+ *
  * Author: Tatu Ylonen <ylo@cs.hut.fi>
- * 
+ *
  * Copyright (c) 1995 Tatu Ylonen <ylo@cs.hut.fi>, Espoo, Finland
  *                    All rights reserved
- * 
+ *
  * Created: Mon Mar 20 21:13:40 1995 ylo
- * 
+ *
  * Client-side versions of debug(), log(), etc.  These print to stderr.
  * This is a stripped down version of log-server.c.
- * 
+ *
  */
 
 #include "includes.h"

@@ -1,16 +1,16 @@
 /*
- * 
+ *
  * compress.h
- * 
+ *
  * Author: Tatu Ylonen <ylo@cs.hut.fi>
- * 
+ *
  * Copyright (c) 1995 Tatu Ylonen <ylo@cs.hut.fi>, Espoo, Finland
  *                    All rights reserved
- * 
+ *
  * Created: Wed Oct 25 22:12:46 1995 ylo
- * 
+ *
  * Interface to packet compression for ssh.
- * 
+ *
  */
 
 /* RCSID("$Id$"); */

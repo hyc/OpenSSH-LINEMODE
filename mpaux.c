@@ -1,17 +1,17 @@
 /*
- * 
+ *
  * mpaux.c
- * 
+ *
  * Author: Tatu Ylonen <ylo@cs.hut.fi>
- * 
+ *
  * Copyright (c) 1995 Tatu Ylonen <ylo@cs.hut.fi>, Espoo, Finland
  *                    All rights reserved
- * 
+ *
  * Created: Sun Jul 16 04:29:30 1995 ylo
- * 
+ *
  * This file contains various auxiliary functions related to multiple
  * precision integers.
- * 
+ *
 */
 
 #include "includes.h"
