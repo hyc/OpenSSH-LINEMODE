@@ -5,6 +5,7 @@
      [version.h]
      3.9
  - (djm) Crank RPM spec version numbers
+ - (djm) Release 3.9p1
 
 20040816
  - (dtucker) [acconfig.h auth-pam.c configure.ac] Set real uid to non-root
