@@ -1,3 +1,10 @@
+20030515
+ - (djm) OpenBSD CVS Sync
+   - jmc@cvs.openbsd.org 2003/05/14 13:11:56
+     [ssh-agent.1]
+     setup -> set up;
+     from wiz@netbsd
+
 20030514
  - (djm) Bug #117: Don't lie to PAM about username
  - (djm) RCSID sync w/ OpenBSD
