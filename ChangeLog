@@ -9,6 +9,9 @@
    - markus@cvs.openbsd.org 2003/07/16 10:34:53
      [ssh.c sshd.c]
      don't exit on multiple -v or -d; ok deraadt@
+   - markus@cvs.openbsd.org 2003/07/16 10:36:28
+     [sshtty.c]
+     clear IUCLC in enter_raw_mode; from rob@pitman.co.za; ok deraadt@, fgs@
 
 20030714
  - (dtucker) [acconfig.h configure.ac port-aix.c] Older AIXes don't declare
