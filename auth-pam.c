@@ -242,7 +242,7 @@ sshpam_thread_conv(int n, const struct pam_message **msg,
 	struct pam_response *reply;
 	int i;
 
-	debug3("PAM: %s entering, %d responses", __func__, n);
+	debug3("PAM: %s entering, %d messages", __func__, n);
 	*resp = NULL;
 
 	ctxt = data;
@@ -416,7 +416,7 @@ static int
 sshpam_null_conv(int n, const struct pam_message **msg,
     struct pam_response **resp, void *data)
 {
-	debug3("PAM: %s entering, %d responses", __func__, n);
+	debug3("PAM: %s entering, %d messages", __func__, n);
 	return (PAM_CONV_ERR);
 }
 
@@ -753,6 +753,8 @@ pam_tty_conv(int n, const struct pam_message **msg,
 	char input[PAM_MAX_MSG_SIZE];
 	struct pam_response *reply;
 	int i;
+
+	debug3("PAM: %s called with %d messages", __func__, n);
 
 	*resp = NULL;
 
