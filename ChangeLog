@@ -13,6 +13,10 @@
      minor tweak: when generating the hex fingerprint, give strlcat the full
      bound to the buffer, and add a comment below explaining why the
      zero-termination is one less than the bound.  markus@ ok
+   - markus@cvs.openbsd.org 2003/07/10 14:42:28
+     [packet.c]
+     the 2^(blocksize*2) rekeying limit is too expensive for 3DES,
+     blowfish, etc, so enforce a 1GB limit for small blocksizes.
 
 20030708
  - (dtucker) [acconfig.h auth-passwd.c configure.ac session.c port-aix.[ch]]
