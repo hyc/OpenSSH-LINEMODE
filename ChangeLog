@@ -17,6 +17,11 @@
    - markus@cvs.openbsd.org 2002/01/25 22:07:40
      [kex.c kexdh.c kexgex.c key.c mac.c]
      use EVP_MD_size(evp_md) and not evp_md->md_size; ok steveks@
+   - stevesk@cvs.openbsd.org 2002/01/26 16:44:22
+     [includes.h session.c]
+     revert code to add x11 localhost display authorization entry for
+     hostname/unix:d and uts.nodename/unix:d if nodename was different than
+     hostname.  just add entry for unix:d instead.  ok markus@
 
 20020130
  - (djm) Delay PRNG seeding until we need it in ssh-keygen, from markus@
