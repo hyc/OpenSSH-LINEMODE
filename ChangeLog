@@ -1,3 +1,9 @@
+20020429
+ - (tim) [contrib/caldera/openssh.spec] update fixUP to reflect changes in
+   sshd_config.
+ - (tim) [contrib/cygwin/README] remove reference to regex.
+   patch from Corinna Vinschen <vinschen@redhat.com>
+
 20020426
  - (djm) Bug #137, #209: fix make problems for scard/Ssh.bin, do uudecode
    during distprep only
