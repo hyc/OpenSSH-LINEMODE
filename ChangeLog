@@ -5,6 +5,7 @@
    bugzilla-openssh AT thewrittenword.com
  - (djm) Bug #641: Allow RedHat RPM building without GTK-2; Patch from
    jason AT devrandom.org
+ - (djm) Bug #646: Fix location of x11-ssh-askpass; Jim
 
 20030918
  - (djm) Bug #652: Fix empty password auth
