@@ -10,6 +10,9 @@
    - markus@cvs.openbsd.org 2002/06/24 14:33:27
      [channels.c channels.h clientloop.c serverloop.c]
      move channel counter to u_int
+   - markus@cvs.openbsd.org 2002/06/24 14:55:38
+     [authfile.c kex.c ssh-agent.c]
+     cat to (void) when output from buffer_get_X is ignored
 
 20020625
  - (stevesk) [INSTALL acconfig.h configure.ac defines.h] remove --with-rsh
