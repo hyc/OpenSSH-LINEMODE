@@ -330,6 +330,7 @@ mips-sony-bsd|mips-sony-newsos4)
 			AC_MSG_RESULT(no)
 		fi
 	fi
+	AC_DEFINE(DISABLE_FD_PASSING)
 	;;
 
 *-*-nto-qnx)

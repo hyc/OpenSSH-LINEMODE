@@ -1,3 +1,7 @@
+20021004
+ - (bal) Disable post-authentication Privsep for OSF/1.  It conflicts with
+   SIA.
+
 20021003
  - (djm) OpenBSD CVS Sync
    - markus@cvs.openbsd.org 2002/10/01 20:34:12
