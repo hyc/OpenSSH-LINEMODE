@@ -12,6 +12,9 @@
    - djm@cvs.openbsd.org 2004/04/28 05:17:10
      [ssh_config.5 sshd_config.5]
      manpage fixes in envpass stuff from Brian Poole (raj AT cerias.purdue.edu)
+   - jmc@cvs.openbsd.org 2004/04/28 07:02:56
+     [sshd_config.5]
+     remove unnecessary .Pp;
 
 20040423
  - (dtucker) [configure.ac openbsd-compat/getrrsetbyname.c] Declare h_errno
