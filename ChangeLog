@@ -2,6 +2,9 @@
  - (tim) [configure.ac] applied a rework of djm's OpenSSL search cleanup patch.
    Now only searches system and /usr/local/ssl (OpenSSL's default install path)
    Others must use --with-ssl-dir=....
+ - (tim) [monitor_fdpass.c] fix for systems that have both
+   HAVE_ACCRIGHTS_IN_MSGHDR and HAVE_CONTROL_IN_MSGHDR. Ie. sys/socket.h has
+   #define msg_accrights msg_control
 
 20020510
  - (stevesk) [auth.c] Shadow account and expiration cleanup.  Now
