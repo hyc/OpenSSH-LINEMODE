@@ -18,6 +18,10 @@
    - markus@cvs.openbsd.org 2002/06/08 12:36:53
      [scp.c]
      remove FallBackToRsh
+   - markus@cvs.openbsd.org 2002/06/08 12:46:14
+     [readconf.c]
+     silently ignore deprecated options, since FallBackToRsh might be passed
+     by remote scp commands.
 
 20020607
  - (bal) Removed --{enable/disable}-suid-ssh
