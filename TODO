@@ -32,6 +32,8 @@ Programming:
    and order to try them in e.g. "ChallengeResponseAuthentication skey, pam"
 
 - Complete Tru64 SIA support
+ - It looks like we could merge it into the password auth code to cut down
+   on diff size. Maybe PAM password auth too?
 
 - Finish integrating kernel-level auditing code for IRIX and SOLARIS
   (Gilbert.r.loomis@saic.com)
