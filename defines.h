@@ -415,6 +415,10 @@ struct winsize {
 
 /* Function replacement / compatibility hacks */
 
+#if !defined(HAVE_GETADDRINFO) && (defined(HAVE_OGETADDRINFO) || defined(HAVE_NGETADDRINFO))
+# define HAVE_GETADDRINFO
+#endif
+
 #ifndef HAVE_GETOPT_OPTRESET
 #define getopt(ac, av, o)  BSDgetopt(ac, av, o)
 #endif
