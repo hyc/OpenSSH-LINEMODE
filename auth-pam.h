@@ -33,7 +33,7 @@
 
 void start_pam(const char *);
 void finish_pam(void);
-int do_pam_account(const char *, const char *);
+u_int do_pam_account(void);
 void do_pam_session(const char *, const char *);
 void do_pam_setcred(int );
 int is_pam_password_change_required(void);

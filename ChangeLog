@@ -8,6 +8,8 @@
    be our 'mysignal' by default.  OK djm@
  - (dtucker) [acconfig.h auth.c configure.ac sshd.8] Bug #422 again: deny
    any access to locked accounts.  ok djm@
+ - (djm) Bug #564: Perform PAM account checks for all authentications when
+   UsePAM=yes; ok dtucker
 
 20030822
  - (djm) s/get_progname/ssh_get_progname/g to avoid conflict with Heimdal 
