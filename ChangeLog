@@ -1,3 +1,6 @@
+20010925
+ - (djm) Pull in auth-krb5.c from OpenBSD CVS. NB. it is not currently used.
+
 20010923
  - (bal) updated ssh.c to mirror minor getopts 'extern int' formating done
    by stevesk@
