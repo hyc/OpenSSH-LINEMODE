@@ -1004,7 +1004,7 @@ AC_ARG_WITH(privsep-user,
 		fi
 	]	
 )
-AC_DEFINE_UNQUOTED(SSH_PRIVSEP_USER, $ssh_privsep_user)
+AC_DEFINE_UNQUOTED(SSH_PRIVSEP_USER, "$ssh_privsep_user")
 
 # We do this little dance with the search path to insure
 # that programs that we select for use by installed programs
