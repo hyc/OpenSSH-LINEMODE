@@ -29,6 +29,9 @@ RCSID("$Id$");
 #ifdef HAVE_LASTLOG_H
 # include <lastlog.h>
 #endif
+#ifdef HAVE_LOGIN_H
+# include <login.h>
+#endif
 
 /*
  * Returns the time when the user last logged in.  Returns 0 if the
