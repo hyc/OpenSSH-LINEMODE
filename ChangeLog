@@ -10,6 +10,7 @@
      OpenSSH 4.0
  - (djm) [contrib/caldera/openssh.spec contrib/redhat/openssh.spec] 
    [contrib/suse/openssh.spec] Update spec file versions
+ - (djm) [log.c] Fix dumb syntax error; ok dtucker@
  - (djm) Release OpenSSH 4.0p1
 
 20050307
