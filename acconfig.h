@@ -104,6 +104,9 @@
 /* Work around problematic Linux PAM modules handling of PAM_TTY */
 #undef PAM_TTY_KLUDGE
 
+/* Define if pam_chauthtok wants real uid set to the unpriv'ed user */
+#undef SSHPAM_CHAUTHTOK_NEEDS_RUID
+
 /* Use PIPES instead of a socketpair() */
 #undef USE_PIPES
 

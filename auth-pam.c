@@ -201,6 +201,31 @@ pam_getenvlist(pam_handle_t *pamh)
 }
 #endif
 
+/*
+ * Some platforms, notably Solaris, do not enforce password complexity
+ * rules during pam_chauthtok() if the real uid of the calling process
+ * is 0, on the assumption that it's being called by "passwd" run by root.
+ * This wraps pam_chauthtok and sets/restore the real uid so PAM will do
+ * the right thing.
+ */
+#ifdef SSHPAM_CHAUTHTOK_NEEDS_RUID
+static int
+sshpam_chauthtok_ruid(pam_handle_t *pamh, int flags)
+{
+	int result;
+
+	if (sshpam_authctxt == NULL)
+		fatal("PAM: sshpam_authctxt not initialized");
+	if (setreuid(sshpam_authctxt->pw->pw_uid, -1) == -1)
+		fatal("%s: setreuid failed: %s", __func__, strerror(errno));
+	result = pam_chauthtok(pamh, flags);
+	if (setreuid(0, -1) == -1)
+		fatal("%s: setreuid failed: %s", __func__, strerror(errno));
+	return result;
+}
+# define pam_chauthtok(a,b)	(sshpam_chauthtok_ruid((a), (b)))
+#endif
+
 void
 sshpam_password_change_required(int reqd)
 {

@@ -1,3 +1,7 @@
+20040816
+ - (dtucker) [acconfig.h auth-pam.c configure.ac] Set real uid to non-root
+   to convince Solaris PAM to honour password complexity rules.  ok djm@
+
 20040815
  - (dtucker) [Makefile.in ssh-keysign.c ssh.c] Use permanently_set_uid() since
    it does the right thing on all platforms.  ok djm@
