@@ -1,3 +1,7 @@
+20020628
+ - (stevesk) [sshd_config] PAMAuthenticationViaKbdInt no; commented
+   options should contain default value.  from solar.
+
 200206027
  - OpenBSD CVS Sync
    - deraadt@cvs.openbsd.org 2002/06/26 14:49:36
