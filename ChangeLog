@@ -134,6 +134,7 @@
  - (bal) Makefile fix up requires scard.c
  - (stevesk) sync misc.h
  - (stevesk) more sync for session.c
+ - (stevesk) sync servconf.h (comments)
 
 20010629
  - (bal) Removed net_aton() since we don't use it any more
