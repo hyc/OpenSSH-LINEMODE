@@ -1,3 +1,6 @@
+20010320
+ - (bal) glob.c update to added GLOB_LIMITS.
+
 20010319
  - (djm) Seed PRNG at startup, rather than waiting for arc4random calls to 
    do it implicitly.
