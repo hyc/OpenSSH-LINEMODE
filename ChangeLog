@@ -1,3 +1,9 @@
+20050301
+ - (djm) OpenBSD CVS sync:
+   - otto@cvs.openbsd.org 2005/02/16 09:56:44
+     [ssh.c]
+     Better diagnostic if an identity file is not accesible. ok markus@ djm@
+
 20050226
  - (dtucker) [openbsd-compat/bsd-openpty.c openbsd-compat/inet_ntop.c]
    Remove two obsolete Cygwin #ifdefs.  Patch from vinschen at redhat.com.
