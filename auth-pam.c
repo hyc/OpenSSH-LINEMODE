@@ -83,11 +83,16 @@ static int pamconv(int num_msg, const struct pam_message **msg,
 	for (count = 0; count < num_msg; count++) {
 		switch ((*msg)[count].msg_style) {
 			case PAM_PROMPT_ECHO_ON:
-				fputs((*msg)[count].msg, stderr);
-				fgets(buf, sizeof(buf), stdin);
-				reply[count].resp = xstrdup(buf);
-				reply[count].resp_retcode = PAM_SUCCESS;
-				break;
+				if (pamstate == INITIAL_LOGIN) {
+					free(reply);
+					return PAM_CONV_ERR;
+				} else {
+					fputs((*msg)[count].msg, stderr);
+					fgets(buf, sizeof(buf), stdin);
+					reply[count].resp = xstrdup(buf);
+					reply[count].resp_retcode = PAM_SUCCESS;
+					break;
+				}
 			case PAM_PROMPT_ECHO_OFF:
 				if (pamstate == INITIAL_LOGIN) {
 					if (pampasswd == NULL) {
@@ -95,8 +100,10 @@ static int pamconv(int num_msg, const struct pam_message **msg,
 						return PAM_CONV_ERR;
 					}
 					reply[count].resp = xstrdup(pampasswd);
-				} else
-					reply[count].resp = xstrdup(read_passphrase((*msg)[count].msg, 1));
+				} else {
+					reply[count].resp = 
+						xstrdup(read_passphrase((*msg)[count].msg, 1));
+				}
 				reply[count].resp_retcode = PAM_SUCCESS;
 				break;
 			case PAM_ERROR_MSG:
