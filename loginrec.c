@@ -1183,6 +1183,7 @@ wtmp_get_entry(struct logininfo *li)
 static int
 wtmpx_write(struct logininfo *li, struct utmpx *utx)
 {
+#ifndef HAVE_UPDWTMPX
 	struct stat buf;
 	int fd, ret = 1;
 
@@ -1202,6 +1203,10 @@ wtmpx_write(struct logininfo *li, struct utmpx *utx)
 	(void)close(fd);
 
 	return ret;
+#else
+	updwtmpx(WTMPX_FILE, utx);
+	return 1;
+#endif
 }
 
 

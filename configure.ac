@@ -801,7 +801,7 @@ AC_CHECK_FUNCS(\
 	setproctitle setregid setreuid setrlimit \
 	setsid setvbuf sigaction sigvec snprintf socketpair strerror \
 	strlcat strlcpy strmode strnvis strtoul sysconf tcgetpgrp \
-	truncate utimes vhangup vsnprintf waitpid \
+	truncate updwtmpx utimes vhangup vsnprintf waitpid \
 )
 
 # IRIX has a const char return value for gai_strerror()
