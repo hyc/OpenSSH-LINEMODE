@@ -15,6 +15,9 @@
    - stevesk@cvs.openbsd.org 2001/12/10 16:45:04
      [sshd.c]
      possible fd leak on error; ok markus@
+   - markus@cvs.openbsd.org 2001/12/10 20:34:31
+     [ssh-keyscan.c]
+     check that server supports v1 for -t rsa1, report from wirth@dfki.de
 
 20011219
  - (stevesk) OpenBSD CVS sync X11 localhost display
