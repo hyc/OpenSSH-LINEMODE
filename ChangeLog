@@ -25,6 +25,7 @@
      use license from /usr/share/misc/license.template for new code
  - (dtucker) [reconfigure.sh rekey.sh sftp-badcmds.sh]
    Import new regression tests from OpenBSD
+ - (dtucker) [regress/copy.1 regress/copy.2] Remove temp data files from CVS.
 
 20030614
  - (djm) Update license on fake-rfc2553.[ch]; ok itojun@
