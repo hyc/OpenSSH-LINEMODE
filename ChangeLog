@@ -1,6 +1,8 @@
 20030120
  - (djm) Fix compilation for NetBSD from dtucker@zip.com.au
  - (tim) [progressmeter.c] make compilers without long long happy.
+ - (tim) [configure.ac] Add -belf to build ELF binaries on OpenServer 5 when
+   using cc. (gcc already did)
 
 20030118
  - (djm) Revert fix for Bug #442 for now.

@@ -283,6 +283,9 @@ mips-sony-bsd|mips-sony-newsos4)
 	do_sco3_extra_lib_check=yes
 	;;
 *-*-sco3.2v5*)
+	if test -z "$GCC"; then
+		CFLAGS="$CFLAGS -belf"
+	fi
 	CPPFLAGS="$CPPFLAGS -I/usr/local/include"
 	LDFLAGS="$LDFLAGS -L/usr/local/lib"
 	LIBS="$LIBS -lprot -lx -ltinfo -lm"
