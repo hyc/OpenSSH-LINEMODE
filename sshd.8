@@ -589,6 +589,11 @@ The default is
 .It Cm Subsystem
 Configures an external subsystem (e.g. file transfer daemon).
 Arguments should be a subsystem name and a command to execute upon subsystem request. 
+The command
+.Xr sftp-server 8
+implements the
+.Dq sftp
+file transfer subsystem.
 By default no subsystems are defined.
 Note that this option applies to protocol version 2 only.
 .It Cm SyslogFacility
@@ -1031,6 +1036,7 @@ Niels Provos, Theo de Raadt, and Dug Song.
 The support for SSH protocol 2 was written by Markus Friedl.
 .Sh SEE ALSO
 .Xr scp 1 ,
+.Xr sftp-server 8 ,
 .Xr ssh 1 ,
 .Xr ssh-add 1 ,
 .Xr ssh-agent 1 ,
