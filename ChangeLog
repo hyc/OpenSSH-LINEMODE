@@ -6,6 +6,9 @@
    - deraadt@cvs.openbsd.org 2002/06/26 14:50:04
      [monitor_fdpass.c]
      use ssize_t for recvmsg() and sendmsg() return
+   - markus@cvs.openbsd.org 2002/06/26 14:51:33
+     [ssh-add.c]
+     fix exit code for -X/-x
 
 20020626
  - (stevesk) [monitor.c] remove duplicate proto15 dispatch entry for PAM
