@@ -16,6 +16,9 @@
    - stevesk@cvs.openbsd.org 2002/07/09 17:46:25
      [sshd_config.5]
      clarify no preference ordering in protocol list; ok markus@
+   - itojun@cvs.openbsd.org 2002/07/10 10:28:15
+     [sshconnect.c]
+     bark if all connection attempt fails.
 
 20020709
  - (bal) NO_IPPORT_RESERVED_CONCEPT used instead of CYGWIN so other platforms
