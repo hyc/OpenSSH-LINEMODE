@@ -224,7 +224,6 @@ int auth_pam_password(struct passwd *pw, const char *password)
 int do_pam_account(char *username, char *remote_user)
 {
 	int pam_retval;
-	extern ServerOptions options;
 
 	pam_set_conv(&conv);
 
@@ -332,6 +331,7 @@ void finish_pam(void)
 void start_pam(const char *user)
 {
 	int pam_retval;
+	extern ServerOptions options;
 
 	debug("Starting up PAM with username \"%.200s\"", user);
 
