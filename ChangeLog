@@ -6,6 +6,9 @@
    - markus@cvs.openbsd.org 2001/03/26 23:12:42
      [authfile.c]
      KNF
+   - markus@cvs.openbsd.org 2001/03/26 23:23:24
+     [rsa.c rsa.h ssh-agent.c ssh-keygen.c]
+     try to read private f-secure ssh v2 rsa keys.
 
 20010328
  - (djm) Reorder tests and library inclusion for Krb4/AFS to try to 
