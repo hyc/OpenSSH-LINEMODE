@@ -1,3 +1,7 @@
+20031017
+ - (dtucker) [INSTALL] Note that --with-md5 is now required on platforms with
+   MD5 passwords even if PAM support is enabled.  From steev at detritus.net.
+
 20031015
  - (dtucker) OpenBSD CVS Sync
    - jmc@cvs.openbsd.org 2003/10/08 08:27:36
