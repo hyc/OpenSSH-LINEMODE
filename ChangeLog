@@ -2,6 +2,7 @@
  - (dtucker) [configure.ac openbsd-compat/xcrypt.c] Bug #633: Remove
    DISABLE_SHADOW for HP-UX, use getspnam instead of getprpwnam.  Patch from
    michael_steffens at hp.com, ok djm@
+ - (tim) [sshd_config] UsePAM defaults to no.
 
 20030924
  - (djm) Update version.h and spec files for HEAD
