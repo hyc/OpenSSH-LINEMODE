@@ -2156,6 +2156,25 @@ AC_SEARCH_LIBS(getrrsetbyname, resolv,
 		# Needed by our getrrsetbyname()
 		AC_SEARCH_LIBS(res_query, resolv)
 		AC_SEARCH_LIBS(dn_expand, resolv)
+		AC_MSG_CHECKING(if res_query will link)
+		AC_TRY_LINK_FUNC(res_query, AC_MSG_RESULT(yes),
+		   [AC_MSG_RESULT(no)
+		    saved_LIBS="$LIBS"
+		    LIBS="$LIBS -lresolv"
+		    AC_MSG_CHECKING(for res_query in -lresolv)
+		    AC_LINK_IFELSE([
+#include <resolv.h>
+int main()
+{
+	res_query (0, 0, 0, 0, 0);
+	return 0;
+}
+			],
+			[LIBS="$LIBS -lresolv"
+			 AC_MSG_RESULT(yes)],
+			[LIBS="$saved_LIBS"
+			 AC_MSG_RESULT(no)])
+		    ])
 		AC_CHECK_FUNCS(_getshort _getlong)
 		AC_CHECK_MEMBER(HEADER.ad,
 			[AC_DEFINE(HAVE_HEADER_AD)],,

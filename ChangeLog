@@ -1,4 +1,9 @@
-20050502
+20040513
+ - (dtucker) [configure.ac] Bug #867: Additional tests for res_query in
+   libresolv, fixes problems detecting it on some platforms
+   (eg Linux/x86-64).  From Kurt Roeckx via Debian, ok mouring@
+
+20040502
  - (dtucker) OpenBSD CVS Sync
    - djm@cvs.openbsd.org 2004/04/22 11:56:57
      [moduli.c]
