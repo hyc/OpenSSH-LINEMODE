@@ -6,6 +6,7 @@
  - (djm) Clean up PCRE text in INSTALL
  - (djm) Fix OSF SIA auth NULL pointer deref. Report from Mike Battersby 
    <mib@unimelb.edu.au>
+ - (bal) NCR SVR4 compatiblity provide by Don Bragg <thewizarddon@yahoo.com>
 
 20010211
  - (bal) OpenBSD Sync
