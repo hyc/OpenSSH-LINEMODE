@@ -1,5 +1,6 @@
 20020723
  - (bal) [bsd-cray.c bsd-cray.h] Part 2 of Cray merger. 
+ - (bal) sync ID w/ ssh-agent.c
  - (bal) OpenBSD Sync
    - markus@cvs.openbsd.org 2002/07/19 15:43:33
      [log.c log.h session.c sshd.c]
