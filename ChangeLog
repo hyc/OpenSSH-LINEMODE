@@ -1,3 +1,9 @@
+20030821
+ - (dtucker) OpenBSD CVS Sync
+   - markus@cvs.openbsd.org 2003/08/14 16:08:58
+     [ssh-keygen.c]
+     exit after primetest, ok djm@
+
 20030813
  - (dtucker) [session.c] Remove #ifdef TIOCSBRK kludge.
  - (dtucker) OpenBSD CVS Sync
