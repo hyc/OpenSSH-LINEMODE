@@ -9,6 +9,7 @@
  - (djm) Sync with -current openbsd-compat/readpassphrase.c:
    - djm@cvs.openbsd.org 2001/06/27 13:23:30
      typo, spotted by Tom Holroyd <tomh@po.crl.go.jp>; ok deraadt@
+ - (djm) Turn up warnings if gcc or egcs detected
 
 20010625
  - OpenBSD CVS Sync

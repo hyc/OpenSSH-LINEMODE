@@ -41,10 +41,9 @@ if test -z "$LD" ; then
 fi
 AC_SUBST(LD)
 	
-# C Compiler features
 AC_C_INLINE
-if test "$GCC" = "yes"; then 
-	CFLAGS="$CFLAGS -Wall"
+if test "$GCC" = "yes" || test "$GCC" = "egcs"; then 
+	CFLAGS="$CFLAGS -Wall -Wpointer-arith -Wno-uninitialized"
 fi
 
 # Check for some target-specific stuff
