@@ -10,6 +10,8 @@
      [servconf.c]
      remove "\n" from fatal()
  - (bal) Updated Cygwin README by Corinna Vinschen <vinschen@redhat.com>
+ - (bal) Avoid socket file security issues in ssh-agent for Cygwin.
+   Patch by Egor Duda <deo@logos-m.ru>
 
 20010503
  - OpenBSD CVS Sync
