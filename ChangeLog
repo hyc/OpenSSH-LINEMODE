@@ -58,6 +58,9 @@
    - markus@cvs.openbsd.org 2003/09/19 11:30:39
      [ssh-keyscan.c]
      avoid fatal_cleanup, just call exit(); ok deraadt
+   - markus@cvs.openbsd.org 2003/09/19 11:31:33
+     [channels.c]
+     do not call channel_free_all on fatal; ok deraadt
 
 20030919
  - (djm) Bug #683: Remove reference to --with-ipv4-default from INSTALL;
