@@ -6,6 +6,7 @@
    - markus@cvs.openbsd.org 2001/04/23 22:14:13
      [ssh-keygen.c]
      remove debug
+ - (bal) Whitespace resync w/ OpenBSD for uidswap.c
 
 20010424
  - OpenBSD CVS Sync
