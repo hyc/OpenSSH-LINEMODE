@@ -444,7 +444,7 @@ prng_check_seedfile(char *filename) {
 		fatal("PRNG seedfile %.100s is not a regular file", filename);
 
 	/* mode 0600, owned by root or the current user? */
-	if (((st.st_mode & 0177) != 0) || !(st.st_uid == geteuid()))
+	if (((st.st_mode & 0177) != 0) || !(st.st_uid == getuid()))
 		fatal("PRNG seedfile %.100s must be mode 0600, owned by uid %d",
 			 filename, getuid());
 
