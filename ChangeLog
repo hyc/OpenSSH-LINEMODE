@@ -12,6 +12,9 @@
    - naddy@cvs.openbsd.org 2002/06/22 11:51:39
      [ssh.1]
      typo
+   - stevesk@cvs.openbsd.org 2002/06/22 16:32:54
+     [sshd.8]
+     add /var/empty in FILES section
 
 20020622
  - (djm) Update README.privsep; spotted by fries@
