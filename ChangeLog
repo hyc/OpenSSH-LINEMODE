@@ -1,4 +1,7 @@
 20021015
+ - (bal) Fix bug id 383 and only call loginrestrict for AIX if not root.
+
+20021015
  - (tim) [contrib/caldera/openssh.spec] make ssh-agent setgid nobody
 
 20021004
