@@ -28,6 +28,11 @@ RCSID("$Id$");
 #ifdef HAVE_SHADOW_H
 # include <shadow.h>
 #endif
+#ifdef HAVE_GETPWANAM
+# include <sys/label.h>
+# include <sys/audit.h>
+# include <pwdadj.h>
+#endif
 #if defined(HAVE_MD5_PASSWORDS) && !defined(HAVE_MD5_CRYPT)
 # include "md5crypt.h"
 #endif /* defined(HAVE_MD5_PASSWORDS) && !defined(HAVE_MD5_CRYPT) */
@@ -45,6 +50,9 @@ auth_password(struct passwd * pw, const char *password)
 	char *salt;
 #ifdef HAVE_SHADOW_H
 	struct spwd *spw;
+#endif
+#ifdef HAVE_GETPWANAM
+	struct passwd_adjunct *spw;
 #endif
 #ifdef WITH_AIXAUTHENTICATE
 	char *authmsg;
@@ -99,6 +107,16 @@ auth_password(struct passwd * pw, const char *password)
 		pw_password = spw->sp_pwdp;
 	}
 #endif /* defined(HAVE_SHADOW_H) && !defined(DISABLE_SHADOW) */
+#if defined(HAVE_GETPWANAM) && !defined(DISABLE_SHADOW)
+	if (issecure() && (spw = getpwanam(pw->pw_name)) != NULL)
+	{
+		/* Check for users with no password. */
+		if (strcmp(password, "") == 0 && strcmp(spw->pwa_passwd, "") == 0)
+			return 1;
+
+		pw_password = spw->pwa_passwd;
+	}
+#endif /* defined(HAVE_GETPWANAM) && !defined(DISABLE_SHADOW) */
 
 	if (pw_password[0] != '\0')
 		salt = pw_password;
