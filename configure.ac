@@ -582,6 +582,7 @@ AC_MSG_CHECKING([for mmap anon shared])
 AC_TRY_RUN(
 	[
 #include <stdio.h>
+#include <sys/types.h>
 #include <sys/mman.h>
 #if !defined(MAP_ANON) && defined(MAP_ANONYMOUS)
 #define MAP_ANON MAP_ANONYMOUS

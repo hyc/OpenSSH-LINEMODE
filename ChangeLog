@@ -5,6 +5,8 @@
  - (bal) s/config.h/includes.h/ in openbsd-compat/ for *.c.  Otherwise wise
    have issues of our fixes not propogating right (ie bcopy instead of
    memmove).  OK tim
+ - (bal) FreeBSD needs <sys/types.h> to detect if mmap() is supported.
+   Bug #303
 
 200206027
  - OpenBSD CVS Sync
