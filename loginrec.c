@@ -539,13 +539,8 @@ line_abbrevname(char *dst, const char *src, int dstsize)
 	memset(dst, '\0', dstsize);
 
 	/* Always skip prefix if present */
-#ifdef sgi
-	if (strncmp(src, "/dev/tty", 8) == 0)
-		src += 8;
-#else
 	if (strncmp(src, "/dev/", 5) == 0)
 		src += 5;
-#endif
 
 	len = strlen(src);
 
