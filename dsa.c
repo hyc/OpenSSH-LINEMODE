@@ -63,7 +63,7 @@ dsa_key_from_blob(
 	Key *key;
 
 #ifdef DEBUG_DSS
-	dump_base64(blob, blen);
+	dump_base64(stderr, blob, blen);
 #endif
 	/* fetch & parse DSA/DSS pubkey */
 	key = key_new(KEY_DSA);

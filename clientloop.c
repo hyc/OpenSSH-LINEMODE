@@ -971,7 +971,7 @@ client_input_channel_open(int type, int plen)
 	rwindow = packet_get_int();
 	rmaxpack = packet_get_int();
 
-	log("server_input_open: ctype %s rchan %d win %d max %d",
+	debug("client_input_channel_open: ctype %s rchan %d win %d max %d",
 	    ctype, rchan, rwindow, rmaxpack);
 
 	if (strcmp(ctype, "x11") == 0) {
@@ -1077,7 +1077,7 @@ client_input_channel_req(int id, void *arg)
 	rtype = packet_get_string(&len);
 	reply = packet_get_char();
 
-	debug("session_input_channel_req: rtype %s reply %d", rtype, reply);
+	debug("client_input_channel_req: rtype %s reply %d", rtype, reply);
 
 	c = channel_lookup(id);
 	if (c == NULL)
