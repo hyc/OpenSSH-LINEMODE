@@ -1,5 +1,6 @@
 20030120
  - (djm) Fix compilation for NetBSD from dtucker@zip.com.au
+ - (tim) [progressmeter.c] make compilers without long long happy.
 
 20030118
  - (djm) Revert fix for Bug #442 for now.
