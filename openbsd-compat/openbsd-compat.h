@@ -26,6 +26,7 @@
 #include "glob.h"
 #include "readpassphrase.h"
 #include "getopt.h"
+#include "vis.h"
 
 /* Home grown routines */
 #include "bsd-arc4random.h"
