@@ -98,7 +98,9 @@ auth_rsa_challenge_dialog(unsigned int bits, BIGNUM *e, BIGNUM *n)
 
   /* The response is MD5 of decrypted challenge plus session id. */
   len = BN_num_bytes(challenge);
-  assert(len <= 32 && len);
+  if (len <= 0 || len > 32)
+    fatal("auth_rsa_challenge_dialog: bad challenge length %d", len);
+
   memset(buf, 0, 32);
   BN_bn2bin(challenge, buf + 32 - len);
   MD5_Init(&md);

@@ -265,11 +265,19 @@ add_host_to_hostfile(const char *filename, const char *host,
   /* Print the host name and key to the file. */
   fprintf(f, "%s %u ", host, bits);
   buf = BN_bn2dec(e);
-  assert(buf != NULL);
+  if (buf == NULL) {
+    error("add_host_to_hostfile: BN_bn2dec #1 failed");
+    fclose(f);
+    return 0;
+  }
   fprintf(f, "%s ", buf);
   free (buf);
   buf = BN_bn2dec(n);
-  assert(buf != NULL);
+  if (buf == NULL) {
+    error("add_host_to_hostfile: BN_bn2dec #2 failed");
+    fclose(f);
+    return 0;
+  }
   fprintf(f, "%s\n", buf);
   free (buf);
 

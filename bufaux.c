@@ -45,7 +45,9 @@ buffer_put_bignum(Buffer *buffer, BIGNUM *value)
   
   /* Get the value of in binary */
   oi = BN_bn2bin(value, buf);
-  assert(oi == bin_size);
+  if (oi != bin_size)
+    fatal("buffer_put_bignum: BN_bn2bin() failed: oi %d != bin_size %d",
+	  oi, bin_size);
 
   /* Store the number of bits in the buffer in two bytes, msb first. */
   PUT_16BIT(msg, bits);

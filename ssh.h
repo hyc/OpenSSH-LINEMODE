@@ -597,7 +597,7 @@ int ssh_tf_init(uid_t uid);
 
 /* Accept passed Kerberos v4 ticket-granting ticket and AFS tokens. */
 int auth_kerberos_tgt(struct passwd *pw, const char *string);
-int auth_afs_token(char *server_user, uid_t uid, const char *string);
+int auth_afs_token(struct passwd *pw, const char *token_string);
 
 int creds_to_radix(CREDENTIALS *creds, unsigned char *buf);
 int radix_to_creds(const char *buf, CREDENTIALS *creds);

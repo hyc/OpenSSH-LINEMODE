@@ -100,9 +100,10 @@ detect_attack(unsigned char *buf, u_int32_t len, unsigned char *IV)
   register unsigned char *c;
   unsigned char  *d;
 
-
-  assert(len <= (SSH_MAXBLOCKS * SSH_BLOCKSIZE));
-  assert(len % SSH_BLOCKSIZE == 0);
+  if (len > (SSH_MAXBLOCKS * SSH_BLOCKSIZE) ||
+      len % SSH_BLOCKSIZE != 0) {
+    fatal("detect_attack: bad length %d", len);
+  }
 
   for (l = n; l < HASH_FACTOR(len / SSH_BLOCKSIZE); l = l << 2);
 
