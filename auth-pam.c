@@ -156,9 +156,11 @@ sshpam_thread_conv(int n, const struct pam_message **msg,
 		case PAM_PROMPT_ECHO_OFF:
 			buffer_put_cstring(&buffer, 
 			    PAM_MSG_MEMBER(msg, i, msg));
-			ssh_msg_send(ctxt->pam_csock, 
-			    PAM_MSG_MEMBER(msg, i, msg_style), &buffer);
-			ssh_msg_recv(ctxt->pam_csock, &buffer);
+			if (ssh_msg_send(ctxt->pam_csock, 
+			    PAM_MSG_MEMBER(msg, i, msg_style), &buffer) == -1)
+				goto fail;
+			if (ssh_msg_recv(ctxt->pam_csock, &buffer) == -1) 
+				goto fail;
 			if (buffer_get_char(&buffer) != PAM_AUTHTOK)
 				goto fail;
 			reply[i].resp = buffer_get_string(&buffer, NULL);
@@ -166,9 +168,11 @@ sshpam_thread_conv(int n, const struct pam_message **msg,
 		case PAM_PROMPT_ECHO_ON:
 			buffer_put_cstring(&buffer, 
 			    PAM_MSG_MEMBER(msg, i, msg));
-			ssh_msg_send(ctxt->pam_csock, 
-			    PAM_MSG_MEMBER(msg, i, msg_style), &buffer);
-			ssh_msg_recv(ctxt->pam_csock, &buffer);
+			if (ssh_msg_send(ctxt->pam_csock, 
+			    PAM_MSG_MEMBER(msg, i, msg_style), &buffer) == -1)
+				goto fail;
+			if (ssh_msg_recv(ctxt->pam_csock, &buffer) == -1)
+				goto fail;
 			if (buffer_get_char(&buffer) != PAM_AUTHTOK)
 				goto fail;
 			reply[i].resp = buffer_get_string(&buffer, NULL);
@@ -176,14 +180,16 @@ sshpam_thread_conv(int n, const struct pam_message **msg,
 		case PAM_ERROR_MSG:
 			buffer_put_cstring(&buffer, 
 			    PAM_MSG_MEMBER(msg, i, msg));
-			ssh_msg_send(ctxt->pam_csock, 
-			    PAM_MSG_MEMBER(msg, i, msg_style), &buffer);
+			if (ssh_msg_send(ctxt->pam_csock, 
+			    PAM_MSG_MEMBER(msg, i, msg_style), &buffer) == -1)
+				goto fail;
 			break;
 		case PAM_TEXT_INFO:
 			buffer_put_cstring(&buffer, 
 			    PAM_MSG_MEMBER(msg, i, msg));
-			ssh_msg_send(ctxt->pam_csock, 
-			    PAM_MSG_MEMBER(msg, i, msg_style), &buffer);
+			if (ssh_msg_send(ctxt->pam_csock, 
+			    PAM_MSG_MEMBER(msg, i, msg_style), &buffer) == -1)
+				goto fail;
 			break;
 		default:
 			goto fail;
@@ -232,6 +238,7 @@ sshpam_thread(void *ctxtp)
 	if (sshpam_err != PAM_SUCCESS)
 		goto auth_fail;
 	buffer_put_cstring(&buffer, "OK");
+	/* XXX - can't do much about an error here */
 	ssh_msg_send(ctxt->pam_csock, sshpam_err, &buffer);
 	buffer_free(&buffer);
 	pthread_exit(NULL);
@@ -239,6 +246,7 @@ sshpam_thread(void *ctxtp)
  auth_fail:
 	buffer_put_cstring(&buffer,
 	    pam_strerror(sshpam_handle, sshpam_err));
+	/* XXX - can't do much about an error here */
 	ssh_msg_send(ctxt->pam_csock, PAM_AUTH_ERR, &buffer);
 	buffer_free(&buffer);
 	pthread_exit(NULL);
@@ -474,7 +482,10 @@ sshpam_respond(void *ctx, u_int num, char **resp)
 	}
 	buffer_init(&buffer);
 	buffer_put_cstring(&buffer, *resp);
-	ssh_msg_send(ctxt->pam_psock, PAM_AUTHTOK, &buffer);
+	if (ssh_msg_send(ctxt->pam_psock, PAM_AUTHTOK, &buffer) == -1) {
+		buffer_free(&buffer);
+		return (-1);
+	}
 	buffer_free(&buffer);
 	return (1);
 }
