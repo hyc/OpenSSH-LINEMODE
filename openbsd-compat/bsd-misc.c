@@ -23,8 +23,6 @@
  */
 
 #include "includes.h"
-#include "xmalloc.h"
-#include "ssh.h"
 
 RCSID("$Id$");
 
