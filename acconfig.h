@@ -308,6 +308,9 @@
 /* Define if your system glob() function has gl_matchc options in glob_t */
 #undef GLOB_HAS_GL_MATCHC
 
+/* Define in your struct dirent expects you to allocate extra space for d_name */
+#undef BROKEN_ONE_BYTE_DIRENT_D_NAME
+
 @BOTTOM@
 
 /* ******************* Shouldn't need to edit below this line ************** */
