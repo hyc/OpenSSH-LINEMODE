@@ -38,6 +38,10 @@
    - djm@cvs.openbsd.org 2004/10/07 10:10:24
      [scp.1 sftp.1 ssh.1 ssh_config.5]
      document KbdInteractiveDevices; ok markus@
+   - djm@cvs.openbsd.org 2004/10/07 10:12:36
+     [ssh-agent.c]
+     don't unlink agent socket when bind() fails, spotted by rich AT
+     rich-paul.net, ok markus@
 
 20041102
  - (dtucker) [configure.ac includes.h] Bug #947: Fix compile error on HP-UX
