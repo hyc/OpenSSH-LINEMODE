@@ -2,6 +2,8 @@
  - (stevesk) [auth-sia.[ch]] add BSD license from Chris Adams
  - (tim) [configure.ac] add <sys/types.h> to msghdr tests. Change -L
    to -h on testing for /bin being symbolic link
+ - (bal) Mistaken in Cygwin scripts for ssh starting.  Patch by
+   Corinna Vinschen <vinschen@redhat.com> 
 
 20020411
  - (stevesk) [auth-sia.c] cleanup
