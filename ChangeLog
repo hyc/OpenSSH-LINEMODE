@@ -10,6 +10,9 @@
    - deraadt@cvs.openbsd.org 2003/10/07 21:58:28
      [sshconnect2.c]
      set ptr to NULL after free
+   - dtucker@cvs.openbsd.org 2003/10/07 01:52:13
+     [regress/Makefile regress/banner.sh]
+     Test SSH2 banner.  ok markus@
 
 20031007
  - (djm) Delete autom4te.cache after autoreconf
