@@ -106,8 +106,12 @@ add_file(AuthenticationConnection *ac, const char *filename)
 	}
 	RSA_free(public_key);
 
-	if (!interactive && getenv("DISPLAY"))
-		askpass = getenv("SSH_ASKPASS");
+	if (!interactive && getenv("DISPLAY")) {
+		if (getenv(SSH_ASKPASS_ENV))
+			askpass = getenv(SSH_ASKPASS_ENV);
+		else
+			askpass = SSH_ASKPASS_DEFAULT;
+	}
 
 	/* At first, try empty passphrase */
 	success = load_private_key(filename, "", key, &comment);
