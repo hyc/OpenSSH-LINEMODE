@@ -830,8 +830,8 @@ AC_ARG_WITH(tcp-wrappers,
 
 dnl    Checks for library functions. Please keep in alphabetical order
 AC_CHECK_FUNCS(\
-	arc4random __b64_ntop b64_ntop __b64_pton b64_pton \
-	bcopy bindresvport_sa clock fchmod fchown freeaddrinfo futimes \
+	arc4random __b64_ntop b64_ntop __b64_pton b64_pton bcopy \
+	bindresvport_sa clock closefrom fchmod fchown freeaddrinfo futimes \
 	getaddrinfo getcwd getgrouplist getnameinfo getopt \
 	getpeereid _getpty getrlimit getttyent glob inet_aton \
 	inet_ntoa inet_ntop innetgr login_getcapbool md5_crypt memmove \
