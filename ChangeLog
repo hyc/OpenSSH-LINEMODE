@@ -24,6 +24,9 @@
      [scp.c]
      skip filenames containing \n; report jdamery@chiark.greenend.org.uk
      and matthew@debian.org
+   - markus@cvs.openbsd.org 2001/10/01 21:38:53
+     [channels.c channels.h ssh.c sshd.c]
+     remove ugliness; vp@drexel.edu via angelos
 
 20011001
  - (stevesk) loginrec.c: fix type conversion problems exposed when using
