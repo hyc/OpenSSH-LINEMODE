@@ -299,6 +299,9 @@ void do_pam_setcred(int init)
 {
 	int pam_retval;
 
+	if (__pamh == NULL)
+		return;
+
 	do_pam_set_conv(&conv);
 
 	debug("PAM establishing creds");
