@@ -10,6 +10,9 @@
    - stevesk@cvs.openbsd.org 2001/08/17 18:59:47
      [servconf.h]
      typo in comment
+   - stevesk@cvs.openbsd.org 2001/08/21 21:47:42
+     [ssh.1 sshd.8]
+     minor typos and cleanup
 
 20010815
  - (bal) Fixed stray code in readconf.c that went in by mistake.
