@@ -143,6 +143,14 @@ cray_access_denied(char *username)
 	return (errcode);
 }
 
+/*
+ * record_failed_login: generic "login failed" interface function
+ */
+record_failed_login(const char *user, const char *ttyname)
+{
+	cray_login_failure((char *)user, IA_UDBERR);
+}
+
 int
 cray_setup (uid_t uid, char *username, const char *command)
 {

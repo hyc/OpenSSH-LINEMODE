@@ -42,6 +42,8 @@ void cray_init_job(struct passwd *);		/* init cray job */
 void cray_job_termination_handler(int);		/* process end of job signal */
 void cray_login_failure(char *username, int errcode);
 int cray_access_denied(char *username);
+#define CUSTOM_FAILED_LOGIN 1
+void record_failed_login(const char *user, const char *ttyname);
 extern	char   cray_tmpdir[];			/* cray tmpdir */
 #ifndef IA_SSHD
 #define IA_SSHD IA_LOGIN
