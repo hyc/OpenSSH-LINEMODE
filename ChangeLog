@@ -7,6 +7,9 @@
      [ssh.1]
      There is no option "Compress", point to "Compression" instead; ok 
      markus
+   - markus@cvs.openbsd.org 2001/07/22 22:04:19
+     [readconf.c ssh.1]
+     enable challenge-response auth by default; ok millert@
 
 20010803
  - (djm) Fix interrupted read in entropy gatherer. Spotted by markus@ on
