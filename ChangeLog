@@ -1,3 +1,6 @@
+20030118
+ - (djm) Revert fix for Bug #442 for now.
+
 20030117
  - (djm) Bug #470: Detect strnvis, not strvis in configure.
     From d_wllms@lanl.gov
