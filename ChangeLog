@@ -1,6 +1,10 @@
 20050307
  - (dtucker) [configure.ac] Disable gettext search when configuring with
    BSM audit support for the time being.  ok djm@
+ - (dtucker) OpenBSD CVS Sync (regress/)
+   - fgsch@cvs.openbsd.org 2004/12/10 01:31:30
+     [Makefile]
+     some globbing regress; prompted and ok djm@
 
 20050306
  - (dtucker) [monitor.c] Bug #125 comment #47: fix errors returned by monitor
