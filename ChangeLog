@@ -2,6 +2,8 @@
  - (djm) Don't try to close PAM session or delete credentials if the
    session has not been open or credentials not set. Based on patch from 
    Andrew Bartlett <abartlet@pcug.org.au>
+ - (djm) Move PAM session initialisation until after fork in sshd. Patch 
+   from Nalin Dahyabhai <nalin@redhat.com>
 
 20010213
  - (djm) Only test -S potential EGD sockets if they exist and are readable.
