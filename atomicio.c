@@ -43,7 +43,7 @@ atomicio(f, fd, _s, n)
 	ssize_t res, pos = 0;
 
 	while (n > pos) {
-		res = (f) (fd, (char*)s + pos, n - pos);
+		res = (f) (fd, s + pos, n - pos);
 		switch (res) {
 		case -1:
 			if (errno == EINTR || errno == EAGAIN)

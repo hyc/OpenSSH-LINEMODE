@@ -18,19 +18,8 @@
 #ifndef RSA_H
 #define RSA_H
 
-#include "config.h"
-
-#ifdef HAVE_OPENSSL
 #include <openssl/bn.h>
 #include <openssl/rsa.h>
-#include <openssl/rand.h>
-#endif
-
-#ifdef HAVE_SSL
-#include <ssl/bn.h>
-#include <ssl/rsa.h>
-#include <ssl/rand.h>
-#endif
 
 /* Calls SSL RSA_generate_key, only copies to prv and pub */
 void    rsa_generate_key(RSA * prv, RSA * pub, unsigned int bits);

@@ -17,23 +17,14 @@
 #include "includes.h"
 RCSID("$Id$");
 
-#ifdef HAVE_OPENSSL
-#include <openssl/bn.h>
-#include <openssl/rsa.h>
-#include <openssl/dsa.h>
-#endif
-#ifdef HAVE_SSL
-#include <ssl/bn.h>
-#include <ssl/rsa.h>
-#include <ssl/dsa.h>
-#endif
-
 #include "packet.h"
 #include "ssh.h"
 #include "xmalloc.h"
 #include "uidswap.h"
 #include "servconf.h"
 
+#include <openssl/rsa.h>
+#include <openssl/dsa.h>
 #include "key.h"
 #include "hostfile.h"
 

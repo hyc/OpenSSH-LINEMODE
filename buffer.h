@@ -1,16 +1,16 @@
 /*
- * 
+ *
  * buffer.h
- * 
+ *
  * Author: Tatu Ylonen <ylo@cs.hut.fi>
- * 
+ *
  * Copyright (c) 1995 Tatu Ylonen <ylo@cs.hut.fi>, Espoo, Finland
  *                    All rights reserved
- * 
+ *
  * Created: Sat Mar 18 04:12:25 1995 ylo
- * 
+ *
  * Code for manipulating FIFO buffers.
- * 
+ *
  */
 
 /* RCSID("$Id$"); */

@@ -1,17 +1,10 @@
 #include "includes.h"
-
 #ifdef SKEY
 RCSID("$Id$");
 
 #include "ssh.h"
 #include "packet.h"
-
-#ifdef HAVE_OPENSSL
-#include <openssl/sha.h>
-#endif
-#ifdef HAVE_SSL
-#include <ssl/sha.h>
-#endif
+#include <sha1.h>
 
 /* from %OpenBSD: skeylogin.c,v 1.32 1999/08/16 14:46:56 millert Exp % */
 

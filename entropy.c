@@ -32,14 +32,8 @@
 #include "ssh.h"
 #include "xmalloc.h"
 
-#ifdef HAVE_OPENSSL
-# include <openssl/rand.h>
-# include <openssl/sha.h>
-#endif
-#ifdef HAVE_SSL
-# include <ssl/rand.h>
-# include <ssl/sha.h>
-#endif
+#include <openssl/rand.h>
+#include <openssl/sha.h>
 
 RCSID("$Id$");
 

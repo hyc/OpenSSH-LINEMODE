@@ -27,14 +27,8 @@ RCSID("$Id$");
 #include "match.h"
 #include "servconf.h"
 
-#ifdef HAVE_OPENSSL
 #include <openssl/rsa.h>
 #include <openssl/md5.h>
-#endif
-#ifdef HAVE_SSL
-#include <ssl/rsa.h>
-#include <ssl/md5.h>
-#endif
 
 /* Flags that may be set in authorized_keys options. */
 extern int no_port_forwarding_flag;
