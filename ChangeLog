@@ -17,6 +17,10 @@
      [ssh-add.1 ssh-add.c]
      use convtime() to parse and validate key lifetime.  can now
      use '-t 2h' etc.  ok markus@ provos@
+   - stevesk@cvs.openbsd.org 2002/06/10 17:45:20
+     [readconf.c ssh.1]
+     change RhostsRSAAuthentication and RhostsAuthentication default to no
+     since ssh is no longer setuid root by default; ok markus@
 
 20020609
  - (bal) OpenBSD CVS Sync
