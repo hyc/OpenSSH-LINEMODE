@@ -1,3 +1,7 @@
+20030117
+ - (djm) Bug #470: Detect strnvis, not strvis in configure.
+    From d_wllms@lanl.gov
+
 20030116
  - (djm) OpenBSD CVS Sync
    - djm@cvs.openbsd.org 2003/01/16 03:41:55

@@ -606,7 +606,7 @@ AC_CHECK_FUNCS(arc4random b64_ntop bcopy bindresvport_sa \
 	realpath recvmsg rresvport_af sendmsg setdtablesize setegid \
 	setenv seteuid setgroups setlogin setproctitle setresgid setreuid \
 	setrlimit setsid setpcred setvbuf sigaction sigvec snprintf \
-	socketpair strerror strlcat strlcpy strmode strvis sysconf \
+	socketpair strerror strlcat strlcpy strmode strnvis sysconf \
 	tcgetpgrp truncate utimes vhangup vsnprintf waitpid __b64_ntop \
 	_getpty)
 
