@@ -238,6 +238,11 @@ typedef unsigned long long int u_int64_t;
 # define HAVE_LONG_LONG_INT 1
 #endif
 
+#ifndef HAVE_U_CHAR
+typedef unsigned char u_char;
+# define HAVE_U_CHAR
+#endif /* HAVE_U_CHAR */
+
 #ifndef HAVE_SOCKLEN_T
 typedef unsigned int socklen_t;
 # define HAVE_SOCKLEN_T

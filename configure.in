@@ -910,6 +910,21 @@ then
 	) 
 fi
 
+
+AC_CACHE_CHECK([for u_char], ac_cv_have_u_char, [
+	AC_TRY_COMPILE(
+		[
+#include <sys/types.h>
+		],
+		[ u_char foo; foo = 125; ],
+		[ ac_cv_have_u_char="yes" ],
+		[ ac_cv_have_u_char="no" ]
+	)
+])
+if test "x$ac_cv_have_u_char" = "xyes" ; then
+	AC_DEFINE(HAVE_U_CHAR)
+fi
+
 AC_CACHE_CHECK([for socklen_t], ac_cv_have_socklen_t, [
 	AC_TRY_COMPILE(
 		[
