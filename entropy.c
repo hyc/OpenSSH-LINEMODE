@@ -505,7 +505,9 @@ hash_output_from_command(entropy_source_t *src, char *hash)
 			break;
 		case 1:
 			/* command input */
-			bytes_read = read(p[0], buf, sizeof(buf));
+			do {
+				bytes_read = read(p[0], buf, sizeof(buf));
+			} while (bytes_read == -1 && errno == EINTR);
 			RAND_add(&bytes_read, sizeof(&bytes_read), 0.0);
 			if (bytes_read == -1) {
 				error_abort = 1;

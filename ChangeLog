@@ -1,3 +1,7 @@
+20010803
+ - (djm) Fix interrupted read in entropy gatherer. Spotted by markus@ on
+   a fast UltraSPARC.
+
 20010726
  - (stevesk) use mysignal() in protocol 1 loop now that the SIGCHLD
    handler has converged.
