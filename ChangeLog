@@ -1,3 +1,6 @@
+20040307
+ - (tim) [regress/login-timeout.sh] fix building outside of source tree.
+
 20040304
  - (dtucker) [auth-pam.c] Don't try to export PAM when compiled with
    -DUSE_POSIX_THREADS.  From antoine.verheijen at ualbert ca.  ok djm@
