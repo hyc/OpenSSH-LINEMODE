@@ -111,7 +111,7 @@ void pam_cleanup_proc(void *context)
 
 		pam_retval = pam_setcred((pam_handle_t *)pamh, PAM_DELETE_CRED);
 		if (pam_retval != PAM_SUCCESS) {
-			log("Cannot delete credentials: %.200s", 
+			debug("Cannot delete credentials: %.200s", 
 				PAM_STRERROR((pam_handle_t *)pamh, pam_retval));
 		}
 
