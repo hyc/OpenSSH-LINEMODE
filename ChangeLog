@@ -17,6 +17,10 @@
    - deraadt@cvs.openbsd.org 2001/03/11 16:39:03
      [ssh-keygen.c]
      KNF, and SHA1 binary output is just creeping featurism
+ - tim@mindrot.org 2001/03/11 17:29:32 [configure.in]
+   test if snprintf() supports %ll
+   add /dev to search path for PRNGD/EGD socket
+   fix my mistake in USER_PATH test program
 
 20010311
  - OpenBSD CVS Sync
