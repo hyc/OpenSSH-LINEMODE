@@ -66,7 +66,7 @@ int dsa_mode = 0;
 #ifdef HAVE___PROGNAME
 extern char *__progname;
 #else /* HAVE___PROGNAME */
-const char *__progname = "ssh-keygen";
+static const char *__progname = "ssh-keygen";
 #endif /* HAVE___PROGNAME */
 
 char hostname[MAXHOSTNAMELEN];

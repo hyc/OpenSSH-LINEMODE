@@ -34,7 +34,7 @@ RCSID("$Id$");
 #ifdef HAVE___PROGNAME
 extern char *__progname;
 #else /* HAVE___PROGNAME */
-const char *__progname = "ssh";
+static const char *__progname = "ssh";
 #endif /* HAVE___PROGNAME */
 
 /* Flag indicating whether IPv4 or IPv6.  This can be set on the command line.

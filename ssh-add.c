@@ -23,7 +23,7 @@ RCSID("$Id$");
 #ifdef HAVE___PROGNAME
 extern char *__progname;
 #else /* HAVE___PROGNAME */
-const char *__progname = "ssh-add";
+static const char *__progname = "ssh-add";
 #endif /* HAVE___PROGNAME */
 
 void
