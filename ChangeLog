@@ -12,6 +12,10 @@
    - markus@cvs.openbsd.org 2003/09/02 16:40:29
      [version.h]
      enter 3.7
+   - jmc@cvs.openbsd.org 2003/09/02 18:50:06
+     [sftp.1 ssh_config.5]
+     escape punctuation;
+     ok deraadt@
 
 20030902
  - (djm) OpenBSD CVS Sync
