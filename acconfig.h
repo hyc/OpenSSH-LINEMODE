@@ -377,6 +377,9 @@
 /* Pushing STREAMS modules incorrectly acquires a controlling TTY */
 #undef STREAMS_PUSH_ACQUIRES_CTTY
 
+/* Define if cmsg_type is not passed correctly */
+#undef BROKEN_CMSG_TYPE
+
 @BOTTOM@
 
 /* ******************* Shouldn't need to edit below this line ************** */

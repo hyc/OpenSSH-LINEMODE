@@ -1,3 +1,7 @@
+20030502
+ - (dtucker) Bug #544: ignore invalid cmsg_type on Linux 2.0 kernels,
+   privsep should now work.
+
 20030429
  - (djm) Add back radix.o (used by AFS support), after it went missing from
    Makefile many moons ago
