@@ -23,6 +23,7 @@
    - markus@cvs.openbsd.org 2003/12/08 11:00:47
      [kexgexc.c]
      print requested group size in debug; ok djm
+ - (dtucker) [ssh-keyscan.c] Sync RCSIDs, missed in SSH_SSFDMAX change below.
 
 20031208
  - (tim) [configure.ac] Bug 770. Fix --without-rpath.
