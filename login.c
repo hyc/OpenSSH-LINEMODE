@@ -210,7 +210,7 @@ record_login(int pid, const char *ttyname, const char *user, uid_t uid,
 #  endif /* HAVE_SYSLEN_IN_UTMPX */
 # endif
 #if defined(HAVE_ADDR_IN_UTMPX)
-	if (addr)
+	if (addr) {
 		switch (addr->sa_family) {
 			case AF_INET: {
 				struct sockaddr_in *in = (struct sockaddr_in*)addr;
