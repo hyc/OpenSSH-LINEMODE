@@ -23,6 +23,9 @@
    - markus@cvs.openbsd.org 2004/01/19 21:25:15
      [auth2-hostbased.c auth2-pubkey.c serverloop.c ssh-keysign.c sshconnect2.c]
      fix mem leaks; some fixes from Pete Flugstad; tested dtucker@
+   - djm@cvs.openbsd.org 2004/01/21 03:07:59
+     [sftp.c]
+     initialise infile in main, rather than statically - from portable
 
 20040114
  - (dtucker) [auth-pam.c] Have monitor die if PAM authentication thread exits
