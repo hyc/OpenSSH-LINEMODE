@@ -1,3 +1,7 @@
+20030807
+ - (dtucker) [session.c] Have session_break_req not attempt to send a break
+   if TIOCSBRK and TIOCCBRK are not defined (eg Cygwin).
+
 20030802
  - (dtucker) [monitor.h monitor_wrap.h] Remove excess ident tags.
  - (dtucker) OpenBSD CVS Sync
