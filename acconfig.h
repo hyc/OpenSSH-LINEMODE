@@ -251,7 +251,6 @@
 #undef HAVE_INT64_T
 #undef HAVE_U_INT64_T
 #undef HAVE_U_CHAR
-#undef HAVE_SOCKLEN_T
 #undef HAVE_SIZE_T
 #undef HAVE_SSIZE_T
 #undef HAVE_CLOCK_T

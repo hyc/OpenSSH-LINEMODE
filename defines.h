@@ -243,11 +243,6 @@ typedef unsigned char u_char;
 # define HAVE_U_CHAR
 #endif /* HAVE_U_CHAR */
 
-#ifndef HAVE_SOCKLEN_T
-typedef unsigned int socklen_t;
-# define HAVE_SOCKLEN_T
-#endif /* HAVE_SOCKLEN_T */
-
 #ifndef HAVE_SIZE_T
 typedef unsigned int size_t;
 # define HAVE_SIZE_T
