@@ -1,4 +1,7 @@
 20050222
+ - (djm) [configure.ac] in_addr_t test needs sys/types.h too
+
+20050222
  - (dtucker) [uidswap.c] Skip uid restore test on Cygwin.  Patch from
    vinschen at redhat.com.
 

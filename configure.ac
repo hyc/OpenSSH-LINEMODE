@@ -1877,7 +1877,9 @@ TYPE_SOCKLEN_T
 
 AC_CHECK_TYPES(sig_atomic_t,,,[#include <signal.h>])
 
-AC_CHECK_TYPES(in_addr_t,,,[#include <netinet/in.h>])
+AC_CHECK_TYPES(in_addr_t,,,
+[#include <sys/types.h>
+#include <netinet/in.h>])
 
 AC_CACHE_CHECK([for size_t], ac_cv_have_size_t, [
 	AC_TRY_COMPILE(
