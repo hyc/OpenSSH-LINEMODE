@@ -372,7 +372,7 @@ uninstall:
 
 tests:	$(TARGETS)
 	BUILDDIR=`pwd`; \
-	mkdir -p `pwd`/regress; \
+	[ -d `pwd`/regress ]  ||  mkdir -p `pwd`/regress; \
 	TEST_SSH_SSH="$${BUILDDIR}/ssh"; \
 	TEST_SSH_SSHD="$${BUILDDIR}/sshd"; \
 	TEST_SSH_SSHAGENT="$${BUILDDIR}/ssh-agent"; \
