@@ -199,13 +199,16 @@ sshpam_thread(void *ctxtp)
 {
 	struct pam_ctxt *ctxt = ctxtp;
 	Buffer buffer;
-	struct pam_conv sshpam_conv = { sshpam_thread_conv, ctxt };
+	struct pam_conv sshpam_conv;
 #ifndef USE_POSIX_THREADS
 	const char *pam_user;
 
 	pam_get_item(sshpam_handle, PAM_USER, (const void **)&pam_user);
 	setproctitle("%s [pam]", pam_user);
 #endif
+
+	sshpam_conv.conv = sshpam_thread_conv;
+	sshpam_conv.appdata_ptr = ctxt;
 
 	buffer_init(&buffer);
 	sshpam_err = pam_set_item(sshpam_handle, PAM_CONV,
@@ -634,7 +637,10 @@ pam_chauthtok_conv(int n, const struct pam_message **msg,
 void
 do_pam_chauthtok(void)
 {
-	struct pam_conv pam_conv = { pam_chauthtok_conv, NULL };
+	struct pam_conv pam_conv;
+
+	pam_conv.conv = pam_chauthtok_conv;
+	pam_conv.appdata_ptr = NULL;
 
 	if (use_privsep)
 		fatal("Password expired (unable to change with privsep)");
