@@ -333,6 +333,9 @@
 /* Define on *nto-qnx systems */
 #undef MISSING_FD_MASK
 
+/* Define if you want smartcard support */
+#undef SMARTCARD
+
 @BOTTOM@
 
 /* ******************* Shouldn't need to edit below this line ************** */

@@ -1,3 +1,6 @@
+20010918
+ - (djm) Configure support for smartcards
+
 20010917
  - (djm) x11-ssh-askpass-1.2.4 in RPM spec, revert workarounds
  - (tim) [includes.h openbsd-compat/getopt.c openbsd-compat/getopt.h]
