@@ -13,6 +13,7 @@
      [version.h]
      OpenSSH_3.1
  - (djm) Update RPM spec files with new version number
+ - (bal) Updated INSTALL to reflect 0.9.6 OpenSSL requirement
 
 20020305
    - stevesk@cvs.openbsd.org 2002/03/02 09:34:42
