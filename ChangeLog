@@ -10,6 +10,7 @@
    Bug #892: Send messages from failing PAM account modules to the client via
    SSH2_MSG_USERAUTH_BANNER messages.  Note that this will not happen with
    SSH2 kbdint authentication, which need to be dealt with separately.  ok djm@
+ - (dtucker) [session.c] Bug #927: make .hushlogin silent again.  ok djm@
 
 20040830
  - (dtucker) [session.c openbsd-compat/bsd-cygwin_util.{c,h}] Bug #915: only
