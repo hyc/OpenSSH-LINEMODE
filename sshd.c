@@ -1551,24 +1551,41 @@ do_authloop(struct passwd * pw)
 			get_remote_port(),
 			user);
 
-#ifdef HAVE_LIBPAM
-		do_pam_account_and_session(pw->pw_name, client_user);
-
-		/* Clean up */
-		if (client_user != NULL)
-			xfree(client_user);
-
-		if (password != NULL) {
-			memset(password, 0, strlen(password));
-			xfree(password);
-		}
-#endif /* HAVE_LIBPAM */
-
+#ifndef HAVE_LIBPAM
 		if (authenticated)
 			return;
 
 		if (attempt > AUTH_FAIL_MAX)
 			packet_disconnect(AUTH_FAIL_MSG, pw->pw_name);
+#else /* HAVE_LIBPAM */
+		if (authenticated) {
+			do_pam_account_and_session(pw->pw_name, client_user);
+
+			/* Clean up */
+			if (client_user != NULL)
+				xfree(client_user);
+
+			if (password != NULL) {
+				memset(password, 0, strlen(password));
+				xfree(password);
+			}
+			
+			return;
+		}
+
+		if (attempt > AUTH_FAIL_MAX) {
+			/* Clean up */
+			if (client_user != NULL)
+				xfree(client_user);
+
+			if (password != NULL) {
+				memset(password, 0, strlen(password));
+				xfree(password);
+			}
+			
+			packet_disconnect(AUTH_FAIL_MSG, pw->pw_name);
+		}
+#endif /* HAVE_LIBPAM */
 
 		/* Send a message indicating that the authentication attempt failed. */
 		packet_start(SSH_SMSG_FAILURE);
