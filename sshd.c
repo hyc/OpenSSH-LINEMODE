@@ -2328,6 +2328,28 @@ void do_child(const char *command, struct passwd *pw, const char *term,
     child_set_env(&env, &envsize, "KRBTKFILE", ticket);
 #endif /* KRB4 */
 
+#ifdef HAVE_LIBPAM
+  /* Pull in any environment variables that may have been set by PAM. */
+  {
+    char *equal_sign, var_name[256], var_val[256];
+    long this_var;
+    char **pam_env = pam_getenvlist(pamh);
+    for(this_var = 0; pam_env && pam_env[this_var]; this_var++)
+      {
+        if(strlen(pam_env[this_var]) < sizeof(var_name))
+          if((equal_sign = strstr(pam_env[this_var], "=")) != NULL)
+            {
+              memset(var_name, 0, sizeof(var_name));
+              memset(var_val, 0, sizeof(var_val));
+              strncpy(var_name, pam_env[this_var],
+                      equal_sign - pam_env[this_var]);
+              strcpy(var_val, equal_sign + 1);
+              child_set_env(&env, &envsize, var_name, var_val);
+            }
+      }
+  }
+#endif /* HAVE_LIBPAM */
+
   /* Set XAUTHORITY to always be a local file. */
   if (xauthfile)
       child_set_env(&env, &envsize, "XAUTHORITY", xauthfile);
