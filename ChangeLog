@@ -4,6 +4,15 @@
       [session.c]
       don't reset forced_command (we allow multiple login shells in
       ssh2); dwd@bell-labs.com
+   - mpech@cvs.openbsd.org 2001/06/22 10:17:51
+     [ssh.1 sshd.8 ssh-keyscan.1]
+     o) .Sh AUTHOR -> .Sh AUTHORS;
+     o) remove unnecessary .Pp;
+     o) better -mdoc style;
+     o) typo;
+     o) sort SEE ALSO;
+
+     aaron@ ok
 
 20010622
  - (stevesk) handle systems without pw_expire and pw_change.
