@@ -9,6 +9,7 @@
    Pekka Savola <pekkas@netcore.fi>
  - (bal) Cygwin lacks setgroups() API.  Patch by Corinna Vinschen 
    <vinschen@redhat.com>
+ - (bal) version.h synced, RPM specs updated for 2.9
 
 20010425
  - OpenBSD CVS Sync
