@@ -12,6 +12,10 @@
    - markus@cvs.openbsd.org 2001/11/19 11:20:21
      [sshd.c]
      fd leak on HUP; ok stevesk@
+   - stevesk@cvs.openbsd.org 2001/11/19 18:40:46
+     [ssh-agent.1]
+     clarify/state that private keys are not exposed to clients using the 
+     agent; ok markus@
 
 20011126
  - (tim) [contrib/cygwin/README, openbsd-compat/bsd-cygwin_util.c,
