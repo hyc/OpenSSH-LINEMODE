@@ -198,12 +198,11 @@ distprep: catman-do
 	$(AUTORECONF)
 	(cd scard && $(MAKE) -f Makefile.in distprep)
 
-install: $(CONFIGFILES) $(MANPAGES) $(TARGETS) install-files host-key check-user
+install: $(CONFIGFILES) $(MANPAGES) $(TARGETS) install-files host-key check-config
 install-nokeys: $(CONFIGFILES) $(MANPAGES) $(TARGETS) install-files
 
-check-user:
-	@id $(SSH_PRIVSEP_USER) || \
-		echo "WARNING: Privilege separation user \"$(SSH_PRIVSEP_USER)\" does not exist"
+check-config:
+	-$(DESTDIR)$(sbindir)/sshd -t -f $(DESTDIR)$(sysconfdir)/sshd_config
 
 scard-install:
 	(cd scard && $(MAKE) DESTDIR=$(DESTDIR) install)

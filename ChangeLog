@@ -1,3 +1,6 @@
+20020714
+ - (tim) [Makefile.in] replace "id sshd" with "sshd -t"
+
 20020712
  - (tim) [Makefile.in] quiet down install-files: and check-user:
  - (tim) [configure.ac] remove unused filepriv line
