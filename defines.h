@@ -616,6 +616,13 @@ struct winsize {
 #  define USE_LASTLOG
 #endif
 
+#ifdef HAVE_OSF_SIA
+# ifdef USE_SHADOW
+#  undef USE_SHADOW
+# endif
+# define CUSTOM_SYS_AUTH_PASSWD 1
+#endif
+
 /** end of login recorder definitions */
 
 #endif /* _DEFINES_H */
