@@ -1,3 +1,9 @@
+20050201
+ - (dtucker) [log.c] Bug #973: force log_init() to open syslog, since on some
+   platforms syslog will revert to its default values.  This may result in
+   messages from external libraries (eg libwrap) being sent to a different
+   facility.
+
 20050124
  - (dtucker) OpenBSD CVS Sync
    - otto@cvs.openbsd.org 2005/01/21 08:32:02
