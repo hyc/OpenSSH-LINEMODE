@@ -152,7 +152,6 @@ input_userauth_info_response_pam(int type, int plen, void *ctxt)
 	for (i = 0; i < nresp; i++) {
 		int j = context_pam2.prompts[i];
 		resp = packet_get_string(&rlen);
-		debug("response ssh-%d(pam-%d) = \"%s\"", i, j, resp);
 		context_pam2.responses[j].resp_retcode = PAM_SUCCESS;
 		context_pam2.responses[j].resp = xstrdup(resp);
 		xfree(resp);
