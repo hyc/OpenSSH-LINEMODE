@@ -156,7 +156,7 @@ static int do_pam_conversation(int num_msg, const struct pam_message **msg,
 				break;
 			case PAM_ERROR_MSG:
 			case PAM_TEXT_INFO:
-				if ((*msg)[count].msg != NULL)
+				if (PAM_MSG_MEMBER(msg, count, msg) != NULL)
 					fprintf(stderr, "%s\n", 
 					    PAM_MSG_MEMBER(msg, count, msg));
 				reply[count].resp = xstrdup("");

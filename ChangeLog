@@ -1,3 +1,6 @@
+20020728
+ - (stevesk) [auth-pam.c] should use PAM_MSG_MEMBER(); from solar
+
 20020725
  - (djm) Remove some cruft from INSTALL
  - (djm) Latest config.guess and config.sub from ftp://ftp.gnu.org/gnu/config/
