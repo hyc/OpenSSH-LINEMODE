@@ -12,6 +12,9 @@
    - dtucker@cvs.openbsd.org 2004/06/01 14:20:45
      [auth2-chall.c]
      Remove redundant #include; ok markus@
+   - pedro@cvs.openbsd.org 2004/06/03 12:22:20
+     [sftp-client.c sftp.c]
+     initialize pointers, ok markus@
 
 20040603
  - (dtucker) [auth-pam.c] Don't use pam_* namespace for sshd's PAM functions.
