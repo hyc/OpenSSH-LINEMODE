@@ -6,7 +6,7 @@
 
 #if !defined(HAVE_BASENAME)
 
-char *basename(char *path);
+char *basename(const char *path);
 
 #endif /* !defined(HAVE_BASENAME) */
 #endif /* _BASENAME_H */
