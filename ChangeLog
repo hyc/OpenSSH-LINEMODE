@@ -2,6 +2,8 @@
  - (tim) [openssh/contrib/solaris/buildpkg.sh] add PKG_INSTALL_ROOT to
    work in a jumpstart environment. patch by kbrint@rufus.net
  - (tim) [Makefile.in] workaround for broken pakadd on some systems.
+ - (tim) [configure.ac] fix libc89 utimes test. Mention default path for
+   --with-privsep-path=
 
 20020707
  - (tim) [Makefile.in] use umask instead of chmod on $(PRIVSEP_PATH)
