@@ -39,6 +39,12 @@
 #include "pathnames.h"
 #include "log.h"
 
+#ifdef HAVE___PROGNAME
+extern char *__progname;
+#else
+char *__progname;
+#endif
+
 RCSID("$Id$");
 
 #define RANDOM_SEED_SIZE 48
@@ -786,6 +792,7 @@ main(int argc, char **argv)
 	unsigned char buf[48];
 	int ret;
 
+	__progname = get_progname(argv[0]);
 	/* XXX: need some debugging mode */
 	log_init(argv[0], SYSLOG_LEVEL_INFO, SYSLOG_FACILITY_USER, 1);
 
