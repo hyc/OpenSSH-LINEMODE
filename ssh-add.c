@@ -203,8 +203,6 @@ main(int argc, char **argv)
 
 	/* check if RSA support exists */
 	if (rsa_alive() == 0) {
-		extern char *__progname;
-
 		fprintf(stderr,
 			"%s: no RSA support in libssl and libcrypto.  See ssl(8).\n",
 			__progname);
