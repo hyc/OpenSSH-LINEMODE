@@ -3,6 +3,9 @@
    - markus@cvs.openbsd.org 2001/02/16 13:38:18
      [channel.c]                               
      remove debug                              
+   - markus@cvs.openbsd.org 2001/02/16 14:03:43
+     [session.c]
+     proper payload-length check for x11 w/o screen-number
 
 20010216
  - (bal) added '--with-prce'  to allow overriding of system regex when
