@@ -29,6 +29,12 @@
    - jmc@cvs.openbsd.org 2005/03/01 17:32:19
      [ssh-add.1]
      sort options;
+   - jmc@cvs.openbsd.org 2005/03/01 18:15:56
+     [ssh-keygen.1]
+     sort options (no attempt made at synopsis clean up though);
+     spelling (occurance -> occurrence);
+     use prompt before examples;
+     grammar;
 
 20050301
  - (djm) OpenBSD CVS sync:
