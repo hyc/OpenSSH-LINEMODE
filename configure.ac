@@ -254,6 +254,7 @@ main() { if (NSVersionOfRunTimeLibrary("System") >= (60 << 16))
 	AC_DEFINE(PAM_TTY_KLUDGE)
 	AC_DEFINE(LOCKED_PASSWD_PREFIX, "!")
 	AC_DEFINE(SPT_TYPE,SPT_REUSEARGV)
+	AC_DEFINE(LINK_OPNOTSUPP_ERRNO, EPERM)
 	inet6_default_4in6=yes
 	case `uname -r` in
 	1.*|2.0.*)

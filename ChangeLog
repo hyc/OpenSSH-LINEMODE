@@ -2,6 +2,10 @@
  - (tim) update README files.
  - (dtucker) [mdoc2man.awk] Bug #883: correctly recognise .Pa and .Ev macros.
  - (dtucker) [regress/README.regress] Document new variables.
+ - (dtucker) [acconfig.h configure.ac sftp-server.c] Bug #823: add sftp
+   rename handling for Linux which returns EPERM for link() on (at least some)
+   filesystems that do not support hard links.  sftp-server will fall back to
+   stat+rename() in such cases.
 
 20040626
  - (djm) OpenBSD CVS Sync
