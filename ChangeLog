@@ -4,6 +4,9 @@
      [sshd.c]
      fix broken fd handling in the re-exec fallback path, particularly when
      /dev/crypto is in use; ok deraadt@ markus@
+   - djm@cvs.openbsd.org 2004/06/25 23:21:38
+     [sftp.c]
+     bz #875: fix bad escape char error message; reported by f_mohr AT yahoo.de
 
 20040625
  - (dtucker) OpenBSD CVS Sync
