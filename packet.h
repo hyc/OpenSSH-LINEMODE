@@ -198,4 +198,8 @@ do { \
   } \
 } while (0)
 
+/* remote host is connected via a socket/ipv4 */
+int	packet_connection_is_on_socket(void);
+int	packet_connection_is_ipv4(void);
+
 #endif				/* PACKET_H */

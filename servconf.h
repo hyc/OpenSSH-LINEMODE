@@ -18,15 +18,19 @@
 #ifndef SERVCONF_H
 #define SERVCONF_H
 
+#define MAX_PORTS		256	/* Max # ports. */
+
 #define MAX_ALLOW_USERS		256	/* Max # users on allow list. */
 #define MAX_DENY_USERS		256	/* Max # users on deny list. */
 #define MAX_ALLOW_GROUPS	256	/* Max # groups on allow list. */
 #define MAX_DENY_GROUPS		256	/* Max # groups on deny list. */
 
 typedef struct {
-	int     port;		/* Port number to listen on. */
-	struct in_addr listen_addr;	/* Address on which the server
-					 * listens. */
+	unsigned int num_ports;
+	unsigned int ports_from_cmdline;
+	u_short ports[MAX_PORTS];	/* Port number to listen on. */
+	char   *listen_addr;		/* Address on which the server listens. */
+	struct addrinfo *listen_addrs;	/* Addresses on which the server listens. */
 	char   *host_key_file;	/* File containing host key. */
 	int     server_key_bits;/* Size of the server key. */
 	int     login_grace_time;	/* Disconnect if no auth in this time
