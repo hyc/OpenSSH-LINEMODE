@@ -44,6 +44,19 @@ RCSID("$Id$");
 
 int rsa_verbose = 1;
 
+/*
+ * Seed OpenSSL's random number generator
+ */
+void
+seed_rng()
+{
+	char buf[64];
+
+	get_random_bytes(buf, sizeof(buf));
+	RAND_seed(buf, sizeof(buf));
+	memset(buf, 0, sizeof(buf));
+}
+
 int
 rsa_alive()
 {
@@ -70,19 +83,6 @@ keygen_progress(int p, int n, void *arg)
 
 	putchar(progress_chars[p]);
 	fflush(stdout);
-}
-
-/*
- * Seed OpenSSL's random number generator
- */
-void
-seed_rng()
-{
-	char buf[64];
-
-	get_random_bytes(buf, sizeof(buf));
-	RAND_seed(buf, sizeof(buf));
-	memset(buf, 0, sizeof(buf));
 }
 
 /*
