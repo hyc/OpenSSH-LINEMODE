@@ -199,6 +199,7 @@ typedef unsigned long  u_int32_t;
 #   endif
 #  endif
 # endif
+#define __BIT_TYPES_DEFINED__
 #endif
 
 /* 64-bit types */

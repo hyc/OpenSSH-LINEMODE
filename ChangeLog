@@ -1,6 +1,8 @@
 20010611
  - (bal) NeXT/MacOS X lack libgen.h and dirname().  Patch by Mark Miller 
    <markm@swoon.net> 
+ - (bal) Handle broken krb4 issues on Solaris with multiple defined u_*_t
+   types.  Patch by Jan IVEN <Jan.Iven@cern.ch> 
 
 20010610
  - (bal) Missed two files in major resync.  auth-bsdauth.c and auth-skey.c
