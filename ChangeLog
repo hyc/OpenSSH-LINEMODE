@@ -1,5 +1,7 @@
 20010226
  - (bal) Fixed bsd-snprinf.c so it now honors 'BROKEN_SNPRINTF' again.
+ - (djm) Some systems (SCO3, NeXT) have weird saved uid semantics. 
+   Based on patch from Tim Rice <tim@multitalents.net>
 
 20010225
  - (djm) Use %{_libexecdir} rather than hardcoded path in RPM specfile
