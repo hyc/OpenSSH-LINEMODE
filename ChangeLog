@@ -1,5 +1,7 @@
 20010304
  - (bal) Remove make-ssh-known-hosts.1 since it's no longer valid.
+ - (bal) Updated contrib/README to remove 'make-ssh-known-hosts' and
+   give Mark Roth credit for mdoc2man.pl
 
 20010303
  - (djm) Remove make-ssh-known-hosts.pl, ssh-keyscan is better.
