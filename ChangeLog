@@ -2,6 +2,7 @@
  - (dtucker) [configure.ac openbsd-compat/getrrsetbyname.c] Declare h_errno
    as extern int if not already declared.  Fixes compile errors on old SCO
    platforms.  ok tim@
+ - (dtucker) [README.platform] List prereqs for building on Cygwin.
 
 20040421
  - (djm) Update config.guess and config.sub to autoconf-2.59 versions; ok tim@
