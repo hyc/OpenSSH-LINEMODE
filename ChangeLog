@@ -130,6 +130,10 @@
    - rees@cvs.openbsd.org 2002/03/21 18:08:15
      [scard.c]
      In sc_put_key(), sc_reader_id should be id.
+   - markus@cvs.openbsd.org 2002/03/21 20:51:12
+     [sshd_config]
+     add privsep (off)
+
 20020317
  - (tim) [configure.ac] Assume path given with --with-pid-dir=PATH is wanted,
    warn if directory does not exist. Put system directories in front of
