@@ -906,7 +906,7 @@ void ssh_exchange_identification()
   for (i = 0; i < sizeof(buf) - 1; i++)
     {
       if (read(connection_in, &buf[i], 1) != 1)
-	fatal("read: %.100s", strerror(errno));
+	fatal("ssh_exchange_identification: read: %.100s", strerror(errno));
       if (buf[i] == '\r')
 	{
 	  buf[i] = '\n';

@@ -154,6 +154,11 @@ int packet_have_data_to_write(void);
 /* Returns true if there is not too much data to write to the connection. */
 int packet_not_very_much_data_to_write(void);
 
+/* maximum packet size, requested by client with SSH_CMSG_MAX_PACKET_SIZE */
+extern int max_packet_size;
+int packet_set_maxsize(int s);
+#define packet_get_maxsize() max_packet_size
+
 /* Stores tty modes from the fd into current packet. */
 void tty_make_modes(int fd);
 

@@ -392,6 +392,10 @@ void log_init(char *av0, LogLevel level, SyslogFacility facility, int on_stderr)
 /* Logging implementation, depending on server or client */
 void do_log(LogLevel level, const char *fmt, va_list args);
 
+/* name to facility/level */
+SyslogFacility log_facility_number(char *name);
+LogLevel log_level_number(char *name);
+
 /* Output a message to syslog or stderr */
 void fatal(const char *fmt, ...);
 void error(const char *fmt, ...);

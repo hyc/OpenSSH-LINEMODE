@@ -322,8 +322,8 @@ void client_make_packets_from_stdin_data()
 	 packet_not_very_much_data_to_write())
     {
       len = buffer_len(&stdin_buffer);
-      if (len > 32768)
-	len = 32768;  /* Keep the packets at reasonable size. */
+      if (len > packet_get_maxsize())
+	len = packet_get_maxsize();  /* Keep the packets at reasonable size. */
       packet_start(SSH_CMSG_STDIN_DATA);
       packet_put_string(buffer_ptr(&stdin_buffer), len);
       packet_send();
