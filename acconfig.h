@@ -205,7 +205,7 @@
 /* Define if you don't want to use lastlog in session.c */
 #undef NO_SSH_LASTLOG
 
-/* Definite if have krb5_init_ets */
+/* Define if have krb5_init_ets */
 #undef KRB5_INIT_ETS
 
 /* Define if you don't want to use utmp */
