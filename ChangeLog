@@ -57,6 +57,7 @@
  - (bal) Cygwin special handling of empty passwords wrong.  Patch by
    vinschen@redhat.com
  - (bal) Missed integrating ssh_config.5 and sshd_config.5
+ - (bal) Still more Makefile.in updates for ssh{d}_config.5
 
 20020613
  - (bal) typo of setgroup for cygwin.  Patch by vinschen@redhat.com
