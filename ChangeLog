@@ -3,6 +3,7 @@
    _getlong in #ifndef
  - (tim) [configure.ac acconfig.h openbsd-compat/getrrsetbyname.c] test for
    HEADER.ad in arpa/nameser.h
+ - (tim) [ssh-keygen.c] s/PATH_MAX/MAXPATHLEN/ ok mouring@
 
 20030907
  - (dtucker) [agent-ptrace.sh dynamic-forward.sh (all regress/)]
