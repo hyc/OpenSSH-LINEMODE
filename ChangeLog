@@ -1,3 +1,7 @@
+20010611
+ - (bal) NeXT/MacOS X lack libgen.h and dirname().  Patch by Mark Miller 
+   <markm@swoon.net> 
+
 20010610
  - (bal) Missed two files in major resync.  auth-bsdauth.c and auth-skey.c
 

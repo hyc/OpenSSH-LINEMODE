@@ -15,6 +15,7 @@
 #include "strmode.h"
 #include "mktemp.h"
 #include "daemon.h"
+#include "dirname.h"
 #include "base64.h"
 #include "sigact.h"
 #include "inet_aton.h"
