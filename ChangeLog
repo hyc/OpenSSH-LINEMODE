@@ -4,6 +4,10 @@
      [ssh.1]
      remove some unneccesary macros;
      do not mark up punctuation;
+   - jmc@cvs.openbsd.org 2005/03/01 14:55:23
+     [ssh_config.5]
+     do not mark up punctuation;
+     whitespace;
 
 20050301
  - (djm) OpenBSD CVS sync:
