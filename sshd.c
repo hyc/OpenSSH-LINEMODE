@@ -1136,7 +1136,7 @@ do_authentication(char *user, int privileged_port)
   pw = &pwcopy;
 
 #ifdef HAVE_LIBPAM
-  if (PAM_SUCCESS != pam_start("opensshd", pw->pw_name, &conv, (pam_handle_t**)&pamh))
+  if (PAM_SUCCESS != pam_start("sshd", pw->pw_name, &conv, (pam_handle_t**)&pamh))
   {
     packet_start(SSH_SMSG_FAILURE);
     packet_send();

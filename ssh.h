@@ -89,7 +89,7 @@ only by root, whereas ssh_config should be world-readable. */
 
 /* The process id of the daemon listening for connections is saved
    here to make it easier to kill the correct daemon when necessary. */
-#define SSH_DAEMON_PID_FILE	PIDDIR "/opensshd.pid"
+#define SSH_DAEMON_PID_FILE	PIDDIR "/sshd.pid"
 
 /* The directory in user\'s home directory in which the files reside.
    The directory should be world-readable (though not all files are). */
