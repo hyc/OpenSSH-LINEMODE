@@ -369,6 +369,7 @@ mips-sony-bsd|mips-sony-newsos4)
 		fi
 	fi
 	AC_DEFINE(DISABLE_FD_PASSING)
+	AC_DEFINE(BROKEN_GETADDRINFO)
 	AC_DEFINE(LOCKED_PASSWD_SUBSTR, "Nologin")
 	;;
 

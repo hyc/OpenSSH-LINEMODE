@@ -10,6 +10,8 @@
    any access to locked accounts.  ok djm@
  - (djm) Bug #564: Perform PAM account checks for all authentications when
    UsePAM=yes; ok dtucker
+ - (dtucker) [configure.ac] Bug #533, #551: define BROKEN_GETADDRINFO on
+   Tru64, solves getnameinfo and "bad addr or host" errors.  ok djm@
 
 20030822
  - (djm) s/get_progname/ssh_get_progname/g to avoid conflict with Heimdal 
