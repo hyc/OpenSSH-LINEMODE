@@ -1158,7 +1158,7 @@ Also see contrib/findssl.sh for help identifying header/library mismatches.])
 )
 
 # Some Linux systems (Slackware) need crypt() from libcrypt, *not* the
-# version in OpenSSL. Skip this for PAM
+# version in OpenSSL.
 if test "x$check_for_libcrypt_later" = "x1"; then
 	AC_CHECK_LIB(crypt, crypt, LIBS="$LIBS -lcrypt")
 fi
