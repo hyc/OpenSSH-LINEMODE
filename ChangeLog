@@ -5,6 +5,10 @@
    - todd@cvs.openbsd.org 2002/06/14 21:35:00
      [monitor_wrap.c]
      spelling; from Brian Poole <raj@cerias.purdue.edu>
+   - markus@cvs.openbsd.org 2002/06/15 00:01:36
+     [authfd.c authfd.h ssh-add.c ssh-agent.c]
+     break agent key lifetime protocol and allow other contraints for key
+     usage.
 
 20020613
  - (bal) typo of setgroup for cygwin.  Patch by vinschen@redhat.com
