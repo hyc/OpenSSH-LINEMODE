@@ -1121,7 +1121,7 @@ progressmeter(int flag)
 	struct timeval now, td, wait;
 	off_t cursize, abbrevsize;
 	double elapsed;
-	unsigned int ratio, barlength, i, remaining;
+	int ratio, barlength, i, remaining;
 	char buf[256];
 
 	if (flag == -1) {
