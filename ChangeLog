@@ -9,6 +9,8 @@
  - (tim) [contrib/caldera/openssh.spec] Sync with Caldera
  - (bal) moved aix_usrinfo() and noted not setting real TTY.  Patch by
    dtucker@zip.com.au
+ - (tim) [acconfig.h configure.ac sshd.c] BROKEN_FD_PASSING fix from Markus
+   for Cygwin, Cray, & SCO
 
 20020624
  - OpenBSD CVS Sync

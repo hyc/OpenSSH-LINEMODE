@@ -358,6 +358,9 @@
 /* Define if you have the `mmap' function that supports MAP_ANON|SHARED */
 #undef HAVE_MMAP_ANON_SHARED
 
+/* Define if sendmsg()/recvmsg() has problems passing file descriptors */
+#undef BROKEN_FD_PASSING
+
 @BOTTOM@
 
 /* ******************* Shouldn't need to edit below this line ************** */
