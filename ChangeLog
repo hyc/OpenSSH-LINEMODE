@@ -44,6 +44,9 @@
    - dtucker@cvs.openbsd.org 2004/11/25 09:39:27
      [test-exec.sh]
      Remove obsolete RhostsAuthentication from test config; ok markus@
+   - dtucker@cvs.openbsd.org 2004/12/06 10:49:56
+     [test-exec.sh]
+     Check if TEST_SSH_SSHD is a full path to sshd before searching; ok markus@
 
 20041203
  - (dtucker) OpenBSD CVS Sync
