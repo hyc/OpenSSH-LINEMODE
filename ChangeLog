@@ -22,6 +22,9 @@
      revert code to add x11 localhost display authorization entry for
      hostname/unix:d and uts.nodename/unix:d if nodename was different than
      hostname.  just add entry for unix:d instead.  ok markus@
+   - stevesk@cvs.openbsd.org 2002/01/27 14:57:46
+     [channels.c servconf.c servconf.h session.c sshd.8 sshd_config]
+     add X11UseLocalhost; ok markus@
 
 20020130
  - (djm) Delay PRNG seeding until we need it in ssh-keygen, from markus@
