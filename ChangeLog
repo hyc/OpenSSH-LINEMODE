@@ -18,6 +18,9 @@
      sshpty.c]
      make ssh -Wshadow clean, no functional changes
      markus@ ok
+   - djm@cvs.openbsd.org 2004/06/21 17:53:03
+     [session.c]
+     fix fd leak for multiple subsystem connections; with markus@
 
 20040620
  - (tim) [configure.ac Makefile.in] Only change TEST_SHELL on broken platforms.
