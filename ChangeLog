@@ -24,6 +24,9 @@
    - djm@cvs.openbsd.org 2004/06/21 22:02:58
      [log.h]
      mark fatal and cleanup exit as __dead; ok markus@
+   - djm@cvs.openbsd.org 2004/06/21 22:04:50
+     [sftp.c]
+     introduce sorting for ls, same options as /bin/ls; ok markus@
 
 20040620
  - (tim) [configure.ac Makefile.in] Only change TEST_SHELL on broken platforms.
