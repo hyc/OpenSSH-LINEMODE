@@ -65,6 +65,9 @@
      pass # of socket-fd to ssh-keysign, keysign verfies locally used
      ip-address using this socket-fd, restricts fake local hostnames
      to actual local hostnames; ok stevesk@
+   - markus@cvs.openbsd.org 2002/05/31 11:35:15
+     [auth.h auth2.c]
+     move Authmethod definitons to per-method file.
 
 20020604
  - (stevesk) [channels.c] bug #164 patch from YOSHIFUJI Hideaki (changed
