@@ -26,7 +26,7 @@ PATHS= -DETCDIR=\"$(sysconfdir)\" \
 CC=@CC@
 LD=@LD@
 CFLAGS=@CFLAGS@
-CPPFLAGS=@CPPFLAGS@ -I$(srcdir)/openbsd-compat $(PATHS) @DEFS@
+CPPFLAGS=@CPPFLAGS@ -I. -I$(srcdir)/openbsd-compat -I$(srcdir) $(PATHS) @DEFS@
 LIBS=@LIBS@
 AR=@AR@
 RANLIB=@RANLIB@
