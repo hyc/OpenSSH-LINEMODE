@@ -529,6 +529,14 @@ struct winsize {
 #  define krb5_get_err_text(context,code) error_message(code)
 #endif
 
+/* Maximum number of file descriptors available */
+#ifdef HAVE_SYSCONF
+# define SSH_SYSFDMAX sysconf(_SC_OPEN_MAX)
+#else
+# define SSH_SYSFDMAX 10000
+#endif
+
+
 /*
  * Define this to use pipes instead of socketpairs for communicating with the
  * client program.  Socketpairs do not seem to work on all systems.
