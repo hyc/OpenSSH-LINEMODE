@@ -53,6 +53,9 @@
         3. keys that are only listed in the config file
      this helps when an agent has many keys, where the server might
      close the connection before the correct key is used. report & ok pb@
+   - markus@cvs.openbsd.org 2003/05/12 18:35:18
+     [ssh-keyscan.1]
+     typo: DSA keys are of type ssh-dss; Brian Poole
 
 20030512
  - (djm) Redhat spec: Don't install profile.d scripts when not 
