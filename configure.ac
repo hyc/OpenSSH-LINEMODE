@@ -897,7 +897,6 @@ AC_ARG_WITH(pam,
 			AC_CHECK_FUNCS(pam_getenvlist)
 			AC_CHECK_FUNCS(pam_putenv)
 
-			disable_shadow=yes
 			PAM_MSG="yes"
 
 			AC_DEFINE(USE_PAM)

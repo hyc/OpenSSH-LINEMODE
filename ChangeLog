@@ -28,6 +28,8 @@
    - markus@cvs.openbsd.org 2003/09/29 20:19:57
      [servconf.c sshd_config]
      GSSAPICleanupCreds -> GSSAPICleanupCredentials
+ - (dtucker) [configure.ac] Don't set DISABLE_SHADOW when configuring
+   --with-pam.  ok djm@
 
 20030930
  - (bal) Fix issues in openbsd-compat/realpath.c
