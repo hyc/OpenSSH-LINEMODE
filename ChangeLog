@@ -54,6 +54,10 @@
      $OpenBSD$ and RCSID() cleanup: don't use RCSID() in .h files; add
      missing RCSID() to .c files and remove dup /*$OpenBSD$*/ from .c
      files.  ok markus@
+   - stevesk@cvs.openbsd.org 2002/03/04 18:30:23
+     [ssh-keyscan.c]
+     handle connection close during read of protocol version string.
+     fixes erroneous "bad greeting".  ok markus@
 
 20020226
  - (tim) Bug 12 [configure.ac] add sys/bitypes.h to int64_t tests
