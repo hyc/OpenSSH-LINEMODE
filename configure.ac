@@ -812,6 +812,23 @@ else
 	fi
 fi
 
+# Sanity check OpenSSL headers
+AC_MSG_CHECKING([whether OpenSSL's headers match the library])
+AC_TRY_RUN(
+	[
+#include <string.h>
+#include <openssl/opensslv.h>
+int main(void) { return(SSLeay() == OPENSSL_VERSION_NUMBER ? 0 : 1); }
+	],
+	[
+		AC_MSG_RESULT(yes)
+	],
+	[
+		AC_MSG_RESULT(no)
+		AC_MSG_ERROR(Your OpenSSL headers do not match your library)
+	]
+)
+
 # Some Linux systems (Slackware) need crypt() from libcrypt, *not* the 
 # version in OpenSSL. Skip this for PAM
 if test "x$PAM_MSG" = "xno" -a "x$check_for_libcrypt_later" = "x1"; then
