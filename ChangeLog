@@ -80,6 +80,10 @@
      add 'SmartcardDevice' client option to specify which smartcard device 
      is used to access a smartcard used for storing the user's private RSA 
      key. ok markus@.
+   - jakob@cvs.openbsd.org 2001/07/31 12:42:50
+     [sftp-int.c sftp-server.c]
+     avoid paths beginning with "//"; <vinschen@redhat.com>
+     ok markus@
 
 20010803
  - (djm) Fix interrupted read in entropy gatherer. Spotted by markus@ on
