@@ -3,6 +3,9 @@
    - deraadt@cvs.openbsd.org 2001/04/14 04:31:01
      [ssh-add.c]
      do not double free
+   - markus@cvs.openbsd.org 2001/04/14 16:17:14
+     [channels.c]
+     remove some channels that are not appropriate for keepalive.
 
 20010414
  - Sync with OpenBSD glob.c, strlcat.c and vis.c changes
