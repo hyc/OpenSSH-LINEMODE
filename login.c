@@ -58,20 +58,20 @@ get_last_login_time(uid_t uid, const char *logname,
 	char *lastlog;
 	int fd;
 #ifdef LASTLOG_IS_DIR
-	char buf[1024];
+	char lbuf[1024];
 #endif /* LASTLOG_IS_DIR */
 
 	lastlog = _PATH_LASTLOG;
 	buf[0] = '\0';
 
-#ifdef LASTLOG_IS_DIR
+#ifndef LASTLOG_IS_DIR
 	fd = open(lastlog, O_RDONLY);
 	if (fd < 0)
 		return 0;
 	lseek(fd, (off_t) ((long) uid * sizeof(ll)), SEEK_SET);
 #else /* LASTLOG_IS_DIR */
-	snprintf(buf, sizeof(buf), "%s/%s", lastlog, logname);
-	fd = open(buf, O_RDONLY);
+	snprintf(lbuf, sizeof(buf), "%s/%s", lastlog, logname);
+	fd = open(lbuf, O_RDONLY);
 	if (fd < 0)
 		return 0;
 #endif /* LASTLOG_IS_DIR */
