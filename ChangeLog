@@ -3,6 +3,9 @@
    - deraadt@cvs.openbsd.org 2001/11/14 20:45:08
      [sshd.c]
      errno saving wrapping in a signal handler
+   - markus@cvs.openbsd.org 2001/11/16 12:46:13
+     [ssh-keyscan.c]
+     handle empty lines instead of dumping core; report from sha@sha-1.net
 
 20011126
  - (tim) [contrib/cygwin/README, openbsd-compat/bsd-cygwin_util.c,
