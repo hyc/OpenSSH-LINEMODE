@@ -29,6 +29,10 @@
      [readconf.h scp.1 sftp.1 ssh.1 ssh.c ssh_config.5]
      implement session multiplexing in the client (the server has supported 
      this since 2.0); ok markus@
+   - djm@cvs.openbsd.org 2004/06/14 01:44:39
+     [channels.c clientloop.c misc.c misc.h packet.c ssh-agent.c ssh-keyscan.c]
+     [sshd.c]
+     set_nonblock() instead of fnctl(...,O_NONBLOCK); "looks sane" deraadt@
 
 20040603
  - (dtucker) [auth-pam.c] Don't use pam_* namespace for sshd's PAM functions.
