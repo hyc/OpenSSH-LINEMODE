@@ -1,3 +1,10 @@
+20010511
+ - OpenBSD CVS Sync
+   - markus@cvs.openbsd.org 2001/05/09 22:51:57
+     [channels.c]
+     fix -R for protocol 2, noticed by greg@nest.cx.
+     bug was introduced with experimental dynamic forwarding.
+
 20010509
   - OpenBSD CVS Sync
    - markus@cvs.openbsd.org 2001/05/06 21:23:31
