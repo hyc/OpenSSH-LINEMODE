@@ -59,6 +59,9 @@
    - markus@cvs.openbsd.org 2001/05/28 08:04:39
      [ssh.c]                                   
      fix usage()                               
+   - markus@cvs.openbsd.org 2001/05/28 10:08:55            
+     [authfile.c]                                          
+     key_load_private: set comment to filename for PEM keys
 
 20010528
  - (tim) [conifgure.in] add setvbuf test needed for sftp-int.c
