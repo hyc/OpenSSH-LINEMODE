@@ -35,6 +35,12 @@
 /* Define if your platform breaks doing a seteuid before a setuid */
 #undef SETEUID_BREAKS_SETUID
 
+/* Define if your setreuid() is broken */
+#undef BROKEN_SETREUID
+
+/* Define if your setregid() is broken */
+#undef BROKEN_SERREGID
+
 /* Define to a Set Process Title type if your system is */
 /* supported by bsd-setproctitle.c */
 #undef SPT_TYPE

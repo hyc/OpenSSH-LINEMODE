@@ -1,3 +1,6 @@
+20030906
+ - (dtucker) [acconfig.h configure.ac uidswap.c] Prefer setuid/setgid on AIX.
+
 20030905
  - (dtucker) [Makefile.in] Add distclean target for regress/, fix clean target.
 
