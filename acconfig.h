@@ -355,6 +355,9 @@
 /* Path that unprivileged child will chroot() to in privep mode */
 #undef PRIVSEP_PATH
 
+/* Define if you have the `mmap' function that supports MAP_ANON|SHARED */
+#undef HAVE_MMAP_ANON_SHARED
+
 @BOTTOM@
 
 /* ******************* Shouldn't need to edit below this line ************** */
