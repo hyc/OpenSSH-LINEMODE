@@ -24,6 +24,9 @@
    - djm@cvs.openbsd.org      2001/03/19 12:10:17
      [sshd.8]
      Document permitopen authorized_keys option; ok markus@
+   - djm@cvs.openbsd.org     2001/03/19 05:49:52
+     [ssh.1]
+     document PreferredAuthentications option; ok markus@
 
 20010318
  - (bal) Fixed scp type casing issue which causes "scp: protocol error: 
