@@ -5,6 +5,11 @@
      dragging a window)
    - Perform server grab after we have the keyboard and/or pointer to avoid 
      races.
+ - (djm) OpenBSD CVS Sync
+   - markus@cvs.openbsd.org 2003/01/27 17:06:31
+     [sshd.c]
+     more specific error message when /var/empty has wrong permissions;
+     bug #46, map@appgate.com; ok henning@, provos@, stevesk@
 
 20030211
  - (djm) Cygwin needs libcrypt too. Patch from vinschen@redhat.com
