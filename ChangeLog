@@ -34,6 +34,7 @@
      [sshd.c]
      set_nonblock() instead of fnctl(...,O_NONBLOCK); "looks sane" deraadt@
  - (djm) Fix Makefile.in for connection sharing changes
+ - (djm) [ssh.c] Use separate var for address length
 
 20040603
  - (dtucker) [auth-pam.c] Don't use pam_* namespace for sshd's PAM functions.
