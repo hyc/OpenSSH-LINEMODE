@@ -1,3 +1,12 @@
+20031217
+ - (djm) OpenBSD CVS Sync
+   - markus@cvs.openbsd.org 2003/12/09 15:28:43
+     [serverloop.c]
+     make ClientKeepAlive work for ssh -N, too (no login shell requested).
+     1) send a bogus channel request if we find a channel
+     2) send a bogus global request if we don't have a channel
+     ok + test beck@
+
 20031209
  - (dtucker) OpenBSD CVS Sync
    - matthieu@cvs.openbsd.org 2003/11/25 23:10:08
