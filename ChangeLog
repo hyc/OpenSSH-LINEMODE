@@ -1,6 +1,10 @@
 20050305
  - (djm) [contrib/cygwin/README] Improve Cygwin build documentation. Patch 
    from vinschen at redhat.com
+ - (djm) OpenBSD CVS Sync
+   - jmc@cvs.openbsd.org 2005/03/02 11:45:01
+     [ssh.1]
+     missing word;
 
 20050302
  - (djm) OpenBSD CVS sync:
