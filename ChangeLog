@@ -67,6 +67,9 @@
    - markus@cvs.openbsd.org 2001/11/10 13:37:20
      [packet.c]
      remove extra debug()
+   - markus@cvs.openbsd.org 2001/11/11 13:02:31
+     [servconf.c]
+     make AuthorizedKeysFile2 fallback to AuthorizedKeysFile if AuthorizedKeysFile is specified.
 
 20011109
  - (stevesk) auth-pam.c: use do_pam_authenticate(PAM_DISALLOW_NULL_AUTHTOK)
