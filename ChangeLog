@@ -11,6 +11,9 @@
      it).  The sparse file will take less disk space too.
    - [regress/sftp-cmds.sh] Ensure file used for test are readable.
    - [regress/stderr-after-eof.sh] Search for a usable checksum program.
+   - [regress/sftp-badcmds.sh regress/sftp-cmds.sh regress/sftp.sh
+     regress/ssh-com-client.sh regress/ssh-com-sftp.sh regress/stderr-data.sh
+     regress/transfer.sh] Use ${EXEEXT} where appropriate.
 
 20030903
  - (djm) OpenBSD CVS Sync
