@@ -1,6 +1,8 @@
 20030923
  - (dtucker) [Makefile.in] Bug #644: Fix "make clean" for out-of-tree
    builds.  Portability corrections from tim@.
+ - (dtucker) [configure.ac] Bug #655: uid swapping issues on Mac OS X.
+   Patch from max at quendi.de.
 
 20030919
  - (djm) Bug #683: Remove reference to --with-ipv4-default from INSTALL;
