@@ -158,6 +158,7 @@ CFLAGS="$RPM_OPT_FLAGS" \
             --prefix=/usr \
             --sysconfdir=/etc/ssh \
             --libexecdir=/usr/lib/ssh \
+            --datadir=/usr/share/openssh \
             --with-pam \
             --with-tcp-wrappers \
             --with-ipv4-default \
