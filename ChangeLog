@@ -1,6 +1,8 @@
 20030907
  - (dtucker) [agent-ptrace.sh dynamic-forward.sh (all regress/)]
    Put "which" inside quotes.
+ - (dtucker) [dynamic-forward.sh forwarding.sh sftp-batch.sh (all regress/)]
+   Add ${EXEEXT}: required to work on Cygwin.
 
 20030906
  - (dtucker) [acconfig.h configure.ac uidswap.c] Prefer setuid/setgid on AIX.
