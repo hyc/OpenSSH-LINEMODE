@@ -601,12 +601,7 @@ prng_read_seedfile(void) {
 	debug("loading PRNG seed from file %.100s", filename);
 
 	if (!prng_check_seedfile(filename)) {
-		verbose("Random seed file not found, creating new");
-		prng_write_seedfile();
-		
-		/* Reseed immediatly */
-		(void)stir_from_system();
-		(void)stir_from_programs();
+		verbose("Random seed file not found or not valid, ignoring.");
 		return;
 	}
 
