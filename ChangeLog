@@ -28,6 +28,9 @@
      [sshconnect2.c]
      stat ssh-keysign first, print error if stat fails;
      some debug->error; fix comment
+   - markus@cvs.openbsd.org 2002/05/25 08:50:39
+     [sshconnect2.c]
+     execlp->execl; from stevesk
 
 20020604
  - (stevesk) [channels.c] bug #164 patch from YOSHIFUJI Hideaki (changed
