@@ -1,6 +1,6 @@
 20010417
   - (bal) Add perl5 check for HP/UX, Removed GNUness from Makefile.in
-    and temporary commneted out catman-do: since it's broken.  Patches
+    and temporary commented out 'catman-do:' since it is broken.  Patches
     for the first two by Lutz Jaenicke <Lutz.Jaenicke@aet.TU-Cottbus.DE>
 
 20010416
