@@ -32,6 +32,7 @@
  - (tim) [README.privsep] UnixWare tip no longer needed.
  - (bal) fixed NeXTStep missing munmap() issue. It defines HAVE_MMAP,
    but it all damned lies.
+ - (stevesk) [README.privsep] more for sshd pseudo-account.
 
 20020625
  - (stevesk) [INSTALL acconfig.h configure.ac defines.h] remove --with-rsh
