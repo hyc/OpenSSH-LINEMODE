@@ -76,10 +76,10 @@ const char *strerror(int e)
 	extern int sys_nerr;
 	extern char *sys_errlist[];
 	
-	if ((e >= 0) || (e < sys_nerr))
-		return("unlisted error");
-	else
+	if ((e >= 0) && (e < sys_nerr))
 		return(sys_errlist[e]);
+	else
+		return("unlisted error");
 }
 #endif
 
