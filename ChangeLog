@@ -44,6 +44,11 @@
      disable privsep and enable setuid for the 3.2.2 release
  - (bal) Fixed up PAM case.  I think.
  - (bal) Clarified openbsd-compat/*-cray.* Licence provided by Wendy
+ - (bal) OpenBSD CVS Sync
+   - markus@cvs.openbsd.org 2002/05/15 21:05:29
+     [version.h]
+     enter OpenSSH_3.2.2
+ - (bal) Caldara, Suse, and Redhat openssh.specs updated.
 
 20020514
  - (stevesk) [README.privsep] PAM+privsep works with Solaris 8.
