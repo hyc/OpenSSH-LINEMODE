@@ -32,6 +32,10 @@
    - markus@cvs.openbsd.org 2001/07/25 11:59:35
      [scard.c]
      typo in comment
+   - markus@cvs.openbsd.org 2001/07/25 14:35:18
+     [readconf.c ssh.1 ssh.c sshconnect.c]
+     cleanup connect(); connection_attempts 4 -> 1; from 
+     eivind@freebsd.org
 
 20010803
  - (djm) Fix interrupted read in entropy gatherer. Spotted by markus@ on
