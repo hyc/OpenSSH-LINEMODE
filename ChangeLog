@@ -8,6 +8,7 @@
    is enabled, rely on SIA to check for locked accounts if enabled.  ok djm@
  - (djm) [scp.c] Rename limitbw -> limit_rate to match upstreamed patch
  - (djm) [sftp-int.c] Remove duplicated code from bogus sync
+ - (djm) [packet.c] Shuffle #ifdef to reduce conditionally compiled code
 
 20031121
  - (djm) OpenBSD CVS Sync
