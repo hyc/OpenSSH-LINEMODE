@@ -30,6 +30,7 @@
    - dtucker@cvs.openbsd.org 2004/03/08 10:18:57
      [sshd_config.5]
      Document KerberosGetAFSToken;  ok markus@
+ - (tim) [regress/README.regress] Document ssh-rand-helper issue. ok bal
 
 20040307
  - (tim) [regress/login-timeout.sh] fix building outside of source tree.
