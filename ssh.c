@@ -116,6 +116,7 @@ usage()
 	fprintf(stderr, "Options:\n");
 	fprintf(stderr, "  -l user     Log in using this user name.\n");
 	fprintf(stderr, "  -n          Redirect input from /dev/null.\n");
+	fprintf(stderr, "  -A          Enable authentication agent forwarding.\n");
 	fprintf(stderr, "  -a          Disable authentication agent forwarding.\n");
 #ifdef AFS
 	fprintf(stderr, "  -k          Disable Kerberos ticket and AFS token forwarding.\n");
@@ -314,6 +315,9 @@ main(int ac, char **av)
 			break;
 		case 'a':
 			options.forward_agent = 0;
+			break;
+		case 'A':
+			options.forward_agent = 1;
 			break;
 #ifdef AFS
 		case 'k':

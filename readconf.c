@@ -464,6 +464,8 @@ parse_int:
 	case oCipher:
 		intptr = &options->cipher;
 		cp = strtok(NULL, WHITESPACE);
+		if (!cp)
+			fatal("%.200s line %d: Missing argument.", filename, linenum);
 		value = cipher_number(cp);
 		if (value == -1)
 			fatal("%.200s line %d: Bad cipher '%s'.",
@@ -474,6 +476,8 @@ parse_int:
 
 	case oCiphers:
 		cp = strtok(NULL, WHITESPACE);
+		if (!cp)
+			fatal("%.200s line %d: Missing argument.", filename, linenum);
 		if (!ciphers_valid(cp))
 			fatal("%.200s line %d: Bad SSH2 cipher spec '%s'.",
 			      filename, linenum, cp ? cp : "<NONE>");
@@ -484,6 +488,8 @@ parse_int:
 	case oProtocol:
 		intptr = &options->protocol;
 		cp = strtok(NULL, WHITESPACE);
+		if (!cp)
+			fatal("%.200s line %d: Missing argument.", filename, linenum);
 		value = proto_spec(cp);
 		if (value == SSH_PROTO_UNKNOWN)
 			fatal("%.200s line %d: Bad protocol spec '%s'.",
@@ -691,7 +697,7 @@ void
 fill_default_options(Options * options)
 {
 	if (options->forward_agent == -1)
-		options->forward_agent = 1;
+		options->forward_agent = 0;
 	if (options->forward_x11 == -1)
 		options->forward_x11 = 0;
 	if (options->gateway_ports == -1)
