@@ -1,4 +1,7 @@
-20010213
+20020213
+ - (djm) Don't use system sys/queue.h on AIX. Report from gert@greenie.muc.de
+
+20020213
  - (djm) OpenBSD CVS Sync
    - markus@cvs.openbsd.org 2002/02/11 16:10:15
      [kex.c]

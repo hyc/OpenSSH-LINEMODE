@@ -63,6 +63,7 @@ case "$host" in
 	AC_DEFINE(BROKEN_GETADDRINFO)
 	dnl AIX handles lastlog as part of its login message
 	AC_DEFINE(DISABLE_LASTLOG)
+	AC_DEFINE(HAVE_BOGUS_SYS_QUEUE_H)
 	;;
 *-*-cygwin*)
 	LIBS="$LIBS /usr/lib/textmode.o"
