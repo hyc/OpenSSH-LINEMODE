@@ -28,6 +28,7 @@
 #include "ssh.h"
 #include "xmalloc.h"
 #include "log.h"
+#include "auth.h"
 #include "auth-pam.h"
 #include "servconf.h"
 #include "canohost.h"
@@ -199,10 +200,11 @@ void do_pam_cleanup_proc(void *context)
 }
 
 /* Attempt password authentation using PAM */
-int auth_pam_password(struct passwd *pw, const char *password)
+int auth_pam_password(Authctxt *authctxt, const char *password)
 {
 	extern ServerOptions options;
 	int pam_retval;
+	struct passwd *pw = authctxt->pw;
 
 	do_pam_set_conv(&conv);
 
