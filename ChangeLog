@@ -4,6 +4,11 @@
      [sftp-int.c sftp.1 sftp.c]
      Tidy sftp batchmode handling, eliminate junk to stderr (bugzilla #754) and
      enable use of "-b -" to accept batchfile from stdin; ok markus@
+   - jmc@cvs.openbsd.org 2004/01/13 12:17:33
+     [sftp.1]
+     remove unnecessary Ic's;
+     kill whitespace at EOL;
+     ok djm@
 
 20040114
  - (dtucker) [auth-pam.c] Have monitor die if PAM authentication thread exits
