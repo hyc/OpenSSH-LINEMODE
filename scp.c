@@ -1121,7 +1121,7 @@ progressmeter(int flag)
 	struct timeval now, td, wait;
 	off_t cursize, abbrevsize;
 	double elapsed;
-	int ratio, barlength, i, remaining;
+	unsigned int ratio, barlength, i, remaining;
 	char buf[256];
 
 	if (flag == -1) {
@@ -1132,7 +1132,7 @@ progressmeter(int flag)
 	(void)gettimeofday(&now, (struct timezone *)0);
 	cursize = statbytes;
 	if (totalbytes != 0) {
-		ratio = cursize * 100 / totalbytes;
+		ratio = (cursize >> 10) * 100 / (totalbytes >> 10);
 		ratio = MAX(ratio, 0);
 		ratio = MIN(ratio, 100);
 	}
