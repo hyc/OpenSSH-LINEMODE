@@ -1,3 +1,10 @@
+20030324
+ - (djm) OpenBSD CVS Sync
+   - markus@cvs.openbsd.org 2003/03/23 19:02:00
+     [monitor.c]
+     unbreak rekeying for privsep; ok millert@
+ - Release 3.6p1
+
 20030320
  - (djm) OpenBSD CVS Sync
    - markus@cvs.openbsd.org 2003/03/17 10:38:38
