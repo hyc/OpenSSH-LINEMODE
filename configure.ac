@@ -290,8 +290,6 @@ mips-sony-bsd|mips-sony-newsos4)
 	MANTYPE=man
 	;;
 *-*-unicosmk*)
-	no_libsocket=1
-	no_libnsl=1
 	AC_DEFINE(USE_PIPES)
 	AC_DEFINE(DISABLE_FD_PASSING)
 	LDFLAGS="$LDFLAGS"
@@ -299,8 +297,6 @@ mips-sony-bsd|mips-sony-newsos4)
 	MANTYPE=cat
 	;;
 *-*-unicos*)
-	no_libsocket=1
-	no_libnsl=1
 	AC_DEFINE(USE_PIPES)
 	AC_DEFINE(DISABLE_FD_PASSING)
 	AC_DEFINE(NO_SSH_LASTLOG)
