@@ -19,6 +19,9 @@
    - deraadt@cvs.openbsd.org 2002/06/24 17:57:20
      [sftp-server.c sshpty.c]
      explicit (u_int) for uid and gid
+   - markus@cvs.openbsd.org 2002/06/25 16:22:42
+     [authfd.c]
+     unnecessary cast
 
 20020625
  - (stevesk) [INSTALL acconfig.h configure.ac defines.h] remove --with-rsh
