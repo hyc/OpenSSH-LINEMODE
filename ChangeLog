@@ -9,6 +9,9 @@
    - markus@cvs.openbsd.org 2003/12/09 17:29:04
      [sshd.c]
      fix -o and HUP; ok henning@
+   - markus@cvs.openbsd.org 2003/12/09 17:30:05
+     [ssh.c]
+     don't modify argv for ssh -o; similar to sshd.c 1.283
 
 20031209
  - (dtucker) OpenBSD CVS Sync
