@@ -1,5 +1,6 @@
 20030609
  - (djm) Sync README.smartcard with OpenBSD -current
+ - (djm) Re-merge OpenSC info into README.smartcard
 
 20030606
  - (dtucker) [uidswap.c] Fix setreuid and add missing args to fatal(). ok djm@
