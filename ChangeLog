@@ -1,5 +1,6 @@
 20011024
  - (bal) Should be 3.0p1 not 3.0p2.  Corrected version.h already.
+ - (tim) configure.in -> configure.ac
 
 20011023
  - (bal) Updated version to 3.0p1 in preparing for release.

@@ -540,7 +540,6 @@ AC_ARG_WITH(tcp-wrappers,
 				else
 					CPPFLAGS="$CPPFLAGS -I${withval}"
 				fi
-					TCPW_MSG="yes"
 			fi
 			LIBS="-lwrap $LIBS"
 			AC_MSG_CHECKING(for libwrap)
