@@ -100,6 +100,9 @@
 /* Builtin PRNG command timeout */
 #undef ENTROPY_TIMEOUT_MSEC
 
+/* non-privileged user for privilege separation */
+#undef SSH_PRIVSEP_USER
+
 /* Define if you want to install preformatted manpages.*/
 #undef MANTYPE
 

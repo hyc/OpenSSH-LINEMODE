@@ -993,8 +993,18 @@ AC_ARG_WITH(entropy-timeout,
 		fi
 	]	
 )
-
 AC_DEFINE_UNQUOTED(ENTROPY_TIMEOUT_MSEC, $entropy_timeout)
+
+ssh_privsep_user=sshd
+AC_ARG_WITH(privsep-user,
+	[  --with-privsep-user     Specify non-privileged user for privilege separation],
+	[
+		if test -n "$withval"; then
+			ssh_privsep_user=$withval
+		fi
+	]	
+)
+AC_DEFINE_UNQUOTED(SSH_PRIVSEP_USER, $ssh_privsep_user)
 
 # We do this little dance with the search path to insure
 # that programs that we select for use by installed programs
