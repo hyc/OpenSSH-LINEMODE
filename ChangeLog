@@ -1,6 +1,8 @@
 20010715
  - (bal) Set "BROKEN_GETADDRINFO" for darwin platform.  Reported by
    Josh Larios <jdlarios@cac.washington.edu>
+ - (tim) put openssh/openbsd-compat/inet_aton.[ch] back in.
+	 needed by openbsd-compat/fake-getaddrinfo.c
    
 20010714
  - (stevesk) change getopt() declaration
