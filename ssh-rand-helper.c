@@ -563,7 +563,7 @@ prng_write_seedfile(void)
 	debug("writing PRNG seed to file %.100s", filename);
 
 	if (RAND_bytes(seed, sizeof(seed)) <= 0)
-		fatal("PRNG seed extration failed");
+		fatal("PRNG seed extraction failed");
 
 	/* Don't care if the seed doesn't exist */
 	prng_check_seedfile(filename);
