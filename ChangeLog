@@ -15,6 +15,9 @@
    - djm@cvs.openbsd.org 2005/02/27 23:13:36
      [login-timeout.sh]
      avoid nameservice lookups in regress test; ok dtucker@
+   - djm@cvs.openbsd.org 2005/03/04 08:48:46
+     [Makefile envpass.sh]
+     regress test for SendEnv config parsing bug; ok dtucker@
 
 20050306
  - (dtucker) [monitor.c] Bug #125 comment #47: fix errors returned by monitor
