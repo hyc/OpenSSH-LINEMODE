@@ -367,6 +367,10 @@
 /* Silly mkstemp() */
 #undef HAVE_STRICT_MKSTEMP
 
+/* Setproctitle emulation */
+#undef SETPROCTITLE_STRATEGY
+#undef SETPROCTITLE_PS_PADDING
+
 @BOTTOM@
 
 /* ******************* Shouldn't need to edit below this line ************** */

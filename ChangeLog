@@ -1,3 +1,7 @@
+20030103
+ - (djm) Rework openbsd-compat/setproctitle.c a bit: move emulation type
+   detection to configure.ac. Prompted by stevesk@
+
 20030110
  - (djm) Enable new setproctitle emulation for Linux, AIX and HP/UX. More 
    systems may be added later.
