@@ -1,3 +1,6 @@
+20010815
+ - (bal) Fixed stray code in readconf.c that went in by mistake.
+
 20010814
  - (stevesk) sshpty.c, cray.[ch]: whitespace, formatting and cleanup
    for some #ifdef _CRAY code; ok wendyp@cray.com
