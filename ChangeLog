@@ -33,6 +33,7 @@
  - (bal) fixed NeXTStep missing munmap() issue. It defines HAVE_MMAP,
    but it all damned lies.
  - (stevesk) [README.privsep] more for sshd pseudo-account.
+ - (tim) [contrib/caldera/openssh.spec] add support for privsep
 
 20020625
  - (stevesk) [INSTALL acconfig.h configure.ac defines.h] remove --with-rsh
