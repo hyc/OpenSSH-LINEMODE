@@ -8,6 +8,8 @@
      EVP_CIPH_CUSTOM_IV for our own rijndael
  - (bal) Remove unused tty defined in do_setusercontext() pointed out by
    dtucker@zip.com.au plus a a more KNF since I am near it.
+ - (bal) Privsep user creation support in Solaris buildpkg.sh by 
+   dtucker@zip.com.au
 
 20020714
  - (tim) [Makefile.in] replace "id sshd" with "sshd -t"
