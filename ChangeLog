@@ -44,6 +44,10 @@
      [serverloop.c]
      close all channels if the connection to the remote host has been closed,
      should fix sshd's hanging with WCHAN==wait
+   - markus@cvs.openbsd.org 2001/10/09 21:59:41
+     [channels.c channels.h serverloop.c session.c session.h]
+     simplify session close: no more delayed session_close, no more 
+     blocking wait() calls.
 
 20011007
  - (bal) ssh-copy-id corrected permissions for .ssh/ and authorized_keys.
