@@ -289,7 +289,8 @@ sshpam_init(const char *user)
 		sshpam_handle = NULL;
 	}
 	debug("PAM: initializing for \"%s\"", user);
-	sshpam_err = pam_start("sshd", user, &null_conv, &sshpam_handle);
+	sshpam_err =
+	    pam_start(SSHD_PAM_SERVICE, user, &null_conv, &sshpam_handle);
 	if (sshpam_err != PAM_SUCCESS) {
 		pam_end(sshpam_handle, sshpam_err);
 		sshpam_handle = NULL;
