@@ -141,7 +141,9 @@ record_login(int pid, const char *ttyname, const char *user, uid_t uid,
 	/* Construct an utmp/wtmp entry. */
 	memset(&u, 0, sizeof(u));
 	strncpy(u.ut_line, ttyname + 5, sizeof(u.ut_line));
+#if defined(HAVE_ID_IN_UTMP)
 	strncpy(u.ut_id, ttyname + 8, sizeof(u.ut_id));
+#endif /* defined(HAVE_ID_IN_UTMP) */ 
 	strncpy(u.ut_name, user, sizeof(u.ut_name));
 #if defined(HAVE_TV_IN_UTMP)
 	(void)gettimeofday(&u.ut_tv, NULL);
