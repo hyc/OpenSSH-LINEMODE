@@ -111,7 +111,7 @@ ssh-keygen$(EXEEXT): $(LIBCOMPAT) libssh.a ssh-keygen.o
 	$(LD) -o $@ ssh-keygen.o $(LDFLAGS) -lssh -lopenbsd-compat $(LIBS) 
 
 ssh-keyscan$(EXEEXT): $(LIBCOMPAT) libssh.a ssh-keyscan.o
-	$(LD) -o $@ ssh-keyscan.o $(LDFLAGS) -lssh -lopenbsd-compat $(LIBS) 
+	$(LD) -o $@ ssh-keyscan.o $(LDFLAGS) -lssh -lopenbsd-compat -lssh $(LIBS) 
 
 sftp-server$(EXEEXT): $(LIBCOMPAT) libssh.a sftp.o sftp-common.o sftp-server.o
 	$(LD) -o $@ sftp-server.o sftp-common.o $(LDFLAGS) -lssh -lopenbsd-compat $(LIBS) 
