@@ -10,6 +10,9 @@
      [clientloop.c]
      don't overwrite SIG{INT,QUIT,TERM} handler if set to SIG_IGN;
      e.g. if ssh is used for backup; report Joerg Schilling; ok millert@
+   - markus@cvs.openbsd.org 2002/11/21 22:22:50
+     [dh.c]
+     debug->debug2
 
 20021205
  - (djm) PERL-free fixpaths from stuge-openssh-unix-dev@cdy.org
