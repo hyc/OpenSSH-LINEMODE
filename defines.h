@@ -521,6 +521,10 @@ struct winsize {
 #  define __func__ ""
 #endif
 
+#if defined(KRB5) && !defined(HEIMDAL)
+#  define krb5_get_err_text(context,code) error_message(code)
+#endif
+
 /*
  * Define this to use pipes instead of socketpairs for communicating with the
  * client program.  Socketpairs do not seem to work on all systems.

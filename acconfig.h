@@ -232,6 +232,9 @@
 /* Define if compiler implements __func__ */
 #undef HAVE___func__
 
+/* Define this is you want GSSAPI support in the version 2 protocol */
+#undef GSSAPI
+
 /* Define if you want Kerberos 5 support */
 #undef KRB5
 

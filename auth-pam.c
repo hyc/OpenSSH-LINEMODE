@@ -650,6 +650,29 @@ do_pam_chauthtok(void)
 		    pam_strerror(sshpam_handle, sshpam_err));
 }
 
+/* 
+ * Set a PAM environment string. We need to do this so that the session
+ * modules can handle things like Kerberos/GSI credentials that appear
+ * during the ssh authentication process.
+ */
+
+int
+do_pam_putenv(char *name, char *value) 
+{
+	char *compound;
+	int ret = 1;
+
+#ifdef HAVE_PAM_PUTENV	
+	compound = xmalloc(strlen(name)+strlen(value)+2);
+	if (compound) {
+		sprintf(compound,"%s=%s",name,value);
+		ret = pam_putenv(sshpam_handle,compound);
+		xfree(compound);
+	}
+#endif
+	return (ret);
+}
+
 void
 print_pam_messages(void)
 {
