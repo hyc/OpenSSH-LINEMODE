@@ -16,6 +16,9 @@
      blesses this and we do it this way elsewhere.  this helps in 
      portable because not all systems have SUN_LEN() and 
      sockaddr_un.sun_len.  ok markus@
+   - stevesk@cvs.openbsd.org 2001/09/19 21:04:53
+     [sshd.8]
+     missing -t in usage
 
 20010918
  - (djm) Configure support for smartcards. Based on Ben's work.
