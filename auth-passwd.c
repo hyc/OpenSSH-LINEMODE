@@ -21,9 +21,6 @@ RCSID("$Id$");
 #ifdef HAVE_SHADOW_H
 # include <shadow.h>
 #endif
-#if defined(HAVE_CRYPT_H) && !defined(CRYPT_H_BREAKS_BUILD)
-# include <crypt.h>
-#endif /* defined(HAVE_CRYPT_H) && !defined(CRYPT_H_BREAKS_BUILD) */
 #if defined(HAVE_MD5_PASSWORDS) && !defined(HAVE_MD5_CRYPT)
 # include "md5crypt.h"
 #endif /* defined(HAVE_MD5_PASSWORDS) && !defined(HAVE_MD5_CRYPT) */
