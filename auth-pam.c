@@ -439,6 +439,7 @@ sshpam_query(void *ctx, char **name, char **info,
 				return (0);
 			}
 			error("PAM: %s", msg);
+			/* FALLTHROUGH */
 		default:
 			*num = 0;
 			**echo_on = 0;
