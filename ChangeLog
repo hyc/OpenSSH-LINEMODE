@@ -3,6 +3,9 @@
    Explicitly set umask for mkstemp; ok djm@
  - (dtucker) [includes.h] Undef _INCLUDE__STDC__ on HP-UX, otherwise
    prot.h and shadow.h provide conflicting declarations of getspnam.  ok djm@
+ - (dtucker) [loginrec.c openbsd-compat/port-aix.c openbsd-compat/port-aix.h]
+   Plug AIX login recording into login_write so logins will be recorded for
+   all auth types.
 
 20040813
  - (dtucker) [openbsd-compat/bsd-misc.c] Typo in #ifdef; from vinschen at

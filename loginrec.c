@@ -435,6 +435,11 @@ login_write (struct logininfo *li)
 #ifdef USE_WTMPX
 	wtmpx_write_entry(li);
 #endif
+#ifdef CUSTOM_SYS_AUTH_RECORD_LOGIN
+	if (li->type == LTYPE_LOGIN && 
+	   !sys_auth_record_login(li->username,li->hostname,li->line))
+		logit("Writing login record failed for %s", li->username);
+#endif
 	return 0;
 }
 
