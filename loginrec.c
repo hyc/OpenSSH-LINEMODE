@@ -1271,6 +1271,7 @@ wtmpx_get_entry(struct logininfo *li)
 		/* Logouts are recorded as a blank username on a particular line.
 		 * So, we just need to find the username in struct utmpx */
 		if ( wtmpx_islogin(li, &utx) ) {
+			found = 1;
 # ifdef HAVE_TV_IN_UTMPX
 			li->tv_sec = utx.ut_tv.tv_sec;
 # else

@@ -7,6 +7,8 @@
  - (tim) [ssh_prng_cmds.in] Bug 323 arp -n flag doesn't exist under Solaris.
    report by chris@by-design.net
  - (tim) [loginrec.c] Bug 347: Fix typo (WTMPX_FILE) report by rodney@bond.net
+ - (tim) [loginrec.c] Bug 348: add missing found = 1; to wtmpx_islogin()
+   report by rodney@bond.net
 
 20020712
  - (tim) [Makefile.in] quiet down install-files: and check-user:
