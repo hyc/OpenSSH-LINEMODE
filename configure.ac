@@ -2023,7 +2023,6 @@ if test "$USES_LOGIN_CONF" != "yes" ; then
 fi
 
 # Set superuser path separately to user path
-MD5_MSG="no" 
 AC_ARG_WITH(superuser-path,
 	[  --with-superuser-path=  Specify different path for super-user],
 	[

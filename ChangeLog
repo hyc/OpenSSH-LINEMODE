@@ -1,3 +1,6 @@
+20020517
+ - (tim) [configure.ac] remove extra MD5_MSG="no" line.
+
 20020515
  - (bal) CVS ID fix up on auth-passwd.c
  - (bal) OpenBSD CVS Sync
