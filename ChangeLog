@@ -20,6 +20,9 @@
      [deattack.c radix.c]
      kill more registers
      millert@ ok
+   - markus@cvs.openbsd.org 2001/11/21 15:51:24
+     [key.c]
+     mem leak
 
 20011126
  - (tim) [contrib/cygwin/README, openbsd-compat/bsd-cygwin_util.c,
