@@ -3,6 +3,11 @@
    - djm@cvs.openbsd.org 2004/06/24 19:30:54
      [servconf.c servconf.h sshd.c]
      re-exec sshd on accept(); initial work, final debugging and ok markus@
+   - djm@cvs.openbsd.org 2004/06/25 01:16:09
+     [sshd.c]
+     only perform tcp wrappers checks when the incoming connection is on a
+     socket.  silences useless warnings from regress tests that use
+     proxycommand="sshd -i".  prompted by david@ ok markus@
 
 20040623
  - (dtucker) [auth1.c] Ensure do_pam_account is called for Protocol 1
