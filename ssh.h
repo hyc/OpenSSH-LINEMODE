@@ -173,7 +173,9 @@
  * Default path to ssh-askpass used by ssh-add,
  * environment variable for overwriting the default location
  */
-#define SSH_ASKPASS_DEFAULT	"/usr/X11R6/bin/ssh-askpass"
+#ifndef SSH_ASKPASS_DEFAULT
+# define SSH_ASKPASS_DEFAULT	"/usr/X11R6/bin/ssh-askpass"
+#endif
 #define SSH_ASKPASS_ENV		"SSH_ASKPASS"
 
 /*
