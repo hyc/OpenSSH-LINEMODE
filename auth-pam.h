@@ -34,7 +34,8 @@
 void start_pam(const char *);
 void finish_pam(void);
 u_int do_pam_account(void);
-void do_pam_session(const char *, const char *);
+void do_pam_session(void);
+void do_pam_set_tty(const char *);
 void do_pam_setcred(int );
 int is_pam_password_change_required(void);
 void do_pam_chauthtok(void);
