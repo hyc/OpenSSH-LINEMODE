@@ -90,8 +90,9 @@ Packaging:
 
 PrivSep Issues:
 - mmap() issues.
-  + No/broken MAP_ANON
-  + broken /dev/zero parse
+  + /dev/zero solution (Solaris)
+  + No/broken MAP_ANON (Irix)
+  + broken /dev/zero parse (Linux)
 - PAM 
   + See above PAM notes
 - AIX
