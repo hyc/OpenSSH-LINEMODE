@@ -957,7 +957,9 @@ int main(void) { exit(SSLeay() == OPENSSL_VERSION_NUMBER ? 0 : 1); }
 	],
 	[
 		AC_MSG_RESULT(no)
-		AC_MSG_ERROR(Your OpenSSL headers do not match your library)
+		AC_MSG_ERROR([Your OpenSSL headers do not match your library.
+Check config.log for details.
+Also see contrib/findssl.sh for help identifying header/library mismatches.])
 	]
 )
 
