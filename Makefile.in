@@ -383,6 +383,7 @@ tests:	$(TARGETS)
 	$(MAKE) \
 		.OBJDIR="$${BUILDDIR}/regress" \
 		.CURDIR="`pwd`" \
+		BUILDDIR="$${BUILDDIR}" \
 		OBJ="$${BUILDDIR}/regress" \
 		PATH="$${BUILDDIR}:$${PATH}" \
 		TEST_SSH_SSH="$${TEST_SSH_SSH}" \
