@@ -202,7 +202,7 @@ pam_getenvlist(pam_handle_t *pamh)
 #endif
 
 void
-pam_password_change_required(int reqd)
+sshpam_password_change_required(int reqd)
 {
 	debug3("%s %d", __func__, reqd);
 	if (sshpam_authctxt == NULL)
@@ -232,7 +232,7 @@ import_environments(Buffer *b)
 #ifndef USE_POSIX_THREADS
 	/* Import variables set by do_pam_account */
 	sshpam_account_status = buffer_get_int(b);
-	pam_password_change_required(buffer_get_int(b));
+	sshpam_password_change_required(buffer_get_int(b));
 
 	/* Import environment from subprocess */
 	num_env = buffer_get_int(b);
@@ -386,7 +386,7 @@ sshpam_thread(void *ctxtp)
 			    PAM_CHANGE_EXPIRED_AUTHTOK);
 			if (sshpam_err != PAM_SUCCESS)
 				goto auth_fail;
-			pam_password_change_required(0);
+			sshpam_password_change_required(0);
 		}
 	}
 
@@ -736,7 +736,7 @@ do_pam_account(void)
 	}
 
 	if (sshpam_err == PAM_NEW_AUTHTOK_REQD)
-		pam_password_change_required(1);
+		sshpam_password_change_required(1);
 
 	sshpam_account_status = 1;
 	return (sshpam_account_status);

@@ -1,3 +1,7 @@
+20040619
+ - (dtucker) [auth-pam.c] Don't use PAM namespace for
+    pam_password_change_required either.
+
 20040618
  - (djm) OpenBSD CVS Sync
    - djm@cvs.openbsd.org 2004/06/17 14:52:48
