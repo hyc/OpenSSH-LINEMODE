@@ -83,6 +83,7 @@
    --with-pam
  - (djm) Die screaming if start_pam() is called when UsePAM=no
  - (djm) Avoid KrbV leak for MIT Kerberos
+ - (dtucker) Set ai_socktype and ai_protocol in fake-getaddrinfo.c. ok djm@
 
 20030512
  - (djm) Redhat spec: Don't install profile.d scripts when not 
