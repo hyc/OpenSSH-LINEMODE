@@ -8,6 +8,10 @@
      .Xsession -> .xsession;
      originally from a pr from f at obiit dot org, but missed by myself;
      ok markus@ matthieu@
+   - djm@cvs.openbsd.org 2004/09/07 23:41:30
+     [clientloop.c ssh.c]
+     cleanup multiplex control socket on SIGHUP too, spotted by sturm@
+     ok markus@ deraadt@
 
 20041102
  - (dtucker) [configure.ac includes.h] Bug #947: Fix compile error on HP-UX
