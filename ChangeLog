@@ -143,6 +143,9 @@
    - markus@cvs.openbsd.org 2002/01/11 23:02:18
      [readpass.c]
      use _PATH_TTY
+   - markus@cvs.openbsd.org 2002/01/11 23:02:51
+     [auth2-chall.c]
+     use snprintf; mouring@
 
 
 20020121
