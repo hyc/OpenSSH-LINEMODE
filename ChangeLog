@@ -51,6 +51,9 @@
    - markus@cvs.openbsd.org 2002/06/20 23:37:12
      [sshd_config]
      add Compression
+   - stevesk@cvs.openbsd.org 2002/05/25 20:40:08
+     [LICENCE]
+     missed Per Allansson (auth2-chall.c)
  - (bal) Cygwin special handling of empty passwords wrong.  Patch by
    vinschen@redhat.com
 
