@@ -164,7 +164,7 @@ catman-do:
 distprep: catman-do
 	autoreconf
 
-install: $(TARGETS) install-files host-key
+install: $(CONFIGFILES) $(MANPAGES) $(TARGETS) install-files host-key
 
 install-files:
 	$(srcdir)/mkinstalldirs $(DESTDIR)$(bindir)
