@@ -18,7 +18,9 @@ Generic header file for ssh.
 #ifndef SSH_H
 #define SSH_H
 
-/* Added by Dan */
+#include <netinet/in.h> /* For struct sockaddr_in */
+#include <pwd.h> /* For struct pw */
+
 #ifndef SHUT_RDWR
 enum
 {
