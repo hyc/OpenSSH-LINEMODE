@@ -15,6 +15,8 @@
    definition.  Fixes build errors on AIX.
  - (dtucker) [configure.ac loginrec.c] Bug #464: Use updwtmpx on platforms
    that support it.  from & ok mouring@
+ - (dtucker) [configure.ac] Bug #345: Do not disable utmp on HP-UX 10.x.
+    ok djm@
 
 20040207
  - (dtucker) OpenBSD CVS Sync
