@@ -6,6 +6,8 @@
  - (djm) Don't loop forever when changing password via PAM. Patch
    from Solar Designer <solar@openwall.com>
  - (djm) Generate config files before build
+ - (djm) Correctly handle SIA and AIX when no tty present. Spotted and
+   suggested fix from Mike Battersby <mib@unimelb.edu.au>
 
 20010320
  - (bal) glob.c update to added GLOB_LIMITS (OpenBSD CVS).
