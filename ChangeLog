@@ -48,6 +48,9 @@
    - markus@cvs.openbsd.org 2002/06/20 23:05:56
      [servconf.c servconf.h session.c sshd.c]
      allow Compression=yes/no in sshd_config
+   - markus@cvs.openbsd.org 2002/06/20 23:37:12
+     [sshd_config]
+     add Compression
  - (bal) Cygwin special handling of empty passwords wrong.  Patch by
    vinschen@redhat.com
 
