@@ -125,6 +125,13 @@
   - jakob@cvs.openbsd.org 2001/08/02 16:14:05
      [scard.c ssh-agent.c ssh.c ssh-keygen.c]
      clean up some /* SMARTCARD */. ok markus@
+   - mpech@cvs.openbsd.org 2001/08/02 18:37:35
+     [ssh-keyscan.1]
+     o) .Sh AUTHOR -> .Sh AUTHORS;
+     o) .Sh EXAMPLE -> .Sh EXAMPLES;
+     o) Delete .Sh OPTIONS. Text moved to .Sh DESCRIPTION;
+ 
+     millert@ ok
 
 20010803
  - (djm) Fix interrupted read in entropy gatherer. Spotted by markus@ on
