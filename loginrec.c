@@ -1380,14 +1380,17 @@ lastlog_openseek(struct logininfo *li, int *fd, int filemode)
 		return 0;
 	}
 	
-	/* find this uid's offset in the lastlog file */
-	offset = (off_t) ( (long)li->uid * sizeof(struct lastlog));
+	if (type == LL_FILE) {
+		/* find this uid's offset in the lastlog file */
+		offset = (off_t) ( (long)li->uid * sizeof(struct lastlog));
 
-	if ( lseek(*fd, offset, SEEK_SET) != offset ) {
-		log("lastlog_openseek: %s->lseek(): %s",
-		    lastlog_file, strerror(errno));
-		return 0;
+		if ( lseek(*fd, offset, SEEK_SET) != offset ) {
+			log("lastlog_openseek: %s->lseek(): %s",
+		   	 lastlog_file, strerror(errno));
+			return 0;
+		}
 	}
+	
 	return 1;
 }
 
