@@ -1,3 +1,7 @@
+20010321
+ - (djm) Fix ttyname breakage for AIX and Tru64. Patch from Steve 
+   VanDevender <stevev@darkwing.uoregon.edu>
+
 20010320
  - (bal) glob.c update to added GLOB_LIMITS (OpenBSD CVS).
  - (bal) glob.c update to set gl_pathv to NULL (OpenBSD CVS).
