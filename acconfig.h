@@ -374,6 +374,9 @@
 /* Some systems put this outside of libc */
 #undef HAVE_NANOSLEEP
 
+/* Pushing STREAMS modules incorrectly acquires a controlling TTY */
+#undef STREAMS_PUSH_ACQUIRES_CTTY
+
 @BOTTOM@
 
 /* ******************* Shouldn't need to edit below this line ************** */

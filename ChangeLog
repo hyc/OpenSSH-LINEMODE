@@ -6,6 +6,8 @@
      fix memory leaks; from dlheine@suif.Stanford.EDU/CLOUSEAU; ok djm@
  - (djm) One more portable-specific one from dlheine@suif.Stanford.EDU/
    CLOUSEAU
+ - (djm) Bug #245: TTY problems on Solaris. Fix by stevesk@ and 
+   dtucker@zip.com.au
 
 20030225
  - (djm) Fix some compile errors spotted by dtucker and his fabulous 
