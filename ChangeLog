@@ -1,3 +1,7 @@
+20040223
+ - (dtucker) [session.c] Bug #789: Only make setcred call for !privsep in the
+   non-interactive path.  ok djm@
+
 20040222
  - (dtucker) [auth-shadow.c auth.c auth.h] Move shadow account expiry test
    to auth-shadow.c, no functional change.  ok djm@
