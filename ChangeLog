@@ -7,6 +7,9 @@
    change for platforms using /etc/shadow.  ok djm@
  - (dtucker) [openbsd-compat/fake-rfc2553.h] Bug #563: Prepend ssh_ to compat
    functions to avoid conflicts with Heimdal's libroken.  ok djm@
+ - (dtucker) [auth-pam.c auth-pam.h session.c] Bug #14: Use do_pwchange to
+   change expired PAM passwords for SSHv1 connections without privsep.
+   pam_chauthtok is still used when privsep is disabled.  ok djm@
 
 20040207
  - (dtucker) OpenBSD CVS Sync
