@@ -50,6 +50,9 @@
    - deraadt@cvs.openbsd.org 2001/12/02 02:08:32
      [sftp-common.c]
      zap };
+   - itojun@cvs.openbsd.org 2001/12/05 03:50:01
+     [clientloop.c serverloop.c sshd.c]
+     deal with LP64 printf issue with sig_atomic_t.  from thorpej
 
 20011126
  - (tim) [contrib/cygwin/README, openbsd-compat/bsd-cygwin_util.c,
