@@ -16,6 +16,9 @@
    - markus@cvs.openbsd.org 2002/02/06 14:22:42
      [sftp.1]
      sort options; ok mpech@, stevesk@
+   - mpech@cvs.openbsd.org 2002/02/06 14:27:23
+     [sftp.c]
+     sync usage() with manual.
 
 20020205
  - (djm) Cleanup after sync:
