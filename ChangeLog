@@ -6,6 +6,7 @@
  - (dtucker) [auth-sia.c configure.ac] Tru64 update from cmadams at hiwaay.net.
    Use permanently_set_uid for SIA, only define DISABLE_FD_PASSING when SIA
    is enabled, rely on SIA to check for locked accounts if enabled.  ok djm@
+ - (djm) [scp.c] Rename limitbw -> limit_rate to match upstreamed patch
 
 20031121
  - (djm) OpenBSD CVS Sync
