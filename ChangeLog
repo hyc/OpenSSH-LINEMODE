@@ -1,3 +1,7 @@
+20021122
+ - (tim) [configure.ac] fix STDPATH test for IRIX. First reported by
+   advax@triumf.ca. This type of solution tested by <herb@sgi.com>
+
 20021113
  - (tim) [configure.ac] remove unused variables no_libsocket and no_libnsl
 

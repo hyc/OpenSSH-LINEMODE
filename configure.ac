@@ -2060,7 +2060,11 @@ Edit /etc/login.conf instead.])
 # include <paths.h>
 #endif
 #ifndef _PATH_STDPATH
-# define _PATH_STDPATH "/usr/bin:/bin:/usr/sbin:/sbin"
+# ifdef _PATH_USERPATH	/* Irix */
+#  define _PATH_STDPATH _PATH_USERPATH
+# else
+#  define _PATH_STDPATH "/usr/bin:/bin:/usr/sbin:/sbin"
+# endif
 #endif
 #include <sys/types.h>
 #include <sys/stat.h>
