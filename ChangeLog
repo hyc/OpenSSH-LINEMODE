@@ -1,4 +1,5 @@
 20040622
+ - (bal) [auth-passwd.c auth1.c] Clean up unused variables.
  - (dtucker) OpenBSD CVS Sync
    - djm@cvs.openbsd.org 2004/06/20 17:36:59
      [ssh.c]
