@@ -209,7 +209,6 @@ tty_make_modes(int fd)
 	struct termios tio;
 	int baud;
 
-	/* Get the modes. */
 	if (tcgetattr(fd, &tio) < 0) {
 		packet_put_char(TTY_OP_END);
 		log("tcgetattr: %.100s", strerror(errno));

@@ -71,8 +71,11 @@ terminal if it was run from a terminal.  If
 .Nm
 does not have a terminal associated with it but
 .Ev DISPLAY
-is set, it
-will open an X11 window to read the passphrase.  This is particularly
+and
+.Ev SSH_ASKPASS
+are set, it will execute the program specified by
+.Ev SSH_ASKPASS
+and open an X11 window to read the passphrase.  This is particularly
 useful when calling
 .Nm
 from a

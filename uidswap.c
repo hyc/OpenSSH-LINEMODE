@@ -66,10 +66,11 @@ restore_uid()
 	if (seteuid(saved_euid) < 0)
 		debug("seteuid %d: %.100s", (int) saved_euid, strerror(errno));
 #else /* SAVED_IDS_WORK_WITH_SETEUID */
-	/* We are unable to restore the real uid to its unprivileged
-	   value. */
-	/* Propagate the real uid (usually more privileged) to effective
-	   uid as well. */
+	/*
+	 * We are unable to restore the real uid to its unprivileged value.
+	 * Propagate the real uid (usually more privileged) to effective uid
+	 * as well.
+	 */
 	setuid(getuid());
 #endif /* SAVED_IDS_WORK_WITH_SETEUID */
 }

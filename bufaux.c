@@ -54,7 +54,7 @@ buffer_put_bignum(Buffer *buffer, BIGNUM *value)
 	buffer_append(buffer, msg, 2);
 	/* Store the binary data. */
 	buffer_append(buffer, buf, oi);
-	/* Clear the temporary data. */
+
 	memset(buf, 0, bin_size);
 	xfree(buf);
 }
