@@ -293,6 +293,9 @@
 /* Define if you have BSD auth support */
 #undef BSD_AUTH
 
+/* Define if X11 doesn't support AF_UNIX sockets on that system */
+#undef NO_X11_UNIX_SOCKETS
+
 @BOTTOM@
 
 /* ******************* Shouldn't need to edit below this line ************** */
