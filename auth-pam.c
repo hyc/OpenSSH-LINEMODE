@@ -817,7 +817,8 @@ sshpam_tty_conv(int n, struct pam_message **msg,
 		case PAM_PROMPT_ECHO_ON:
 			fprintf(stderr, "%s\n", PAM_MSG_MEMBER(msg, i, msg));
 			fgets(input, sizeof input, stdin);
-			reply[i].resp = xstrdup(input);
+			if ((reply[i].resp = strdup(input)) == NULL)
+				goto fail;
 			reply[i].resp_retcode = PAM_SUCCESS;
 			break;
 		case PAM_ERROR_MSG:
@@ -1003,7 +1004,8 @@ sshpam_passwd_conv(int n, struct pam_message **msg,
 		case PAM_PROMPT_ECHO_OFF:
 			if (sshpam_password == NULL)
 				goto fail;
-			reply[i].resp = xstrdup(sshpam_password);
+			if ((reply[i].resp = strdup(sshpam_password)) == NULL)
+				goto fail;
 			reply[i].resp_retcode = PAM_SUCCESS;
 			break;
 		case PAM_ERROR_MSG:
@@ -1014,7 +1016,8 @@ sshpam_passwd_conv(int n, struct pam_message **msg,
 				    PAM_MSG_MEMBER(msg, i, msg), len);
 				buffer_append(&loginmsg, "\n", 1);
 			}
-			reply[i].resp = xstrdup("");
+			if ((reply[i].resp = strdup("")) == NULL)
+				goto fail;
 			reply[i].resp_retcode = PAM_SUCCESS;
 			break;
 		default:
