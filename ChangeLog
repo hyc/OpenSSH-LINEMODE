@@ -1,3 +1,6 @@
+20040217
+ - (djm) Simplify the license on code I have written. No code changes.
+
 20040212
  - (tim) [Makefile.in regress/sftp-badcmds.sh regress/test-exec.sh]
    Portablity fixes. Data sftp transfers needs to be world readable. Some
