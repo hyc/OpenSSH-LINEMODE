@@ -1,3 +1,6 @@
+20011123
+ - (djm) Compat define for OpenSSL < 0.9.6 (No OPENSSL_free)
+
 20011031
  - (djm) Unsmoke drugs: config files should be noreplace.
 
