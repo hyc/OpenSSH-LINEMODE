@@ -12,6 +12,9 @@
    - deraadt@cvs.openbsd.org 2005/03/10 22:40:38
      [auth-options.c]
      spacing
+   - markus@cvs.openbsd.org 2005/03/11 14:59:06
+     [ssh-keygen.c]
+     typo, missing \n; mpech
 
 20050313
  - (dtucker) [contrib/cygwin/ssh-host-config] Makes the query for the
