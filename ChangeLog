@@ -3,6 +3,7 @@
    "Bad packet length" bugs.
  - (djm) Fully revert PAM session patch (again). All PAM session init is 
    now done before the final fork().
+ - (djm) EGD detection patch from Tim Rice <tim@multitalents.net>
 
 20010227
  - (bal) Applied shutdown() patch for sftp.c by  Corinna Vinschen 
