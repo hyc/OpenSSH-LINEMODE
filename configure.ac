@@ -664,11 +664,11 @@ AC_CHECK_FUNCS(\
 	gai_strerror getaddrinfo getcwd getgrouplist getnameinfo getopt \
 	getpeereid _getpty getrlimit getrusage getttyent glob inet_aton \
 	inet_ntoa inet_ntop innetgr login_getcapbool md5_crypt memmove \
-	mkdtemp mmap ngetaddrinfo nsleep ogetaddrinfo openpty pstat \
-	readpassphrase realpath recvmsg rresvport_af sendmsg setdtablesize \
-	setegid setenv seteuid setgroups setlogin setpcred setproctitle \
-	setresgid setreuid setrlimit setsid setvbuf sigaction sigvec \
-	snprintf socketpair strerror strlcat strlcpy strmode strnvis \
+	mkdtemp mmap ngetaddrinfo nsleep ogetaddrinfo openlog_r openpty \
+	pstat readpassphrase realpath recvmsg rresvport_af sendmsg \
+	setdtablesize setegid setenv seteuid setgroups setlogin setpcred \
+	setproctitle setresgid setreuid setrlimit setsid setvbuf sigaction \
+	sigvec snprintf socketpair strerror strlcat strlcpy strmode strnvis \
 	sysconf tcgetpgrp truncate utimes vhangup vsnprintf waitpid \
 )
 
