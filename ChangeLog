@@ -97,6 +97,9 @@
      fix hanging x11 channels for rejected cookies (e.g. 
      XAUTHORITY=/dev/null xbiff) bug #36, based on patch from
      djast@cs.toronto.edu
+   - stevesk@cvs.openbsd.org 2002/01/05 21:51:56
+     [ssh.1 sshd.8]
+     some missing and misplaced periods
 
 
 20020121
