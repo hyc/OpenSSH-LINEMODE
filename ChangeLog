@@ -6,6 +6,9 @@
      [ssh-rsa.c]
      backout last change, since it violates pkcs#1
      switch to share/misc/license.template
+   - djm@cvs.openbsd.org 2003/06/20 05:47:58
+     [sshd_config.5]
+     sync description of protocol 2 cipher proposal; ok markus
  - (dtucker) [regress/authorized_keys_root] Remove temp data file from CVS.
  - (dtucker) [openbsd-compat/setproctitle.c] Ensure SPT_TYPE is defined before
    testing its value.
