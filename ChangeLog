@@ -35,6 +35,10 @@
      the challenge response device decides how to handle non-existing 
      users.
      -> fake challenges for skey and cryptocard
+   - markus@cvs.openbsd.org 2001/06/04 21:59:43
+     [channels.c channels.h session.c]
+     switch uid when cleaning up tmp files and sockets; reported by 
+     zen-parse@gmx.net on bugtraq
 
 20010606
  - OpenBSD CVS Sync
