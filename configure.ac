@@ -601,7 +601,7 @@ AC_ARG_WITH(tcp-wrappers,
 )
 
 dnl    Checks for library functions.
-AC_CHECK_FUNCS(arc4random b64_ntop bcopy bindresvport_sa \
+AC_CHECK_FUNCS(arc4random b64_ntop bcopy basename bindresvport_sa \
 	clock fchmod fchown freeaddrinfo futimes gai_strerror \
 	getaddrinfo getcwd getgrouplist getnameinfo getopt getpeereid\
 	getrlimit getrusage getttyent glob inet_aton inet_ntoa \

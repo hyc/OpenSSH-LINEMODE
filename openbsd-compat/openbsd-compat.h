@@ -6,6 +6,7 @@
 #include "config.h"
 
 /* OpenBSD function replacements */
+#include "basename.h"
 #include "bindresvport.h"
 #include "getcwd.h"
 #include "realpath.h"
