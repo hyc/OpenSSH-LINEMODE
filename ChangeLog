@@ -6,6 +6,9 @@
      [compat.c compat.h sshd.c]
      add a generic match for a prober, such as sie big brother; 
      idea from stevesk@; markus@ ok
+   - stevesk@cvs.openbsd.org 2002/09/27 15:46:21
+     [ssh.1]
+     clarify compression level protocol 1 only; ok markus@ deraadt@
 
 20020927
  - (djm) OpenBSD CVS Sync
