@@ -13,6 +13,9 @@
    - markus@cvs.openbsd.org 2003/01/28 16:11:52
      [scp.1]
      document -l; pekkas@netcore.fi
+   - stevesk@cvs.openbsd.org 2003/01/28 17:24:51
+     [scp.1]
+     remove example not pertinent with -1 addition; ok markus@
 
 20030211
  - (djm) Cygwin needs libcrypt too. Patch from vinschen@redhat.com
