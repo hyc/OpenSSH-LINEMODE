@@ -1,3 +1,7 @@
+20041208
+ - (tim) [configure.ac] Comment some non obvious platforms in the
+ target-specific case statement. Suggested and OK by dtucker@
+
 20041207
  - (dtucker) [regress/scp.sh] Use portable-friendly $DIFFOPTs in new test.
 
