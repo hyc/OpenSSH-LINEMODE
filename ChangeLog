@@ -3,7 +3,9 @@
    cjwatson@debian.org
  - (djm) Bug #460: Filling utmp[x]->ut_addr_v6 if present. Patch from 
    cjwatson@debian.org
-   
+ - (djm) Bug #446: Set LOGIN env var to pw_name on AIX. Patch from 
+   mii@ornl.gov 
+
 20030101
   - (stevesk) [session.c sshlogin.c sshlogin.h] complete portable
     parts of pass addrlen with sockaddr * fix.
