@@ -11,6 +11,10 @@
      turn on ssh batch mode when in sftp batch mode, patch from 
      jdmossh AT nand.net;
      ok markus@
+   - jmc@cvs.openbsd.org 2005/02/25 10:55:13
+     [sshd.8]
+     add /etc/motd and $HOME/.hushlogin to FILES;
+     from michael knudsen;
 
 20050226
  - (dtucker) [openbsd-compat/bsd-openpty.c openbsd-compat/inet_ntop.c]
