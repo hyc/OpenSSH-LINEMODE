@@ -68,7 +68,8 @@ PATHSUBS	= \
 	-D/var/run/sshd.pid=$(piddir)/sshd.pid \
 	-D/etc/primes=$(sysconfdir)/primes \
 	-D/etc/sshrc=$(sysconfdir)/sshrc \
-	-D/usr/X11R6/bin/xauth=$(XAUTH_PATH)
+	-D/usr/X11R6/bin/xauth=$(XAUTH_PATH) \
+	-D/usr/bin:/bin:/usr/sbin:/sbin=@user_path@
 
 FIXPATHSCMD	= $(PERL) $(srcdir)/fixpaths $(PATHSUBS)
 
