@@ -275,6 +275,10 @@ sshpam_thread_conv(int n, const struct pam_message **msg,
 	debug3("PAM: %s entering, %d messages", __func__, n);
 	*resp = NULL;
 
+	if (data == NULL) {
+		error("PAM: conversation function passed a null context");
+		return (PAM_CONV_ERR);
+	}
 	ctxt = data;
 	if (n <= 0 || n > PAM_MAX_NUM_MSG)
 		return (PAM_CONV_ERR);
