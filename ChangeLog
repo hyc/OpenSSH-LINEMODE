@@ -30,6 +30,11 @@
       ssh-keysign.c ssh.1 sshconnect.c sshconnect.h sshconnect2.c ttymodes.c
       xmalloc.h]
      KNF done automatically while reading....
+   - markus@cvs.openbsd.org 2002/06/19 18:01:00
+     [cipher.c monitor.c monitor_wrap.c packet.c packet.h]
+     make the monitor sync the transfer ssh1 session key;
+     transfer keycontext only for RC4 (this is still depends on EVP
+     implementation details and is broken).
  - (bal) Cygwin special handling of empty passwords wrong.  Patch by
    vinschen@redhat.com
 
