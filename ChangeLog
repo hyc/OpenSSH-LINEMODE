@@ -62,6 +62,9 @@
    - markus@cvs.openbsd.org 2002/12/10 19:26:50
      [packet.c]
      move tos handling to packet_set_tos; ok provos/henning/deraadt
+   - markus@cvs.openbsd.org 2002/12/10 19:47:14
+     [packet.c]
+     static
 
 20021205
  - (djm) PERL-free fixpaths from stuge-openssh-unix-dev@cdy.org
