@@ -747,7 +747,7 @@ usage(void)
 	fprintf(stderr, "Usage: %s [options]\n", __progname);
 	fprintf(stderr, "  -v          Verbose; display verbose debugging messages.\n");
 	fprintf(stderr, "              Multiple -v increases verbosity.\n");
-	fprintf(stderr, "  -x          Force output in hexidecimal (for debugging)\n");
+	fprintf(stderr, "  -x          Force output in hexadecimal (for debugging)\n");
 	fprintf(stderr, "  -X          Force output in binary\n");
 	fprintf(stderr, "  -b bytes    Number of bytes to output (default %d)\n",
 	    OUTPUT_SEED_SIZE);

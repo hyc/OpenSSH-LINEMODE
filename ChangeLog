@@ -1,3 +1,7 @@
+20040823
+ - (djm) [ssh-rand-helper.c] Typo. Found by 
+   Martin.Kraemer AT Fujitsu-Siemens.com
+
 20040817
  - (dtucker) [regress/README.regress] Note compatibility issues with GNU head.
  - (djm) OpenBSD CVS Sync
