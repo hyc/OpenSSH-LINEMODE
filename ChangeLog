@@ -38,6 +38,9 @@
       monitor_wrap.c monitor_wrap.h scard.h session.h sftp-glob.c ssh.c
       sshconnect2.c sshd.c]
      minor KNF
+   - deraadt@cvs.openbsd.org 2002/07/01 16:15:25
+     [msg.c]
+     %u
 
 20020702
  - (djm) Use PAM_MSG_MEMBER for PAM_TEXT_INFO messages, use xmalloc & 
