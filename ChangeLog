@@ -1,6 +1,8 @@
 20040114
  - (dtucker) [auth-pam.c] Have monitor die if PAM authentication thread exits
    unexpectedly.  with & ok djm@
+ - (dtucker) [auth-pam.c] Reset signal handler in pthread_cancel too, add
+   test for case where cleanup has already run.
 
 20040113
  - (dtucker) [auth-pam.c] Relocate struct pam_ctxt and prototypes.  No
