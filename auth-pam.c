@@ -949,10 +949,21 @@ do_pam_session(void)
 		fatal("PAM: failed to set PAM_CONV: %s",
 		    pam_strerror(sshpam_handle, sshpam_err));
 	sshpam_err = pam_open_session(sshpam_handle, 0);
-	if (sshpam_err != PAM_SUCCESS)
-		fatal("PAM: pam_open_session(): %s",
+	if (sshpam_err == PAM_SUCCESS)
+		sshpam_session_open = 1;
+	else {
+		sshpam_session_open = 0;
+		disable_forwarding();
+		error("PAM: pam_open_session(): %s",
 		    pam_strerror(sshpam_handle, sshpam_err));
-	sshpam_session_open = 1;
+	}
+
+}
+
+int
+is_pam_session_open(void)
+{
+	return sshpam_session_open;
 }
 
 /*
