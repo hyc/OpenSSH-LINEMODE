@@ -159,6 +159,12 @@
    - stevesk@cvs.openbsd.org 2001/03/04 12:54:04
      [sshd.8]
      spelling
+   - millert@cvs.openbsd.org 2001/03/04 17:42:28
+     [authfd.c channels.c dh.c log.c readconf.c servconf.c sftp-int.c
+      ssh.c sshconnect.c sshd.c]
+     log functions should not be passed strings that end in newline as they
+     get passed on to syslog() and when logging to stderr, do_log() appends
+     its own newline.
 
 20010304
  - (bal) Remove make-ssh-known-hosts.1 since it's no longer valid.
