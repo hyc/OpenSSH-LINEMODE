@@ -1938,6 +1938,17 @@ AC_ARG_WITH(xauth,
 	]
 )
 
+STRIP_OPT=-s
+AC_ARG_ENABLE(strip,
+	[  --disable-strip         Disable calling strip(1) on install],
+	[
+		if test "x$enableval" = "xno" ; then
+			STRIP_OPT=
+		fi
+	]
+)
+AC_SUBST(STRIP_OPT)
+
 if test -z "$xauth_path" ; then
 	XAUTH_PATH="undefined"
 	AC_SUBST(XAUTH_PATH)
