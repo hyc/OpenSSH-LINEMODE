@@ -25,6 +25,7 @@
         (1) force rekeying with ~R, or
         (2) if the server requests rekeying.
      works against ssh-2.0.12/2.0.13/2.1.0/2.2.0/2.3.0/2.3.1/2.4.0
+ - (bal) Oops.. Missed including kexdh.c and kexgex.c in OpenBSD sync.
 
 20010403
  - OpenBSD CVS Sync
