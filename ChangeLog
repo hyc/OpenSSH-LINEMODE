@@ -1,3 +1,7 @@
+20030629
+ - (dtucker) Bug #602: move #include of netdb.h to after in.h (fixes compiler
+   warnings on Solaris 2.5.1).
+   
 20030628
  - (djm) Bug #591: use PKCS#15 private key label as a comment in case 
    of OpenSC. Report and patch from larsch@trustcenter.de
