@@ -3,6 +3,7 @@
    - markus@cvs.openbsd.org 2001/04/30 11:18:52
      [readconf.c readconf.h ssh.1 ssh.c sshconnect.c]
      implement 'ssh -b bind_address' like 'telnet -b'
+ - (tim) [contrib/caldera/openssh.spec] add Requires line for Caldera 3.1
 
 20010430
  - OpenBSD CVS Sync
