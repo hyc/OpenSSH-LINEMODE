@@ -207,6 +207,10 @@
    - stevesk@cvs.openbsd.org 2002/01/18 18:14:17
      [authfd.c bufaux.c buffer.c cipher.c packet.c ssh-agent.c ssh-keygen.c]
      unneeded cast cleanup; ok markus@
+   - stevesk@cvs.openbsd.org 2002/01/18 20:46:34
+     [sshd.8]
+     clarify Allow(Groups|Users) and Deny(Groups|Users); suggestion from
+     allard@oceanpark.com; ok markus@
 
 20020121
  - (djm) Rework ssh-rand-helper:
