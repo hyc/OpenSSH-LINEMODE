@@ -43,6 +43,7 @@
 
 /* Routines for a single OS platform */
 #include "bsd-cray.h"
+#include "bsd-cygwin_util.h"
 #include "port-irix.h"
 #include "port-aix.h"
 
