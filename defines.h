@@ -644,6 +644,15 @@ struct winsize {
 # define CUSTOM_SYS_AUTH_PASSWD 1
 #endif
 
+/* HP-UX 11.11 */
+#ifdef BTMP_FILE
+# define _PATH_BTMP BTMP_FILE
+#endif
+
+#if defined(USE_BTMP) && defined(_PATH_BTMP)
+# define CUSTOM_FAILED_LOGIN
+#endif
+
 /** end of login recorder definitions */
 
 #endif /* _DEFINES_H */
