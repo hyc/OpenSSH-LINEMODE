@@ -9,6 +9,9 @@
    - markus@cvs.openbsd.org 2002/06/26 14:51:33
      [ssh-add.c]
      fix exit code for -X/-x
+   - deraadt@cvs.openbsd.org 2002/06/26 15:00:32
+     [monitor_wrap.c]
+     more %u
 
 20020626
  - (stevesk) [monitor.c] remove duplicate proto15 dispatch entry for PAM
