@@ -12,7 +12,7 @@
 
 #include <sys/types.h> /* For [u]intxx_t */
 #include <sys/socket.h> /* For SHUT_XXXX */
-#include <sys/param.h> /* For MAXPATHLEN */
+#include <sys/param.h> /* For MAXPATHLEN and roundup() */
 #include <netinet/in_systm.h> /* For typedefs */
 #include <netinet/in.h> /* For IPv6 macros */
 #include <netinet/ip.h> /* For IPTOS macros */
@@ -318,15 +318,19 @@ struct winsize {
 # define MIN(a,b) (((a)<(b))?(a):(b))
 #endif
 
+#ifndef roundup
+# define roundup(x, y)   ((((x)+((y)-1))/(y))*(y))
+#endif
+
 #ifndef timersub
-#define timersub(a, b, result)										  \
-   do {																		  \
-      (result)->tv_sec = (a)->tv_sec - (b)->tv_sec;           \
-      (result)->tv_usec = (a)->tv_usec - (b)->tv_usec;        \
-      if ((result)->tv_usec < 0) {                            \
-	 --(result)->tv_sec;                                  \
-	 (result)->tv_usec += 1000000;                        \
-      }                                                       \
+#define timersub(a, b, result)					\
+   do {								\
+      (result)->tv_sec = (a)->tv_sec - (b)->tv_sec;		\
+      (result)->tv_usec = (a)->tv_usec - (b)->tv_usec;		\
+      if ((result)->tv_usec < 0) {				\
+	 --(result)->tv_sec;					\
+	 (result)->tv_usec += 1000000;				\
+      }								\
    } while (0)
 #endif
 
