@@ -1,3 +1,6 @@
+20020515
+ - (bal) CVS ID fix up on auth-passwd.c
+
 20020514
  - (stevesk) [README.privsep] PAM+privsep works with Solaris 8.
  - (tim) [sshpty.c] set tty modes when allocating old style bsd ptys to
