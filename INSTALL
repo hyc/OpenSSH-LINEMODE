@@ -108,10 +108,6 @@ different name.
 need a working installation of GNOME, including the development
 headers, for this to work.
 
---with-random=/some/file allows you to specify an alternate source of
-random numbers (the default is /dev/urandom). Unless you are absolutely
-sure of what you are doing, it is best to leave this alone.
-
 --with-prngd-socket=/some/file allows you to enable EGD or PRNGD 
 support and to specify a PRNGd socket. Use this if your Unix lacks 
 /dev/random and you don't want to use OpenSSH's builtin entropy 

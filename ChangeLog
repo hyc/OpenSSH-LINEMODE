@@ -3,6 +3,7 @@
    - Add commandline debugging options
    - Don't write binary data if stdout is a tty (use hex instead)
    - Give it a manpage
+ - (djm) Random number collection doc fixes from Ben
 
 20020413
  - (djm) Add KrbV support patch from Simon Wilkinson <simon@sxw.org.uk>
