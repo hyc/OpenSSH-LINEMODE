@@ -1,3 +1,7 @@
+20030503
+ - (dtucker) Add missing "void" to record_failed_login in bsd-cray.c.  Noted
+   by wendyp@cray.com.
+
 20030502
  - (dtucker) Bug #544: ignore invalid cmsg_type on Linux 2.0 kernels,
    privsep should now work.
