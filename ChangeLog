@@ -25,6 +25,9 @@
    - markus@cvs.openbsd.org 2003/04/16 14:35:27
      [auth.h]
      document struct Authctxt; with solar
+   - deraadt@cvs.openbsd.org 2003/04/26 04:29:49
+     [ssh-keyscan.c]
+     -t in usage(); rogier@quaak.org
 
 20030512
  - (djm) Redhat spec: Don't install profile.d scripts when not 
