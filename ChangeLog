@@ -40,6 +40,8 @@
    readpass.h, grep says scard-opensc.c does too.  Replace with misc.h.
  - (dtucker) [openbsd-compat/getrrsetbyname.c] Check that HAVE_DECL_H_ERROR
    is defined before using.
+ - (dtucker) [openbsd-compat/getrrsetbyname.c] Fix typo too: HAVE_DECL_H_ERROR
+   -> HAVE_DECL_H_ERRNO.
 
 20040502
  - (dtucker) OpenBSD CVS Sync
