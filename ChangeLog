@@ -1,3 +1,6 @@
+20010407
+ - (bal) CVS ID Resync of version.h
+ 
 20010406
  - (stevesk) logintest.c: fix for systems without __progname
  - (stevesk) Makefile.in: log.o is in libssh.a
