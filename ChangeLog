@@ -1,5 +1,6 @@
 20020423
  - (djm) Trim ChangeLog to include only post-3.1 changes
+ - (djm) Update RPM spec file versions
  - (djm) Bug #222: Fix tests for getaddrinfo on OSF/1. Spotted by
    Robert Urban <urban@spielwiese.de>
  - (djm) Make privsep work with PAM (still experimental)
