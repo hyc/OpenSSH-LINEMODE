@@ -34,6 +34,11 @@
 
 #ifdef HAVE_CYGWIN
 
+#undef ERROR
+#define is_winnt       (GetVersion() < 0x80000000)
+
+#include <windows.h>
+#include <sys/cygwin.h>
 #include <io.h>
 
 int binary_open(const char *, int , ...);

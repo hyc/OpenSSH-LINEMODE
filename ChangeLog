@@ -8,6 +8,8 @@
    from OpenBSD.
  - (dtucker) [openbsd-compat/bsd-cygwin_util.c openbsd-compat/bsd-cygwin_util.h]
    Remove incorrect filenames from comments (file names are in Id tags).
+ - (dtucker) [session.c openbsd-compat/bsd-cygwin_util.h] Move Cygwin
+   specific defines and includes to bsd-cygwin_util.h.  Fixes build error too.
 
 20030802
  - (dtucker) [monitor.h monitor_wrap.h] Remove excess ident tags.
