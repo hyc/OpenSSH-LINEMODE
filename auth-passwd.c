@@ -26,14 +26,6 @@ RCSID("$Id$");
 extern char *ticket;
 #endif /* KRB4 */
 
-#ifdef HAVE_PAM
-#include <security/pam_appl.h>
-extern pam_handle_t *pamh;
-extern int retval;
-extern char* pampasswd;
-extern int origretval;
-#endif /* HAVE_PAM */
-
 /* Tries to authenticate the user using password.  Returns true if
    authentication succeeds. */
 
@@ -57,26 +49,6 @@ int auth_password(struct passwd *pw, const char *password)
   /* deny if no user. */
   if (pw == NULL)
     return 0;
-
-#ifdef HAVE_PAM
-  retval = origretval;
-
-  pampasswd = xstrdup(password);
-
-  if (retval == PAM_SUCCESS)
-    retval = pam_authenticate ((pam_handle_t *)pamh, 0);
-
-  if (retval == PAM_SUCCESS)
-    retval = pam_acct_mgmt ((pam_handle_t *)pamh, 0);
-
-  xfree(pampasswd);
-
-  if (retval == PAM_SUCCESS) 
-    retval = pam_open_session ((pam_handle_t *)pamh, 0);
-  
-  return (retval == PAM_SUCCESS);
-
-#else /* HAVE_PAM */
 
 #ifdef SKEY
   if (options.skey_authentication == 1) {
@@ -205,5 +177,4 @@ int auth_password(struct passwd *pw, const char *password)
 
   /* Authentication is accepted if the encrypted passwords are identical. */
   return (strcmp(encrypted_password, pw->pw_passwd) == 0);
-#endif /* HAVE_PAM */
 }
