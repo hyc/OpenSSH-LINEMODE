@@ -27,6 +27,9 @@
    - markus@cvs.openbsd.org 2003/07/03 08:21:46
      [regress/dynamic-forward.sh]
      add socks5; speedup; reformat; based on patch from dtucker@zip.com.au
+   - markus@cvs.openbsd.org 2003/07/03 08:24:13
+     [regress/Makefile]
+     enable tests for dynamic fwd via socks (-D), uses nc(1)
 
 20030630
  - (djm) Search for support functions necessary to build our 
