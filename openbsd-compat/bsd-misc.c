@@ -123,7 +123,7 @@ int truncate (const char *path, off_t length)
  * Cygwin setgroups should be a noop.
  */
 int
-setgroups(size_t size, const git_t *list)
+setgroups(size_t size, const gid_t *list)
 {
 	return 0;
 }

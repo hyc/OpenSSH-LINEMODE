@@ -1,3 +1,6 @@
+20020613
+ - (bal) typo of setgroup for cygwin.  Patch by vinschen@redhat.com
+
 20020612
  - (bal) OpenBSD CVS Sync
    - markus@cvs.openbsd.org 2002/06/11 23:03:54

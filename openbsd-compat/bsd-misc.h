@@ -77,7 +77,7 @@ int truncate (const char *path, off_t length);
 #endif /* HAVE_TRUNCATE */
 
 #if !defined(HAVE_SETGROUPS) && defined(SETGROUPS_NOOP)
-int setgroups(size_t size, const git_t *list);
+int setgroups(size_t size, const gid_t *list);
 #endif
 
 
