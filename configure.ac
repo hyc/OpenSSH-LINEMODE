@@ -95,6 +95,7 @@ case "$host" in
 		[],
 		[#include <usersec.h>]
 	)
+	AC_CHECK_FUNCS(setauthdb)
 	AC_DEFINE(BROKEN_GETADDRINFO)
 	AC_DEFINE(BROKEN_REALPATH)
 	dnl AIX handles lastlog as part of its login message
