@@ -1,3 +1,7 @@
+20050216
+ - (djm) write seed to temporary file and atomically rename into place; 
+   ok dtucker@
+
 20050215
  - (dtucker) [config.sh.in] Collect oslevel -r too.
  - (dtucker) [README.platform auth.c configure.ac loginrec.c
