@@ -6,6 +6,7 @@
    openbsd-compat/bsd-misc.h openbsd-compat/openbsd-compat.h] Use smarter 
    closefrom() replacement from sudo; ok dtucker@
  - (djm) [loginrec.c] Check that seek succeeded here too; ok dtucker
+ - (dtucker) [Makefile.in] Fix typo.
 
 20040814
  - (dtucker) [auth-krb5.c gss-serv-krb5.c openbsd-compat/xmmap.c]
