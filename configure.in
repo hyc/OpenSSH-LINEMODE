@@ -257,7 +257,6 @@ mips-sony-bsd|mips-sony-newsos4)
 	AC_DEFINE(HAVE_SCO_PROTECTED_PW)
 	AC_DEFINE(DISABLE_SHADOW)
 	AC_DEFINE(HAVE_BOGUS_SYS_QUEUE_H)
-	AC_DEFINE(BROKEN_SAVED_UIDS)
 	AC_CHECK_FUNCS(getluid setluid)
 	;;
 *-dec-osf*)
