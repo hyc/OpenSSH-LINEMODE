@@ -4,6 +4,7 @@
      [servconf.c sshd.8 sshd_config.5]
      default LoginGraceTime to 2m; 1m may be too short for slow systems.
      ok markus@
+ - (djm) Merge openssh-TODO.patch from Redhat (null) beta
 
 20020903
  - (djm) Patch from itojun@ for Darwin OS: test getaddrinfo, reorder libcrypt
