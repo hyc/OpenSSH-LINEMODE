@@ -4,6 +4,10 @@
    - markus@cvs.openbsd.org 2004/07/28 08:56:22
      [sshd.c]
      call setsid() _before_ re-exec
+   - markus@cvs.openbsd.org 2004/07/28 09:40:29
+     [auth.c auth1.c auth2.c cipher.c cipher.h key.c session.c ssh.c
+     sshconnect1.c]
+     more s/illegal/invalid/
 
 20040720
  - (djm) OpenBSD CVS Sync
