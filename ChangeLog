@@ -36,6 +36,9 @@
    - markus@cvs.openbsd.org 2003/05/14 22:08:27
      [ssh-com-client.sh ssh-com-keygen.sh ssh-com-sftp.sh ssh-com.sh]
      test against some new commerical versions
+   - mouring@cvs.openbsd.org 2003/05/15 04:07:12
+     [sftp-cmds.sh]
+     Advanced put/get testing for sftp.  OK @djm
 
 20030614
  - (djm) Update license on fake-rfc2553.[ch]; ok itojun@
