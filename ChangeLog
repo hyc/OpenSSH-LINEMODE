@@ -22,6 +22,8 @@
  - (bal) Cleaned up trailing spaces in ChangeLog.
  - (bal) Allow sshd to switch user context without password for Cygwin.
          Patch by Corinna Vinschen <vinschen@redhat.com>
+ - (bal) Updated cygwin README and ssh-host-config.  Patch by
+ 	 Patch by Corinna Vinschen <vinschen@redhat.com>
 
 20010715
  - (bal) Set "BROKEN_GETADDRINFO" for darwin platform.  Reported by
