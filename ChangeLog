@@ -1,3 +1,8 @@
+20020421
+ - (tim) [entropy.c.] Portability fix for SCO Unix 3.2v4.x (SCO OSR 3.0).
+   entropy.c needs seteuid(getuid()) for the setuid(original_uid) to succeed.
+   Patch by gert@greenie.muc.de. This fixes one part of Bug 208
+
 20020418
  - (djm) Avoid SIGCHLD breakage when run from rsync. Fix from 
    Sturle Sunde <sturle.sunde@usit.uio.no>
