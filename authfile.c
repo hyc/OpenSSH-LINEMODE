@@ -228,7 +228,7 @@ load_private_key(const char *filename, const char *passphrase,
 
 	/* check owner and modes */
 	if (fstat(fd, &st) < 0 ||
-	    (st.st_uid != 0 && st.st_uid != getuid()) ||
+	    (st.st_uid != 0 && getuid() != 0 && st.st_uid != getuid()) ||
 	    (st.st_mode & 077) != 0) {
 		close(fd);
 		error("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@");
