@@ -398,6 +398,11 @@
 /* Define if cmsg_type is not passed correctly */
 #undef BROKEN_CMSG_TYPE
 
+/* Strings used in /etc/passwd to denote locked account */
+#undef LOCKED_PASSWD_STRING
+#undef LOCKED_PASSWD_PREFIX
+#undef LOCKED_PASSWD_SUBSTR
+
 /* Define if DNS support is to be activated */
 #undef DNS
 
