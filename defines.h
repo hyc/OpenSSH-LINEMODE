@@ -440,6 +440,10 @@ struct winsize {
 # define howmany(x,y)	(((x)+((y)-1))/(y))
 #endif
 
+#ifdef __hpux
+#define MAP_ANON MAP_ANONYMOUS
+#endif
+
 #ifndef ALIGNBYTES
 #define ALIGNBYTES	(sizeof(int) - 1)
 #endif
