@@ -14,6 +14,7 @@
    - [regress/sftp-badcmds.sh regress/sftp-cmds.sh regress/sftp.sh
      regress/ssh-com-client.sh regress/ssh-com-sftp.sh regress/stderr-data.sh
      regress/transfer.sh] Use ${EXEEXT} where appropriate.
+   - [regress/sftp.sh] Remove dependency on /dev/stdin.
 
 20030903
  - (djm) OpenBSD CVS Sync
