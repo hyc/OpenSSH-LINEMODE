@@ -16,6 +16,9 @@
      we do already trust $HOME/.ssh
      you can use .ssh/sshrc and .ssh/environment if you want to customize
      the location of the xauth cookies
+   - markus@cvs.openbsd.org 2001/06/12 21:30:57
+     [session.c]
+     unused
 
 20010612
  - scp.c ID update (upstream synced vfsprintf() from us)
