@@ -143,6 +143,9 @@
    - markus@cvs.openbsd.org 2001/03/03 23:59:34
      [log.c ssh.c]
      log*.c -> log.c
+   - markus@cvs.openbsd.org 2001/03/04 00:03:59
+     [channels.c]
+     debug1->2
 
 20010304
  - (bal) Remove make-ssh-known-hosts.1 since it's no longer valid.
