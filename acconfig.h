@@ -347,6 +347,9 @@
 /* getaddrinfo is broken (if present) */
 #undef BROKEN_GETADDRINFO
 
+/* updwtmpx is broken (if present) */
+#undef BROKEN_UPDWTMPX
+
 /* Workaround more Linux IPv6 quirks */
 #undef DONT_TRY_OTHER_AF
 
