@@ -46,6 +46,9 @@
    - miod@cvs.openbsd.org 2003/09/18 13:02:21
      [authfd.c bufaux.c dh.c mac.c ssh-keygen.c]
      A few signedness fixes for harmless situations; markus@ ok
+   - markus@cvs.openbsd.org 2003/09/19 09:02:02
+     [packet.c]
+     buffer_dump only if PACKET_DEBUG is defined; Jedi/Sector One; pr 3471
 
 20030919
  - (djm) Bug #683: Remove reference to --with-ipv4-default from INSTALL;
