@@ -1,6 +1,8 @@
 20030603
  - (djm) Bug #573 - Remove unneeded Krb headers and compat goop. Patch from
    simon@sxw.org.uk (Also matches a change in OpenBSD a while ago)
+ - (djm) Bug #577 - wrong flag in scard-opensc.c sc_private_decrypt. 
+   ok markus@
 
 20030603
  - (djm) Replace setproctitle replacement with code derived from 
