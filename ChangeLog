@@ -13,6 +13,9 @@
    - markus@cvs.openbsd.org 2002/02/05 14:32:55
      [channels.c channels.h ssh.c]
      merge channel_request() into channel_request_start()
+   - markus@cvs.openbsd.org 2002/02/06 14:22:42
+     [sftp.1]
+     sort options; ok mpech@, stevesk@
 
 20020205
  - (djm) Cleanup after sync:
