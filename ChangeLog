@@ -13,6 +13,8 @@
      http://bugzilla.mindrot.org/show_bug.cgi?id=76
  - (bal) Slight update to OpenSC support.  Better version checking. patch
    by Juha Yrjölä <jyrjola@cc.hut.fi> 
+ - (bal) Revered out of runtime IRIX detection of joblimits.  Code is
+   incomplete.
 
 20020405
  - (bal) Patch for OpenSC SmartCard library; ok markus@; patch by
