@@ -23,6 +23,7 @@
  */
 
 #include "includes.h"
+#include "log.h"
 
 RCSID("$Id$");
 
@@ -30,6 +31,7 @@ RCSID("$Id$");
 
 #include <openssl/rand.h>
 #include <openssl/rc4.h>
+#include <openssl/err.h>
 
 /* Size of key to use */
 #define SEED_SIZE 20
