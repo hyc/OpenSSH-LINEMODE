@@ -1,3 +1,6 @@
+20031009
+ - (dtucker) [sshd_config.5] UsePAM defaults to "no".  ok djm@
+
 20031008
  - (dtucker) OpenBSD CVS Sync
    - dtucker@cvs.openbsd.org 2003/10/07 01:47:27
