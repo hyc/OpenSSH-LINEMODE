@@ -1,3 +1,6 @@
+20010916
+ - (djm) Workaround XFree breakage in RPM spec file
+
 20010915
  - (djm) Make do_pre_login static to avoid prototype #ifdef hell
  - (djm) Sync scard/ stuff
