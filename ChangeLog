@@ -1,3 +1,6 @@
+20010327
+ - Attempt sync with sshlogin.c w/ OpenBSD (mainly CVS ID)
+
 20010324
  - Fixed permissions ssh-keyscan.  Thanks to Christopher Linn <celinn@mtu.edu>.
  - OpenBSD CVS Sync
