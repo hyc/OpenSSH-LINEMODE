@@ -10,6 +10,11 @@
    - markus@cvs.openbsd.org 2004/05/21 08:43:03
      [kex.h moduli.c tildexpand.c]
      add prototypes for -Wall; ok djm
+   - djm@cvs.openbsd.org 2004/05/21 11:33:11
+     [channels.c channels.h clientloop.c serverloop.c ssh.1]
+     bz #756: add support for the cancel-tcpip-forward request for the server and
+     the client (through the ~C commandline). reported by z3p AT twistedmatrix.com;
+     ok markus@
 
 20040523
  - (djm) [sshd_config] Explain consequences of UsePAM=yes a little better in 
