@@ -10,6 +10,10 @@
      [scard.c ssh-dss.c ssh-rsa.c sshconnect.c sshconnect2.c sshd.c sshlogin.c
       sshpty.c]
      various KNF and %d for unsigned
+   - deraadt@cvs.openbsd.org 2002/06/23 09:30:14
+     [sftp-client.c sftp-client.h sftp-common.c sftp-int.c sftp-server.c
+      sftp.c]
+     bunch of u_int vs int stuff
 
 20020623
  - (stevesk) [configure.ac] bug #255 LOGIN_NEEDS_UTMPX for AIX.
