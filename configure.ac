@@ -132,6 +132,9 @@ case "$host" in
 	;;
 *-*-dgux*)
 	AC_DEFINE(IP_TOS_IS_BROKEN)
+	AC_DEFINE(SETEUID_BREAKS_SETUID)
+	AC_DEFINE(BROKEN_SETREUID)
+	AC_DEFINE(BROKEN_SETREGID)
 	;;
 *-*-darwin*)
 	AC_MSG_CHECKING(if we have working getaddrinfo)
