@@ -3,6 +3,9 @@
    - stevesk@cvs.openbsd.org 2001/03/26 15:47:59
      [ssh.1]
      document more defaults; misc. cleanup.  ok markus@
+   - markus@cvs.openbsd.org 2001/03/26 23:12:42
+     [authfile.c]
+     KNF
 
 20010328
  - (djm) Reorder tests and library inclusion for Krb4/AFS to try to 
