@@ -1,5 +1,7 @@
 20010414
  - Sync with OpenBSD glob.c, strlcat.c and vis.c changes
+ - Cygwin sftp/sftp-server binary mode patch from Corinna Vinschen 
+   <vinschen@redhat.com>
 
 20010413
  - OpenBSD CVS Sync                                                           

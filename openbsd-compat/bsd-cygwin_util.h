@@ -20,6 +20,8 @@
 
 #ifdef HAVE_CYGWIN
 
+#include <io.h>
+
 int binary_open(const char *filename, int flags, ...);
 int binary_pipe(int fd[2]);
 int check_nt_auth(int pwd_authenticated, uid_t uid);

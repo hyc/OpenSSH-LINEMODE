@@ -20,7 +20,6 @@ RCSID("$Id$");
 #ifdef HAVE_CYGWIN
 
 #include <fcntl.h>
-#include <io.h>
 #include <stdlib.h>
 #include <sys/vfs.h>
 #include <windows.h>
