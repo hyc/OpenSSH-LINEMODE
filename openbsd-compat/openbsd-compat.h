@@ -28,6 +28,7 @@
 #include "getgrouplist.h"
 #include "glob.h"
 #include "getusershell.h"
+#include "readpassphrase.h"
 
 /* Home grown routines */
 #include "bsd-arc4random.h"

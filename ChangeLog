@@ -105,6 +105,8 @@
      [ttymodes.c]
      passing modes works fine: debug2->3
  - (djm) -Wall fix for session.c
+ - (djm) Bring in readpassphrase() from OpenBSD libc. Compiles OK on Linux and
+   Solaris
 
 20010622
  - (stevesk) handle systems without pw_expire and pw_change.
