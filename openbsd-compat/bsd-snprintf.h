@@ -1,3 +1,5 @@
+/* $Id$ */
+
 #ifndef _BSD_SNPRINTF_H
 #define _BSD_SNPRINTF_H
 

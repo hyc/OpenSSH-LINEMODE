@@ -1,3 +1,5 @@
+/* $Id$ */
+
 #ifndef _BSD_DAEMON_H
 #define _BSD_DAEMON_H
 

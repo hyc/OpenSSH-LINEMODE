@@ -24,6 +24,8 @@
 
 #include "includes.h"
 
+RCSID("$Id$");
+
 #ifndef HAVE_ARC4RANDOM
 
 #include <openssl/rand.h>

@@ -1,3 +1,5 @@
+/* $Id$ */
+
 #ifndef _OPENBSD_H
 #define _OPENBSD_H
 

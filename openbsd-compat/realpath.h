@@ -1,3 +1,5 @@
+/* $Id$ */
+
 #ifndef _BSD_REALPATH_H
 #define _BSD_REALPATH_H
 

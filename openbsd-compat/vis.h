@@ -1,3 +1,5 @@
+/* $Id$ */
+
 #ifndef _BSD_VIS_H
 #define	_BSD_VIS_H
 

@@ -1,3 +1,5 @@
+/* $Id$ */
+
 #ifndef _FAKE_GETNAMEINFO_H
 #define _FAKE_GETNAMEINFO_H
 

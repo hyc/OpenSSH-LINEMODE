@@ -22,6 +22,8 @@
 
 #include "includes.h"
 
+RCSID("$Id$");
+
 #ifdef HAVE_NEXT
 #include <errno.h>
 #include <sys/wait.h>

@@ -15,6 +15,8 @@
  * Adapted from shadow-19990607 by Tudor Bosman, tudorb@jm.nu
  */
 
+/* $Id$ */
+
 #ifndef _MD5CRYPT_H
 #define _MD5CRYPT_H
 

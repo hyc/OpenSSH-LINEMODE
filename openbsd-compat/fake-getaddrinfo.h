@@ -1,3 +1,5 @@
+/* $Id$ */
+
 #ifndef _FAKE_GETADDRINFO_H
 #define _FAKE_GETADDRINFO_H
 

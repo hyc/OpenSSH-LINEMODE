@@ -1,3 +1,5 @@
+/* $Id$ */
+
 #ifndef _BSD_STRTOK_H
 #define _BSD_STRTOK_H
 

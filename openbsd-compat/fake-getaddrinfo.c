@@ -12,6 +12,8 @@
 #include "includes.h"
 #include "ssh.h"
 
+RCSID("$Id$");
+
 #ifndef HAVE_GAI_STRERROR
 char *gai_strerror(int ecode)
 {

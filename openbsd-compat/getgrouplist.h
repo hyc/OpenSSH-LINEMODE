@@ -1,3 +1,5 @@
+/* $Id$ */
+
 #ifndef _BSD_GETGROUPLIST_H
 #define _BSD_GETGROUPLIST_H
 

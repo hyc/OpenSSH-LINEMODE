@@ -13,7 +13,9 @@
  * binary mode on Windows systems.
  */
 
-#include "config.h"
+#include "includes.h"
+
+RCSID("$Id$");
 
 #ifdef HAVE_CYGWIN
 

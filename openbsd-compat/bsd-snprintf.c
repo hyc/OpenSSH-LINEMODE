@@ -44,7 +44,9 @@
  *    right.
  **************************************************************/
 
-#include "config.h"
+#include "includes.h"
+
+RCSID("$Id$");
 
 #if !defined(HAVE_SNPRINTF) || !defined(HAVE_VSNPRINTF)
 

@@ -26,6 +26,8 @@
 #include "xmalloc.h"
 #include "ssh.h"
 
+RCSID("$Id$");
+
 char *get_progname(char *argv0)
 {
 #ifdef HAVE___PROGNAME

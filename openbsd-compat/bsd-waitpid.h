@@ -21,6 +21,8 @@
  *
  */
 
+/* $Id$ */
+
 #ifndef _BSD_WAITPID_H
 #define _BSD_WAITPID_H
 

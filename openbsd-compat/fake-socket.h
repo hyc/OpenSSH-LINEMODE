@@ -1,3 +1,5 @@
+/* $Id$ */
+
 #ifndef _FAKE_SOCKET_H
 #define _FAKE_SOCKET_H
 

@@ -1,3 +1,5 @@
+/* $Id$ */
+
 #include "includes.h"
 #ifdef USE_PAM
 

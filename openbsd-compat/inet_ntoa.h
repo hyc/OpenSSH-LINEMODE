@@ -1,3 +1,5 @@
+/* $Id$ */
+
 #ifndef _BSD_INET_NTOA_H
 #define _BSD_INET_NTOA_H
 

@@ -1,3 +1,5 @@
+# $Id$
+
 sysconfdir=@sysconfdir@
 piddir=@piddir@
 srcdir=@srcdir@

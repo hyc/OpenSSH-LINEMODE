@@ -1,3 +1,5 @@
+/* $Id$ */
+
 #ifndef _BSD_STRLCPY_H
 #define _BSD_STRLCPY_H
 

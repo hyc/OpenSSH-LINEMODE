@@ -5,6 +5,8 @@
  * See getaddrinfo.c and getnameinfo.c.
  */
 
+/* $Id$ */
+
 /* for old netdb.h */
 #ifndef EAI_NODATA
 #define EAI_NODATA	1

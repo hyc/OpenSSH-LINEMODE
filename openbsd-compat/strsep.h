@@ -1,3 +1,5 @@
+/* $Id$ */
+
 #ifndef _BSD_STRSEP_H
 #define _BSD_STRSEP_H
 

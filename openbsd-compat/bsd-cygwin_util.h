@@ -13,6 +13,8 @@
  * binary mode on Windows systems.
  */
 
+/* $Id$ */
+
 #include "config.h"
 
 #ifdef HAVE_CYGWIN

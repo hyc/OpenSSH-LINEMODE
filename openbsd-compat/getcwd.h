@@ -1,3 +1,5 @@
+/* $Id$ */
+
 #ifndef _BSD_GETCWD_H 
 #define _BSD_GETCWD_H
 #include "config.h"

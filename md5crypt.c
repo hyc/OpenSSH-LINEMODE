@@ -15,12 +15,12 @@
  * Adapted from shadow-19990607 by Tudor Bosman, tudorb@jm.nu
  */
 
-#include "config.h"
+#include "includes.h"
+
+RCSID("$Id$");
 
 #if defined(HAVE_MD5_PASSWORDS) && !defined(HAVE_MD5_CRYPT)
 
-#include <unistd.h>
-#include <string.h>
 #include <openssl/md5.h>
 
 static unsigned char itoa64[] =		/* 0 ... 63 => ascii - 64 */

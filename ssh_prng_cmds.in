@@ -4,6 +4,8 @@
 
 # The "rate" represents the number of bits of usuable entropy per 
 # byte of command output. Be conservative.
+#
+# $Id$
 
 "ls -alni /var/log"			@PROG_LS@	0.02
 "ls -alni /var/adm"			@PROG_LS@	0.02

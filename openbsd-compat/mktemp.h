@@ -1,3 +1,5 @@
+/* $Id$ */
+
 #ifndef _BSD_MKTEMP_H
 #define _BSD_MKTEMP_H
 
