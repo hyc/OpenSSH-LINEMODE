@@ -244,7 +244,7 @@ main() { if (NSVersionOfRunTimeLibrary("System") >= (60 << 16))
 	check_for_openpty_ctty_bug=1
 	AC_DEFINE(DONT_TRY_OTHER_AF)
 	AC_DEFINE(PAM_TTY_KLUDGE)
-	AC_DEFINE(LOCKED_PASSWD_PREFIX, "!!")
+	AC_DEFINE(LOCKED_PASSWD_PREFIX, "!")
 	AC_DEFINE(SPT_TYPE,SPT_REUSEARGV)
 	inet6_default_4in6=yes
 	case `uname -r` in

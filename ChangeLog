@@ -1,3 +1,7 @@
+20040330
+ - (dtucker) [configure.ac] Bug #811: Use "!" for LOCKED_PASSWD_PREFIX on
+   Linuxes, since that's what many use.  ok djm@
+
 20040327
  - (dtucker) [session.c] Bug #817: Clear loginmsg after fork to prevent
    duplicate login messages for mutli-session logins.  ok djm@
