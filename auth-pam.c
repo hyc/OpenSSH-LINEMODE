@@ -72,6 +72,10 @@ int do_pam_authenticate(int flags)
 	return retval;
 }
 
+/* Remember what has been initialised */
+static int session_opened = 0;
+static int creds_set = 0;
+
 /*
  * PAM conversation function.
  * There are two states this can run in.
@@ -170,17 +174,21 @@ void pam_cleanup_proc(void *context)
 {
 	int pam_retval;
 
-	if (pamh) {
+	if (pamh && session_opened) {
 		pam_retval = pam_close_session(pamh, 0);
 		if (pam_retval != PAM_SUCCESS)
 			log("Cannot close PAM session[%d]: %.200s",
 			    pam_retval, PAM_STRERROR(pamh, pam_retval));
+	}
 
+	if (pamh && creds_set) {
 		pam_retval = pam_setcred(pamh, PAM_DELETE_CRED);
 		if (pam_retval != PAM_SUCCESS)
 			debug("Cannot delete credentials[%d]: %.200s", 
 			    pam_retval, PAM_STRERROR(pamh, pam_retval));
+	}
 
+	if (pamh) {
 		pam_retval = pam_end(pamh, pam_retval);
 		if (pam_retval != PAM_SUCCESS)
 			log("Cannot release PAM authentication[%d]: %.200s",
@@ -272,6 +280,7 @@ void do_pam_session(char *username, const char *ttyname)
 	if (pam_retval != PAM_SUCCESS)
 		fatal("PAM session setup failed[%d]: %.200s",
 		    pam_retval, PAM_STRERROR(pamh, pam_retval));
+	session_opened = 1;
 }
 
 /* Set PAM credentials */
@@ -288,7 +297,8 @@ void do_pam_setcred(void)
 		else
 			debug("PAM setcred failed[%d]: %.200s",
 			    pam_retval, PAM_STRERROR(pamh, pam_retval));
-	}
+	} else
+		creds_set = 1;
 }
 
 /* accessor function for file scope static variable */
