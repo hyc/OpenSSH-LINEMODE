@@ -30,7 +30,7 @@
  * THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-/** 
+/**
  ** loginrec.h:  platform-independent login recording and lastlog retrieval
  **/
 
@@ -86,7 +86,7 @@ struct logininfo {
 	 * use time_t's value as tv_sec and set tv_usec to 0
 	 */
 	unsigned int tv_sec;
-	unsigned int tv_usec;                   
+	unsigned int tv_usec;
 	union login_netinfo hostaddr;       /* caller's host address(es) */
 }; /* struct logininfo */
 
@@ -102,7 +102,7 @@ struct logininfo *login_alloc_entry(int pid, const char *username,
 /* free a structure */
 void login_free_entry(struct logininfo *li);
 /* fill out a pre-allocated structure with useful information */
-int login_init_entry(struct logininfo *li, int pid, const char *username, 
+int login_init_entry(struct logininfo *li, int pid, const char *username,
 		     const char *hostname, const char *line);
 /* place the current time in a logininfo struct */
 void login_set_current_time(struct logininfo *li);
