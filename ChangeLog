@@ -1,3 +1,7 @@
+20011027
+ - (tim) [configure.ac] Fixes for ReliantUNIX (don't use libucb)
+   Patch by Robert Dahlem <Robert.Dahlem@siemens.com>
+
 20011026
  - (bal) Set the correct current time in login_utmp_only().  Patch by
    Wayne Davison <wayned@users.sourceforge.net>
