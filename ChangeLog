@@ -1,4 +1,5 @@
 20020903
+ - (djm) Fix Redhat RPM build dependancy test
  - (djm) OpenBSD CVS Sync
    - markus@cvs.openbsd.org 2002/08/12 10:46:35
      [ssh-agent.c]
