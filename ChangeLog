@@ -48,6 +48,9 @@
      forwarding endpoints).  the intention is to preserve the on-the-wire
      appearance to applications at either end; the applications can then
      enable TCP_NODELAY according to their requirements. ok markus@
+   - markus@cvs.openbsd.org 2002/02/25 16:33:27
+     [ssh-keygen.c sshconnect2.c uuencode.c uuencode.h]
+     more u_* fixes
 
 20020225
  - (bal) Last AIX patch.  Moved aix_usrinfo() outside of do_setuserconext()
