@@ -71,6 +71,7 @@ case "$host" in
 	AC_DEFINE(IPV4_DEFAULT)
 	AC_DEFINE(IP_TOS_IS_BROKEN)
 	AC_DEFINE(BROKEN_VHANGUP)
+	AC_DEFINE(NO_X11_UNIX_SOCKETS)
 	no_libsocket=1
 	no_libnsl=1
 	;;
