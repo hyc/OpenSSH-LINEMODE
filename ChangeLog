@@ -8,6 +8,8 @@
      [readconf.c ssh.1]
      turn off useprivilegedports by default. only rhost-auth needs
      this. older sshd's may need this, too.
+ - (stevesk) Reliant Unix (SNI) needs HAVE_BOGUS_SYS_QUEUE_H;
+   Dirk Markwardt <D.Markwardt@tu-bs.de>
 
 20010307
  - (bal) OpenBSD CVS Sync
