@@ -8,6 +8,9 @@
    - markus@cvs.openbsd.org 2001/07/18 21:10:43
      [sshpty.c]
      pr #1946, allow sshd if /dev is readonly
+   - stevesk@cvs.openbsd.org 2001/07/18 21:40:40
+     [ssh-agent.c]
+     chdir("/") from bbraun@synack.net; ok markus@
 
 20010719
  - (tim) [configure.in] put inet_aton back in AC_CHECK_FUNCS.
