@@ -1,3 +1,7 @@
+20040218
+ - (dtucker) [configure.ac] Handle case where krb5-config --libs returns a
+   path with a "-" in it.  From Sergio.Gelato at astro.su.se.
+
 20040217
  - (djm) Simplify the license on code I have written. No code changes.
  - (djm) OpenBSD CVS Sync
