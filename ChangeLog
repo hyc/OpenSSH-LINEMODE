@@ -8,6 +8,9 @@
      [monitor_wrap.c monitor_wrap.h]
      kerberos support for privsep.  confirmed to work by lha@stacken.kth.se
      patch from markus
+   - markus@cvs.openbsd.org 2002/09/09 14:54:15
+     [channels.c kex.h key.c monitor.c monitor_wrap.c radix.c uuencode.c]
+     signed vs unsigned from -pedantic; ok henning@
 
 20020911
  - (djm) Sync openbsd-compat with OpenBSD -current
