@@ -228,6 +228,8 @@
      typo in error message; from djast@cs.toronto.edu
  - (djm) Make auth2-pam.c compile again after dispatch.h and packet.h 
    changes
+ - (djm) Recent Glibc includes an incompatible sys/queue.h. Treat it as 
+   bogus in configure
 
 20020121
  - (djm) Rework ssh-rand-helper:
