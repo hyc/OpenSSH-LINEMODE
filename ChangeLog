@@ -6,6 +6,10 @@
    - dtucker@cvs.openbsd.org 2004/06/22 22:42:02
      [regress/envpass.sh]
      Add quoting for test -z; ok markus@
+   - dtucker@cvs.openbsd.org 2004/06/22 22:45:52
+     [regress/test-exec.sh]
+     Add TEST_SSH_SSHD_CONFOPTS and TEST_SSH_SSH_CONFOPTS to allow adding
+     arbitary options to sshd_config and ssh_config during tests.  ok markus@
 
 20040622
  - (bal) [auth-passwd.c auth1.c] Clean up unused variables.
