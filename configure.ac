@@ -612,6 +612,8 @@ AC_CHECK_FUNCS(arc4random b64_ntop bcopy bindresvport_sa \
 	socketpair strerror strlcat strlcpy strmode strnvis sysconf \
 	truncate utimes vhangup vsnprintf waitpid __b64_ntop _getpty)
 
+AC_SEARCH_LIBS(nanosleep, rt posix4, AC_DEFINE(HAVE_NANOSLEEP))
+
 dnl Make sure strsep prototype is defined before defining HAVE_STRSEP
 AC_CHECK_DECL(strsep, [AC_CHECK_FUNCS(strsep)])
 

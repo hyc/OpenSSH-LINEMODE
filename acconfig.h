@@ -371,6 +371,9 @@
 #undef SETPROCTITLE_STRATEGY
 #undef SETPROCTITLE_PS_PADDING
 
+/* Some systems put this outside of libc */
+#undef HAVE_NANOSLEEP
+
 @BOTTOM@
 
 /* ******************* Shouldn't need to edit below this line ************** */
