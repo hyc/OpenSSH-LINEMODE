@@ -46,6 +46,15 @@
 #include <termios.h> /* Struct winsize */
 #include <fcntl.h> /* For O_NONBLOCK */
 
+/* *-*-nto-qnx needs these headers for strcasecmp and LASTLOG_FILE respectively */
+#ifdef HAVE_STRINGS_H
+# include <strings.h>
+#endif
+#ifdef HAVE_LOGIN_H
+# include <login.h>
+#endif
+
+
 /* Constants */
 
 #ifndef SHUT_RDWR
@@ -125,6 +134,11 @@ enum
 # define S_IRWXG			0000070	/* read, write, execute */
 # define S_IRWXO			0000007	/* read, write, execute */
 #endif /* S_IXUSR */
+
+/* *-*-nto-qnx doesn't define this constant in the system headers */
+#ifdef MISSING_NFDBITS
+# define	NFDBITS (8 * sizeof(unsigned long))
+#endif
 
 /* Types */
 
@@ -280,6 +294,11 @@ struct winsize {
 };
 #endif
 
+/* *-*-nto-qnx does not define this type in the system headers */
+#ifdef MISSING_FD_MASK
+ typedef unsigned long int	fd_mask;
+#endif
+
 /* Paths */
 
 #ifndef _PATH_BSHELL
@@ -385,6 +404,11 @@ struct winsize {
 #define SUN_LEN(su) \
 	(sizeof(*(su)) - sizeof((su)->sun_path) + strlen((su)->sun_path))
 #endif /* SUN_LEN */
+
+/* *-*-nto-qnx doesn't define this macro in the system headers */
+#ifdef MISSING_HOWMANY
+# define howmany(x,y)	(((x)+((y)-1))/(y))
+#endif
 
 /* Function replacement / compatibility hacks */
 

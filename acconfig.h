@@ -323,6 +323,15 @@
 /* Define if your getopt(3) defines and uses optreset */
 #undef HAVE_GETOPT_OPTRESET
 
+/* Define on *nto-qnx systems */
+#undef MISSING_NFDBITS
+
+/* Define on *nto-qnx systems */
+#undef MISSING_HOWMANY
+
+/* Define on *nto-qnx systems */
+#undef MISSING_FD_MASK
+
 @BOTTOM@
 
 /* ******************* Shouldn't need to edit below this line ************** */
