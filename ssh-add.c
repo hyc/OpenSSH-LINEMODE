@@ -112,9 +112,9 @@ add_file(AuthenticationConnection *ac, const char *filename)
                            filename, saved_comment);
               /* skip the prompt if it won't fit */
               if (tmp < 0 || tmp >= BUFSIZE)
-                tmp=execlp("/usr/lib/ssh/ssh-askpass", "ssh-askpass", 0);
+                tmp=execlp(ASKPASS_PROGRAM, "ssh-askpass", 0);
               else
-                tmp=execlp("/usr/lib/ssh/ssh-askpass", "ssh-askpass", buf, 0);
+                tmp=execlp(ASKPASS_PROGRAM, "ssh-askpass", buf, 0);
               if (tmp==-1)
                 {
                   fprintf(stderr, "Executing ssh-askpass failed: %s\n",

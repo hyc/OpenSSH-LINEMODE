@@ -93,6 +93,10 @@ only by root, whereas ssh_config should be world-readable. */
 #define LOGIN_PROGRAM	"/usr/bin/login"
 #endif /* LOGIN_PROGRAM */
 
+#ifndef ASKPASS_PROGRAM
+#define ASKPASS_PROGRAM	"/usr/lib/ssh/ssh-askpass"
+#endif /* ASKPASS_PROGRAM */
+
 /* The process id of the daemon listening for connections is saved
    here to make it easier to kill the correct daemon when necessary. */
 #define SSH_DAEMON_PID_FILE	PIDDIR "/sshd.pid"
