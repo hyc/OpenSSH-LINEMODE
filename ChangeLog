@@ -35,6 +35,9 @@
    - djm@cvs.openbsd.org 2004/10/08 02:01:50
      [reexec.sh]
      shrink and tidy; ok dtucker@
+   - djm@cvs.openbsd.org 2004/10/29 23:59:22
+     [Makefile added brokenkeys.sh]
+     regression test for handling of corrupt keys in authorized_keys file
 
 20041203
  - (dtucker) OpenBSD CVS Sync
