@@ -9,6 +9,9 @@
      [auth.c]
      Log source of connections denied by AllowUsers, DenyUsers, AllowGroups and
      DenyGroups.  bz #909, ok djm@
+   - djm@cvs.openbsd.org 2005/01/23 10:18:12
+     [cipher.c]
+     config option "Ciphers" should be case-sensitive; ok dtucker@
 
 20050120
  - (dtucker) OpenBSD CVS Sync
