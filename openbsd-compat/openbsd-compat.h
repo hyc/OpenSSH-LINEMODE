@@ -16,7 +16,7 @@
 #include "mktemp.h"
 #include "daemon.h"
 #include "base64.h"
-#include "sigaction.h"
+#include "sigact.h"
 #include "inet_aton.h"
 #include "inet_ntoa.h"
 #include "strsep.h"
