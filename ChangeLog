@@ -223,6 +223,9 @@
      [channels.c nchan.c]
      cleanup channels faster if the are empty and we are in drain-state; 
      ok deraadt@
+   - stevesk@cvs.openbsd.org 2002/01/22 02:52:41
+     [servconf.c]
+     typo in error message; from djast@cs.toronto.edu
 
 20020121
  - (djm) Rework ssh-rand-helper:
