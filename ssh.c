@@ -435,7 +435,7 @@ main(int ac, char **av)
 	buffer_init(&command);
 
 	OpenSSL_add_all_algorithms();
-	
+
 	/*
 	 * Save the command to execute on the remote host in a buffer. There
 	 * is no limit on the length of the command, except by the maximum
