@@ -1,6 +1,9 @@
 20050226
  - (dtucker) [openbsd-compat/bsd-openpty.c openbsd-compat/inet_ntop.c]
    Remove two obsolete Cygwin #ifdefs.  Patch from vinschen at redhat.com.
+ - (dtucker) [acconfig.h configure.ac openbsd-compat/bsd-misc.{c,h}]
+   Remove SETGROUPS_NOOP, was only used by Cygwin, which doesn't need it any
+   more.  Patch from vinschen at redhat.com.
 
 20050224
  - (djm) [configure.ac] in_addr_t test needs sys/types.h too
