@@ -1,6 +1,7 @@
 20020406
  - (djm) Typo in Suse SPEC file. Fix from Carsten Grohmann 
    <carsten.grohmann@dr-baldeweg.de>
+ - (bal) Added MAP_FAILED to allow AIX and Trusted HP to compile.
 
 20020405
  - (bal) Patch for OpenSC SmartCard library; ok markus@; patch by
