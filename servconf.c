@@ -143,7 +143,7 @@ fill_default_server_options(ServerOptions *options)
 	if (options->use_login == -1)
 		options->use_login = 0;
 	if (options->protocol == SSH_PROTO_UNKNOWN)
-		options->protocol = SSH_PROTO_1;
+		options->protocol = SSH_PROTO_1|SSH_PROTO_2;
 }
 
 #define WHITESPACE " \t\r\n"
