@@ -10,6 +10,9 @@
    - markus@cvs.openbsd.org 2002/02/11 16:17:55
      [sshd.c]
      do not complain about port > 1024 if rhosts-auth is disabled
+   - markus@cvs.openbsd.org 2002/02/11 16:19:39
+     [sshd.c]
+     include md5.h not hmac.h
 
 20020210
  - (djm) OpenBSD CVS Sync
