@@ -40,7 +40,9 @@ int datafellows = 0;
 void 
 enable_compat20(void)
 {
-	fatal("protocol 2.0 not implemented");
+	verbose("Enabling compatibility mode for protocol 2.0");
+	compat20 = 1;
+	packet_set_ssh2_format();
 }
 void 
 enable_compat13(void)

@@ -642,6 +642,7 @@ channel_handle_efd(Channel *c, fd_set * readset, fd_set * writeset)
 	char buf[16*1024];
 	int len;
 
+/** XXX handle drain efd, too */
 	if (c->efd != -1) {
 		if (c->extended_usage == CHAN_EXTENDED_WRITE &&
 		    FD_ISSET(c->efd, writeset) &&
@@ -659,7 +660,12 @@ channel_handle_efd(Channel *c, fd_set * readset, fd_set * writeset)
 			len = read(c->efd, buf, sizeof(buf));
 			debug("channel %d: read %d from efd %d",
 			     c->self, len, c->efd);
-			if (len > 0)
+			if (len == 0) {
+				debug("channel %d: closing efd %d",
+				    c->self, c->efd);
+				close(c->efd);
+				c->efd = -1;
+			} else if (len > 0)
 				buffer_append(&c->extended, buf, len);
 		}
 	}
