@@ -27,6 +27,9 @@
    - markus@cvs.openbsd.org 2002/02/13 00:28:13
      [sftp-server.c]
      handle SSH2_FILEXFER_ATTR_SIZE in SSH2_FXP_(F)SETSTAT; ok djm@
+   - markus@cvs.openbsd.org 2002/02/13 00:39:15
+     [readpass.c]
+     readpass.c is not longer from UCB, since we now use readpassphrase(3)
 
 20020210
  - (djm) OpenBSD CVS Sync
