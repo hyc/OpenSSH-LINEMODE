@@ -1,3 +1,7 @@
+20030402
+ - (bal) if IP_TOS is not found or broken don't try to compile in
+   packet_set_tos() function call.  bug #527
+
 20030401
  - (djm) OpenBSD CVS Sync
    - jmc@cvs.openbsd.org 2003/03/28 10:11:43
