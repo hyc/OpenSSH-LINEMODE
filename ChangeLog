@@ -1,3 +1,7 @@
+20040719
+ - (djm) [openbsd-compat/bsd-arc4random.c] Discard early keystream, like OpenBSD
+   ok dtucker@
+
 20040717
  - (dtucker) [logintest.c scp.c sftp-server.c sftp.c ssh-add.c ssh-agent.c
    ssh-keygen.c ssh-keyscan.c ssh-keysign.c ssh-rand-helper.c ssh.c sshd.c
