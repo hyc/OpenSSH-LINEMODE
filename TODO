@@ -30,8 +30,6 @@ Programming:
 
 - More platforms for for setproctitle() emulation (testing needed)
 
-- Handle changing passwords for the non-PAM expired password case
-
 - Improve PAM support (a pam_lastlog module will cause sshd to exit)
   and maybe support alternate forms of authentications like OPIE via
   pam?
