@@ -4,6 +4,8 @@
    implicit rpm-3.0.5 dependancy explicit. Patch and suggestions from 
    Pekka Savola <pekkas@netcore.fi>
  - (djm) Clean up PCRE text in INSTALL
+ - (djm) Fix OSF SIA auth NULL pointer deref. Report from Mike Battersby 
+   <mib@unimelb.edu.au>
 
 20010211
  - (bal) OpenBSD Sync
