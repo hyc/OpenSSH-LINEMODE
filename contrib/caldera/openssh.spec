@@ -316,7 +316,14 @@ fi
 %defattr(-,root,root)
 %dir %{_sysconfdir}
 %config %{_sysconfdir}/ssh_config
-%{_bindir}/*
+%{_bindir}/scp
+%{_bindir}/sftp
+%{_bindir}/ssh
+%{_bindir}/slogin
+%{_bindir}/ssh-add
+%attr(2755,root,nobody) %{_bindir}/ssh-agent
+%{_bindir}/ssh-keygen
+%{_bindir}/ssh-keyscan
 %dir %{_libexecdir}
 %{_sbindir}/ssh-host-keygen
 %dir %{_defaultdocdir}/%{name}-%{version}
@@ -331,7 +338,7 @@ fi
  
 %Files server
 %defattr(-,root,root)
-%dir %attr(0700,root,root) %{_var}/empty/sshd
+%dir %{_var}/empty/sshd
 %config %{SVIdir}/sshd
 %config /etc/pam.d/sshd
 %config %{_sysconfdir}/moduli
