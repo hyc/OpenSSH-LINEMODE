@@ -2,6 +2,8 @@
  - (dtucker) [session.c openbsd-compat/bsd-cygwin_util.{c,h}] Bug #915: only
    copy required environment variables on Cygwin.  Patch from vinschen at
    redhat.com, ok djm@
+ - (dtucker) [regress/Makefile] Clean scp-ssh-wrapper.scp too.  Patch from
+   vinschen at redhat.com.
 
 20040829
  - (dtucker) [openbsd-compat/getrrsetbyname.c] Prevent getrrsetbyname from
