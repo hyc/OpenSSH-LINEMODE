@@ -123,8 +123,10 @@ pty_allocate(int *ptyfd, int *ttyfd, char *namebuf, int namebuflen)
 		error("ioctl I_PUSH ptem: %.100s", strerror(errno));
 	if (ioctl(*ttyfd, I_PUSH, "ldterm") < 0)
 		error("ioctl I_PUSH ldterm: %.100s", strerror(errno));
+#ifndef _HPUX_SOURCE
 	if (ioctl(*ttyfd, I_PUSH, "ttcompat") < 0)
 		error("ioctl I_PUSH ttcompat: %.100s", strerror(errno));
+#endif
 	return 1;
 #else /* HAVE_DEV_PTMX */
 #ifdef HAVE_DEV_PTS_AND_PTC
