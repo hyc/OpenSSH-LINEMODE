@@ -490,6 +490,12 @@ struct winsize {
 # define OPENSSL_free(x) Free(x)
 #endif
 
+#if defined(HAVE___func__)
+#  define __FUNCTION__ __func__
+#elif !defined(HAVE___FUNCTION__)
+#  define __FUNCTION__ ""
+#endif
+
 /*
  * Define this to use pipes instead of socketpairs for communicating with the
  * client program.  Socketpairs do not seem to work on all systems.

@@ -181,6 +181,12 @@
 /* Define if libc defines __progname */
 #undef HAVE___PROGNAME
 
+/* Define if compiler implements __FUNCTION__ */
+#undef HAVE___FUNCTION__
+
+/* Define if compiler implements __func__ */
+#undef HAVE___func__
+
 /* Define if you want Kerberos 4 support */
 #undef KRB4
 

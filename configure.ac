@@ -1603,6 +1603,32 @@ if test "x$ac_cv_libc_defines___progname" = "xyes" ; then
 	AC_DEFINE(HAVE___PROGNAME)
 fi
 
+AC_CACHE_CHECK([whether $CC implements __FUNCTION__], ac_cv_cc_implements___FUNCTION__, [
+	AC_TRY_LINK([
+#include <stdio.h>
+], 
+		[ printf("%s", __FUNCTION__); ], 
+		[ ac_cv_cc_implements___FUNCTION__="yes" ],
+		[ ac_cv_cc_implements___FUNCTION__="no" ]
+	)
+])
+if test "x$ac_cv_cc_implements___FUNCTION__" = "xyes" ; then
+	AC_DEFINE(HAVE___FUNCTION__)
+fi
+
+AC_CACHE_CHECK([whether $CC implements __func__], ac_cv_cc_implements___func__, [
+	AC_TRY_LINK([
+#include <stdio.h>
+], 
+		[ printf("%s", __func__); ], 
+		[ ac_cv_cc_implements___func__="yes" ],
+		[ ac_cv_cc_implements___func__="no" ]
+	)
+])
+if test "x$ac_cv_cc_implements___func__" = "xyes" ; then
+	AC_DEFINE(HAVE___func__)
+fi
+
 AC_CACHE_CHECK([whether getopt has optreset support],
 		ac_cv_have_getopt_optreset, [
 	AC_TRY_LINK(
