@@ -12,6 +12,9 @@
    - djm@cvs.openbsd.org 2003/05/26 12:54:40
      [sshconnect.c]
      fix format strings; ok markus@
+   - deraadt@cvs.openbsd.org 2003/05/29 16:58:45
+     [sshd.c uidswap.c]
+     seteuid and setegid; markus ok
 
 20030530
  - (dtucker) Add missing semicolon in md5crypt.c, patch from openssh at
