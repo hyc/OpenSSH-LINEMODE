@@ -1,3 +1,6 @@
+20010724
+ - (bal) 4711 not 04711 for ssh binary.
+
 20010722
  - (bal) Starting the Unicossmk merger.  File merged TODO, configure.in,
  	 myproposal.h, ssh_prng_cmds.in, and openbsd-compat/Makefile.in.
