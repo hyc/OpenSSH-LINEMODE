@@ -1,3 +1,7 @@
+20030225
+ - (djm) Fix some compile errors spotted by dtucker and his fabulous 
+   tinderbox
+
 20030224
  - (djm) Tweak gnome-ssh-askpass2:
    - Retry kb and mouse grab a couple of times, so passphrase dialog doesn't 
