@@ -147,8 +147,8 @@ static int do_pam_conversation(int num_msg, const struct pam_message **msg,
 				break;
 			case PAM_PROMPT_ECHO_OFF:
 				reply[count].resp = 
-				    read_passphrase(PAM_MSG_MEMBER(msg, count, 
-					msg), RP_ALLOW_STDIN));
+				    read_passphrase(PAM_MSG_MEMBER(msg, count,
+					msg), RP_ALLOW_STDIN);
 				reply[count].resp_retcode = PAM_SUCCESS;
 				break;
 			case PAM_ERROR_MSG:
