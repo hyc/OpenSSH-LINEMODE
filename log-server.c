@@ -97,13 +97,13 @@ log_init(char *av0, LogLevel level, SyslogFacility facility, int on_stderr)
 	log_on_stderr = on_stderr;
 }
 
-#define MSGBUFSIZE 1024
+#define SSH_MSGBUFSIZE 1024
 
 void
 do_log(LogLevel level, const char *fmt, va_list args)
 {
-	char msgbuf[MSGBUFSIZE];
-	char fmtbuf[MSGBUFSIZE];
+	char msgbuf[SSH_MSGBUFSIZE];
+	char fmtbuf[SSH_MSGBUFSIZE];
 	char *txt = NULL;
 	int pri = LOG_INFO;
 
