@@ -1,10 +1,12 @@
 20010305
  - (bal) CVS ID touch up on sshpty.[ch] and sshlogin.[ch]
- - OpenBSD CVS Sync
+ - (bal) OpenBSD CVS Sync
    - deraadt@cvs.openbsd.org 2001/02/17 23:48:48
      [sshd.8]
      it's the OpenSSH one
-
+   - deraadt@cvs.openbsd.org 2001/02/21 07:37:04
+     [ssh-keyscan.c]
+     inline -> __inline__, and some indent
 
 20010304
  - (bal) Remove make-ssh-known-hosts.1 since it's no longer valid.
