@@ -1,3 +1,6 @@
+20040812
+ - (dtucker) [sshd.c] Remove duplicate variable imported during sync.
+
 20040720
  - (djm) OpenBSD CVS Sync
    - markus@cvs.openbsd.org 2004/07/21 08:56:12
