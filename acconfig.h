@@ -39,7 +39,7 @@
 #undef BROKEN_SETREUID
 
 /* Define if your setregid() is broken */
-#undef BROKEN_SERREGID
+#undef BROKEN_SETREGID
 
 /* Define to a Set Process Title type if your system is */
 /* supported by bsd-setproctitle.c */
