@@ -88,12 +88,21 @@ struct sockaddr_in6 {
 
 #ifndef NI_NUMERICHOST
 # define NI_NUMERICHOST    (1)
+#endif
+#ifndef NI_NAMEREQD
 # define NI_NAMEREQD       (1<<1)
+#endif
+#ifndef NI_NUMERICSERV
 # define NI_NUMERICSERV    (1<<2)
 #endif
+
 #ifndef AI_PASSIVE
 # define AI_PASSIVE		(1)
+#endif
+#ifndef AI_CANONNAME
 # define AI_CANONNAME		(1<<1)
+#endif
+#ifndef AI_NUMERICHOST
 # define AI_NUMERICHOST		(1<<2)
 #endif
 
