@@ -383,8 +383,9 @@ main(int ac, char **av)
 
 	case 'o':
 	  dummy = 1;
-	  process_config_line(&options, host ? host : "", optarg,
-			      "command-line", 0, &dummy);
+	  if (process_config_line(&options, host ? host : "", optarg,
+			          "command-line", 0, &dummy) != 0)
+            exit(1);
 	  break;
 
 	default:

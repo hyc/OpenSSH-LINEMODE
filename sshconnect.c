@@ -730,8 +730,10 @@ int try_kerberos_authentication()
   r = sizeof(foreign);
   memset(&foreign, 0, sizeof(foreign));
    if (getpeername(packet_get_connection_in(),
-		   (struct sockaddr *)&foreign, &r) < 0)
+		   (struct sockaddr *)&foreign, &r) < 0) {
      debug("getpeername failed: %s", strerror(errno));
+     fatal_cleanup();
+   }
    
    /* Get server reply. */
    type = packet_read(&plen);

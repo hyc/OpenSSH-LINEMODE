@@ -92,8 +92,9 @@ void initialize_options(Options *options);
 void fill_default_options(Options *options);
 
 /* Processes a single option line as used in the configuration files. 
-   This only sets those values that have not already been set. */
-void process_config_line(Options *options, const char *host,
+   This only sets those values that have not already been set.
+   Returns 0 for legal options */
+int process_config_line(Options *options, const char *host,
 			 char *line, const char *filename, int linenum,
 			 int *activep);
 
