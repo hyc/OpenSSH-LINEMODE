@@ -1,3 +1,6 @@
+20030524
+ - (dtucker) Correct --osfsia in INSTALL.  Patch by skeleten at shillest.net
+
 20030523
  - (djm) Use VIS_SAFE on logged strings rather than default strnvis 
    encoding (which encodes many more characters)
