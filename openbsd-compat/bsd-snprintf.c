@@ -53,6 +53,11 @@
 
 RCSID("$Id$");
 
+#if defined(BROKEN_SNPRINTF)		/* For those with broken snprintf() */
+# undef HAVE_SNPRINTF
+# undef HAVE_VSNPRINTF
+#endif
+
 #if !defined(HAVE_SNPRINTF) || !defined(HAVE_VSNPRINTF)
 
 static void 

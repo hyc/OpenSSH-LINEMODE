@@ -1,3 +1,6 @@
+20010226
+ - (bal) Fixed bsd-snprinf.c so it now honors 'BROKEN_SNPRINTF' again.
+
 20010225
  - (djm) Use %{_libexecdir} rather than hardcoded path in RPM specfile
    Patch from Adrian Ho <lexfiend@usa.net>
