@@ -11,6 +11,9 @@
 #include <netinet/in_systm.h> /* For typedefs */
 #include <netinet/in.h> /* For IPv6 macros */
 #include <netinet/ip.h> /* For IPTOS macros */
+#ifdef HAVE_RPC_TYPES_H
+# include <rpc/types.h> /* For INADDR_LOOPBACK */
+#endif
 #ifdef HAVE_SYS_UN_H
 # include <sys/un.h> /* For sockaddr_un */
 #endif
