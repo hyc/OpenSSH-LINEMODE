@@ -9,6 +9,12 @@
    - stevesk@cvs.openbsd.org 2001/04/09 00:42:05
      [sftp.1]
      spelling
+   - markus@cvs.openbsd.org 2001/04/09 15:12:23
+     [ssh-add.c]
+     passphrase caching: ssh-add tries last passphrase, clears passphrase if
+     not successful and after last try.
+     based on discussions with espie@, jakob@, ... and code from jakob@ and
+     wolfgang@wsrcc.com
 
 20010409
  - (stevesk) use setresgid() for setegid() if needed
