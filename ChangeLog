@@ -1,3 +1,6 @@
+20030905
+ - (dtucker) [Makefile.in] Add distclean target for regress/, fix clean target.
+
 20030904
  - (dtucker) Portablize regression tests.  Parts contributed by Roumen
    Petrov, David M. Williams and Corinna Vinschen.

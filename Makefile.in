@@ -195,7 +195,7 @@ clean:
 	rm -f *.o *.a $(TARGETS) logintest config.cache config.log 
 	rm -f *.out core 
 	(cd openbsd-compat && $(MAKE) clean)
-	(cd $(srcdir)/regress && $(MAKE) $@)
+	(cd regress && $(MAKE) clean)
 
 distclean:
 	rm -f *.o *.a $(TARGETS) logintest config.cache config.log 
@@ -204,6 +204,7 @@ distclean:
 	rm -rf autom4te.cache
 	(cd openbsd-compat && $(MAKE) distclean)
 	(cd scard && $(MAKE) distclean)
+	(cd regress && $(MAKE) distclean)
 
 veryclean: distclean
 	rm -f configure config.h.in *.0
