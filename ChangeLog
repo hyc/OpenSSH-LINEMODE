@@ -4,6 +4,7 @@
      [scard.c]
      Fix segv when smartcard communication error occurs during key load. 
      ok markus@
+ - (djm) Update spec files for new x11-askpass
 
 20010927
  - (stevesk) session.c: declare do_pre_login() before use
