@@ -9,6 +9,10 @@
      [ssh-keygen.1]
      sshd(8) will never read the private keys, but ssh(1) does; 
      hugh@mimosa.com
+   - provos@cvs.openbsd.org 2001/06/25 17:54:47
+     [auth.c auth.h auth-rsa.c]
+     terminate secure_filename checking after checking homedir.  that way 
+     it
 
 20010629
  - (bal) Removed net_aton() since we don't use it any more
