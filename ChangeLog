@@ -3,6 +3,8 @@
    the superuser receives.
  - (djm) Bug #231: UsePrivilegeSeparation turns off Banner.
  - (djm) Add --with-privsep-path configure option
+ - (djm) Update RPM spec file: different superuser path, use
+   /var/empty/sshd for privsep
 
 20020511
  - (tim) [configure.ac] applied a rework of djm's OpenSSL search cleanup patch.
