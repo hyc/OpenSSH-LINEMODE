@@ -10,6 +10,9 @@
  - (dtucker) [auth-pam.c auth-pam.h session.c] Bug #14: Use do_pwchange to
    change expired PAM passwords for SSHv1 connections without privsep.
    pam_chauthtok is still used when privsep is disabled.  ok djm@
+ - (dtucker) [openbsd-compat/port-aix.c openbsd-compat/port-aix.h] Move
+   include from port-aix.h to port-aix.c and remove unnecessary function
+   definition.  Fixes build errors on AIX.
 
 20040207
  - (dtucker) OpenBSD CVS Sync
