@@ -654,7 +654,7 @@ sshpam_query(void *ctx, char **name, char **info,
 	size_t plen;
 	u_char type;
 	char *msg;
-	size_t len;
+	size_t len, mlen;
 
 	debug3("PAM: %s entering", __func__);
 	buffer_init(&buffer);
@@ -667,22 +667,27 @@ sshpam_query(void *ctx, char **name, char **info,
 	while (ssh_msg_recv(ctxt->pam_psock, &buffer) == 0) {
 		type = buffer_get_char(&buffer);
 		msg = buffer_get_string(&buffer, NULL);
+		mlen = strlen(msg);
 		switch (type) {
 		case PAM_PROMPT_ECHO_ON:
 		case PAM_PROMPT_ECHO_OFF:
 			*num = 1;
-			len = plen + strlen(msg) + 1;
+			len = plen + mlen + 1;
 			**prompts = xrealloc(**prompts, len);
-			plen += snprintf(**prompts + plen, len, "%s", msg);
+			strlcpy(**prompts + plen, msg, len - plen);
+			plen += mlen;
 			**echo_on = (type == PAM_PROMPT_ECHO_ON);
 			xfree(msg);
 			return (0);
 		case PAM_ERROR_MSG:
 		case PAM_TEXT_INFO:
 			/* accumulate messages */
-			len = plen + strlen(msg) + 2;
+			len = plen + mlen + 2;
 			**prompts = xrealloc(**prompts, len);
-			plen += snprintf(**prompts + plen, len, "%s\n", msg);
+			strlcpy(**prompts + plen, msg, len - plen);
+			plen += mlen;
+			strlcat(**prompts + plen, "\n", len - plen);
+			plen++;
 			xfree(msg);
 			break;
 		case PAM_SUCCESS:
