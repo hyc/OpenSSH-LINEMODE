@@ -13,6 +13,9 @@
    - stevesk@cvs.openbsd.org 2002/03/24 17:27:03
      [kexgex.c]
      typo; ok markus@
+   - stevesk@cvs.openbsd.org 2002/03/24 17:53:16
+     [monitor_fdpass.c]
+     minor cleanup and more error checking; ok markus@
 
 20020324
  - (stevesk) [session.c] disable LOGIN_NEEDS_TERM until we are sure
