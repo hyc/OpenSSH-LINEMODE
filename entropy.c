@@ -35,6 +35,7 @@
 #include "ssh.h"
 #include "xmalloc.h"
 #include "atomicio.h"
+#include "pathnames.h"
 #include "log.h"
 
 RCSID("$Id$");
@@ -560,7 +561,7 @@ prng_write_seedfile(void) {
 				
 	/* Try to ensure that the parent directory is there */
 	snprintf(filename, sizeof(filename), "%.512s/%s", pw->pw_dir, 
-		SSH_USER_DIR);
+		_PATH_SSH_USER_DIR);
 	mkdir(filename, 0700);
 
 	snprintf(filename, sizeof(filename), "%.512s/%s", pw->pw_dir, 
