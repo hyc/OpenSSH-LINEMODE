@@ -18,7 +18,6 @@
 #include "dirname.h"
 #include "base64.h"
 #include "sigact.h"
-#include "inet_aton.h"
 #include "inet_ntoa.h"
 #include "strsep.h"
 #include "vis.h"

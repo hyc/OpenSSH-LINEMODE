@@ -1,3 +1,6 @@
+20010629
+ - (bal) Removed net_aton() since we don't use it any more
+
 20010628
  - (djm) Sync openbsd-compat with -current libc
  - (djm) Fix from Lutz Jaenicke <Lutz.Jaenicke@aet.TU-Cottbus.DE> for my 
