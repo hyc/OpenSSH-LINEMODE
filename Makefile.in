@@ -123,9 +123,9 @@ logintest: logintest.o $(LIBCOMPAT) libssh.a loginrec.o
 
 $(MANPAGES)::
 	if test "$(MANTYPE)" = "cat"; then \
-		manpage=`echo $@ | sed 's/\.[1-9]$$/\.0/'`; \
+		manpage=$(srcdir)/`echo $@ | sed 's/\.[1-9]$$/\.0/'`; \
 	else \
-		manpage=$@; \
+		manpage=$(srcdir)/$@; \
 	fi; \
 	if test "$(MANTYPE)" = "man"; then \
 		$(FIXPATHSCMD) $${manpage} | $(PERL) $(srcdir)/mdoc2man.pl > $@.out; \
