@@ -4,6 +4,8 @@
      [cipher-ctr.c]
      Use EVP_CIPHER_CTX_key_length for key length.  ok markus@
      (This will fix builds with OpenSSL 0.9.5)
+ - (dtucker) [cipher.c] enable AES counter modes with OpenSSL 0.9.5.
+   ok djm@, markus@
 
 20040206
  - (dtucker) [acss.c acss.h] Fix $Id tags.
