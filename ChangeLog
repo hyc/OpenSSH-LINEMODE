@@ -15,6 +15,9 @@
    - stevesk@cvs.openbsd.org 2002/04/21 16:19:27
      [sshd.8 sshd_config]
      document default AFSTokenPassing no; ok deraadt@
+   - stevesk@cvs.openbsd.org 2002/04/21 16:25:06
+     [sshconnect1.c]
+     spelling in error message; ok markus@
 
 20020421
  - (tim) [entropy.c.] Portability fix for SCO Unix 3.2v4.x (SCO OSR 3.0).
