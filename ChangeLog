@@ -1,3 +1,7 @@
+20040408
+ - (dtucker) [loginrec.c] Use UT_LINESIZE if available, prevents truncating
+   pty name on Linux 2.6.x systems.  Patch from jpe at eisenmenger.org.
+
 20040407
  - (dtucker) [session.c] Flush stdout after displaying loginmsg.  From
    f_mohr at yahoo.de.
