@@ -34,6 +34,7 @@
      [sftp-client.c sftp-client.h sftp-glob.c sftp-glob.h sftp.h]
      [sftp-int.c sftp-int.h]
      API cleanup and backwards compat for filexfer v.0 servers; ok markus@
+ - (djm) Sync openbsd-compat with OpenBSD CVS too
 
 20020210
  - (djm) OpenBSD CVS Sync
