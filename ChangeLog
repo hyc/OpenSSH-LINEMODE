@@ -31,6 +31,9 @@
      [readconf.c readconf.h ssh.1 sshconnect.c]
      add NoHostAuthenticationForLocalhost; note that the hostkey is
      now check for localhost, too.
+   - djm@cvs.openbsd.org 2001/10/02 08:38:50
+     [ssh-add.c]
+     return non-zero exit code on error; ok markus@
 
 20011001
  - (stevesk) loginrec.c: fix type conversion problems exposed when using
