@@ -7,6 +7,9 @@
      [log.c]
      set fatal_cleanups to NULL in fatal_remove_all_cleanups(); 
      dtucker@zip.com.au
+   - markus@cvs.openbsd.org 2003/01/12 16:57:02
+     [progressmeter.c]
+     allow WARNINGS=yes; ok djm@
 
 20030113
  - (djm) Rework openbsd-compat/setproctitle.c a bit: move emulation type
