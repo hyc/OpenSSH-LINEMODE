@@ -158,8 +158,6 @@ rsh_connect(char *host, char *user, Buffer *command)
 
 /* Main program for the ssh client. */
 
-uid_t original_real_uid;
-
 int
 main(int ac, char **av)
 {

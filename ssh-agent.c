@@ -536,6 +536,15 @@ main(int ac, char **av)
 	exit(1);
   }
 
+  /* Create a new session and process group  */
+  if (setsid() < 0) {
+      perror("setsid failed");
+      exit(1);
+  }
+
+  /* Ignore if a client dies while we are sending a reply */
+  signal(SIGPIPE, SIG_IGN);
+
   sock = socket(AF_UNIX, SOCK_STREAM, 0);
   if (sock < 0)
     {

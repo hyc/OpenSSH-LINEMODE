@@ -1183,7 +1183,7 @@ progressmeter(int flag)
 		    " - stalled -");
 	} else {
 		remaining = (int)(totalbytes / (statbytes / elapsed) - elapsed);
-		i = elapsed / 3600;
+		i = remaining / 3600;
 		if (i)
 			snprintf(buf + strlen(buf), sizeof(buf) - strlen(buf),
 			    "%2d:", i);
