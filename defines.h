@@ -440,6 +440,26 @@ struct winsize {
 # define howmany(x,y)	(((x)+((y)-1))/(y))
 #endif
 
+#ifndef ALIGNBYTES
+#define ALIGNBYTES	(sizeof(int) - 1)
+#endif
+#ifndef ALIGN
+#define ALIGN(p)	(((u_int)(p) + ALIGNBYTES) &~ ALIGNBYTES)
+#endif
+#ifndef __CMSG_ALIGN
+#define	__CMSG_ALIGN(len)	ALIGN(len)
+#endif
+
+/* Length of the contents of a control message of length len */
+#ifndef CMSG_LEN
+#define	CMSG_LEN(len)	(__CMSG_ALIGN(sizeof(struct cmsghdr)) + (len))
+#endif
+
+/* Length of the space taken up by a padded control message of length len */
+#ifndef CMSG_SPACE
+#define	CMSG_SPACE(len)	(__CMSG_ALIGN(sizeof(struct cmsghdr)) + __CMSG_ALIGN(len))
+#endif
+
 /* Function replacement / compatibility hacks */
 
 /* In older versions of libpam, pam_strerror takes a single argument */

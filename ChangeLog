@@ -5,6 +5,8 @@
  - (stevesk) [monitor_fdpass.c] support for access rights style file
    descriptor passing
  - (stevesk) [auth2.c] merge cleanup/sync
+ - (stevesk) [defines.h] hp-ux 11 has ancillary data style fd passing, but
+   is missing CMSG_LEN() and CMSG_SPACE() macros.
 
 20020321
  - (bal) OpenBSD CVS Sync
