@@ -101,6 +101,7 @@
  - (bal) Synced ssh.1, ssh-add.1 and sshd.8 w/ OpenBSD
  - (bal) sftp-sever.c  '%8lld' to '%8llu' (OpenBSD Sync)
  - (bal) uuencode.c resync w/ OpenBSD tree, plus whitespace.
+ - (bal) A bit more whitespace cleanup
 
 20010210
  - (djm) Sync sftp and scp stuff from OpenBSD:
