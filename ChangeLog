@@ -1,3 +1,7 @@
+20030907
+ - (dtucker) [agent-ptrace.sh dynamic-forward.sh (all regress/)]
+   Put "which" inside quotes.
+
 20030906
  - (dtucker) [acconfig.h configure.ac uidswap.c] Prefer setuid/setgid on AIX.
 
@@ -24,7 +28,7 @@
    - [regress/agent-ptrace.sh regress/agent-timeout.sh]
      "grep -q" -> "grep >/dev/null"
    - [regress/agent.sh regress/proto-version.sh regress/ssh-com.sh
-     regress/test-exec.sh] Handle different was of echoing without newlines.
+     regress/test-exec.sh] Handle different ways of echoing without newlines.
    - [regress/dynamic-forward.sh] Some "which" programs output on stderr.
    - [regress/sftp-cmds.sh] Use portable "test" option.
    - [regress/test-exec.sh] Use sudo, search for "whoami" equivalent, always
