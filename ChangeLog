@@ -65,6 +65,9 @@
    - markus@cvs.openbsd.org 2002/12/10 19:47:14
      [packet.c]
      static
+   - markus@cvs.openbsd.org 2002/12/13 10:03:15
+     [channels.c misc.c sshconnect2.c]
+     cleanup debug messages, more useful information for the client user.
 
 20021205
  - (djm) PERL-free fixpaths from stuge-openssh-unix-dev@cdy.org
