@@ -23,9 +23,6 @@ prepare the privsep preauth environment:
 	# groupadd sshd
 	# useradd -g sshd -c 'sshd privsep' -d /var/empty sshd
 
-If you are on UnixWare 7 or OpenUNIX 8 do this additional step.
-	# ln /usr/lib/.ns.so /usr/lib/ns.so.1
-
 /var/empty should not contain any files.
 
 configure supports the following options to change the default
@@ -34,8 +31,8 @@ privsep user and chroot directory:
   --with-privsep-path=xxx Path for privilege separation chroot
   --with-privsep-user=user Specify non-privileged user for privilege separation
 
-Privsep requires operating system support for file descriptor passing
-and mmap(MAP_ANON).
+Privsep requires operating system support for file descriptor passing.
+Compression will be disabled on systems without a working mmap MAP_ANON.
 
 PAM-enabled OpenSSH is known to function with privsep on Linux.  
 It does not function on HP-UX with a trusted system
