@@ -29,6 +29,10 @@
    - markus@cvs.openbsd.org 2002/04/01 22:07:17
      [sftp-client.c]
      fallback to stat if server does not support lstat
+   - markus@cvs.openbsd.org 2002/04/02 11:49:39
+     [ssh-agent.c]
+     check $SHELL for -k and -d, too;
+     http://bugzilla.mindrot.org/show_bug.cgi?id=199
 
 20020401
  - (stevesk) [monitor.c] PAM should work again; will *not* work with
