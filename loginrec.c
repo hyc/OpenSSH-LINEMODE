@@ -1271,8 +1271,8 @@ syslogin_perform_logout(struct logininfo *li)
 #  ifdef HAVE_LOGWTMP
 	} else {
 		logwtmp(line, "", "");
-	}
 #  endif
+	}
 	/* FIXME: (ATL - if the need arises) What to do if we have
 	 * login, but no logout?  what if logout but no logwtmp? All
 	 * routines are in libutil so they should all be there,
