@@ -22,6 +22,6 @@ distprep: Ssh.bin
 distclean: clean
 	rm -f Makefile *~
 
-install: Ssh.bin
+install: $(srcdir)/Ssh.bin
 	$(top_srcdir)/mkinstalldirs $(DESTDIR)$(datadir)
 	$(INSTALL) -m 0644 $(srcdir)/Ssh.bin $(DESTDIR)$(datadir)/Ssh.bin
