@@ -18,7 +18,8 @@
  - (djm) Tidy and trim TODO
  - (djm) Sync openbsd-compat/ with OpenBSD CVS head
  - (djm) Big KNF on openbsd-compat/
- - (djm) KNF on md5crypt.c
+ - (djm) KNF on md5crypt.[ch]
+ - (djm) KNF on auth-sia.[ch]
 
 20030517
  - (bal) strcat -> strlcat on openbsd-compat/realpath.c (rev 1.8 OpenBSD)
