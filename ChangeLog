@@ -34,6 +34,9 @@
    - djm@cvs.openbsd.org 2001/10/02 08:38:50
      [ssh-add.c]
      return non-zero exit code on error; ok markus@
+   - stevesk@cvs.openbsd.org 2001/10/02 22:56:09
+     [sshd.c]
+     #include "channels.h" for channel_set_af()
 
 20011001
  - (stevesk) loginrec.c: fix type conversion problems exposed when using
