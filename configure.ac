@@ -127,9 +127,6 @@ case "$host" in
 mips-sony-bsd|mips-sony-newsos4)
 	AC_DEFINE(HAVE_NEWS4)
 	SONY=1
-	AC_CHECK_LIB(iberty, xatexit, AC_DEFINE(HAVE_XATEXIT),
-		AC_MSG_ERROR([*** libiberty missing - please install first or check config.log ***])
-        )
 	;;
 *-*-netbsd*)
 	need_dash_r=1
@@ -532,12 +529,12 @@ AC_ARG_WITH(tcp-wrappers,
 )
 
 dnl    Checks for library functions.
-AC_CHECK_FUNCS(arc4random atexit b64_ntop bcopy bindresvport_sa \
+AC_CHECK_FUNCS(arc4random b64_ntop bcopy bindresvport_sa \
 	clock fchmod fchown freeaddrinfo futimes gai_strerror \
 	getaddrinfo getcwd getgrouplist getnameinfo getopt \
 	getrlimit getrusage getttyent glob inet_aton inet_ntoa \
 	inet_ntop innetgr login_getcapbool md5_crypt memmove \
-	mkdtemp on_exit openpty readpassphrase realpath \
+	mkdtemp openpty readpassphrase realpath \
 	rresvport_af setdtablesize setegid setenv seteuid \
 	setlogin setproctitle setresgid setreuid setrlimit \
 	setsid setvbuf sigaction sigvec snprintf strerror \

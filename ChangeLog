@@ -16,6 +16,7 @@
  - (bal) Revered out of runtime IRIX detection of joblimits.  Code is
    incomplete.
  - (bal) Quiet down configure.ac if /bin/test does not exist.
+ - (bal) We no longer use atexit()/xatexit()/on_exit()
 
 20020405
  - (bal) Patch for OpenSC SmartCard library; ok markus@; patch by

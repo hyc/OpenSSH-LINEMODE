@@ -283,9 +283,6 @@
 /* Use IPv4 for connection by default, IPv6 can still if explicity asked */
 #undef IPV4_DEFAULT
 
-/* If you have no atexit() but xatexit(), and want to use xatexit() */
-#undef HAVE_XATEXIT
-
 /* getaddrinfo is broken (if present) */
 #undef BROKEN_GETADDRINFO
 

@@ -493,14 +493,6 @@ struct winsize {
 # define memmove(s1, s2, n) bcopy((s2), (s1), (n))
 #endif /* !defined(HAVE_MEMMOVE) && defined(HAVE_BCOPY) */
 
-#if !defined(HAVE_ATEXIT) && defined(HAVE_ON_EXIT)
-# define atexit(a) on_exit(a, NULL)
-#else
-# if defined(HAVE_XATEXIT)
-#  define atexit(a) xatexit(a)
-# endif /* defined(HAVE_XATEXIT) */
-#endif /* !defined(HAVE_ATEXIT) && defined(HAVE_ON_EXIT) */
-
 #if defined(HAVE_VHANGUP) && !defined(HAVE_DEV_PTMX)
 #  define USE_VHANGUP
 #endif /* defined(HAVE_VHANGUP) && !defined(HAVE_DEV_PTMX) */
