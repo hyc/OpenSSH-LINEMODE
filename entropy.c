@@ -850,8 +850,8 @@ void init_rng(void)
 	 * Propagate the privileged uid to all of our uids.
 	 * Set the effective uid to the given (unprivileged) uid. 
 	 */
-	if (original_uid != original_euid && setuid(original_euid) == -1 || 
-	    seteuid(original_uid) == -1)
+	if (original_uid != original_euid && (setuid(original_euid) == -1 || 
+	    seteuid(original_uid) == -1))
 		fatal("Couldn't give up privileges");
 #endif /* SAVED_IDS_WORK_WITH_SETEUID */
 
@@ -866,8 +866,8 @@ void init_rng(void)
 	 * Propagate the real uid (usually more privileged) to effective uid
 	 * as well.
 	 */
-	if (original_uid != original_euid && seteuid(original_euid) == -1 || 
-	    setuid(original_uid) == -1)
+	if (original_uid != original_euid && (seteuid(original_euid) == -1 || 
+	    setuid(original_uid) == -1))
 		fatal("Couldn't restore privileges");
 #endif /* SAVED_IDS_WORK_WITH_SETEUID */
 
