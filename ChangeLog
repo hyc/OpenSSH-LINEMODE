@@ -119,6 +119,9 @@
    - markus@cvs.openbsd.org 2002/01/10 12:38:26
      [nchan.c]
      remove dead code (skip drain)
+   - markus@cvs.openbsd.org 2002/01/10 12:47:59
+     [nchan.c]
+     more unused code (with channels.c:1.156)
 
 
 20020121
