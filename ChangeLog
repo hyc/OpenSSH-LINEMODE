@@ -1,5 +1,7 @@
 20010303
  - Remove make-ssh-known-hosts.pl, ssh-keyscan is better.
+ - Document PAM ChallengeResponseAuthentication in sshd.8
+ - Disable and comment ChallengeResponseAuthentication in sshd_config
 
 20010301
  - (djm) Properly add -lcrypt if needed. 
