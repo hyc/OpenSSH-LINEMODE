@@ -221,7 +221,7 @@ install-files:
 		if [ -f $(DESTDIR)$(sysconfdir)/primes ]; then \
 			echo "moving $(DESTDIR)$(sysconfdir)/primes to $(DESTDIR)$(sysconfdir)/moduli"; \
 			mv "$(DESTDIR)$(sysconfdir)/primes" "$(DESTDIR)$(sysconfdir)/moduli"; \
-		else ; \
+		else \
 			$(INSTALL) -m 644 moduli.out $(DESTDIR)$(sysconfdir)/moduli; \
 		fi ; \
 	else \

@@ -1,5 +1,7 @@
 20010628
  - (djm) Sync openbsd-compat with -current libc
+ - (djm) Fix from Lutz Jaenicke <Lutz.Jaenicke@aet.TU-Cottbus.DE> for my 
+   broken makefile
 
 20010627
  - (djm) Reintroduce pam_session call for non-pty sessions.
