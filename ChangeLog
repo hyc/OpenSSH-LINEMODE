@@ -20,6 +20,7 @@
    - [regress/agent.sh regress/proto-version.sh regress/ssh-com.sh
      regress/test-exec.sh] Handle different was of echoing without newlines.
    - [regress/dynamic-forward.sh] Some "which" programs output on stderr.
+   - [regress/sftp-cmds.sh] Use portable "test" option.
 
 20030903
  - (djm) OpenBSD CVS Sync
