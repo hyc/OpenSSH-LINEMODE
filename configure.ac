@@ -123,7 +123,7 @@ case "$host" in
 		])
 	dnl Check for various auth function declarations in headers.
 	AC_CHECK_DECLS([authenticate, loginrestrictions, loginsuccess,
-	    passwdexpired], , , [#include <usersec.h>])
+	    passwdexpired, setauthdb], , , [#include <usersec.h>])
 	dnl Check if loginfailed is declared and takes 4 arguments (AIX >= 5.2)
 	AC_CHECK_DECLS(loginfailed,
 		 [AC_MSG_CHECKING(if loginfailed takes 4 arguments)
