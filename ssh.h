@@ -21,7 +21,9 @@
 #include <netinet/in.h> /* For struct sockaddr_in */
 #include <pwd.h> /* For struct pw */
 #include <stdarg.h> /* For va_list */
-
+#ifdef HAVE_SYS_SELECT_H
+# include <sys/select.h>
+#endif
 #include "rsa.h"
 #include "cipher.h"
 
