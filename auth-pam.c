@@ -249,7 +249,7 @@ void do_pam_session(char *username, const char *ttyname)
 }
 
 /* Set PAM credentials */ 
-void do_pam_setcred()
+void do_pam_setcred(void)
 {
 	int pam_retval;
  
@@ -273,7 +273,7 @@ int pam_password_change_required(void)
  * session is established and the user's pty is connected to
  * stdin/stout/stderr.
  */
-void do_pam_chauthtok()
+void do_pam_chauthtok(void)
 {
 	int pam_retval;
 
