@@ -1,5 +1,7 @@
 20020130
  - (djm) Delay PRNG seeding until we need it in ssh-keygen, from markus@
+ - (tim) [configure.ac] fix logic on when ssh-rand-helper is installed.
+   [sshd_config] put back in line that tells what PATH was compiled into sshd.
 
 20020125
  - (djm) Don't grab Xserver or pointer by default. x11-ssh-askpass doesn't 

@@ -884,8 +884,8 @@ if test ! -z "$OPENSSL_SEEDS_ITSELF" -a -z "$USE_RAND_HELPER" ; then
 	AC_DEFINE(OPENSSL_PRNG_ONLY)
 	RAND_MSG="OpenSSL internal ONLY"
 	INSTALL_SSH_RAND_HELPER=""
-elif test ! -z "$OPENSSL_SEEDS_ITSELF" -a ! -z "$USE_RAND_HELPER" ; then
-	# OpenSSL with fallback to rand helper
+elif test ! -z "$USE_RAND_HELPER" ; then
+	# install rand helper
 	RAND_MSG="ssh-rand-helper"
 	INSTALL_SSH_RAND_HELPER="yes"
 fi
