@@ -256,8 +256,8 @@
 /* Define this if you are using the Heimdal version of Kerberos V5 */
 #undef HEIMDAL
 
-/* Define this if you want to use Heimdal's AFS support */
-#undef AFS
+/* Define this if you want to use libkafs' AFS support */
+#undef USE_AFS
 
 /* Define if you want S/Key support */
 #undef SKEY

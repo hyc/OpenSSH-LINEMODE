@@ -8,6 +8,9 @@
    zlib >= 1.1.4.  Partly from jbasney at ncsa.uiuc.edu.  ok djm@
  - (dtucker) [contrib/cygwin/README] Document new ssh-host-config options.
    Patch from vinschen at redhat.com.
+ - (dtucker) [acconfig.h configure.ac includes.h servconf.c session.c]
+   Change AFS symbol to USE_AFS to prevent namespace collisions, do not
+   include kafs.h unless necessary.  From deengert at anl.gov.
 
 20040122
  - (dtucker) [configure.ac] Use krb5-config where available for Kerberos/

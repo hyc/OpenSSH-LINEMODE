@@ -2128,7 +2128,7 @@ AC_ARG_WITH(kerberos5,
 		fi
 	fi ]
 	AC_SEARCH_LIBS(k_hasafs, kafs,
-		[ AC_DEFINE(AFS)
+		[ AC_DEFINE(USE_AFS)
 		  K5LIBS="-lkafs $K5LIBS"
 		]
 	)
