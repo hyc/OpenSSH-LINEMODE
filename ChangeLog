@@ -1,5 +1,6 @@
 20050204
  - (dtucker) [monitor.c] Permit INVALID_USER audit events from slave too.
+ - (dtucker) [auth.c] Fix parens in audit log check.
 
 20050202
  - (dtucker) [configure.ac openbsd-compat/realpath.c] Sync up with realpath
