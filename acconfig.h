@@ -430,6 +430,9 @@
 /* Define if HEADER.ad exists in arpa/nameser.h */
 #undef HAVE_HEADER_AD
 
+/* Define if your resolver libs need this for getrrsetbyname */
+#undef BIND_8_COMPAT
+
 @BOTTOM@
 
 /* ******************* Shouldn't need to edit below this line ************** */
