@@ -1,5 +1,6 @@
 /*
- * Copyright (c) 1999 Markus Friedl.  All rights reserved.
+ * Copyright (c) 1999 Theo de Raadt
+ * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions
@@ -9,11 +10,6 @@
  * 2. Redistributions in binary form must reproduce the above copyright
  *    notice, this list of conditions and the following disclaimer in the
  *    documentation and/or other materials provided with the distribution.
- * 3. All advertising materials mentioning features or use of this software
- *    must display the following acknowledgement:
- *      This product includes software developed by Markus Friedl.
- * 4. The name of the author may not be used to endorse or promote products
- *    derived from this software without specific prior written permission.
  *
  * THIS SOFTWARE IS PROVIDED BY THE AUTHOR ``AS IS'' AND ANY EXPRESS OR
  * IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES
@@ -30,45 +26,32 @@
 #include "includes.h"
 RCSID("$Id$");
 
-#include "ssh.h"
 #include "xmalloc.h"
-#ifdef HAVE_OPENSSL
-#include <openssl/md5.h>
-#endif
-#ifdef HAVE_SSL
-#include <ssl/md5.h>
-#endif
-
-#define FPRINT "%02x:%02x:%02x:%02x:%02x:%02x:%02x:%02x:%02x:%02x:%02x:%02x:%02x:%02x:%02x:%02x"
+#include "ssh.h"
 
 /*
- * Generate key fingerprint in ascii format.
- * Based on ideas and code from Bjoern Groenvall <bg@sics.se>
+ * ensure all of data on socket comes through. f==read || f==write
  */
-char *
-fingerprint(BIGNUM *e, BIGNUM *n)
+int
+atomicio(f, fd, s, n)
+	int (*f) ();
+	int fd;
+	void *s;
+	size_t n;
 {
-	static char retval[80];
-	MD5_CTX md;
-	unsigned char d[16];
-	char *buf;
-	int nlen, elen;
+	int res, pos = 0;
 
-	nlen = BN_num_bytes(n);
-	elen = BN_num_bytes(e);
-
-	buf = xmalloc(nlen + elen);
-
-	BN_bn2bin(n, buf);
-	BN_bn2bin(e, buf + nlen);
-
-	MD5_Init(&md);
-	MD5_Update(&md, buf, nlen + elen);
-	MD5_Final(d, &md);
-	snprintf(retval, sizeof(retval), FPRINT,
-	    d[0], d[1], d[2], d[3], d[4], d[5], d[6], d[7],
-	    d[8], d[9], d[10], d[11], d[12], d[13], d[14], d[15]);
-	memset(buf, 0, nlen + elen);
-	xfree(buf);
-	return retval;
+	while (n > pos) {
+		res = (f) (fd, s + pos, n - pos);
+		switch (res) {
+		case -1:
+			if (errno == EINTR || errno == EAGAIN)
+				continue;
+		case 0:
+			return (res);
+		default:
+			pos += res;
+		}
+	}
+	return (pos);
 }
