@@ -6,6 +6,9 @@
    - markus@cvs.openbsd.org 2001/04/30 15:50:46
      [compat.c compat.h kex.c]
      allow interop with weaker key generation used by ssh-2.0.x, x < 10
+   - markus@cvs.openbsd.org 2001/04/30 16:02:49
+     [compat.c]
+     ssh-2.0.10 has the weak-key-bug, too.
  - (tim) [contrib/caldera/openssh.spec] add Requires line for Caldera 3.1
 
 20010430
