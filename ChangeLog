@@ -7,6 +7,9 @@
    - markus@cvs.openbsd.org 2002/09/23 22:11:05
      [monitor.c]
      only call auth_krb5 if kerberos is enabled; ok deraadt@
+   - markus@cvs.openbsd.org 2002/09/24 08:46:04
+     [monitor.c]
+     only call kerberos code for authctxt->valid
 
 20020923
  - (tim) [configure.ac] s/return/exit/ patch by dtucker@zip.com.au
