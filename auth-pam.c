@@ -25,7 +25,6 @@
 #include "includes.h"
 
 #ifdef USE_PAM
-#include "ssh.h"
 #include "xmalloc.h"
 #include "log.h"
 #include "auth.h"
