@@ -349,7 +349,7 @@ AC_ARG_WITH(libs,
 AC_CHECK_HEADERS(bstring.h crypt.h endian.h floatingpoint.h \
 	getopt.h glob.h lastlog.h limits.h login.h \
 	login_cap.h maillock.h netdb.h netgroup.h \
-	netinet/in_systm.h paths.h pty.h \
+	netinet/in_systm.h paths.h pty.h readpassphrase.h \
 	rpc/types.h security/pam_appl.h shadow.h stddef.h stdint.h \
 	strings.h sys/bitypes.h sys/bsdtty.h sys/cdefs.h \
 	sys/mman.h sys/select.h sys/stat.h \
@@ -1952,7 +1952,7 @@ fi
 # Whether to mess with the default path
 SERVER_PATH_MSG="(default)" 
 AC_ARG_WITH(default-path,
-	[  --with-default-path=PATH Specify default \$PATH environment for server],
+	[  --with-default-path=    Specify default \$PATH environment for server],
 	[
 		if test "$USES_LOGIN_CONF" = "yes" ; then
 			AC_MSG_WARN([
