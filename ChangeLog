@@ -19,6 +19,7 @@
    SunOS)
  - (djm) SCO needs librpc for libwrap. Patch from Tim Rice 
    <tim@multitalents.net>
+ - (stevesk) misc.c: cpp rework of SA_(INTERRUPT|RESTART) handling.
 
 20010217
  - (bal) OpenBSD Sync:
