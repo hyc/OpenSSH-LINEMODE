@@ -14,7 +14,6 @@ for reading the passphrase from the user.
 
 */
 
-#include "config.h"
 #include "includes.h"
 RCSID("$Id$");
 
