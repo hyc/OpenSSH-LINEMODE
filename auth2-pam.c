@@ -38,7 +38,7 @@ auth2_pam(Authctxt *authctxt)
 		fatal("auth2_pam: internal error: no user");
 
 	conv2.appdata_ptr = authctxt;
-	pam_set_conv(&conv2);
+	do_pam_set_conv(&conv2);
 
 	dispatch_set(SSH2_MSG_USERAUTH_INFO_RESPONSE,
 	    &input_userauth_info_response_pam);
