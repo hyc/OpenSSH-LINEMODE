@@ -6,6 +6,9 @@
    - markus@cvs.openbsd.org 2002/06/12 01:09:52
      [ssh.c]
      ssh_connect returns 0 on success
+ - (bal) Build noop setgroups() for cygwin to clean up code (For other
+   platforms without the setgroups() requirement, you MUST define
+   SETGROUPS_NOOP in the configure.ac) Based on patch by vinschen@redhat.com
 
 20020611
  - (bal) ssh-agent.c RCSD fix (|unexpand already done)
