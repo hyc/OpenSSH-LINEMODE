@@ -5,6 +5,9 @@
    - jmc@cvs.openbsd.org 2005/03/07 23:41:54
      [ssh.1 ssh_config.5]
      more macro simplification;
+   - djm@cvs.openbsd.org 2005/03/08 23:49:48
+     [version.h]
+     OpenSSH 4.0
 
 20050307
  - (dtucker) [configure.ac] Disable gettext search when configuring with
