@@ -11,6 +11,7 @@
    platforms may need this--I'm not sure.  mmap() issues will need to be
    addressed further.
  - (tim) [cipher.c] fix problem with OpenBSD sync
+ - (stevesk) [LICENCE] OpenBSD sync
 
 20020321
  - (bal) OpenBSD CVS Sync
