@@ -262,4 +262,3 @@ uninstall:
 	-rm -f $(DESTDIR)$(mandir)/$(mansubdir)8/sshd.8
 	-rm -f $(DESTDIR)$(mandir)/$(mansubdir)8/sftp-server.8
 	-rm -f $(DESTDIR)$(mandir)/$(mansubdir)1/slogin.1
-	-rm -f $(DESTDIR)${ASKPASS_PROGRAM}
