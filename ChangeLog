@@ -1,6 +1,8 @@
 20030714
  - (dtucker) [acconfig.h configure.ac port-aix.c] Older AIXes don't declare
    loginfailed at all, so assume 3-arg loginfailed if not declared.
+ - (dtucker) [port-aix.h] Work around name collision on AIX for r_type by
+   undef'ing it.
 
 20030708
  - (dtucker) [acconfig.h auth-passwd.c configure.ac session.c port-aix.[ch]]
