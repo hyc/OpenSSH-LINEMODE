@@ -1,3 +1,9 @@
+20031209
+ - (dtucker) OpenBSD CVS Sync
+   - matthieu@cvs.openbsd.org 2003/11/25 23:10:08
+     [ssh-add.1]
+     ssh-add doesn't need to be a descendant of ssh-agent. Ok markus@, jmc@.
+
 20031208
  - (tim) [configure.ac] Bug 770. Fix --without-rpath.
 
