@@ -24,6 +24,10 @@
    - markus@cvs.openbsd.org 2002/05/23 19:39:34
      [ssh.c]
      add comment about ssh-keysign
+   - markus@cvs.openbsd.org 2002/05/24 08:45:14
+     [sshconnect2.c]
+     stat ssh-keysign first, print error if stat fails;
+     some debug->error; fix comment
 
 20020604
  - (stevesk) [channels.c] bug #164 patch from YOSHIFUJI Hideaki (changed
