@@ -7,6 +7,8 @@
  - (dtucker) [configure.ac] Bug #653: uid swapping issues on Tru64.
  - (dtucker) [configure.ac] Bug #693: uid swapping issues on NCR MP-RAS.
    Patch from david.haughton at ncr.com
+ - (dtucker) [configure.ac] Bug #659: uid swapping issues on IRIX 6.
+   Part of patch supplied by bugzilla-openssh at thewrittenword.com
 
 20030919
  - (djm) Bug #683: Remove reference to --with-ipv4-default from INSTALL;
