@@ -3,6 +3,10 @@
    - markus@cvs.openbsd.org 2003/11/20 11:39:28
      [progressmeter.c]
      fix rounding errors; from andreas@
+   - djm@cvs.openbsd.org 2003/11/21 11:57:03
+     [everything]
+     unexpand and delete whitespace at EOL; ok markus@
+     (done locally and RCS IDs synced)
 
 20031118
  - (djm) Fix early exit for root auth success when UsePAM=yes and 
