@@ -1,5 +1,6 @@
 20020105
  - (bal) NCR requies use_pipes to operate correctly.
+ - (stevesk) fix spurious ; from NCR change.
 
 20020103
  - (djm) Use bigcrypt() on systems with SCO_PROTECTED_PW. Patch from 

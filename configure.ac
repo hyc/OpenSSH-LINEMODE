@@ -184,7 +184,7 @@ mips-sony-bsd|mips-sony-newsos4)
 	LDFLAGS="$LDFLAGS -L/usr/local/lib"
 	LIBS="$LIBS -lc89"
 	AC_DEFINE(HAVE_BOGUS_SYS_QUEUE_H)
-	AC_DEFINE(USE_PIPES);
+	AC_DEFINE(USE_PIPES)
 	;;
 *-sni-sysv*)
 	CPPFLAGS="$CPPFLAGS -I/usr/local/include"
