@@ -1,3 +1,9 @@
+20040622
+ - (dtucker) OpenBSD CVS Sync
+   - djm@cvs.openbsd.org 2004/06/20 17:36:59
+     [ssh.c]
+     filter passed env vars at slave in connection sharing case; ok markus@
+
 20040620
  - (tim) [configure.ac Makefile.in] Only change TEST_SHELL on broken platforms.
 
