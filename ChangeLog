@@ -7,6 +7,9 @@
    - stevesk@cvs.openbsd.org 2002/02/04 20:41:16
      [ssh-agent.1]
      more sync for default ssh-add identities; ok markus@
+   - djm@cvs.openbsd.org 2002/02/05 00:00:46
+     [sftp.1 sftp.c sftp-client.c sftp-client.h sftp-int.c]
+     Add "-B" option to specify copy buffer length (default 32k); ok markus@
 
 20020205
  - (djm) Cleanup after sync:
