@@ -1469,9 +1469,9 @@ channel_request_remote_forwarding(u_short listen_port, const char *host_to_conne
 		packet_put_int(listen_port);
 	} else {
 		packet_start(SSH_CMSG_PORT_FORWARD_REQUEST);
-		packet_put_int(port_to_connect);
-		packet_put_cstring(host_to_connect);
 		packet_put_int(listen_port);
+		packet_put_cstring(host_to_connect);
+		packet_put_int(port_to_connect);
 		packet_send();
 		packet_write_wait();
 		/*

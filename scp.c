@@ -1211,7 +1211,12 @@ progressmeter(int flag)
 		snprintf(buf + strlen(buf), sizeof(buf) - strlen(buf),
 			 " - stalled -");
 	} else {
-		remaining = (int) (totalbytes / (statbytes / elapsed) - elapsed);
+		if (flag != 1)
+			remaining =
+			    (int)(totalbytes / (statbytes / elapsed) - elapsed);
+		else
+			remaining = elapsed;
+
 		i = remaining / 3600;
 		if (i)
 			snprintf(buf + strlen(buf), sizeof(buf) - strlen(buf),
@@ -1221,7 +1226,8 @@ progressmeter(int flag)
 				 "   ");
 		i = remaining % 3600;
 		snprintf(buf + strlen(buf), sizeof(buf) - strlen(buf),
-			 "%02d:%02d ETA", i / 60, i % 60);
+			 "%02d:%02d%s", i / 60, i % 60,
+			 (flag != 1) ? " ETA" : "    ");
 	}
 	atomicio(write, fileno(stdout), buf, strlen(buf));
 
