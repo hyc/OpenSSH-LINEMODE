@@ -108,7 +108,7 @@ enum
 #endif /* S_ISREG */
 
 #ifndef S_ISLNK
-# define S_ISLNK(mode)	(((mode) & (_S_IFMT)) == (_S_IFLNK))
+# define S_ISLNK(mode)	(((mode) & S_IFMT) == S_IFLNK)
 #endif /* S_ISLNK */
 
 #ifndef S_IXUSR
