@@ -24,9 +24,6 @@ RCSID("$Id$");
 #include "authfd.h"
 #include "readconf.h"
 
-/* Flag indicating whether quiet mode is on. */
-extern Options options;
-
 /* Flag indicating that stdin should be redirected from /dev/null. */
 extern int stdin_null_flag;
 
@@ -764,6 +761,7 @@ void client_process_output(fd_set *writeset)
 
 int client_loop(int have_pty, int escape_char_arg)
 {
+  extern Options options;
   double start_time, total_time;
   int len;
   char buf[100];

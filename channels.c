@@ -24,6 +24,7 @@ RCSID("$Id$");
 #include "buffer.h"
 #include "authfd.h"
 #include "uidswap.h"
+#include "readconf.h"
 #include "servconf.h"
 
 #include "channels.h"

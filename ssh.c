@@ -590,7 +590,7 @@ main(int ac, char **av)
 
   /* Log into the remote system.  This never returns if the login fails. */
   ssh_login(host_private_key_loaded, host_private_key, 
-	    host, &hostaddr, &options, original_real_uid);
+	    host, &hostaddr, original_real_uid);
 
   /* We no longer need the host private key.  Clear it now. */
   if (host_private_key_loaded)

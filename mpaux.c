@@ -50,5 +50,6 @@ compute_session_id(unsigned char session_id[16],
   MD5_Init(&md);
   MD5_Update(&md, buf, bytes);
   MD5_Final(session_id, &md);
+  memset(buf, 0, bytes);
   xfree(buf);
 }

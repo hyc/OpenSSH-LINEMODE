@@ -38,7 +38,7 @@ int auth_rhosts_rsa(struct passwd *pw, const char *client_user,
   debug("Trying rhosts with RSA host authentication for %.100s", client_user);
 
   /* Check if we would accept it using rhosts authentication. */
-  if (!auth_rhosts(pw, client_user, options.ignore_rhosts, options.strict_modes))
+  if (!auth_rhosts(pw, client_user))
     return 0;
 
   canonical_hostname = get_canonical_hostname();
