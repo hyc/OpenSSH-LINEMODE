@@ -155,18 +155,19 @@ record_login(int pid, const char *ttyname, const char *user, uid_t uid,
 	strncpy(utx.ut_line, ttyname + 5, sizeof(utx.ut_line));
 	utx.ut_pid = (pid_t)pid;
 	utx.ut_tv.tv_sec = time(NULL);
- 	u.ut_type = (uid == -1)?DEAD_PROCESS:USER_PROCESS;
-#ifdef HAVE_HOST_IN_UTMPX
-#ifdef HAVE_SYSLEN_IN_UTMPX
+ 	utx.ut_type = (uid == -1)?DEAD_PROCESS:USER_PROCESS;
+# ifdef HAVE_HOST_IN_UTMPX
+#  ifdef HAVE_SYSLEN_IN_UTMPX
 	utx.ut_syslen = strlen(host);
-	strncpy(utx.ut_host, host, utx.ut_syslen );
-#else
+	strncpy(utx.ut_host, host, utx.ut_syslen);
+#  else
 	strncpy(utx.ut_host, host, sizeof(utx.ut_host));
-#endif /* HAVE_SYSLEN_IN_UTMPX */
-#endif
+#  endif /* HAVE_SYSLEN_IN_UTMPX */
+# endif
 #endif /* defined(HAVE_UTMPX_H) && defined(USE_UTMPX) */
 
-#if defined(HAVE_UTMPX_H) && defined(USE_UTMPX) && !defined(HAVE_LOGIN)
+/*#if defined(HAVE_UTMPX_H) && defined(USE_UTMPX) && !defined(HAVE_LOGIN)*/
+#if defined(HAVE_UTMPX_H) && defined(USE_UTMPX)
 	login(&u, &utx);
 #else /* defined(HAVE_UTMPX_H) && defined(USE_UTMPX) */
 	login(&u);
