@@ -323,13 +323,13 @@ void finish_pam(void)
 }
 
 /* Start PAM authentication for specified account */
-void start_pam(struct passwd *pw)
+void start_pam(const char *user)
 {
 	int pam_retval;
 
-	debug("Starting up PAM with username \"%.200s\"", pw->pw_name);
+	debug("Starting up PAM with username \"%.200s\"", user);
 
-	pam_retval = pam_start(SSHD_PAM_SERVICE, pw->pw_name, &conv, &pamh);
+	pam_retval = pam_start(SSHD_PAM_SERVICE, user, &conv, &pamh);
 
 	if (pam_retval != PAM_SUCCESS) {
 		fatal("PAM initialisation failed[%d]: %.200s", 
