@@ -73,7 +73,7 @@ PATHSUBS	= \
 
 FIXPATHSCMD	= $(PERL) $(srcdir)/fixpaths $(PATHSUBS)
 
-all: $(TARGETS) $(CONFIGFILES)
+all: $(CONFIGFILES) $(TARGETS) 
 
 manpages: $(MANPAGES)
 
