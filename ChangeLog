@@ -10,6 +10,9 @@
    - stevesk@cvs.openbsd.org 2002/05/11 20:24:48
      [ssh.h]
      typo in comment
+   - itojun@cvs.openbsd.org 2002/05/13 02:37:39
+     [auth-skey.c auth2.c]
+     less warnings.  skey_{respond,query} are public (in auth.h)
 
 20020514
  - (stevesk) [README.privsep] PAM+privsep works with Solaris 8.
