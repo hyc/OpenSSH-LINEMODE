@@ -1,3 +1,6 @@
+20010628
+ - (djm) Sync openbsd-compat with -current libc
+
 20010627
  - (djm) Reintroduce pam_session call for non-pty sessions.
  - (djm) Remove redundant and incorrect test for max auth attempts in 
