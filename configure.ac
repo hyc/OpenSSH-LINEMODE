@@ -1483,6 +1483,8 @@ if test "x$ac_cv_have_struct_timeval" = "xyes" ; then
 	have_struct_timeval=1
 fi
 
+AC_CHECK_TYPES(struct timespec)
+
 # If we don't have int64_t then we can't compile sftp-server.  So don't
 # even attempt to do it. 
 if test "x$ac_cv_have_int64_t" = "xno" -a \

@@ -135,3 +135,34 @@ setgroups(size_t size, const gid_t *list)
 }
 #endif 
 
+#if !defined(HAVE_NANOSLEEP) && !defined(HAVE_NSLEEP)
+int nanosleep(const struct timespec *req, struct timespec *rem)
+{
+	int rc, saverrno;
+	extern int errno;
+	struct timeval tstart, tstop, tremain, time2wait;
+
+	TIMESPEC_TO_TIMEVAL(&time2wait, req)
+	(void) gettimeofday(&tstart, NULL);
+	rc = select(0, NULL, NULL, NULL, &time2wait);
+	if (rc == -1) {
+		saverrno = errno;
+		(void) gettimeofday (&tstop, NULL);
+		errno = saverrno;
+		tremain.tv_sec = time2wait.tv_sec - 
+			(tstop.tv_sec - tstart.tv_sec);
+		tremain.tv_usec = time2wait.tv_usec - 
+			(tstop.tv_usec - tstart.tv_usec);
+		tremain.tv_sec += tremain.tv_usec / 1000000L;
+		tremain.tv_usec %= 1000000L;
+	} else {
+		tremain.tv_sec = 0;
+		tremain.tv_usec = 0;
+	}
+	TIMEVAL_TO_TIMESPEC(&tremain, rem)
+
+	return(rc);
+}
+
+#endif
+
