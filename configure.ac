@@ -336,7 +336,7 @@ mips-sony-bsd|mips-sony-newsos4)
 	;;
 *-*-sco3.2v4*)
 	CPPFLAGS="$CPPFLAGS -Dftruncate=chsize"
-	LIBS="$LIBS -los -lprot -lx -ltinfo -lm"
+	LIBS="$LIBS -los -lprot -lcrypt_i -lx -ltinfo -lm"
 	RANLIB=true
 	no_dev_ptmx=1
 	AC_DEFINE(BROKEN_SYS_TERMIO_H)
