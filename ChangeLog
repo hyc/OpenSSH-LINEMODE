@@ -1,3 +1,6 @@
+20010324
+ - Fixed permissions ssh-keyscan.  Thanks to Christopher Linn <celinn@mtu.edu>.
+
 20010323
  - OpenBSD CVS Sync                             
    - deraadt@cvs.openbsd.org 2001/03/22 20:22:55
