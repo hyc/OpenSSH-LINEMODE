@@ -14,6 +14,7 @@
  - (djm) Move PAM init to after fork for non-Solaris derived PAMs
  - (djm) Warning fix on entropy.c saved uid stuff. Patch from Mark Miller
    <markm@swoon.net>
+ - (djm) Fix PAM fix
 
 20010226
  - (bal) Fixed bsd-snprinf.c so it now honors 'BROKEN_SNPRINTF' again.
