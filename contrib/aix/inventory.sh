@@ -1,6 +1,7 @@
 #!/bin/sh
 #
 # inventory.sh
+# $Id$
 #
 # Originally written by Ben Lindstrom, modified by Darren Tucker to use perl
 #

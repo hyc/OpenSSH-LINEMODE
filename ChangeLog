@@ -12,6 +12,9 @@
    UsePAM=yes; ok dtucker
  - (dtucker) [configure.ac] Bug #533, #551: define BROKEN_GETADDRINFO on
    Tru64, solves getnameinfo and "bad addr or host" errors.  ok djm@
+ - (dtucker) [README buildbff.sh inventory.sh] (all in contrib/aix)
+   Update package builder: correctly handle config variables, use lsuser
+   rather than /etc/passwd, fix typos, add Id's.
 
 20030822
  - (djm) s/get_progname/ssh_get_progname/g to avoid conflict with Heimdal 
