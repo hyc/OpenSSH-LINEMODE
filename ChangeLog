@@ -1,3 +1,7 @@
+20040709
+ - (tim) [contrib/cygwin/README] add minires-devel requirement. Patch from
+   vinschen AT redhat.com
+
 20040708
  - (dtucker) OpenBSD CVS Sync
    - dtucker@cvs.openbsd.org 2004/07/03 05:11:33
