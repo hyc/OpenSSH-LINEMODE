@@ -1,3 +1,7 @@
+20010223
+ - (bal) Fix --define rh7 in openssh.spec file.  Patch by Steve Tell
+   <tell@telltronics.org>
+
 20010222                                                             
  - (bal) Corrected SCO luid patch by svaughan <svaughan@asterion.com>
  - (bal) Added mdoc2man.pl from Mark Roth <roth@feep.net>
