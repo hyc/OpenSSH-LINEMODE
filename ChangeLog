@@ -1,6 +1,11 @@
 20020522
  - (djm) Fix spelling mistakes, spotted by Solar Designer i
    <solar@openwall.com>
+ - (djm) OpenBSD CVS Sync:
+   [auth.c]
+   Fix typo/thinko.  Pass in as to auth_approval(), not NULL.
+   Closes PR 2659.
+ - Crank version
 
 20020521
  - (stevesk) [sshd.c] bug 245; disable setsid() for now
