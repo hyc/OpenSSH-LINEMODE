@@ -1,3 +1,6 @@
+20020712
+ - (tim) [Makefile.in] quiet down install-files: and check-user:
+
 20020710
  - (tim) [contrib/cygwin/ssh-host-config] explicitely sets the permissions
    on /var/empty to 755 Patch by vinschen@redhat.com
