@@ -10,6 +10,8 @@
    - djm@cvs.openbsd.org 2004/06/17 14:53:27
      [regress/multiplex.sh]
      shared connection env passing regress test
+ - (dtucker) [regress/README.regress] Add detail on how to run a single
+   test from the top-level Makefile.
 
 20040617
  - (dtucker) [regress/scp.sh] diff -N is not portable (but needed for some
