@@ -415,6 +415,12 @@ option has been
 specified will be allowed regardless of the value of this setting
 (which may be useful for taking remote backups even if root login is
 normally not allowed).
+.It Cm PidFile
+Specifies the file that contains the process identifier of the
+.Nm
+daemon.
+The default is
+.Pa /var/run/sshd.pid .
 .It Cm Port
 Specifies the port number that
 .Nm
