@@ -38,6 +38,9 @@
      undo the 'delay hostname lookup' change
      match.c must not use compress.c (via canonhost.c/packet.c)
      thanks to wilfried@
+   - markus@cvs.openbsd.org 2002/03/04 12:43:06
+     [auth-passwd.c auth-rh-rsa.c auth-rhosts.c]
+     unused include
 
 20020226
  - (tim) Bug 12 [configure.ac] add sys/bitypes.h to int64_t tests
