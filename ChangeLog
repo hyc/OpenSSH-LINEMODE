@@ -36,6 +36,9 @@
    - jakob@cvs.openbsd.org 2003/10/14 19:43:23
      [README.dns]
      update
+   - markus@cvs.openbsd.org 2003/10/14 19:54:39
+     [session.c ssh-agent.c]
+     10X for mkdtemp; djm@
 
 20031009
  - (dtucker) [sshd_config.5] UsePAM defaults to "no".  ok djm@
