@@ -6,6 +6,11 @@
    - djm@cvs.openbsd.org 2005/02/18 03:05:53
      [canohost.c]
      better error messages for getnameinfo failures; ok dtucker@
+   - djm@cvs.openbsd.org 2005/02/20 22:59:06
+     [sftp.c]
+     turn on ssh batch mode when in sftp batch mode, patch from 
+     jdmossh AT nand.net;
+     ok markus@
 
 20050226
  - (dtucker) [openbsd-compat/bsd-openpty.c openbsd-compat/inet_ntop.c]
