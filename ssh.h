@@ -741,4 +741,8 @@ char   *skey_fake_keyinfo(char *username);
 int	auth_skey_password(struct passwd * pw, const char *password);
 #endif				/* SKEY */
 
+#ifdef USE_PAM
+#include "auth-pam.h"
+#endif /* USE_PAM */
+
 #endif				/* SSH_H */
