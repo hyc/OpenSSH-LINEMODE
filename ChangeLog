@@ -10,6 +10,9 @@
    - jmc@cvs.openbsd.org 2004/06/26 09:11:14
      [ssh_config.5]
      punctuation and grammar fixes. also, keep the options in order.
+   - jmc@cvs.openbsd.org 2004/06/26 09:14:40
+     [sshd_config.5]
+     new sentence, new line;
 
 20040627
  - (tim) update README files.
