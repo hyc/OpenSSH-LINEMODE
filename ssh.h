@@ -124,6 +124,13 @@
 #define SSH_USER_DIR		".ssh"
 
 /*
+ * Relevant only when using builtin PRNG.
+ */
+#ifndef SSH_PRNG_SEED_FILE
+# define SSH_PRNG_SEED_FILE      SSH_USER_DIR"/prng_seed"
+#endif /* SSH_PRNG_SEED_FILE */
+
+/*
  * Per-user file containing host keys of known hosts.  This file need not be
  * readable by anyone except the user him/herself, though this does not
  * contain anything particularly secret.
