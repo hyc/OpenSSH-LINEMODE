@@ -1,3 +1,6 @@
+20040930
+ - (dtucker) [configure.ac] Set AC_PACKAGE_NAME.  ok djm@
+
 20040923
  - (dtucker) [openbsd-compat/bsd-snprintf.c] Previous change was off by one,
    which could have caused the justification to be wrong.  ok djm@
