@@ -96,10 +96,4 @@ void
 cipher_decrypt(CipherContext * context, unsigned char *dest,
     const unsigned char *src, unsigned int len);
 
-/*
- * If and CRC-32 attack is detected this function is called. Defaults to
- * fatal, changed to packet_disconnect in sshd and ssh.
- */
-extern void (*cipher_attack_detected) (const char *fmt, ...);
-
 #endif				/* CIPHER_H */

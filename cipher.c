@@ -110,18 +110,6 @@ swap_bytes(const unsigned char *src, unsigned char *dst_, int n)
 	}
 }
 
-void (*cipher_attack_detected) (const char *fmt,...) = fatal;
-
-static inline void
-detect_cbc_attack(const unsigned char *src,
-		  unsigned int len)
-{
-	return;
-
-	log("CRC-32 CBC insertion attack detected");
-	cipher_attack_detected("CRC-32 CBC insertion attack detected");
-}
-
 /*
  * Names of all encryption algorithms.
  * These must match the numbers defined in cipher.h.
@@ -304,7 +292,6 @@ cipher_decrypt(CipherContext *context, unsigned char *dest,
 		break;
 
 	case SSH_CIPHER_3DES:
-		/* CRC-32 attack? */
 		SSH_3CBC_DECRYPT(context->u.des3.key1,
 				 context->u.des3.key2, &context->u.des3.iv2,
 				 context->u.des3.key3, &context->u.des3.iv3,
@@ -312,7 +299,6 @@ cipher_decrypt(CipherContext *context, unsigned char *dest,
 		break;
 
 	case SSH_CIPHER_BLOWFISH:
-		detect_cbc_attack(src, len);
 		swap_bytes(src, dest, len);
 		BF_cbc_encrypt((void *) dest, dest, len,
 			       &context->u.bf.key, context->u.bf.iv,

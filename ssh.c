@@ -181,6 +181,7 @@ main(int ac, char **av)
 	struct stat st;
 	struct passwd *pw, pwcopy;
 	int interactive = 0, dummy;
+	int have_pty = 0;
 	uid_t original_effective_uid;
 	int plen;
 
@@ -618,9 +619,6 @@ main(int ac, char **av)
 	if (host_private_key_loaded)
 		RSA_free(host_private_key);	/* Destroys contents safely */
 
-	/* Close connection cleanly after attack. */
-	cipher_attack_detected = packet_disconnect;
-
 	/* Enable compression if requested. */
 	if (options.compression) {
 		debug("Requesting compression at level %d.", options.compression_level);
@@ -672,9 +670,10 @@ main(int ac, char **av)
 
 		/* Read response from the server. */
 		type = packet_read(&plen);
-		if (type == SSH_SMSG_SUCCESS)
+		if (type == SSH_SMSG_SUCCESS) {
 			interactive = 1;
-		else if (type == SSH_SMSG_FAILURE)
+			have_pty = 1;
+		} else if (type == SSH_SMSG_FAILURE)
 			log("Warning: Remote host failed or refused to allocate a pseudo tty.");
 		else
 			packet_disconnect("Protocol error waiting for pty request response.");
@@ -802,7 +801,7 @@ main(int ac, char **av)
 	}
 
 	/* Enter the interactive session. */
-	exit_status = client_loop(tty_flag, tty_flag ? options.escape_char : -1);
+	exit_status = client_loop(have_pty, tty_flag ? options.escape_char : -1);
 
 	/* Close the connection to the remote host. */
 	packet_close();
