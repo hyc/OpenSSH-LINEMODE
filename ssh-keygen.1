@@ -23,7 +23,7 @@
 .Op Fl b Ar bits
 .Op Fl N Ar new_passphrase
 .Op Fl C Ar comment
-.Op Fl f Ar keyfile
+.Op Fl f Ar output_keyfile
 .Nm ssh-keygen
 .Fl p
 .Op Fl P Ar old_passphrase
@@ -31,13 +31,13 @@
 .Op Fl f Ar keyfile
 .Nm ssh-keygen
 .Fl x
-.Op Fl f Ar keyfile
+.Op Fl f Ar input_keyfile
 .Nm ssh-keygen
 .Fl X
-.Op Fl f Ar keyfile
+.Op Fl f Ar input_keyfile
 .Nm ssh-keygen
 .Fl y
-.Op Fl f Ar keyfile
+.Op Fl f Ar input_keyfile
 .Nm ssh-keygen
 .Fl c
 .Op Fl P Ar passphrase
@@ -45,7 +45,7 @@
 .Op Fl f Ar keyfile
 .Nm ssh-keygen
 .Fl l
-.Op Fl f Ar keyfile
+.Op Fl f Ar input_keyfile
 .Nm ssh-keygen
 .Fl R
 .Sh DESCRIPTION
