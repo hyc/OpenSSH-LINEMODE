@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 1999 Markus Friedl.  All rights reserved.
+ * Copyright (c) 2000 Markus Friedl.  All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions
@@ -26,14 +26,39 @@
  * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF
  * THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
-/* RCSID("$Id$"); */
 
-#ifndef COMPAT_H
-#define COMPAT_H
-void    enable_compat13(void);
-void    enable_compat20(void);
-void    compat_datafellows(const char *s);
-extern int compat13;
-extern int compat20;
-extern int datafellows;
-#endif
+#include "includes.h"
+RCSID("$Id$");
+
+#include "xmalloc.h"
+#include "ssh.h"
+#include "getput.h"
+
+#if HAVE_OPENSSL
+# include <openssl/hmac.h>
+#endif /* HAVE_OPENSSL */
+#if HAVE_SSL
+# include <ssl/hmac.h>
+#endif /* HAVE_SSL */
+
+unsigned char *
+hmac(
+    EVP_MD *evp_md,
+    unsigned int seqno,
+    unsigned char *data, int datalen,
+    unsigned char *key, int keylen)
+{
+	HMAC_CTX c;
+	static unsigned char m[EVP_MAX_MD_SIZE];
+	unsigned char b[4];
+
+	if (key == NULL)
+		fatal("hmac: no key");
+	HMAC_Init(&c, key, keylen, evp_md);
+	PUT_32BIT(b, seqno);
+	HMAC_Update(&c, b, sizeof b);
+	HMAC_Update(&c, data, datalen);
+	HMAC_Final(&c, m, NULL);
+	HMAC_cleanup(&c);
+	return(m);
+}

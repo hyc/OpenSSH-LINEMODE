@@ -31,12 +31,43 @@
 RCSID("$Id$");
 
 #include "ssh.h"
+#include "packet.h"
 
 int compat13 = 0;
+int compat20 = 0;
+int datafellows = 0;
 
+void 
+enable_compat20(void)
+{
+	fatal("protocol 2.0 not implemented");
+}
 void 
 enable_compat13(void)
 {
 	verbose("Enabling compatibility mode for protocol 1.3");
 	compat13 = 1;
+}
+/* datafellows bug compatibility */
+void
+compat_datafellows(const char *version)
+{
+	int i;
+	size_t len;
+	static const char *check[] = {
+		"2.0.1",
+		"2.1.0.beta.9",
+		"2.1.0.pre.3",
+		"2.1.0.public.beta.1",
+		NULL
+	};
+	for (i = 0; check[i]; i++) {
+		len = strlen(check[i]);
+		if (strlen(version) >= len &&
+		   (strncmp(version, check[i], len) == 0)) {
+			log("datafellows: %.200s", version);
+			datafellows = 1;
+			return;
+		}
+	}
 }
