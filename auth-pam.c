@@ -33,6 +33,8 @@
 #include "canohost.h"
 #include "readpass.h"
 
+extern char *__progname;
+
 RCSID("$Id$");
 
 #define NEW_AUTHTOK_MSG \
