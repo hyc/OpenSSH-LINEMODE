@@ -22,6 +22,10 @@
    - stevesk@cvs.openbsd.org 2002/07/22 17:32:56
      [monitor.c]
      u_int here; ok provos@
+   - stevesk@cvs.openbsd.org 2002/07/23 16:03:10
+     [sshd.c]
+     utmp_len is unsigned; display error consistent with other options.
+     ok markus@
 
 20020722
  - (bal) AIX tty data limiting patch fix by leigh@solinno.co.uk
