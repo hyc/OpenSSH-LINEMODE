@@ -116,6 +116,9 @@
    - markus@cvs.openbsd.org 2002/01/10 11:24:04
      [clientloop.c]
      handle SSH2_MSG_GLOBAL_REQUEST (just reply with failure); ok djm@
+   - markus@cvs.openbsd.org 2002/01/10 12:38:26
+     [nchan.c]
+     remove dead code (skip drain)
 
 
 20020121
