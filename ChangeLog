@@ -3,6 +3,10 @@
    pam_nologin module. Report from William Yodlowsky 
    <bsd@openbsd.rutgers.edu>
  - (djm) Revert dirname fix, a better one is on its way.
+ - OpenBSD CVS Sync
+   - markus@cvs.openbsd.org 2001/07/04 22:47:19
+     [ssh-agent.c]
+     ignore SIGPIPE when debugging, too
 
 20010711
  - (djm) dirname(3) may modify its argument on glibc and other systems. 
