@@ -1,6 +1,8 @@
 20031021
  - (dtucker) [INSTALL] Some system crypt() functions support MD5 passwords
    directly.  Noted by Darren.Moffat at sun.com.
+ - (dtucker) [regress/agent-ptrace.sh] Skip agent-test unless SUDO is set,
+   make agent setgid during test.
 
 20031017
  - (dtucker) [INSTALL] Note that --with-md5 is now required on platforms with
