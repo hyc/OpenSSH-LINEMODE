@@ -11,6 +11,9 @@
    - stevesk@cvs.openbsd.org 2001/07/18 21:40:40
      [ssh-agent.c]
      chdir("/") from bbraun@synack.net; ok markus@
+   - stevesk@cvs.openbsd.org 2001/07/19 00:41:44
+     [ssh.1]
+     escape chars are below now
 
 20010719
  - (tim) [configure.in] put inet_aton back in AC_CHECK_FUNCS.
