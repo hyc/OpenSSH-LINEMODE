@@ -68,10 +68,23 @@ extern int compat20;
  */
 typedef pthread_t sp_pthread_t;
 #else
+typedef pid_t sp_pthread_t;
+#endif
+
+struct pam_ctxt {
+	sp_pthread_t	 pam_thread;
+	int		 pam_psock;
+	int		 pam_csock;
+	int		 pam_done;
+};
+
+static void sshpam_free_ctx(void *);
+static struct pam_ctxt *cleanup_ctxt;
+
+#ifndef USE_POSIX_THREADS
 /*
  * Simulate threads with processes.
  */
-typedef pid_t sp_pthread_t;
 
 static void
 pthread_exit(void *value __unused)
@@ -123,16 +136,6 @@ static int sshpam_session_open = 0;
 static int sshpam_cred_established = 0;
 static int sshpam_account_status = -1;
 static char **sshpam_env = NULL;
-
-struct pam_ctxt {
-	sp_pthread_t	 pam_thread;
-	int		 pam_psock;
-	int		 pam_csock;
-	int		 pam_done;
-};
-
-static void sshpam_free_ctx(void *);
-static struct pam_ctxt *cleanup_ctxt;
 
 /* Some PAM implementations don't implement this */
 #ifndef HAVE_PAM_GETENVLIST

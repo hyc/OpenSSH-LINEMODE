@@ -1,3 +1,7 @@
+20040113
+ - (dtucker) [auth-pam.c] Relocate struct pam_ctxt and prototypes.  No
+   functional changes.
+
 20040108
  - (dtucker) [auth-pam.c defines.h] Bug #783: move __unused to defines.h and
    only define if not already.  From des at freebsd.org.
