@@ -14,14 +14,22 @@ precision integers.
 
 */
 
+#include "config.h"
 #include "includes.h"
 RCSID("$Id$");
 
+#ifdef HAVE_OPENSSL
 #include <openssl/bn.h>
+#include <openssl/md5.h>
+#endif
+#ifdef HAVE_SSL
+#include <ssl/bn.h>
+#include <ssl/md5.h>
+#endif
+
 #include "getput.h"
 #include "xmalloc.h"
 
-#include <openssl/md5.h>
 
 void
 compute_session_id(unsigned char session_id[16],

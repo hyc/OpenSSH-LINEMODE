@@ -13,6 +13,7 @@ The authentication agent program.
 
 */
 
+#include "config.h"
 #include "includes.h"
 RCSID("$Id$");
 
@@ -26,7 +27,12 @@ RCSID("$Id$");
 #include "getput.h"
 #include "mpaux.h"
 
+#ifdef HAVE_OPENSSL
 #include <openssl/md5.h>
+#endif
+#ifdef HAVE_SSL
+#include <ssl/md5.h>
+#endif
 
 typedef struct
 {

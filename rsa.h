@@ -14,12 +14,20 @@ RSA key generation, encryption and decryption.
 */
 
 /* RCSID("$Id$"); */
+#include "config.h"
 
 #ifndef RSA_H
 #define RSA_H
 
+#ifdef HAVE_OPENSSL
 #include <openssl/bn.h>
 #include <openssl/rsa.h>
+#endif
+
+#ifdef HAVE_SSL
+#include <ssl/bn.h>
+#include <ssl/rsa.h>
+#endif
 
 /* Calls SSL RSA_generate_key, only copies to prv and pub */
 void rsa_generate_key(RSA *prv, RSA *pub, unsigned int bits);

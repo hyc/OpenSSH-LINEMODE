@@ -215,6 +215,7 @@ main(int ac, char **av)
   else
     cp = av0;
   if (strcmp(cp, "rsh") != 0 && strcmp(cp, "ssh") != 0 &&
+      strcmp(cp, "openssh") != 0 && strcmp(cp, "openlogin") != 0 &&
       strcmp(cp, "rlogin") != 0 && strcmp(cp, "slogin") != 0)
     host = cp;
   

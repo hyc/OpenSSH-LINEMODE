@@ -13,11 +13,19 @@ Created: Wed Apr 19 16:50:42 1995 ylo
 
 /* RCSID("$Id$"); */
 
+#include "config.h"
+
 #ifndef CIPHER_H
 #define CIPHER_H
 
+#ifdef HAVE_OPENSSL
 #include <openssl/des.h>
 #include <openssl/blowfish.h>
+#endif
+#ifdef HAVE_SSL
+#include <ssl/des.h>
+#include <ssl/blowfish.h>
+#endif
 
 /* Cipher types.  New types can be added, but old types should not be removed
    for compatibility.  The maximum allowed value is 31. */
