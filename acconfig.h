@@ -380,6 +380,12 @@
 /* Define if cmsg_type is not passed correctly */
 #undef BROKEN_CMSG_TYPE
 
+/* Define if DNS support is to be activated */
+#undef DNS
+
+/* Define if -llwres is to be used */
+#undef LWRES
+
 @BOTTOM@
 
 /* ******************* Shouldn't need to edit below this line ************** */
