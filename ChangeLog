@@ -1,3 +1,6 @@
+20020722
+ - (bal) AIX tty data limiting patch fix by leigh@solinno.co.uk
+
 20020721
  - (stevesk) [auth-pam.c] merge cosmetic changes from solar's
    openssh-3.4p1-owl-password-changing.diff
