@@ -1,3 +1,8 @@
+20050321
+ - (dtucker) [configure.ac] Prevent configure --with-zlib from adding -Iyes
+   and -Lyes to CFLAGS and LIBS.  Pointed out by peter at slagheap.net,
+   with & ok tim@
+
 20050317
  - (tim) [configure.ac] Bug 998. Make path for --with-opensc optional.
    Make --without-opensc work.
