@@ -1,3 +1,7 @@
+20050317
+ - (tim) [configure.ac] Bug 998. Make path for --with-opensc optional.
+   Make --without-opensc work.
+
 20050314
  - (dtucker) OpenBSD CVS Sync
    - dtucker@cvs.openbsd.org 2005/03/10 10:15:02
