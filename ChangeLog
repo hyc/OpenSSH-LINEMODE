@@ -1,5 +1,6 @@
 20020501
  - (djm) Import OpenBSD regression tests. Requires BSD make to run
+ - (djm) Fix readpassphase compilation for systems which have it
 
 20020429
  - (tim) [contrib/caldera/openssh.spec] update fixUP to reflect changes in
