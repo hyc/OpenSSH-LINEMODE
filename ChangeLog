@@ -1,3 +1,6 @@
+20010330
+ - (djm) Another openbsd-compat/glob.c sync
+
 20010329
  - OpenBSD CVS Sync
    - stevesk@cvs.openbsd.org 2001/03/26 15:47:59
