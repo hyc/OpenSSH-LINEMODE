@@ -91,6 +91,9 @@
      [authfd.c authfd.h readconf.c readconf.h scard.c scard.h ssh-add.c 
       ssh-agent.c ssh.c]
      use strings instead of ints for smartcard reader ids
+   - markus@cvs.openbsd.org 2001/08/01 22:16:45
+     [ssh.1 sshd.8]
+     refer to current ietf drafts for protocol v2
 
 20010803
  - (djm) Fix interrupted read in entropy gatherer. Spotted by markus@ on
