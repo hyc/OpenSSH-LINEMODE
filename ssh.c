@@ -325,11 +325,7 @@ main(int ac, char **av)
 		case 'V':
 			fprintf(stderr, "SSH Version %s, protocol version %d.%d.\n",
 			    SSH_VERSION, PROTOCOL_MAJOR, PROTOCOL_MINOR);
-#ifndef RSAREF
 			fprintf(stderr, "Compiled with SSL.\n");
-#else
-			fprintf(stderr, "Compiled with SSL (RSAref version).\n");
-#endif
 			if (opt == 'V')
 				exit(0);
 			debug_flag = 1;
