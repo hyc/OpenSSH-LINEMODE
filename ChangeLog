@@ -44,6 +44,10 @@
      [ssh.c]
      reorder -{1,2,4,6} options. ok markus@
  - (bal) Missing 'const' in readpass.h
+ - (bal) OpenBSD Sync (so at least the thing compiles for 2.3.2 =)
+   - djm@cvs.openbsd.org 2001/02/06 23:30:28
+     [sftp-client.c]
+     replace arc4random with counter for request ids; ok markus@
 
 20010208
  - (djm) Don't delete external askpass program in make uninstall target.
