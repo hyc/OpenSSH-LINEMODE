@@ -317,10 +317,10 @@ AC_ARG_WITH(pcre,
 )
 
 # Checks for libraries.
-if test -z "$no_libsocket" ; then
+if test -z "$no_libnsl" ; then
 	AC_CHECK_LIB(nsl, yp_match, , )
 fi
-if test -z "$no_libnsl" ; then
+if test -z "$no_libsocket" ; then
 	AC_CHECK_LIB(socket, main, , )
 fi
 
