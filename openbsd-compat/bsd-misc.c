@@ -1,3 +1,4 @@
+
 /*
  * Copyright (c) 1999-2004 Damien Miller <djm@mindrot.org>
  *
@@ -195,22 +196,6 @@ tcsendbreak(int fd, int duration)
 # endif
 }
 #endif /* HAVE_TCSENDBREAK */
-
-#ifndef HAVE_CLOSEFROM
-int
-closefrom(int fd)
-{
-	int i, result = 0, err = 0;
-
-	for (i = fd; i < 128; i++)
-		if (close(i) != 0) {
-			err = errno;
-			result = -1;
-		}
-	errno = err;
-	return result;
-}
-#endif /* HAVE_CLOSEFROM */
 
 mysig_t
 mysignal(int sig, mysig_t act)

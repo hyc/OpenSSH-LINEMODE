@@ -1,6 +1,10 @@
 20040815
  - (dtucker) [Makefile.in ssh-keysign.c ssh.c] Use permanently_set_uid() since
    it does the right thing on all platforms.  ok djm@
+ - (djm) [acconfig.h configure.ac openbsd-compat/Makefile.in 
+   openbsd-compat/bsd-closefrom.c openbsd-compat/bsd-misc.c 
+   openbsd-compat/bsd-misc.h openbsd-compat/openbsd-compat.h] Use smarter 
+   closefrom() replacement from sudo; ok dtucker@
 
 20040814
  - (dtucker) [auth-krb5.c gss-serv-krb5.c openbsd-compat/xmmap.c]

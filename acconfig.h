@@ -454,6 +454,9 @@
 /* Define if your resolver libs need this for getrrsetbyname */
 #undef BIND_8_COMPAT
 
+/* Define if you have /proc/$pid/fd */
+#undef HAVE_PROC_PID
+
 @BOTTOM@
 
 /* ******************* Shouldn't need to edit below this line ************** */
