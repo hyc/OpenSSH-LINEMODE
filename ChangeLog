@@ -5,6 +5,9 @@
    - fgsch@cvs.openbsd.org 2004/12/10 01:31:30
      [Makefile sftp-glob.sh]
      some globbing regress; prompted and ok djm@
+   - david@cvs.openbsd.org 2005/01/14 04:21:18
+     [Makefile test-exec.sh]
+     pass the SUDO make variable to the individual sh tests; ok dtucker@ markus@
 
 20050306
  - (dtucker) [monitor.c] Bug #125 comment #47: fix errors returned by monitor
