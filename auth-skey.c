@@ -1,3 +1,5 @@
+#ifdef SKEY
+
 #include "includes.h"
 RCSID("$Id$");
 
@@ -147,3 +149,5 @@ skey_fake_keyinfo(char *username)
 	}
 	return skeyprompt;
 }
+
+#endif SKEY
