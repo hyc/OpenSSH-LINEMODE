@@ -1,3 +1,6 @@
+20020425
+ - (stevesk) [defines.h] remove USE_TIMEVAL; unused
+
 20020424
  - (djm) OpenBSD CVS Sync
    - markus@cvs.openbsd.org 2002/04/23 12:54:10

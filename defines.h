@@ -537,11 +537,6 @@ struct winsize {
 #  define USE_LASTLOG
 #endif
 
-/* which type of time to use? (api.c) */
-#ifdef HAVE_SYS_TIME_H
-#  define USE_TIMEVAL
-#endif
-
 /** end of login recorder definitions */
 
 #endif /* _DEFINES_H */
