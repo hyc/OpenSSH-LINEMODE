@@ -26,6 +26,7 @@
 
 #include <openssl/rand.h>
 #include <openssl/sha.h>
+#include <openssl/crypto.h>
 
 /* SunOS 4.4.4 needs this */
 #ifdef HAVE_FLOATINGPOINT_H
@@ -66,6 +67,14 @@ RCSID("$Id$");
 #if defined(_POSIX_SAVED_IDS) && !defined(BROKEN_SAVED_UIDS)
 # define SAVED_IDS_WORK_WITH_SETEUID
 #endif
+
+void check_openssl_version(void) 
+{
+	if (SSLeay() != OPENSSL_VERSION_NUMBER)
+		fatal("OpenSSL version mismatch. Built against %x, you "
+		    "have %x", OPENSSL_VERSION_NUMBER, SSLeay());
+}
+
 
 #if defined(EGD_SOCKET) || defined(RANDOM_POOL)
 
@@ -188,8 +197,10 @@ seed_rng(void)
 	memset(buf, '\0', sizeof(buf));
 }
 
-/* No-op */
-void init_rng(void) {}
+void init_rng(void) 
+{
+	check_openssl_version();
+}
 
 #else /* defined(EGD_SOCKET) || defined(RANDOM_POOL) */
 
@@ -817,6 +828,8 @@ seed_rng(void)
 void init_rng(void)
 {
 	int original_euid;
+
+	check_openssl_version();
 
 	original_uid = getuid();
 	original_euid = geteuid();
