@@ -28,6 +28,8 @@ AC_PROG_CPP
 AC_PROG_RANLIB
 AC_PROG_INSTALL
 AC_PATH_PROG(AR, ar)
+AC_PATH_PROG(CAT, cat)
+AC_PATH_PROG(KILL, kill)
 AC_PATH_PROGS(PERL, perl5 perl)
 AC_PATH_PROG(SED, sed)
 AC_SUBST(PERL)
@@ -2915,7 +2917,7 @@ if test "$ac_cv_lib_pam_pam_set_item" = yes ; then
 fi
 
 AC_EXEEXT
-AC_CONFIG_FILES([Makefile buildpkg.sh openbsd-compat/Makefile scard/Makefile ssh_prng_cmds])
+AC_CONFIG_FILES([Makefile buildpkg.sh opensshd.init openbsd-compat/Makefile scard/Makefile ssh_prng_cmds])
 AC_OUTPUT
 
 # Print summary of options

@@ -1,6 +1,9 @@
 20040619
  - (dtucker) [auth-pam.c] Don't use PAM namespace for
     pam_password_change_required either.
+ - (tim) [configure.ac buildpkg.sh.in contrib/solaris/README] move opensshd
+   init script to top level directory.  Add opensshd.init.in.
+   Remove contrib/solaris/buildpkg.sh, contrib/solaris/opensshd.in
 
 20040618
  - (djm) OpenBSD CVS Sync
