@@ -1,5 +1,6 @@
 20020625
  - (stevesk) [INSTALL acconfig.h configure.ac defines.h] remove --with-rsh
+ - (stevesk) [README.privsep] minor updates
 
 20020624
  - OpenBSD CVS Sync

@@ -12,7 +12,7 @@ On systems which lack mmap or anonymous (MAP_ANON) memory mapping,
 compression must be disabled in order for privilege separation to 
 function.
 
-When privsep is enabled, the pre-authentication sshd process will
+When privsep is enabled, during the pre-authentication phase sshd will
 chroot(2) to "/var/empty" and change its privileges to the "sshd" user
 and its primary group.  You should do something like the following to
 prepare the privsep preauth environment:
@@ -21,7 +21,7 @@ prepare the privsep preauth environment:
 	# chown root:sys /var/empty
 	# chmod 755 /var/empty
 	# groupadd sshd
-	# useradd -g sshd sshd
+	# useradd -g sshd -c 'sshd privsep' -d /var/empty sshd
 
 If you are on UnixWare 7 or OpenUNIX 8 do this additional step.
 	# ln /usr/lib/.ns.so /usr/lib/ns.so.1
