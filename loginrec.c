@@ -1354,11 +1354,7 @@ static int
 syslogin_perform_logout(struct logininfo *li)
 {
 # ifdef HAVE_LOGOUT
-# ifdef UT_LINESIZE
 	char line[UT_LINESIZE];
-# else
-	char line[8];
-# endif
 
 	(void)line_stripname(line, li->line, sizeof(line));
 

@@ -615,6 +615,10 @@ struct winsize {
 
 #endif
 
+#ifndef UT_LINESIZE
+# define UT_LINESIZE 8
+#endif
+
 /* I hope that the presence of LASTLOG_FILE is enough to detect this */
 #if defined(LASTLOG_FILE) && !defined(DISABLE_LASTLOG)
 #  define USE_LASTLOG
