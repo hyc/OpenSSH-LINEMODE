@@ -1,3 +1,9 @@
+20020620
+ - (bal) OpenBSD CVS Sync
+   - todd@cvs.openbsd.org 2002/06/14 21:35:00
+     [monitor_wrap.c]
+     spelling; from Brian Poole <raj@cerias.purdue.edu>
+
 20020613
  - (bal) typo of setgroup for cygwin.  Patch by vinschen@redhat.com
 
