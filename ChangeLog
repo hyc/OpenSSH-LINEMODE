@@ -14,7 +14,7 @@
      history
  - (bal) Channels.c and Channels.h -- "Merge Functions, simplify" (draged 
    out of ssh Attic)
- - (bal) nchan.c CVS ID Update.
+ - (bal) Ooops.. nchan.c resync from OpenBSD ssh Attic.
 
 20010606
  - OpenBSD CVS Sync
