@@ -9,7 +9,8 @@
      adress -> address, and a few more; all from Jonathon Gray;
    - djm@cvs.openbsd.org 2004/01/13 09:49:06
      [sftp-batch.sh]
-     don't delete thyself when running without obj/ ; ok markus@
+ - (dtucker) [configure.ac] Add --without-zlib-version-check.  Feedback from
+   tim@, ok several
 
 20040128
  - (dtucker) [regress/README.regress] Add tcpwrappers issue, noted by tim@
