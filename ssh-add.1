@@ -16,14 +16,14 @@
 .Os
 .Sh NAME
 .Nm ssh-add
-.Nd adds RSA identities for the authentication agent
+.Nd adds RSA or DSA identities for the authentication agent
 .Sh SYNOPSIS
 .Nm ssh-add
 .Op Fl lLdD
 .Op Ar
 .Sh DESCRIPTION
 .Nm
-adds RSA identities to the authentication agent,
+adds RSA or DSA identities to the authentication agent,
 .Xr ssh-agent 1 .
 When run without arguments, it adds the file
 .Pa $HOME/.ssh/identity .
@@ -63,6 +63,8 @@ used to encrypt the private part of this file.
 This is the default file added by
 .Nm
 when no other files have been specified.
+.It Pa $HOME/.ssh/id_dsa
+Contains the DSA authentication identity of the user.
 .Pp
 .Sh ENVIRONMENT
 .Bl -tag -width Ds
