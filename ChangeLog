@@ -1,3 +1,6 @@
+20020114
+ - (djm) Bug #50 - make autoconf entropy path checks more robust
+
 20020108
  - (djm) Merge Cygwin copy_environment with do_pam_environment, removing 
    fixed env var size limit in the process. Report from Corinna Vinschen 
