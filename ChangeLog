@@ -17,6 +17,7 @@
      clear select masks if we return before calling select().
  - (djm) "make veryclean" fix from Tom Holroyd <tomh@po.crl.go.jp>
  - (djm) Clean some autoconf-2.52 junk when doing "make distclean"
+ - (djm) Cleanup sshpty.c a little
 
 20011010
  - (djm) OpenBSD CVS Sync
