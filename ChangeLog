@@ -1,6 +1,10 @@
 20040218
  - (dtucker) [configure.ac] Handle case where krb5-config --libs returns a
    path with a "-" in it.  From Sergio.Gelato at astro.su.se.
+ - (djm) OpenBSD CVS Sync
+   - djm@cvs.openbsd.org 2004/02/17 07:17:29
+     [sftp-glob.c sftp.c]
+     Remove useless headers; ok deraadt@
 
 20040217
  - (djm) Simplify the license on code I have written. No code changes.
