@@ -1,4 +1,8 @@
 20040719
+ - (djm) [log.c] bz #111: Escape more control characters when sending data 
+   to syslog; from peak AT argo.troja.mff.cuni.cz
+
+20040719
  - (djm) [openbsd-compat/bsd-arc4random.c] Discard early keystream, like OpenBSD
    ok dtucker@
  - (djm) [auth-pam.c] Avoid use of xstrdup and friends in conversation function,
