@@ -1,4 +1,6 @@
 20020205
+ - (djm) Cleanup after sync:
+   - :%s/reverse_mapping_check/verify_reverse_mapping/g
  - (djm) OpenBSD CVS Sync
    - stevesk@cvs.openbsd.org 2002/01/24 21:09:25
      [channels.c misc.c misc.h packet.c]
