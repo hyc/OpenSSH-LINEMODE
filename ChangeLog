@@ -1,3 +1,7 @@
+20020522
+ - (djm) Fix spelling mistakes, spotted by Solar Designer i
+   <solar@openwall.com>
+
 20020521
  - (stevesk) [sshd.c] bug 245; disable setsid() for now
  - (stevesk) [sshd.c] #ifndef HAVE_CYGWIN for setgroups()
