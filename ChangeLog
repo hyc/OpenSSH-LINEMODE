@@ -3,6 +3,7 @@
    builds.  Portability corrections from tim@.
  - (dtucker) [configure.ac] Bug #655: uid swapping issues on Mac OS X.
    Patch from max at quendi.de.
+ - (dtucker) [configure.ac] Bug #657: uid swappping issues on BSDi.
 
 20030919
  - (djm) Bug #683: Remove reference to --with-ipv4-default from INSTALL;
