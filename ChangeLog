@@ -1,3 +1,7 @@
+20040108
+ - (dtucker) [auth-pam.c defines.h] Bug #783: move __unused to defines.h and
+   only define if not already.  From des at freebsd.org.
+
 20040105
  - (dtucker) [contrib/ssh-copy-id] Bug #781: exit if ssh fails.  Patch from
    cjwatson at debian.org.

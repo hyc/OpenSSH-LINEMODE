@@ -59,8 +59,6 @@ extern ServerOptions options;
 extern Buffer loginmsg;
 extern int compat20;
 
-#define __unused
-
 #ifdef USE_POSIX_THREADS
 #include <pthread.h>
 /*
