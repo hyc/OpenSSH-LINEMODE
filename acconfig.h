@@ -418,9 +418,6 @@
 #undef LOCKED_PASSWD_PREFIX
 #undef LOCKED_PASSWD_SUBSTR
 
-/* Define if DNS support is to be activated */
-#undef DNS
-
 /* Define if getrrsetbyname() exists */
 #undef HAVE_GETRRSETBYNAME
 
