@@ -374,8 +374,8 @@
 /* Some systems put this outside of libc */
 #undef HAVE_NANOSLEEP
 
-/* Pushing STREAMS modules incorrectly acquires a controlling TTY */
-#undef STREAMS_PUSH_ACQUIRES_CTTY
+/* Define if sshd somehow reacquires a controlling TTY after setsid() */
+#undef SSHD_ACQUIRES_CTTY
 
 /* Define if cmsg_type is not passed correctly */
 #undef BROKEN_CMSG_TYPE
