@@ -1,6 +1,7 @@
 20010629
  - (bal) Removed net_aton() since we don't use it any more
  - (bal) Fixed _DISABLE_VPOSIX in readpassphrase.c.
+ - (bal) Updated zlib's home.  Thanks to David Howe <DaveHowe@gmx.co.uk>.
 
 20010628
  - (djm) Sync openbsd-compat with -current libc

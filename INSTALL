@@ -4,7 +4,7 @@
 You will need working installations of Zlib and OpenSSL.
 
 Zlib:
-http://www.freesoftware.com/pub/infozip/zlib/
+http://www.gzip.org/zlib/ 
 
 OpenSSL 0.9.5a or greater:
 http://www.openssl.org/
