@@ -39,6 +39,7 @@ AC_PATH_PROG(TEST_MINUS_S_SH, bash)
 AC_PATH_PROG(TEST_MINUS_S_SH, ksh)
 AC_PATH_PROG(TEST_MINUS_S_SH, sh)
 AC_PATH_PROG(SH, sh)
+AC_SUBST(TEST_SHELL,sh)
 
 dnl for buildpkg.sh
 AC_PATH_PROG(PATH_GROUPADD_PROG, groupadd, groupadd,
@@ -375,6 +376,7 @@ mips-sony-bsd|mips-sony-newsos4)
 	AC_CHECK_FUNCS(getluid setluid)
 	MANTYPE=man
 	do_sco3_extra_lib_check=yes
+	TEST_SHELL=ksh
 	;;
 *-*-sco3.2v5*)
 	if test -z "$GCC"; then
@@ -392,6 +394,7 @@ mips-sony-bsd|mips-sony-newsos4)
 	AC_DEFINE(WITH_ABBREV_NO_TTY)
 	AC_CHECK_FUNCS(getluid setluid)
 	MANTYPE=man
+	TEST_SHELL=ksh
 	;;
 *-*-unicosmk*)
 	AC_DEFINE(NO_SSH_LASTLOG)

@@ -1,3 +1,6 @@
+20040620
+ - (tim) [configure.ac Makefile.in] Only change TEST_SHELL on broken platforms.
+
 20040619
  - (dtucker) [auth-pam.c] Don't use PAM namespace for
     pam_password_change_required either.
