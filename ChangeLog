@@ -49,6 +49,7 @@
      simplify session close: no more delayed session_close, no more 
      blocking wait() calls.
  - (bal) removed two unsed headers in openbsd-compat/bsd-misc.c 
+ - (bal) seed_init() and seed_rng() required in ssh-keyscan.c
 
 20011007
  - (bal) ssh-copy-id corrected permissions for .ssh/ and authorized_keys.
