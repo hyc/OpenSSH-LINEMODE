@@ -75,7 +75,7 @@ seed_rng(void)
 	if (pipe(p) == -1)
 		fatal("pipe: %s", strerror(errno));
 
-	old_sigchld = mysignal(SIGCHLD, SIG_DFL);
+	old_sigchld = signal(SIGCHLD, SIG_DFL);
 	if ((pid = fork()) == -1)
 		fatal("Couldn't fork: %s", strerror(errno));
 	if (pid == 0) {
@@ -116,7 +116,7 @@ seed_rng(void)
 	if (waitpid(pid, &ret, 0) == -1)
 	       fatal("Couldn't wait for ssh-rand-helper completion: %s", 
 		   strerror(errno));
-	mysignal(SIGCHLD, old_sigchld);
+	signal(SIGCHLD, old_sigchld);
 
 	/* We don't mind if the child exits upon a SIGPIPE */
 	if (!WIFEXITED(ret) && 

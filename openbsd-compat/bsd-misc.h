@@ -97,4 +97,10 @@ pid_t tcgetpgrp(int);
 int tcsendbreak(int, int);
 #endif
 
+/* wrapper for signal interface */
+typedef void (*mysig_t)(int);
+mysig_t mysignal(int sig, mysig_t act);
+
+#define signal(a,b) mysignal(a,b)
+
 #endif /* _BSD_MISC_H */
