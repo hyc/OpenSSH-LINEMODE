@@ -68,7 +68,7 @@ LIBSSH_OBJS=authfd.o authfile.o bufaux.o buffer.o canohost.o channels.o \
 	key.o dispatch.o kex.o mac.o uuencode.o misc.o \
 	rijndael.o ssh-dss.o ssh-rsa.o dh.o kexdh.o kexgex.o \
 	kexdhc.o kexgexc.o scard.o msg.o progressmeter.o dns.o \
-	entropy.o
+	entropy.o scard-opensc.o 
 
 SSHOBJS= ssh.o readconf.o clientloop.o sshtty.o \
 	sshconnect.o sshconnect1.o sshconnect2.o
