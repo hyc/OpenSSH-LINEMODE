@@ -471,7 +471,8 @@ client_process_net_input(fd_set * readset)
 void
 client_process_input(fd_set * readset)
 {
-	int len, pid;
+	int len;
+	pid_t pid;
 	char buf[8192], *s;
 
 	/* Read input from stdin. */
