@@ -19,6 +19,10 @@
    - markus@cvs.openbsd.org 2004/08/26 16:00:55
      [ssh.1 sshd.8]
      get rid of references to rhosts authentication; with jmc@
+   - djm@cvs.openbsd.org 2004/08/28 01:01:48
+     [sshd.c]
+     don't erroneously close stdin for !reexec case, from Dave Johnson;
+     ok markus@
 
 20040828
  - (dtucker) [openbsd-compat/mktemp.c] Remove superfluous Cygwin #ifdef; from
