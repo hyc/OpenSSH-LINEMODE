@@ -424,11 +424,10 @@ seed_rng(void)
 void
 seed_rng(void)
 {
-	if (!RAND_status()) {
-		debug("Seeding random number generator.");
-		debug("%i bytes from system calls", (int)stir_from_system());
-		debug("%i bytes from programs", (int)stir_from_programs());
-		debug("OpenSSL random status is now %i\n", RAND_status());
-	}
+	debug("Seeding random number generator.");
+	debug("OpenSSL random status is now %i\n", RAND_status());
+	debug("%i bytes from system calls", (int)stir_from_system());
+	debug("%i bytes from programs", (int)stir_from_programs());
+	debug("OpenSSL random status is now %i\n", RAND_status());
 }
 #endif /* defined(EGD_SOCKET) || defined(RANDOM_POOL) */
