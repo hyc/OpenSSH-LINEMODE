@@ -1,3 +1,6 @@
+20040311
+ - (djm) [configure.ac] Add standard license to configure.ac; ok ben, dtucker
+
 20040310
  - (dtucker) [openbsd-compat/fake-rfc2553.h] Bug #812: #undef getaddrinfo
    before redefining it, silences warnings on Tru64.
