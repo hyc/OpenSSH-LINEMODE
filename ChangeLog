@@ -135,6 +135,7 @@
  - (stevesk) sync misc.h
  - (stevesk) more sync for session.c
  - (stevesk) sync servconf.h (comments)
+ - (tim) [contrib/caldera/openssh.spec] sync with Caldera
 
 20010629
  - (bal) Removed net_aton() since we don't use it any more
