@@ -5,6 +5,9 @@
    Redhat
  - (djm) Redhat initscript config sanity checking from Pekka Savola 
    <pekkas@netcore.fi>
+ - (djm) Clear supplemental groups at sshd start to prevent them from 
+   being propogated to random PAM modules. Based on patch from Redhat via
+   Pekka Savola <pekkas@netcore.fi>
 
 20010914
  - (bal) OpenBSD CVS Sync
