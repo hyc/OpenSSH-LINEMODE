@@ -8,6 +8,7 @@
    CLOUSEAU
  - (djm) Bug #245: TTY problems on Solaris. Fix by stevesk@ and 
    dtucker@zip.com.au
+ - (djm) AIX package builder update from dtucker@zip.com.au
 
 20030225
  - (djm) Fix some compile errors spotted by dtucker and his fabulous 
