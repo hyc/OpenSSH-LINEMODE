@@ -1,6 +1,8 @@
 20050306
  - (dtucker) [monitor.c] Bug #125 comment #47: fix errors returned by monitor
    when attempting to audit disconnect events.  Reported by Phil Dibowitz.
+ - (dtucker) [session.c sshd.c] Bug #125 comment #49: Send disconnect audit
+   events earlier, prevents mm_request_send errors reported by Matt Goebel.
 
 20050305
  - (djm) [contrib/cygwin/README] Improve Cygwin build documentation. Patch 
