@@ -137,6 +137,9 @@
      successful authentication (the drafts requirement).
      serverloop/clientloop now send a 'UNIMPLEMENTED' message instead 
      of exiting.
+   - markus@cvs.openbsd.org 2002/01/11 20:14:11
+     [auth2-chall.c auth-skey.c]
+     use strlcpy not strlcat; mouring@
 
 
 20020121
