@@ -1,3 +1,9 @@
+20010612
+  - markus@cvs.openbsd.org 2001/06/10 11:29:20
+     [dispatch.c]
+     we support rekeying
+     protocol errors are fatal.
+
 20010611
  - (bal) NeXT/MacOS X lack libgen.h and dirname().  Patch by Mark Miller 
    <markm@swoon.net> 
