@@ -1,3 +1,9 @@
+20020311
+ - (tim) [contrib/solaris/buildpkg.sh, contrib/solaris/README] Updated to
+   build on all platforms that support SVR4 style package tools. Now runs
+   from build dir. Parts are based on patches from Antonio Navarro, and
+   Darren Tucker.
+
 20020308
  - (djm) Revert bits of Markus' OpenSSL compat patch which was 
    accidentally committed.
