@@ -1,3 +1,6 @@
+20031106
+ - (djm) Clarify UsePAM consequences a little more
+
 20031103
  - (dtucker) [contrib/cygwin/ssh-host-config] Ensure entries in /etc/services
    are created correctly with CRLF line terminations.  Patch from vinschen at
