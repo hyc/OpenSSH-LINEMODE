@@ -324,6 +324,9 @@ if test -z "$no_libsocket" ; then
 	AC_CHECK_LIB(socket, main, , )
 fi
 
+dnl SCO OS3 needs this for libwrap
+AC_CHECK_LIB(rpc, innetgr, LIBS="-lrpc -lyp -lrpc $LIBS" , , -lyp -lrpc)
+
 AC_CHECK_LIB(gen, getspnam, LIBS="$LIBS -lgen")
 AC_CHECK_LIB(z, deflate, ,AC_MSG_ERROR([*** zlib missing - please install first or check config.log ***]))
 AC_CHECK_LIB(util, login, AC_DEFINE(HAVE_LIBUTIL_LOGIN) LIBS="$LIBS -lutil")
