@@ -43,7 +43,7 @@
 #define WCOREDUMP(w) 	((_W_INT(w)) & WCOREFLAG)
 
 /* Prototype */
-pid_t waitpid(int pid, int *stat_loc, int options);
+pid_t waitpid(int, int *, int);
 
 #endif /* !HAVE_WAITPID */
 #endif /* _BSD_WAITPID_H */

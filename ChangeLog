@@ -17,6 +17,7 @@
  - (djm) Remove IPv4 by default hack now that we can specify AF in config
  - (djm) Tidy and trim TODO
  - (djm) Sync openbsd-compat/ with OpenBSD CVS head
+ - (djm) Big KNF on openbsd-compat/
 
 20030517
  - (bal) strcat -> strlcat on openbsd-compat/realpath.c (rev 1.8 OpenBSD)

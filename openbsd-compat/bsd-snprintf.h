@@ -8,11 +8,11 @@
 #include <sys/types.h> /* For size_t */
 
 #ifndef HAVE_SNPRINTF
-int snprintf(char *str, size_t count, const char *fmt, ...);
+int snprintf(char *, size_t, const char *, ...);
 #endif /* !HAVE_SNPRINTF */
 
 #ifndef HAVE_VSNPRINTF
-int vsnprintf(char *str, size_t count, const char *fmt, va_list args);
+int vsnprintf(char *, size_t, const char *, va_list);
 #endif /* !HAVE_SNPRINTF */
 
 

@@ -38,10 +38,10 @@
 
 #include <io.h>
 
-int binary_open(const char *filename, int flags, ...);
+int binary_open(const char *, int , ...);
 int binary_pipe(int fd[2]);
-int check_nt_auth(int pwd_authenticated, struct passwd *pw);
-int check_ntsec(const char *filename);
+int check_nt_auth(int, struct passwd *);
+int check_ntsec(const char *);
 void register_9x_service(void);
 
 #define open binary_open

@@ -1,3 +1,5 @@
+/* XXX - author */
+
 /*
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions
@@ -40,7 +42,7 @@ posix_wait(int *status)
 	if (status)
 		*status = (int) statusp.w_status;
 
-	return wait_pid;
+	return (wait_pid);
 }
 
 int
