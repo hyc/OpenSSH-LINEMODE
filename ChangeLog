@@ -1,3 +1,6 @@
+20011003
+ - (bal) CVS ID fix up in version.h
+
 20011001
  - (stevesk) loginrec.c: fix type conversion problems exposed when using
    64-bit off_t.
