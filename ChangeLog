@@ -28,6 +28,9 @@
      [key.h sftp-common.c sftp-common.h sftp-server.c sshconnect.c sshd.c]
      [ssh-dss.c ssh-rsa.c uuencode.c uuencode.h]
      constify. ok markus@ & djm@
+   - dtucker@cvs.openbsd.org 2003/11/12 10:12:15
+     [scp.c]
+     When called with -q, pass -q to ssh; suppresses SSH2 banner.  ok markus@
 
 20031115
  - (dtucker) [regress/agent-ptrace.sh] Test for GDB output from Solaris and
