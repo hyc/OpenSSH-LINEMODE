@@ -25,7 +25,7 @@ RCSID("$Id$");
 #ifdef HAVE___PROGNAME
 extern char *__progname;
 #else /* HAVE___PROGNAME */
-const char *__progname = "sshd";
+static const char *__progname = "sshd";
 #endif /* HAVE___PROGNAME */
 
 static LogLevel log_level = SYSLOG_LEVEL_INFO;

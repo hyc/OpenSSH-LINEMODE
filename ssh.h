@@ -129,6 +129,9 @@
 #ifndef SSH_PRNG_SEED_FILE
 # define SSH_PRNG_SEED_FILE      SSH_USER_DIR"/prng_seed"
 #endif /* SSH_PRNG_SEED_FILE */
+#ifndef SSH_PRNG_COMMAND_FILE
+# define SSH_PRNG_COMMAND_FILE   ETCDIR "/ssh_prng_cmds"
+#endif /* SSH_PRNG_COMMAND_FILE */
 
 /*
  * Per-user file containing host keys of known hosts.  This file need not be
