@@ -10,6 +10,7 @@
    - [regress/rekey.sh] Remove dependence on /dev/zero (not all platforms have
      it).  The sparse file will take less disk space too.
    - [regress/sftp-cmds.sh] Ensure file used for test are readable.
+   - [regress/stderr-after-eof.sh] Search for a usable checksum program.
 
 20030903
  - (djm) OpenBSD CVS Sync
