@@ -854,6 +854,22 @@ AC_ARG_WITH(tcp-wrappers,
 	]
 )
 
+# Check whether user wants libedit support
+LIBEDIT_MSG="no"
+AC_ARG_WITH(libedit,
+	[  --with-libedit[[=PATH]]      Enable libedit support for sftp],
+	[ if test "x$withval" != "xno" ; then
+		AC_CHECK_LIB(edit, el_init,
+			[ AC_DEFINE(USE_LIBEDIT, [], [Use libedit for sftp])
+			  LIBEDIT="-ledit -lcurses"
+			  LIBEDIT_MSG="yes"
+			  AC_SUBST(LIBEDIT)
+			],
+			[], [-lcurses]
+		)
+	fi ]
+)
+
 dnl    Checks for library functions. Please keep in alphabetical order
 AC_CHECK_FUNCS(\
 	arc4random __b64_ntop b64_ntop __b64_pton b64_pton bcopy \
@@ -3046,6 +3062,7 @@ echo "                 Smartcard support: $SCARD_MSG"
 echo "                     S/KEY support: $SKEY_MSG"
 echo "              TCP Wrappers support: $TCPW_MSG"
 echo "              MD5 password support: $MD5_MSG"
+echo "                   libedit support: $LIBEDIT_MSG"
 echo "       IP address in \$DISPLAY hack: $DISPLAY_HACK_MSG"
 echo "           Translate v4 in v6 hack: $IPV4_IN6_HACK_MSG"
 echo "                  BSD Auth support: $BSD_AUTH_MSG"

@@ -8,6 +8,8 @@
      [clientloop.c clientloop.h ssh.1 ssh.c]
      add basic control of a running multiplex master connection; including the
      ability to check its status and request it to exit; ok markus@
+ - (dtucker) [INSTALL Makefile.in configure.ac] Add --with-libedit configure
+   option and supporting makefile bits and documentation.
 
 20041105
  - (dtucker) OpenBSD CVS Sync
