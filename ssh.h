@@ -486,6 +486,12 @@ void    fatal_remove_cleanup(void (*proc) (void *context), void *context);
  */
 char   *tilde_expand_filename(const char *filename, uid_t my_uid);
 
+/* remove newline at end of string */
+char	*chop(char *s);
+
+/* set filedescriptor to non-blocking */
+void	set_nonblock(int fd);
+
 /*
  * Performs the interactive session.  This handles data transmission between
  * the client and the program.  Note that the notion of stdin, stdout, and
