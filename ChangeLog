@@ -40,6 +40,10 @@
      thanks to wilfried@
    - markus@cvs.openbsd.org 2002/03/04 12:43:06
      [auth-passwd.c auth-rh-rsa.c auth-rhosts.c]
+   - markus@cvs.openbsd.org 2002/03/04 13:10:46
+     [misc.c]
+     error-> debug, because O_NONBLOCK for /dev/null causes too many different 
+     errnos; ok stevesk@, deraadt@
      unused include
 
 20020226
