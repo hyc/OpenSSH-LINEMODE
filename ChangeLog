@@ -18,6 +18,9 @@
    - stevesk@cvs.openbsd.org 2002/04/21 16:25:06
      [sshconnect1.c]
      spelling in error message; ok markus@
+   - markus@cvs.openbsd.org 2002/04/22 06:15:47
+     [radix.c]
+     fix check for overflow
 
 20020421
  - (tim) [entropy.c.] Portability fix for SCO Unix 3.2v4.x (SCO OSR 3.0).
