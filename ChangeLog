@@ -21,6 +21,8 @@
      [compat.c compat.h sshd.c]
      specifically version match on ssh scanners.  do not log scan 
      information to the console
+   - djm@cvs.openbsd.org      2001/03/19 12:10:17
+     Document permitopen authorized_keys option; ok markus@
 
 20010318
  - (bal) Fixed scp type casing issue which causes "scp: protocol error: 
