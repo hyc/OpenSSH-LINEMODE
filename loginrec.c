@@ -156,16 +156,6 @@
 
 #include "includes.h"
 
-#if HAVE_UTMP_H
-# include <utmp.h>
-#endif
-#if HAVE_UTMPX_H
-# include <utmpx.h>
-#endif
-#if HAVE_LASTLOG_H
-# include <lastlog.h>
-#endif
-
 #include "ssh.h"
 #include "xmalloc.h"
 #include "loginrec.h"
