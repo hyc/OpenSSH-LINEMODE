@@ -12,6 +12,9 @@
    - markus@cvs.openbsd.org 2002/06/08 05:40:01
      [readconf.c]
      just warn about Deprecated options for now
+   - markus@cvs.openbsd.org 2002/06/08 05:41:18
+     [ssh_config]
+     remove FallBackToRsh/UseRsh
 
 20020607
  - (bal) Removed --{enable/disable}-suid-ssh
