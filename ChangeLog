@@ -23,6 +23,8 @@
      spotted by cschneid AT cschneid.com
  - (djm) [openbsd-compat/sys-queue.h] Sync with OpenBSD, needed for 
    above change
+ - (djm) [configure.ac] Check whether libroken is required when building 
+   with Heimdal
 
 20040419
  - (dtucker) OpenBSD CVS Sync

@@ -2207,7 +2207,10 @@ AC_ARG_WITH(kerberos5,
 				       [ char *tmp = heimdal_version; ],
 				       [ AC_MSG_RESULT(yes)
 					 AC_DEFINE(HEIMDAL)
-					 K5LIBS="-lkrb5 -ldes -lcom_err -lasn1 -lroken"
+					 K5LIBS="-lkrb5 -ldes"
+					 K5LIBS="$K5LIBS -lcom_err -lasn1"
+					 AC_CHECK_LIB(roken, net_write, 
+					   [K5LIBS="$K5LIBS -lroken"])
 				       ],
 				       [ AC_MSG_RESULT(no)
 					 K5LIBS="-lkrb5 -lk5crypto -lcom_err"
