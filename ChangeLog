@@ -10,6 +10,9 @@
      [sshd.c]
      more specific error message when /var/empty has wrong permissions;
      bug #46, map@appgate.com; ok henning@, provos@, stevesk@
+   - markus@cvs.openbsd.org 2003/01/28 16:11:52
+     [scp.1]
+     document -l; pekkas@netcore.fi
 
 20030211
  - (djm) Cygwin needs libcrypt too. Patch from vinschen@redhat.com
