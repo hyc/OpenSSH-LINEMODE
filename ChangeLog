@@ -29,6 +29,7 @@
      kill ssh process on receipt of signal; ok markus@
  - (djm) Update to fix of bug #584: lock card before return. 
    From larsch@trustcenter.de
+ - (djm) Always use mysignal() for SIGALRM
 
 20030603
  - (djm) Replace setproctitle replacement with code derived from 
