@@ -105,6 +105,9 @@
    - markus@cvs.openbsd.org 2001/06/29 07:11:01
      [ssh-keygen.c]
      initialize early
+   - stevesk@cvs.openbsd.org 2001/06/29 18:38:44
+     [clientloop.c]
+     sync function definition with declaration; ok markus@
  
 20010629
  - (bal) Removed net_aton() since we don't use it any more
