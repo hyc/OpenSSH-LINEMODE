@@ -198,15 +198,12 @@ distclean:
 	(cd openbsd-compat && $(MAKE) distclean)
 	(cd scard && $(MAKE) distclean)
 
-veryclean:
+veryclean: distclean
 	rm -f configure config.h.in *.0
-	rm -f *.o *.a $(TARGETS) logintest config.cache config.log 
-	rm -f *.out core
-	rm -f Makefile config.h config.status ssh_prng_cmds *~
-	(cd openbsd-compat && $(MAKE) distclean)
-	(cd scard && $(MAKE) distclean)
 
-mrproper: distclean
+mrproper: veryclean
+
+realclean: veryclean
 
 catman-do:
 	@for f in $(MANPAGES_IN) ; do \
