@@ -27,6 +27,7 @@
    - djm@cvs.openbsd.org     2001/03/19 05:49:52
      [ssh.1]
      document PreferredAuthentications option; ok markus@
+ - (bal) Minor NeXT fixed.  Forgot to #undef NGROUPS_MAX
 
 20010318
  - (bal) Fixed scp type casing issue which causes "scp: protocol error: 
