@@ -12,6 +12,9 @@
    - markus@cvs.openbsd.org 2004/01/13 19:23:15
      [compress.c session.c]
      -Wall; ok henning
+   - markus@cvs.openbsd.org 2004/01/13 19:45:15
+     [compress.c]
+     cast for portability; millert@
 
 20040114
  - (dtucker) [auth-pam.c] Have monitor die if PAM authentication thread exits
