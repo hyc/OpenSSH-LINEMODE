@@ -121,6 +121,9 @@
      [authfd.c authfd.h ssh-add.1 ssh-add.c ssh-agent.c]
      ssh-add -t life,  Set lifetime (in seconds) when adding identities; 
      ok provos@
+   - stevesk@cvs.openbsd.org 2002/06/06 01:09:41
+     [monitor.h]
+     no trailing comma in enum; china@thewrittenword.com
 
 20020604
  - (stevesk) [channels.c] bug #164 patch from YOSHIFUJI Hideaki (changed
