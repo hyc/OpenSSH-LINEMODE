@@ -9,6 +9,9 @@
      remove unnecessary Ic's;
      kill whitespace at EOL;
      ok djm@
+   - markus@cvs.openbsd.org 2004/01/13 19:23:15
+     [compress.c session.c]
+     -Wall; ok henning
 
 20040114
  - (dtucker) [auth-pam.c] Have monitor die if PAM authentication thread exits
