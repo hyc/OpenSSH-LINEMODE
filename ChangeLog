@@ -21,6 +21,10 @@
      [readconf.c ssh.1]
      change RhostsRSAAuthentication and RhostsAuthentication default to no
      since ssh is no longer setuid root by default; ok markus@
+   - stevesk@cvs.openbsd.org 2002/06/10 21:21:10
+     [ssh_config]
+     update defaults for RhostsRSAAuthentication and RhostsAuthentication
+     here too (all options commented out with default value).
 
 20020609
  - (bal) OpenBSD CVS Sync
