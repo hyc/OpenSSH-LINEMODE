@@ -1,3 +1,10 @@
+20030618
+ - (djm) OpenBSD CVS Sync
+   - markus@cvs.openbsd.org 2003/06/12 07:57:38
+     [monitor.c sshlogin.c sshpty.c]
+     typos; dtucker at zip.com.au
+
+
 20030614
  - (djm) Update license on fake-rfc2553.[ch]; ok itojun@
 
