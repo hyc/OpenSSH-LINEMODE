@@ -3,7 +3,13 @@ RCSID("$Id$");
 
 #include "ssh.h"
 #include "xmalloc.h"
+
+#ifdef HAVE_OPENSSL
+#include <openssl/md5.h>
+#endif
+#ifdef HAVE_SSL
 #include <ssl/md5.h>
+#endif
 
 #define FPRINT "%02x:%02x:%02x:%02x:%02x:%02x:%02x:%02x:%02x:%02x:%02x:%02x:%02x:%02x:%02x:%02x"
 
