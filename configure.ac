@@ -1015,7 +1015,7 @@ AC_DEFINE_UNQUOTED(ENTROPY_TIMEOUT_MSEC, $entropy_timeout)
 
 OPATH=$PATH
 PATH=/bin:/usr/bin
-test -L /bin && PATH=/usr/bin
+/bin/test -L /bin && PATH=/usr/bin
 test -d /sbin && PATH=$PATH:/sbin
 test -d /usr/sbin && PATH=$PATH:/usr/sbin
 PATH=$PATH:/etc:$OPATH
