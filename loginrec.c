@@ -155,6 +155,7 @@
 #include "packet.h"
 #include "canohost.h"
 #include "auth.h"
+#include "buffer.h"
 
 #ifdef HAVE_UTIL_H
 # include <util.h>
