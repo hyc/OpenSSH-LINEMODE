@@ -25,6 +25,8 @@
    - djm@cvs.openbsd.org 2004/08/11 12:01:16
      [sshlogin.c]
      make store_lastlog_message() static to appease -Wall; ok markus
+ - (dtucker) [sshd.c] Clear loginmsg in postauth monitor, prevents doubling
+    messages generated before the postauth privsep split.
 
 20040720
  - (djm) OpenBSD CVS Sync
