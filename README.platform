@@ -13,6 +13,15 @@ Accounts in this state must have their passwords reset manually by the
 administrator.  As a precaution, it is recommended that the administrative
 passwords be reset before upgrading from OpenSSH <3.8.
 
+As of OpenSSH 4.0, configure will attempt to detect if your version
+and maintenance level of AIX has a working getaddrinfo, and will use it
+if found.  This will enable IPv6 support.  If for some reason configure
+gets it wrong, or if you want to build binaries to work on earlier MLs
+than the build host then you can add "-DBROKEN_GETADDRINFO" to CFLAGS
+to force the previous IPv4-only behaviour.
+
+IPv6 known to work: 5.2ML2 5.2ML5
+IPv6 known broken: 4.3.3ML11 5.1ML4
 
 Cygwin
 ------

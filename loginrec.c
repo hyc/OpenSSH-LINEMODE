@@ -192,6 +192,8 @@ int lastlog_get_entry(struct logininfo *li);
 int wtmp_get_entry(struct logininfo *li);
 int wtmpx_get_entry(struct logininfo *li);
 
+extern Buffer loginmsg;
+
 /* pick the shortest string */
 #define MIN_SIZEOF(s1,s2) (sizeof(s1) < sizeof(s2) ? sizeof(s1) : sizeof(s2))
 
@@ -441,7 +443,7 @@ login_write(struct logininfo *li)
 #endif
 #ifdef CUSTOM_SYS_AUTH_RECORD_LOGIN
 	if (li->type == LTYPE_LOGIN && 
-	   !sys_auth_record_login(li->username,li->hostname,li->line))
+	   !sys_auth_record_login(li->username,li->hostname,li->line, &loginmsg))
 		logit("Writing login record failed for %s", li->username);
 #endif
 #ifdef SSH_AUDIT_EVENTS
