@@ -29,7 +29,6 @@ RCSID("$Id$");
 #include <shadow.h>
 
 #include "auth.h"
-#include "auth-shadow.h"
 #include "buffer.h"
 #include "log.h"
 
