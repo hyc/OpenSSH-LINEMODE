@@ -130,7 +130,8 @@
      stop listening to channels, detach channel users (e.g. sessions).
      wait for children (i.e. dying sessions), send exit messages,
      cleanup all channels.
- 
+ - (bal) forget a few new files in sync up.
+
 20010629
  - (bal) Removed net_aton() since we don't use it any more
  - (bal) Fixed _DISABLE_VPOSIX in readpassphrase.c.
