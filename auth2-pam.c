@@ -107,10 +107,12 @@ do_pam_conversation_kbd_int(int num_msg, const struct pam_message **msg,
 	packet_send();
 	packet_write_wait();
 
-	/* Grabbing control of execution and spinning until we get what
+	/*
+	 * Grabbing control of execution and spinning until we get what
 	 * we want is probably rude, but it seems to work properly, and
 	 * the client *should* be in lock-step with us, so the loop should
-	 * only be traversed once. */
+	 * only be traversed once.
+	 */
 	while(context_pam2.finished == 0) {
 		done = 1;
 		dispatch_run(DISPATCH_BLOCK, &done, appdata_ptr);
