@@ -1,3 +1,9 @@
+20041211
+ - (dtucker) OpenBSD CVS Sync
+   - markus@cvs.openbsd.org 2004/12/06 16:00:43
+     [bufaux.c]
+     use 0x00 not \0 since buf[] is a bignum
+
 20041208
  - (tim) [configure.ac] Comment some non obvious platforms in the
  target-specific case statement. Suggested and OK by dtucker@
