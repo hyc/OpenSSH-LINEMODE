@@ -1,5 +1,9 @@
 20020611
  - (bal) ssh-agent.c RCSD fix (|unexpand already done)
+ - (bal) OpenBSD CVS Sync
+   - stevesk@cvs.openbsd.org 2002/06/09 22:15:15
+     [ssh.1]
+     update for no setuid root and ssh-keysign; ok deraadt@
 
 20020609
  - (bal) OpenBSD CVS Sync
