@@ -51,6 +51,10 @@
   - djm@cvs.openbsd.org 2002/12/06 05:20:02
      [sftp.1]
      Fix cut'n'paste error, spotted by matthias.riese@b-novative.de; ok deraadt@
+   - millert@cvs.openbsd.org 2002/12/09 16:50:30
+     [ssh.c]
+     Avoid setting optind to 0 as GNU getopt treats that like we do optreset.
+     markus@ OK
 
 20021205
  - (djm) PERL-free fixpaths from stuge-openssh-unix-dev@cdy.org
