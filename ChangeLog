@@ -4,6 +4,9 @@
      [Makefile banner.sh]
      Test missing banner file, suppression of banner with ssh -q, check return
      code from ssh.  ok markus@
+   - jmc@cvs.openbsd.org 2003/11/07 10:16:44
+     [ssh-com.sh]
+     adress -> address, and a few more; all from Jonathon Gray;
 
 20040128
  - (dtucker) [regress/README.regress] Add tcpwrappers issue, noted by tim@
