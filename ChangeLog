@@ -52,7 +52,10 @@
    - markus@cvs.openbsd.org 2002/02/15 23:11:26
      [session.c]
      split do_child(), ok mouring@
-
+   - markus@cvs.openbsd.org 2002/02/16 00:51:44
+     [session.c]
+     typo
+ - (bal) CVS ID sync since the last two patches were merged mistakenly
 
 20020218
  - (tim) newer config.guess from ftp://ftp.gnu.org/gnu/config/config.guess
