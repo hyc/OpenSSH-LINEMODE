@@ -33,6 +33,9 @@
      [dh.c]
      use <= instead of < in dh_estimate; ok provos/hshoexer; 
      do not return < DH_GRP_MIN
+ - (dtucker) [acconfig.h configure.ac uidswap.c] Bug #645: Check for
+   setres[ug]id() present but not implemented (eg some Linux/glibc
+   combinations).
 
 20031209
  - (dtucker) OpenBSD CVS Sync
