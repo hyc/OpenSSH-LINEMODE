@@ -8,6 +8,9 @@
  - (djm) Bug #646: Fix location of x11-ssh-askpass; Jim
  - (dtucker) [openbsd-compat/port-aix.h] Bug #640: Don't include audit.h
    unless required.  Reorder to reduce warnings.
+ - (dtucker) [session.c] Bug #643: Fix size_t -> u_int and fix null deref
+   when /etc/default/login doesn't exist or isn't readable.  Fixes from
+   jparsons-lists at saffron.net and georg.oppenberg at deu mci com.
 
 20030918
  - (djm) Bug #652: Fix empty password auth
