@@ -49,6 +49,8 @@ extern	char   cray_tmpdir[];			/* cray tmpdir */
 #ifndef MAXHOSTNAMELEN
 #define MAXHOSTNAMELEN  64
 #endif
+#include <sys/ttold.h>
+#define TIOCGPGRP (tIOC|20)
 #endif
 
 #endif /* _BSD_CRAY_H */
