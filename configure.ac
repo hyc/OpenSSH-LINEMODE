@@ -1859,11 +1859,10 @@ AC_ARG_WITH(dns,
 	[  --with-dns              Support for fetching keys from DNS (experimental)],
 	[
 		if test "x$withval" != "xno" ; then
-			DNS_MSG="no (system lacks getrrsetbyname)"
-			AC_SEARCH_LIBS(getrrsetbyname, resolv, [
-				AC_DEFINE(DNS)
-				DNS_MSG="yes"
-			])
+			DNS_MSG="yes"
+			AC_DEFINE(DNS)
+			AC_SEARCH_LIBS(getrrsetbyname, resolv, 
+				[AC_DEFINE(HAVE_GETRRSETBYNAME)])
 		fi
 	]
 )

@@ -383,8 +383,8 @@
 /* Define if DNS support is to be activated */
 #undef DNS
 
-/* Define if -llwres is to be used */
-#undef LWRES
+/* Define if getrrsetbyname() exists */
+#undef HAVE_GETRRSETBYNAME
 
 @BOTTOM@
 
