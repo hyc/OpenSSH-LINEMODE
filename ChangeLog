@@ -1,3 +1,6 @@
+20020717
+ - (bal) aixbff package updated by dtucker@zip.com.au
+
 20020716
  - (tim) [contrib/solaris/opensshd.in] Only kill sshd if .pid file found
 
