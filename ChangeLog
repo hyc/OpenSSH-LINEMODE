@@ -16,6 +16,10 @@
    - jmc@cvs.openbsd.org 2004/04/19 16:12:14
      [ssh_config.5]
      kill whitespace at eol;
+   - djm@cvs.openbsd.org 2004/04/19 21:51:49
+     [ssh.c]
+     fix idiot typo that i introduced in my last commit;
+     spotted by cschneid AT cschneid.com
  - (djm) [openbsd-compat/sys-queue.h] Sync with OpenBSD, needed for above change
 
 20040419
