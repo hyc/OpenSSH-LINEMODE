@@ -374,7 +374,7 @@ void start_pam(const char *user)
 	 * not even need one (for tty-less connections)
 	 * Kludge: Set a fake PAM_TTY
 	 */
-	pam_retval = pam_set_item(__pamh, PAM_TTY, "ssh");
+	pam_retval = pam_set_item(__pamh, PAM_TTY, "NODEVssh");
 	if (pam_retval != PAM_SUCCESS)
 		fatal("PAM set tty failed[%d]: %.200s",
 		    pam_retval, PAM_STRERROR(__pamh, pam_retval));
