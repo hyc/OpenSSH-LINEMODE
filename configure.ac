@@ -1226,6 +1226,10 @@ AC_ARG_WITH(ssl-dir,
 	[  --with-ssl-dir=PATH     Specify path to OpenSSL installation ],
 	[
 		if test "x$withval" != "xno" ; then
+			case "$withval" in
+				# Relative paths
+				./*|../*)	withval="`pwd`/$withval"
+			esac
 			if test -d "$withval/lib"; then
 				if test -n "${need_dash_r}"; then
 					LDFLAGS="-L${withval}/lib -R${withval}/lib ${LDFLAGS}"
