@@ -1,3 +1,7 @@
+20020123
+ - (djm) Fix non-standard shell syntax in autoconf. Patch from 
+   Dave Dykstra <dwd@bell-labs.com>
+
 20020122
  - (djm) autoconf hacking:
    - We don't support --without-zlib currently, so don't allow it.
