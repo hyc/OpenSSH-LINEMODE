@@ -6,6 +6,9 @@
    - markus@cvs.openbsd.org 2001/04/08 13:03:00
      [ssh-add.c]
      init pointers with NULL, thanks to danimal@danimal.org
+   - markus@cvs.openbsd.org 2001/04/08 11:27:33
+     [clientloop.c]
+     leave_raw_mode if ssh2 "session" is closed
 
 20010408
  - OpenBSD CVS Sync
