@@ -1,3 +1,9 @@
+20010409
+ - OpenBSD CVS Sync
+   - stevesk@cvs.openbsd.org 2001/04/08 16:01:36
+     [sshd.8]
+     document ListenAddress addr:port
+
 20010408
  - OpenBSD CVS Sync
    - stevesk@cvs.openbsd.org 2001/04/06 22:12:47
