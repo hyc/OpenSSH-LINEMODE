@@ -1,3 +1,6 @@
+20011005
+ - (bal) AES works under Cray, no more hack. 
+
 20011004
  - (bal) nchan2.ms resync.  BSD License applied.
 
