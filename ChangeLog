@@ -4,6 +4,10 @@
      [sftp.c]
      command editing and history support via libedit; ok markus@
      thanks to hshoexer@ and many testers on tech@ too
+   - djm@cvs.openbsd.org 2004/11/07 00:01:46
+     [clientloop.c clientloop.h ssh.1 ssh.c]
+     add basic control of a running multiplex master connection; including the
+     ability to check its status and request it to exit; ok markus@
 
 20041105
  - (dtucker) OpenBSD CVS Sync
