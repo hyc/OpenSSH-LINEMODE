@@ -2727,7 +2727,6 @@ if test ! -z "$superuser_path" ; then
 echo "          sshd superuser user PATH: $J"
 fi
 echo "                    Manpage format: $MANTYPE"
-echo "                       DNS support: $DNS_MSG"
 echo "                       PAM support: $PAM_MSG"
 echo "                 KerberosV support: $KRB5_MSG"
 echo "                 Smartcard support: $SCARD_MSG"

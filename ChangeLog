@@ -1,6 +1,7 @@
 20040102
  - (djm) OSX/Darwin needs BIND_8_COMPAT to build getrrsetbyname. Report from
    jakob@
+ - (djm) Remove useless DNS support configure summary message. from jakob@
 
 20031231
  - (dtucker) OpenBSD CVS Sync
