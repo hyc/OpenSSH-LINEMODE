@@ -8,6 +8,8 @@
    Bug #670: add strtoul() to openbsd-compat for platforms lacking it.  ok djm@
  - (dtucker) [configure.ac] Bug #715: Set BROKEN_SETREUID and BROKEN_SETREGID
    on Reliant Unix.  Patch from Robert.Dahlem at siemens.com.
+ - (dtucker) [configure.ac] Bug #710: Check for dlsym() in libdl on
+   Reliant Unix.  Based on patch from Robert.Dahlem at siemens.com.
 
 20031003
  - (dtucker) OpenBSD CVS Sync

@@ -297,6 +297,7 @@ mips-sony-bsd|mips-sony-newsos4)
 	CPPFLAGS="$CPPFLAGS -I/usr/local/include"
 	# /usr/ucblib MUST NOT be searched on ReliantUNIX
 	LDFLAGS="$LDFLAGS -L/usr/local/lib"
+	AC_CHECK_LIB(dl, dlsym, ,)
 	IPADDR_IN_DISPLAY=yes
 	AC_DEFINE(USE_PIPES)
 	AC_DEFINE(IP_TOS_IS_BROKEN)
