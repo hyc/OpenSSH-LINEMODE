@@ -3,6 +3,9 @@
    - markus@cvs.openbsd.org 2001/10/04 14:34:16
      [key.c]
      call OPENSSL_free() for memory allocated by openssl; from chombier@mac.com
+   - markus@cvs.openbsd.org 2001/10/04 15:05:40
+     [channels.c serverloop.c]
+     comment out bogus conditions for selecting on connection_in
 
 20011007
  - (bal) ssh-copy-id corrected permissions for .ssh/ and authorized_keys.
