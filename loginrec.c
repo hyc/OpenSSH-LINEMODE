@@ -160,6 +160,8 @@
 #include "ssh.h"
 #include "xmalloc.h"
 #include "loginrec.h"
+#include "log.h"
+#include "atomicio.h"
 
 RCSID("$Id$");
 

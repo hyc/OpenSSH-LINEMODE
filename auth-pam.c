@@ -27,7 +27,10 @@
 #ifdef USE_PAM
 #include "ssh.h"
 #include "xmalloc.h"
+#include "log.h"
 #include "servconf.h"
+#include "canohost.h"
+#include "readpass.h"
 
 RCSID("$Id$");
 

@@ -24,9 +24,6 @@
 
 #include "includes.h"
 
-#include "ssh.h"
-#include "xmalloc.h"
-
 #include <openssl/rand.h>
 #include <openssl/sha.h>
 
@@ -34,6 +31,11 @@
 #ifdef HAVE_FLOATINGPOINT_H
 # include <floatingpoint.h>
 #endif /* HAVE_FLOATINGPOINT_H */
+
+#include "ssh.h"
+#include "xmalloc.h"
+#include "atomicio.h"
+#include "log.h"
 
 RCSID("$Id$");
 
