@@ -12,6 +12,9 @@
    - deraadt@cvs.openbsd.org 2002/06/26 15:00:32
      [monitor_wrap.c]
      more %u
+   - markus@cvs.openbsd.org 2002/06/26 22:27:32
+     [ssh-keysign.c]
+     bug #304, xfree(data) called to early; openssh@sigint.cs.purdue.edu
 
 20020626
  - (stevesk) [monitor.c] remove duplicate proto15 dispatch entry for PAM
