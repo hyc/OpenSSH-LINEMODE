@@ -7,6 +7,9 @@
    - jakob@cvs.openbsd.org 2003/11/03 09:09:41
      [sshconnect.c]
      move changed key warning into warn_changed_key(). ok markus@
+   - jakob@cvs.openbsd.org 2003/11/03 09:37:32
+     [sshconnect.c]
+     do not free static type pointer in warn_changed_key()
 
 20031115
  - (dtucker) [regress/agent-ptrace.sh] Test for GDB output from Solaris and
