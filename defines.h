@@ -288,6 +288,10 @@ struct	sockaddr_un {
 };
 #endif /* HAVE_SYS_UN_H */
 
+#ifndef HAVE_IN_ADDR_T
+typedef u_int32_t	in_addr_t;
+#endif
+
 #if defined(BROKEN_SYS_TERMIO_H) && !defined(_STRUCT_WINSIZE)
 #define _STRUCT_WINSIZE
 struct winsize {
@@ -528,6 +532,11 @@ struct winsize {
 
 #ifndef GETPGRP_VOID
 # define getpgrp() getpgrp(0)
+#endif
+
+#ifdef USE_BSM_AUDIT
+# define SSH_AUDIT_EVENTS
+# define CUSTOM_SSH_AUDIT_EVENTS
 #endif
 
 /* OPENSSL_free() is Free() in versions before OpenSSL 0.9.6 */

@@ -881,6 +881,37 @@ AC_ARG_WITH(libedit,
 	fi ]
 )
 
+AUDIT_MODULE=none
+AC_ARG_WITH(audit,
+	[  --with-audit=module     Enable EXPERIMENTAL audit support (modules=debug,bsm)],
+	[
+	  AC_MSG_CHECKING(for supported audit module)
+	  case "$withval" in
+	  bsm)
+		AC_MSG_RESULT(bsm)
+		AUDIT_MODULE=bsm
+		dnl    Checks for headers, libs and functions
+		AC_CHECK_HEADERS(bsm/audit.h, [],
+		    [AC_MSG_ERROR(BSM enabled and bsm/audit.h not found)])
+		AC_CHECK_LIB(bsm, getaudit, [],
+		    [AC_MSG_ERROR(BSM enabled and required library not found)])
+		AC_CHECK_FUNCS(getaudit, [],
+		    [AC_MSG_ERROR(BSM enabled and required function not found)])
+		# These are optional
+		AC_CHECK_FUNCS(getaudit_addr gettext)
+		AC_DEFINE(USE_BSM_AUDIT, [], [Use BSM audit module])
+		;;
+	  debug)
+		AUDIT_MODULE=debug
+		AC_MSG_RESULT(debug)
+		AC_DEFINE(SSH_AUDIT_EVENTS, [], Use audit debugging module)
+		;;
+	  *)
+		AC_MSG_ERROR([Unknown audit module $withval])
+		;;
+	esac ]
+)
+
 dnl    Checks for library functions. Please keep in alphabetical order
 AC_CHECK_FUNCS(\
 	arc4random __b64_ntop b64_ntop __b64_pton b64_pton bcopy \
@@ -1845,6 +1876,8 @@ fi
 TYPE_SOCKLEN_T
 
 AC_CHECK_TYPES(sig_atomic_t,,,[#include <signal.h>])
+
+AC_CHECK_TYPES(in_addr_t,,,[#include <netinet/in.h>])
 
 AC_CACHE_CHECK([for size_t], ac_cv_have_size_t, [
 	AC_TRY_COMPILE(
@@ -3195,3 +3228,7 @@ if test ! -z "$NO_PEERCHECK" ; then
 	echo ""
 fi
 
+if test "$AUDIT_MODULE" = "bsm" ; then
+	echo "WARNING: BSM audit support is currently considered EXPERIMENTAL."
+	echo "See the Solaris section in README.platform for details."
+fi
