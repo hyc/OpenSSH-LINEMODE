@@ -18,6 +18,13 @@
    - markus@cvs.openbsd.org 2003/04/14 14:17:50
      [channels.c sshconnect.c sshd.c ssh-keyscan.c]
      avoid hardcoded SOCK_xx; with itojun@; should allow ssh over SCTP
+   - mouring@cvs.openbsd.org 2003/04/14 21:31:27
+     [sftp-int.c]
+     Missing globfree(&g) in process_put() spotted by Vince Brimhall
+     <VBrimhall@novell.com>.  ok@ Theo
+   - markus@cvs.openbsd.org 2003/04/16 14:35:27
+     [auth.h]
+     document struct Authctxt; with solar
 
 20030512
  - (djm) Redhat spec: Don't install profile.d scripts when not 
