@@ -13,6 +13,10 @@
    - markus@cvs.openbsd.org 2004/03/03 06:47:52
      [sshd.c]
      change proctiltle after accept(2); ok henning, deraadt, djm
+   - djm@cvs.openbsd.org 2004/03/03 09:30:42
+     [sftp-client.c]
+     Don't print duplicate messages when progressmeter is off
+     Spotted by job317 AT mailvault.com; ok markus@
 
 20040307
  - (tim) [regress/login-timeout.sh] fix building outside of source tree.
