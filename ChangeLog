@@ -1,3 +1,7 @@
+20030719
+ - (dtucker) [configure.ac] Bug #620: Define BROKEN_GETADDRINFO for
+   Solaris/x86.  Patch from jrhett at isite.net.
+
 20030714
  - (dtucker) [acconfig.h configure.ac port-aix.c] Older AIXes don't declare
    loginfailed at all, so assume 3-arg loginfailed if not declared.
@@ -5,7 +9,7 @@
    undef'ing it.
  - (dtucker) Bug #543: [configure.ac port-aix.c port-aix.h]
    Call setauthdb() before loginfailed(), which may load password registry-
-   specific functions.  Based on patch by cawlfiel@us.ibm.com.
+   specific functions.  Based on patch by cawlfiel at us.ibm.com.
  - (dtucker) [port-aix.h] Fix prototypes.
  - (dtucker) OpenBSD CVS Sync
    - avsm@cvs.openbsd.org 2003/07/09 13:58:19
