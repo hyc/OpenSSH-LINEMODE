@@ -1,3 +1,7 @@
+20040530
+ - (dtucker) [auth-pam.c auth-pam.h auth-passwd.c]: Bug #874: Re-add PAM 
+   support for PasswordAuthentication=yes.  ok djm@
+
 20040527
  - (dtucker) [contrib/caldera/openssh.spec contrib/redhat/openssh.spec
    contrib/README CREDITS INSTALL] Bug #873: Correct URLs for x11-ssh-askpass
