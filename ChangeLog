@@ -4,6 +4,8 @@
      [ssh.c]                                                
      show debug output during option processing, report from 
      pekkas@netcore.fi
+ - (bal) Added openbsd-compat/inet_ntop.[ch] since HP/UX (and others)
+   lack it.
 
 20010412
  - OpenBSD CVS Sync                            

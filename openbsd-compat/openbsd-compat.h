@@ -19,6 +19,7 @@
 #include "sigact.h"
 #include "inet_aton.h"
 #include "inet_ntoa.h"
+#include "inet_ntop.h"
 #include "strsep.h"
 #include "strtok.h"
 #include "vis.h"
