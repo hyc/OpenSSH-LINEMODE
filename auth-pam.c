@@ -58,6 +58,7 @@ RCSID("$Id$");
 extern ServerOptions options;
 extern Buffer loginmsg;
 extern int compat20;
+extern u_int utmp_len;
 
 #ifdef USE_POSIX_THREADS
 #include <pthread.h>
@@ -453,7 +454,6 @@ sshpam_cleanup(void)
 static int
 sshpam_init(Authctxt *authctxt)
 {
-	extern u_int utmp_len;
 	extern char *__progname;
 	const char *pam_rhost, *pam_user, *user = authctxt->user;
 
@@ -599,7 +599,10 @@ sshpam_query(void *ctx, char **name, char **info,
 				xfree(msg);
 				return (0);
 			}
-			error("PAM: %s", msg);
+			error("PAM: %s for %s%.100s from %.100s", msg,
+			    sshpam_authctxt->valid ? "" : "illegal user ",
+			    sshpam_authctxt->user,
+			    get_remote_name_or_ip(utmp_len, options.use_dns));
 			/* FALLTHROUGH */
 		default:
 			*num = 0;
