@@ -31,6 +31,10 @@
      [session.c]
      send signal name (not signal number) in "exit-signal" message; noticed
      by galb@vandyke.com
+   - stevesk@cvs.openbsd.org 2002/08/27 17:13:56
+     [ssh-rsa.c]
+     RSA_public_decrypt() returns -1 on error so len must be signed; 
+     ok markus@
 
 20020820
  - OpenBSD CVS Sync
