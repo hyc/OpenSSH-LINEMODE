@@ -552,7 +552,10 @@ The default is AUTH.
 .It Cm UseLogin
 Specifies whether
 .Xr login 1
-is used.
+is used for interactive login sessions.
+Note that
+.Xr login 1
+is not never for remote command execution.
 The default is
 .Dq no .
 .It Cm X11DisplayOffset
@@ -569,6 +572,12 @@ The default is
 .Dq no .
 Note that disabling X11 forwarding does not improve security in any
 way, as users can always install their own forwarders.
+.It Cm XAuthLocation
+Specifies the location of the
+.Xr xauth 1
+program.
+The default is
+.Pa /usr/X11R6/bin/xauth .
 .El
 .Sh LOGIN PROCESS
 When a user successfully logs in,

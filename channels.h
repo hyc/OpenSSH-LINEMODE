@@ -222,10 +222,10 @@ void    auth_request_forwarding(void);
 char   *auth_get_socket_name(void);
 
 /*
- * This if called to process SSH_CMSG_AGENT_REQUEST_FORWARDING on the server.
+ * This is called to process SSH_CMSG_AGENT_REQUEST_FORWARDING on the server.
  * This starts forwarding authentication requests.
  */
-void    auth_input_request_forwarding(struct passwd * pw);
+int     auth_input_request_forwarding(struct passwd * pw);
 
 /* This is called to process an SSH_SMSG_AGENT_OPEN message. */
 void    auth_input_open_request(int type, int plen);

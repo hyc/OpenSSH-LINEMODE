@@ -520,7 +520,7 @@ main(int ac, char **av)
 	extern int optind;
 	extern char *optarg;
 
-	OpenSSL_add_all_algorithms();
+	SSLeay_add_all_algorithms();
 
 	/* we need this for the home * directory.  */
 	pw = getpwuid(getuid());
