@@ -20,6 +20,7 @@
    using sysconf() if available Based on patches from 
    holger AT van-lengerich.de and openssh_bugzilla AT hockin.org
  - (dtucker) [uidswap.c] Minor KNF.  ok djm@
+ - (tim) [openbsd-compat/getrrsetbyname.c] Make gcc 2.7.2.3 happy.  ok djm@
 
 20040223
  - (dtucker) [session.c] Bug #789: Only make setcred call for !privsep in the
