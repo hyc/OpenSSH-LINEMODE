@@ -1,3 +1,6 @@
+20030130
+ - (djm) Unbreak root password auth. Spotted by dtucker@zip.com.au
+
 200301028
  - (djm) Search libposix4 and librt for nanosleep. From dtucker@zip.com.au 
    and openssh-unix-dev@thewrittenword.com 
