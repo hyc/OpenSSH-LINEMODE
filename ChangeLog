@@ -6,6 +6,10 @@
    - stevesk@cvs.openbsd.org 2001/03/05 15:44:51
      [servconf.c]
      sync error message; ok markus@
+   - deraadt@cvs.openbsd.org 2001/03/05 15:56:16
+     [myproposal.h ssh.1]
+     switch to aes128-cbc/hmac-md5 by default in SSH2 -- faster;
+     provos & markus ok
 
 20010305
  - (bal) CVS ID touch up on sshpty.[ch] and sshlogin.[ch]
