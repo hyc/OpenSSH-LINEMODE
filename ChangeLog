@@ -9,6 +9,10 @@
    - djm@cvs.openbsd.org 2004/08/23 11:48:47
      [channels.c]
      typo, spotted by Martin.Kraemer AT Fujitsu-Siemens.com; ok markus
+   - dtucker@cvs.openbsd.org 2004/08/23 14:26:38
+     [ssh-keysign.c ssh.c]
+     Use permanently_set_uid() in ssh and ssh-keysign for consistency, matches
+     change in Portable; ok markus@ (CVS ID sync only)
 
 20040828
  - (dtucker) [openbsd-compat/mktemp.c] Remove superfluous Cygwin #ifdef; from
