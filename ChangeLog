@@ -5,6 +5,8 @@
      [buffer.c channels.c version.h]
      more malloc/fatal fixes; ok millert/deraadt; ghudson at MIT.EDU
  - (djm) Crank RPM spec file versions
+ - (tim) [openbsd-compat/inet_ntoa.c] 20030917 "Sync with V_3_7 branch" undid
+   20030916 "Missed dead header in inet_ntoa.c"
  
 20030916
  - (dtucker) [acconfig.h configure.ac defines.h session.c] Bug #252: Retrieve
