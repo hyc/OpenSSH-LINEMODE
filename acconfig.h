@@ -364,6 +364,9 @@
 /* Define if your platform needs to skip post auth file descriptor passing */
 #undef DISABLE_FD_PASSING
 
+/* Silly mkstemp() */
+#undef HAVE_STRICT_MKSTEMP
+
 @BOTTOM@
 
 /* ******************* Shouldn't need to edit below this line ************** */

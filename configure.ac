@@ -680,6 +680,32 @@ int main(void){char b[5];snprintf(b,5,"123456789");exit(b[4]!='\0');}
 	)
 fi
 
+dnl see whether mkstemp() requires XXXXXX
+if test "x$ac_cv_func_mkdtemp" = "xyes" ; then
+AC_MSG_CHECKING([for (overly) strict mkstemp])
+AC_TRY_RUN(
+	[
+#include <stdlib.h>
+main() { char template[]="conftest.mkstemp-test";
+if (mkstemp(template) == -1)
+	exit(1);
+unlink(template); exit(0);
+}
+	],
+	[
+		AC_MSG_RESULT(no)
+	],
+	[ 
+		AC_MSG_RESULT(yes)
+		AC_DEFINE(HAVE_STRICT_MKSTEMP)
+	],
+	[
+		AC_MSG_RESULT(yes)
+		AC_DEFINE(HAVE_STRICT_MKSTEMP)
+	] 
+)
+fi
+
 AC_FUNC_GETPGRP
 
 # Check for PAM libs
