@@ -25,6 +25,9 @@
   - itojun@cvs.openbsd.org 2002/06/08 21:15:27
      [sshconnect.c]
      always use getnameinfo.  (diag message only)
+   - markus@cvs.openbsd.org 2002/06/09 04:33:27
+     [sshconnect.c]
+     abort() - > fatal()
 
 20020607
  - (bal) Removed --{enable/disable}-suid-ssh
