@@ -3,6 +3,9 @@
    - deraadt@cvs.openbsd.org 2001/03/05 14:28:47
      [sshd.8]
      alpha order; jcs@rt.fm
+   - stevesk@cvs.openbsd.org 2001/03/05 15:44:51
+     [servconf.c]
+     sync error message; ok markus@
 
 20010305
  - (bal) CVS ID touch up on sshpty.[ch] and sshlogin.[ch]
