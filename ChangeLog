@@ -16,6 +16,7 @@
    - markus@cvs.openbsd.org  2001/11/13 02:03:57
      [version.h]
      enter 3.0.1
+ - (djm) Bump RPM package versions
 
 20011112
  - (djm) Makefile correctness fix from Mark D. Baushke <mdb@juniper.net>
