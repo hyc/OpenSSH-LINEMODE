@@ -13,6 +13,9 @@
    - markus@cvs.openbsd.org 2002/06/24 14:55:38
      [authfile.c kex.c ssh-agent.c]
      cat to (void) when output from buffer_get_X is ignored
+   - itojun@cvs.openbsd.org 2002/06/24 15:49:22
+     [msg.c]
+     printf type pedant
 
 20020625
  - (stevesk) [INSTALL acconfig.h configure.ac defines.h] remove --with-rsh
