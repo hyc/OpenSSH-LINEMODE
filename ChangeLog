@@ -1,6 +1,8 @@
 20020622
  - (djm) Update README.privsep; spotted by fries@
  - (djm) Release 3.3p1
+ - (bal) getopt now can be staticly compiled on those platforms missing
+   optreset.  Patch by binder@arago.de
 
 20020621
  - (djm) Sync:
