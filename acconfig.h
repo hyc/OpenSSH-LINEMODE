@@ -359,6 +359,9 @@
 /* Define in your struct dirent expects you to allocate extra space for d_name */
 #undef BROKEN_ONE_BYTE_DIRENT_D_NAME
 
+/* Define if your system has /etc/default/login */
+#undef HAVE_ETC_DEFAULT_LOGIN
+
 /* Define if your getopt(3) defines and uses optreset */
 #undef HAVE_GETOPT_OPTRESET
 

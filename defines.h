@@ -321,6 +321,10 @@ struct winsize {
 # define _PATH_STDPATH "/usr/bin:/bin:/usr/sbin:/sbin"
 #endif
 
+#ifndef SUPERUSER_PATH
+# define SUPERUSER_PATH	_PATH_STDPATH
+#endif
+
 #ifndef _PATH_DEVNULL
 # define _PATH_DEVNULL "/dev/null"
 #endif
