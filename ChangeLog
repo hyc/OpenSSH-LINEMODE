@@ -110,6 +110,9 @@
      [channels.c nchan.c]
      replace buffer_consume(b, buffer_len(b)) with buffer_clear(b); 
      ok provos@
+   - markus@cvs.openbsd.org 2002/01/10 11:13:29
+     [serverloop.c]
+     skip client_alive_check until there are channels; ok beck@
 
 
 20020121
