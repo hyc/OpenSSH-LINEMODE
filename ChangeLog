@@ -7,6 +7,9 @@
      [auth2-hostbased.c auth2-pubkey.c auth2.c channels.c key.c key.h
       monitor.c packet.c packet.h serverloop.c sshconnect2.c sshd.c]
      int -> u_int; ok djm@, deraadt@, mouring@
+   - miod@cvs.openbsd.org 2003/06/25 22:39:36
+     [sftp-server.c]
+     Typo police: attribute is better written with an 'r'.
 
 20030624
  - (dtucker) Have configure refer the user to config.log and
