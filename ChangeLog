@@ -5,6 +5,8 @@
      [sftp-client.c sftp-client.h sftp-glob.c sftp-glob.h sftp-int.c]
      [sftp-int.h sftp.c]
      switch to license.template for code written by me (belated, I know...)
+ - (djm) Bug #698: Specify FILE: for KRB5CCNAME; patch from 
+   stadal@suse.cz and simon@sxw.org.uk
 
 20040212
  - (tim) [Makefile.in regress/sftp-badcmds.sh regress/test-exec.sh]
