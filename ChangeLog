@@ -2,6 +2,8 @@
  - (djm) Rework RedHat RPM files. Based on spec from Nalin 
    Dahyabhai <nalin@redhat.com> and patches from 
    Pekka Savola <pekkas@netcore.fi>
+ - (djm) Try to drop supplemental groups at daemon startup. Patch from 
+   RedHat
 
 20020509
  - (tim) [Makefile.in] Unbreak make -f Makefile.in distprep
