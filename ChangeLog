@@ -13,6 +13,9 @@
    - markus@cvs.openbsd.org 2003/08/13 09:07:10
      [readconf.c ssh.c]
      socks4->socks, since with support both 4 and 5; dtucker@zip.com.au
+ - (dtucker) [configure.ac openbsd-compat/bsd-misc.c openbsd-compat/bsd-misc.h]
+   Add a tcsendbreak function for platforms that don't have one, based on the
+   one from OpenBSD.
 
 20030811
  - (dtucker) OpenBSD CVS Sync

@@ -695,8 +695,8 @@ AC_CHECK_FUNCS(\
 	setdtablesize setegid setenv seteuid setgroups setlogin setpcred \
 	setproctitle setregid setresgid setresuid setreuid setrlimit \
 	setsid setvbuf sigaction sigvec snprintf socketpair strerror \
-	strlcat strlcpy strmode strnvis sysconf tcgetpgrp truncate utimes \
-	vhangup vsnprintf waitpid \
+	strlcat strlcpy strmode strnvis sysconf tcgetpgrp tcsendbreak \
+	truncate utimes vhangup vsnprintf waitpid \
 )
 
 AC_SEARCH_LIBS(nanosleep, rt posix4, AC_DEFINE(HAVE_NANOSLEEP))

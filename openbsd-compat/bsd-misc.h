@@ -91,6 +91,10 @@ int nanosleep(const struct timespec *, struct timespec *);
 
 #ifndef HAVE_TCGETPGRP
 pid_t tcgetpgrp(int);
-#endif /* HAVE_TCGETPGRP */
+#endif
+
+#ifndef HAVE_TCSENDBREAK
+int tcsendbreak(int, int);
+#endif
 
 #endif /* _BSD_MISC_H */
