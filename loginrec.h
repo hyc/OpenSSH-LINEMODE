@@ -110,6 +110,9 @@ void login_set_current_time(struct logininfo *li);
 /* record the entry */
 int login_login (struct logininfo *li);
 int login_logout(struct logininfo *li);
+#ifdef LOGIN_NEEDS_UTMPX
+int login_utmp_only(struct logininfo *li);
+#endif
 
 /** End of public functions */
 

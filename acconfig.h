@@ -154,6 +154,12 @@
 /* Define if you don't want to use wtmpx */
 #undef DISABLE_WTMPX
 
+/* Some systems need a utmpx entry for /bin/login to work */
+#undef LOGIN_NEEDS_UTMPX
+
+/* Some versions of /bin/login need the TERM supplied on the commandline */
+#undef LOGIN_NEEDS_TERM
+
 /* Define if you want to specify the path to your lastlog file */
 #undef CONF_LASTLOG_FILE
 
