@@ -4,6 +4,7 @@
  - (dtucker) [auth-pam.c] Convert chauthtok_conv into a generic tty_conv,
    and use it for do_pam_session.  Fixes problems like pam_motd not displaying
    anything.  ok djm@
+ - (dtucker) [auth-pam.c] Only use pam_putenv if our platform has it. ok djm@
 
 20031117
  - (djm) OpenBSD CVS Sync

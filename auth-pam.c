@@ -167,11 +167,13 @@ import_environments(Buffer *b)
 	for(i = 0; i < num_env; i++) {
 		env = buffer_get_string(b, NULL);
 
+#ifdef HAVE_PAM_PUTENV
 		/* Errors are not fatal here */
 		if ((err = pam_putenv(sshpam_handle, env)) != PAM_SUCCESS) {
 			error("PAM: pam_putenv: %s",
 			    pam_strerror(sshpam_handle, sshpam_err));
 		}
+#endif
 	}
 }
 
