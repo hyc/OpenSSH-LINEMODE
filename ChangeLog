@@ -121,6 +121,9 @@
       scp.c serverloop.c session.c sftp-server.8 sftp.1 ssh-add.1 ssh-add.c
       ssh-agent.1 ssh-agent.c ssh-keygen.1 ssh.1 sshd.8]
      make copyright lines the same format
+   - deraadt@cvs.openbsd.org 2001/03/03 06:53:12
+     [ssh-keyscan.c]
+     standard theo sweep
 
 20010304
  - (bal) Remove make-ssh-known-hosts.1 since it's no longer valid.
