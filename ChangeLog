@@ -1,3 +1,7 @@
+20030409
+ - (djm) Bug #539: Specify creation mode with O_CREAT for lastlog. Report 
+   from matth@eecs.berkeley.edu
+
 20030402
  - (bal) if IP_TOS is not found or broken don't try to compile in
    packet_set_tos() function call.  bug #527

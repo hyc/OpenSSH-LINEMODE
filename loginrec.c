@@ -1483,7 +1483,7 @@ lastlog_perform_login(struct logininfo *li)
 	/* create our struct lastlog */
 	lastlog_construct(li, &last);
 
-	if (!lastlog_openseek(li, &fd, O_RDWR|O_CREAT))
+	if (!lastlog_openseek(li, &fd, O_RDWR|O_CREAT, 0600))
 		return(0);
 
 	/* write the entry */
