@@ -9,6 +9,7 @@
    - stevesk@cvs.openbsd.org 2001/05/03 21:43:01
      [servconf.c]
      remove "\n" from fatal()
+ - (bal) Updated Cygwin README by Corinna Vinschen <vinschen@redhat.com>
 
 20010503
  - OpenBSD CVS Sync
