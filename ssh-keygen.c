@@ -492,7 +492,7 @@ void
 usage(void)
 {
 	printf("ssh-keygen version %s\n", SSH_VERSION);
-	printf("Usage: %s [-b bits] [-p] [-c] [-l] [-x] [-X] [-y] [-f file] [-P pass] [-N new-pass] [-C comment]\n", __progname);
+	printf("Usage: %s [-b bits] [-c] [-d] [-f file] [-l] [-p] [-q] [-x] [-y] [-C comment] [-N new-pass] [-P pass] [-X]\n", __progname);
 	exit(1);
 }
 
