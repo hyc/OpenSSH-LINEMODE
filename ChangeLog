@@ -1,3 +1,7 @@
+20020604
+ - (stevesk) [channels.c] bug #164 patch from YOSHIFUJI Hideaki (changed
+   setsockopt from debug to error for now).
+
 20020527
  - (tim) [configure.ac.orig monitor_fdpass.c] Enahnce msghdr tests to address
    build problem on Irix reported by Dave Love <d.love@dl.ac.uk>. Back out
