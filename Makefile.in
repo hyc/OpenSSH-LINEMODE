@@ -292,7 +292,7 @@ install-files: scard-install
 	else \
 		echo "$(DESTDIR)$(sysconfdir)/sshd_config already exists, install will not overwrite"; \
 	fi
-	@if [ -f ssh_prng_cmds -a ! -z "$(INSTALL_SSH_PRNG_CMDS)" ]; then \
+	@if [ -f ssh_prng_cmds ] && [ ! -z "$(INSTALL_SSH_PRNG_CMDS)" ]; then \
 		if [ ! -f $(DESTDIR)$(sysconfdir)/ssh_prng_cmds ] ; then \
 			$(INSTALL) -m 644 ssh_prng_cmds.out $(DESTDIR)$(sysconfdir)/ssh_prng_cmds; \
 		else \
@@ -406,7 +406,7 @@ tests:	$(TARGETS)
 		$@
 
 regressclean:
-	if [ -f regress/Makefile -a -r regress/Makefile ]; then \
+	if [ -f regress/Makefile ] && [ -r regress/Makefile ]; then \
 		(cd regress && $(MAKE) clean) \
 	fi
 

@@ -4,6 +4,8 @@
    redhat.com, ok djm@
  - (dtucker) [regress/Makefile] Clean scp-ssh-wrapper.scp too.  Patch from
    vinschen at redhat.com.
+ - (dtucker) [Makefile.in contrib/ssh-copy-id] Bug #894: Improve portability
+   of shell constructs.  Patch from cjwatson at debian.org.
 
 20040829
  - (dtucker) [openbsd-compat/getrrsetbyname.c] Prevent getrrsetbyname from
