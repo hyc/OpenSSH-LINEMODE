@@ -6,6 +6,9 @@
    - markus@cvs.openbsd.org 2001/10/04 15:05:40
      [channels.c serverloop.c]
      comment out bogus conditions for selecting on connection_in
+   - markus@cvs.openbsd.org 2001/10/04 15:12:37
+     [serverloop.c]
+     client_alive_check cleanup
 
 20011007
  - (bal) ssh-copy-id corrected permissions for .ssh/ and authorized_keys.
