@@ -89,6 +89,9 @@
 /* Define if you have the getuserattr function.  */
 #undef HAVE_GETUSERATTR
 
+/* Define if you have the basename function. */
+#undef HAVE_BASENAME
+
 /* Work around problematic Linux PAM modules handling of PAM_TTY */
 #undef PAM_TTY_KLUDGE
 
