@@ -21,6 +21,9 @@
       sshconnect1.c sshconnect2.c ssh-keysign.8 ssh-keysign.c Makefile.in]
      add /usr/libexec/ssh-keysign: a setuid helper program for hostbased 
      authentication in protocol v2 (needs to access the hostkeys).
+   - markus@cvs.openbsd.org 2002/05/23 19:39:34
+     [ssh.c]
+     add comment about ssh-keysign
 
 20020604
  - (stevesk) [channels.c] bug #164 patch from YOSHIFUJI Hideaki (changed
