@@ -6,6 +6,7 @@
      getpeereid.
    - [regress/agent-ptrace.sh] Skip tests if platform doesn't support it or
      gdb cannot be found.
+   - [regress/reconfigure/sh] Make path to sshd fully qualified if required.
 
 20030903
  - (djm) OpenBSD CVS Sync
