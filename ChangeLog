@@ -49,6 +49,9 @@
    - markus@cvs.openbsd.org 2003/09/19 09:02:02
      [packet.c]
      buffer_dump only if PACKET_DEBUG is defined; Jedi/Sector One; pr 3471
+   - markus@cvs.openbsd.org 2003/09/19 09:03:00
+     [buffer.c]
+     sign fix in buffer_dump; Jedi/Sector One; pr 3473
 
 20030919
  - (djm) Bug #683: Remove reference to --with-ipv4-default from INSTALL;
