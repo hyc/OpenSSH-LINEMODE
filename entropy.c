@@ -89,8 +89,8 @@ seed_rng(void)
 		if (original_uid != original_euid && 
 		    ( seteuid(getuid()) == -1 || 
 		      setuid(original_uid) == -1) ) {
-			fprintf(stderr, "(rand child) setuid(%d): %s\n", 
-			    original_uid, strerror(errno));
+			fprintf(stderr, "(rand child) setuid(%li): %s\n", 
+			    (long int)original_uid, strerror(errno));
 			_exit(1);
 		}
 		
