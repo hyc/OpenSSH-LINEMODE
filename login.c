@@ -217,10 +217,13 @@ record_login(pid_t pid, const char *ttyname, const char *user, uid_t uid,
 # ifdef HAVE_HOST_IN_UTMPX
 #  ifdef HAVE_SYSLEN_IN_UTMPX
 	utx.ut_syslen = strlen(host);
+	if (utx.ut_syslen + 1 > sizeof(utx.ut_host))
+		utx.ut_syslen = sizeof(utx.ut_host);
 	strncpy(utx.ut_host, host, utx.ut_syslen);
 #  else
 	strncpy(utx.ut_host, host, sizeof(utx.ut_host));
 #  endif /* HAVE_SYSLEN_IN_UTMPX */
+	utx.ut_host[sizeof(utx.ut_host)-1] = '\0';
 # endif
 #if defined(HAVE_ADDR_IN_UTMPX)
 	if (addr) {
