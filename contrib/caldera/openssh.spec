@@ -1,7 +1,7 @@
 %define askpass		1.2.2
 
 Name        	: openssh
-Version     	: 2.9p2
+Version     	: 2.9.9p1
 Release     	: 3
 Group       	: System/Network
 
