@@ -30,6 +30,7 @@
      remove -v again. use -B instead for bubblebabble. make -B consistent
      with -l and make -B work with /path/to/known_hosts. ok deraadt@
  - (djm) Bump portable version number for generating test RPMs
+ - (djm) Add "static_openssl" RPM build option, remove rsh build dependency
 
 20010311
  - OpenBSD CVS Sync
