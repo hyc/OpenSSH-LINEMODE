@@ -1,3 +1,7 @@
+20040407
+ - (dtucker) [session.c] Flush stdout after displaying loginmsg.  From
+   f_mohr at yahoo.de.
+
 20040406
  - (dtucker) [acconfig.h configure.ac defines.h] Bug #820: don't use
    updwtmpx() on IRIX since it seems to clobber utmp.  ok djm@
