@@ -1,5 +1,5 @@
 20030829
- - (bal) openbsd-compat/ clean up.  Considate headers, add in $Id$ on our
+ - (bal) openbsd-compat/ clean up.  Considate headers, add in Id on our
    files, and added missing license to header.
 
 20030826
