@@ -1,3 +1,9 @@
+20010408
+ - OpenBSD CVS Sync
+   - stevesk@cvs.openbsd.org 2001/04/06 22:12:47
+     [hostfile.c]
+     unused; typo in comment
+
 20010407
  - (bal) CVS ID Resync of version.h
  - OpenBSD CVS Sync
