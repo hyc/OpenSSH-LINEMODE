@@ -68,7 +68,7 @@ RCSID("$Id$");
 # define SAVED_IDS_WORK_WITH_SETEUID
 #endif
 
-void
+static void
 check_openssl_version(void) 
 {
 	if (SSLeay() != OPENSSL_VERSION_NUMBER)
@@ -182,7 +182,7 @@ done:
 #else /* !USE_PRNGD */
 #ifdef RANDOM_POOL
 /* Collect entropy from /dev/urandom or pipe */
-int
+static int
 get_random_bytes(unsigned char *buf, int len)
 {
 	int random_pool;
