@@ -24,7 +24,7 @@
    - dtucker@cvs.openbsd.org 2005/03/14 11:44:42
      [auth.c]
      Populate host for log message for logins denied by AllowUsers and
-     DenyUsers (bz #999); ok markus@
+     DenyUsers (bz #999); ok markus@ (patch by tryponraj at gmail.com)
    - markus@cvs.openbsd.org 2005/03/14 11:46:56
      [buffer.c buffer.h channels.c]
      limit input buffer size for channels; bugzilla #896; with and ok dtucker@
