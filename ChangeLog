@@ -1,4 +1,8 @@
-20011205
+20011207
+ - (bal) PCRE no longer required.  Banished from the source along with
+   fake-regex.h
+
+20011206
  - (bal) OpenBSD CVS Sync
    - deraadt@cvs.openbsd.org 2001/11/14 20:45:08
      [sshd.c]

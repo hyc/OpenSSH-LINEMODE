@@ -59,9 +59,6 @@
 /* Define if you are on Cygwin */
 #undef HAVE_CYGWIN
 
-/* Define if you lack native POSIX regex and you are using PCRE */
-#undef HAVE_LIBPCRE
-
 /* Define if you have a broken realpath. */
 #undef BROKEN_REALPATH
 
