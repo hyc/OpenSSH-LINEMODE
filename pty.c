@@ -19,13 +19,16 @@ RCSID("$Id$");
 #include "pty.h"
 #include "ssh.h"
 
-#ifdef HAVE_PTY_H
-#include <pty.h>
-#endif /* HAVE_PTY_H */
-
 /* Pty allocated with _getpty gets broken if we do I_PUSH:es to it. */
 #if defined(HAVE__GETPTY) || defined(HAVE_OPENPTY)
 #undef HAVE_DEV_PTMX
+#endif
+
+#ifdef HAVE_PTY_H
+# include <pty.h>
+#endif
+#if defined(HAVE_DEV_PTMX) && defined(HAVE_SYS_STROPTS_H)
+# include <sys/stropts.h>
 #endif
 
 #ifndef O_NOCTTY
