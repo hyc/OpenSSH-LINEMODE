@@ -1,5 +1,10 @@
 20020515
  - (bal) CVS ID fix up on auth-passwd.c
+ - (bal) OpenBSD CVS Sync
+   - deraadt@cvs.openbsd.org 2002/05/07 19:54:36
+     [ssh.h]
+     use ssh uid
+
 
 20020514
  - (stevesk) [README.privsep] PAM+privsep works with Solaris 8.
