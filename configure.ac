@@ -321,6 +321,7 @@ mips-sony-bsd|mips-sony-newsos4)
 	AC_DEFINE(HAVE_SECUREWARE)
 	AC_DEFINE(DISABLE_SHADOW)
 	AC_DEFINE(BROKEN_SAVED_UIDS)
+	AC_DEFINE(WITH_ABBREV_NO_TTY)
 	AC_CHECK_FUNCS(getluid setluid)
 	MANTYPE=man
 	do_sco3_extra_lib_check=yes
@@ -340,6 +341,7 @@ mips-sony-bsd|mips-sony-newsos4)
 	AC_DEFINE(SETEUID_BREAKS_SETUID)
 	AC_DEFINE(BROKEN_SETREUID)
 	AC_DEFINE(BROKEN_SETREGID)
+	AC_DEFINE(WITH_ABBREV_NO_TTY)
 	AC_CHECK_FUNCS(getluid setluid)
 	MANTYPE=man
 	;;
