@@ -2,6 +2,8 @@
  - (dtucker) [Makefile regress/Makefile] Fix portability issues preventing
    the regression tests from running with Solaris' make.  Patch from Brian
    Poole (raj at cerias.purdue.edu).
+ - (dtucker) [regress/Makefile] AIX's make doesn't like " +=", so replace
+   with vanilla "=".
 
 20030913
  - (dtucker) [regress/agent-timeout.sh] Timeout of 5 sec is borderline for
