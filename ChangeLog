@@ -21,6 +21,9 @@
    - jmc@cvs.openbsd.org 2004/05/22 16:01:05
      [ssh.1]
      kill whitespace at eol;
+   - dtucker@cvs.openbsd.org 2004/05/23 23:59:53
+     [auth.c auth.h auth1.c auth2.c servconf.c servconf.h sshd_config sshd_config.5]
+     Add MaxAuthTries sshd config option; ok markus@
 
 20040523
  - (djm) [sshd_config] Explain consequences of UsePAM=yes a little better in 
