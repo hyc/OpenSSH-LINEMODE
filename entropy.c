@@ -35,6 +35,11 @@
 #include <openssl/rand.h>
 #include <openssl/sha.h>
 
+/* SunOS 4.4.4 needs this */
+#ifdef HAVE_FLOATINGPOINT_H
+# include <floatingpoint.h>
+#endif /* HAVE_FLOATINGPOINT_H */
+
 RCSID("$Id$");
 
 #ifndef offsetof
