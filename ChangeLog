@@ -1,3 +1,6 @@
+20020218
+ - (tim) newer config.guess from ftp://ftp.gnu.org/gnu/config/config.guess
+
 20020213
  - (djm) Don't use system sys/queue.h on AIX. Report from 
    gert@greenie.muc.de
