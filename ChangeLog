@@ -1,3 +1,9 @@
+20020527
+ - (tim) [configure.ac.orig monitor_fdpass.c] Enahnce msghdr tests to address
+   build problem on Irix reported by Dave Love <d.love@dl.ac.uk>. Back out
+   last monitor_fdpass.c changes that are no longer needed with new tests.
+   Patch tested on Irix by Jan-Frode Myklebust <janfrode@parallab.uib.no>
+
 20020522
  - (djm) Fix spelling mistakes, spotted by Solar Designer i
    <solar@openwall.com>
