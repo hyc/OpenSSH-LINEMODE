@@ -2,6 +2,7 @@
  - (dtucker) [openbsd-compat/fake-rfc2553.h] Older Linuxes have AI_PASSIVE and
    AI_CANONNAME in netdb.h but not AI_NUMERICHOST, so check each definition
    separately before defining them.
+ - (dtucker) [auth-pam.c] Don't set PAM_TTY if tty is null.  ok djm@
 
 20030807
  - (dtucker) [session.c] Have session_break_req not attempt to send a break
