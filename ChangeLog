@@ -19,6 +19,9 @@
    - itojun@cvs.openbsd.org 2002/07/10 10:28:15
      [sshconnect.c]
      bark if all connection attempt fails.
+   - deraadt@cvs.openbsd.org 2002/07/10 17:53:54
+     [rijndael.c]
+     use right sizeof in memcpy; markus ok
 
 20020709
  - (bal) NO_IPPORT_RESERVED_CONCEPT used instead of CYGWIN so other platforms
