@@ -1,3 +1,6 @@
+20020415
+ - (djm) Unbreak "make install". Fix from Darren Tucker <dtucker@zip.com.au>
+
 20020414
  - (djm) ssh-rand-helper improvements
    - Add commandline debugging options
