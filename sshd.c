@@ -316,7 +316,10 @@ void main_sigchld_handler(int sig)
 {
   int save_errno = errno;
   int status;
-  wait(&status);
+
+  while (waitpid(-1, &status, WNOHANG) > 0)
+	;
+
   signal(SIGCHLD, main_sigchld_handler);
   errno = save_errno;
 }
