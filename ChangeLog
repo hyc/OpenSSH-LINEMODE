@@ -1,6 +1,8 @@
 20020728
  - (stevesk) [auth-pam.c] should use PAM_MSG_MEMBER(); from solar
  - (stevesk) [CREDITS] solar
+ - (stevesk) [ssh-rand-helper.c] RAND_bytes() and SHA1_Final() unsigned
+   char arg.
 
 20020725
  - (djm) Remove some cruft from INSTALL
