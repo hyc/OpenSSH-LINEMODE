@@ -22,6 +22,12 @@ RCSID("$Id$");
 #include "xmalloc.h"
 #include "ssh.h"
 
+#ifdef HAVE___PROGNAME
+extern char *__progname;
+#else /* HAVE___PROGNAME */
+const char *__progname = "sshd";
+#endif /* HAVE___PROGNAME */
+
 static LogLevel log_level = SYSLOG_LEVEL_INFO;
 static int log_on_stderr = 0;
 static int log_facility = LOG_AUTH;
@@ -104,7 +110,6 @@ do_log(LogLevel level, const char *fmt, va_list args)
   char fmtbuf[MSGBUFSIZE];
   char *txt = NULL;
   int pri = LOG_INFO;
-  extern char *__progname;
 
   if (level > log_level)
     return;

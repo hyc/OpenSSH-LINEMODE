@@ -20,6 +20,12 @@ RCSID("$Id$");
 #include "ssh.h"
 #include "xmalloc.h"
 
+#ifdef HAVE___PROGNAME
+extern char *__progname;
+#else /* HAVE___PROGNAME */
+const char *__progname = "ssh-keygen";
+#endif /* HAVE___PROGNAME */
+
 /* Generated private key. */
 RSA *private_key;
 
@@ -317,7 +323,6 @@ main(int ac, char **av)
 
   /* check if RSA support exists */
   if (rsa_alive() == 0) {
-    extern char *__progname;
 
     fprintf(stderr,
       "%s: no RSA support in libssl and libcrypto.  See ssl(8).\n",

@@ -25,6 +25,12 @@ RCSID("$Id$");
 int askpass(const char *filename, RSA *key, const char *saved_comment, char **comment);
 #endif /* USE_EXTERNAL_ASKPASS */
 
+#ifdef HAVE___PROGNAME
+extern char *__progname;
+#else /* HAVE___PROGNAME */
+const char *__progname = "ssh-add";
+#endif /* HAVE___PROGNAME */
+
 void
 delete_file(AuthenticationConnection *ac, const char *filename)
 {
@@ -175,7 +181,6 @@ main(int argc, char **argv)
 
   /* check if RSA support exists */
   if (rsa_alive() == 0) {
-    extern char *__progname;
 
     fprintf(stderr,
       "%s: no RSA support in libssl and libcrypto.  See ssl(8).\n",

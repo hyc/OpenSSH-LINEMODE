@@ -32,6 +32,10 @@ RCSID("$Id$");
 #include "uidswap.h"
 #include "compat.h"
 
+#ifdef HAVE_MAILLOCK_H
+# include <maillock.h>
+#endif
+
 #ifdef LIBWRAP
 #include <tcpd.h>
 #include <syslog.h>
