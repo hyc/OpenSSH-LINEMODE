@@ -27,6 +27,9 @@
    fixes configure warning on Solaris reported by wknox at mitre.org.
  - (dtucker) [regress/multiplex.sh] Skip test on platforms that do not
    support FD passing since multiplex requires it.  Noted by tim@
+ - (dtucker) [regress/dynamic-forward.sh] Allow time for connections to be torn
+   down, needed on some platforms, should be harmless on others.  Patch from
+   jason at devrandom.org.
 
 20040828
  - (dtucker) [openbsd-compat/mktemp.c] Remove superfluous Cygwin #ifdef; from
