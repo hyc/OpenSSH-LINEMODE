@@ -5,6 +5,8 @@
    Patch from max at quendi.de.
  - (dtucker) [configure.ac] Bug #657: uid swapping issues on BSDi.
  - (dtucker) [configure.ac] Bug #653: uid swapping issues on Tru64.
+ - (dtucker) [configure.ac] Bug #693: uid swapping issues on NCR MP-RAS.
+   Patch from david.haughton at ncr.com
 
 20030919
  - (djm) Bug #683: Remove reference to --with-ipv4-default from INSTALL;
