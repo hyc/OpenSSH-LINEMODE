@@ -4,6 +4,9 @@
    - stevesk@cvs.openbsd.org 2002/06/09 22:15:15
      [ssh.1]
      update for no setuid root and ssh-keysign; ok deraadt@
+   - itojun@cvs.openbsd.org 2002/06/09 22:17:21
+     [sshconnect.c]
+     pass salen to sockaddr_ntop so that we are happy on linux/solaris
 
 20020609
  - (bal) OpenBSD CVS Sync
