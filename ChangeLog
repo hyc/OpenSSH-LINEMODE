@@ -11,6 +11,9 @@
    - deraadt@cvs.openbsd.org 2002/02/26 19:06:43
      [sftp.1]
      no, look closely.  the comma was highlighted. split .Ic even more
+   - stevesk@cvs.openbsd.org 2002/02/26 20:03:51
+     [misc.c]
+     use socklen_t
 
 20020226
  - (tim) Bug 12 [configure.ac] add sys/bitypes.h to int64_t tests
