@@ -1,6 +1,11 @@
 20030517
  - (djm) Return of the dreaded PAM_TTY_KLUDGE, which went missing in 
    recent merge
+ - (djm) OpenBSD CVS Sync
+   - djm@cvs.openbsd.org 2003/05/16 03:27:12
+     [readconf.c ssh_config ssh_config.5 ssh-keysign.c]
+     add AddressFamily option to ssh_config (like -4, -6 on commandline).
+     Portable bug #534; ok markus@
 
 20030517
  - (bal) strcat -> strlcat on openbsd-compat/realpath.c (rev 1.8 OpenBSD)
