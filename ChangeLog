@@ -50,6 +50,9 @@
    - markus@cvs.openbsd.org 2002/03/18 17:16:38
      [packet.c packet.h]
      export/import cipher state, iv and ssh2 seqnr; needed by ssh-privsep
+   - markus@cvs.openbsd.org 2002/03/18 17:23:31
+     [key.c key.h]
+     add key_demote() for ssh-privsep
 
 20020317
  - (tim) [configure.ac] Assume path given with --with-pid-dir=PATH is wanted,
