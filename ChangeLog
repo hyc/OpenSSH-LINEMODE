@@ -9,6 +9,10 @@
      perform strict ownership and modes checks for ~/.ssh/config files, 
      as these can be used to execute arbitrary programs; ok markus@
      NB. ssh will now exit when it detects a config with poor permissions
+   - djm@cvs.openbsd.org 2004/04/19 13:02:40
+     [ssh.1 ssh_config.5]
+     document strict permission checks on ~/.ssh/config; prompted by, 
+     with & ok jmc@
  - (djm) [openbsd-compat/sys-queue.h] Sync with OpenBSD, needed for above change
 
 20040419
