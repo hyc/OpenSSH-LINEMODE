@@ -150,6 +150,9 @@
    - stevesk@cvs.openbsd.org 2001/03/04 10:57:53
      [ssh.c]
      add -m to usage; ok markus@
+   - stevesk@cvs.openbsd.org 2001/03/04 11:04:41
+     [sshd.8]
+     small cleanup and clarify for PermitRootLogin; ok markus@
 
 20010304
  - (bal) Remove make-ssh-known-hosts.1 since it's no longer valid.
