@@ -148,6 +148,7 @@ do_convert_from_ssh2(struct passwd *pw)
 	char blob[8096];
 	char encoded[8096];
 	struct stat st;
+	int escaped = 0;
 	FILE *fp;
 
 	if (!have_identity)
@@ -163,14 +164,21 @@ do_convert_from_ssh2(struct passwd *pw)
 	}
 	encoded[0] = '\0';
 	while (fgets(line, sizeof(line), fp)) {
+		if (!(p = strchr(line, '\n'))) {
+			fprintf(stderr, "input line too long.\n");
+			exit(1);
+		}
+		if (p > line && p[-1] == '\\')
+			escaped++;
 		if (strncmp(line, "----", 4) == 0 ||
 		    strstr(line, ": ") != NULL) {
 			fprintf(stderr, "ignore: %s", line);
 			continue;
 		}
-		if (!(p = strchr(line, '\n'))) {
-			fprintf(stderr, "input line too long.\n");
-			exit(1);
+		if (escaped) {
+			escaped--;
+			fprintf(stderr, "escaped: %s", line);
+			continue;
 		}
 		*p = '\0';
 		strlcat(encoded, line, sizeof(encoded));

@@ -314,7 +314,7 @@ choose_mac(Mac *mac, char *client, char *server)
 	}
 	mac->name = name;
 	mac->mac_len = mac->md->md_size;
-	mac->key_len = datafellows ? 16 : mac->mac_len;
+	mac->key_len = (datafellows & SSH_BUG_HMAC) ? 16 : mac->mac_len;
 	mac->key = NULL;
 	mac->enabled = 0;
 }

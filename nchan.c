@@ -107,6 +107,10 @@ chan_read_failed_12(Channel *c)
 		debug("channel %d: input open -> drain", c->self);
 		chan_shutdown_read(c);
 		c->istate = CHAN_INPUT_WAIT_DRAIN;
+		if (buffer_len(&c->input) == 0) {
+			debug("channel %d: input: no drain shortcut", c->self);
+			chan_ibuf_empty(c);
+		}
 		break;
 	default:
 		error("channel %d: internal error: we do not read, but chan_read_failed for istate %d",

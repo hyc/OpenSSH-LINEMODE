@@ -65,7 +65,7 @@ typedef struct {
 	int     number_of_password_prompts;	/* Max number of password
 						 * prompts. */
 	int     cipher;		/* Cipher to use. */
-	char   *ciphers;	/* Ciphers in order of preference. */
+	char   *ciphers;	/* SSH2 ciphers in order of preference. */
 	int	protocol;	/* Protocol in order of preference. */
 	char   *hostname;	/* Real host to connect. */
 	char   *proxy_command;	/* Proxy command for connecting the host. */

@@ -30,6 +30,7 @@
 #include "cipher.h"
 
 /*
+ * XXX
  * The default cipher used if IDEA is not supported by the remote host. It is
  * recommended that this be one of the mandatory ciphers (DES, 3DES), though
  * that is not required.

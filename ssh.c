@@ -367,6 +367,7 @@ main(int ac, char **av)
 			if (ciphers_valid(optarg)) {
 				/* SSH2 only */
 				options.ciphers = xstrdup(optarg);
+				options.cipher = SSH_CIPHER_ILLEGAL;
 			} else {
 				/* SSH1 only */
 				options.cipher = cipher_number(optarg);

@@ -589,7 +589,7 @@ parse_flag:
 		case sCiphers:
 			cp = strtok(NULL, WHITESPACE);
 			if (!ciphers_valid(cp))
-				fatal("%s line %d: Bad cipher spec '%s'.",
+				fatal("%s line %d: Bad SSH2 cipher spec '%s'.",
 				    filename, linenum, cp ? cp : "<NONE>");
 			if (options->ciphers == NULL)
 				options->ciphers = xstrdup(cp);

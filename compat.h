@@ -36,6 +36,11 @@
 #define	SSH_PROTO_1_PREFERRED	0x02
 #define	SSH_PROTO_2		0x04
 
+#define SSH_BUG_SIGBLOB		0x01
+#define SSH_BUG_PUBKEYAUTH	0x02
+#define SSH_BUG_HMAC		0x04
+#define SSH_BUG_X11FWD		0x08
+
 void    enable_compat13(void);
 void    enable_compat20(void);
 void    compat_datafellows(const char *s);
