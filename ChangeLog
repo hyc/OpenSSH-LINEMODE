@@ -3,6 +3,9 @@
    - djm@cvs.openbsd.org 2004/05/26 08:59:57
      [sftp.c]
      exit -> _exit in forked child on error; from andrushock AT korovino.net
+   - markus@cvs.openbsd.org 2004/05/26 23:02:39
+     [channels.c]
+     missing freeaddrinfo; Andrey Matveev
 
 20040603
  - (dtucker) [auth-pam.c] Don't use pam_* namespace for sshd's PAM functions.
