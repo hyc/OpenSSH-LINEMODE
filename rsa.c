@@ -40,6 +40,7 @@ RCSID("$Id$");
 #include "rsa.h"
 #include "ssh.h"
 #include "xmalloc.h"
+#include "random.h"
 
 int rsa_verbose = 1;
 
@@ -64,10 +65,23 @@ keygen_progress(int p, int n, void *arg)
 	const char progress_chars[] = ".o+O?";
 
 	if ((p < 0) || (p > (sizeof(progress_chars) - 2)))
-		p = 4;
+		p = sizeof(progress_chars) - 2;
 
-	printf("%c", progress_chars[p]);
+	putchar(progress_chars[p]);
 	fflush(stdout);
+}
+
+/*
+ * Seed OpenSSL's random number generator
+ */
+void
+seed_rng()
+{
+	char buf[32];
+
+	get_random_bytes(buf, sizeof(buf));
+	RAND_seed(buf, sizeof(buf));
+	memset(buf, 0, sizeof(buf));
 }
 
 /*
@@ -81,6 +95,8 @@ rsa_generate_key(RSA *prv, RSA *pub, unsigned int bits)
 {
 	RSA *key;
 
+	seed_rng();
+	
 	if (rsa_verbose) {
 		printf("Generating RSA keys:  ");
 		fflush(stdout);
