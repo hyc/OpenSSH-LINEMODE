@@ -4,6 +4,7 @@
  - (djm) Add Markus' patch for compat wih OpenSSL < 0.9.6. 
    Known issue: Blowfish for SSH1 does not work
  - (stevesk) entropy.c: typo in debug message
+ - (djm) ssh-keygen -i needs seeded RNG; report from markus@
 
 20020307
  - (djm) OpenBSD CVS Sync
