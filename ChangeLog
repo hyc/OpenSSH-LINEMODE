@@ -7,6 +7,9 @@
    - jmc@cvs.openbsd.org 2004/11/29 00:05:17
      [sftp.1]
      missing full stop;
+   - djm@cvs.openbsd.org 2004/11/29 07:41:24
+     [sftp-client.h sftp.c]
+     Some small fixes from moritz@jodeit.org. ok deraadt@
 
 20041203
  - (dtucker) OpenBSD CVS Sync
