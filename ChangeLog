@@ -1,3 +1,12 @@
+20050331
+ - (dtucker) OpenBSD CVS Sync
+   - jmc@cvs.openbsd.org 2005/03/16 11:10:38
+     [ssh_config.5]
+     get the syntax right for {Local,Remote}Forward;
+     based on a diff from markus;
+     problem report from ponraj;
+     ok dtucker@ markus@ deraadt@
+
 20050329
  - (dtucker) [contrib/aix/buildbff.sh] Bug #1005: Look up only the user we're
    interested in which is much faster in large (eg LDAP or NIS) environments.
