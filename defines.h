@@ -240,6 +240,7 @@ typedef unsigned char u_char;
 #ifndef HAVE_SIZE_T
 typedef unsigned int size_t;
 # define HAVE_SIZE_T
+# define SIZE_T_MAX UINT_MAX
 #endif /* HAVE_SIZE_T */
 
 #ifndef HAVE_SSIZE_T
