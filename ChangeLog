@@ -15,6 +15,7 @@
    - deraadt@cvs.openbsd.org 2001/03/07 04:05:58
      [ssh.1]
      removed dated comment
+ - Cygwin contrib improvements from Corinna Vinschen <vinschen@redhat.com>
 
 20010306
  - (bal) OpenBSD CVS Sync
