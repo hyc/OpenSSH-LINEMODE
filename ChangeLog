@@ -11,6 +11,9 @@
  - (dtucker) [acconfig.h configure.ac includes.h servconf.c session.c]
    Change AFS symbol to USE_AFS to prevent namespace collisions, do not
    include kafs.h unless necessary.  From deengert at anl.gov.
+ - (tim) [configure.ac] Remove hard coded -L/usr/local/lib and
+   -I/usr/local/include. Users can do LDFLAGS="-L/usr/local/lib" \
+   CPPFLAGS="-I/usr/local/include" ./configure if needed.
 
 20040122
  - (dtucker) [configure.ac] Use krb5-config where available for Kerberos/
