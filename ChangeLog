@@ -10,6 +10,11 @@
    localized name of the local administrators group more reliable.  From
    vinschen at redhat.com.
 
+20050312
+ - (dtucker) [regress/test-exec.sh] DEBUG can cause problems where debug
+   output ends up in the client's output, causing regress failures.  Found
+   by Corinna Vinschen.
+
 20050309
  - (dtucker) [regress/test-exec.sh] Set BIN_SH=xpg4 on OSF1/Digital Unix/Tru64
    so that regress tests behave.  From Chris Adams.
