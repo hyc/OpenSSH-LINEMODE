@@ -356,6 +356,8 @@ sshpam_thread(void *ctxtp)
 	struct pam_ctxt *ctxt = ctxtp;
 	Buffer buffer;
 	struct pam_conv sshpam_conv;
+	int flags = (options.permit_empty_passwd == 0 ?
+	    PAM_DISALLOW_NULL_AUTHTOK : 0);
 #ifndef USE_POSIX_THREADS
 	extern char **environ;
 	char **env_from_pam;
@@ -378,7 +380,7 @@ sshpam_thread(void *ctxtp)
 	    (const void *)&sshpam_conv);
 	if (sshpam_err != PAM_SUCCESS)
 		goto auth_fail;
-	sshpam_err = pam_authenticate(sshpam_handle, 0);
+	sshpam_err = pam_authenticate(sshpam_handle, flags);
 	if (sshpam_err != PAM_SUCCESS)
 		goto auth_fail;
 
