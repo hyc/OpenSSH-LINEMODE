@@ -1,3 +1,6 @@
+20031208
+ - (tim) [configure.ac] Bug 770. Fix --without-rpath.
+
 20031123
  - (djm) [canohost.c] Move IPv4inV6 mapped address normalisation to its own
    function and call it unconditionally
