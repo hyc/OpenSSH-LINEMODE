@@ -12,6 +12,11 @@
    - markus@cvs.openbsd.org 2002/06/15 00:07:38
      [authfd.c authfd.h ssh-add.c ssh-agent.c]
      fix stupid typo
+  - markus@cvs.openbsd.org 2002/06/15 01:27:48
+     [authfd.c authfd.h ssh-add.c ssh-agent.c]
+     remove the CONSTRAIN_IDENTITY messages and introduce a new
+     ADD_ID message with contraints instead. contraints can be
+     only added together with the private key.
 
 20020613
  - (bal) typo of setgroup for cygwin.  Patch by vinschen@redhat.com
