@@ -3,6 +3,7 @@
    ftp://ftp.gnu.org/gnu/config/) to allow configure on ia64-hpux.
    Suggested by Jason Mader <jason@ncac.gwu.edu>
  - (bal) White Space and #ifdef sync with OpenBSD
+ - (bal) Add 'seed_rng()' to ssh-add.c
 
 20010505
  - OpenBSD CVS Sync
