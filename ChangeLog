@@ -1,3 +1,7 @@
+20040523
+ - (djm) Explain consequences of UsePAM=yes a little better in sshd_config;
+   ok dtucker@
+
 20040513
  - (dtucker) [configure.ac] Bug #867: Additional tests for res_query in
    libresolv, fixes problems detecting it on some platforms
