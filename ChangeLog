@@ -16,6 +16,9 @@
    - avsm@cvs.openbsd.org 2004/06/26 20:07:16
      [sshd.c]
      initialise some fd variables to -1, djm@ ok
+   - djm@cvs.openbsd.org 2004/06/30 08:36:59
+     [session.c]
+     unbreak TTY break, diagnosed by darren AT dazwin.com; ok markus@
 
 20040627
  - (tim) update README files.
