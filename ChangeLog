@@ -1,3 +1,6 @@
+20030614
+ - (djm) Update license on fake-rfc2553.[ch]; ok itojun@
+
 20030611
  - (djm) Mention portable copyright holders in LICENSE
  - (djm) Put licenses on substantial header files
