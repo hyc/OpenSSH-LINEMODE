@@ -1,3 +1,6 @@
+20020626
+ - (stevesk) [monitor.c] remove duplicate proto15 dispatch entry for PAM
+
 20020625
  - (stevesk) [INSTALL acconfig.h configure.ac defines.h] remove --with-rsh
  - (stevesk) [README.privsep] minor updates
