@@ -546,6 +546,11 @@ struct winsize {
 #endif
 
 
+/* Some platforms, eg NetBSD, have a 4th argument for skeychallenge() */
+#ifdef SKEYCHALLENGE_4ARG
+# define skeychallenge(a,b,c) skeychallenge((a), (b), (c), (sizeof(c)))
+#endif
+
 /*
  * Define this to use pipes instead of socketpairs for communicating with the
  * client program.  Socketpairs do not seem to work on all systems.

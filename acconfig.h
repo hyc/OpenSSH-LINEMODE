@@ -131,6 +131,9 @@
 /* Define if your AIX loginfailed() function takes 4 arguments (AIX >= 5.2) */
 #undef AIX_LOGINFAILED_4ARG
 
+/* Define if your skeychallenge() function takes 4 arguments (eg NetBSD) */
+#undef SKEYCHALLENGE_4ARG
+
 /* Define if you have/want arrays (cluster-wide session managment, not C arrays) */
 #undef WITH_IRIX_ARRAY
 
