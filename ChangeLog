@@ -1,6 +1,8 @@
 20020912
  - (djm) Added getpeereid() replacement. Properly implemented for systems
    with SO_PEERCRED support. Faked for systems which lack it.
+ - (djm) Sync sys/tree.h with OpenBSD -current. Rename tree.h and 
+   fake-queue.h to sys-tree.h and sys-queue.h
  - (djm) OpenBSD CVS Sync
    - markus@cvs.openbsd.org 2002/09/08 20:24:08
      [hostfile.h]
