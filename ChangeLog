@@ -2,6 +2,9 @@
  - (stevesk) [sshd_config] PAMAuthenticationViaKbdInt no; commented
    options should contain default value.  from solar.
  - (bal) Cygwin uid0 fix by vinschen@redhat.com
+ - (bal) s/config.h/includes.h/ in openbsd-compat/ for *.c.  Otherwise wise
+   have issues of our fixes not propogating right (ie bcopy instead of
+   memmove).  OK tim
 
 200206027
  - OpenBSD CVS Sync
