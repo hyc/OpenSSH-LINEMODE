@@ -702,9 +702,14 @@ struct envstring {
 	struct envstring *next;
 	char   *s;
 };
+
+/*
+ * Ensure all of data on socket comes through. f==read || f==write
+ */
+int	atomicio(int (*f)(), int fd, void *s, size_t n);
+
 #ifdef KRB4
 #include <krb.h>
-
 /*
  * Performs Kerberos v4 mutual authentication with the client. This returns 0
  * if the client could not be authenticated, and 1 if authentication was

@@ -1065,30 +1065,6 @@ lostconn(signo)
 	exit(1);
 }
 
-/*
- * ensure all of data on socket comes through. f==read || f==write
- */
-int
-atomicio(f, fd, s, n)
-	int (*f) ();
-	char *s;
-{
-	int res, pos = 0;
-
-	while (n > pos) {
-		res = (f) (fd, s + pos, n - pos);
-		switch (res) {
-		case -1:
-			if (errno == EINTR || errno == EAGAIN)
-				continue;
-		case 0:
-			return (res);
-		default:
-			pos += res;
-		}
-	}
-	return (pos);
-}
 
 void
 alarmtimer(int wait)

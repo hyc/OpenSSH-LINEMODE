@@ -24,7 +24,7 @@
  * descriptors for the pty and tty sides and the name of the tty side are
  * returned (the buffer must be able to hold at least 64 characters).
  */
-int     pty_allocate(int *ptyfd, int *ttyfd, char *ttyname);
+int     pty_allocate(int *ptyfd, int *ttyfd, char *ttyname, int ttynamelen);
 
 /*
  * Releases the tty.  Its ownership is returned to root, and permissions to
