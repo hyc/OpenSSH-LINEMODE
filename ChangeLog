@@ -15,6 +15,9 @@
    - dtucker@cvs.openbsd.org 2004/08/11 11:09:54
      [servconf.c]
      Fix minor leak; "looks right" deraadt@
+   - dtucker@cvs.openbsd.org 2004/08/11 11:50:09
+     [sshd.c]
+     Don't try to close startup_pipe if it's not open; ok djm@
 
 20040720
  - (djm) OpenBSD CVS Sync
