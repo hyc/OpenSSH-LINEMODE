@@ -31,6 +31,9 @@
    - dtucker@cvs.openbsd.org 2003/11/12 10:12:15
      [scp.c]
      When called with -q, pass -q to ssh; suppresses SSH2 banner.  ok markus@
+   - jakob@cvs.openbsd.org 2003/11/12 16:39:58
+     [dns.c dns.h readconf.c ssh_config.5 sshconnect.c]
+     update SSHFP validation. ok markus@
 
 20031115
  - (dtucker) [regress/agent-ptrace.sh] Test for GDB output from Solaris and
