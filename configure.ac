@@ -897,7 +897,7 @@ AC_ARG_WITH(audit,
 		AC_CHECK_FUNCS(getaudit, [],
 		    [AC_MSG_ERROR(BSM enabled and required function not found)])
 		# These are optional
-		AC_CHECK_FUNCS(getaudit_addr gettext)
+		AC_CHECK_FUNCS(getaudit_addr)
 		AC_DEFINE(USE_BSM_AUDIT, [], [Use BSM audit module])
 		;;
 	  debug)
