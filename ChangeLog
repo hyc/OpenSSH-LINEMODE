@@ -3,6 +3,10 @@
    problems on Solaris-derived PAMs.
  - (djm) Clean up PAM namespace. Suggested by Darren Moffat
    <Darren.Moffat@eng.sun.com>
+ - (bal) Sync w/ OpenSSH for new release
+   - markus@cvs.openbsd.org 2001/02/12 12:45:06
+     [sshconnect1.c]
+     fix xmalloc(0), ok dugsong@
 
 20010214
  - (djm) Don't try to close PAM session or delete credentials if the
