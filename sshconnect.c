@@ -1246,7 +1246,7 @@ check_host_key(char *host,
 		}
 		/* The host key has changed. */
 		error("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@");
-		error("@       WARNING: HOST IDENTIFICATION HAS CHANGED!         @");
+		error("@    WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!     @");
 		error("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@");
 		error("IT IS POSSIBLE THAT SOMEONE IS DOING SOMETHING NASTY!");
 		error("Someone could be eavesdropping on you right now (man-in-the-middle attack)!");
