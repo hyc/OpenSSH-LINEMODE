@@ -140,6 +140,9 @@
    - markus@cvs.openbsd.org 2002/01/11 20:14:11
      [auth2-chall.c auth-skey.c]
      use strlcpy not strlcat; mouring@
+   - markus@cvs.openbsd.org 2002/01/11 23:02:18
+     [readpass.c]
+     use _PATH_TTY
 
 
 20020121
