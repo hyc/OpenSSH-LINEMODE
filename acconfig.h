@@ -86,9 +86,6 @@
 /* Define if you want IRIX kernel jobs */
 #undef WITH_IRIX_JOBS
 
-/* Location of random number pool  */
-#undef RANDOM_POOL
-
 /* Location of PRNGD/EGD random number socket */
 #undef PRNGD_SOCKET
 
@@ -325,6 +322,9 @@
 
 /* Define if you want smartcard support */
 #undef SMARTCARD
+
+/* Define if you want to use OpenSSL's internally seeded PRNG only */
+#undef OPENSSL_PRNG_ONLY
 
 @BOTTOM@
 
