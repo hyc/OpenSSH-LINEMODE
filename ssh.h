@@ -589,7 +589,7 @@ char   *channel_open_message(void);
  */
 void 
 channel_request_local_forwarding(u_short port, const char *host,
-    u_short remote_port);
+    u_short remote_port, int gateway_ports);
 
 /*
  * Initiate forwarding of connections to port "port" on remote host through
@@ -633,7 +633,7 @@ char   *x11_create_display(int screen);
  * Returns a suitable value for the DISPLAY variable, or NULL if an error
  * occurs.
  */
-char   *x11_create_display_inet(int screen);
+char   *x11_create_display_inet(int screen, int x11_display_offset);
 
 /*
  * This is called when SSH_SMSG_X11_OPEN is received.  The packet contains

@@ -16,6 +16,7 @@
 #include "includes.h"
 RCSID("$Id$");
 
+#include <util.h>
 #include "pty.h"
 #include "ssh.h"
 
@@ -163,7 +164,7 @@ pty_allocate(int *ptyfd, int *ttyfd, char *namebuf, int namebuflen)
 		*ptyfd = open(buf, O_RDWR | O_NOCTTY);
 		if (*ptyfd < 0)
 			continue;
-		snprintf(namebuf, sizeof namebuflen, "/dev/tty%c%c",
+		snprintf(namebuf, namebuflen, "/dev/tty%c%c",
 		    ptymajors[i / num_minors], ptyminors[i % num_minors]);
 
 		/* Open the slave side. */

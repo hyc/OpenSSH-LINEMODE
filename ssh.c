@@ -732,7 +732,8 @@ main(int ac, char **av)
 		      options.local_forwards[i].host_port);
 		channel_request_local_forwarding(options.local_forwards[i].port,
 					  	 options.local_forwards[i].host,
-						 options.local_forwards[i].host_port);
+						 options.local_forwards[i].host_port,
+						 options.gateway_ports);
 	}
 
 	/* Initiate remote TCP/IP port forwardings. */
