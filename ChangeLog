@@ -1,6 +1,8 @@
 20040921
  - (dtucker) [openbsd-compat/bsd-snprintf.c] Check for max length too.
    ok djm@
+ - (dtucker) [contrib/cygwin/ssh-host-config] Update to match current Cygwin
+   install process.  Patch from vinschen at redhat.com.
 
 20040912
  - (djm) [loginrec.c] Start KNF and tidy up of this long-neglected file.
