@@ -16,6 +16,9 @@
  - (dtucker) [contrib/cygwin/README contrib/cygwin/ssh-host-config] Update
    ssh-host-config to match current defaults, bump README version.  Patch from
    vinschen at redhat.com.
+ - (dtucker) [uidswap.c] Don't test restoration of uid on Cygwin since the
+   OS does not support permanently dropping privileges.  Patch from
+   vinschen at redhat.com.
 
 20030919
  - (djm) Bug #683: Remove reference to --with-ipv4-default from INSTALL;
