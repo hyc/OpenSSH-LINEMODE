@@ -26,6 +26,9 @@
    - markus@cvs.openbsd.org 2002/04/01 22:02:16
      [sftp-client.c]
      20480 is an upper limit for older server
+   - markus@cvs.openbsd.org 2002/04/01 22:07:17
+     [sftp-client.c]
+     fallback to stat if server does not support lstat
 
 20020401
  - (stevesk) [monitor.c] PAM should work again; will *not* work with
