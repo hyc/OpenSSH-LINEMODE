@@ -17,6 +17,9 @@
      [sftp-client.c]
      Don't print duplicate messages when progressmeter is off
      Spotted by job317 AT mailvault.com; ok markus@
+   - djm@cvs.openbsd.org 2004/03/03 09:31:20
+     [sftp.c]
+     Fix initialisation of progress meter; ok markus@
 
 20040307
  - (tim) [regress/login-timeout.sh] fix building outside of source tree.
