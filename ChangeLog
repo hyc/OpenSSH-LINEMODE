@@ -1,3 +1,6 @@
+20020703
+ - (bal) Updated contrib/cygwin/  patch by vinschen@redhat.com 
+
 20020702
  - (djm) Use PAM_MSG_MEMBER for PAM_TEXT_INFO messages, use xmalloc & 
    friends consistently. Spotted by Solar Designer <solar@openwall.com>
