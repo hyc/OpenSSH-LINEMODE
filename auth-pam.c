@@ -672,17 +672,19 @@ do_pam_chauthtok(void)
 int
 do_pam_putenv(char *name, char *value) 
 {
-	char *compound;
 	int ret = 1;
-
 #ifdef HAVE_PAM_PUTENV	
-	compound = xmalloc(strlen(name)+strlen(value)+2);
-	if (compound) {
-		sprintf(compound,"%s=%s",name,value);
-		ret = pam_putenv(sshpam_handle,compound);
-		xfree(compound);
-	}
+	char *compound;
+	size_t len;
+
+	len = strlen(name) + strlen(value) + 2;
+	compound = xmalloc(len);
+
+	snprintf(compound, len, "%s=%s", name, value);
+	ret = pam_putenv(sshpam_handle, compound);
+	xfree(compound);
 #endif
+
 	return (ret);
 }
 

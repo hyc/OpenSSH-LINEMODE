@@ -1,3 +1,6 @@
+20030917
+ - (djm) Sync with V_3_7 branch
+
 20030916
  - (dtucker) [acconfig.h configure.ac defines.h session.c] Bug #252: Retrieve
    PATH (or SUPATH) and UMASK from /etc/default/login on platforms that have it
