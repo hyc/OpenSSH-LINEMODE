@@ -46,6 +46,7 @@ LIBS=@LIBS@
 LIBPAM=@LIBPAM@
 LIBWRAP=@LIBWRAP@
 AR=@AR@
+AWK=@AWK@
 RANLIB=@RANLIB@
 INSTALL=@INSTALL@
 PERL=@PERL@
@@ -173,7 +174,7 @@ $(MANPAGES): $(MANPAGES_IN)
 		manpage=$(srcdir)/`echo $@ | sed 's/\.out$$//'`; \
 	fi; \
 	if test "$(MANTYPE)" = "man"; then \
-		$(FIXPATHSCMD) $${manpage} | $(PERL) $(srcdir)/mdoc2man.pl > $@; \
+		$(FIXPATHSCMD) $${manpage} | $(AWK) -f $(srcdir)/mdoc2man.awk > $@; \
 	else \
 		$(FIXPATHSCMD) $${manpage} > $@; \
 	fi

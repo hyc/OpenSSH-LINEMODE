@@ -70,6 +70,7 @@ Pavel Kankovsky <peak@argo.troja.mff.cuni.cz> - Security fixes
 Pavel Troller <patrol@omni.sinus.cz> - Bugfixes
 Pekka Savola <pekkas@netcore.fi> - Bugfixes
 Peter Kocks <peter.kocks@baygate.com> - Makefile fixes
+Peter Stuge <stuge@cdy.org> - mdoc2man.awk script
 Phil Hands <phil@hands.com> - Debian scripts, assorted patches
 Phil Karn <karn@ka9q.ampr.org> - Autoconf fixes
 Philippe WILLEM <Philippe.WILLEM@urssaf.fr> - Bugfixes
