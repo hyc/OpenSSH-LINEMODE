@@ -38,4 +38,7 @@
 #include "fake-getnameinfo.h"
 #include "fake-socket.h"
 
+/* Routines for a single OS platform */
+#include "bsd-cray.h"
+
 #endif /* _OPENBSD_H */
