@@ -51,7 +51,7 @@ fingerprint(BIGNUM *e, BIGNUM *n)
 	static char retval[80];
 	MD5_CTX md;
 	unsigned char d[16];
-	char *buf;
+	unsigned char *buf;
 	int nlen, elen;
 
 	nlen = BN_num_bytes(n);

@@ -1041,7 +1041,7 @@ channel_input_port_open(int payload_len)
 	int remote_channel, sock = 0, newch, i;
 	u_short host_port;
 	char *host, *originator_string;
-	int host_len, originator_len;
+	unsigned int host_len, originator_len;
 	struct addrinfo hints, *ai, *aitop;
 	char ntop[NI_MAXHOST], strport[NI_MAXSERV];
 	int gaierr;
@@ -1341,7 +1341,7 @@ x11_input_open(int payload_len)
 	int remote_channel, display_number, sock = 0, newch;
 	const char *display;
 	char buf[1024], *cp, *remote_host;
-	int remote_len;
+	unsigned int remote_len;
 	struct addrinfo hints, *ai, *aitop;
 	char strport[NI_MAXSERV];
 	int gaierr;

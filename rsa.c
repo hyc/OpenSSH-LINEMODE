@@ -145,7 +145,7 @@ rsa_generate_key(RSA *prv, RSA *pub, unsigned int bits)
 void
 rsa_public_encrypt(BIGNUM *out, BIGNUM *in, RSA *key)
 {
-	char *inbuf, *outbuf;
+	unsigned char *inbuf, *outbuf;
 	int len, ilen, olen;
 
 	if (BN_num_bits(key->e) < 2 || !BN_is_odd(key->e))
@@ -173,7 +173,7 @@ rsa_public_encrypt(BIGNUM *out, BIGNUM *in, RSA *key)
 void
 rsa_private_decrypt(BIGNUM *out, BIGNUM *in, RSA *key)
 {
-	char *inbuf, *outbuf;
+	unsigned char *inbuf, *outbuf;
 	int len, ilen, olen;
 
 	olen = BN_num_bytes(key->n);
