@@ -35,6 +35,10 @@
      spelling (occurance -> occurrence);
      use prompt before examples;
      grammar;
+   - djm@cvs.openbsd.org 2005/03/02 01:00:06
+     [sshconnect.c]
+     fix addition of new hashed hostnames when CheckHostIP=yes;
+     found and ok dtucker@
 
 20050301
  - (djm) OpenBSD CVS sync:
