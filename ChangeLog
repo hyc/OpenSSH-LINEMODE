@@ -1,3 +1,10 @@
+20050302
+ - (djm) OpenBSD CVS sync:
+   - jmc@cvs.openbsd.org 2005/03/01 14:47:58
+     [ssh.1]
+     remove some unneccesary macros;
+     do not mark up punctuation;
+
 20050301
  - (djm) OpenBSD CVS sync:
    - otto@cvs.openbsd.org 2005/02/16 09:56:44
