@@ -583,31 +583,6 @@ AC_CHECK_FUNCS(arc4random b64_ntop bcopy bindresvport_sa \
 	socketpair strerror strlcat strlcpy strmode strsep sysconf tcgetpgrp \
 	truncate utimes vhangup vsnprintf waitpid __b64_ntop _getpty)
 
-if test $ac_cv_func_mmap = yes ; then
-AC_MSG_CHECKING([for mmap anon shared])
-AC_TRY_RUN(
-	[
-#include <stdio.h>
-#include <sys/types.h>
-#include <sys/mman.h>
-#if !defined(MAP_ANON) && defined(MAP_ANONYMOUS)
-#define MAP_ANON MAP_ANONYMOUS
-#endif
-main() { char *p;
-p = (char *) mmap(NULL, 10, PROT_WRITE|PROT_READ, MAP_ANON|MAP_SHARED, -1, 0);
-if (p == (char *)-1)
-	exit(1);
-exit(0);
-}
-	],
-	[
-		AC_MSG_RESULT(yes)
-		AC_DEFINE(HAVE_MMAP_ANON_SHARED)
-	],
-	[ AC_MSG_RESULT(no) ] 
-)
-fi
-
 dnl IRIX and Solaris 2.5.1 have dirname() in libgen
 AC_CHECK_FUNCS(dirname, [AC_CHECK_HEADERS(libgen.h)] ,[
 	AC_CHECK_LIB(gen, dirname,[

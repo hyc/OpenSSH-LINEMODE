@@ -358,9 +358,6 @@
 /* Path that unprivileged child will chroot() to in privep mode */
 #undef PRIVSEP_PATH
 
-/* Define if you have the `mmap' function that supports MAP_ANON|SHARED */
-#undef HAVE_MMAP_ANON_SHARED
-
 /* Define if your platform needs to skip post auth file descriptor passing */
 #undef DISABLE_FD_PASSING
 
