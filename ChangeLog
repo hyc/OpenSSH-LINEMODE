@@ -2,7 +2,7 @@
  - (dtucker) Bug #544: ignore invalid cmsg_type on Linux 2.0 kernels,
    privsep should now work.
  - (dtucker) Move handling of bad password authentications into a platform
-   specific record_failed_login() function (affects AIX & Unicos).
+   specific record_failed_login() function (affects AIX & Unicos). ok mouring@
 
 20030429
  - (djm) Add back radix.o (used by AFS support), after it went missing from
