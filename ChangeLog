@@ -1,3 +1,7 @@
+20030829
+ - (bal) openbsd-compat/ clean up.  Considate headers, add in $Id$ on our
+   files, and added missing license to header.
+
 20030826
  - (djm) Bug #629: Mark ssh_config option "pamauthenticationviakbdint"
    as deprecated. Remove mention from README.privsep. Patch from 

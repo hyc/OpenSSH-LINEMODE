@@ -1,3 +1,5 @@
+/* $Id$ */
+
 /*
  * Copyright (C) 2000-2003 Damien Miller.  All rights reserved.
  * Copyright (C) 1999 WIDE Project.  All rights reserved.
@@ -34,8 +36,6 @@
  * is implemented for ssh use only. For example, this routine assumes
  * that ai_family is AF_INET. Don't use it for another purpose.
  */
-
-/* $Id$ */
 
 #ifndef _FAKE_RFC2553_H
 #define _FAKE_RFC2553_H

@@ -1,3 +1,5 @@
+/* $Id$ */
+
 /*
  * Copyright (c) 2000 Denis Parker.  All rights reserved.
  * Copyright (c) 2000 Michael Stone.  All rights reserved.

@@ -1,3 +1,5 @@
+/* $Id$ */
+
 /*
  * Copyright (c) 2000 Ben Lindstrom.  All rights reserved.
  *
@@ -22,8 +24,6 @@
  * THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  *
  */
-
-/* $Id$ */
 
 #ifndef _BSD_WAITPID_H
 #define _BSD_WAITPID_H

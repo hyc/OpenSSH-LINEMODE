@@ -1,3 +1,5 @@
+/* $Id$ */
+
 /*
  * Copyright (c) 1999-2003 Damien Miller.  All rights reserved.
  *
@@ -22,12 +24,10 @@
  * THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-/* $Id$ */
-
 #ifndef _BSD_MISC_H
 #define _BSD_MISC_H
 
-#include "config.h"
+#include "includes.h"
 
 char *ssh_get_progname(char *);
 

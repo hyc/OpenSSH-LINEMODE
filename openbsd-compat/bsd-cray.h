@@ -1,8 +1,6 @@
-/* 
- * $Id$
- *
- * bsd-cray.h
- *
+/* $Id$ */
+
+/*
  * Copyright (c) 2002, Cray Inc.  (Wendy Palm <wendyp@cray.com>)
  * Significant portions provided by 
  *          Wayne Schroeder, SDSC <schroeder@sdsc.edu>
@@ -34,6 +32,7 @@
  * on UNICOS systems.
  *
  */
+
 #ifndef _BSD_CRAY_H
 #define _BSD_CRAY_H
 
