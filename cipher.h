@@ -88,6 +88,9 @@ const char *cipher_name(int cipher);
  */
 int     cipher_number(const char *name);
 
+/* returns 1 if all ciphers are supported (ssh2 only) */
+int     ciphers_valid(const char *names);
+
 /*
  * Selects the cipher to use and sets the key.  If for_encryption is true,
  * the key is setup for encryption; otherwise it is setup for decryption.

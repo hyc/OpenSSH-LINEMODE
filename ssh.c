@@ -42,6 +42,7 @@ int IPv4or6 = AF_UNSPEC;
 /* Flag indicating whether debug mode is on.  This can be set on the command line. */
 int debug_flag = 0;
 
+/* Flag indicating whether a tty should be allocated */
 int tty_flag = 0;
 
 /* don't exec a shell */
@@ -336,8 +337,10 @@ main(int ac, char **av)
 
 		case 'v':
 		case 'V':
-			fprintf(stderr, "SSH Version %s, protocol version %d.%d.\n",
-			    SSH_VERSION, PROTOCOL_MAJOR, PROTOCOL_MINOR);
+			fprintf(stderr, "SSH Version %s, protocol versions %d.%d/%d.%d.\n",
+			    SSH_VERSION,
+			    PROTOCOL_MAJOR_1, PROTOCOL_MINOR_1,
+			    PROTOCOL_MAJOR_2, PROTOCOL_MINOR_2);
 			fprintf(stderr, "Compiled with SSL (0x%8.8lx).\n", SSLeay());
 			if (opt == 'V')
 				exit(0);

@@ -30,9 +30,16 @@
 
 #ifndef COMPAT_H
 #define COMPAT_H
+
+#define	SSH_PROTO_UNKNOWN 	0x00
+#define	SSH_PROTO_1		0x01
+#define	SSH_PROTO_1_PREFERRED	0x02
+#define	SSH_PROTO_2		0x04
+
 void    enable_compat13(void);
 void    enable_compat20(void);
 void    compat_datafellows(const char *s);
+int	proto_spec(const char *spec);
 extern int compat13;
 extern int compat20;
 extern int datafellows;

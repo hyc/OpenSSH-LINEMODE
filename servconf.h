@@ -48,6 +48,8 @@ typedef struct {
 					 * searching at */
 	int     strict_modes;	/* If true, require string home dir modes. */
 	int     keepalives;	/* If true, set SO_KEEPALIVE. */
+	char   *ciphers;	/* Ciphers in order of preference. */
+	int	protocol;	/* Protocol in order of preference. */
 	SyslogFacility log_facility;	/* Facility for system logging. */
 	LogLevel log_level;	/* Level for system logging. */
 	int     rhosts_authentication;	/* If true, permit rhosts
