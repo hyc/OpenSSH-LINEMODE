@@ -32,6 +32,7 @@ typedef struct {
 	char   *listen_addr;		/* Address on which the server listens. */
 	struct addrinfo *listen_addrs;	/* Addresses on which the server listens. */
 	char   *host_key_file;	/* File containing host key. */
+	char   *dsa_key_file;	/* File containing dsa host key. */
 	int     server_key_bits;/* Size of the server key. */
 	int     login_grace_time;	/* Disconnect if no auth in this time
 					 * (sec). */

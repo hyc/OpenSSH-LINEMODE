@@ -58,9 +58,7 @@ compat_datafellows(const char *version)
 	size_t len;
 	static const char *check[] = {
 		"2.0.1",
-		"2.1.0.beta.9",
-		"2.1.0.pre.3",
-		"2.1.0.public.beta.1",
+		"2.1.0",
 		NULL
 	};
 	for (i = 0; check[i]; i++) {
