@@ -230,6 +230,7 @@
    changes
  - (djm) Recent Glibc includes an incompatible sys/queue.h. Treat it as 
    bogus in configure
+ - (djm) Use local sys/queue.h if necessary in ssh-agent.c
 
 20020121
  - (djm) Rework ssh-rand-helper:
