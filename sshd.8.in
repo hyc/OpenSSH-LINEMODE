@@ -637,7 +637,7 @@ really used for anything; it is only provided for the convenience of
 the user so its contents can be copied to known hosts files.
 These two files are created using
 .Xr ssh-keygen 1 .
-.It Pa /var/run/sshd.pid
+.It Pa @piddir@/sshd.pid
 Contains the process ID of the
 .Nm
 listening for connections (if there are several daemons running
