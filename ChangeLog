@@ -38,6 +38,8 @@
    UsePAM section.  Parts from djm@ and jmc@.
  - (dtucker) [auth-pam.c scard-opensc.c] Tinderbox says auth-pam.c uses
    readpass.h, grep says scard-opensc.c does too.  Replace with misc.h.
+ - (dtucker) [openbsd-compat/getrrsetbyname.c] Check that HAVE_DECL_H_ERROR
+   is defined before using.
 
 20040502
  - (dtucker) OpenBSD CVS Sync
