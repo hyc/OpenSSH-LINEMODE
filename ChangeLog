@@ -10,6 +10,12 @@
    - jakob@cvs.openbsd.org 2003/11/03 09:37:32
      [sshconnect.c]
      do not free static type pointer in warn_changed_key()
+   - djm@cvs.openbsd.org 2003/11/04 08:54:09
+     [auth1.c auth2.c auth2-pubkey.c auth.h auth-krb5.c auth-passwd.c]
+     [auth-rhosts.c auth-rh-rsa.c auth-rsa.c monitor.c serverloop.c]
+     [session.c]
+     standardise arguments to auth methods - they should all take authctxt.
+     check authctxt->valid rather then pw != NULL; ok markus@
 
 20031115
  - (dtucker) [regress/agent-ptrace.sh] Test for GDB output from Solaris and
