@@ -1,3 +1,7 @@
+20040123 
+ - (djm) Do pam_session processing for systems with HAVE_LOGIN_CAP; from 
+   ralf.hack AT pipex.net; ok dtucker@
+
 20040122
  - (dtucker) [configure.ac] Use krb5-config where available for Kerberos/
    GSSAPI detection, libs and includes.  ok djm@
