@@ -78,6 +78,7 @@
      [auth-krb4.c]
      ...sizeof(&adat.session) is not good here.
      henning@, deraadt@, millert@
+ - (djm) Add new object files to Makefile and reorder
 
 20030211
  - (djm) Cygwin needs libcrypt too. Patch from vinschen@redhat.com
