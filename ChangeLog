@@ -1,6 +1,9 @@
 20030913
  - (dtucker) [regress/agent-timeout.sh] Timeout of 5 sec is borderline for
    slower hosts, increase to 10 sec.
+ - (dtucker) [auth-passwd.c] On AIX, call setauthdb() before loginsuccess(),
+   required to correctly reset failed login count when using a password
+   registry other than "files" (eg LDAP, see bug #543).
 
 20030912
  - (tim) [regress/agent-ptrace.sh] sh doesn't like "if ! shell_function; then".
