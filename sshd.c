@@ -13,7 +13,13 @@
 #include "includes.h"
 RCSID("$Id$");
 
-#include <poll.h>
+#ifdef HAVE_POLL_H
+# include <poll.h>
+#else /* HAVE_POLL_H */
+# ifdef HAVE_SYS_POLL_H
+#  include <sys/poll.h>
+# endif /* HAVE_SYS_POLL_H */
+#endif /* HAVE_POLL_H */
 
 #include "xmalloc.h"
 #include "rsa.h"
