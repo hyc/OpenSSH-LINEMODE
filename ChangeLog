@@ -1,6 +1,7 @@
 20020123
  - (djm) Fix non-standard shell syntax in autoconf. Patch from 
    Dave Dykstra <dwd@bell-labs.com>
+ - (stevesk) fix --with-zlib=
 
 20020122
  - (djm) autoconf hacking:

@@ -337,7 +337,7 @@ dnl zlib is required
 AC_ARG_WITH(zlib,
 	[  --with-zlib=PATH        Use zlib in PATH],
 	[
-		if test "x$withval" != "xno" ; then
+		if test "x$withval" = "xno" ; then
 			AC_MSG_ERROR([*** zlib is required ***])
 		fi
 		if test -d "$withval/lib"; then
