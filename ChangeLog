@@ -7,6 +7,9 @@
    - markus@cvs.openbsd.org 2001/06/12 16:10:38
      [session.c]
      merge ssh1/ssh2 tty msg parse and alloc code
+   - markus@cvs.openbsd.org 2001/06/12 16:11:26
+     [packet.c]
+     do not log() packet_set_maxsize
 
 20010612
  - scp.c ID update (upstream synced vfsprintf() from us)
