@@ -7,6 +7,9 @@
      - remove double word
      - rearrange .Bk to keep SYNOPSIS nice
      - -M before -m in options description
+   - jmc@cvs.openbsd.org 2004/06/26 09:11:14
+     [ssh_config.5]
+     punctuation and grammar fixes. also, keep the options in order.
 
 20040627
  - (tim) update README files.
