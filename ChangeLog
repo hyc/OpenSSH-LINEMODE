@@ -1,5 +1,6 @@
 20010915
  - (djm) Make do_pre_login static to avoid prototype #ifdef hell
+ - (djm) Sync scard/ stuff
 
 20010914
  - (bal) OpenBSD CVS Sync
