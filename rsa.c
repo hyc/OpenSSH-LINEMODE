@@ -40,22 +40,9 @@ RCSID("$Id$");
 #include "rsa.h"
 #include "ssh.h"
 #include "xmalloc.h"
-#include "random.h"
+#include "entropy.h"
 
 int rsa_verbose = 1;
-
-/*
- * Seed OpenSSL's random number generator
- */
-void
-seed_rng()
-{
-	char buf[64];
-
-	get_random_bytes(buf, sizeof(buf));
-	RAND_seed(buf, sizeof(buf));
-	memset(buf, 0, sizeof(buf));
-}
 
 int
 rsa_alive()
@@ -108,6 +95,8 @@ rsa_generate_key(RSA *prv, RSA *pub, unsigned int bits)
 	}
 	if (key == NULL)
 		fatal("rsa_generate_key: key generation failed.");
+
+	seed_rng();
 
 	/* Copy public key parameters */
 	pub->n = BN_new();
