@@ -238,12 +238,6 @@
 /* Define this if you are using the Heimdal version of Kerberos V5 */
 #undef HEIMDAL
 
-/* Define if you want Kerberos 4 support */
-#undef KRB4
-
-/* Define if you want AFS support */
-#undef AFS
-
 /* Define if you want S/Key support */
 #undef SKEY
 
