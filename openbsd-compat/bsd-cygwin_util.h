@@ -24,7 +24,7 @@
 
 int binary_open(const char *filename, int flags, ...);
 int binary_pipe(int fd[2]);
-int check_nt_auth(int pwd_authenticated, uid_t uid);
+int check_nt_auth(int pwd_authenticated, struct passwd *pw);
 int check_ntsec(const char *filename);
 void register_9x_service(void);
 
