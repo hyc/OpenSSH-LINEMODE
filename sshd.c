@@ -242,6 +242,9 @@ int do_pam_auth(const char *user, const char *password)
 {
 	int pam_retval;
 	
+	if ((options.permit_empty_passwd == 0) && (password[0] == '\0')
+		return 0;
+
 	pampasswd = password;
 	
 	pam_retval = pam_authenticate((pam_handle_t *)pamh, 0);
