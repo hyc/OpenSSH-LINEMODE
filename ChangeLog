@@ -7,6 +7,9 @@
    - markus@cvs.openbsd.org 2001/09/27 11:59:37
      [packet.c]
      missing called=1; chombier@mac.com
+   - markus@cvs.openbsd.org 2001/09/27 15:31:17
+     [auth2.c auth2-chall.c sshconnect1.c]
+     typos; from solar
 
 20011001
  - (stevesk) loginrec.c: fix type conversion problems exposed when using
