@@ -1,4 +1,5 @@
 20030611
+ - (djm) Sync LICENSE against OpenBSD
  - (djm) OpenBSD CVS Sync
    - jmc@cvs.openbsd.org 2003/06/10 09:12:11
      [scp.1 sftp-server.8 ssh.1 ssh-add.1 ssh-agent.1 ssh_config.5]
