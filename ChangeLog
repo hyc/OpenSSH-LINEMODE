@@ -1,6 +1,7 @@
 20010615
  - (stevesk) don't set SA_RESTART and set SIGCHLD to SIG_DFL
    around grantpt().
+ - (stevesk) update TODO: STREAMS pty systems don't call vhangup() now
 
 20010614
  - OpenBSD CVS Sync
