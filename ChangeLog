@@ -1,5 +1,6 @@
 20050211
  - (dtucker) [configure.ac] Tidy up configure --help output.
+ - (dtucker) [openbsd-compat/fake-rfc2553.h] We now need EAI_SYSTEM too.
 
 20050210
  - (dtucker) [configure.ac] Bug #919: Provide visible feedback for the
