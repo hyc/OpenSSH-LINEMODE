@@ -98,5 +98,7 @@ PrivSep Issues:
   + Issues with usrinfo()
 - OSF
   + SIA is broken
+- Cygwin
+  + Privsep for Pre-auth only (no fd passing)
 
 $Id$
