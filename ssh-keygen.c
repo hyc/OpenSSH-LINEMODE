@@ -117,7 +117,7 @@ do_change_passphrase(struct passwd *pw)
     xfree(old_passphrase);
   }
   printf("Key has comment '%s'\n", comment);
-  
+   
   /* Ask the new passphrase (twice). */
   if (identity_new_passphrase)
     {

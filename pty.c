@@ -16,6 +16,11 @@ Allocating a pseudo-terminal, and making it the controlling tty.
 #include "includes.h"
 RCSID("$Id$");
 
+#ifdef HAVE_PTY_H
+/* Unfortunate namespace collision */
+#include <pty.h>
+#endif /* HAVE_PTY_H */
+
 #include "pty.h"
 #include "ssh.h"
 
