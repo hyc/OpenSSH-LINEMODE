@@ -4,6 +4,8 @@
    cleanup functions.  With & ok djm@
  - (dtucker) [contrib/redhat/openssh.spec] Bug #714: Now that UsePAM is a
    run-time switch, always build --with-md5-passwords.
+ - (dtucker) [configure.ac openbsd-compat/Makefile.in openbsd-compat/strtoul.c]
+   Bug #670: add strtoul() to openbsd-compat for platforms lacking it.  ok djm@
 
 20031003
  - (dtucker) OpenBSD CVS Sync

@@ -739,7 +739,7 @@ AC_CHECK_FUNCS(\
 	setdtablesize setegid setenv seteuid setgroups setlogin setpcred \
 	setproctitle setregid setresgid setresuid setreuid setrlimit \
 	setsid setvbuf sigaction sigvec snprintf socketpair strerror \
-	strlcat strlcpy strmode strnvis sysconf tcgetpgrp \
+	strlcat strlcpy strmode strnvis strtoul sysconf tcgetpgrp \
 	truncate utimes vhangup vsnprintf waitpid \
 )
 
