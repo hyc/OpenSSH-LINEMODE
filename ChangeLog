@@ -6,6 +6,8 @@
  - (djm) Bug #26: Use local mkstemp() rather than glibc's silly one. Fixes
    Can't pass KRB4 TGT passing. Fix from: jan.iven@cern.ch
  - (djm) Fix Bug #442 for PAM case
+ - (djm) Bug #110: bogus error messages in lastlog_get_entry(). Fix based
+   on one by peak@argo.troja.mff.cuni.cz
 
 20030103
  - (djm) Bug #461: ssh-copy-id fails with no arguments. Patch from 

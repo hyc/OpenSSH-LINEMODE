@@ -1522,22 +1522,32 @@ int
 lastlog_get_entry(struct logininfo *li)
 {
 	struct lastlog last;
-	int fd;
+	int fd, ret;
 
 	if (!lastlog_openseek(li, &fd, O_RDONLY))
-		return 0;
+		return (0);
 
-	if (atomicio(read, fd, &last, sizeof(last)) != sizeof(last)) {
-		close(fd);
-		log("lastlog_get_entry: Error reading from %s: %s",
-		    LASTLOG_FILE, strerror(errno));
-		return 0;
-	}
-
+	ret = atomicio(read, fd, &last, sizeof(last));
 	close(fd);
 
-	lastlog_populate_entry(li, &last);
+	switch (ret) {
+	case 0:
+		memset(&last, '\0', sizeof(last));
+		/* FALLTHRU */
+	case sizeof(last):
+		lastlog_populate_entry(li, &last);
+		return (1);
+	case -1:
+		error("%s: Error reading from %s: %s", __func__, 
+		    LASTLOG_FILE, strerror(errno));
+		return (0);
+	default:
+		error("%s: Error reading from %s: Expecting %d, got %d",
+		    __func__, LASTLOG_FILE, sizeof(last), ret);
+		return (0);
+	}
 
-	return 1;
+	/* NOTREACHED */
+	return (0);
 }
 #endif /* USE_LASTLOG */
