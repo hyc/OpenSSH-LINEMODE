@@ -2,7 +2,7 @@
  * Pseudo-implementation of RFC2553 name / address resolution functions
  *
  * But these functions are not implemented correctly. The minimum subset
- * is implemented for ssh use only. For exapmle, this routine assumes
+ * is implemented for ssh use only. For example, this routine assumes
  * that ai_family is AF_INET. Don't use it for another purpose.
  */
 
