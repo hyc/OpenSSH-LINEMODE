@@ -152,7 +152,7 @@ record_login(int pid, const char *ttyname, const char *user, uid_t uid,
 
 	login(&u);
 
-#ifdef defined(HAVE_LASTLOG_H) && !defined(DISABLE_LASTLOG)
+#if defined(HAVE_LASTLOG_H) && !defined(DISABLE_LASTLOG)
 	lastlog = _PATH_LASTLOG;
 
 	/* Update lastlog unless actually recording a logout. */
