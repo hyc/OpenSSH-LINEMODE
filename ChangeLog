@@ -1,3 +1,7 @@
+20040701
+ - (dtucker) [session.c] Call display_loginmsg again after do_pam_session.
+   Ensures messages from PAM modules are displayed when privsep=no.
+
 20040630
  - (dtucker) [auth-pam.c] Check for buggy PAM modules that return a NULL
    appdata_ptr to the conversation function.  ok djm@
