@@ -3,6 +3,12 @@
    - jmc@cvs.openbsd.org 2004/11/07 17:42:36
      [ssh.1]
      options sort, and whitespace;
+   - jmc@cvs.openbsd.org 2004/11/07 17:57:30
+     [ssh.c]
+     usage():
+     - add -O
+     - sync -S w/ manpage
+     - remove -h
 
 20041107
  - (dtucker) OpenBSD CVS Sync
