@@ -26,6 +26,9 @@
      [sshd.c]
      end request with 0, not NULL
      ok markus@
+   - stevesk@cvs.openbsd.org 2001/08/23 18:02:48
+     [ssh-agent.1]
+     fix usage; ok markus@
 
 20010815
  - (bal) Fixed stray code in readconf.c that went in by mistake.
