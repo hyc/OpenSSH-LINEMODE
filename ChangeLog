@@ -24,6 +24,9 @@
      change preferredauthentication order to               
         publickey,hostbased,password,keyboard-interactive  
      document that hostbased defaults to no, document order
+   - markus@cvs.openbsd.org 2001/05/19 16:46:19
+     [ssh.1 sshd.8]                            
+     document MACs defaults with .Dq           
 
 20010528
  - (tim) [conifgure.in] add setvbuf test needed for sftp-int.c
