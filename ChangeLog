@@ -34,6 +34,9 @@
      [auth.h]
      Manual cleanup of remaining userland __P use (excluding packages 
      maintained outside the tree)
+   - markus@cvs.openbsd.org 2002/02/18 13:05:32
+     [cipher.c cipher.h]
+     switch to EVP, ok djm@ deraadt@
 
 20020218
  - (tim) newer config.guess from ftp://ftp.gnu.org/gnu/config/config.guess
