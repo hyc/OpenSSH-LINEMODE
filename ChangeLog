@@ -102,6 +102,11 @@
      [scard.c ssh.c]
      support finish rsa keys.
      free public keys after login -> call finish -> close smartcard.
+   - markus@cvs.openbsd.org 2001/08/02 00:10:17
+     [ssh-keygen.c]
+     add -D readerid option (download, i.e. print public RSA key to stdout).
+     check for card present when uploading keys.
+     use strings instead of ints for smartcard reader ids, too.
 
 20010803
  - (djm) Fix interrupted read in entropy gatherer. Spotted by markus@ on
