@@ -1,3 +1,10 @@
+20030703
+ - (dtucker) OpenBSD CVS Sync
+   - djm@cvs.openbsd.org 2003/06/28 07:48:10
+     [sshd.c]
+     report pidfile creation errors, based on patch from Roumen Petrov;
+     ok markus@
+
 20030630
  - (djm) Search for support functions necessary to build our 
    getrrsetbyname() replacement. Patch from Roumen Petrov 
