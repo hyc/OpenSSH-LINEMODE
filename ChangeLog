@@ -3,6 +3,7 @@
  - (stevesk) [README.privsep] minor updates
  - (djm) Create privsep directory and warn if privsep user is missing 
    during make install
+ - (bal) Started list of PrivSep issues in TODO
 
 20020624
  - OpenBSD CVS Sync

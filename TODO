@@ -87,4 +87,16 @@ Packaging:
 - HP-UX: Provide DEPOT package scripts.
   (gilbert.r.loomis@saic.com)
 
+
+PrivSep Issues:
+- mmap() issues.
+  + No/broken MAP_ANON
+  + broken /dev/zero parse
+- PAM 
+  + See above PAM notes
+- AIX
+  + Issues with usrinfo()
+- OSF
+  + SIA is broken
+
 $Id$
