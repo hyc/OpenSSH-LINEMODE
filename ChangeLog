@@ -9,6 +9,9 @@
    - markus@cvs.openbsd.org 2001/04/17 08:14:01                          
      [sshconnect1.c]                                                     
      check for key!=NULL, thanks to costa  
+  - markus@cvs.openbsd.org 2001/04/17 09:52:48                          
+     [clientloop.c]                                                      
+     handle EINTR/EAGAIN on read; ok deraadt@
 
 20010416
   - OpenBSD CVS Sync
