@@ -1,3 +1,7 @@
+20030512
+ - (djm) Redhat spec: Don't install profile.d scripts when not 
+   building with GNOME/GTK askpass (patch from bet@rahul.net)
+
 20030510
  - (dtucker) Bug #318: Create ssh_prng_cmds.out during "make" rather than
    "make install".  Patch by roth@feep.net.
