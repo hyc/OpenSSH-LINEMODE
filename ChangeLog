@@ -42,6 +42,9 @@
      [monitor.c session.c sshlogin.c sshlogin.h]
      pass addrlen with sockaddr *; from Hajimu UMEMOTO <ume@FreeBSD.org>
      NOTE: there are also p-specific parts to this patch. ok markus@
+   - stevesk@cvs.openbsd.org 2002/08/29 16:02:54
+     [ssh.1 ssh.c]
+     deprecate -P as UsePrivilegedPort defaults to no now; ok markus@
 
 20020820
  - OpenBSD CVS Sync
