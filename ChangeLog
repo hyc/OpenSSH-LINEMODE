@@ -1,3 +1,6 @@
+20010301
+ - (djm) Properly add -lcrypt if needed. 
+
 20010228
  - (djm) Detect endianness in configure and use it in rijndael.c. Fixes
    "Bad packet length" bugs.
