@@ -2,6 +2,7 @@
  - (dtucker) [regress/test-exec.sh] Bug #912: Set _POSIX2_VERSION for the
    regress tests so newer versions of GNU head(1) behave themselves.  Patch
    by djm, so ok me.
+ - (dtucker) [openbsd-compat/port-aix.c] Silence compiler warnings.
 
 20050204
  - (dtucker) [monitor.c] Permit INVALID_USER audit events from slave too.
