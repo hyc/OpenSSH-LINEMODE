@@ -3,7 +3,7 @@
    BSM audit support for the time being.  ok djm@
  - (dtucker) OpenBSD CVS Sync (regress/)
    - fgsch@cvs.openbsd.org 2004/12/10 01:31:30
-     [Makefile]
+     [Makefile sftp-glob.sh]
      some globbing regress; prompted and ok djm@
 
 20050306
