@@ -131,6 +131,7 @@
      [sftp-server.c]
      use get_int() macro (hide iqueue)
  - (bal) Missed msg.[ch] in merge.  Required for ssh-keysign.
+ - (bal) Forgot to add msg.c Makefile.in.
 
 20020604
  - (stevesk) [channels.c] bug #164 patch from YOSHIFUJI Hideaki (changed
