@@ -1,3 +1,6 @@
+20030813
+ - (dtucker) [session.c] Remove #ifdef TIOCSBRK kludge.
+
 20030811
  - (dtucker) OpenBSD CVS Sync
    (thanks to Simon Wilkinson for help with this -dt)
