@@ -25,6 +25,7 @@
 #include "setproctitle.h"
 #include "getgrouplist.h"
 #include "glob.h"
+#include "getusershell.h"
 
 /* Home grown routines */
 #include "bsd-arc4random.h"
