@@ -9,6 +9,9 @@
    - nino@cvs.openbsd.org 2003/06/12 15:34:09
      [scp.c]
      Typo. Ok markus@.
+   - markus@cvs.openbsd.org 2003/06/12 19:12:03
+     [scard.c scard.h ssh-agent.c ssh.c]
+     add sc_get_key_label; larsch at trustcenter.de; bugzilla#591
 
 20030614
  - (djm) Update license on fake-rfc2553.[ch]; ok itojun@
