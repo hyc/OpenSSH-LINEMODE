@@ -4,6 +4,8 @@
      [monitor.c]
      unbreak rekeying for privsep; ok millert@
  - Release 3.6p1
+ - Fix sshd BindAddress and -b options for systems using fake-getaddrinfo.
+   Report from murple@murple.net, diagnosis from dtucker@zip.com.au
 
 20030320
  - (djm) OpenBSD CVS Sync

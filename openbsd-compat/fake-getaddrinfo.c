@@ -71,6 +71,7 @@ int getaddrinfo(const char *hostname, const char *servname,
 	struct in_addr in;
 	int i;
 	long int port;
+	u_long addr;
 
 	port = 0;
 	if (servname != NULL) {
@@ -86,7 +87,10 @@ int getaddrinfo(const char *hostname, const char *servname,
 	}
 
 	if (hints && hints->ai_flags & AI_PASSIVE) {
-		if (NULL != (*res = malloc_ai(port, htonl(0x00000000))))
+		addr = htonl(0x00000000);
+		if (hostname && inet_aton(hostname, &in) != 0)
+			addr = in.s_addr;
+		if (NULL != (*res = malloc_ai(port, addr)))
 			return 0;
 		else
 			return EAI_MEMORY;
