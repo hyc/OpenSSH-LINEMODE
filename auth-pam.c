@@ -172,7 +172,7 @@ static int do_pam_conversation(int num_msg, const struct pam_message **msg,
 /* Called at exit to cleanly shutdown PAM */
 void do_pam_cleanup_proc(void *context)
 {
-	int pam_retval;
+	int pam_retval = PAM_SUCCESS;
 
 	if (__pamh && session_opened) {
 		pam_retval = pam_close_session(__pamh, 0);
