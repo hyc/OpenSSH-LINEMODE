@@ -349,6 +349,9 @@
 /* Define if you shouldn't strip 'tty' from your ttyname in [uw]tmp */
 #undef WITH_ABBREV_NO_TTY
 
+/* Define if you want a different $PATH for the superuser */
+#undef SUPERUSER_PATH
+
 @BOTTOM@
 
 /* ******************* Shouldn't need to edit below this line ************** */
