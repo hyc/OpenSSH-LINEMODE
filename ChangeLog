@@ -1,5 +1,6 @@
 20040225
  - (djm) Trim ChangeLog 
+ - (djm) Don't specify path to PAM modules in Redhat sshd.pam; from Fedora
 
 20040224
  - (dtucker) OpenBSD CVS Sync
