@@ -1,3 +1,8 @@
+20020108
+ - (djm) Merge Cygwin copy_environment with do_pam_environment, removing 
+   fixed env var size limit in the process. Report from Corinna Vinschen 
+   <vinschen@redhat.com>
+
 20020106
  - (stevesk) defines.h: determine _PATH_UNIX_X; currently "/tmp/.X11-unix/X%u"
    for all platforms except HP-UX, which is "/usr/spool/sockets/X11/%u".
