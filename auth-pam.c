@@ -49,7 +49,7 @@ RCSID("$Id$");
 #include "monitor_wrap.h"
 #include "msg.h"
 #include "packet.h"
-#include "readpass.h"
+#include "misc.h"
 #include "servconf.h"
 #include "ssh2.h"
 #include "xmalloc.h"
