@@ -137,6 +137,10 @@ only by root, whereas ssh_config should be world-readable. */
    authentication socket. */
 #define SSH_AUTHSOCKET_ENV_NAME	"SSH_AUTH_SOCK"
 
+/* Name of the environment variable containing the pathname of the
+	authentication socket. */
+#define SSH_AGENTPID_ENV_NAME  "SSH_AGENT_PID"
+
 /* Force host key length and server key length to differ by at least this
    many bits.  This is to make double encryption with rsaref work. */
 #define SSH_KEY_BITS_RESERVED		128
