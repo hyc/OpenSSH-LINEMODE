@@ -265,7 +265,7 @@ auth_rsa(struct passwd *pw, BIGNUM *client_n)
 
       /* check the real bits  */
       if (bits != BN_num_bits(n))
-        error("Warning: error in %s, line %d: keysize mismatch: "
+        error("Warning: error in %s, line %ld: keysize mismatch: "
               "actual size %d vs. announced %d.",
               file, linenum, BN_num_bits(n), bits);
 

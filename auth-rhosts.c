@@ -213,7 +213,7 @@ int auth_rhosts(struct passwd *pw, const char *client_user)
      group or world writable. */
   if (stat(pw->pw_dir, &st) < 0)
     {
-      log("Rhosts authentication refused for %.100: no home directory %.200s",
+      log("Rhosts authentication refused for %.100s: no home directory %.200s",
 	  pw->pw_name, pw->pw_dir);
       packet_send_debug("Rhosts authentication refused for %.100: no home directory %.200s",
 			pw->pw_name, pw->pw_dir);
