@@ -133,6 +133,14 @@ including rpc/rpc.h breaks Solaris 6
 #define __unused
 #endif
 
+#ifndef HFIXEDSZ
+#define HFIXEDSZ 12
+#endif
+
+#ifndef T_SIG
+#define T_SIG 24
+#endif
+
 /* Types */
 
 /* If sys/types.h does not supply intXX_t, supply them ourselves */
