@@ -3,6 +3,9 @@
    - markus@cvs.openbsd.org 2002/03/06 00:20:54
      [compat.c dh.c]
      compat.c
+   - markus@cvs.openbsd.org 2002/03/06 00:23:27
+     [compat.c dh.c]
+     undo
 
 20020305
    - stevesk@cvs.openbsd.org 2002/03/02 09:34:42
