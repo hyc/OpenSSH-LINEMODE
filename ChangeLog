@@ -1,6 +1,7 @@
 20030912
  - (tim) [regress/agent-ptrace.sh] sh doesn't like "if ! shell_function; then".
  - (tim) [Makefile.in] only mkdir regress if it does not exist.
+ - (tim) [regress/yes-head.sh] shell portability fix.
 
 20030911
  - (dtucker) [configure.ac] Bug #588, #615: Move other libgen tests to after
