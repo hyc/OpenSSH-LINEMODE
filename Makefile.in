@@ -112,9 +112,9 @@ FIXPATHSCMD	= $(SED) $(PATHSUBS)
 
 all: $(CONFIGFILES) ssh_prng_cmds.out $(MANPAGES) $(TARGETS)
 
-$(LIBSSH_OBJS): config.h
-$(SSHOBJS): config.h
-$(SSHDOBJS): config.h
+$(LIBSSH_OBJS): Makefile.in config.h
+$(SSHOBJS): Makefile.in config.h
+$(SSHDOBJS): Makefile.in config.h
 
 .c.o:
 	$(CC) $(CFLAGS) $(CPPFLAGS) -c $<

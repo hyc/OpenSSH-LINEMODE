@@ -51,6 +51,7 @@
  - (djm) Only build getrrsetbyname replacement when using --with-dns
  - (djm) Bug #529: sshd doesn't work correctly after SIGHUP (copy argv 
          correctly)
+ - (djm) Bug #444: Wrong paths after reconfigure
 
 20030514
  - (djm) Bug #117: Don't lie to PAM about username
