@@ -143,7 +143,7 @@
  **   Solaris
  **   HP-UX 10.20 (gcc only)
  **   IRIX
- **	NeXT - M68k/HPPA (4.2/3.3)
+ **   NeXT - M68k/HPPA/Sparc (4.2/3.3)
  **
  ** Testing required: Please send reports!
  **   NetBSD
@@ -162,6 +162,10 @@
 #include "loginrec.h"
 
 RCSID("$Id$");
+
+#ifdef HAVE_UTIL_H
+#  include <util.h>
+#endif
 
 /**
  ** prototypes for helper functions in this file
