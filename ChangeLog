@@ -3,6 +3,9 @@
    - otto@cvs.openbsd.org 2005/02/16 09:56:44
      [ssh.c]
      Better diagnostic if an identity file is not accesible. ok markus@ djm@
+   - djm@cvs.openbsd.org 2005/02/18 03:05:53
+     [canohost.c]
+     better error messages for getnameinfo failures; ok dtucker@
 
 20050226
  - (dtucker) [openbsd-compat/bsd-openpty.c openbsd-compat/inet_ntop.c]
