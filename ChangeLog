@@ -1,6 +1,7 @@
 20020513
  - (djm) Add --with-superuser-path=xxx configure option to specify what $PATH
    the superuser receives.
+ - (djm) Bug #231: UsePrivilegeSeparation turns off Banner.
 
 20020511
  - (tim) [configure.ac] applied a rework of djm's OpenSSL search cleanup patch.
