@@ -1,3 +1,7 @@
+20030303
+ - (djm) [configure.ac ssh-agent.c] Use prctl to prevent ptrace on ssh-agent
+   ok dtucker  
+
 20040229
  - (tim) [configure.ac] Put back bits mistakenly removed from Rev 1.188
 
