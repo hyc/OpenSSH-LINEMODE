@@ -10,6 +10,9 @@
      [auth-krb5.c]
      fix krb5 authorization check. found by <jhawk@MIT.EDU>. from 
      art@, deraadt@ ok
+   - markus@cvs.openbsd.org  2001/11/12 11:17:07
+     [servconf.c]
+     enable authorized_keys2 again. tested by fries@
 
 20011112
  - (djm) Makefile correctness fix from Mark D. Baushke <mdb@juniper.net>
