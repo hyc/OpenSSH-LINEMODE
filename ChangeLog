@@ -13,6 +13,9 @@
    - markus@cvs.openbsd.org 2002/02/11 16:19:39
      [sshd.c]
      include md5.h not hmac.h
+   - markus@cvs.openbsd.org 2002/02/11 16:21:42
+     [match.c]
+     support up to 40 algorithms per proposal
 
 20020210
  - (djm) OpenBSD CVS Sync
