@@ -1021,7 +1021,7 @@ ssh_exchange_identification()
 	/* We speak 1.3, too. */
 	if (remote_major == 1 && remote_minor == 3) {
 		enable_compat13();
-		if (options.forward_agent && strcmp(remote_version, SSH_VERSION) != 0) {
+		if (options.forward_agent && strcmp(remote_version, "OpenSSH-1.1") != 0) {
 			log("Agent forwarding disabled, remote version '%s' is not compatible.",
 			    remote_version);
 			options.forward_agent = 0;
