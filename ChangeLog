@@ -1,3 +1,7 @@
+20050210
+ - (dtucker) [configure.ac] Bug #919: Provide visible feedback for the
+   --disable-etc-default-login configure option.
+
 20050209
  - (dtucker) OpenBSD CVS Sync
    - dtucker@cvs.openbsd.org 2005/01/28 09:45:53
