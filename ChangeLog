@@ -12,6 +12,10 @@
      [cipher.c]
      rename acss@opebsd.org to acss@openssh.org
      ok deraadt@
+   - djm@cvs.openbsd.org 2004/01/25 03:49:09
+     [sshconnect.c]
+     reset nonblocking flag after ConnectTimeout > 0 connect; (bugzilla #785)
+     from jclonguet AT free.fr; ok millert@
  - (djm) [acss.c acss.h cipher-acss.c] Portable support for ACSS 
    if libcrypto lacks it
 
