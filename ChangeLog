@@ -15,6 +15,9 @@
    - jakob@cvs.openbsd.org 2003/06/11 10:16:16
      [sshconnect.c]
      clean up check_host_key() and improve SSHFP feedback. ok markus@
+   - jakob@cvs.openbsd.org 2003/06/11 10:18:47
+     [dns.c]
+     sync with check_host_key() change
 
 
 20030609
