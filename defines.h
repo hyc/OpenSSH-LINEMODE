@@ -421,9 +421,9 @@ struct winsize {
 # endif /* defined(HAVE_XATEXIT) */
 #endif /* !defined(HAVE_ATEXIT) && defined(HAVE_ON_EXIT) */
 
-#if defined(HAVE_VHANGUP) && !defined(BROKEN_VHANGUP)
+#if defined(HAVE_VHANGUP) && !defined(HAVE_DEV_PTMX)
 #  define USE_VHANGUP
-#endif /* defined(HAVE_VHANGUP) && !defined(BROKEN_VHANGUP) */
+#endif /* defined(HAVE_VHANGUP) && !defined(HAVE_DEV_PTMX) */
 
 #ifndef GETPGRP_VOID
 # define getpgrp() getpgrp(0)

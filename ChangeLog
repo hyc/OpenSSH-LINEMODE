@@ -28,6 +28,8 @@
      [dh.c kex.c packet.c]
      clear+free keys,iv for rekeying.
      + fix DH mem leaks. ok niels@
+ - (stevesk) don't use vhangup() if defined(HAVE_DEV_PTMX); also removes
+    BROKEN_VHANGUP
 
 20010404
  - OpenBSD CVS Sync

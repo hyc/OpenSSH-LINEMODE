@@ -284,9 +284,6 @@
 /* getaddrinfo is broken (if present) */
 #undef BROKEN_GETADDRINFO
 
-/* vhangup is broken (if present) */
-#undef BROKEN_VHANGUP
-
 /* Workaround more Linux IPv6 quirks */
 #undef DONT_TRY_OTHER_AF
 
