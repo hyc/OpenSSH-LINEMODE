@@ -48,6 +48,9 @@
    - markus@cvs.openbsd.org 2002/06/26 08:58:26
      [session.c]
      limit # of env vars to 1000; ok deraadt/djm
+   - deraadt@cvs.openbsd.org 2002/06/26 13:20:57
+     [monitor.c]
+     be careful in mm_zalloc
  - (djm) Require krb5 devel for RPM build w/ KrbV 
  - (djm) Improve PAMAuthenticationViaKbdInt text from Nalin Dahyabhai 
    <nalin@redhat.com>
