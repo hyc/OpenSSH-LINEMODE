@@ -73,6 +73,7 @@
      [sftp-int.c]
      cleanup get_pathname, fix pwd after failed cd. okay djm@
  - (djm) Update makefile.in for _PATH_SFTP_SERVER
+ - (bal) sftp-client.c replace NULL w/ 0 in do_ls() (pending in OpenBSD tree)
 
 20010209
  - (bal) patch to vis.c to deal with HAVE_VIS right by Robert Mooney 
