@@ -1,3 +1,7 @@
+20021111
+ - (tim) [contrib/solaris/opensshd.in] add umask 022 so sshd.pid is
+   not world writable.
+
 20021109
  - (bal) OpenBSD CVS Sync
    - itojun@cvs.openbsd.org 2002/10/16 14:31:48
