@@ -355,6 +355,7 @@ hash_command_output(entropy_cmd_t *src, unsigned char *hash)
 		case 0:
 			/* timer expired */
 			error_abort = 1;
+			kill(pid, SIGINT);
 			break;
 		case 1:
 			/* command input */
