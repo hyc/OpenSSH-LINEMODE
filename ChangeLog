@@ -1,3 +1,9 @@
+20020424
+ - (djm) OpenBSD CVS Sync
+   - markus@cvs.openbsd.org 2002/04/23 12:54:10
+     [version.h]
+     3.2.1
+
 20020423
  - (stevesk) [acconfig.h configure.ac session.c] LOGIN_NO_ENDOPT for HP-UX
  - (stevesk) [acconfig.h] NEED_IN_SYSTM_H unused
