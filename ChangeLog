@@ -25,6 +25,10 @@
      [ssh_config]
      update defaults for RhostsRSAAuthentication and RhostsAuthentication
      here too (all options commented out with default value).
+   - markus@cvs.openbsd.org 2002/06/10 22:28:41
+     [channels.c channels.h session.c]
+     move creation of agent socket to session.c; no need for uidswapping
+     in channel.c.
 
 20020609
  - (bal) OpenBSD CVS Sync
