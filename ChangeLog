@@ -30,6 +30,9 @@
    - djm@cvs.openbsd.org 2004/06/21 22:30:45
      [sftp.c]
      prefix ls option flags with LS_
+   - djm@cvs.openbsd.org 2004/06/21 22:41:31
+     [sftp.1]
+     document sort options
 
 20040620
  - (tim) [configure.ac Makefile.in] Only change TEST_SHELL on broken platforms.
