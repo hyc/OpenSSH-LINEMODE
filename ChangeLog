@@ -73,6 +73,9 @@
       tildexpand.h uidswap.h uuencode.h xmalloc.h]
      remove comments from .h, since they are cut&paste from the .c files
      and out of sync
+   - dugsong@cvs.openbsd.org 2001/06/26 17:41:49
+     [servconf.c]
+     #include <kafs.h>
  
 20010629
  - (bal) Removed net_aton() since we don't use it any more
