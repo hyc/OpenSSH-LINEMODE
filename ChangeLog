@@ -8,6 +8,7 @@
      [buffer.c]
      do not expand buffer before attempting to reallocate it; markus ok
  - (tim) [configure.ac] Fix portability issues.
+ - (bal) Missed dead header in inet_ntoa.c
 
 20030914
  - (dtucker) [Makefile regress/Makefile] Fix portability issues preventing
