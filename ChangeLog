@@ -1,3 +1,6 @@
+20010917
+ - (djm) x11-ssh-askpass-1.2.4 in RPM spec, revert workarounds
+
 20010916
  - (djm) Workaround XFree breakage in RPM spec file
  - (bal) OpenBSD CVS Sync
