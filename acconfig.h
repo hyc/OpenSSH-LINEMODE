@@ -305,6 +305,9 @@
 /* Define if your system glob() function has the GLOB_ALTDIRFUNC extension */
 #undef GLOB_HAS_ALTDIRFUNC
 
+/* Define if your system glob() function has gl_matchc options in glob_t */
+#undef GLOB_HAS_GL_MATCHC
+
 @BOTTOM@
 
 /* ******************* Shouldn't need to edit below this line ************** */
