@@ -46,6 +46,7 @@
      [ssh.1]
      bz#987: mention ForwardX11Trusted in ssh.1,
      reported by andrew.benham AT thus.net; ok deraadt@
+ - (tim) [regress/agent-ptrace.sh] add another possible gdb error.
 
 20050301
  - (djm) OpenBSD CVS sync:
