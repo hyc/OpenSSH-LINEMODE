@@ -1235,7 +1235,9 @@ progressmeter(int flag)
 		struct sigaction sa;
 		sa.sa_handler = updateprogressmeter;
 		sigemptyset(&sa.sa_mask);
+#ifdef SA_RESTART
 		sa.sa_flags = SA_RESTART;
+#endif
 		sigaction(SIGALRM, &sa, NULL);
 		alarmtimer(1);
 	} else if (flag == 1) {
