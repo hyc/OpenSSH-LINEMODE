@@ -5,6 +5,9 @@
    - djm@cvs.openbsd.org 2004/02/17 07:17:29
      [sftp-glob.c sftp.c]
      Remove useless headers; ok deraadt@
+   - djm@cvs.openbsd.org 2004/02/17 11:03:08
+     [sftp.c]
+     sftp.c and sftp-int.c, together at last; ok markus@
 
 20040217
  - (djm) Simplify the license on code I have written. No code changes.
