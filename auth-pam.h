@@ -43,5 +43,7 @@ int do_pam_putenv(char *, char *);
 void print_pam_messages(void);
 char ** fetch_pam_environment(void);
 void free_pam_environment(char **);
+void sshpam_thread_cleanup(void);
+void sshpam_cleanup(void);
 
 #endif /* USE_PAM */

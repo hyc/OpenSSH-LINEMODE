@@ -1,5 +1,7 @@
 20031007
  - (djm) Delete autom4te.cache after autoreconf
+ - (dtucker) [auth-pam.c auth-pam.h session.c] Make PAM use the new static
+   cleanup functions.  With & ok djm@
 
 20031003
  - OpenBSD CVS Sync
