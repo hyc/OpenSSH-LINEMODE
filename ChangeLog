@@ -15,6 +15,9 @@
    - markus@cvs.openbsd.org 2001/10/06 00:36:42
      [session.c]
      fix typo in error message, sync with do_exec_nopty
+   - markus@cvs.openbsd.org 2001/10/06 11:18:19
+     [sshconnect1.c sshconnect2.c sshconnect.c]
+     unify hostkey check error messages, simplify prompt.
 
 20011007
  - (bal) ssh-copy-id corrected permissions for .ssh/ and authorized_keys.
