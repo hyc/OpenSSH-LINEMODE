@@ -30,6 +30,7 @@
      GSSAPICleanupCreds -> GSSAPICleanupCredentials
  - (dtucker) [configure.ac] Don't set DISABLE_SHADOW when configuring
    --with-pam.  ok djm@
+ - (dtucker) [ssh-gss.h] Prototype change missed in sync.
 
 20030930
  - (bal) Fix issues in openbsd-compat/realpath.c
