@@ -13,6 +13,9 @@
    - markus@cvs.openbsd.org 2005/01/05 08:51:32
      [sshconnect.c]
      remove dead code, log connect() failures with level error, ok djm@
+   - jmc@cvs.openbsd.org 2005/01/08 00:41:19
+     [sshd_config.5]
+     `login'(n) -> `log in'(v);
 
 20050118
  - (dtucker) [INSTALL Makefile.in configure.ac survey.sh.in] Implement
