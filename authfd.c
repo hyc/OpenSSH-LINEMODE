@@ -217,8 +217,8 @@ ssh_get_next_identity(AuthenticationConnection *auth,
 	*comment = buffer_get_string(&auth->identities, NULL);
 
 	if (bits != BN_num_bits(n))
-		error("Warning: identity keysize mismatch: actual %d, announced %u",
-		      BN_num_bits(n), bits);
+		log("Warning: identity keysize mismatch: actual %d, announced %u",
+		    BN_num_bits(n), bits);
 
 	/* Decrement the number of remaining entries. */
 	auth->howmany--;

@@ -256,7 +256,6 @@ auth_rsa(struct passwd *pw, BIGNUM *client_n)
 
 		/* We have found the desired key. */
 
-
 		/* Perform the challenge-response dialog for this key. */
 		if (!auth_rsa_challenge_dialog(pk)) {
 			/* Wrong response. */
