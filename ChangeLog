@@ -40,6 +40,7 @@
  - (djm) Import getrrsetbyname() function from OpenBSD libc (for DNS support)
  - (djm) Tidy Makefile clean targets
  - (djm) Adapt README.dns for portable
+ - (djm) Avoid uuencode.c warnings
 
 20030514
  - (djm) Bug #117: Don't lie to PAM about username
