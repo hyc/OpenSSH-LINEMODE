@@ -1215,8 +1215,12 @@ x11_create_display_inet(int screen_number, int x11_display_offset)
 				break;
 			}
 			socks[num_socks++] = sock;
+#ifndef DONT_TRY_OTHER_AF
 			if (num_socks == NUM_SOCKS)
 				break;
+#else
+			break;
+#endif
 		}
 		if (num_socks > 0)
 			break;
