@@ -9,6 +9,9 @@
    - djm@cvs.openbsd.org 2001/04/22 08:13:30
      [ssh.1]
      typos spotted by stevesk@; ok deraadt@
+   - markus@cvs.openbsd.org 2001/04/22 12:34:05
+     [scp.c]
+     scp > 2GB; niles@scyld.com; ok deraadt@, djm@
 
 20010421
  - OpenBSD CVS Sync
