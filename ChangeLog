@@ -1,3 +1,7 @@
+20040105
+ - (dtucker) [contrib/ssh-copy-id] Bug #781: exit if ssh fails.  Patch from
+   cjwatson at debian.org.
+
 20040102
  - (djm) OSX/Darwin needs BIND_8_COMPAT to build getrrsetbyname. Report from
    jakob@
