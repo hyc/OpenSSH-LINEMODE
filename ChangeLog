@@ -36,6 +36,9 @@
      [servconf.c servconf.h session.c sshd.8 sshd_config]
      s/ReverseMappingCheck/VerifyReverseMapping/ and avoid confusion; 
      ok stevesk@
+   - stevesk@cvs.openbsd.org 2002/01/29 16:29:02
+     [session.c]
+     limit subsystem length in log; ok markus@
 
 20020130
  - (djm) Delay PRNG seeding until we need it in ssh-keygen, from markus@
