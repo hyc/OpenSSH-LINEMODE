@@ -26,6 +26,10 @@
    - markus@cvs.openbsd.org 2001/08/14 09:23:02
      [sftp.1 sftp-int.c]
      "bye"; hk63a@netscape.net
+   - stevesk@cvs.openbsd.org 2001/08/14 17:54:29
+     [scp.1 sftp.1 ssh.1]
+     consistent documentation and example of ``-o ssh_option'' for sftp and
+     scp; document keyword=argument for ssh.
 
 20010814
  - (stevesk) sshpty.c, cray.[ch]: whitespace, formatting and cleanup
