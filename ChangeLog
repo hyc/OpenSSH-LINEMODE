@@ -1,5 +1,6 @@
 20020712
  - (tim) [Makefile.in] quiet down install-files: and check-user:
+ - (tim) [configure.ac] remove unused filepriv line
 
 20020710
  - (tim) [contrib/cygwin/ssh-host-config] explicitely sets the permissions
