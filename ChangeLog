@@ -1,6 +1,8 @@
 20020625
  - (stevesk) [INSTALL acconfig.h configure.ac defines.h] remove --with-rsh
  - (stevesk) [README.privsep] minor updates
+ - (djm) Create privsep directory and warn if privsep user is missing 
+   during make install
 
 20020624
  - OpenBSD CVS Sync
