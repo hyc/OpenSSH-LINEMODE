@@ -1,7 +1,7 @@
 20030916
  - (dtucker) [acconfig.h configure.ac defines.h session.c] Bug #252: Retrieve
    PATH (or SUPATH) and UMASK from /etc/default/login on platforms that have it
-   (eg Solaris, Reliant Unix).  Patch from Robert.Dahlem at siemens.com.  ok djm@
+   eg Solaris, Reliant Unix.  Patch from Robert.Dahlem at siemens.com.  ok djm@
 
 20030914
  - (dtucker) [Makefile regress/Makefile] Fix portability issues preventing
