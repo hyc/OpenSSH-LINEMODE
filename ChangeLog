@@ -1,4 +1,5 @@
 20040623
+ - (bal) [Makefile.in] Remove opensshd.init on 'make distclean'
  - (dtucker) [auth1.c] Ensure do_pam_account is called for Protocol 1
    connections with empty passwords.  Patch from davidwu at nbttech.com,
    ok djm@
