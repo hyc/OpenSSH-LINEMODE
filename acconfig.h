@@ -11,6 +11,7 @@
 /* Define to a Set Process Title type if your system is */
 /* supported by bsd-setproctitle.c */
 #undef SPT_TYPE
+#undef SPT_PADCHAR
 
 /* setgroups() NOOP allowed */
 #undef SETGROUPS_NOOP
@@ -363,10 +364,6 @@
 
 /* Silly mkstemp() */
 #undef HAVE_STRICT_MKSTEMP
-
-/* Setproctitle emulation */
-#undef SETPROCTITLE_STRATEGY
-#undef SETPROCTITLE_PS_PADDING
 
 /* Some systems put this outside of libc */
 #undef HAVE_NANOSLEEP
