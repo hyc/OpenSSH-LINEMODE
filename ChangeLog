@@ -1,3 +1,7 @@
+20010808
+ - (bal) Minor correction to inet_ntop.h.  _BSD_RRESVPORT_H should be
+   _BSD_INET_NTOP_H.  Pointed out by Mark Miller <markm@swoon.net> 
+
 20010807
  - (tim) [configure.in sshconnect.c openbsd-compat/Makefile.in
 	 openbsd-compat/openbsd-compat.h ] Add inet_ntop.c inet_ntop.h back
