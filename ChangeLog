@@ -12,6 +12,9 @@
      [ssh_config.5]
      wording;
      ok markus@
+   - dtucker@cvs.openbsd.org 2005/01/30 11:18:08
+     [monitor.c]
+     Make code match intent; ok djm@
 
 20050208
  - (dtucker) [regress/test-exec.sh] Bug #912: Set _POSIX2_VERSION for the
