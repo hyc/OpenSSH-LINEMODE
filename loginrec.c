@@ -1353,10 +1353,7 @@ syslogin_perform_login(struct logininfo *li)
 {
 	struct utmp *ut;
 
-	if ((ut = (struct utmp *)malloc(sizeof(*ut))) == NULL) {
-		logit("%s: couldn't malloc()", __func__);
-		return (0);
-	}
+	ut = xmalloc(sizeof(*ut));
 	construct_utmp(li, ut);
 	login(ut);
 	free(ut);
