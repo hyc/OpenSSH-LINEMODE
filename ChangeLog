@@ -37,6 +37,7 @@
      [sftp.c]
      don't show .files by default in ls, add -a option to turn them back on;
      ok markus
+ - (dtucker) [monitor.c] Fix Portable-specific -Wshadow warnings on "socket".
 
 20040620
  - (tim) [configure.ac Makefile.in] Only change TEST_SHELL on broken platforms.
