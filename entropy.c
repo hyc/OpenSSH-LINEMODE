@@ -71,8 +71,8 @@ RCSID("$Id$");
 void check_openssl_version(void) 
 {
 	if (SSLeay() != OPENSSL_VERSION_NUMBER)
-		fatal("OpenSSL version mismatch. Built against %x, you "
-		    "have %x", OPENSSL_VERSION_NUMBER, SSLeay());
+		fatal("OpenSSL version mismatch. Built against %lx, you "
+		    "have %lx", OPENSSL_VERSION_NUMBER, SSLeay());
 }
 
 
