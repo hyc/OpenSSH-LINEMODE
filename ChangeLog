@@ -1,5 +1,6 @@
 20030924
  - (djm) Update version.h and spec files for HEAD
+ - (dtucker) [configure.ac] IRIX5 needs the same setre[ug]id defines as IRIX6.
 
 20030923
  - (dtucker) [Makefile.in] Bug #644: Fix "make clean" for out-of-tree
