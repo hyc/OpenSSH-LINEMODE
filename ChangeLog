@@ -1,3 +1,9 @@
+20020927
+ - (djm) OpenBSD CVS Sync
+   - markus@cvs.openbsd.org 2002/09/25 11:17:16
+     [sshd_config]
+     sync LoginGraceTime with default
+
 20020925
  - (bal) Fix issue where successfull login does not clear failure counts
    in AIX.  Patch by dtucker@zip.com.au ok by djm
