@@ -2,6 +2,10 @@
  - (dtucker) [auth1.c] Ensure do_pam_account is called for Protocol 1
    connections with empty passwords.  Patch from davidwu at nbttech.com,
    ok djm@
+ - (dtucker) OpenBSD CVS Sync
+   - dtucker@cvs.openbsd.org 2004/06/22 22:42:02
+     [regress/envpass.sh]
+     Add quoting for test -z; ok markus@
 
 20040622
  - (bal) [auth-passwd.c auth1.c] Clean up unused variables.
