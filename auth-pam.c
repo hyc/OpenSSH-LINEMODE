@@ -201,6 +201,7 @@ import_environments(Buffer *b)
 
 	debug3("PAM: %s entering", __func__);
 
+#ifndef USE_POSIX_THREADS
 	/* Import variables set by do_pam_account */
 	sshpam_account_status = buffer_get_int(b);
 	pam_password_change_required(buffer_get_int(b));
@@ -228,6 +229,7 @@ import_environments(Buffer *b)
 		}
 #endif
 	}
+#endif
 }
 
 /*
