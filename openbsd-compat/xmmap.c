@@ -50,8 +50,11 @@ void *xmmap(size_t size)
 	if (address == MAP_FAILED) {
 		char tmpname[sizeof(MM_SWAP_TEMPLATE)] = MM_SWAP_TEMPLATE;
 		int tmpfd;
+		mode_t old_umask;
 
+		old_umask = umask(0177);
 		tmpfd = mkstemp(tmpname);
+		umask(old_umask);
 		if (tmpfd == -1)
 			fatal("mkstemp(\"%s\"): %s",
 			    MM_SWAP_TEMPLATE, strerror(errno));
