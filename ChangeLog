@@ -2,7 +2,8 @@
  - (djm) Sync openbsd-compat with -current libc
  - (djm) Fix from Lutz Jaenicke <Lutz.Jaenicke@aet.TU-Cottbus.DE> for my 
    broken makefile
- - (bal) Removed strtok_r and inet_ntop since they are no longer used.
+ - (bal) Removed strtok_r() and inet_ntop() since they are no longer used.
+ - (bal) Remove getusershell() since it's no longer used.
 
 20010627
  - (djm) Reintroduce pam_session call for non-pty sessions.
