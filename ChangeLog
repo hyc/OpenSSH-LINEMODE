@@ -4,6 +4,8 @@
    PAM kbdint code. Based on fix from Matthew Melvin 
   <matthewm@webcentral.com.au>
  - (djm) Rename sysconfdir/primes => sysconfdir/moduli
+ - (djm) Oops, forgot make logic for primes=>moduli. Also try to rename 
+   existing primes->moduli if it exists.
 
 20010625
  - OpenBSD CVS Sync
