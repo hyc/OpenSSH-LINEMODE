@@ -3,6 +3,9 @@
    - deraadt@cvs.openbsd.org 2001/03/06 06:11:18
      [ssh-keyscan.c]
      appease gcc
+   - deraadt@cvs.openbsd.org 2001/03/06 06:11:44
+     [sftp-int.c sftp.1 sftp.c]
+     sftp -b batchfile; mouring@etoh.eviladmin.org
 
 20010306
  - (bal) OpenBSD CVS Sync
