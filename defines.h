@@ -3,11 +3,6 @@
 
 /* $Id$ */
 
-/* Some platforms need this for the _r() functions */
-#if !defined(_REENTRANT) && !defined(SNI)
-# define _REENTRANT 1
-#endif
-
 /* Necessary headers */
 
 #include <sys/types.h> /* For [u]intxx_t */
