@@ -6,6 +6,9 @@
    Antti Tapaninen <aet@cc.hut.fi>
  - (djm) Define BROKEN_REALPATH for AIX, patch from 
    Antti Tapaninen <aet@cc.hut.fi>
+ - (djm) Bug #214: Fix utmp for Irix (don't strip "tty"). Patch from 
+   Kevin Taylor <no@nowhere.org> (??) via Philipp Grau
+   <phgrau@zedat.fu-berlin.de>
  - (djm) Bug #213: Simplify CMSG_ALIGN macros to avoid symbol clashes. 
    Reported by Doug Manton <dmanton@emea.att.com>
  - (djm) Bug #222: Fix tests for getaddrinfo on OSF/1. Spotted by

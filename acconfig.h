@@ -346,6 +346,9 @@
 /* Define if you want to use OpenSSL's internally seeded PRNG only */
 #undef OPENSSL_PRNG_ONLY
 
+/* Define if you shouldn't strip 'tty' from your ttyname in [uw]tmp */
+#undef WITH_ABBREV_NO_TTY
+
 @BOTTOM@
 
 /* ******************* Shouldn't need to edit below this line ************** */
