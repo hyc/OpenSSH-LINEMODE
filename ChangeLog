@@ -3,6 +3,10 @@
    - djm@cvs.openbsd.org 2004/06/20 17:36:59
      [ssh.c]
      filter passed env vars at slave in connection sharing case; ok markus@
+   - djm@cvs.openbsd.org 2004/06/20 18:53:39
+     [sftp.c]
+     make "ls -l" listings print user/group names, add "ls -n" to show uid/gid
+     (like /bin/ls); idea & ok markus@
 
 20040620
  - (tim) [configure.ac Makefile.in] Only change TEST_SHELL on broken platforms.
