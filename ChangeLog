@@ -49,6 +49,8 @@
      [session.c]
      limit # of env vars to 1000; ok deraadt/djm
  - (djm) Require krb5 devel for RPM build w/ KrbV 
+ - (djm) Improve PAMAuthenticationViaKbdInt text from Nalin Dahyabhai 
+   <nalin@redhat.com>
 
 20020625
  - (stevesk) [INSTALL acconfig.h configure.ac defines.h] remove --with-rsh
