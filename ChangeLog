@@ -1,5 +1,5 @@
 20030923
- - (dtucker) [configure.ac] Bug #644: Fix "make clean" for out-of-tree
+ - (dtucker) [Makefile.in] Bug #644: Fix "make clean" for out-of-tree
    builds.  Portability corrections from tim@.
 
 20030919
