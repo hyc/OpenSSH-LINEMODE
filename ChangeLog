@@ -11,6 +11,9 @@
      disable challenge/response and keyboard-interactive auth methods 
      upon hostkey mismatch. based on patch from fcusack AT fcusack.com. 
      bz #580; ok markus@
+   - djm@cvs.openbsd.org 2003/06/04 10:23:48
+     [sshd.c]
+     remove duplicated group-dropping code; ok markus@
 
 20030603
  - (djm) Replace setproctitle replacement with code derived from 
