@@ -15,6 +15,9 @@
    - markus@cvs.openbsd.org 2001/06/19 12:34:09
      [session.c]
      cleanup forced command handling, from dwd@bell-labs.com
+   - markus@cvs.openbsd.org 2001/06/19 14:09:45
+     [session.c sshd.8]
+     disable x11-fwd if use_login is enabled; from lukem@wasabisystems.com
 
 20010615
  - (stevesk) don't set SA_RESTART and set SIGCHLD to SIG_DFL
