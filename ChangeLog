@@ -56,6 +56,13 @@
    - markus@cvs.openbsd.org 2003/05/12 18:35:18
      [ssh-keyscan.1]
      typo: DSA keys are of type ssh-dss; Brian Poole
+   - markus@cvs.openbsd.org 2003/05/14 00:52:59
+     [ssh2.h]
+     ranges for per auth method messages
+   - djm@cvs.openbsd.org 2003/05/14 01:00:44
+     [sftp.1]
+     emphasise the batchmode functionality and make reference to pubkey auth,
+     both of which are FAQs; ok markus@
 
 20030512
  - (djm) Redhat spec: Don't install profile.d scripts when not 
