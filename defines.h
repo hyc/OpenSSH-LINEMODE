@@ -335,8 +335,8 @@ struct winsize {
 #endif
 
 /* Define this to be the path of the xauth program. */
-#ifndef XAUTH_PATH
-#define XAUTH_PATH "/usr/X11R6/bin/xauth"
+#ifdef XAUTH_PATH
+#define _PATH_XAUTH XAUTH_PATH
 #endif /* XAUTH_PATH */
 
 #ifndef _PATH_TTY
