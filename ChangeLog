@@ -8,6 +8,9 @@
      only perform tcp wrappers checks when the incoming connection is on a
      socket.  silences useless warnings from regress tests that use
      proxycommand="sshd -i".  prompted by david@ ok markus@
+   - djm@cvs.openbsd.org 2004/06/24 19:32:00
+     [regress/Makefile regress/test-exec.sh, added regress/reexec.sh]
+     regress test for re-exec corner cases
 
 20040623
  - (dtucker) [auth1.c] Ensure do_pam_account is called for Protocol 1
