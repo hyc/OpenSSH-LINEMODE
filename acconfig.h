@@ -302,6 +302,9 @@
 /* Needed for SCO and NeXT */
 #undef BROKEN_SAVED_UIDS
 
+/* Define if your system glob() function has the GLOB_ALTDIRFUNC extension */
+#undef GLOB_HAS_ALTDIRFUNC
+
 @BOTTOM@
 
 /* ******************* Shouldn't need to edit below this line ************** */

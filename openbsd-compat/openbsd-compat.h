@@ -24,6 +24,7 @@
 #include "vis.h"
 #include "setproctitle.h"
 #include "getgrouplist.h"
+#include "glob.h"
 
 /* Home grown routines */
 #include "bsd-arc4random.h"
