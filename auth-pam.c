@@ -279,7 +279,7 @@ char **fetch_pam_environment(void)
 void print_pam_messages(void)
 {
 	if (pam_msg != NULL)
-		fputs(stderr, pam_msg);
+		fputs(pam_msg, stderr);
 }
 
 /* Append a message to the PAM message buffer */
