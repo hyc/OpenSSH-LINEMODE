@@ -38,9 +38,7 @@
 #include "bsd-waitpid.h"
 
 /* rfc2553 socket API replacements */
-#include "fake-getaddrinfo.h"
-#include "fake-getnameinfo.h"
-#include "fake-socket.h"
+#include "fake-rfc2553.h"
 
 /* Routines for a single OS platform */
 #include "bsd-cray.h"
