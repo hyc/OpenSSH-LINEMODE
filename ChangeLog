@@ -30,6 +30,10 @@
    - markus@cvs.openbsd.org 2003/07/03 08:24:13
      [regress/Makefile]
      enable tests for dynamic fwd via socks (-D), uses nc(1)
+   - djm@cvs.openbsd.org 2003/07/03 08:09:06
+     [readconf.c readconf.h ssh-keysign.c ssh.c]
+     fix AddressFamily option in config file, from brent@graveland.net;
+     ok markus@
 
 20030630
  - (djm) Search for support functions necessary to build our 
