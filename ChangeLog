@@ -8,6 +8,8 @@
      enter 3.6
  - (bal) The days of lack of int64_t support are over.  Sorry kids.
  - (bal) scp.c 'limit' conflicts with Cray.  Rename to 'limitbw'
+ - (bal) Collection of Cray patches (bsd-cray.h fix for CRAYT3E and improved
+   guessing rules)
 
 20030318
  - (tim) [configure.ac openbsd-compat/bsd-misc.c openbsd-compat/bsd-misc.h]
