@@ -9,6 +9,10 @@
      test+ok henning@
  - (dtucker) [Makefile.in acconfig.h configure.ac] Remove KRB4/AFS support.
  - (dtucker) [auth-krb4.c radix.c radix.h] Remove KRB4/AFS specific files.
+ - (dtucker) OpenBSD CVS Sync
+   - markus@cvs.openbsd.org 2003/07/23 07:42:43
+     [sshd_config]
+     remove AFS; itojun@
 
 20030730
  - (djm) [auth-pam.c] Don't use crappy APIs like sprintf. Thanks bal
