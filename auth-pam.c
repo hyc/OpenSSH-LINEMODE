@@ -636,14 +636,14 @@ pam_chauthtok_conv(int n, const struct pam_message **msg,
 			reply[i].resp_retcode = PAM_SUCCESS;
 			break;
 		case PAM_PROMPT_ECHO_ON:
-			fputs(PAM_MSG_MEMBER(msg, i, msg), stderr);
+			fprintf(stderr, "%s\n", PAM_MSG_MEMBER(msg, i, msg));
 			fgets(input, sizeof input, stdin);
 			reply[i].resp = xstrdup(input);
 			reply[i].resp_retcode = PAM_SUCCESS;
 			break;
 		case PAM_ERROR_MSG:
 		case PAM_TEXT_INFO:
-			fputs(PAM_MSG_MEMBER(msg, i, msg), stderr);
+			fprintf(stderr, "%s\n", PAM_MSG_MEMBER(msg, i, msg));
 			reply[i].resp_retcode = PAM_SUCCESS;
 			break;
 		default:
