@@ -27,6 +27,9 @@
    - djm@cvs.openbsd.org 2004/06/21 22:04:50
      [sftp.c]
      introduce sorting for ls, same options as /bin/ls; ok markus@
+   - djm@cvs.openbsd.org 2004/06/21 22:30:45
+     [sftp.c]
+     prefix ls option flags with LS_
 
 20040620
  - (tim) [configure.ac Makefile.in] Only change TEST_SHELL on broken platforms.
