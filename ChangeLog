@@ -3,6 +3,7 @@
  - (tim) [monitor_mm.c] add missing declaration for xmmap(). Reported
    by ayamura@ayamura.org
  - (tim) [configure.ac] Bug 267 rework int64_t test.
+ - (tim) [includes.h] Bug 267 add stdint.h
 
 20020717
  - (bal) aixbff package updated by dtucker@zip.com.au
