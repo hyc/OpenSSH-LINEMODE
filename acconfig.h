@@ -290,6 +290,9 @@
 /* Detect IPv4 in IPv6 mapped addresses and treat as IPv4 */
 #undef IPV4_IN_IPV6
 
+/* Define if you have BSD auth support */
+#undef BSD_AUTH
+
 @BOTTOM@
 
 /* ******************* Shouldn't need to edit below this line ************** */
