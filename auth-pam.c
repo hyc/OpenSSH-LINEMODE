@@ -280,6 +280,7 @@ void do_pam_session(char *username, const char *ttyname)
 	if (pam_retval != PAM_SUCCESS)
 		fatal("PAM session setup failed[%d]: %.200s",
 		    pam_retval, PAM_STRERROR(__pamh, pam_retval));
+
 	session_opened = 1;
 }
 
