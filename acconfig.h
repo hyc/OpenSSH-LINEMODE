@@ -310,6 +310,9 @@
 /* Define if X11 doesn't support AF_UNIX sockets on that system */
 #undef NO_X11_UNIX_SOCKETS
 
+/* Define if the concept of ports only accessible to superusers isn't known */
+#undef NO_IPPORT_RESERVED_CONCEPT
+
 /* Needed for SCO and NeXT */
 #undef BROKEN_SAVED_UIDS
 
