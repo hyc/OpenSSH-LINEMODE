@@ -1,3 +1,7 @@
+20030908
+ - (tim) [configure.ac openbsd-compat/getrrsetbyname.c] wrap _getshort and
+   _getlong in #ifndef
+
 20030907
  - (dtucker) [agent-ptrace.sh dynamic-forward.sh (all regress/)]
    Put "which" inside quotes.

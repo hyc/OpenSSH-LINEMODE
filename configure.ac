@@ -1912,6 +1912,7 @@ AC_ARG_WITH(dns,
 					# Needed by our getrrsetbyname()
 					AC_SEARCH_LIBS(res_query, resolv)
 					AC_SEARCH_LIBS(dn_expand, resolv)
+					AC_CHECK_FUNCS(_getshort _getlong)
 				])
 		fi
 	]
