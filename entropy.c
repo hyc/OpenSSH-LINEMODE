@@ -67,7 +67,7 @@ seed_rng(void)
 		return;
 	}
 
-	debug3("Seeing PRNG from %s", SSH_RAND_HELPER);
+	debug3("Seeding PRNG from %s", SSH_RAND_HELPER);
 
 	if ((devnull = open("/dev/null", O_RDWR)) == -1)
 		fatal("Couldn't open /dev/null: %s", strerror(errno));
