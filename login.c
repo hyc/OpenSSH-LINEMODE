@@ -255,7 +255,7 @@ record_login(int pid, const char *ttyname, const char *user, uid_t uid,
 		strncpy(ll.ll_line, ttyname + 5, sizeof(ll.ll_line));
 		strncpy(ll.ll_host, host, sizeof(ll.ll_host));
 #ifdef LASTLOG_IS_DIR
-		snprintf(buf, sizeof(buf), "%s/%s", lastlog, logname);
+		snprintf(buf, sizeof(buf), "%s/%s", lastlog, user);
 		fd = open(buf, O_RDWR);
 		if (fd >= 0) {
 #else /* LASTLOG_IS_DIR */
