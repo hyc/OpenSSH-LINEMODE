@@ -462,6 +462,9 @@ struct winsize {
 	 (struct cmsghdr *)NULL)
 #endif /* CMSG_FIRSTHDR */
 
+#ifndef offsetof
+# define offsetof(type, member) ((size_t) &((type *)0)->member)
+#endif
 
 /* Function replacement / compatibility hacks */
 

@@ -69,10 +69,6 @@ extern char *__progname;
 char *__progname;
 #endif
 
-#ifndef offsetof
-# define offsetof(type, member) ((size_t) &((type *)0)->member)
-#endif
-
 #define WHITESPACE " \t\n"
 
 #ifndef RUSAGE_SELF
