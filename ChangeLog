@@ -1,3 +1,7 @@
+20030427
+ - (bal) Bug #541: return; was dropped by mistake.  Reported by 
+   furrier@iglou.com
+
 20030409
  - (djm) Bug #539: Specify creation mode with O_CREAT for lastlog. Report 
    from matth@eecs.berkeley.edu
