@@ -16,6 +16,9 @@
    - stevesk@cvs.openbsd.org 2001/08/22 16:21:21
      [ssh.1]
      hostname not optional; ok markus@
+   - stevesk@cvs.openbsd.org 2001/08/22 16:30:02
+     [sshd.8]
+     no rexd; ok markus@
 
 20010815
  - (bal) Fixed stray code in readconf.c that went in by mistake.
