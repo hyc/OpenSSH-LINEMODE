@@ -1,3 +1,7 @@
+20040813
+ - (dtucker) [openbsd-compat/bsd-misc.c] Typo in #ifdef; from vinschen at
+   redhat.com
+
 20040812
  - (dtucker) [sshd.c] Remove duplicate variable imported during sync.
  - (dtucker) OpenBSD CVS Sync

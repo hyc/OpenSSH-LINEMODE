@@ -19,7 +19,7 @@
 
 RCSID("$Id$");
 
-#ifndef HAVE__PROGNAME
+#ifndef HAVE___PROGNAME
 char *__progname;
 #endif
 
