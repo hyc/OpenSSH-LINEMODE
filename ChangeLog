@@ -1,5 +1,7 @@
 20020717
  - (bal) aixbff package updated by dtucker@zip.com.au
+ - (tim) [configure.ac] change how we do paths in AC_PATH_PROGS tests
+   for autoconf 2.53. Based on a patch by jrj@purdue.edu
 
 20020716
  - (tim) [contrib/solaris/opensshd.in] Only kill sshd if .pid file found
