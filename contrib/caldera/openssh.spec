@@ -181,8 +181,6 @@ CFLAGS="$RPM_OPT_FLAGS" \
             --with-pam \
             --with-tcp-wrappers \
             --with-ipv4-default \
-	    --sysconfdir=%{_sysconfdir}/ssh \
-	    --libexecdir=%{_libexecdir}/openssh \
 	    --with-privsep-path=%{_var}/empty/sshd \
 	    #leave this line for easy edits.
 

@@ -68,6 +68,8 @@
  - (djm) Update spec files for release 
  - (djm) Fix int overflow in auth2-pam.c, similar to one discovered by ISS
  - (djm) Release 3.4p1
+ - (tim) [contrib/caldera/openssh.spec] remove 2 configure options I put in
+   by mistake
 
 20020625
  - (stevesk) [INSTALL acconfig.h configure.ac defines.h] remove --with-rsh
