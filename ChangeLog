@@ -28,6 +28,9 @@
    - markus@cvs.openbsd.org 2002/06/09 04:33:27
      [sshconnect.c]
      abort() - > fatal()
+ - (bal) RCSID tag updates on channels.c, clientloop.c, nchan.c,
+   sftp-client.c, ssh-agenet.c, ssh-keygen.c and connect.h (we did unexpand
+   independant of them)
 
 20020607
  - (bal) Removed --{enable/disable}-suid-ssh
