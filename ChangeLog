@@ -1,6 +1,8 @@
 20030919
  - (djm) Bug #683: Remove reference to --with-ipv4-default from INSTALL;
    djast AT cs.toronto.edu
+ - (djm) Bug #661: Remove duplicate check for basename; from 
+   bugzilla-openssh AT thewrittenword.com
 
 20030918
  - (djm) Bug #652: Fix empty password auth
