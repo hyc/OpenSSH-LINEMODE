@@ -209,6 +209,22 @@ done:
 	return rval;
 }
 
+static int
+seed_from_prngd(unsigned char *buf, size_t bytes)
+{
+#ifdef PRNGD_PORT
+	debug("trying egd/prngd port %d", PRNGD_PORT);
+	if (get_random_bytes_prngd(buf, bytes, PRNGD_PORT, NULL) == 0)
+		return 0;
+#endif
+#ifdef PRNGD_SOCKET
+	debug("trying egd/prngd socket %s", PRNGD_SOCKET);
+	if (get_random_bytes_prngd(buf, bytes, 0, PRNGD_SOCKET) == 0)
+		return 0;
+#endif
+	return -1;
+}
+
 double
 stir_gettimeofday(double entropy_estimate)
 {
@@ -815,21 +831,16 @@ main(int argc, char **argv)
 	debug("Seeded RNG with %i bytes from system calls",
 	    (int)stir_from_system());
 
-#ifdef PRNGD_PORT
-	if (get_random_bytes_prngd(buf, bytes, PRNGD_PORT, NULL) == -1)
-		fatal("Entropy collection failed");
-	RAND_add(buf, bytes, bytes);
-#elif defined(PRNGD_SOCKET)
-	if (get_random_bytes_prngd(buf, bytes, 0, PRNGD_SOCKET) == -1)
-		fatal("Entropy collection failed");
-	RAND_add(buf, bytes, bytes);
-#else
-	/* Read in collection commands */
-	if (prng_read_commands(SSH_PRNG_COMMAND_FILE) == -1)
-		fatal("PRNG initialisation failed -- exiting.");
-	debug("Seeded RNG with %i bytes from programs",
-	    (int)stir_from_programs());
-#endif
+	/* try prngd, fall back to commands if prngd fails or not configured */
+	if (seed_from_prngd(buf, bytes) == 0) {
+		RAND_add(buf, bytes, bytes);
+	} else {
+		/* Read in collection commands */
+		if (prng_read_commands(SSH_PRNG_COMMAND_FILE) == -1)
+			fatal("PRNG initialisation failed -- exiting.");
+		debug("Seeded RNG with %i bytes from programs",
+		    (int)stir_from_programs());
+	}
 
 #ifdef USE_SEED_FILES
 	prng_write_seedfile();
