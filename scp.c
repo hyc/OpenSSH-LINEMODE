@@ -1067,7 +1067,7 @@ okname(cp0)
 	} while (*++cp);
 	return (1);
 
-bad:	fprintf(stderr, "%s: invalid user name", cp0);
+bad:	fprintf(stderr, "%s: invalid user name\n", cp0);
 	return (0);
 }
 

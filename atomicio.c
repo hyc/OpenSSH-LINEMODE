@@ -32,14 +32,14 @@ RCSID("$Id$");
 /*
  * ensure all of data on socket comes through. f==read || f==write
  */
-int
+ssize_t
 atomicio(f, fd, s, n)
-	int (*f) ();
+	ssize_t (*f) ();
 	int fd;
 	void *s;
 	size_t n;
 {
-	int res, pos = 0;
+	ssize_t res, pos = 0;
 
 	while (n > pos) {
 		res = (f) (fd, (char*)s + pos, n - pos);

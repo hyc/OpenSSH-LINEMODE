@@ -712,7 +712,7 @@ struct envstring {
 /*
  * Ensure all of data on socket comes through. f==read || f==write
  */
-int	atomicio(int (*f)(), int fd, void *s, size_t n);
+ssize_t	atomicio(ssize_t (*f)(), int fd, void *s, size_t n);
 
 #ifdef KRB4
 #include <krb.h>

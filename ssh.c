@@ -103,6 +103,7 @@ usage()
 	fprintf(stderr, "  -k          Disable Kerberos ticket and AFS token forwarding.\n");
 #endif				/* AFS */
 	fprintf(stderr, "  -x          Disable X11 connection forwarding.\n");
+	fprintf(stderr, "  -X          Enable X11 connection forwarding.\n");
 	fprintf(stderr, "  -i file     Identity for RSA authentication (default: ~/.ssh/identity).\n");
 	fprintf(stderr, "  -t          Tty; allocate a tty even if command is given.\n");
 	fprintf(stderr, "  -v          Verbose; display verbose debugging messages.\n");
@@ -497,7 +498,7 @@ main(int ac, char **av)
 		struct addrinfo *ai = NULL;
 		int errgai;
 		memset(&hints, 0, sizeof(hints));
-		hints.ai_family = AF_UNSPEC;
+		hints.ai_family = IPv4or6;
 		hints.ai_flags = AI_CANONNAME;
 		hints.ai_socktype = SOCK_STREAM;
 		errgai = getaddrinfo(host, NULL, &hints, &ai);

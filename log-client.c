@@ -45,12 +45,12 @@ log_init(char *av0, LogLevel level, SyslogFacility ignored1, int ignored2)
 	}
 }
 
-#define SSH_MSGBUFSIZE 1024
+#define MSGBUFSIZ 1024
 
 void
 do_log(LogLevel level, const char *fmt, va_list args)
 {
-	char msgbuf[SSH_MSGBUFSIZE];
+	char msgbuf[MSGBUFSIZ];
 
 	if (level > log_level)
 		return;
