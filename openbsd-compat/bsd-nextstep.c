@@ -37,7 +37,8 @@ posix_wait(int *status)
 
 	#undef wait			/* Use NeXT's wait() function */
 	wait_pid = wait(&statusp);
-	status = (int *) statusp.w_status;
+	if (status)
+		*status = (int) statusp.w_status;
 
 	return wait_pid;
 }

@@ -1,5 +1,7 @@
 20010327
  - Attempt sync with sshlogin.c w/ OpenBSD (mainly CVS ID)
+ - Fix pointer issues in waitpid() and wait() replaces.  Patch by Lutz 
+   Jaenicke <Lutz.Jaenicke@aet.TU-Cottbus.DE>
 
 20010324
  - Fixed permissions ssh-keyscan.  Thanks to Christopher Linn <celinn@mtu.edu>.
