@@ -344,6 +344,4 @@
 
 /* ******************* Shouldn't need to edit below this line ************** */
 
-#include "defines.h"
-
 #endif /* _CONFIG_H */
