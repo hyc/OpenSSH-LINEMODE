@@ -132,4 +132,6 @@ char *line_fullname(char *dst, const char *src, int dstsize);
 char *line_stripname(char *dst, const char *src, int dstsize);
 char *line_abbrevname(char *dst, const char *src, int dstsize);
 
+void record_failed_login(const char *, const char *, const char *);
+
 #endif /* _HAVE_LOGINREC_H_ */

@@ -68,7 +68,6 @@ int sys_auth_allowed_user(struct passwd *);
 # define CUSTOM_SYS_AUTH_RECORD_LOGIN 1
 int sys_auth_record_login(const char *, const char *, const char *);
 # define CUSTOM_FAILED_LOGIN 1
-void record_failed_login(const char *, const char *);
 #endif
 
 void aix_setauthdb(const char *);
