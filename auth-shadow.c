@@ -37,6 +37,32 @@ RCSID("$Id$");
 extern Buffer loginmsg;
 
 /*
+ * For the account and password expiration functions, we assume the expiry
+ * occurs the day after the day specified.
+ */
+
+/*
+ * Check if specified account is expired.  Returns 1 if account is expired,
+ * 0 otherwise.
+ */
+int
+auth_shadow_acctexpired(struct spwd *spw)
+{
+	time_t today;
+
+	today = time(NULL) / DAY;
+	debug3("%s: today %d sp_expire %d", __func__, (int)today,
+	    (int)spw->sp_expire);
+
+	if (spw->sp_expire != -1 && today > spw->sp_expire) {
+		logit("Account %.100s has expired", spw->sp_namp);
+		return 1;
+	}
+
+	return 0;
+}
+
+/*
  * Checks password expiry for platforms that use shadow passwd files.
  * Returns: 1 = password expired, 0 = password not expired
  */
