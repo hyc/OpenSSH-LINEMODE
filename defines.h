@@ -356,6 +356,16 @@ struct winsize {
 #define _PATH_XAUTH XAUTH_PATH
 #endif /* XAUTH_PATH */
 
+/* derived from XF4/xc/lib/dps/Xlibnet.h */
+#ifndef X_UNIX_PATH
+#ifdef __hpux
+#define X_UNIX_PATH "/usr/spool/sockets/X11/%u"
+#else
+#define X_UNIX_PATH "/tmp/.X11-unix/X%u"
+#endif
+#endif /* X_UNIX_PATH */
+#define _PATH_UNIX_X X_UNIX_PATH
+
 #ifndef _PATH_TTY
 # define _PATH_TTY "/dev/tty"
 #endif

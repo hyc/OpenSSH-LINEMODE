@@ -1,3 +1,7 @@
+20020106
+ - (stevesk) defines.h: determine _PATH_UNIX_X; currently "/tmp/.X11-unix/X%u"
+   for all platforms except HP-UX, which is "/usr/spool/sockets/X11/%u".
+
 20020105
  - (bal) NCR requies use_pipes to operate correctly.
  - (stevesk) fix spurious ; from NCR change.
