@@ -25,6 +25,7 @@
  - (dtucker) [README] Add pointer to release notes.  ok djm@
  - (dtucker) {README.platform] Add platform-specific notes.
  - (tim) [configure.ac] SCO3 needs -lcrypt_i for -lprot
+ - (djm) Release 3.8p1
 
 20040223
  - (dtucker) [session.c] Bug #789: Only make setcred call for !privsep in the
