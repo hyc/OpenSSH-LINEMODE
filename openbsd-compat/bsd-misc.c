@@ -19,6 +19,10 @@
 
 RCSID("$Id$");
 
+#ifndef HAVE__PROGNAME
+char *__progname;
+#endif
+
 /*
  * NB. duplicate __progname in case it is an alias for argv[0]
  * Otherwise it may get clobbered by setproctitle()

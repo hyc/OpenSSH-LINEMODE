@@ -63,11 +63,7 @@ RCSID("$Id$");
 # define SSH_PRNG_COMMAND_FILE   SSHDIR "/ssh_prng_cmds"
 #endif
 
-#ifdef HAVE___PROGNAME
 extern char *__progname;
-#else
-char *__progname;
-#endif
 
 #define WHITESPACE " \t\n"
 
