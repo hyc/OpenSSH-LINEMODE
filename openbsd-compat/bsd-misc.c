@@ -171,7 +171,7 @@ int nanosleep(const struct timespec *req, struct timespec *rem)
 pid_t
 tcgetpgrp(int fd)
 {
-	int result, ctty_pgrp;
+	int ctty_pgrp;
 
 	if (ioctl(STDOUT_FILENO, TIOCGPGRP, &ctty_pgrp) == -1)
 		return(-1);
