@@ -1,4 +1,7 @@
-20030517
+20030519
+ - (djm) Sync auth-pam.h with what we actually implement
+
+20030518
  - (djm) Return of the dreaded PAM_TTY_KLUDGE, which went missing in 
    recent merge
  - (djm) OpenBSD CVS Sync
