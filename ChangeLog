@@ -3,6 +3,9 @@
    - markus@cvs.openbsd.org 2002/10/01 20:34:12
      [ssh-agent.c]
      allow root to access the agent, since there is no protection from root.
+   - markus@cvs.openbsd.org 2002/10/01 13:24:50
+     [version.h]
+     OpenSSH 3.5
 
 20020930
  - (djm) Tidy contrib/, add Makefile for GNOME passphrase dialogs, 
