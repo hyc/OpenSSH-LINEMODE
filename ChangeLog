@@ -3,7 +3,7 @@
    - markus@cvs.openbsd.org 2001/04/22 23:58:36
      [ssh-keygen.1 ssh.1 sshd.8]
      document hostbased and other cleanup
- - (stevesk) pam_start() doesn't use DNS now for sshd -u0.
+ - (stevesk) start_pam() doesn't use DNS now for sshd -u0.
 
 20010422
  - OpenBSD CVS Sync
