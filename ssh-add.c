@@ -282,7 +282,7 @@ int askpass(const char *filename, RSA *key, const char *saved_comment, char **co
       exit(1);
     }
 
-    tmp = snprintf(buf, sizeof(buf), "Need passphrase for %s (%s)", filename, saved_comment);
+    tmp = snprintf(buf, sizeof(buf), "Need passphrase for %s", saved_comment);
     /* skip the prompt if it won't fit */
     if ((tmp < 0) || (tmp >= sizeof(buf)))
       tmp = execlp(ASKPASS_PROGRAM, "ssh-askpass", 0);
