@@ -24,6 +24,9 @@
      [scp.c]
      kill ssh process upon receipt of signal, bz #241.
      based on patch from esb AT hawaii.edu; ok markus@
+   - djm@cvs.openbsd.org 2003/06/04 12:41:22
+     [sftp.c]
+     kill ssh process on receipt of signal; ok markus@
  - (djm) Update to fix of bug #584: lock card before return. 
    From larsch@trustcenter.de
 
