@@ -84,7 +84,7 @@ pty_allocate(int *ptyfd, int *ttyfd, char *namebuf, int namebuflen)
 	}
 	return 1;
 #else /* HAVE__GETPTY */
-#ifdef HAVE_DEV_PTMX
+#if defined(HAVE_DEV_PTMX)
 	/*
 	 * This code is used e.g. on Solaris 2.x.  (Note that Solaris 2.3
 	 * also has bsd-style ptys, but they simply do not work.)
