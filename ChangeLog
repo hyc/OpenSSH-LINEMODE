@@ -39,6 +39,8 @@
  - (bal) Update ssh-host-config and minor rewrite of bsd-cygwin_util.c
    ntsec now default if cygwin version beginning w/ version 56.  Patch
    by Corinna Vinschen <vinschen@redhat.com> 
+ - (bal) AIX does not log login attempts for unknown users (bug #432).
+   patch by dtucker@zip.com.au
 
 20021021
  - (djm) Bug #400: Kill ssh-rand-helper children on timeout, patch from 
