@@ -48,13 +48,13 @@ SSH_3CBC_ENCRYPT(des_key_schedule ks1,
 	memcpy(&iv1, iv2, 8);
 
 	des_cbc_encrypt(src, dest, len, ks1, &iv1, DES_ENCRYPT);
-	memcpy(&iv1, dest + len - 8, 8);
+	memcpy(&iv1, (char *)dest + len - 8, 8);
 
 	des_cbc_encrypt(dest, dest, len, ks2, iv2, DES_DECRYPT);
 	memcpy(iv2, &iv1, 8);	/* Note how iv1 == iv2 on entry and exit. */
 
 	des_cbc_encrypt(dest, dest, len, ks3, iv3, DES_ENCRYPT);
-	memcpy(iv3, dest + len - 8, 8);
+	memcpy(iv3, (char *)dest + len - 8, 8);
 }
 
 void
@@ -69,10 +69,10 @@ SSH_3CBC_DECRYPT(des_key_schedule ks1,
 	memcpy(&iv1, iv2, 8);
 
 	des_cbc_encrypt(src, dest, len, ks3, iv3, DES_DECRYPT);
-	memcpy(iv3, src + len - 8, 8);
+	memcpy(iv3, (char *)src + len - 8, 8);
 
 	des_cbc_encrypt(dest, dest, len, ks2, iv2, DES_ENCRYPT);
-	memcpy(iv2, dest + len - 8, 8);
+	memcpy(iv2, (char *)dest + len - 8, 8);
 
 	des_cbc_encrypt(dest, dest, len, ks1, &iv1, DES_DECRYPT);
 	/* memcpy(&iv1, iv2, 8); */

@@ -42,7 +42,7 @@ atomicio(f, fd, s, n)
 	int res, pos = 0;
 
 	while (n > pos) {
-		res = (f) (fd, s + pos, n - pos);
+		res = (f) (fd, (char*)s + pos, n - pos);
 		switch (res) {
 		case -1:
 			if (errno == EINTR || errno == EAGAIN)
