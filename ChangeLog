@@ -5,6 +5,7 @@
    Add ${EXEEXT}: required to work on Cygwin.
  - (dtucker) [regress/sftp-batch.sh] Make temporary batch file name more
    distinctive, so "rm ${BATCH}.*" doesn't match the script itself.
+ - (dtucker) [regress/sftp-cmds.sh] Skip quoted file test on Cygwin.
 
 20030906
  - (dtucker) [acconfig.h configure.ac uidswap.c] Prefer setuid/setgid on AIX.
