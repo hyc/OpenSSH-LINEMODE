@@ -1,4 +1,5 @@
 20020410
+ - (stevesk) [configure.ac monitor.c] HAVE_SOCKETPAIR
  - (stevesk) [auth-sia.c] compile fix Chris Adams <cmadams@hiwaay.net>
  - (bal) OpenBSD CVS Sync
    - markus@cvs.openbsd.org 2002/04/10 08:21:47
