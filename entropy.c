@@ -105,8 +105,6 @@ void get_random_bytes(unsigned char *buf, int len)
 			fatal("Couldn't open random pool \"%s\": %s", RANDOM_POOL, strerror(errno));
 	}
 	
-	verbose("randfd: %i", random_pool);
-
 	c = atomicio(read, random_pool, buf, len);
 	if (c <= 0)
 		fatal("Couldn't read from random pool \"%s\": %s", RANDOM_POOL, strerror(errno));
