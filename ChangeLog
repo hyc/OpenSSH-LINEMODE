@@ -1,3 +1,6 @@
+20010508
+ - (bal) Fixed configure test for USE_SIA.  
+
 20010506
  - (djm) Update config.guess and config.sub with latest versions (from
    ftp://ftp.gnu.org/gnu/config/) to allow configure on ia64-hpux.
