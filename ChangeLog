@@ -1,5 +1,6 @@
 20020623
  - (stevesk) [configure.ac] bug #255 LOGIN_NEEDS_UTMPX for AIX.
+ - (bal) removed GNUism for getops in ssh-agent since glibc lacks optreset.
 
 20020622
  - (djm) Update README.privsep; spotted by fries@
