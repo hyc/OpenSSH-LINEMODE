@@ -9,6 +9,7 @@
  - (bal) Build noop setgroups() for cygwin to clean up code (For other
    platforms without the setgroups() requirement, you MUST define
    SETGROUPS_NOOP in the configure.ac) Based on patch by vinschen@redhat.com
+ - (bal) Some platforms don't have ONLCR (Notable Mint)
 
 20020611
  - (bal) ssh-agent.c RCSD fix (|unexpand already done)
