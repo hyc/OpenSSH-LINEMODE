@@ -122,6 +122,9 @@
    - markus@cvs.openbsd.org 2002/01/10 12:47:59
      [nchan.c]
      more unused code (with channels.c:1.156)
+   - markus@cvs.openbsd.org 2002/01/11 10:31:05
+     [packet.c]
+     handle received SSH2_MSG_UNIMPLEMENTED messages; ok djm@
 
 
 20020121
