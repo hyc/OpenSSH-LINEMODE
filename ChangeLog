@@ -24,6 +24,7 @@
    - [regress/test-exec.sh] Use sudo, search for "whoami" equivalent, always
      use Strictmodes no, wait longer for sshd startup.
    - [regress/Makefile] Remove BSDisms.
+   - [regress/README.regress] Add a basic readme.
 
 20030903
  - (djm) OpenBSD CVS Sync
