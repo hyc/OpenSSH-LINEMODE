@@ -110,6 +110,10 @@
      [ssh-agent.c]
      copy current request into an extra buffer and just flush this
      request on errors, ok provos@
+   - markus@cvs.openbsd.org 2002/06/05 19:57:12
+     [authfd.c authfd.h ssh-add.1 ssh-add.c ssh-agent.c]
+     ssh-add -x for lock and -X for unlocking the agent.
+     todo: encrypt private keys with locked...
 
 20020604
  - (stevesk) [channels.c] bug #164 patch from YOSHIFUJI Hideaki (changed
