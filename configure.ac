@@ -438,6 +438,18 @@ AC_ARG_WITH(libs,
 	]	
 )
 
+AC_MSG_CHECKING(compiler and flags for sanity)
+AC_TRY_RUN([
+#include <stdio.h>
+int main(){exit(0);}
+	],
+	[	AC_MSG_RESULT(yes) ],
+	[
+		AC_MSG_RESULT(no)
+		AC_MSG_ERROR([*** compiler cannot create working executables, check config.log ***])
+	]
+)
+
 # Checks for header files.
 AC_CHECK_HEADERS(bstring.h crypt.h endian.h features.h floatingpoint.h \
 	getopt.h glob.h ia.h lastlog.h libgen.h limits.h login.h \
