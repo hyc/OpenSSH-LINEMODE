@@ -10,6 +10,9 @@
      suppress log on reverse lookup failiure, as there's no real value in
      doing so.
      markus ok
+   - itojun@cvs.openbsd.org 2002/07/09 12:04:02
+     [sshconnect.c]
+     ed static function (less warnings)
 
 20020709
  - (bal) NO_IPPORT_RESERVED_CONCEPT used instead of CYGWIN so other platforms
