@@ -6,6 +6,10 @@
    - markus@cvs.openbsd.org 2004/12/23 17:38:07
      [ssh-keygen.c]
      leak; from mpech
+   - djm@cvs.openbsd.org 2004/12/23 23:11:00
+     [servconf.c servconf.h sshd.c sshd_config sshd_config.5]
+     bz #898: support AddressFamily in sshd_config. from
+     peak@argo.troja.mff.cuni.cz; ok deraadt@
 
 20050118
  - (dtucker) [INSTALL Makefile.in configure.ac survey.sh.in] Implement
