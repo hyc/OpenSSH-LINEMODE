@@ -376,7 +376,7 @@ tests:	$(TARGETS)
 	BUILDDIR=`pwd`; \
 	[ -d `pwd`/regress ]  ||  mkdir -p `pwd`/regress; \
 	[ -f `pwd`/regress/Makefile ]  || \
-	    ln -s $(srcdir)/regress/Makefile `pwd`/regress/Makefile ; \
+	    ln -s `cd $(srcdir) && pwd`/regress/Makefile `pwd`/regress/Makefile ; \
 	TEST_SHELL="@TEST_SHELL@"; \
 	TEST_SSH_SSH="$${BUILDDIR}/ssh"; \
 	TEST_SSH_SSHD="$${BUILDDIR}/sshd"; \
