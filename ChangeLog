@@ -7,6 +7,7 @@
      [version.h]
      OpenSSH 3.5
  - (djm) Bump RPM spec version numbers
+ - (djm) Bug #406: s/msg_send/ssh_msg_send/ for Mac OS X 1.2
 
 20020930
  - (djm) Tidy contrib/, add Makefile for GNOME passphrase dialogs, 
