@@ -1,3 +1,6 @@
+20041207
+ - (dtucker) [regress/scp.sh] Use portable-friendly $DIFFOPTs in new test.
+
 20041206
  - (dtucker) [TODO WARNING.RNG] Update to reflect current reality.  ok djm@
  - (dtucker) OpenBSD CVS Sync
