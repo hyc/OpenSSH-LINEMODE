@@ -1196,7 +1196,7 @@ static int
 wtmpx_islogin(struct logininfo *li, struct utmpx *utx)
 {
 	if ( strncmp(li->username, utx->ut_user,
-		     MIN_SIZEOF(li->username, utx->us_user)) == 0 ) {
+		     MIN_SIZEOF(li->username, utx->ut_user)) == 0 ) {
 #ifdef HAVE_TYPE_IN_UTMPX
 		if (utx->ut_type == USER_PROCESS)
 			return 1;
