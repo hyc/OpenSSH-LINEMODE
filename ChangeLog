@@ -20,6 +20,10 @@
      [sftp.1 sftp.c sftp-client.c sftp-client.h sftp-int.c]
      Perform multiple overlapping read/write requests in file transfer. Mostly
      done by Tobias Ringstrom <tori@ringstrom.mine.nu>; ok markus@
+   - djm@cvs.openbsd.org 2002/02/12 12:44:46
+     [sftp-client.c]
+     Let overlapped upload path handle servers which reorder ACKs. This may be
+     permitted by the protocol spec; ok markus@
 
 20020210
  - (djm) OpenBSD CVS Sync
