@@ -4,6 +4,7 @@
  - (tim) [configure.ac] portability changes on test statements. Some shells
    have problems with -a operator.
  - (tim) [configure.ac] make some configure options a little more error proof.
+ - (tim) [configure.ac] remove trailing white space.
 
 20050314
  - (dtucker) OpenBSD CVS Sync
