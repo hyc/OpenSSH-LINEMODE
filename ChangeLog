@@ -13,6 +13,9 @@
      [ssh.1 ssh_config.5]
      document strict permission checks on ~/.ssh/config; prompted by, 
      with & ok jmc@
+   - jmc@cvs.openbsd.org 2004/04/19 16:12:14
+     [ssh_config.5]
+     kill whitespace at eol;
  - (djm) [openbsd-compat/sys-queue.h] Sync with OpenBSD, needed for above change
 
 20040419
