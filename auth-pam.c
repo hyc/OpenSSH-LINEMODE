@@ -421,6 +421,16 @@ char **fetch_pam_environment(void)
 #endif /* HAVE_PAM_GETENVLIST */
 }
 
+void free_pam_environment(char **env)
+{
+	int i;
+
+	if (env != NULL) {
+		for (i = 0; env[i] != NULL; i++)
+			xfree(env[i]);
+	}
+}
+
 /* Print any messages that have been generated during authentication */
 /* or account checking to stderr */
 void print_pam_messages(void)
