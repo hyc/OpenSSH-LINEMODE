@@ -1,3 +1,10 @@
+20030724
+ - (bal) [auth-passwd.c openbsd-compat/Makefile.in openbsd-compat/xcrypt.c 
+    openbsd-compat/xcrypt.h] Split off encryption into xcrypt() interface,
+    and isolate shadow password functions.  Tested in Solaris, but should
+    not break other platforms too badly (except maybe HP =).  Also brings
+    auth-passwd.c into full sync with OpenBSD tree.
+
 20030723
  - (dtucker) [configure.ac] Back out change for bug #620.
 
