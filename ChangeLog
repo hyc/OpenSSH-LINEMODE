@@ -59,6 +59,7 @@
  - (djm) Improve PAMAuthenticationViaKbdInt text from Nalin Dahyabhai 
    <nalin@redhat.com>
  - (djm) Update spec files for release 
+ - (djm) Fix int overflow in auth2-pam.c, similar to one discovered by ISS
 
 20020625
  - (stevesk) [INSTALL acconfig.h configure.ac defines.h] remove --with-rsh
