@@ -21,6 +21,8 @@
  - (bal) First wave of contrib/solaris/ package upgrades.  Still more
    work needs to be done, but it is a 190% better then the stuff we
    had before!
+ - (bal) Minor bug fix in contrib/solaris/opensshd.in .. $etcdir was not
+   set right.
 
 20011010
  - (djm) OpenBSD CVS Sync
