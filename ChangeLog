@@ -1,3 +1,9 @@
+20021003
+ - (djm) OpenBSD CVS Sync
+   - markus@cvs.openbsd.org 2002/10/01 20:34:12
+     [ssh-agent.c]
+     allow root to access the agent, since there is no protection from root.
+
 20020930
  - (djm) Tidy contrib/, add Makefile for GNOME passphrase dialogs, 
    tweak README
