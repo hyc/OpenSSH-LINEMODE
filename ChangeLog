@@ -20,6 +20,9 @@
       ssh-keygen.c sshd.8]
      PermitRootLogin={yes,without-password,forced-commands-only,no}
      (before this change, root could login even if PermitRootLogin==no)
+  - deraadt@cvs.openbsd.org 2001/02/12 22:56:09
+     [clientloop.c packet.c ssh-keyscan.c]
+     deal with EAGAIN/EINTR selects which were skipped
 
 20010214
  - (djm) Don't try to close PAM session or delete credentials if the
