@@ -791,6 +791,9 @@ AC_ARG_WITH(tcp-wrappers,
 			AC_MSG_CHECKING(for libwrap)
 			AC_TRY_LINK(
 				[
+#include <sys/types.h>
+#include <sys/socket.h>
+#include <netinet/in.h>
 #include <tcpd.h>
 					int deny_severity = 0, allow_severity = 0;
 				],

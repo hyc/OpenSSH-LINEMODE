@@ -5,6 +5,7 @@
    skeychallenge(), eg on NetBSD.  ok mouring@
  - (dtucker) [auth-skey.c defines.h monitor.c] Make skeychallenge explicitly
    4-arg, with compatibility for 3-arg versions.  From djm@, ok me.
+ - (djm) [configure.ac] Fix detection of libwrap on OpenBSD; ok dtucker@
 
 20040408
  - (dtucker) [loginrec.c] Use UT_LINESIZE if available, prevents truncating
