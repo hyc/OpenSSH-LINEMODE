@@ -18,6 +18,10 @@
    - jakob@cvs.openbsd.org 2003/06/11 10:18:47
      [dns.c]
      sync with check_host_key() change
+   - djm@cvs.openbsd.org 2003/06/11 11:18:38
+     [authfd.c authfd.h ssh-add.c ssh-agent.c]
+     make agent constraints (lifetime, confirm) work with smartcard keys; 
+     ok markus@
 
 
 20030609
