@@ -138,8 +138,8 @@ only by root, whereas ssh_config should be world-readable. */
 #define SSH_AUTHSOCKET_ENV_NAME	"SSH_AUTH_SOCK"
 
 /* Name of the environment variable containing the pathname of the
-	authentication socket. */
-#define SSH_AGENTPID_ENV_NAME  "SSH_AGENT_PID"
+   authentication socket. */
+#define SSH_AGENTPID_ENV_NAME	"SSH_AGENT_PID"
 
 /* Force host key length and server key length to differ by at least this
    many bits.  This is to make double encryption with rsaref work. */
@@ -334,8 +334,7 @@ int auth_rhosts(struct passwd *pw, const char *client_user,
    its host key.  Returns true if authentication succeeds. */
 int auth_rhosts_rsa(struct passwd *pw, const char *client_user,
 		    unsigned int bits, BIGNUM *client_host_key_e,
-		    BIGNUM *client_host_key_n, int ignore_rhosts,
-		    int strict_modes);
+		    BIGNUM *client_host_key_n);
 
 /* Tries to authenticate the user using password.  Returns true if
    authentication succeeds. */
