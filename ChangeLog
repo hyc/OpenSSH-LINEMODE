@@ -1,3 +1,9 @@
+20020715
+ - (bal) OpenBSD CVS Sync
+   - itojun@cvs.openbsd.org 2002/07/12 13:29:09
+     [sshconnect.c]
+     print connect failure during debugging mode.
+
 20020714
  - (tim) [Makefile.in] replace "id sshd" with "sshd -t"
  - (bal/tim) [acconfig.h configure.ac monitor_mm.c servconf.c
