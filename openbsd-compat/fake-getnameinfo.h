@@ -10,6 +10,12 @@ int getnameinfo(const struct sockaddr *, size_t, char *, size_t,
     char *, size_t, int);
 #endif /* !HAVE_GETNAMEINFO */
 
+#ifndef NI_NUMERICHOST
+# define NI_NUMERICHOST    (1)
+# define NI_NAMEREQD       (1<<1)
+# define NI_NUMERICSERV    (1<<2)
+#endif
+
 #ifndef NI_MAXSERV
 # define NI_MAXSERV 32
 #endif /* !NI_MAXSERV */

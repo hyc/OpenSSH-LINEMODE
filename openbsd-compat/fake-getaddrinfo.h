@@ -8,14 +8,9 @@
 #include "fake-gai-errnos.h"
 
 #ifndef AI_PASSIVE
-# define AI_PASSIVE        1
-# define AI_CANONNAME      2
-#endif
-
-#ifndef NI_NUMERICHOST
-# define NI_NUMERICHOST    2
-# define NI_NAMEREQD       4
-# define NI_NUMERICSERV    8
+# define AI_PASSIVE		(1)
+# define AI_CANONNAME		(1<<1)
+# define AI_NUMERICHOST		(1<<2)
 #endif
 
 #ifndef HAVE_STRUCT_ADDRINFO
