@@ -1,3 +1,9 @@
+20010307
+ - (bal) OpenBSD CVS Sync
+   - deraadt@cvs.openbsd.org 2001/03/06 06:11:18
+     [ssh-keyscan.c]
+     appease gcc
+
 20010306
  - (bal) OpenBSD CVS Sync
    - deraadt@cvs.openbsd.org 2001/03/05 14:28:47
