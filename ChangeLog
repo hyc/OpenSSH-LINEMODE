@@ -6,6 +6,8 @@
    - markus@cvs.openbsd.org 2003/10/02 08:26:53
      [ssh-gss.h]
      missing $OpenBSD:; dtucker
+ - (tim) [contrib/caldera/openssh.spec] Remove obsolete --with-ipv4-default
+   option.
 
 20031002
  - OpenBSD CVS Sync
