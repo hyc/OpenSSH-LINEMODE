@@ -6,6 +6,8 @@
  - (djm) Bug #641: Allow RedHat RPM building without GTK-2; Patch from
    jason AT devrandom.org
  - (djm) Bug #646: Fix location of x11-ssh-askpass; Jim
+ - (dtucker) [openbsd-compat/port-aix.h] Bug #640: Don't include audit.h
+   unless required.  Reorder to reduce warnings.
 
 20030918
  - (djm) Bug #652: Fix empty password auth
