@@ -3,6 +3,7 @@
  - (djm) Disconnect if no tty and PAM reports password expired
  - (djm) Fix for PAM password changes being echoed (from stevesk)
  - (stevesk) Fix compile problem with PAM password change fix
+ - (stevesk) README: zlib location is http://www.gzip.org/zlib/
 
 20011027
  - (tim) [configure.ac] Fixes for ReliantUNIX (don't use libucb)
