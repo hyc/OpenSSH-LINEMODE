@@ -16,6 +16,9 @@
    - stevesk@cvs.openbsd.org 2002/03/24 17:53:16
      [monitor_fdpass.c]
      minor cleanup and more error checking; ok markus@
+   - markus@cvs.openbsd.org 2002/03/24 18:05:29
+     [scard.c]
+     we need to figure out AUT0 for sc_private_encrypt, too
 
 20020324
  - (stevesk) [session.c] disable LOGIN_NEEDS_TERM until we are sure
