@@ -3,6 +3,9 @@
    - markus@cvs.openbsd.org 2003/08/14 16:08:58
      [ssh-keygen.c]
      exit after primetest, ok djm@
+ - (dtucker) [defines.h] Put CMSG_DATA, CMSG_FIRSTHDR with other CMSG* macros,
+   change CMSG_DATA to use __CMSG_ALIGN (and thus work properly), reformat for
+   consistency.
 
 20030813
  - (dtucker) [session.c] Remove #ifdef TIOCSBRK kludge.
