@@ -15,6 +15,9 @@
    - markus@cvs.openbsd.org 2001/03/16 09:55:53
      [sftp-int.c]
      fix memset and whitespace
+   - markus@cvs.openbsd.org 2001/03/16 13:44:24
+     [sftp-int.c]
+     discourage strcat/strcpy
 
 20010315
  - OpenBSD CVS Sync
