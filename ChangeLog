@@ -1,6 +1,7 @@
 20011115
  - (djm) Fix IPv4 default in ssh-keyscan. Spotted by Dan Astoorian 
    <djast@cs.toronto.edu> Fix from markus@
+ - (djm) Release 3.0.1p1
 
 20011113
  - (djm) Fix early (and double) free of remote user when using Kerberos. 
