@@ -1,3 +1,7 @@
+20011113
+ - (djm) Fix early (and double) free of remote user when using Kerberos. 
+   Patch from Simon Wilkinson <simon@sxw.org.uk>
+
 20011112
  - (djm) Makefile correctness fix from Mark D. Baushke <mdb@juniper.net>
  - (djm) Cygwin config patch from Corinna Vinschen <vinschen@redhat.com>
