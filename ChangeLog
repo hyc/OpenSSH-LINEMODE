@@ -1,3 +1,8 @@
+20020511
+ - (tim) [configure.ac] applied a rework of djm's OpenSSL search cleanup patch.
+   Now only searches system and /usr/local/ssl (OpenSSL's default install path)
+   Others must use --with-ssl-dir=....
+
 20020510
  - (stevesk) [auth.c] Shadow account and expiration cleanup.  Now
    check for root forced expire.  Still don't check for inactive.
