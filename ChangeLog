@@ -85,6 +85,9 @@
    - stevesk@cvs.openbsd.org 2002/01/03 04:11:08
      [ssh_config]
      grammar in comment
+   - stevesk@cvs.openbsd.org 2002/01/04 17:59:17
+     [readconf.c servconf.c]
+     remove #ifdef _PATH_XAUTH/#endif; ok markus@
 
 
 20020121
