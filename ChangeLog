@@ -1,5 +1,6 @@
 20030611
  - (djm) Mention portable copyright holders in LICENSE
+ - (djm) Put licenses on substantial header files
  - (djm) Sync LICENSE against OpenBSD
  - (djm) OpenBSD CVS Sync
    - jmc@cvs.openbsd.org 2003/06/10 09:12:11
