@@ -32,9 +32,6 @@
 /* Define if your password has a pw_change field */
 #undef HAVE_PW_CHANGE_IN_PASSWD
 
-/* Define if your system's struct sockaddr_un has a sun_len member */
-#undef HAVE_SUN_LEN_IN_SOCKADDR_UN
-
 /* Define if you system's inet_ntoa is busted (e.g. Irix gcc issue) */
 #undef BROKEN_INET_NTOA
 
