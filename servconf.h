@@ -24,6 +24,7 @@
 #define MAX_DENY_USERS		256	/* Max # users on deny list. */
 #define MAX_ALLOW_GROUPS	256	/* Max # groups on allow list. */
 #define MAX_DENY_GROUPS		256	/* Max # groups on deny list. */
+#define MAX_SUBSYSTEMS		256	/* Max # subsystems. */
 
 typedef struct {
 	unsigned int num_ports;
@@ -94,6 +95,10 @@ typedef struct {
 	char   *allow_groups[MAX_ALLOW_GROUPS];
 	unsigned int num_deny_groups;
 	char   *deny_groups[MAX_DENY_GROUPS];
+
+	unsigned int num_subsystems;
+	char   *subsystem_name[MAX_SUBSYSTEMS];
+	char   *subsystem_command[MAX_SUBSYSTEMS];
 }       ServerOptions;
 /*
  * Initializes the server options to special values that indicate that they

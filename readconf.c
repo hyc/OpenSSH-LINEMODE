@@ -165,7 +165,7 @@ static struct {
 };
 
 /* Characters considered whitespace in strtok calls. */
-#define WHITESPACE " \t\r\n"
+#define WHITESPACE " \t\r\n="
 
 
 /*

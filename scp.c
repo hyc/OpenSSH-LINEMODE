@@ -155,7 +155,6 @@ do_cmd(char *host, char *remuser, char *cmd, int *fdin, int *fdout)
 			args[i++] = "-4";
 		if (IPv6)
 			args[i++] = "-6";
-		args[i++] = "-oFallBackToRsh no";
 		if (verbose_mode)
 			args[i++] = "-v";
 		if (compress_flag)

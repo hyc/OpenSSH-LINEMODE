@@ -543,6 +543,11 @@ This is normally desirable because novices sometimes accidentally leave their
 directory or files world-writable.
 The default is
 .Dq yes .
+.It Cm Subsystem
+Configures an external subsystem (e.g. file transfer daemon).
+Arguments should be a subsystem name and a command to execute upon subsystem request. 
+By default no subsystems are defined.
+Note that this option applies to protocol version 2 only.
 .It Cm SyslogFacility
 Gives the facility code that is used when logging messages from
 .Nm sshd .
