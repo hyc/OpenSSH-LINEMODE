@@ -1,3 +1,9 @@
+20020903
+ - (djm) OpenBSD CVS Sync
+   - markus@cvs.openbsd.org 2002/08/12 10:46:35
+     [ssh-agent.c]
+     make ssh-agent setgid, disallow ptrace.
+
 20020820
  - OpenBSD CVS Sync
    - millert@cvs.openbsd.org 2002/08/02 14:43:15
