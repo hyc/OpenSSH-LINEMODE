@@ -37,7 +37,7 @@ int getaddrinfo(const char *hostname, const char *servname,
 #endif /* !HAVE_GETADDRINFO */
 
 #ifndef HAVE_GAI_STRERROR
-const char *gai_strerror(int ecode);
+char *gai_strerror(int ecode);
 #endif /* !HAVE_GAI_STRERROR */
 
 #ifndef HAVE_FREEADDRINFO

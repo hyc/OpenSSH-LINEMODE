@@ -15,7 +15,7 @@
 RCSID("$Id$");
 
 #ifndef HAVE_GAI_STRERROR
-const char *gai_strerror(int ecode)
+char *gai_strerror(int ecode)
 {
 	switch (ecode) {
 		case EAI_NODATA:
