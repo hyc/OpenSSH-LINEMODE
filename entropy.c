@@ -55,6 +55,13 @@ RCSID("$Id$");
 
 #define WHITESPACE " \t\n"
 
+#ifndef RUSAGE_SELF
+# define RUSAGE_SELF 0
+#endif
+#ifndef RUSAGE_CHILDREN
+# define RUSAGE_CHILDREN 0
+#endif
+
 #if defined(EGD_SOCKET) || defined(RANDOM_POOL)
 
 #ifdef EGD_SOCKET
@@ -187,11 +194,11 @@ stir_from_system(void)
 	total_entropy_estimate = 0;
 	
 	i = getpid();
-	RAND_add(&i, sizeof(i), 0.1);
+	RAND_add(&i, sizeof(i), 0.5);
 	total_entropy_estimate += 0.1;
 	
 	i = getppid();
-	RAND_add(&i, sizeof(i), 0.1);
+	RAND_add(&i, sizeof(i), 0.5);
 	total_entropy_estimate += 0.1;
 
 	i = getuid();
@@ -200,7 +207,7 @@ stir_from_system(void)
 	RAND_add(&i, sizeof(i), 0.0);
 
 	total_entropy_estimate += stir_gettimeofday(1.0);
-	total_entropy_estimate += stir_clock(0.2);
+	total_entropy_estimate += stir_clock(0.5);
 	total_entropy_estimate += stir_rusage(RUSAGE_SELF, 2.0);
 
 	return(total_entropy_estimate);
@@ -301,9 +308,9 @@ stir_rusage(int who, double entropy_estimate)
 	struct rusage ru;
 	
 	if (getrusage(who, &ru) == -1)
-		fatal("Couldn't getrusage: %s", strerror(errno));
+		return(0);
 
-	RAND_add(&ru, sizeof(ru), 0.1);
+	RAND_add(&ru, sizeof(ru), entropy_estimate);
 
 	return(entropy_estimate);
 #else /* _HAVE_GETRUSAGE */

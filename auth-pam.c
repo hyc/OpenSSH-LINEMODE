@@ -246,6 +246,12 @@ void start_pam(struct passwd *pw)
 			PAM_STRERROR((pam_handle_t *)pamh, pam_retval));
 	}
 	
+	pam_retval = pam_set_item((pam_handle_t *)pamh, PAM_TTY, "ssh");
+	if (pam_retval != PAM_SUCCESS) {
+		fatal("PAM set tty failed: %.200s", 
+			PAM_STRERROR((pam_handle_t *)pamh, pam_retval));
+	}
+
 	fatal_add_cleanup(&pam_cleanup_proc, NULL);
 }
 
