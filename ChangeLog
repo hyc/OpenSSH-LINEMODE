@@ -119,6 +119,9 @@
    - jakob@cvs.openbsd.org 2001/08/02 15:32:10
      [ssh.c]
      add smartcard to usage(). ok markus@
+   - jakob@cvs.openbsd.org 2001/08/02 15:43:57
+     [ssh-agent.c ssh.c ssh-keygen.c]
+     add /* SMARTCARD */ to #else/#endif. ok markus@
 
 20010803
  - (djm) Fix interrupted read in entropy gatherer. Spotted by markus@ on
