@@ -216,6 +216,10 @@ typedef unsigned char u_char;
 # define HAVE_U_CHAR
 #endif /* HAVE_U_CHAR */
 
+#ifndef SIZE_T_MAX
+#define SIZE_T_MAX ULONG_MAX
+#endif /* SIZE_T_MAX */
+
 #ifndef HAVE_SIZE_T
 typedef unsigned int size_t;
 # define HAVE_SIZE_T

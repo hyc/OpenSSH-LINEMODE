@@ -39,6 +39,8 @@
    - stevesk@cvs.openbsd.org 2002/08/17 23:55:01
      [ssh_config.5]
      ordered list here
+ - (bal) [defines.h] Some platforms don't have SIZE_T_MAX.  So assign 
+   it to ULONG_MAX.
 
 20020813
  - (tim) [configure.ac] Display OpenSSL header/library version.
