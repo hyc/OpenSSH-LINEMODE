@@ -9,6 +9,10 @@
      [channels.c]
      increase the SSH v2 window size to 4 packets. comsumes a little
      bit more memory for slow receivers but increases througput.
+   - markus@cvs.openbsd.org 2002/02/14 23:28:00
+     [channels.h session.c ssh.c]
+     increase the SSH v2 window size to 4 packets. comsumes a little
+     bit more memory for slow receivers but increases througput.
 
 20020218
  - (tim) newer config.guess from ftp://ftp.gnu.org/gnu/config/config.guess
