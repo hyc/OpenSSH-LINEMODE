@@ -6,7 +6,9 @@
      [Makefile test-exec.sh]
      regress test for environment passing, SendEnv & AcceptEnv options;
      ok markus@
-
+   - dtucker@cvs.openbsd.org 2004/06/13 13:51:02
+     [Makefile test-exec.sh]
+     Add scp regression test; with & ok markus@
 
 20040615
  - (djm) OpenBSD CVS Sync
