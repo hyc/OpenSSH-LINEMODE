@@ -1,6 +1,10 @@
 20011207
  - (bal) PCRE no longer required.  Banished from the source along with
    fake-regex.h
+ - (bal) OpenBSD CVS Sync
+   - stevesk@cvs.openbsd.org 2001/12/06 18:02:32
+     [channels.c sshconnect.c]
+     shutdown(sock, SHUT_RDWR) not needed here; ok markus@
 
 20011206
  - (bal) OpenBSD CVS Sync
