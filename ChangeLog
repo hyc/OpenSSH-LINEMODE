@@ -12,6 +12,9 @@
    - markus@cvs.openbsd.org 2003/06/29 12:44:38
      [sshconnect.c]
      memset 0, not \0; andrushock@korovino.net
+   - markus@cvs.openbsd.org 2003/07/02 12:56:34
+     [channels.c]
+     deny dynamic forwarding with -R for v1, too; ok djm@
 
 20030630
  - (djm) Search for support functions necessary to build our 
