@@ -81,6 +81,10 @@
    - stevesk@cvs.openbsd.org 2002/02/04 00:53:39
      [ssh-agent.c]
      unneeded includes
+   - markus@cvs.openbsd.org 2002/02/04 11:58:10
+     [auth2.c]
+     cross checking of announced vs actual pktype in pubkey/hostbaed auth; 
+     ok stevesk@
 
 20020130
  - (djm) Delay PRNG seeding until we need it in ssh-keygen, from markus@
