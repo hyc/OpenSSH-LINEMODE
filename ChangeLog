@@ -28,6 +28,9 @@
    - dtucker@cvs.openbsd.org 2004/02/28 12:16:57
      [regress/dynamic-forward.sh]
      Make dynamic-forward understand nc's new output.  ok markus@
+   - dtucker@cvs.openbsd.org 2004/02/28 13:44:45
+     [regress/try-ciphers.sh]
+     Test acss too; ok markus@
 
 20040226
  - (bal) KNF our sshlogin.c even if the code looks nothing like upstream
