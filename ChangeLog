@@ -1,6 +1,7 @@
 20010923
  - (bal) updated ssh.c to mirror minor getopts 'extern int' formating done
    by stevesk@
+ - (bal) Removed 'extern int optopt;' since it is dead wood.
 
 20010923
  - (bal) OpenBSD CVS Sync
