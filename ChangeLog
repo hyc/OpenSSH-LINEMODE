@@ -33,6 +33,7 @@
      [channels.c clientloop.c misc.c misc.h packet.c ssh-agent.c ssh-keyscan.c]
      [sshd.c]
      set_nonblock() instead of fnctl(...,O_NONBLOCK); "looks sane" deraadt@
+ - (djm) Fix Makefile.in for connection sharing changes
 
 20040603
  - (dtucker) [auth-pam.c] Don't use pam_* namespace for sshd's PAM functions.
