@@ -5,6 +5,8 @@
    - markus@cvs.openbsd.org 2001/03/17 17:27:59
      [auth.c]
      check /etc/shells, too
+ - tim@mindrot.org 2001/03/17 18:45:25 [compat.c]
+     openbsd-compat/fake-regex.h
 
 20010317
  - Support usrinfo() on AIX. Based on patch from Gert Doering 
