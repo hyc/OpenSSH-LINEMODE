@@ -29,12 +29,6 @@
 #ifdef HAVE_NEXT
 #include <sys/dir.h>
 
-/* 
- * Temporary hack to let bsd-snprintf.c work.  bsd-snprintf.c really
- * needs to be cleaned up.
- */
-#define HAVE_STDARG_H 1
-
 /* NeXT's readdir() is BSD (struct direct) not POSIX (struct dirent) */
 #define dirent direct
 
