@@ -130,7 +130,7 @@ reopen:
 
 	rval = 1;
 done:
-	mysignal(SIG_PIPE, old_sigpipe);
+	mysignal(SIGPIPE, old_sigpipe);
 	if (fd != -1)
 		close(fd);
 	return(rval);

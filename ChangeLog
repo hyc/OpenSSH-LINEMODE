@@ -28,6 +28,7 @@
    a <sys/queue.h> that lacks the TAILQ_* macros. Patch from Todd C. 
    Miller <Todd.Miller@courtesan.com>
  - (djm) Update RPM spec files for 2.5.0p1
+ - (stevesk) entropy.c: typo; should be SIGPIPE
 
 20010217
  - (bal) OpenBSD Sync:
