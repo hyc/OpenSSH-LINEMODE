@@ -1,3 +1,6 @@
+20050204
+ - (dtucker) [monitor.c] Permit INVALID_USER audit events from slave too.
+
 20050202
  - (dtucker) [configure.ac openbsd-compat/realpath.c] Sync up with realpath
    rev 1.11 from OpenBSD and make it use fchdir if available.  ok djm@
