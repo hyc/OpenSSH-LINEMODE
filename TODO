@@ -27,7 +27,10 @@ Programming:
 - Build an automated test suite
 
 - Verify that It's safe to enable NGROUPS_MAX under NeXTStep for
-  groupaccess features.
+  groupaccess features. (mouring@eviladmin.org)
+
+- Clean up bsd-snprintf.c  and sort out how to detect between VARARGS
+  and STDARGS for better portablity (mouring@eviladmin.org)
 
 Documentation:
 - More and better
