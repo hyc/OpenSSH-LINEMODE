@@ -3,6 +3,9 @@
    - markus@cvs.openbsd.org 2003/03/17 10:38:38
      [progressmeter.c]
      don't print \n if backgrounded; from ho@
+   - markus@cvs.openbsd.org 2003/03/17 11:43:47
+     [version.h]
+     enter 3.6
 
 20030318
  - (tim) [configure.ac openbsd-compat/bsd-misc.c openbsd-compat/bsd-misc.h]
