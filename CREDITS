@@ -74,6 +74,7 @@ Phil Karn <karn@ka9q.ampr.org> - Autoconf fixes
 Philippe WILLEM <Philippe.WILLEM@urssaf.fr> - Bugfixes
 Phill Camp <P.S.S.Camp@ukc.ac.uk> - login code fix
 Rip Loomis <loomisg@cist.saic.com> - Solaris package support, fixes
+Roumen Petrov <openssh@roumenpetrov.info> - Compile & configure fixes
 SAKAI Kiyotaka <ksakai@kso.netwk.ntt-at.co.jp> - Multiple bugfixes
 Simon Wilkinson <sxw@dcs.ed.ac.uk> - PAM fixes, Compat with MIT KrbV
 Solar Designer <solar@openwall.com> - many patches and technical assistance
