@@ -198,7 +198,6 @@ entropy_source_t entropy_sources[] = {
 	{ 0.000, NULL,          { NULL, NULL, NULL, NULL, NULL } },
 };
 
-
 double 
 stir_from_system(void)
 {
