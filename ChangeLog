@@ -163,6 +163,12 @@
      [channels.h nchan.c]
      add chan_set_[io]state(), order states, state is now an u_int,
      simplifies debugging messages; ok provos@
+   - markus@cvs.openbsd.org 2002/01/14 13:22:35
+     [nchan.c]
+     chan_send_oclose1() no longer calls chan_shutdown_write(); ok provos@
+   - markus@cvs.openbsd.org 2002/01/14 13:34:07
+     [nchan.c]
+     merge chan_[io]buf_empty[12]; ok provos@
 
 
 20020121
