@@ -1,3 +1,14 @@
+20031015
+ - (dtucker) OpenBSD CVS Sync
+   - jmc@cvs.openbsd.org 2003/10/08 08:27:36
+     [scp.1 scp.c sftp-server.8 sftp.1 sftp.c ssh.1 sshd.8]
+     scp and sftp: add options list and sort options. options list requested
+     by deraadt@
+     sshd: use same format as ssh
+     ssh: remove wrong option from list
+     sftp-server: Subsystem is documented in ssh_config(5), not sshd(8)
+     ok deraadt@ markus@
+
 20031009
  - (dtucker) [sshd_config.5] UsePAM defaults to "no".  ok djm@
 
