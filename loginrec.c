@@ -372,29 +372,40 @@ getlast_entry(struct logininfo *li)
 #else
 	/* !USE_LASTLOG */
 
+#  ifdef DISABLE_LASTLOG
+	/* On some systems we shouldn't even try to obtain last login 
+	 * time, e.g. AIX */
+	return 0;
+
+#  else
 	/* Try to retrieve the last login time from wtmp */
-#  if defined(USE_WTMP) && (defined(HAVE_TIME_IN_UTMP) || defined(HAVE_TV_IN_UTMP))
+#    if defined(USE_WTMP) && (defined(HAVE_TIME_IN_UTMP) || defined(HAVE_TV_IN_UTMP))
 	/* retrieve last login time from utmp */
 	if (wtmp_get_entry(li))
 		return 1;
 	else
 		return 0;
-#  else
+#    else
 
 	/* If wtmp isn't available, try wtmpx */
 
-#    if defined(USE_WTMPX) && (defined(HAVE_TIME_IN_UTMPX) || defined(HAVE_TV_IN_UTMPX))
+#      if defined(USE_WTMPX) && (defined(HAVE_TIME_IN_UTMPX) || defined(HAVE_TV_IN_UTMPX))
 	/* retrieve last login time from utmpx */
 	if (wtmpx_get_entry(li))
 		return 1;
 	else
 		return 0;
-#    else
+#      else
 
 	/* Give up: No means of retrieving last login time */
 	return 0;
+#      endif
+       /* USE_WTMPX && (HAVE_TIME_IN_UTMPX || HAVE_TV_IN_UTMPX) */
+
 #    endif
+     /* USE_WTMP && (HAVE_TIME_IN_UTMP || HAVE_TV_IN_UTMP) */
 #  endif
+   /* DISABLE_LASTLOG */ 
 #endif
 /* USE_LASTLOG */
 }
