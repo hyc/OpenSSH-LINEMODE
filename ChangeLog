@@ -7,6 +7,12 @@
    Call setauthdb() before loginfailed(), which may load password registry-
    specific functions.  Based on patch by cawlfiel@us.ibm.com.
  - (dtucker) [port-aix.h] Fix prototypes.
+ - (dtucker) OpenBSD CVS Sync
+   - avsm@cvs.openbsd.org 2003/07/09 13:58:19
+     [key.c]
+     minor tweak: when generating the hex fingerprint, give strlcat the full
+     bound to the buffer, and add a comment below explaining why the
+     zero-termination is one less than the bound.  markus@ ok
 
 20030708
  - (dtucker) [acconfig.h auth-passwd.c configure.ac session.c port-aix.[ch]]
