@@ -28,6 +28,9 @@
      [sftp.1 sftp-client.c sftp-client.h sftp-common.c sftp-common.h]
      [sftp-glob.c sftp-glob.h sftp-int.c sftp-server.c]
      support for short/long listings and globbing in "ls"; ok markus@
+   - djm@cvs.openbsd.org 2002/09/12 00:13:06
+     [sftp-int.c]
+     zap unused var introduced in last commit
 
 20020911
  - (djm) Sync openbsd-compat with OpenBSD -current
