@@ -1,6 +1,8 @@
 20030822
  - (djm) s/get_progname/ssh_get_progname/g to avoid conflict with Heimdal 
    -lbroken; ok dtucker 
+ - (dtucker) [contrib/cygwin/ssh-user-config] Put keys in authorized_keys
+   rather that authorized_keys2.  Patch from vinschen@redhat.com.
 
 20030821
  - (dtucker) OpenBSD CVS Sync
