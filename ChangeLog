@@ -1,3 +1,7 @@
+20030630
+ - (djm) Search for support functions necessary to build our 
+   getrrsetbyname() replacement. Patch from Roumen Petrov 
+
 20030629
  - (dtucker) [includes.h] Bug #602: move #include of netdb.h to after in.h
    (fixes compiler warnings on Solaris 2.5.1).
