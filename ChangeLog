@@ -6,6 +6,9 @@
    - markus@cvs.openbsd.org 2001/03/14 15:15:58
      [sftp-int.c]
      add version command
+   - deraadt@cvs.openbsd.org 2001/03/14 22:50:25
+     [sftp-server.c]
+     note no getopt()
  - (stevesk) ssh-keyscan.c: specify "openbsd-compat/fake-queue.h"
  - (bal) Cygwin README change by Corinna Vinschen <vinschen@redhat.com> 
 
