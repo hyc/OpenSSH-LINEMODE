@@ -94,6 +94,10 @@
    - markus@cvs.openbsd.org 2001/08/01 22:16:45
      [ssh.1 sshd.8]
      refer to current ietf drafts for protocol v2
+   - markus@cvs.openbsd.org 2001/08/01 23:33:09
+     [ssh-keygen.c]
+     allow uploading RSA keys for non-default AUT0 (sha1 over passphrase 
+     like sectok).
 
 20010803
  - (djm) Fix interrupted read in entropy gatherer. Spotted by markus@ on
