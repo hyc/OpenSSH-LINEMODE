@@ -36,6 +36,7 @@
    builds too, from vinschen at redhat.com.
  - (dtucker) [regress/agent-ptrace.sh] Skip ptrace test on OSF1/DUnix/Tru64
    too; patch from cmadams at hiwaay.net.
+ - (dtucker) [configure.ac] Replace non-portable echo \n with extra echo.
 
 20040828
  - (dtucker) [openbsd-compat/mktemp.c] Remove superfluous Cygwin #ifdef; from

@@ -3004,7 +3004,8 @@ echo "         Libraries: ${LIBWRAP} ${LIBPAM} ${LIBS}"
 echo ""
 
 if test "x$MAKE_PACKAGE_SUPPORTED" = "xyes" ; then
-	echo "SVR4 style packages are supported with \"make package\"\n"
+	echo "SVR4 style packages are supported with \"make package\""
+	echo ""
 fi
 
 if test "x$PAM_MSG" = "xyes" ; then
