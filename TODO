@@ -55,6 +55,8 @@ Programming:
   - utmp/wtmp get corrupted (something in loginrec?)
   - can't build with PAM (no 64-bit libpam yet)
 
+- Modify rijndael to support Cray 64bit machines.
+
 Documentation:
 - More and better
 
