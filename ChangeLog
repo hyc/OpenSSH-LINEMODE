@@ -30,6 +30,9 @@
    - markus@cvs.openbsd.org 2003/04/02 12:21:13
      [Makefile]
      enable rekey test
+   - djm@cvs.openbsd.org 2003/04/04 09:34:22
+     [Makefile sftp-cmds.sh]
+     More regression tests, including recent directory rename bug; ok markus@
 
 20030614
  - (djm) Update license on fake-rfc2553.[ch]; ok itojun@
