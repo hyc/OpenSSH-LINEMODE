@@ -187,7 +187,7 @@ reopen:
 	msg[0] = 0x02;
 	msg[1] = len;
 
-	if (atomicio(write, fd, msg, sizeof(msg)) != sizeof(msg)) {
+	if (atomicio(vwrite, fd, msg, sizeof(msg)) != sizeof(msg)) {
 		if (errno == EPIPE && errors < 10) {
 			close(fd);
 			errors++;
@@ -572,7 +572,7 @@ prng_write_seedfile(void)
 		debug("WARNING: couldn't access PRNG seedfile %.100s "
 		    "(%.100s)", filename, strerror(errno));
 	} else {
-		if (atomicio(write, fd, &seed, sizeof(seed)) < sizeof(seed))
+		if (atomicio(vwrite, fd, &seed, sizeof(seed)) < sizeof(seed))
 			fatal("problem writing PRNG seedfile %.100s "
 			    "(%.100s)", filename, strerror(errno));
 		close(fd);
@@ -858,7 +858,7 @@ main(int argc, char **argv)
 			printf("%02x", (unsigned char)(buf[ret]));
 		printf("\n");
 	} else
-		ret = atomicio(write, STDOUT_FILENO, buf, bytes);
+		ret = atomicio(vwrite, STDOUT_FILENO, buf, bytes);
 		
 	memset(buf, '\0', bytes);
 	xfree(buf);
