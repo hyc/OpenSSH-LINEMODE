@@ -38,6 +38,10 @@
    - stevesk@cvs.openbsd.org 2002/08/27 17:18:40
      [ssh_config.5]
      some warning text for ForwardAgent and ForwardX11; ok markus@
+   - stevesk@cvs.openbsd.org 2002/08/29 15:57:25
+     [monitor.c session.c sshlogin.c sshlogin.h]
+     pass addrlen with sockaddr *; from Hajimu UMEMOTO <ume@FreeBSD.org>
+     NOTE: there are also p-specific parts to this patch. ok markus@
 
 20020820
  - OpenBSD CVS Sync
