@@ -9,6 +9,10 @@
      [sftp-client.c]
      Fix "get -p" download to not add user-write perm. mindrot bug #426
      reported by gfernandez@livevault.com; ok markus@
+   - fgsch@cvs.openbsd.org 2003/01/07 23:42:54
+     [sftp.1]
+     add version; from Nils Nordman <nino at nforced dot com> via markus@.
+     markus@ ok
 
 20030107
  - (djm) Bug #401: Work around Linux breakage with IPv6 mapped addresses. 
