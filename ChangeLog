@@ -19,6 +19,7 @@
  - (djm) [groupaccess.c uidswap.c] Bug #787: Size group arrays at runtime 
    using sysconf() if available Based on patches from 
    holger AT van-lengerich.de and openssh_bugzilla AT hockin.org
+ - (dtucker) [uidswap.c] Minor KNF.  ok djm@
 
 20040223
  - (dtucker) [session.c] Bug #789: Only make setcred call for !privsep in the
