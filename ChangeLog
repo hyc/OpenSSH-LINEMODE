@@ -1,8 +1,12 @@
 20011003
  - (bal) CVS ID fix up in version.h
- - markus@cvs.openbsd.org 2001/09/27 11:58:16
-   [compress.c]
-   mem leak; chombier@mac.com
+ - (bal) OpenBSD CVS Sync:
+   - markus@cvs.openbsd.org 2001/09/27 11:58:16
+     [compress.c]
+     mem leak; chombier@mac.com
+   - markus@cvs.openbsd.org 2001/09/27 11:59:37
+     [packet.c]
+     missing called=1; chombier@mac.com
 
 20011001
  - (stevesk) loginrec.c: fix type conversion problems exposed when using
