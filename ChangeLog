@@ -15,6 +15,9 @@
    - deraadt@cvs.openbsd.org 2003/05/29 16:58:45
      [sshd.c uidswap.c]
      seteuid and setegid; markus ok
+   - jakob@cvs.openbsd.org 2003/06/02 08:31:10
+     [ssh_config.5]
+     VerifyHostKeyDNS is v2 only. ok markus@
 
 20030530
  - (dtucker) Add missing semicolon in md5crypt.c, patch from openssh at
