@@ -15,6 +15,9 @@
    - jmc@cvs.openbsd.org 2004/04/28 07:02:56
      [sshd_config.5]
      remove unnecessary .Pp;
+   - jmc@cvs.openbsd.org 2004/04/28 07:13:42
+     [sftp.1 ssh.1]
+     add SendEnv to -o list;
 
 20040423
  - (dtucker) [configure.ac openbsd-compat/getrrsetbyname.c] Declare h_errno
