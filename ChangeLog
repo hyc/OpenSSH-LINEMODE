@@ -16,6 +16,9 @@
      [auth2.c compat.c sshconnect2.c]                                    
      more ssh v2 hostbased-auth interop: ssh.com >= 2.1.0 works now      
      (however the 2.1.0 server seems to work only if debug is enabled...)
+   - markus@cvs.openbsd.org 2001/04/18 23:44:51
+     [authfile.c] 
+     error->debug; noted by fries@ 
 
 20010418
   - OpenBSD CVS Sync                            
