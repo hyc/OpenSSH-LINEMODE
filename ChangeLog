@@ -1,3 +1,7 @@
+20030913
+ - (dtucker) [regress/agent-timeout.sh] Timeout of 5 sec is borderline for
+   slower hosts, increase to 10 sec.
+
 20030912
  - (tim) [regress/agent-ptrace.sh] sh doesn't like "if ! shell_function; then".
  - (tim) [Makefile.in] only mkdir regress if it does not exist.
