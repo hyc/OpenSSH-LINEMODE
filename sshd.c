@@ -143,7 +143,7 @@ const char *pampasswd = NULL;
 char *pamconv_msg = NULL;
 
 static int pamconv(int num_msg, const struct pam_message **msg,
-						 struct pam_response **resp, void *appdata_ptr)
+	struct pam_response **resp, void *appdata_ptr)
 {
 	struct pam_response *reply;
 	int count;
