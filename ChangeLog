@@ -1,3 +1,8 @@
+20030708
+ - (dtucker) [acconfig.h auth-passwd.c configure.ac session.c port-aix.[ch]]
+   Include AIX headers for authentication functions and make calls match
+   prototypes.  Test for and handle 3-args and 4-arg variants of loginfailed.
+
 20030707
  - (dtucker) [configure.ac] Bug #600: Check that getrusage is declared before
    searching libraries for it.  Fixes build errors on NCR MP-RAS.
