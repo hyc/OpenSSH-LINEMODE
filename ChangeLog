@@ -1,3 +1,7 @@
+20020507
+ - (tim) [configure.ac openbsd-compat/bsd-misc.c openbsd-compat/bsd-misc.h]
+   Add truncate() emulation to address Bug 208
+
 20020506
  - (djm) Unbreak auth-passwd.c for PAM and SIA
  - (djm) Unbreak PAM auth for protocol 1. Report from Pekka Savola 
