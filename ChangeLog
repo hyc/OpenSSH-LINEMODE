@@ -4,6 +4,8 @@
    to -h on testing for /bin being symbolic link
  - (bal) Mistaken in Cygwin scripts for ssh starting.  Patch by
    Corinna Vinschen <vinschen@redhat.com> 
+ - (bal) disable privsep if no MAP_ANON.  We can re-enable it
+   after the release when we can do more testing.
 
 20020411
  - (stevesk) [auth-sia.c] cleanup
