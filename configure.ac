@@ -1667,11 +1667,11 @@ if test "x$ac_cv_libc_defines_sys_nerr" = "xyes" ; then
 	AC_DEFINE(HAVE_SYS_NERR)
 fi
 
-
-# Check whether user wants Kerberos support
 SCARD_MSG="no" 
-AC_ARG_WITH(smartcard,
-	[  --with-smartcard        Enable smartcard support],
+
+# Check whether user wants sectok support
+AC_ARG_WITH(sectok,
+	[  --with-sectok           Enable smartcard support using libsectok],
 	[
 		if test "x$withval" != "xno" ; then
 			if test "x$withval" != "xyes" ; then
@@ -1693,7 +1693,38 @@ AC_ARG_WITH(smartcard,
 				AC_MSG_ERROR(Can't find libsectok)
 			fi
 			AC_DEFINE(SMARTCARD)
-			SCARD_MSG="yes" 
+			AC_DEFINE(USE_SECTOK)
+			SCARD_MSG="yes, using sectok" 
+		fi
+	]
+)
+
+# Check whether user wants OpenSC support
+AC_ARG_WITH(opensc,
+	[  --with-opensc           Enable smartcard support using OpenSC],
+	[
+		if test "x$withval" != "xno" ; then
+			if test "x$withval" != "xyes" ; then
+				CPPFLAGS="$CPPFLAGS -I${withval}"
+				LDFLAGS="$LDFLAGS -L${withval}"
+				if test ! -z "$need_dash_r" ; then
+					LDFLAGS="$LDFLAGS -R${withval}"
+				fi
+				if test ! -z "$blibpath" ; then
+					blibpath="$blibpath:${withval}"
+				fi
+			fi
+			AC_CHECK_HEADERS(opensc-pkcs15.h)
+			if test "$ac_cv_header_opensc_pkcs15_h" != yes; then
+				AC_MSG_ERROR(Can't find opensc-pkcs15.h)
+			fi
+			AC_CHECK_LIB(opensc, sc_pkcs15_bind)
+			if test "$ac_cv_lib_opensc_sc_pkcs15_bind" != yes; then
+				AC_MSG_ERROR(Can't find libopensc)
+			fi
+			AC_DEFINE(SMARTCARD)
+			AC_DEFINE(USE_OPENSC)
+			SCARD_MSG="yes, using OpenSC" 
 		fi
 	]
 )

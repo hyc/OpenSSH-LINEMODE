@@ -329,6 +329,12 @@
 /* Define if you want smartcard support */
 #undef SMARTCARD
 
+/* Define if you want smartcard support using sectok */
+#undef USE_SECTOK
+
+/* Define if you want smartcard support using OpenSC */
+#undef USE_OPENSC
+
 /* Define if you want to use OpenSSL's internally seeded PRNG only */
 #undef OPENSSL_PRNG_ONLY
 
