@@ -192,6 +192,12 @@
 /* Define if compiler implements __func__ */
 #undef HAVE___func__
 
+/* Define if you want Kerberos 5 support */
+#undef KRB5
+
+/* Define this if you are using the Heimdal version of Kerberos V5 */
+#undef HEIMDAL
+
 /* Define if you want Kerberos 4 support */
 #undef KRB4
 
