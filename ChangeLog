@@ -22,6 +22,8 @@
  - (dtucker) [openbsd-compat/port-aix.c] Use correct include for xmalloc.h,
    add canohost.h to stop warning.  Based on patch from openssh-unix-dev at
    thewrittenword.com
+ - (dtucker) [INSTALL] Bug #686: Document requirement for zlib 1.1.4 or
+   higher.
 
 20030919
  - (djm) Bug #683: Remove reference to --with-ipv4-default from INSTALL;
