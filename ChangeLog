@@ -1,3 +1,6 @@
+20020707
+ - (tim) [Makefile.in] use umask instead of chmod on $(PRIVSEP_PATH)
+
 20020705
  - (tim) [configure.ac] AIX 4.2.1 has authenticate() in libs.
    Reported by Darren Tucker <dtucker@zip.com.au>
