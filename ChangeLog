@@ -1,6 +1,8 @@
 20011229
  - (djm) Apply Cygwin pointer deref fix from Corinna Vinschen 
    <vinschen@redhat.com> Could be abused to guess valid usernames
+ - (djm) Typo in contrib/cygwin/README Fix from Corinna Vinschen
+   <vinschen@redhat.com>
 
 20011228
  - (djm) Remove recommendation to use GNU make, we should support most
