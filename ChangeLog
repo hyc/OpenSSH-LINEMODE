@@ -1,3 +1,7 @@
+20010219
+ - (bal) Markus' blessing to rename login.[ch] -> sshlogin.[ch] and
+   pty.[ch] -> sshpty.[ch]
+
 20010218
  - (bal) Patch for fix FCHMOD reference in ftp-client.c by Tim Rice 
    <tim@multitalents.net> 
