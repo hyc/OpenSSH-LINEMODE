@@ -3,6 +3,9 @@
    - deraadt@cvs.openbsd.org 2002/06/26 14:49:36
      [monitor.c]
      correct %u
+   - deraadt@cvs.openbsd.org 2002/06/26 14:50:04
+     [monitor_fdpass.c]
+     use ssize_t for recvmsg() and sendmsg() return
 
 20020626
  - (stevesk) [monitor.c] remove duplicate proto15 dispatch entry for PAM
