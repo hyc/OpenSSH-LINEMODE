@@ -570,6 +570,7 @@ main(int ac, char **av)
 
   /* Save the public key in text format in a file with the same name but
      .pub appended. */
+  file = xrealloc(file, strlen(file) + 5);
   strcat(file, ".pub");
   f = fopen(file, "w");
   if (!f)
