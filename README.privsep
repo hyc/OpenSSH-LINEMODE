@@ -8,6 +8,10 @@ More information is available at:
 Privilege separation is now enabled by default; see the
 UsePrivilegeSeparation option in sshd_config(5).
 
+On systems which lack mmap or anonymous (MAP_ANON) memory mapping, 
+compression must be disabled in order for privilege separation to 
+function.
+
 When privsep is enabled, the pre-authentication sshd process will
 chroot(2) to "/var/empty" and change its privileges to the "sshd" user
 and its primary group.  You should do something like the following to
