@@ -1,3 +1,6 @@
+20030924
+ - (djm) Update version.h and spec files for HEAD
+
 20030923
  - (dtucker) [Makefile.in] Bug #644: Fix "make clean" for out-of-tree
    builds.  Portability corrections from tim@.
