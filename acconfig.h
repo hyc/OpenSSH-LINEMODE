@@ -34,6 +34,9 @@
 /* Define if your system uses access rights style file descriptor passing */
 #undef HAVE_ACCRIGHTS_IN_MSGHDR
 
+/* Define if your system uses ancillary data style file descriptor passing */
+#undef HAVE_CONTROL_IN_MSGHDR
+
 /* Define if you system's inet_ntoa is busted (e.g. Irix gcc issue) */
 #undef BROKEN_INET_NTOA
 
