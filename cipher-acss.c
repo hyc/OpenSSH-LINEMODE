@@ -19,7 +19,7 @@
 
 RCSID("$Id$");
 
-#if !defined(EVP_CTRL_SET_ACSS_MODE) && (OPENSSL_VERSION_NUMBER >= 0x00906000L)
+#if !defined(EVP_CTRL_SET_ACSS_MODE) && (OPENSSL_VERSION_NUMBER >= 0x00907000L)
 
 #include "acss.h"
 
