@@ -92,7 +92,11 @@ enum
 #endif
 
 #ifndef NGROUPS_MAX	/* Disable groupaccess if NGROUP_MAX is not set */
+#ifdef NGROUPS
+#define NGROUPS_MAX NGROUPS
+#else
 #define NGROUPS_MAX 0
+#endif
 #endif
 
 #ifndef O_NONBLOCK	/* Non Blocking Open */
