@@ -1,3 +1,6 @@
+20011031
+ - (djm) Unsmoke drugs: config files should be noreplace.
+
 20011030
  - (djm) Redhat RPM spec: remove noreplace from config files, allow IPv6 
    by default (can force IPv4 using --define "noipv6 1")
