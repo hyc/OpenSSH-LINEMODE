@@ -32,6 +32,9 @@
    - david@cvs.openbsd.org 2004/07/09 19:45:43
      [Makefile]
      add a missing CLEANFILES used in the re-exec test
+   - djm@cvs.openbsd.org 2004/10/08 02:01:50
+     [reexec.sh]
+     shrink and tidy; ok dtucker@
 
 20041203
  - (dtucker) OpenBSD CVS Sync
