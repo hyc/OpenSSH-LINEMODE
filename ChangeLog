@@ -24,6 +24,7 @@
    thewrittenword.com
  - (dtucker) [INSTALL] Bug #686: Document requirement for zlib 1.1.4 or
    higher.
+ - (tim) Fix typo. s/SETEIUD_BREAKS_SETUID/SETEUID_BREAKS_SETUID/
 
 20030919
  - (djm) Bug #683: Remove reference to --with-ipv4-default from INSTALL;
