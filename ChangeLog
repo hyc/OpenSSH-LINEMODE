@@ -40,6 +40,9 @@
    - markus@cvs.openbsd.org 2003/11/14 13:19:09
      [sshconnect2.c]
      cleanup and minor fixes for the client code; from Simon Wilkinson
+   - djm@cvs.openbsd.org 2003/11/17 09:45:39
+     [msg.c msg.h sshconnect2.c ssh-keysign.c]
+     return error on msg send/receive failure (rather than fatal); ok markus@
 
 20031115
  - (dtucker) [regress/agent-ptrace.sh] Test for GDB output from Solaris and
