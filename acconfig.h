@@ -15,8 +15,8 @@
 /* SCO workaround */
 #undef BROKEN_SYS_TERMIO_H
 
-/* Define if you have SCO protected password database */
-#undef HAVE_SCO_PROTECTED_PW
+/* Define if you have SecureWare-based protected password database */
+#undef HAVE_SECUREWARE
 
 /* If your header files don't define LOGIN_PROGRAM, then use this (detected) */
 /* from environment and PATH */

@@ -1,5 +1,7 @@
 20020425
  - (stevesk) [defines.h] remove USE_TIMEVAL; unused
+ - (stevesk) [acconfig.h auth-passwd.c configure.ac sshd.c] HP-UX 10.26
+   support.  bug #184.  most from dcole@keysoftsys.com.
 
 20020424
  - (djm) OpenBSD CVS Sync
