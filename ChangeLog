@@ -1,6 +1,8 @@
 20050216
  - (djm) write seed to temporary file and atomically rename into place; 
    ok dtucker@
+ - (dtucker) [ssh-rand-helper.c] Provide seed_rng since it may be called
+   via mkstemp in some configurations.  ok djm@
 
 20050215
  - (dtucker) [config.sh.in] Collect oslevel -r too.

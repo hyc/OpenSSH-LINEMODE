@@ -888,3 +888,15 @@ main(int argc, char **argv)
 
 	return ret == bytes ? 0 : 1;
 }
+
+/*
+ * We may attempt to re-seed during mkstemp if we are using the one in the
+ * compat library (via mkstemp -> arc4random -> seed_rng) so we need
+ * our own seed_rng().  We must also check that we have enough entropy.
+ */
+void
+seed_rng(void)
+{
+	if (!RAND_status())
+		fatal("Not enough entropy in RNG");
+}
