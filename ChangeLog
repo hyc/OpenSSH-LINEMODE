@@ -6,6 +6,7 @@
    fix from Philippe Levan <levan@epix.net>
  - (djm) Rework krbIV tests to get us closer to building on Redhat. Still
    doesn't work because of conflicts between krbIV's and OpenSSL's des.h
+ - (djm) Sync openbsd-compat/glob.c
 
 20010327
  - Attempt sync with sshlogin.c w/ OpenBSD (mainly CVS ID)
