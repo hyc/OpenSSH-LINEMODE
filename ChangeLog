@@ -1,3 +1,6 @@
+20020911
+ - (djm) Sync openbsd-compat with OpenBSD -current
+
 20020910
  - (djm) Bug #365: Read /.ssh/environment properly under CygWin. 
    Patch from Mark Bradshaw <bradshaw@staff.crosswalk.com>
