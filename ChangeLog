@@ -1,3 +1,7 @@
+20030428
+ - (bal) [defines.h progressmeter.c scp.c] Some more culling of non 64bit 
+   hacked code.
+
 20030427
  - (bal) Bug #541: return; was dropped by mistake.  Reported by 
    furrier@iglou.com
