@@ -43,6 +43,9 @@
      [deattack.c misc.c session.c ssh-agent.c]
      more buffer allocation fixes; from Solar Designer; CAN-2003-0682;
      ok millert@
+   - miod@cvs.openbsd.org 2003/09/18 13:02:21
+     [authfd.c bufaux.c dh.c mac.c ssh-keygen.c]
+     A few signedness fixes for harmless situations; markus@ ok
 
 20030919
  - (djm) Bug #683: Remove reference to --with-ipv4-default from INSTALL;
