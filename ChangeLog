@@ -1,5 +1,10 @@
 20030813
  - (dtucker) [session.c] Remove #ifdef TIOCSBRK kludge.
+ - (dtucker) OpenBSD CVS Sync
+   - markus@cvs.openbsd.org 2003/08/13 08:33:02
+     [session.c]
+     use more portable tcsendbreak(3) and ignore break_length;
+     ok deraadt, millert
 
 20030811
  - (dtucker) OpenBSD CVS Sync
