@@ -6,6 +6,8 @@
      mcc -> fcc; from Love Hörnquist Åstrand <lha@it.su.se>
      otherwise the kerberos credentinal is stored in a memory cache
      in the privileged sshd. ok jabob@, hin@ (some time ago)
+ - (dtucker) [openbsd-compat/xcrypt.c] Remove Cygwin #ifdef block (duplicate
+   in bsd-cygwin_util.h).
 
 20030808
  - (dtucker) [openbsd-compat/fake-rfc2553.h] Older Linuxes have AI_PASSIVE and
