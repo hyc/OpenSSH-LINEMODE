@@ -326,14 +326,10 @@ void do_pam_chauthtok(void)
 
 	if (password_change_required) {
 		pamstate = OTHER;
-		/* XXX: should we really loop forever? */
-		do {
-			pam_retval = pam_chauthtok(__pamh, 
-			    PAM_CHANGE_EXPIRED_AUTHTOK);
-			if (pam_retval != PAM_SUCCESS)
-				log("PAM pam_chauthtok failed[%d]: %.200s",
-				    pam_retval, PAM_STRERROR(__pamh, pam_retval));
-		} while (pam_retval != PAM_SUCCESS);
+		pam_retval = pam_chauthtok(__pamh, PAM_CHANGE_EXPIRED_AUTHTOK);
+		if (pam_retval != PAM_SUCCESS)
+			fatal("PAM pam_chauthtok failed[%d]: %.200s",
+			    pam_retval, PAM_STRERROR(__pamh, pam_retval));
 	}
 }
 
