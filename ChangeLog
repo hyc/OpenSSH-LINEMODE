@@ -6,6 +6,9 @@
    - stevesk@cvs.openbsd.org 2001/04/08 23:28:27
      [sshd.8]
      spelling
+   - stevesk@cvs.openbsd.org 2001/04/09 00:42:05
+     [sftp.1]
+     spelling
 
 20010409
  - (stevesk) use setresgid() for setegid() if needed
