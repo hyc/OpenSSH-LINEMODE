@@ -287,14 +287,15 @@ void do_pam_session(char *username, const char *ttyname)
 }
 
 /* Set PAM credentials */
-void do_pam_setcred(void)
+void do_pam_setcred(int init)
 {
 	int pam_retval;
 
 	do_pam_set_conv(&conv);
 
 	debug("PAM establishing creds");
-	pam_retval = pam_setcred(__pamh, PAM_ESTABLISH_CRED);
+	pam_retval = pam_setcred(__pamh, 
+	    init ? PAM_ESTABLISH_CRED : PAM_REINITIALIZE_CRED);
 	if (pam_retval != PAM_SUCCESS) {
 		if (was_authenticated)
 			fatal("PAM setcred failed[%d]: %.200s",

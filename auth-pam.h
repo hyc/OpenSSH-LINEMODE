@@ -12,7 +12,7 @@ char **fetch_pam_environment(void);
 int do_pam_authenticate(int flags);
 int do_pam_account(char *username, char *remote_user);
 void do_pam_session(char *username, const char *ttyname);
-void do_pam_setcred(void);
+void do_pam_setcred(int init);
 void print_pam_messages(void);
 int is_pam_password_change_required(void);
 void do_pam_chauthtok(void);
