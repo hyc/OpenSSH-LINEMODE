@@ -21,7 +21,6 @@
 #include "inet_ntoa.h"
 #include "inet_ntop.h"
 #include "strsep.h"
-#include "vis.h"
 #include "setproctitle.h"
 #include "getgrouplist.h"
 #include "glob.h"
