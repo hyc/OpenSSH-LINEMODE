@@ -261,6 +261,12 @@ void do_pam_setcred()
 	}
 }
 
+/* accessor function for file scope static variable */
+int pam_password_change_required(void)
+{
+	return password_change_required;
+}
+
 /* 
  * Have user change authentication token if pam_acct_mgmt() indicated
  * it was expired.  This needs to be called after an interactive
