@@ -1,3 +1,6 @@
+20030514
+ - (djm) Bug #117: Don't lie to PAM about username
+
 20030512
  - (djm) Redhat spec: Don't install profile.d scripts when not 
    building with GNOME/GTK askpass (patch from bet@rahul.net)
