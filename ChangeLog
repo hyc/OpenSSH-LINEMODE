@@ -7,6 +7,9 @@
    - markus@cvs.openbsd.org 2002/06/24 13:12:23
      [ssh-agent.1]
      the socket name contains ssh-agent's ppid; via mpech@ from form@
+   - markus@cvs.openbsd.org 2002/06/24 14:33:27
+     [channels.c channels.h clientloop.c serverloop.c]
+     move channel counter to u_int
 
 20020625
  - (stevesk) [INSTALL acconfig.h configure.ac defines.h] remove --with-rsh
