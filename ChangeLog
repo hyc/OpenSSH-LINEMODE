@@ -29,6 +29,10 @@
      application layer keep alive (ServerAliveInterval ServerAliveCountMax)
      for ssh(1), similar to the sshd(8) option; ok beck@; with help from
      jmc and dtucker@
+   - markus@cvs.openbsd.org 2003/12/16 15:51:54
+     [dh.c]
+     use <= instead of < in dh_estimate; ok provos/hshoexer; 
+     do not return < DH_GRP_MIN
 
 20031209
  - (dtucker) OpenBSD CVS Sync
