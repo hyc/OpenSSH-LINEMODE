@@ -17,6 +17,7 @@
      [channels.c nchan.c]
      more select() error fixes (don't set rfd/wfd to -1).
  - (bal) Enabled USE_PIPES for Cygwin on Corinna Vinschen <vinschen@redhat.com>
+ - (bal) Corrected on_exit() emulation via atexit().  
 
 20010512
  - OpenBSD CVS Sync

@@ -418,7 +418,7 @@ struct winsize {
 #endif /* !defined(HAVE_MEMMOVE) && defined(HAVE_BCOPY) */
 
 #if !defined(HAVE_ATEXIT) && defined(HAVE_ON_EXIT)
-# define atexit(a) on_exit(a, NULL)
+# define atexit(a, NULL) on_exit(a, NULL)
 #else
 # if defined(HAVE_XATEXIT)
 #  define atexit(a) xatexit(a)
