@@ -681,7 +681,6 @@ construct_utmpx(struct logininfo *li, struct utmpx *utx)
 	/* this is just a 32-bit IP address */
 	if (li->hostaddr.sa.sa_family == AF_INET)
 		utx->ut_addr = li->hostaddr.sa_in.sin_addr.s_addr;
- # endif
 # endif
 # ifdef HAVE_SYSLEN_IN_UTMPX
 	/* ut_syslen is the length of the utx_host string */
