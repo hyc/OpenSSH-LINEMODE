@@ -64,6 +64,7 @@ case "$host" in
 *-*-cygwin*)
 	LIBS="$LIBS -lregex /usr/lib/textmode.o"
 	AC_DEFINE(HAVE_CYGWIN)
+	AC_DEFINE(USE_PIPES)
 	AC_DEFINE(DISABLE_SHADOW)
 	AC_DEFINE(IPV4_DEFAULT)
 	AC_DEFINE(IP_TOS_IS_BROKEN)

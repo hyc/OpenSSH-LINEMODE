@@ -16,6 +16,7 @@
    - markus@cvs.openbsd.org 2001/05/16 22:09:21
      [channels.c nchan.c]
      more select() error fixes (don't set rfd/wfd to -1).
+ - (bal) Enabled USE_PIPES for Cygwin on Corinna Vinschen <vinschen@redhat.com>
 
 20010512
  - OpenBSD CVS Sync
