@@ -16,6 +16,7 @@ RCSID("$Id$");
 
 #include "ssh.h"
 #include "cipher.h"
+#include "config.h"
 
 #ifdef HAVE_OPENSSL
 #include <openssl/md5.h>

@@ -18,6 +18,10 @@ RCSID("$Id$");
 #include "servconf.h"
 #include "xmalloc.h"
 
+#ifdef WITH_AIXAUTHENTICATE
+#include <login.h>
+#endif
+
 #ifdef HAVE_SHADOW_H
 # include <shadow.h>
 #endif
@@ -39,6 +43,11 @@ auth_password(struct passwd * pw, const char *password)
 #ifdef HAVE_SHADOW_H
 	struct spwd *spw;
 #endif
+#ifdef WITH_AIXAUTHENTICATE
+	char *authmsg;
+	char *loginmsg;
+	int reenter = 1;
+#endif
 
 	/* deny if no user. */
 	if (pw == NULL)
@@ -56,6 +65,11 @@ auth_password(struct passwd * pw, const char *password)
 		/* Fall back to ordinary passwd authentication. */
 	}
 #endif
+
+#ifdef WITH_AIXAUTHENTICATE
+	return (authenticate(pw->pw_name,password,&reenter,&authmsg) == 0);
+#endif
+
 #ifdef KRB4
 	if (options.kerberos_authentication == 1) {
 		int ret = auth_krb4_password(pw, password);
