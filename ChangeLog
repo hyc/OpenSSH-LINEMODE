@@ -34,6 +34,7 @@
    but it all damned lies.
  - (stevesk) [README.privsep] more for sshd pseudo-account.
  - (tim) [contrib/caldera/openssh.spec] add support for privsep
+ - (djm) setlogin needs pgid==pid on BSD/OS; from itojun@
 
 20020625
  - (stevesk) [INSTALL acconfig.h configure.ac defines.h] remove --with-rsh
