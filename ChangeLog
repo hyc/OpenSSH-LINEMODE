@@ -1,3 +1,6 @@
+20040315
+ - (djm) [sshd.c] Drop supplemental groups if started as root
+
 20040311
  - (djm) [configure.ac] Add standard license to configure.ac; ok ben, dtucker
 
