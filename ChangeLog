@@ -13,6 +13,9 @@
    - deraadt@cvs.openbsd.org 2002/05/19 20:54:52
      [log.h]
      extra commas in enum not 100% portable
+   - deraadt@cvs.openbsd.org 2002/05/22 23:18:25
+     [ssh.c sshd.c]
+     spelling; abishoff@arc.nasa.gov
 
 20020604
  - (stevesk) [channels.c] bug #164 patch from YOSHIFUJI Hideaki (changed
