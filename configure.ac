@@ -71,7 +71,12 @@ case "$host" in
 		)
 		LDFLAGS="$saved_LDFLAGS"
 	fi
-	AC_CHECK_FUNC(authenticate, [AC_DEFINE(WITH_AIXAUTHENTICATE)])
+	AC_CHECK_FUNC(authenticate, [AC_DEFINE(WITH_AIXAUTHENTICATE)],
+		[AC_CHECK_LIB(s,authenticate,
+			[ AC_DEFINE(WITH_AIXAUTHENTICATE)
+				LIBS="$LIBS -ls"
+			])
+		])
 	AC_DEFINE(BROKEN_GETADDRINFO)
 	AC_DEFINE(BROKEN_REALPATH)
 	dnl AIX handles lastlog as part of its login message
