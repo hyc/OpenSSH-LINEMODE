@@ -1,3 +1,8 @@
+20010713
+ - (djm) Enable /etc/nologin check on PAM systems, as some lack the 
+   pam_nologin module. Report from William Yodlowsky 
+   <bsd@openbsd.rutgers.edu>
+
 20010711
  - (djm) dirname(3) may modify its argument on glibc and other systems. 
    Patch from markus@, spotted by Tom Holroyd <tomh@po.crl.go.jp>
