@@ -1178,7 +1178,7 @@ x11_create_display_inet(int screen_number)
 
 static
 int
-connect_local_xsocket(unsigned dnr)
+connect_local_xsocket(unsigned int dnr)
 {
 	static const char *const x_sockets[] = {
 		X_UNIX_PATH "%u",
