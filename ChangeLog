@@ -84,6 +84,9 @@
      [sftp-int.c sftp-server.c]
      avoid paths beginning with "//"; <vinschen@redhat.com>
      ok markus@
+   - jakob@cvs.openbsd.org 2001/07/31 12:53:34
+     [scard.c]
+     close smartcard connection if card is missing
 
 20010803
  - (djm) Fix interrupted read in entropy gatherer. Spotted by markus@ on
