@@ -1,4 +1,7 @@
 20040229
+ - (tim) [configure.ac] Put back bits mistakenly removed from Rev 1.188
+
+20040229
  - (dtucker) OpenBSD CVS Sync
    - djm@cvs.openbsd.org 2004/02/25 00:22:45
      [sshd.c]
