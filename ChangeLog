@@ -1,3 +1,7 @@
+20030825
+ - (djm) Bug #621: Select OpenSC keys by usage attributes. Patch from 
+   larsch@trustcenter.de
+
 20030822
  - (djm) s/get_progname/ssh_get_progname/g to avoid conflict with Heimdal 
    -lbroken; ok dtucker 
