@@ -1,3 +1,7 @@
+20010318
+ - (bal) Fixed scp type casing issue which causes "scp: protocol error: 
+   size not delimited" fatal errors when tranfering.
+
 20010317
  - Support usrinfo() on AIX. Based on patch from Gert Doering 
    <gert@greenie.muc.de>
