@@ -7,6 +7,9 @@
    - markus@cvs.openbsd.org 2002/02/11 16:15:46
      [sshconnect1.c]
      include md5.h, not evp.h
+   - markus@cvs.openbsd.org 2002/02/11 16:17:55
+     [sshd.c]
+     do not complain about port > 1024 if rhosts-auth is disabled
 
 20020210
  - (djm) OpenBSD CVS Sync
