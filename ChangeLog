@@ -74,6 +74,10 @@
    - markus@cvs.openbsd.org 2003/02/21 09:05:53
      [servconf.c]
      print sshd_config filename in debug2 mode.
+   - mpech@cvs.openbsd.org 2003/02/21 10:34:48
+     [auth-krb4.c]
+     ...sizeof(&adat.session) is not good here.
+     henning@, deraadt@, millert@
 
 20030211
  - (djm) Cygwin needs libcrypt too. Patch from vinschen@redhat.com
