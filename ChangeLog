@@ -6,6 +6,9 @@
    - markus@cvs.openbsd.org 2003/10/15 09:48:45
      [monitor_wrap.c]
      check pmonitor != NULL
+   - markus@cvs.openbsd.org 2003/10/21 09:50:06
+     [auth2-gss.c]
+     make sure the doid is larger than 2
 
 20031021
  - (dtucker) [INSTALL] Some system crypt() functions support MD5 passwords
