@@ -74,6 +74,9 @@ case "$host" in
 	no_libsocket=1
 	no_libnsl=1
 	;;
+*-*-dgux*)
+	AC_DEFINE(IP_TOS_IS_BROKEN)
+	;;
 *-*-hpux10*)
 	if test -z "$GCC"; then
 		CFLAGS="$CFLAGS -Ae"
