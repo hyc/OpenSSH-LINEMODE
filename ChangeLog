@@ -1,6 +1,8 @@
 20030628
  - (djm) Bug #591: use PKCS#15 private key label as a comment in case 
    of OpenSC. Report and patch from larsch@trustcenter.de
+ - (djm) Bug #593: Sanity check OpenSC card reader number; patch from 
+   aj@dungeon.inka.de
 
 20030628
  - (dtucker) OpenBSD CVS Sync
