@@ -7,6 +7,9 @@
      [sftp.c]
      make "ls -l" listings print user/group names, add "ls -n" to show uid/gid
      (like /bin/ls); idea & ok markus@
+   - djm@cvs.openbsd.org 2004/06/20 19:28:12
+     [sftp.1]
+     mention new -n flag
 
 20040620
  - (tim) [configure.ac Makefile.in] Only change TEST_SHELL on broken platforms.
