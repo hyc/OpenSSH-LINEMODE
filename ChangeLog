@@ -36,6 +36,9 @@
    - markus@cvs.openbsd.org 2003/09/18 07:54:48
      [buffer.c]
      protect against double free; #660;  zardoz at users.sf.net
+   - markus@cvs.openbsd.org 2003/09/18 07:56:05
+     [authfile.c]
+     missing  buffer_free(&encrypted); #662; zardoz at users.sf.net
 
 20030919
  - (djm) Bug #683: Remove reference to --with-ipv4-default from INSTALL;
