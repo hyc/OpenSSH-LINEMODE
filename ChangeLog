@@ -1,3 +1,8 @@
+20030101
+  - (stevesk) [session.c sshlogin.c sshlogin.h] complete portable
+    parts of pass addrlen with sockaddr * fix.
+    from Hajimu UMEMOTO <ume@FreeBSD.org>
+
 20021222
  - (bal) OpenBSD CVS Sync
    - fgsch@cvs.openbsd.org 2002/11/15 10:03:09
