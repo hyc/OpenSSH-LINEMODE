@@ -1,6 +1,8 @@
 20030909
  - (tim) [regress/Makefile] Fixes for building outside of a read-only
    source tree.
+ - (tim) [regress/agent-timeout.sh] s/TIMEOUT/SSHAGENT_TIMEOUT/ Fixes conflict
+   with shell read-only variable.
 
 20030908
  - (tim) [configure.ac openbsd-compat/getrrsetbyname.c] wrap _getshort and
