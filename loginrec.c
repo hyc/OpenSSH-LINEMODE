@@ -154,6 +154,7 @@
 #include "atomicio.h"
 #include "packet.h"
 #include "canohost.h"
+#include "auth.h"
 
 #ifdef HAVE_UTIL_H
 # include <util.h>
@@ -442,6 +443,12 @@ login_write(struct logininfo *li)
 	if (li->type == LTYPE_LOGIN && 
 	   !sys_auth_record_login(li->username,li->hostname,li->line))
 		logit("Writing login record failed for %s", li->username);
+#endif
+#ifdef AUDIT_EVENTS
+	if (li->type == LTYPE_LOGIN)
+		audit_session_open(li->line);
+	else if (li->type == LTYPE_LOGOUT)
+		audit_session_close(li->line);
 #endif
 	return (0);
 }
