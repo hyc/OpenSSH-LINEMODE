@@ -1,6 +1,7 @@
 20020708
  - (tim) [openssh/contrib/solaris/buildpkg.sh] add PKG_INSTALL_ROOT to
    work in a jumpstart environment. patch by kbrint@rufus.net
+ - (tim) [Makefile.in] workaround for broken pakadd on some systems.
 
 20020707
  - (tim) [Makefile.in] use umask instead of chmod on $(PRIVSEP_PATH)
