@@ -12,6 +12,10 @@
    - markus@cvs.openbsd.org 2001/04/18 22:48:26
      [auth2.c]                                 
      no longer const                           
+   - markus@cvs.openbsd.org 2001/04/18 23:43:26                          
+     [auth2.c compat.c sshconnect2.c]                                    
+     more ssh v2 hostbased-auth interop: ssh.com >= 2.1.0 works now      
+     (however the 2.1.0 server seems to work only if debug is enabled...)
 
 20010418
   - OpenBSD CVS Sync                            
