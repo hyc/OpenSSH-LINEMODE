@@ -23,6 +23,9 @@
   - markus@cvs.openbsd.org 2002/11/21 23:04:33
      [ssh.c]
      debug->debug2
+  - stevesk@cvs.openbsd.org 2002/11/24 21:46:24
+     [ssh-keysign.8]
+     typo: "the the"
 
 20021205
  - (djm) PERL-free fixpaths from stuge-openssh-unix-dev@cdy.org
