@@ -25,6 +25,9 @@
    - stevesk@cvs.openbsd.org 2002/01/27 14:57:46
      [channels.c servconf.c servconf.h session.c sshd.8 sshd_config]
      add X11UseLocalhost; ok markus@
+   - stevesk@cvs.openbsd.org 2002/01/27 18:08:17
+     [ssh.c]
+     handle simple case to identify FamilyLocal display; ok markus@
 
 20020130
  - (djm) Delay PRNG seeding until we need it in ssh-keygen, from markus@
