@@ -6,6 +6,9 @@
    - djm@cvs.openbsd.org 2003/06/12 12:22:47
      [LICENCE]
      mention more copyright holders; ok markus@
+   - nino@cvs.openbsd.org 2003/06/12 15:34:09
+     [scp.c]
+     Typo. Ok markus@.
 
 20030614
  - (djm) Update license on fake-rfc2553.[ch]; ok itojun@
