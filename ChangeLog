@@ -2,6 +2,8 @@
  - (dtucker) [configure.ac] Bug #588, #615: Move other libgen tests to after
    the dirname test, to allow a broken dirname to be detected correctly.
    Based partially on patch supplied by alex.kiernan at thus.net.  ok djm@
+ - (tim) [configure.ac] Move libgen tests to before libwrap to unbreak
+   UnixWare 2.03 using --with-tcp-wrappers.
 
 20030910
  - (dtucker) [configure.ac] Bug #636: Add support for Cray's new X1 machine.
