@@ -40,10 +40,10 @@ void *xmmap(size_t size)
 #ifdef HAVE_MMAP
 # ifdef MAP_ANON
 	address = mmap(NULL, size, PROT_WRITE|PROT_READ, MAP_ANON|MAP_SHARED,
-	    -1, 0);
+	    -1, (off_t)0);
 # else
 	address = mmap(NULL, size, PROT_WRITE|PROT_READ, MAP_SHARED,
-	    open("/dev/zero", O_RDWR), 0);
+	    open("/dev/zero", O_RDWR), (off_t)0);
 # endif
 
 #define MM_SWAP_TEMPLATE "/var/run/sshd.mm.XXXXXXXX"
@@ -58,7 +58,7 @@ void *xmmap(size_t size)
 		unlink(tmpname);
 		ftruncate(tmpfd, size);
 		address = mmap(NULL, size, PROT_WRITE|PROT_READ, MAP_SHARED,
-		    tmpfd, 0);
+		    tmpfd, (off_t)0);
 		close(tmpfd);
 	}
 
