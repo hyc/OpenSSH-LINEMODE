@@ -8,6 +8,7 @@
    into it's own header.
  - (stevesk) [auth-pam.[ch] session.c] pam_getenvlist() must be
    freed by the caller; add free_pam_environment() and use it.
+ - (stevesk) [auth-pam.c] typo in comment
 
 20020721
  - (stevesk) [auth-pam.c] merge cosmetic changes from solar's

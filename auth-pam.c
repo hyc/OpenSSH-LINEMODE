@@ -411,7 +411,7 @@ void start_pam(const char *user)
 	fatal_add_cleanup(&do_pam_cleanup_proc, NULL);
 }
 
-/* Return list of PAM enviornment strings */
+/* Return list of PAM environment strings */
 char **fetch_pam_environment(void)
 {
 #ifdef HAVE_PAM_GETENVLIST
