@@ -64,6 +64,9 @@
    - markus@cvs.openbsd.org 2001/11/10 13:22:42
      [ssh-rsa.c]
      KNF (unexpand)
+   - markus@cvs.openbsd.org 2001/11/10 13:37:20
+     [packet.c]
+     remove extra debug()
 
 20011109
  - (stevesk) auth-pam.c: use do_pam_authenticate(PAM_DISALLOW_NULL_AUTHTOK)
