@@ -1,3 +1,9 @@
+20010217
+ - (bal) OpenBSD Sync:
+   - markus@cvs.openbsd.org 2001/02/16 13:38:18
+     [channel.c]                               
+     remove debug                              
+
 20010216
  - (bal) added '--with-prce'  to allow overriding of system regex when
    required (tested by David Dulek <ddulek@fastenal.com>)
