@@ -78,6 +78,7 @@ struct sockaddr_in6 {
 #ifndef EAI_NODATA
 # define EAI_NODATA	1
 # define EAI_MEMORY	2
+# define EAI_NONAME	3
 #endif
 
 #ifndef HAVE_STRUCT_ADDRINFO
