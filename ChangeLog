@@ -13,6 +13,9 @@
    - markus@cvs.openbsd.org 2004/02/23 15:16:46
      [version.h]
      enter 3.8
+ - (dtucker) [configure.ac gss-serv-krb5.c ssh-gss.h] Define GSSAPI when found
+   with krb5-config, hunt down gssapi.h and friends.  Based partially on patch
+   from deengert at anl.gov.
 
 20040223
  - (dtucker) [session.c] Bug #789: Only make setcred call for !privsep in the
