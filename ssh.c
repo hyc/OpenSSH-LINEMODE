@@ -555,6 +555,13 @@ main(int ac, char **av)
      them.  Also, extra privileges could make it very hard to read identity
      files and other non-world-readable files from the user's home directory
      if it happens to be on a NFS volume where root is mapped to nobody. */
+
+  /* Note that some legacy systems need to postpone the following call to
+     permanently_set_uid() until the private hostkey is destroyed with
+     RSA_free().  Otherwise the calling user could ptrace() the process,
+     read the private hostkey and impersonate the host.  OpenBSD does not
+     allow ptracing of setuid processes. */
+
   permanently_set_uid(original_real_uid);
 
   /* Now that we are back to our own permissions, create ~/.ssh directory

@@ -235,7 +235,7 @@ void cipher_set_key(CipherContext *context, int cipher,
       break;
 
     default:
-      fatal("cipher_set_key: unknown cipher: %d", cipher);
+      fatal("cipher_set_key: unknown cipher: %s", cipher_name(cipher));
     }
   memset(padded, 0, sizeof(padded));
 }
