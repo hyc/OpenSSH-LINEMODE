@@ -793,7 +793,7 @@ AC_CHECK_FUNCS(setresuid, [
 int main(){errno=0; setresuid(0,0,0); if (errno==ENOSYS) exit(1); else exit(0);}
 		],
 		[AC_MSG_RESULT(yes)],
-		[AC_DEFINE(BROKEN_SETRESUID),
+		[AC_DEFINE(BROKEN_SETRESUID)
 		 AC_MSG_RESULT(not implemented)]
 	)
 ])
