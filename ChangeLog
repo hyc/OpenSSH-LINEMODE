@@ -49,6 +49,9 @@
    - deraadt@cvs.openbsd.org 2001/02/24 10:37:55
      [readconf.c]
      look for id_rsa by default, before id_dsa
+   - deraadt@cvs.openbsd.org 2001/02/24 10:37:26
+     [sshd_config]
+     ssh2 rsa key before dsa key
 
 20010304
  - (bal) Remove make-ssh-known-hosts.1 since it's no longer valid.
