@@ -20,6 +20,10 @@
    - djm@cvs.openbsd.org 2003/06/04 12:18:49
      [scp.c]
      ansify; ok markus@
+   - djm@cvs.openbsd.org 2003/06/04 12:40:39
+     [scp.c]
+     kill ssh process upon receipt of signal, bz #241.
+     based on patch from esb AT hawaii.edu; ok markus@
  - (djm) Update to fix of bug #584: lock card before return. 
    From larsch@trustcenter.de
 
