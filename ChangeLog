@@ -1,3 +1,7 @@
+20030707
+ - (dtucker) [configure.ac] Bug #600: Check that getrusage is declared before
+   searching libraries for it.  Fixes build errors on NCR MP-RAS.
+
 20030706
  - (dtucker) [ssh-rand-helper.c loginrec.c]
    Apply atomicio typing change to these too.
