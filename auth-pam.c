@@ -87,7 +87,7 @@ int do_pam_authenticate(int flags)
  * messages with into __pam_msg.  This is used during initial
  * authentication to bypass the normal PAM password prompt.
  *
- * OTHER mode handles PAM_PROMPT_ECHO_OFF with read_passphrase(prompt, 1)
+ * OTHER mode handles PAM_PROMPT_ECHO_OFF with read_passphrase()
  * and outputs messages to stderr. This mode is used if pam_chauthtok()
  * is called to update expired passwords.
  */
@@ -146,9 +146,9 @@ static int do_pam_conversation(int num_msg, const struct pam_message **msg,
 				reply[count].resp_retcode = PAM_SUCCESS;
 				break;
 			case PAM_PROMPT_ECHO_OFF:
-				reply[count].resp = xstrdup(
+				reply[count].resp = 
 				    read_passphrase(PAM_MSG_MEMBER(msg, count, 
-				    msg), 1));
+					msg), RP_ALLOW_STDIN));
 				reply[count].resp_retcode = PAM_SUCCESS;
 				break;
 			case PAM_ERROR_MSG:
