@@ -43,10 +43,15 @@ static RC4_KEY rc4;
 unsigned int arc4random(void)
 {
 	unsigned int r = 0;
+	static int first_time = 1;
 
-	if (rc4_ready <= 0)
+	if (rc4_ready <= 0) {
+		if (!first_time)
+			seed_rng();
+		first_time = 0;
 		arc4random_stir();
-	
+	}
+
 	RC4(&rc4, sizeof(r), (unsigned char *)&r, (unsigned char *)&r);
 
 	rc4_ready -= sizeof(r);
@@ -57,17 +62,14 @@ unsigned int arc4random(void)
 void arc4random_stir(void)
 {
 	unsigned char rand_buf[SEED_SIZE];
-	
+
 	memset(&rc4, 0, sizeof(rc4));
-
-	seed_rng();
-
-	RAND_bytes(rand_buf, sizeof(rand_buf));
-	
+	if (!RAND_bytes(rand_buf, sizeof(rand_buf)))
+		fatal("Couldn't obtain random bytes (error %ld)",
+		    ERR_get_error());
 	RC4_set_key(&rc4, sizeof(rand_buf), rand_buf);
-
 	memset(rand_buf, 0, sizeof(rand_buf));
-	
+
 	rc4_ready = REKEY_BYTES;
 }
 #endif /* !HAVE_ARC4RANDOM */

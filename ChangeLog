@@ -1,3 +1,7 @@
+20010319
+ - (djm) Seed PRNG at startup, rather than waiting for arc4random calls to 
+   do it implicitly.
+
 20010318
  - (bal) Fixed scp type casing issue which causes "scp: protocol error: 
    size not delimited" fatal errors when tranfering.
