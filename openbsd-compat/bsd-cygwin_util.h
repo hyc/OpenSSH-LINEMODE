@@ -15,7 +15,8 @@
 
 /* $Id$ */
 
-#include "config.h"
+#ifndef _BSD_CYGWIN_UTIL_H
+#define _BSD_CYGWIN_UTIL_H
 
 #ifdef HAVE_CYGWIN
 
@@ -28,3 +29,5 @@ int check_ntsec(const char *filename);
 #define pipe binary_pipe
 
 #endif /* HAVE_CYGWIN */
+
+#endif /* _BSD_CYGWIN_UTIL_H */

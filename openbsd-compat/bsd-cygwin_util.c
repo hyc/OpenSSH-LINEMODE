@@ -26,8 +26,21 @@ RCSID("$Id$");
 #include <windows.h>
 #define is_winnt       (GetVersion() < 0x80000000)
 
-int binary_open(const char *filename, int flags, mode_t mode)
+#if defined(open) && open == binary_open
+# undef open
+#endif
+#if defined(pipe) && open == binary_pipe
+# undef pipe
+#endif
+
+int binary_open(const char *filename, int flags, ...)
 {
+	va_list ap;
+	mode_t mode;
+	
+	va_start(ap, flags);
+	mode = va_arg(ap, mode_t);
+	va_end(ap);
 	return open(filename, flags | O_BINARY, mode);
 }
 
