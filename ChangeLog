@@ -5,6 +5,10 @@
      When you give command examples and etc., in a manual page prefix them with:     $ command
      or
      # command
+   - markus@cvs.openbsd.org 2002/02/14 23:27:59
+     [channels.c]
+     increase the SSH v2 window size to 4 packets. comsumes a little
+     bit more memory for slow receivers but increases througput.
 
 20020218
  - (tim) newer config.guess from ftp://ftp.gnu.org/gnu/config/config.guess
