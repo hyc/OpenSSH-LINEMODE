@@ -1,6 +1,8 @@
 20020308
- - (djm) Revert bits of Markus' OpenSSL compat patch which was accidentally
-   committed.
+ - (djm) Revert bits of Markus' OpenSSL compat patch which was 
+   accidentally committed.
+ - (djm) Add Markus' patch for compat wih OpenSSL < 0.9.6. 
+   Known issue: Blowfish for SSH1 does not work
 
 20020307
  - (djm) OpenBSD CVS Sync
