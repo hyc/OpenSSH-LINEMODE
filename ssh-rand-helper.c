@@ -769,7 +769,7 @@ main(int argc, char **argv)
 	extern char *optarg;
 	LogLevel ll;
 
-	__progname = get_progname(argv[0]);
+	__progname = ssh_get_progname(argv[0]);
 	log_init(argv[0], SYSLOG_LEVEL_INFO, SYSLOG_FACILITY_USER, 1);
 
 	ll = SYSLOG_LEVEL_INFO;

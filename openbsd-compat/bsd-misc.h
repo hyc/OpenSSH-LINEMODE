@@ -29,7 +29,7 @@
 
 #include "config.h"
 
-char *get_progname(char *);
+char *ssh_get_progname(char *);
 
 #ifndef HAVE_SETSID
 #define setsid() setpgrp(0, getpid())

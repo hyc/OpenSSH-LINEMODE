@@ -31,7 +31,7 @@ RCSID("$Id$");
  * NB. duplicate __progname in case it is an alias for argv[0]
  * Otherwise it may get clobbered by setproctitle()
  */
-char *get_progname(char *argv0)
+char *ssh_get_progname(char *argv0)
 {
 #ifdef HAVE___PROGNAME
 	extern char *__progname;
