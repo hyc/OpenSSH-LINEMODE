@@ -935,7 +935,11 @@ channel_request_local_forwarding(u_short port, const char *host,
 		/* Bind the socket to the address. */
 		if (bind(sock, ai->ai_addr, ai->ai_addrlen) < 0) {
 			/* address can be in use ipv6 address is already bound */
-			verbose("bind: %.100s", strerror(errno));
+			if (!ai->ai_next)
+				error("bind: %.100s", strerror(errno));
+			else
+				verbose("bind: %.100s", strerror(errno));
+				
 			close(sock);
 			continue;
 		}
@@ -1199,6 +1203,10 @@ x11_create_display_inet(int screen_number, int x11_display_offset)
 				debug("bind port %d: %.100s", port, strerror(errno));
 				shutdown(sock, SHUT_RDWR);
 				close(sock);
+
+				if (ai->ai_next)
+					continue;
+
 				for (n = 0; n < num_socks; n++) {
 					shutdown(socks[n], SHUT_RDWR);
 					close(socks[n]);
