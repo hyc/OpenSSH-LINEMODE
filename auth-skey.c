@@ -1,6 +1,7 @@
+#include "includes.h"
+
 #ifdef SKEY
 
-#include "includes.h"
 RCSID("$Id$");
 
 #include "ssh.h"
@@ -32,6 +33,7 @@ hash_collapse(s)
 
 	return i;
 }
+
 char *
 skey_fake_keyinfo(char *username)
 {
@@ -150,4 +152,4 @@ skey_fake_keyinfo(char *username)
 	return skeyprompt;
 }
 
-#endif SKEY
+#endif /* SKEY */
