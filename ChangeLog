@@ -6,6 +6,7 @@
    - markus@cvs.openbsd.org 2001/03/18 12:07:52
      [auth-options.c]
      ignore permitopen="host:port" if AllowTcpForwarding==no
+ - (djm) Make scp work on systems without 64-bit ints
 
 20010318
  - (bal) Fixed scp type casing issue which causes "scp: protocol error: 
