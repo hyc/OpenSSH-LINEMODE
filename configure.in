@@ -74,6 +74,9 @@ case "$host" in
 *-*-dgux*)
 	AC_DEFINE(IP_TOS_IS_BROKEN)
 	;;
+*-*-darwin*)
+	AC_DEFINE(BROKEN_GETADDRINFO)
+	;;
 *-*-hpux10*)
 	if test -z "$GCC"; then
 		CFLAGS="$CFLAGS -Ae"
