@@ -226,7 +226,11 @@ void start_pam(struct passwd *pw)
 /* Return list of PAM enviornment strings */
 char **fetch_pam_environment(void)
 {
+#ifdef HAVE_PAM_GETENVLIST
 	return(pam_getenvlist((pam_handle_t *)pamh));
+#else /* HAVE_PAM_GETENVLIST */
+	return(NULL);
+#endif /* HAVE_PAM_GETENVLIST */
 }
 
 /* Print any messages that have been generated during authentication */
