@@ -160,8 +160,9 @@ peer_connection_is_on_socket()
 	memset(&from, 0, sizeof(from));
 	if (getpeername(in, (struct sockaddr *) & from, &fromlen) < 0)
 		return 0;
-	if (from.sin_family != AF_INET && from.sin_family != AF_INET6)
+	if (from.sin_family != AF_INET)
 		return 0;
+
 	return 1;
 }
 
