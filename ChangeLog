@@ -14,6 +14,9 @@
      [readconf.c]
      do not dump core for 'ssh -o proxycommand host'; ok deraadt@
  - (dtucker) [regress/dynamic-forward.sh] Import new regression test.
+ - (dtucker) [configure.ac] Bug #570: Have ./configure --enable-FEATURE 
+   actually enable the feature, for those normally disabled.  Patch by
+   openssh (at) roumenpetrov.info.
 
 20030624
  - (dtucker) Have configure refer the user to config.log and

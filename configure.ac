@@ -2314,35 +2314,67 @@ AC_SUBST(piddir)
 dnl allow user to disable some login recording features
 AC_ARG_ENABLE(lastlog,
 	[  --disable-lastlog       disable use of lastlog even if detected [no]],
-	[ AC_DEFINE(DISABLE_LASTLOG) ]
+	[
+		if test "x$enableval" = "xno" ; then
+			AC_DEFINE(DISABLE_LASTLOG)
+		fi
+	]
 )
 AC_ARG_ENABLE(utmp,
 	[  --disable-utmp          disable use of utmp even if detected [no]],
-	[ AC_DEFINE(DISABLE_UTMP) ]
+	[
+		if test "x$enableval" = "xno" ; then
+			AC_DEFINE(DISABLE_UTMP)
+		fi
+	]
 )
 AC_ARG_ENABLE(utmpx,
 	[  --disable-utmpx         disable use of utmpx even if detected [no]],
-	[ AC_DEFINE(DISABLE_UTMPX) ]
+	[
+		if test "x$enableval" = "xno" ; then
+			AC_DEFINE(DISABLE_UTMPX)
+		fi
+	]
 )
 AC_ARG_ENABLE(wtmp,
 	[  --disable-wtmp          disable use of wtmp even if detected [no]],
-	[ AC_DEFINE(DISABLE_WTMP) ]
+	[
+		if test "x$enableval" = "xno" ; then
+			AC_DEFINE(DISABLE_WTMP)
+		fi
+	]
 )
 AC_ARG_ENABLE(wtmpx,
 	[  --disable-wtmpx         disable use of wtmpx even if detected [no]],
-	[ AC_DEFINE(DISABLE_WTMPX) ]
+	[
+		if test "x$enableval" = "xno" ; then
+			AC_DEFINE(DISABLE_WTMPX)
+		fi
+	]
 )
 AC_ARG_ENABLE(libutil,
 	[  --disable-libutil       disable use of libutil (login() etc.) [no]],
-	[ AC_DEFINE(DISABLE_LOGIN) ]
+	[
+		if test "x$enableval" = "xno" ; then
+			AC_DEFINE(DISABLE_LOGIN)
+		fi
+	]
 )
 AC_ARG_ENABLE(pututline,
 	[  --disable-pututline     disable use of pututline() etc. ([uw]tmp) [no]],
-	[ AC_DEFINE(DISABLE_PUTUTLINE) ]
+	[
+		if test "x$enableval" = "xno" ; then
+			AC_DEFINE(DISABLE_PUTUTLINE) 
+		fi
+	]
 )
 AC_ARG_ENABLE(pututxline,
 	[  --disable-pututxline    disable use of pututxline() etc. ([uw]tmpx) [no]],
-	[ AC_DEFINE(DISABLE_PUTUTXLINE) ]
+	[
+		if test "x$enableval" = "xno" ; then
+			AC_DEFINE(DISABLE_PUTUTXLINE)
+		fi
+	]
 )
 AC_ARG_WITH(lastlog,
   [  --with-lastlog=FILE|DIR specify lastlog location [common locations]],
