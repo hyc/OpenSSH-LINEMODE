@@ -7,6 +7,8 @@
      [auth-options.c]
      ignore permitopen="host:port" if AllowTcpForwarding==no
  - (djm) Make scp work on systems without 64-bit ints
+ - tim@mindrot.org 2001/03/18 18:28:39 [defines.h]
+   move HAVE_LONG_LONG_INT where it works
 
 20010318
  - (bal) Fixed scp type casing issue which causes "scp: protocol error: 
