@@ -51,6 +51,7 @@
    - markus@cvs.openbsd.org 2002/02/25 16:33:27
      [ssh-keygen.c sshconnect2.c uuencode.c uuencode.h]
      more u_* fixes
+ - (bal) Imported missing fatal.c and fixed up Makefile.in
 
 20020225
  - (bal) Last AIX patch.  Moved aix_usrinfo() outside of do_setuserconext()
