@@ -3,6 +3,10 @@
    - markus@cvs.openbsd.org 2001/07/22 21:32:27
      [sshpty.c]
      update comment
+   - pvalchev@cvs.openbsd.org 2001/07/22 21:32:42
+     [ssh.1]
+     There is no option "Compress", point to "Compression" instead; ok 
+     markus
 
 20010803
  - (djm) Fix interrupted read in entropy gatherer. Spotted by markus@ on
