@@ -129,7 +129,7 @@ ssh-keygen$(EXEEXT): $(LIBCOMPAT) libssh.a ssh-keygen.o
 	$(LD) -o $@ ssh-keygen.o $(LDFLAGS) -lssh -lopenbsd-compat $(LIBS) 
 
 ssh-keysign$(EXEEXT): $(LIBCOMPAT) libssh.a ssh-keysign.o
-	$(LD) -o $@ ssh-keysign.o $(LDFLAGS) -lssh -lopenbsd-compat $(LIBS) 
+	$(LD) -o $@ ssh-keysign.o readconf.o $(LDFLAGS) -lssh -lopenbsd-compat $(LIBS) 
 
 ssh-keyscan$(EXEEXT): $(LIBCOMPAT) libssh.a ssh-keyscan.o
 	$(LD) -o $@ ssh-keyscan.o $(LDFLAGS) -lssh -lopenbsd-compat -lssh $(LIBS) 
