@@ -403,6 +403,7 @@ mips-sony-bsd|mips-sony-newsos4)
 	AC_DEFINE(BROKEN_SETREGID)
 	AC_DEFINE(WITH_ABBREV_NO_TTY)
 	AC_DEFINE(BROKEN_UPDWTMPX)
+	AC_DEFINE(PASSWD_NEEDS_USERNAME, 1, [must supply username to passwd])
 	AC_CHECK_FUNCS(getluid setluid)
 	MANTYPE=man
 	TEST_SHELL=ksh
