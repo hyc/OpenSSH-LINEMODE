@@ -1,3 +1,6 @@
+20040421
+ - (djm) Update config.guess and config.sub to autoconf-2.59 versions; ok tim@
+
 20040420
  - (djm) OpenBSD CVS Sync
    - henning@cvs.openbsd.org 2004/04/08 16:08:21
