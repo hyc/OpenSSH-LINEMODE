@@ -1,3 +1,6 @@
+20010402
+ - (stevesk) log.c openbsd sync; missing newlines
+
 20010330
  - (djm) Another openbsd-compat/glob.c sync
  - (djm) OpenBSD CVS Sync
