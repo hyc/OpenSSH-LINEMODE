@@ -14,7 +14,6 @@ precision integers.
 
 */
 
-#include "config.h"
 #include "includes.h"
 RCSID("$Id$");
 

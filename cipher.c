@@ -11,7 +11,6 @@ Created: Wed Apr 19 17:41:39 1995 ylo
 
 */
 
-#include "config.h"
 #include "includes.h"
 RCSID("$Id$");
 

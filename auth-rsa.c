@@ -15,7 +15,6 @@ validity of the host key.
 
 */
 
-#include "config.h"
 #include "includes.h"
 RCSID("$Id$");
 

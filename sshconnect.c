@@ -14,7 +14,6 @@ login (authentication) dialog.
 
 */
 
-#include "config.h"
 #include "includes.h"
 RCSID("$Id$");
 

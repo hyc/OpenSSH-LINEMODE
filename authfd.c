@@ -13,7 +13,6 @@ Functions for connecting the local authentication agent.
 
 */
 
-#include "config.h"
 #include "includes.h"
 RCSID("$Id$");
 
