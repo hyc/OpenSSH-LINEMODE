@@ -9,7 +9,7 @@
 
 #include "includes.h"
 
-#ifndef HAVE_LIBPAM
+#ifndef USE_PAM
 
 RCSID("$Id$");
 
@@ -19,12 +19,14 @@ RCSID("$Id$");
 #include "xmalloc.h"
 
 #ifdef HAVE_SHADOW_H
-#include <shadow.h>
+# include <shadow.h>
 #endif
-
-#ifdef HAVE_MD5_PASSWORDS
-#include "md5crypt.h"
-#endif
+#if defined(HAVE_CRYPT_H) && !defined(CRYPT_H_BREAKS_BUILD)
+# include <crypt.h>
+#endif /* defined(HAVE_CRYPT_H) && !defined(CRYPT_H_BREAKS_BUILD) */
+#if defined(HAVE_MD5_PASSWORDS) && !defined(HAVE_MD5_CRYPT)
+# include "md5crypt.h"
+#endif /* defined(HAVE_MD5_PASSWORDS) && !defined(HAVE_MD5_CRYPT) */
 
 /*
  * Tries to authenticate the user using password.  Returns true if
@@ -101,4 +103,4 @@ auth_password(struct passwd * pw, const char *password)
 	/* Authentication is accepted if the encrypted passwords are identical. */
 	return (strcmp(encrypted_password, pw_password) == 0);
 }
-#endif /* !HAVE_LIBPAM */
+#endif /* !USE_PAM */
