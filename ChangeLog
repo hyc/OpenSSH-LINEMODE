@@ -42,6 +42,9 @@
    - markus@cvs.openbsd.org 2003/06/12 15:40:01
      [try-ciphers.sh]
      add ctr
+   - markus@cvs.openbsd.org 2003/06/12 15:43:32
+     [Makefile]
+     test -HUP; dtucker at zip.com.au
 
 20030614
  - (djm) Update license on fake-rfc2553.[ch]; ok itojun@
