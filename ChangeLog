@@ -116,6 +116,9 @@
    - jakob@cvs.openbsd.org 2001/08/02 15:07:23
      [ssh-keygen.1]
      document smartcard upload/download. ok markus@
+   - jakob@cvs.openbsd.org 2001/08/02 15:32:10
+     [ssh.c]
+     add smartcard to usage(). ok markus@
 
 20010803
  - (djm) Fix interrupted read in entropy gatherer. Spotted by markus@ on
