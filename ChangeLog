@@ -3,6 +3,8 @@
  - (djm) Sync scard/ stuff
  - (djm) Redhat spec file cleanups from Pekka Savola <pekkas@netcore.fi> and
    Redhat
+ - (djm) Redhat initscript config sanity checking from Pekka Savola 
+   <pekkas@netcore.fi>
 
 20010914
  - (bal) OpenBSD CVS Sync
