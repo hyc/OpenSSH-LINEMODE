@@ -13,7 +13,7 @@ Programming:
 - Write a test program that calls stat() to search for EGD/PRNGd socket
   rather than use the (non-portable) "test -S". 
 
-- Replacement for setproctitle() - HP-UX support only currently
+- More platforms for for setproctitle() emulation (testing needed)
 
 - Handle changing passwords for the non-PAM expired password case
 

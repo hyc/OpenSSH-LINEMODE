@@ -1,3 +1,7 @@
+20030110
+ - (djm) Enable new setproctitle emulation for Linux, AIX and HP/UX. More 
+   systems may be added later.
+
 20030108
  - (djm) Sync openbsd-compat/ with OpenBSD -current
  - (djm) Avoid redundant xstrdup/xfree in auth2-pam.c. From Solar via markus@

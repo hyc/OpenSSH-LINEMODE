@@ -23,15 +23,20 @@
  */
 
 #include "includes.h"
+#include "xmalloc.h"
 
 RCSID("$Id$");
 
+/*
+ * NB. duplicate __progname in case it is an alias for argv[0]
+ * Otherwise it may get clobbered by setproctitle()
+ */
 char *get_progname(char *argv0)
 {
 #ifdef HAVE___PROGNAME
 	extern char *__progname;
 
-	return __progname;
+	return xstrdup(__progname);
 #else
 	char *p;
 
@@ -42,7 +47,8 @@ char *get_progname(char *argv0)
 		p = argv0;
 	else
 		p++;
-	return p;
+
+	return xstrdup(p);
 #endif
 }
 
