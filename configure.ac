@@ -982,8 +982,6 @@ main()
 	)
 fi
 
-check_for_hpux_broken_getaddrinfo=1
-
 if test "x$ac_cv_func_getaddrinfo" = "xyes" -a "x$check_for_hpux_broken_getaddrinfo" = "x1"; then
 	AC_MSG_CHECKING(if getaddrinfo seems to work)
 	AC_TRY_RUN(
