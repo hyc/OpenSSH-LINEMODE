@@ -24,6 +24,10 @@
      Without this, there is a race where the login name of an existing 
      connection, as returned by getlogin(), may be changed to the privsep 
      user (sshd).  markus@ OK
+   - markus@cvs.openbsd.org 2002/05/13 21:26:49
+     [auth-rhosts.c]
+     handle debug messages during rhosts-rsa and hostbased authentication; 
+     ok provos@
 
 20020514
  - (stevesk) [README.privsep] PAM+privsep works with Solaris 8.
