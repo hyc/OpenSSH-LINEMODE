@@ -2215,11 +2215,15 @@ else
 fi
 
 # check for /etc/default/login and use it if present.
+AC_ARG_ENABLE(etc-default-login,
+	[  --disable-etc-default-login       Disable using PATH from /etc/default/login [no]],,
+[
 AC_CHECK_FILE("/etc/default/login", [ external_path_file=/etc/default/login ])
 
 if test "x$external_path_file" = "x/etc/default/login"; then
 	AC_DEFINE(HAVE_ETC_DEFAULT_LOGIN)
 fi
+])
 
 dnl BSD systems use /etc/login.conf so --with-default-path= has no effect
 if test $ac_cv_func_login_getcapbool = "yes" -a \
