@@ -157,7 +157,7 @@ md5_crypt(const char *pw, const char *salt)
 	memset(salt_copy, 0, sizeof(salt_copy));
 	memset(&ctx, 0, sizeof(ctx));
 	memset(&ctx1, 0, sizeof(ctx1));
-	(void)to64(0, 4)
+	(void)to64(0, 4);
 
 	return (passwd);
 }
