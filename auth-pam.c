@@ -365,8 +365,12 @@ sshpam_thread(void *ctxtp)
 	const char *pam_user;
 
 	pam_get_item(sshpam_handle, PAM_USER, (void **)&pam_user);
-	setproctitle("%s [pam]", pam_user);
 	environ[0] = NULL;
+
+	if (sshpam_authctxt != NULL) {
+		setproctitle("%s [pam]",
+		    sshpam_authctxt->valid ? pam_user : "unknown");
+	}
 #endif
 
 	sshpam_conv.conv = sshpam_thread_conv;
