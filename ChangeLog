@@ -1,3 +1,11 @@
+20030122
+ - (djm) OpenBSD CVS Sync
+   - marc@cvs.openbsd.org 2003/01/21 18:14:36
+     [ssh-agent.1 ssh-agent.c]
+     Add a -t life option to ssh-agent that set the default lifetime.
+     The default can still be overriden by using -t in ssh-add.
+     OK markus@
+
 20030120
  - (djm) Fix compilation for NetBSD from dtucker@zip.com.au
  - (tim) [progressmeter.c] make compilers without long long happy.
