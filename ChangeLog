@@ -20,6 +20,9 @@
      [clientloop.c]
      format with current EscapeChar; bugzilla #388 from wknox@mitre.org.
      ok markus@
+   - stevesk@cvs.openbsd.org 2002/08/22 20:57:19
+     [ssh-agent.c]
+     shutdown(SHUT_RDWR) not needed before close here; ok markus@
 
 20020820
  - OpenBSD CVS Sync
