@@ -32,6 +32,9 @@
      [kex.c monitor.c monitor_wrap.c sshd.c]
      'monitor' variable clashes with at least one lame platform (NeXT).  i
      Renamed to 'pmonitor'.  provos@
+   - deraadt@cvs.openbsd.org 2002/05/04 02:39:35
+     [servconf.c sshd.8 sshd_config]
+     enable privsep by default; provos ok
  - (bal) Fixed up PAM case.  I think.
  - (bal) Clarified openbsd-compat/*-cray.* Licence provided by Wendy
 
