@@ -25,6 +25,12 @@
      [clientloop.c]
      remove confusing callback code
  - (djm) Add CVS Id's to files that we have missed
+ - (bal) OpenBSD Sync (more):
+   - itojun@cvs.openbsd.org 2001/02/08 19:30:52
+     sync with netbsd tree changes.
+     - more strict prototypes, include necessary headers
+     - use paths.h/pathnames.h decls
+     - size_t typecase to int -> u_long
 
 20010208
  - (djm) Don't delete external askpass program in make uninstall target.
