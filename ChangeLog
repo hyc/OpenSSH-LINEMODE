@@ -1,3 +1,7 @@
+20030909
+ - (tim) [regress/Makefile] Fixes for building outside of a read-only
+   source tree.
+
 20030908
  - (tim) [configure.ac openbsd-compat/getrrsetbyname.c] wrap _getshort and
    _getlong in #ifndef
