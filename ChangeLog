@@ -1,4 +1,6 @@
 20020510
+ - (stevesk) [auth.c] Shadow account and expiration cleanup.  Now
+   check for root forced expire.  Still don't check for inactive.
  - (djm) Rework RedHat RPM files. Based on spec from Nalin 
    Dahyabhai <nalin@redhat.com> and patches from 
    Pekka Savola <pekkas@netcore.fi>
