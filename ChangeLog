@@ -1,3 +1,7 @@
+20011228
+ - (djm) Remove recommendation to use GNU make, we should support most
+   make programs.
+
 20011225
  - (stevesk) [Makefile.in ssh-rand-helper.c]
    portable lib and __progname support for ssh-rand-helper; ok djm@
