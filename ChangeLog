@@ -13,6 +13,9 @@
    - itojun@cvs.openbsd.org 2002/07/09 12:04:02
      [sshconnect.c]
      ed static function (less warnings)
+   - stevesk@cvs.openbsd.org 2002/07/09 17:46:25
+     [sshd_config.5]
+     clarify no preference ordering in protocol list; ok markus@
 
 20020709
  - (bal) NO_IPPORT_RESERVED_CONCEPT used instead of CYGWIN so other platforms
