@@ -47,9 +47,9 @@
  **   IRIX
  **   NetBSD
  **   HP-UX 11
+ **   AIX
  **
  ** Platforms with known problems:
- **   AIX (need to port AIX stuff from old login code
  **   NeXT
  **
  **/
