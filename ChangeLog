@@ -23,6 +23,8 @@
      replace 4 clause BSD licensed progressmeter code with a replacement
      from Nils Nordman and myself; ok deraadt@
      (copied from OpenBSD an re-applied portable changes)
+ - (dtucker) [openbsd-compat/bsd-misc.c openbsd-compat/bsd-misc.h]
+   Add a tcgetpgrp function.
 
 20030730
  - (djm) [auth-pam.c] Don't use crappy APIs like sprintf. Thanks bal
