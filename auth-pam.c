@@ -312,7 +312,7 @@ sshpam_thread(void *ctxtp)
 	if (sshpam_err != PAM_SUCCESS)
 		goto auth_fail;
 
-	/* if (compat20) { */
+	if (compat20) {
 		if (!do_pam_account())
 			goto auth_fail;
 		if (sshpam_new_authtok_reqd) {
@@ -322,7 +322,7 @@ sshpam_thread(void *ctxtp)
 				goto auth_fail;
 			pam_password_change_required(0);
 		}
-	/* } */
+	}
 
 	buffer_put_cstring(&buffer, "OK");
 
