@@ -76,6 +76,10 @@ auth_password(struct passwd * pw, const char *password)
 	if ((spw->sp_namp == NULL) || (strcmp(pw->pw_name, spw->sp_namp) != 0))
 		fatal("Shadow lookup returned garbage.");
 
+	/* Check for users with no password. */
+	if (strcmp(password, "") == 0 && strcmp(spw->sp_pwdp, "") == 0)
+		return 1;
+
 	if (strlen(spw->sp_pwdp) < 3)
 		return(0);
 
