@@ -1,3 +1,6 @@
+20050211
+ - (dtucker) [configure.ac] Tidy up configure --help output.
+
 20050210
  - (dtucker) [configure.ac] Bug #919: Provide visible feedback for the
    --disable-etc-default-login configure option.
