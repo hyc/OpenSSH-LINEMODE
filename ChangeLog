@@ -12,6 +12,8 @@
    authentication early enough to be available to PAM session modules when
    privsep=yes.  Patch from deengert at anl.gov, ok'ed in principle by Sam
    Hartman and similar to Debian's ssh-krb5 package.
+ - (dtucker) [configure.ac openbsd-compat/port-aix.{c,h}] Silence some more
+   compiler warnings on AIX.
 
 20050215
  - (dtucker) [config.sh.in] Collect oslevel -r too.

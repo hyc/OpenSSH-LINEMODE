@@ -121,8 +121,11 @@ case "$host" in
 				LIBS="$LIBS -ls"
 			])
 		])
+	dnl Check for various auth function declarations in headers.
+	AC_CHECK_DECLS([authenticate, loginrestrictions, loginsuccess, passwdexpired],,
+	    [#include <usersec.h>])
 	dnl Check if loginfailed is declared and takes 4 arguments (AIX >= 5.2)
-	AC_CHECK_DECL(loginfailed,
+	AC_CHECK_DECLS(loginfailed,
 		 [AC_MSG_CHECKING(if loginfailed takes 4 arguments)
 		  AC_TRY_COMPILE(
 			[#include <usersec.h>],
