@@ -15,6 +15,9 @@
  - (djm) Warning fix on entropy.c saved uid stuff. Patch from Mark Miller
    <markm@swoon.net>
  - (djm) Fix PAM fix
+ - (djm) Remove 'noreplace' flag from sshd_config in RPM spec files. This
+   change is being made as 2.5.x configfiles are not back-compatible with
+  2.3.x.
 
 20010226
  - (bal) Fixed bsd-snprinf.c so it now honors 'BROKEN_SNPRINTF' again.
