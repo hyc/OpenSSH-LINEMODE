@@ -17,7 +17,7 @@
  - (dtucker) [Makefile.in auth.c auth.h auth1.c auth2.c loginrec.c monitor.c
    monitor.h monitor_wrap.c monitor_wrap.h session.c sshd.c] Bug #125:
    (first stage) Add audit instrumentation to sshd, currently disabled by
-   default.  with suggestions from and djm@
+   default.  with suggestions from and ok djm@
 
 20050201
  - (dtucker) [log.c] Bug #973: force log_init() to open syslog, since on some
