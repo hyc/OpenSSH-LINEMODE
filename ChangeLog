@@ -1,3 +1,7 @@
+20031123
+ - (djm) [canohost.c] Move IPv4inV6 mapped address normalisation to its own
+   function and call it unconditionally
+
 20031122
  - (dtucker) [channels.c] Make AIX write limit code clearer.  Suggested by djm@
  - (dtucker) [auth-passwd.c openbsd-compat/port-aix.c openbsd-compat/port-aix.h]
