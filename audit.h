@@ -29,20 +29,20 @@
 #ifndef _SSH_AUDIT_H
 # define _SSH_AUDIT_H
 enum ssh_audit_event_type {
-	LOGIN_EXCEED_MAXTRIES,
-	LOGIN_ROOT_DENIED,
-	AUTH_SUCCESS,
-	AUTH_FAIL_NONE,
-	AUTH_FAIL_PASSWD,
-	AUTH_FAIL_KBDINT,	/* keyboard-interactive or challenge-response */
-	AUTH_FAIL_PUBKEY,	/* ssh2 pubkey or ssh1 rsa */
-	AUTH_FAIL_HOSTBASED,	/* ssh2 hostbased or ssh1 rhostsrsa */
-	AUTH_FAIL_GSSAPI,
-	INVALID_USER,
-	NOLOGIN,		/* denied by /etc/nologin, not implemented */
-	CONNECTION_CLOSE,	/* closed after attempting auth or session */
-	CONNECTION_ABANDON,	/* closed without completing auth */
-	AUDIT_UNKNOWN
+	SSH_LOGIN_EXCEED_MAXTRIES,
+	SSH_LOGIN_ROOT_DENIED,
+	SSH_AUTH_SUCCESS,
+	SSH_AUTH_FAIL_NONE,
+	SSH_AUTH_FAIL_PASSWD,
+	SSH_AUTH_FAIL_KBDINT,	/* keyboard-interactive or challenge-response */
+	SSH_AUTH_FAIL_PUBKEY,	/* ssh2 pubkey or ssh1 rsa */
+	SSH_AUTH_FAIL_HOSTBASED,	/* ssh2 hostbased or ssh1 rhostsrsa */
+	SSH_AUTH_FAIL_GSSAPI,
+	SSH_INVALID_USER,
+	SSH_NOLOGIN,		/* denied by /etc/nologin, not implemented */
+	SSH_CONNECTION_CLOSE,	/* closed after attempting auth or session */
+	SSH_CONNECTION_ABANDON,	/* closed without completing auth */
+	SSH_AUDIT_UNKNOWN
 };
 typedef enum ssh_audit_event_type ssh_audit_event_t;
 
