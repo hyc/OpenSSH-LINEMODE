@@ -1,3 +1,6 @@
+20040128
+ - (dtucker) [regress/README.regress] Add tcpwrappers issue, noted by tim@
+
 20040127
  - (djm) OpenBSD CVS Sync
    - hshoexer@cvs.openbsd.org 2004/01/23 17:06:03
