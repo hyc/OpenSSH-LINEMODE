@@ -8,6 +8,9 @@
    - markus@cvs.openbsd.org 2002/03/26 11:37:05
      [ssh.c]
      update Copyright
+   - markus@cvs.openbsd.org 2002/03/26 15:23:40
+     [bufaux.c]
+     do not talk about packets in bufaux
 
 20020325
  - (stevesk) import OpenBSD <sys/tree.h> as "openbsd-compat/tree.h"
