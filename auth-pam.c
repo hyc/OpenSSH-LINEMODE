@@ -276,6 +276,7 @@ static int
 sshpam_init(const char *user)
 {
 	extern u_int utmp_len;
+	extern char *__progname;
 	const char *pam_rhost, *pam_user;
 
 	if (sshpam_handle != NULL) {
