@@ -2091,8 +2091,8 @@ AC_ARG_WITH(kerberos5,
 			else
 				AC_MSG_RESULT(no)
 				K5CFLAGS="`$KRB5CONF --cflags`"
-				K5LDFLAGS="`$KRB5CONF --libs | sed 's/-l@<:@^- @:>@*//g'`"
-				K5LIBS="`$KRB5CONF --libs | sed 's/-L@<:@^- @:>@*//g'`"
+				K5LDFLAGS="`$KRB5CONF --libs | sed 's/-l@<:@^ @:>@* //g'`"
+				K5LIBS="`$KRB5CONF --libs | sed 's/-L@<:@^ @:>@* //g'`"
 			fi
 			CPPFLAGS="$CPPFLAGS $K5CFLAGS"
 			LDFLAGS="$LDFLAGS $K5LDFLAGS"
