@@ -34,6 +34,9 @@
      [session.c]
      Split motd and hushlogin checks into seperate functions, helps for 
      portable. From Chris Adams <cmadams@hiwaay.net>; ok markus@
+ - Fix OSF SIA support displaying too much information for quiet 
+   logins and logins where access was denied by SIA. Patch from Chris Adams 
+   <cmadams@hiwaay.net>
 
 20010415
  - OpenBSD CVS Sync
