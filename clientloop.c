@@ -979,7 +979,12 @@ client_input_channel_open(int type, int plen)
 		char *originator;
 		int originator_port;
 		originator = packet_get_string(NULL);
-		originator_port = packet_get_int();
+		if (packet_remaining() > 0) {
+			originator_port = packet_get_int();
+		} else {
+			debug("buggy server: x11 request w/o originator_port");
+			originator_port = 0;
+		}
 		packet_done();
 		/* XXX check permission */
 		xfree(originator);
