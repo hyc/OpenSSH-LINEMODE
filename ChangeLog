@@ -36,6 +36,10 @@
      [readconf.c ssh.1 ssh.c sshconnect.c]
      cleanup connect(); connection_attempts 4 -> 1; from 
      eivind@freebsd.org
+   - stevesk@cvs.openbsd.org 2001/07/26 17:18:22
+     [sshd.8 sshd.c]
+     add -t option to test configuration file and keys; pekkas@netcore.fi
+     ok markus@
 
 20010803
  - (djm) Fix interrupted read in entropy gatherer. Spotted by markus@ on
