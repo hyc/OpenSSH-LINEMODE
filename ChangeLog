@@ -27,6 +27,7 @@
    - [regress/README.regress] Add a basic readme.
    - [Makefile.in regress/agent-getpeereid.sh] config.h is now in $BUILDDIR
      not $OBJ.
+   - [Makefile.in regress/agent-ptrace] Fix minor regress issues on Cygwin.
 
 20030903
  - (djm) OpenBSD CVS Sync
