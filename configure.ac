@@ -42,6 +42,11 @@ else
 	fi
 fi
 
+AC_PATH_PROG(PATH_PASSWD_PROG, passwd)
+if test ! -z "$PATH_PASSWD_PROG" ; then
+	AC_DEFINE_UNQUOTED(_PATH_PASSWD_PROG, "$PATH_PASSWD_PROG")
+fi
+
 if test -z "$LD" ; then
 	LD=$CC
 fi

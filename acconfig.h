@@ -65,6 +65,9 @@
 /* from environment and PATH */
 #undef LOGIN_PROGRAM_FALLBACK
 
+/* Full path of your "passwd" program */
+#undef _PATH_PASSWD_PROG
+
 /* Define if your password has a pw_class field */
 #undef HAVE_PW_CLASS_IN_PASSWD
 
