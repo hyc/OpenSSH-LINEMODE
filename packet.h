@@ -15,9 +15,10 @@ Interface for the packet protocol functions.
 
 /* RCSID("$Id$"); */
 
-#include "config.h"
 #ifndef PACKET_H
 #define PACKET_H
+
+#include "config.h"
 
 #ifdef HAVE_OPENSSL
 #include <openssl/bn.h>

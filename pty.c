@@ -17,7 +17,6 @@ Allocating a pseudo-terminal, and making it the controlling tty.
 RCSID("$Id$");
 
 #ifdef HAVE_PTY_H
-/* Unfortunate namespace collision */
 #include <pty.h>
 #endif /* HAVE_PTY_H */
 
