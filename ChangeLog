@@ -7,6 +7,7 @@
  - (tim) [configure.ac Makefile.in] Add support for "make package" ok djm@
  - (tim) [buildpkg.sh.in] New file. A more flexible version of
    contrib/solaris/buildpkg.sh used for "make package".
+ - (tim) [buildpkg.sh.in] Last minute fix didn't make it in the .in file.
 
 20040527
  - (dtucker) [contrib/caldera/openssh.spec contrib/redhat/openssh.spec
