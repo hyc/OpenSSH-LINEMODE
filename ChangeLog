@@ -1,6 +1,8 @@
 20020910
  - (djm) Bug #365: Read /.ssh/environment properly under CygWin. 
    Patch from Mark Bradshaw <bradshaw@staff.crosswalk.com>
+ - (djm) Bug #138: Make protocol 1 blowfish work with old OpenSSL. 
+   Patch from Robert Halubek <rob@adso.com.pl>
 
 20020905 
  - (djm) OpenBSD CVS Sync
