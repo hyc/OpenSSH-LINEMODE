@@ -5,6 +5,9 @@
  - (tim) [configure.ac] Move libgen tests to before libwrap to unbreak
    UnixWare 2.03 using --with-tcp-wrappers.
  - (tim) [configure.ac] Prefer setuid/setgid on UnixWare and Open Server.
+ - (tim) [regress/agent-ptrace.sh regress/dynamic-forward.sh
+   regress/sftp-cmds.sh regress/stderr-after-eof.sh regress/test-exec.sh]
+   no longer depends on which(1). patch by dtucker@
 
 20030910
  - (dtucker) [configure.ac] Bug #636: Add support for Cray's new X1 machine.
