@@ -20,6 +20,9 @@
    - aaron@cvs.openbsd.org 2002/08/08 13:50:23
      [sshconnect1.c]
      Use & to test if bits are set, not &&; markus@ ok.
+   - stevesk@cvs.openbsd.org 2002/08/08 23:54:52
+     [auth.c]
+     typo in comment
 
 20020813
  - (tim) [configure.ac] Display OpenSSL header/library version.
