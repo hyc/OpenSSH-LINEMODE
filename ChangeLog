@@ -19,6 +19,9 @@
      [progressmeter.c]
      pass file_size + 1 to snprintf: fixes printing of truncated
      file names; fix based on patch/report from sturm@;
+   - markus@cvs.openbsd.org 2003/08/31 12:14:22
+     [progressmeter.c]
+     do write to buf[-1]
 
 20030829
  - (bal) openbsd-compat/ clean up.  Considate headers, add in Id on our
