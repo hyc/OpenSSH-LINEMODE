@@ -24,6 +24,9 @@
      [OVERVIEW auth-rsa.c auth1.c kex.c monitor.c session.c sshconnect1.c
      sshd.c] removed: mpaux.c mpaux.h
      kill some more tiny files; ok deraadt@
+   - djm@cvs.openbsd.org 2004/05/09 01:26:48
+     [kex.c]
+     don't overwrite what we are trying to compute
 
 20040502
  - (dtucker) OpenBSD CVS Sync
