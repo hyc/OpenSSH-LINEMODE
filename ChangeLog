@@ -1,3 +1,9 @@
+20010501
+ - OpenBSD CVS Sync
+   - markus@cvs.openbsd.org 2001/04/30 11:18:52
+     [readconf.c readconf.h ssh.1 ssh.c sshconnect.c]
+     implement 'ssh -b bind_address' like 'telnet -b'
+
 20010430
  - OpenBSD CVS Sync
    - markus@cvs.openbsd.org 2001/04/29 18:32:52
