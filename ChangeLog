@@ -1,3 +1,6 @@
+20040601
+ - (djm) [auth-pam.c] Add copyright for local changes
+
 20040530
  - (dtucker) [auth-pam.c auth-pam.h auth-passwd.c] Bug #874: Re-add PAM 
    support for PasswordAuthentication=yes.  ok djm@
