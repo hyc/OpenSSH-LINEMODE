@@ -1913,6 +1913,9 @@ AC_ARG_WITH(dns,
 					AC_SEARCH_LIBS(res_query, resolv)
 					AC_SEARCH_LIBS(dn_expand, resolv)
 					AC_CHECK_FUNCS(_getshort _getlong)
+					AC_CHECK_MEMBER(HEADER.ad,
+						[AC_DEFINE(HAVE_HEADER_AD)],,
+						[#include <arpa/nameser.h>])
 				])
 		fi
 	]

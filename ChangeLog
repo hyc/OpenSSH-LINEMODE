@@ -1,6 +1,8 @@
 20030908
  - (tim) [configure.ac openbsd-compat/getrrsetbyname.c] wrap _getshort and
    _getlong in #ifndef
+ - (tim) [configure.ac acconfig.h openbsd-compat/getrrsetbyname.c] test for
+   HEADER.ad in arpa/nameser.h
 
 20030907
  - (dtucker) [agent-ptrace.sh dynamic-forward.sh (all regress/)]

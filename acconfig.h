@@ -418,6 +418,9 @@
 /* Define if getrrsetbyname() exists */
 #undef HAVE_GETRRSETBYNAME
 
+/* Define if HEADER.ad exists in arpa/nameser.h */
+#undef HAVE_HEADER_AD
+
 @BOTTOM@
 
 /* ******************* Shouldn't need to edit below this line ************** */
