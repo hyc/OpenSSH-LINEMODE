@@ -585,6 +585,9 @@ struct winsize {
 #  endif
 #endif
 
+#if defined(HAVE_SHADOW_H) && !defined(DISABLE_SHADOW)
+# define USE_SHADOW
+#endif
 
 /* The login() library function in libutil is first choice */
 #if defined(HAVE_LOGIN) && !defined(DISABLE_LOGIN)
