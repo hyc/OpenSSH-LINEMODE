@@ -1,5 +1,6 @@
 20020521
  - (stevesk) [sshd.c] bug 245; disable setsid() for now
+ - (stevesk) [sshd.c] #ifndef HAVE_CYGWIN for setgroups()
 
 20020517
  - (tim) [configure.ac] remove extra MD5_MSG="no" line.
