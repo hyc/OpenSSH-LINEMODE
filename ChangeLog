@@ -14,6 +14,9 @@
        rounding the time to 1 second.
      * when the transfer is finished calculate the actual total speed
        rather than the current speed which is given during the transfer
+   - markus@cvs.openbsd.org 2003/12/02 17:01:15
+     [channels.c session.c ssh-agent.c ssh.h sshd.c]
+     use SSH_LISTEN_BACKLOG (=128) in listen(2).
 
 20031208
  - (tim) [configure.ac] Bug 770. Fix --without-rpath.
