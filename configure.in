@@ -1044,7 +1044,7 @@ main()
 #if (SIZEOF_LONG_INT == 8)
 	long int num = 0x7fffffffffffffff;
 #else
-	long long num = 0x7fffffffffffffff;
+	long long num = 0x7fffffffffffffffll;
 #endif
 	strcpy(expected_out, "9223372036854775807");
 	snprintf(buf, mazsize, "%lld", num);
