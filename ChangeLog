@@ -1,4 +1,10 @@
 20030829
+ - (djm) OpenBSD CVS Sync
+   - deraadt@cvs.openbsd.org 2003/08/24 17:36:51
+     [auth2-gss.c]
+     64 bit cleanups; markus ok
+
+20030829
  - (bal) openbsd-compat/ clean up.  Considate headers, add in Id on our
    files, and added missing license to header.
 
