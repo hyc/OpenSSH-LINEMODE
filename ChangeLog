@@ -7,6 +7,10 @@
      [monitor_wrap.c]
      Put s/key functions inside #ifdef SKEY same as monitor.c,
      from des@freebsd via bz #330, ok markus@
+   - dtucker@cvs.openbsd.org 2004/07/08 12:47:21
+     [scp.c]
+     Prevent scp from skipping the file following a double-error.
+     bz #863, ok markus@
 
 20040702
  - (dtucker) [mdoc2man.awk] Teach it to ignore .Bk -words, reported by
