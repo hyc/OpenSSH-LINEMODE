@@ -6,7 +6,7 @@
 
 #if !defined(HAVE_BASENAME)
 
-char *getcwd(char *pt, size_t size);
+char *basename(char *path);
 
 #endif /* !defined(HAVE_BASENAME) */
 #endif /* _BASENAME_H */
