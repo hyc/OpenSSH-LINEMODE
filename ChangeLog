@@ -9,6 +9,9 @@
    - markus@cvs.openbsd.org 2005/03/16 21:17:39
      [version.h]
      4.1
+   - jmc@cvs.openbsd.org 2005/03/18 17:05:00
+     [sshd_config.5]
+     typo;
 
 20050329
  - (dtucker) [contrib/aix/buildbff.sh] Bug #1005: Look up only the user we're
