@@ -18,6 +18,9 @@
    - djm@cvs.openbsd.org 2004/05/22 06:32:12
      [clientloop.c ssh.1]
      use '-h' for help in ~C commandline instead of '-?'; inspired by jmc@
+   - jmc@cvs.openbsd.org 2004/05/22 16:01:05
+     [ssh.1]
+     kill whitespace at eol;
 
 20040523
  - (djm) [sshd_config] Explain consequences of UsePAM=yes a little better in 
