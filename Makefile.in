@@ -51,7 +51,6 @@ ENT=@ENT@
 XAUTH_PATH=@XAUTH_PATH@
 LDFLAGS=-L. -Lopenbsd-compat/ @LDFLAGS@
 EXEEXT=@EXEEXT@
-SSH_MODE= @SSHMODE@
 
 INSTALL_SSH_PRNG_CMDS=@INSTALL_SSH_PRNG_CMDS@
 INSTALL_SSH_RAND_HELPER=@INSTALL_SSH_RAND_HELPER@
@@ -212,7 +211,7 @@ install-files: scard-install
 	$(srcdir)/mkinstalldirs $(DESTDIR)$(mandir)/$(mansubdir)1
 	$(srcdir)/mkinstalldirs $(DESTDIR)$(mandir)/$(mansubdir)8
 	$(srcdir)/mkinstalldirs $(DESTDIR)$(libexecdir)
-	$(INSTALL) -m $(SSH_MODE) -s ssh $(DESTDIR)$(bindir)/ssh
+	$(INSTALL) -m 0755 -s ssh $(DESTDIR)$(bindir)/ssh
 	$(INSTALL) -m 0755 -s scp $(DESTDIR)$(bindir)/scp
 	$(INSTALL) -m 0755 -s ssh-add $(DESTDIR)$(bindir)/ssh-add
 	$(INSTALL) -m 0755 -s ssh-agent $(DESTDIR)$(bindir)/ssh-agent

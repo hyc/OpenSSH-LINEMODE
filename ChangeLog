@@ -1,3 +1,6 @@
+20020607
+ - (bal) Missed __progname in ssh-keysign.c  patch by dtucker@zip.com.au
+
 20020606
  - (bal) OpenBSD CVS Sync
    - markus@cvs.openbsd.org 2002/05/15 21:56:38
