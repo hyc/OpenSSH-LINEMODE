@@ -301,8 +301,9 @@ login_get_lastlog(struct logininfo *li, const int uid)
 	 * reliably search wtmp(x) for the last login (see
 	 * wtmp_get_entry().) */
 	pw = getpwuid(uid);
-	strlcpy(li->username, pw->pw_name, 
-		MIN_SIZEOF(li->username, pw->pw_name));
+	/* No MIN_SIZEOF here - we absolutely *must not* truncate the
+         * username */
+	strlcpy(li->username, pw->pw_name, li->username);
 #endif
 	if (getlast_entry(li))
 		return li;
