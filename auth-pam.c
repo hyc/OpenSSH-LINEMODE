@@ -174,7 +174,7 @@ int do_pam_account(char *username, char *remote_user)
 }
 
 /* Do PAM-specific session initialisation */
-void do_pam_session(char *username, char *ttyname)
+void do_pam_session(char *username, const char *ttyname)
 {
 	int pam_retval;
 
