@@ -11,6 +11,8 @@
    - Create configs from skeletons in /etc/defaults/etc.
    - Use /bin/bash, allows reading user input with readline support.
    - Remove really old configs from /usr/local.
+ - (dtucker) [auth-pam.c] Add newline to accumulated PAM_TEXT_INFO and
+   PAM_ERROR_MSG messages.
 
 20031106
  - (djm) Clarify UsePAM consequences a little more

@@ -412,9 +412,9 @@ sshpam_query(void *ctx, char **name, char **info,
 		case PAM_ERROR_MSG:
 		case PAM_TEXT_INFO:
 			/* accumulate messages */
-			len = plen + strlen(msg) + 1;
+			len = plen + strlen(msg) + 2;
 			**prompts = xrealloc(**prompts, len);
-			plen += snprintf(**prompts + plen, len, "%s", msg);
+			plen += snprintf(**prompts + plen, len, "%s\n", msg);
 			xfree(msg);
 			break;
 		case PAM_SUCCESS:
