@@ -1,3 +1,6 @@
+20020506
+ - (bal) Fixed auth-passwd.c to resolve PermitEmptyPassword issue
+ 
 20020501
  - (djm) Import OpenBSD regression tests. Requires BSD make to run
  - (djm) Fix readpassphase compilation for systems which have it
