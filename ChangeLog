@@ -4,6 +4,9 @@
      [auth.c]
      s/Illegal user/Invalid user/; many requests; ok djm, millert, niklas,
      miod, ...
+   - djm@cvs.openbsd.org 2004/07/21 10:33:31
+     [auth1.c auth2.c]
+     bz#899: Don't display invalid usernames in setproctitle
 
 20040720
  - (djm) [log.c] bz #111: Escape more control characters when sending data 
