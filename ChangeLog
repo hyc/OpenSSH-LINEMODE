@@ -1,3 +1,6 @@
+20030930
+ - (bal) Fix issues in openbsd-compat/realpath.c
+
 20030925
  - (dtucker) [configure.ac openbsd-compat/xcrypt.c] Bug #633: Remove
    DISABLE_SHADOW for HP-UX, use getspnam instead of getprpwnam.  Patch from
