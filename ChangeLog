@@ -1,3 +1,7 @@
+20040310
+ - (dtucker) [openbsd-compat/fake-rfc2553.h] Bug #812: #undef getaddrinfo
+   before redefining it, silences warnings on Tru64.
+
 20040308
  - (dtucker) [sshd.c] Back out rev 1.270 as it caused problems on some
    platforms (eg SCO, HP-UX) with logging in the wrong TZ.  ok djm@
