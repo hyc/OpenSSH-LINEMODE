@@ -6,6 +6,7 @@
    - markus@cvs.openbsd.org 2002/10/01 13:24:50
      [version.h]
      OpenSSH 3.5
+ - (djm) Bump RPM spec version numbers
 
 20020930
  - (djm) Tidy contrib/, add Makefile for GNOME passphrase dialogs, 
