@@ -1,6 +1,8 @@
 20010223
  - (bal) Fix --define rh7 in openssh.spec file.  Patch by Steve Tell
    <tell@telltronics.org>
+ - (bal) Patch to force OpenSSH rpm to require the same version of OpenSSL
+   that it was compiled against.  Patch by Pekka Savola <pekkas@netcore.fi>
 
 20010222                                                             
  - (bal) Corrected SCO luid patch by svaughan <svaughan@asterion.com>
