@@ -71,6 +71,10 @@
  */
 #define SSH_SERVICE_NAME	"ssh"
 
+#if defined(USE_PAM) && !defined(SSHD_PAM_SERVICE)
+# define SSHD_PAM_SERVICE       "sshd"
+#endif
+
 #ifndef ETCDIR
 #define ETCDIR			"/etc"
 #endif /* ETCDIR */

@@ -201,6 +201,9 @@ void
 pty_make_controlling_tty(int *ttyfd, const char *ttyname)
 {
 	int fd;
+#ifdef HAVE_VHANGUP
+	void *old;
+#endif /* HAVE_VHANGUP */
 
 	/* First disconnect from the old controlling tty. */
 #ifdef TIOCNOTTY
@@ -232,12 +235,22 @@ pty_make_controlling_tty(int *ttyfd, const char *ttyname)
 	 */
 	ioctl(*ttyfd, TIOCSCTTY, NULL);
 #endif /* TIOCSCTTY */
+#ifdef HAVE_VHANGUP
+	old = signal(SIGHUP, SIG_IGN);
+	vhangup();
+	signal(SIGHUP, old);
+#endif /* HAVE_VHANGUP */
 	fd = open(ttyname, O_RDWR);
-	if (fd < 0)
+	if (fd < 0) {
 		error("%.100s: %.100s", ttyname, strerror(errno));
-	else
+	} else {
+#ifdef HAVE_VHANGUP
+		close(*ttyfd);
+		*ttyfd = fd;
+#else /* HAVE_VHANGUP */
 		close(fd);
-
+#endif /* HAVE_VHANGUP */
+	}
 	/* Verify that we now have a controlling tty. */
 	fd = open("/dev/tty", O_WRONLY);
 	if (fd < 0)

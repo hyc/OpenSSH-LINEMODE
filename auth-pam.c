@@ -215,7 +215,8 @@ void start_pam(struct passwd *pw)
 
 	debug("Starting up PAM with username \"%.200s\"", pw->pw_name);
 
-	pam_retval = pam_start("sshd", pw->pw_name, &conv, (pam_handle_t**)&pamh);
+	pam_retval = pam_start(SSHD_PAM_SERVICE, pw->pw_name, &conv, 
+		(pam_handle_t**)&pamh);
 	if (pam_retval != PAM_SUCCESS)
 		fatal("PAM initialisation failed: %.200s", PAM_STRERROR((pam_handle_t *)pamh, pam_retval));
 
