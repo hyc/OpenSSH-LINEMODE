@@ -1,6 +1,7 @@
 20030530
  - (dtucker) Add missing semicolon in md5crypt.c, patch from openssh at
    roumenpetrov.info
+ - (dtucker) Define SSHD_ACQUIRES_CTTY for NCR MP-RAS and Reliant Unix.
 
 20030526
  - (djm) Avoid auth2-chall.c warning when compiling without 
