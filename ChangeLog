@@ -79,6 +79,8 @@
      move the path for xauth to pathnames.h
  - (bal) configure.in fix for Tru64 (forgeting to reset $LIB)
  - (bal) ANSIify strmode()
+ - (bal) --with-catman should be --with-mantype patch by Dave 
+   Dykstra <dwd@bell-labs.com> 
 
 20010606
  - OpenBSD CVS Sync

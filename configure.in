@@ -1415,7 +1415,7 @@ fi
 AC_SUBST(INSTALL_SSH_PRNG_CMDS)
 
 
-AC_ARG_WITH(catman,
+AC_ARG_WITH(mantype,
 	[  --with-mantype=man|cat|doc  Set man page type],
 	[
 		case "$withval" in
