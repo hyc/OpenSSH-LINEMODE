@@ -1,6 +1,10 @@
 20050309
  - (dtucker) [regress/test-exec.sh] Set BIN_SH=xpg4 on OSF1/Digital Unix/Tru64
    so that regress tests behave.  From Chris Adams.
+ - (djm) OpenBSD CVS Sync
+   - jmc@cvs.openbsd.org 2005/03/07 23:41:54
+     [ssh.1 ssh_config.5]
+     more macro simplification;
 
 20050307
  - (dtucker) [configure.ac] Disable gettext search when configuring with
