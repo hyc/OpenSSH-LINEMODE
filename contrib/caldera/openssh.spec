@@ -1,6 +1,6 @@
 %define use-stable	1
 %if %{use-stable}
-  %define version 	3.2.2
+  %define version 	3.2.2p1
   %define cvs		%{nil}
   %define release 	1
 %else
