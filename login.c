@@ -253,7 +253,7 @@ record_login(pid_t pid, const char *ttyname, const char *user, uid_t uid,
 #endif /* defined(HAVE_UTMPX_H) && defined(USE_UTMPX) */
 
 #if defined(HAVE_UTMPX_H) && defined(USE_UTMPX)
-	login(&u, &utx);
+	login(&utx);
 #else /* defined(HAVE_UTMPX_H) && defined(USE_UTMPX) */
 	login(&u);
 #endif /* defined(HAVE_UTMPX_H) && defined(USE_UTMPX) */
