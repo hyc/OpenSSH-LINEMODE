@@ -2,6 +2,8 @@
  - (djm) Fix segv from bad reordering in auth-pam.c
  - (djm) Always use saved_argv in sshd.c as compat_init_setproctitle may 
    clobber
+ - (tim) openbsd-compat/xmmap.[ch] License clarifications. Add missing
+   CVS ID.
 
 20030530
  - (dtucker) Add missing semicolon in md5crypt.c, patch from openssh at
