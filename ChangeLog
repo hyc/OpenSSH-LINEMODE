@@ -3,6 +3,10 @@
    - matthieu@cvs.openbsd.org 2003/11/25 23:10:08
      [ssh-add.1]
      ssh-add doesn't need to be a descendant of ssh-agent. Ok markus@, jmc@.
+   - djm@cvs.openbsd.org 2003/11/26 21:44:29
+     [cipher-aes.c]
+     fix #ifdef before #define; ok markus@
+     (RCS ID sync only, Portable already had this)
 
 20031208
  - (tim) [configure.ac] Bug 770. Fix --without-rpath.
