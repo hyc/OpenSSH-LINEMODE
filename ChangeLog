@@ -16,6 +16,7 @@
      clean reexec-specific junk out of text-exec.sh and simplify; idea markus@
  - (dtucker) [configure.ac openbsd-compat/misc.c [openbsd-compat/misc.h]
    Add closefrom() for platforms that don't have it.
+ - (dtucker) [sshd.c] add line missing from reexec sync.
 
 20040623
  - (dtucker) [auth1.c] Ensure do_pam_account is called for Protocol 1
