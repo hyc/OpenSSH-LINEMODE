@@ -245,7 +245,14 @@ void start_pam(struct passwd *pw)
 		fatal("PAM initialisation failed: %.200s", 
 			PAM_STRERROR((pam_handle_t *)pamh, pam_retval));
 	}
-	
+
+	/*
+	 * Some PAM modules (e.g. pam_time) require a TTY to operate,
+	 * and will fail in various stupid ways if they don't get one. 
+	 * sshd doesn't set the tty until too late in the auth process and may
+	 * not even need one (for tty-less connections)
+	 * Kludge: Set a fake PAM_TTY 
+	 */
 	pam_retval = pam_set_item((pam_handle_t *)pamh, PAM_TTY, "ssh");
 	if (pam_retval != PAM_SUCCESS) {
 		fatal("PAM set tty failed: %.200s", 
