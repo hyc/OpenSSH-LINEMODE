@@ -1,5 +1,6 @@
 20010402
  - (stevesk) log.c openbsd sync; missing newlines
+ - (stevesk) sshpty.h openbsd sync; PTY_H -> SSHPTY_H
 
 20010330
  - (djm) Another openbsd-compat/glob.c sync
