@@ -2037,6 +2037,11 @@ AC_ARG_WITH(kerberos5,
 				       [ AC_MSG_RESULT(yes)
 					 AC_DEFINE(HEIMDAL)
 					 K5LIBS="-lkrb5 -ldes -lcom_err -lasn1 -lroken"
+					 AC_SEARCH_LIBS(k_hasafs, kafs,
+						[ AC_DEFINE(AFS)
+						  K5LIBS="-lkafs $K5LIBS"
+						]
+					 )
 				       ],
 				       [ AC_MSG_RESULT(no)
 					 K5LIBS="-lkrb5 -lk5crypto -lcom_err"
