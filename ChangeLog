@@ -1,5 +1,7 @@
 20020213
- - (djm) Don't use system sys/queue.h on AIX. Report from gert@greenie.muc.de
+ - (djm) Don't use system sys/queue.h on AIX. Report from 
+   gert@greenie.muc.de
+ - (djm) Bug #114 - not starting PAM for SSH protocol 1 invalid users
 
 20020213
  - (djm) OpenBSD CVS Sync
