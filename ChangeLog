@@ -2,6 +2,8 @@
  - (tim) [Makefile.in regress/sftp-badcmds.sh regress/test-exec.sh]
    Portablity fixes. Data sftp transfers needs to be world readable. Some
    older shells hang on while loops when  doing sh -n some_script. OK dtucker@
+ - (tim) [configure.ac] Make sure -lcrypto is before -lsocket for sco3.
+   ok mouring@
 
 20040211
  - (dtucker) [auth-passwd.c auth-shadow.c] Only enable shadow expiry check
