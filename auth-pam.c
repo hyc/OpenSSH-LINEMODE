@@ -321,7 +321,7 @@ sshpam_thread(void *ctxtp)
 	ssh_msg_send(ctxt->pam_csock, PAM_AUTH_ERR, &buffer);
 	buffer_free(&buffer);
 	pthread_exit(NULL);
-	
+
 	return (NULL); /* Avoid warning for non-pthread case */
 }
 
@@ -613,7 +613,7 @@ do_pam_account(void)
 {
 	sshpam_err = pam_acct_mgmt(sshpam_handle, 0);
 	debug3("%s: pam_acct_mgmt = %d", __func__, sshpam_err);
-	
+
 	if (sshpam_err != PAM_SUCCESS && sshpam_err != PAM_NEW_AUTHTOK_REQD)
 		return (0);
 
@@ -773,7 +773,7 @@ int
 do_pam_putenv(char *name, char *value)
 {
 	int ret = 1;
-#ifdef HAVE_PAM_PUTENV	
+#ifdef HAVE_PAM_PUTENV
 	char *compound;
 	size_t len;
 

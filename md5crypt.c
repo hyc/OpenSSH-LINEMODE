@@ -35,7 +35,7 @@ to64(unsigned long v, int n)
 		*s++ = itoa64[v&0x3f];
 		v >>= 6;
 	}
-	
+
 	return (buf);
 }
 

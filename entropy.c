@@ -93,7 +93,7 @@ seed_rng(void)
 			    (long int)original_uid, strerror(errno));
 			_exit(1);
 		}
-		
+
 		execl(SSH_RAND_HELPER, "ssh-rand-helper", NULL);
 		fprintf(stderr, "(rand child) Couldn't exec '%s': %s\n",
 		    SSH_RAND_HELPER, strerror(errno));
