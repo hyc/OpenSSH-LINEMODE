@@ -1,3 +1,7 @@
+20020308
+ - (djm) Revert bits of Markus' OpenSSL compat patch which was accidentally
+   committed.
+
 20020307
  - (djm) OpenBSD CVS Sync
    - markus@cvs.openbsd.org 2002/03/06 00:20:54
