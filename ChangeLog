@@ -25,6 +25,8 @@
      ok markus@
  - (dtucker) [configure.ac] Include sys/stream.h in sys/ptms.h header check,
    fixes configure warning on Solaris reported by wknox at mitre.org.
+ - (dtucker) [regress/multiplex.sh] Skip test on platforms that do not
+   support FD passing since multiplex requires it.  Noted by tim@
 
 20040828
  - (dtucker) [openbsd-compat/mktemp.c] Remove superfluous Cygwin #ifdef; from
