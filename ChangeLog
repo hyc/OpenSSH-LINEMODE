@@ -11,6 +11,9 @@
    - markus@cvs.openbsd.org 2002/03/26 15:23:40
      [bufaux.c]
      do not talk about packets in bufaux
+   - markus@cvs.openbsd.org 2002/03/26 15:58:46
+     [readpass.c readpass.h sshconnect2.c]
+     client side support for PASSWD_CHANGEREQ
 
 20020325
  - (stevesk) import OpenBSD <sys/tree.h> as "openbsd-compat/tree.h"
