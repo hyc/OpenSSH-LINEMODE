@@ -1,6 +1,12 @@
 20040222
  - (dtucker) [auth-shadow.c auth.c auth.h] Move shadow account expiry test
    to auth-shadow.c, no functional change.  ok djm@
+ - (dtucker) [auth-shadow.c auth.h] Provide warnings of impending account or
+   password expiry.  ok djm@
+ - (dtucker) [auth-passwd.c] Only check password expiry once.  Prevents
+   multiple warnings if a wrong password is entered.
+ - (dtucker) [configure.ac] Apply krb5-config --libs fix to non-gssapi path
+   too.
 
 20040220
  - (djm) [openbsd-compat/setproctitle.c] fix comments; from grange@
