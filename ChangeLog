@@ -1,3 +1,6 @@
+20020514
+ - (stevesk) [README.privsep] PAM+privsep works with Solaris 8.
+
 20020513
  - (stevesk) add initial README.privsep
  - (stevesk) [configure.ac] nicer message: --with-privsep-user=user
