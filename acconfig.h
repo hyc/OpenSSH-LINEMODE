@@ -14,7 +14,6 @@
 
 /* SCO workaround */
 #undef BROKEN_SYS_TERMIO_H
-#undef HAVE_BOGUS_SYS_QUEUE_H
 
 /* Define if you have SCO protected password database */
 #undef HAVE_SCO_PROTECTED_PW
