@@ -38,6 +38,9 @@
    - markus@cvs.openbsd.org 2003/09/01 12:50:46
      [readconf.c]
      rm gssapidelegatecreds alias; never supported before
+   - markus@cvs.openbsd.org 2003/09/01 13:52:18
+     [ssh.h]
+     rm whitespace
 
 20030829
  - (bal) openbsd-compat/ clean up.  Considate headers, add in Id on our
