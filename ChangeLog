@@ -3,6 +3,9 @@
    - markus@cvs.openbsd.org 2004/12/23 17:35:48
      [session.c]
      check for NULL; from mpech
+   - markus@cvs.openbsd.org 2004/12/23 17:38:07
+     [ssh-keygen.c]
+     leak; from mpech
 
 20050118
  - (dtucker) [INSTALL Makefile.in configure.ac survey.sh.in] Implement
