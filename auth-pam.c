@@ -117,6 +117,7 @@ pthread_create(sp_pthread_t *thread, const void *attr __unused,
 {
 	pid_t pid;
 
+	sshpam_thread_status = -1;
 	switch ((pid = fork())) {
 	case -1:
 		error("fork(): %s", strerror(errno));
