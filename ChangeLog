@@ -87,6 +87,11 @@
    - markus@cvs.openbsd.org 2002/06/04 19:42:35
      [monitor.c]
      only allow enabled authentication methods; ok provos@
+   - markus@cvs.openbsd.org 2002/06/04 19:53:40
+     [monitor.c]
+     save the session id (hash) for ssh2 (it will be passed with the 
+     initial sign request) and verify that this value is used during 
+     authentication; ok provos@
 
 20020604
  - (stevesk) [channels.c] bug #164 patch from YOSHIFUJI Hideaki (changed
