@@ -534,8 +534,8 @@ AC_CHECK_FUNCS(arc4random b64_ntop bcopy bindresvport_sa \
 	getaddrinfo getcwd getgrouplist getnameinfo getopt \
 	getrlimit getrusage getttyent glob inet_aton inet_ntoa \
 	inet_ntop innetgr login_getcapbool md5_crypt memmove \
-	mkdtemp mmap openpty readpassphrase realpath \
-	rresvport_af setdtablesize setegid setenv seteuid \
+	mkdtemp mmap openpty readpassphrase realpath recvmsg \
+	rresvport_af sendmsg setdtablesize setegid setenv seteuid \
 	setlogin setproctitle setresgid setreuid setrlimit \
 	setsid setvbuf sigaction sigvec snprintf socketpair strerror \
 	strlcat strlcpy strmode strsep sysconf tcgetpgrp utimes \
