@@ -1,6 +1,8 @@
 20040701
  - (dtucker) [session.c] Call display_loginmsg again after do_pam_session.
    Ensures messages from PAM modules are displayed when privsep=no.
+ - (dtucker) [auth-pam.c] Bug #705: Make arguments match PAM specs, fixes
+   warnings on compliant platforms.  From paul.a.bolton at bt.com.  ok djm@
 
 20040630
  - (dtucker) [auth-pam.c] Check for buggy PAM modules that return a NULL
