@@ -299,9 +299,9 @@ sshpam_init(const char *user)
 		sshpam_handle = NULL;
 		return (-1);
 	}
-	debug("PAM: setting PAM_RHOST to \"%s\"", pam_rhost);
 	pam_rhost = get_remote_name_or_ip(utmp_len,
 	    options.verify_reverse_mapping);
+	debug("PAM: setting PAM_RHOST to \"%s\"", pam_rhost);
 	sshpam_err = pam_set_item(sshpam_handle, PAM_RHOST, pam_rhost);
 	if (sshpam_err != PAM_SUCCESS) {
 	pam_end(sshpam_handle, sshpam_err);
