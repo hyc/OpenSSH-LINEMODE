@@ -1,3 +1,10 @@
+20020905 
+ - (djm) OpenBSD CVS Sync
+   - stevesk@cvs.openbsd.org 2002/09/04 18:52:42
+     [servconf.c sshd.8 sshd_config.5]
+     default LoginGraceTime to 2m; 1m may be too short for slow systems.
+     ok markus@
+
 20020903
  - (djm) Patch from itojun@ for Darwin OS: test getaddrinfo, reorder libcrypt
  - (djm) Fix Redhat RPM build dependancy test
