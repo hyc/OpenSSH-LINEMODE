@@ -23,6 +23,8 @@
    - markus@cvs.openbsd.org 2003/06/17 18:14:23
      [cipher-ctr.c]
      use license from /usr/share/misc/license.template for new code
+ - (dtucker) [reconfigure.sh rekey.sh sftp-badcmds.sh]
+   Import new regression tests from OpenBSD
 
 20030614
  - (djm) Update license on fake-rfc2553.[ch]; ok itojun@
