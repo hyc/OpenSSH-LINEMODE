@@ -12,6 +12,8 @@
       packet.c serverloop.c session.c ssh.c]
      undo the .c file split, just merge the header and keep the cvs 
      history
+ - (bal) Channels.c and Channels.h -- "Merge Functions, simplify" (draged 
+   out of ssh Attic)
 
 20010606
  - OpenBSD CVS Sync
