@@ -373,6 +373,7 @@ sshpam_query(void *ctx, char **name, char **info,
 	size_t plen;
 	u_char type;
 	char *msg;
+	size_t len;
 
 	buffer_init(&buffer);
 	*name = xstrdup("");
@@ -388,16 +389,18 @@ sshpam_query(void *ctx, char **name, char **info,
 		case PAM_PROMPT_ECHO_ON:
 		case PAM_PROMPT_ECHO_OFF:
 			*num = 1;
-			**prompts = xrealloc(**prompts, plen + strlen(msg) + 1);
-			plen += sprintf(**prompts + plen, "%s", msg);
+			len = plen + strlen(msg) + 1;
+			**prompts = xrealloc(**prompts, len);
+			plen += snprintf(**prompts + plen, len, "%s", msg);
 			**echo_on = (type == PAM_PROMPT_ECHO_ON);
 			xfree(msg);
 			return (0);
 		case PAM_ERROR_MSG:
 		case PAM_TEXT_INFO:
 			/* accumulate messages */
-			**prompts = xrealloc(**prompts, plen + strlen(msg) + 1);
-			plen += sprintf(**prompts + plen, "%s", msg);
+			len = plen + strlen(msg) + 1;
+			**prompts = xrealloc(**prompts, len);
+			plen += snprintf(**prompts + plen, len, "%s", msg);
 			xfree(msg);
 			break;
 		case PAM_NEW_AUTHTOK_REQD:

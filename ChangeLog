@@ -1,3 +1,6 @@
+20030730
+ - (djm) [auth-pam.c] Don't use crappy APIs like sprintf. Thanks bal
+
 20030726
  - (dtucker) [openbsd-compat/xcrypt.c] Fix typo: DISABLED_SHADOW ->
    DISABLE_SHADOW.  Fixes HP-UX compile error.
