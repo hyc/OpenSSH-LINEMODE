@@ -14,6 +14,7 @@
    [configure.ac defines.h] modify previous SCO3 fix to not break Solaris 7
    [acconfig.h] remove unused HAVE_REGCOMP
  - (stevesk) openbsd-compat/base64.h: typo in comment
+ - (bal) Update sshd_config CVSID
  - (bal) OpenBSD CVS Sync
    - markus@cvs.openbsd.org 2002/02/15 23:54:10
      [auth-krb5.c]
