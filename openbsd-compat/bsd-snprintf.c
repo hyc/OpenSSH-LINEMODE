@@ -70,6 +70,9 @@ static void
 fmtfp(char *buffer, size_t *currlen, size_t maxlen, long double fvalue, 
       int min, int max, int flags);
 
+static void
+dopr_outch(char *buffer, size_t *currlen, size_t maxlen, char c);
+
 /*
  * dopr(): poor man's version of doprintf
  */

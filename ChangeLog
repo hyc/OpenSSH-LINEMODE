@@ -4,6 +4,8 @@
    Andrew Bartlett <abartlet@pcug.org.au>
  - (djm) Move PAM session initialisation until after fork in sshd. Patch 
    from Nalin Dahyabhai <nalin@redhat.com>
+ - (bal) Missing function prototype in bsd-snprintf.c patch by
+   Mark Miller <markm@swoon.net>
 
 20010213
  - (djm) Only test -S potential EGD sockets if they exist and are readable.
