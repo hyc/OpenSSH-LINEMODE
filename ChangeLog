@@ -1,3 +1,9 @@
+20030320
+ - (djm) OpenBSD CVS Sync
+   - markus@cvs.openbsd.org 2003/03/17 10:38:38
+     [progressmeter.c]
+     don't print \n if backgrounded; from ho@
+
 20030318
  - (tim) [configure.ac openbsd-compat/bsd-misc.c openbsd-compat/bsd-misc.h]
    add nanosleep(). testing/corrections by Darren Tucker <dtucker@zip.com.au>
