@@ -10,6 +10,9 @@
      add experimental support for verifying hos keys using DNS as described
      in draft-ietf-secsh-dns-xx.txt. more information in README.dns.
      ok markus@ and henning@
+   - markus@cvs.openbsd.org 2003/05/14 22:24:42
+     [clientloop.c session.c ssh.1]
+     allow to send a BREAK to the remote system; ok various
 
 20030514
  - (djm) Bug #117: Don't lie to PAM about username
