@@ -228,13 +228,6 @@ int do_pam_account(char *username, char *remote_user)
 
 	pam_set_conv(&conv);
 
-	debug("PAM setting rhost to \"%.200s\"",
-	    get_canonical_hostname(options.reverse_mapping_check));
-	pam_retval = pam_set_item(pamh, PAM_RHOST,
-		get_canonical_hostname(options.reverse_mapping_check));
-	if (pam_retval != PAM_SUCCESS)
-		fatal("PAM set rhost failed[%d]: %.200s", pam_retval,
-		    PAM_STRERROR(pamh, pam_retval));
 	if (remote_user) {
 		debug("PAM setting ruser to \"%.200s\"", remote_user);
 		pam_retval = pam_set_item(pamh, PAM_RUSER, remote_user);
@@ -347,6 +340,14 @@ void start_pam(const char *user)
 	if (pam_retval != PAM_SUCCESS)
 		fatal("PAM initialisation failed[%d]: %.200s",
 		    pam_retval, PAM_STRERROR(pamh, pam_retval));
+
+	debug("PAM setting rhost to \"%.200s\"",
+	    get_canonical_hostname(options.reverse_mapping_check));
+	pam_retval = pam_set_item(pamh, PAM_RHOST,
+		get_canonical_hostname(options.reverse_mapping_check));
+	if (pam_retval != PAM_SUCCESS)
+		fatal("PAM set rhost failed[%d]: %.200s", pam_retval,
+		    PAM_STRERROR(pamh, pam_retval));
 #ifdef PAM_TTY_KLUDGE
 	/*
 	 * Some PAM modules (e.g. pam_time) require a TTY to operate,
