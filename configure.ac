@@ -331,6 +331,7 @@ mips-sony-bsd|mips-sony-newsos4)
 			AC_MSG_RESULT(yes)
 			AC_DEFINE(HAVE_OSF_SIA)
 			AC_DEFINE(DISABLE_LOGIN)
+			AC_DEFINE(DISABLE_FD_PASSING)
 			LIBS="$LIBS -lsecurity -ldb -lm -laud"
 		else
 			AC_MSG_RESULT(no)
