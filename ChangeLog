@@ -16,6 +16,9 @@
    - markus@cvs.openbsd.org 2002/11/04 10:09:51
      [packet.c]
      log before send disconnect; ok djm@
+   - markus@cvs.openbsd.org 2002/11/05 19:45:20
+     [monitor.c]
+     handle overflows for size_t larger than u_int; siw@goneko.de, bug #425
 
 20021021
  - (djm) Bug #400: Kill ssh-rand-helper children on timeout, patch from 
