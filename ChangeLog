@@ -1,3 +1,7 @@
+20010220
+ - (bal) Fix mixed up params to memmove() from Jan 5th in setenv.c and
+   getcwd.c.
+
 20010219
  - (bal) Markus' blessing to rename login.[ch] -> sshlogin.[ch] and
    pty.[ch] -> sshpty.[ch]
