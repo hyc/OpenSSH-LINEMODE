@@ -19,6 +19,7 @@
 #include "base64.h"
 #include "sigact.h"
 #include "inet_ntoa.h"
+#include "inet_ntop.h"
 #include "strsep.h"
 #include "vis.h"
 #include "setproctitle.h"
