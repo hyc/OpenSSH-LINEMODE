@@ -173,7 +173,7 @@ tcgetpgrp(int fd)
 {
 	int ctty_pgrp;
 
-	if (ioctl(STDOUT_FILENO, TIOCGPGRP, &ctty_pgrp) == -1)
+	if (ioctl(fd, TIOCGPGRP, &ctty_pgrp) == -1)
 		return(-1);
 	else
 		return(ctty_pgrp);
