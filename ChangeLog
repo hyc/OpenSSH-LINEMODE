@@ -29,6 +29,9 @@
    - stevesk@cvs.openbsd.org 2001/07/23 18:21:46
      [xmalloc.c]
      no zero size xstrdup() error; ok markus@
+   - markus@cvs.openbsd.org 2001/07/25 11:59:35
+     [scard.c]
+     typo in comment
 
 20010803
  - (djm) Fix interrupted read in entropy gatherer. Spotted by markus@ on
