@@ -22,6 +22,9 @@
    - deraadt@cvs.openbsd.org 2002/07/06 01:01:26
      [ssh-keyscan.c]
      KNF, realloc fix, and clean usage
+   - stevesk@cvs.openbsd.org 2002/07/06 17:47:58
+     [ssh-keyscan.c]
+     unused variable
 
 20020705
  - (tim) [configure.ac] AIX 4.2.1 has authenticate() in libs.
