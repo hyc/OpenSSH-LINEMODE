@@ -1,3 +1,11 @@
+20050124
+ - (dtucker) OpenBSD CVS Sync
+   - otto@cvs.openbsd.org 2005/01/21 08:32:02
+     [auth-passwd.c sshd.c]
+     Warn in advance for password and account expiry; initialize loginmsg
+     buffer earlier and clear it after privsep fork. ok and help dtucker@
+     markus@
+
 20050120
  - (dtucker) OpenBSD CVS Sync
    - markus@cvs.openbsd.org 2004/12/23 17:35:48
