@@ -61,6 +61,7 @@ seed_rng(void)
 	pid_t pid;
 	int ret;
 	unsigned char buf[RANDOM_SEED_SIZE];
+	mysig_t old_sigchld;
 
 	if (RAND_status() == 1) {
 		debug3("RNG is ready, skipping seeding");
@@ -74,6 +75,7 @@ seed_rng(void)
 	if (pipe(p) == -1)
 		fatal("pipe: %s", strerror(errno));
 
+	old_sigchld = mysignal(SIGCHLD, SIG_DFL);
 	if ((pid = fork()) == -1)
 		fatal("Couldn't fork: %s", strerror(errno));
 	if (pid == 0) {
@@ -113,6 +115,7 @@ seed_rng(void)
 	if (waitpid(pid, &ret, 0) == -1)
 	       fatal("Couldn't wait for ssh-rand-helper completion: %s", 
 	           strerror(errno));
+	mysignal(SIGCHLD, old_sigchld);
 
 	/* We don't mind if the child exits upon a SIGPIPE */
 	if (!WIFEXITED(ret) && 
