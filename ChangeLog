@@ -1,5 +1,6 @@
 20040627
  - (tim) update README files.
+ - (dtucker) [mdoc2man.awk] Bug #883: correctly recognise .Pa and .Ev macros.
 
 20040626
  - (djm) OpenBSD CVS Sync
