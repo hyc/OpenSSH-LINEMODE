@@ -42,6 +42,7 @@
  - (dtucker) [acconfig.h configure.ac dns.c openbsd-compat/getrrsetbyname.c
    openbsd-compat/getrrsetbyname.h] DNS fingerprint support is now always
    compiled in but disabled in config.
+ - (dtucker) [auth.c] Check for disabled password expiry on HP-UX Trusted Mode.
 
 20031009
  - (dtucker) [sshd_config.5] UsePAM defaults to "no".  ok djm@
