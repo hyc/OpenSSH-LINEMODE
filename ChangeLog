@@ -20,6 +20,9 @@
      never keep a connection to the smartcard open.
      allows ssh-keygen -D U while the agent is running; report from 
      jakob@
+   - stevesk@cvs.openbsd.org 2001/09/17 20:38:09
+     [sftp.1 sftp.c]
+     cleanup and document -1, -s and -S; ok markus@
 
 20010917
  - (djm) x11-ssh-askpass-1.2.4 in RPM spec, revert workarounds
