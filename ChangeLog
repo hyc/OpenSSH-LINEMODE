@@ -1,3 +1,6 @@
+20030723
+ - (dtucker) [configure.ac] Back out change for bug #620.
+
 20030719
  - (dtucker) [configure.ac] Bug #620: Define BROKEN_GETADDRINFO for
    Solaris/x86.  Patch from jrhett at isite.net.

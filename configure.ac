@@ -296,10 +296,6 @@ mips-sony-bsd|mips-sony-newsos4)
 	else
 		AC_MSG_RESULT(no)
 	fi
-	sol2platform=`echo "$host"| sed -e 's/-solaris.*$//'`
-	if test "$sol2platform" -eq "i386-pc"; then
-		AC_DEFINE(BROKEN_GETADDRINFO)
-	fi
 	;;
 *-*-sunos4*)
 	CPPFLAGS="$CPPFLAGS -DSUNOS4"
