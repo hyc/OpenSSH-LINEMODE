@@ -1,3 +1,7 @@
+20040711
+ - (dtucker) [auth-pam.c] Check for zero from waitpid() too, which allows
+   the monitor to properly clean up the PAM thread (Debian bug #252676).
+
 20040709
  - (tim) [contrib/cygwin/README] add minires-devel requirement. Patch from
    vinschen AT redhat.com
