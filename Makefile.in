@@ -171,6 +171,7 @@ distprep: catman-do
 	autoreconf
 
 install: $(CONFIGFILES) $(MANPAGES) $(TARGETS) install-files host-key
+install-nokeys: $(CONFIGFILES) $(MANPAGES) $(TARGETS) install-files
 
 install-files:
 	$(srcdir)/mkinstalldirs $(DESTDIR)$(bindir)
