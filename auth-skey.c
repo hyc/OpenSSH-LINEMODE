@@ -1,6 +1,6 @@
 #include "includes.h"
 #ifdef SKEY
-RCSID("$Id$");
+RCSID("$OpenBSD: auth-skey.c,v 1.7 2000/06/20 01:39:38 markus Exp $");
 
 #include "ssh.h"
 #include "packet.h"

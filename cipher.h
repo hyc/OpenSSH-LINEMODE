@@ -11,7 +11,7 @@
  *
  */
 
-/* RCSID("$Id$"); */
+/* RCSID("$OpenBSD: cipher.h,v 1.18 2000/06/20 01:39:40 markus Exp $"); */
 
 #ifndef CIPHER_H
 #define CIPHER_H

@@ -7,7 +7,7 @@
  */
 
 #include "includes.h"
-RCSID("$Id$");
+RCSID("$OpenBSD: ssh-add.c,v 1.17 2000/06/20 01:39:44 markus Exp $");
 
 #include <openssl/rsa.h>
 #include <openssl/dsa.h>
