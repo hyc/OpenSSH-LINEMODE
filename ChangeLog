@@ -1,3 +1,6 @@
+20030211
+ - (djm) Cygwin needs libcrypt too. Patch from vinschen@redhat.com
+
 20030206
  - (djm) Teach fake-getaddrinfo to use getservbyname() when provided a 
    string service name. Suggested by markus@, review by itojun@

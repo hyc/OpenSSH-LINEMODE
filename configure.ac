@@ -86,6 +86,7 @@ case "$host" in
 	AC_DEFINE(SETPROCTITLE_PS_PADDING, '\0')
 	;;
 *-*-cygwin*)
+	check_for_libcrypt_later=1
 	LIBS="$LIBS /usr/lib/textmode.o"
 	AC_DEFINE(HAVE_CYGWIN)
 	AC_DEFINE(USE_PIPES)
