@@ -61,6 +61,7 @@ case "$host" in
 	fi
 	AC_CHECK_FUNC(authenticate, [AC_DEFINE(WITH_AIXAUTHENTICATE)])
 	AC_DEFINE(BROKEN_GETADDRINFO)
+	AC_DEFINE(BROKEN_REALPATH)
 	dnl AIX handles lastlog as part of its login message
 	AC_DEFINE(DISABLE_LASTLOG)
 	;;
