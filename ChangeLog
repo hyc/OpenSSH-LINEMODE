@@ -3,6 +3,8 @@
    openssh-3.4p1-owl-password-changing.diff
  - (stevesk) [auth-pam.c] merge rest of solar's PAM patch;
    PAM_NEW_AUTHTOK_REQD remains in #if 0 for now.
+ - (stevesk) [auth-pam.c] cast to avoid initialization type mismatch
+   warning on pam_conv struct conversation function.
 
 20020720
  - (stevesk) [ssh-keygen.c] bug #231: always init/seed_rng().

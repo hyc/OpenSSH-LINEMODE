@@ -51,7 +51,7 @@ static int do_pam_conversation(int num_msg, const struct pam_message **msg,
 
 /* module-local variables */
 static struct pam_conv conv = {
-	do_pam_conversation,
+	(int (*)())do_pam_conversation,
 	NULL
 };
 static char *__pam_msg = NULL;
