@@ -2,6 +2,6 @@
 
 #ifndef HAVE_STRMODE
 
-void strmode(register mode_t mode, register char *p);
+void strmode(int mode, char *p);
 
 #endif
