@@ -4,7 +4,10 @@
    - markus@cvs.openbsd.org 2002/04/10 08:21:47
      [auth1.c compat.c compat.h]
      strip '@' from username only for KerbV and known broken clients, bug #204
-
+   - markus@cvs.openbsd.org 2002/04/10 08:56:01
+     [version.h]
+     OpenSSH_3.2
+ - Added p1 to idenify Portable release version.
 
 20020408
  - (bal) Minor OpenSC updates.  Fix up header locations and update
