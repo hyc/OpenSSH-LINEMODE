@@ -10,6 +10,8 @@
  - (bal) Cygwin lacks setgroups() API.  Patch by Corinna Vinschen 
    <vinschen@redhat.com>
  - (bal) version.h synced, RPM specs updated for 2.9
+ - (tim) update contrib/caldera files with what Caldera is using.
+   <sps@caldera.de>
 
 20010425
  - OpenBSD CVS Sync
