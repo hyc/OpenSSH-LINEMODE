@@ -1,3 +1,6 @@
+20011023
+ - (bal) Updated version to 3.0p1 in preparing for release.
+
 20011022
  - (djm) Fix fd leak in loginrec.c (ro fd to lastlog was left open).
    Report from Michal Zalewski <lcamtuf@coredump.cx>
