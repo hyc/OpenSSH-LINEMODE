@@ -1,3 +1,10 @@
+20010413
+ - OpenBSD CVS Sync                                                           
+   - markus@cvs.openbsd.org 2001/04/12 14:29:09 
+     [ssh.c]                                                
+     show debug output during option processing, report from 
+     pekkas@netcore.fi
+
 20010412
  - OpenBSD CVS Sync                            
    - markus@cvs.openbsd.org 2001/04/10 07:46:58
