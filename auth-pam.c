@@ -249,6 +249,7 @@ int do_pam_account(char *username, char *remote_user)
 	}
 
 	pam_retval = pam_acct_mgmt(__pamh, 0);
+	debug2("pam_acct_mgmt() = %d", pam_retval);
 	switch (pam_retval) {
 		case PAM_SUCCESS:
 			/* This is what we want */
