@@ -1,3 +1,6 @@
+20020411
+ - (stevesk) [auth-sia.c] cleanup
+
 20020410
  - (stevesk) [configure.ac monitor.c] HAVE_SOCKETPAIR
  - (stevesk) [auth-sia.c] compile fix Chris Adams <cmadams@hiwaay.net>
