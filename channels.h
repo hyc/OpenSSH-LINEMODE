@@ -26,9 +26,8 @@ typedef struct Channel
   int self;		/* my own channel identifier */
   int remote_id;	/* channel identifier for remote peer */
 			/* peer can be reached over encrypted connection, via packet-sent */
-  int istate;
-  int ostate;
-  int x11;
+  int istate;		/* input from channel (state of receive half) */
+  int ostate;		/* output to channel  (state of transmit half) */
   int sock;		/* data socket, linked to this channel */
   Buffer input;		/* data read from socket, to be sent over encrypted connection */
   Buffer output;	/* data received over encrypted connection for send on socket */
