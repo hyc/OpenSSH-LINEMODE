@@ -26,6 +26,7 @@
      [sshd.c]
      lightweight do_setusercontext after chroot()
  - (bal) Updated AIX package build.  Patch by dtucker@zip.com.au
+ - (tim) [Makefile.in] fix test on installing ssh-rand-helper.8
 
 20020625
  - (stevesk) [INSTALL acconfig.h configure.ac defines.h] remove --with-rsh
