@@ -30,7 +30,6 @@
 #include "includes.h"
 RCSID("$Id$");
 
-
 #include "ssh.h"
 #include "xmalloc.h"
 #ifdef HAVE_OPENSSL
