@@ -1,3 +1,6 @@
+20010915
+ - (djm) Make do_pre_login static to avoid prototype #ifdef hell
+
 20010914
  - (bal) OpenBSD CVS Sync
    - markus@cvs.openbsd.org 2001/09/13
