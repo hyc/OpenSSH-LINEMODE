@@ -341,6 +341,14 @@ mips-sony-bsd|mips-sony-newsos4)
 	LIBS="$LIBS -lgen -lrsc -lshare -luex -lacm"
 	MANTYPE=cat
 	;;
+*-*-unicosmp*)
+	AC_DEFINE(WITH_ABBREV_NO_TTY)
+	AC_DEFINE(USE_PIPES)
+	AC_DEFINE(DISABLE_FD_PASSING)
+	LDFLAGS="$LDFLAGS"
+	LIBS="$LIBS -lgen -lacid"
+	MANTYPE=cat
+	;;
 *-*-unicos*)
 	AC_DEFINE(USE_PIPES)
 	AC_DEFINE(DISABLE_FD_PASSING)
