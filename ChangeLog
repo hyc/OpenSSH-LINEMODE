@@ -25,6 +25,7 @@
      (copied from OpenBSD an re-applied portable changes)
  - (dtucker) [openbsd-compat/bsd-misc.c openbsd-compat/bsd-misc.h]
    Add a tcgetpgrp function.
+ - (dtucker) [Makefile.in moduli.c moduli.h] Add new files and to Makefile.
 
 20030730
  - (djm) [auth-pam.c] Don't use crappy APIs like sprintf. Thanks bal
