@@ -401,10 +401,12 @@ login_set_addr(struct logininfo *li, const struct sockaddr *sa,
 int
 login_write (struct logininfo *li)
 {
+#ifndef HAVE_CYGWIN
 	if ((int)geteuid() != 0) {
 	  log("Attempt to write login records by non-root user (aborting)");
 	  return 1;
 	}
+#endif
 
 	/* set the timestamp */
 	login_set_current_time(li);
