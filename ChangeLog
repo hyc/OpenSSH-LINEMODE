@@ -1,3 +1,9 @@
+20010329
+ - OpenBSD CVS Sync
+   - stevesk@cvs.openbsd.org 2001/03/26 15:47:59
+     [ssh.1]
+     document more defaults; misc. cleanup.  ok markus@
+
 20010328
  - (djm) Reorder tests and library inclusion for Krb4/AFS to try to 
    resolve linking conflicts with libcrypto. Report and suggested fix 
