@@ -1,3 +1,11 @@
+20030903
+ - (djm) OpenBSD CVS Sync
+   - markus@cvs.openbsd.org 2003/08/26 09:58:43
+     [auth-passwd.c auth.c auth.h auth1.c auth2-none.c auth2-passwd.c]
+     [auth2.c monitor.c]
+     fix passwd auth for 'username leaks via timing'; with djm@, original 
+     patches from solar
+
 20030902
  - (djm) OpenBSD CVS Sync
    - deraadt@cvs.openbsd.org 2003/08/24 17:36:51
