@@ -4,6 +4,9 @@
    - provos@cvs.openbsd.org 2001/03/28 21:59:41
      [kex.c kex.h sshconnect2.c sshd.c]
      forgot to include min and max params in hash, okay markus@
+   - provos@cvs.openbsd.org 2001/03/28 22:04:57
+     [dh.c]
+     more sanity checking on primes file
 
 20010329
  - OpenBSD CVS Sync
