@@ -9,6 +9,9 @@
    - markus@cvs.openbsd.org 2003/04/12 10:13:57
      [cipher.c]
      hide cipher details; ok djm@
+   - markus@cvs.openbsd.org 2003/04/12 10:15:36
+     [misc.c]
+     debug->debug2
 
 20030512
  - (djm) Redhat spec: Don't install profile.d scripts when not 
