@@ -111,7 +111,7 @@ swap_bytes(const unsigned char *src, unsigned char *dst_, int n)
 
 void (*cipher_attack_detected) (const char *fmt,...) = fatal;
 
-static inline void
+static INLINE void
 detect_cbc_attack(const unsigned char *src,
 		  unsigned int len)
 {
