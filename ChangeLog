@@ -4,6 +4,9 @@
    - markus@cvs.openbsd.org 2004/11/25 22:22:14
      [sftp-client.c sftp.c]
      leak; from mpech
+   - jmc@cvs.openbsd.org 2004/11/29 00:05:17
+     [sftp.1]
+     missing full stop;
 
 20041203
  - (dtucker) OpenBSD CVS Sync
