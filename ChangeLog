@@ -75,6 +75,8 @@
      3) print rate instead of progress bar, no more stars
      4) scale output to tty width
      based on a patch from Niels; ok fries@ lebel@ fgs@ millert@
+ - (bal) [msg.c msg.h scp.c ssh-keysign.c sshconnect2.c]  Resync CVS IDs since 
+   we already did s/msg_send/ssh_msg_send/
 
 20021205
  - (djm) PERL-free fixpaths from stuge-openssh-unix-dev@cdy.org
