@@ -96,6 +96,9 @@
      [sftp.1 sftp.c]
      Add "-P" option to directly connect to a local sftp-server. Should be 
      useful for regression testing; ok markus@
+   - djm@cvs.openbsd.org 2002/02/05 00:00:46
+     [sftp.1 sftp.c sftp-client.c sftp-client.h sftp-int.c]
+     Add "-B" option to specify copy buffer length (default 32k); ok markus@
 
 20020130
  - (djm) Delay PRNG seeding until we need it in ssh-keygen, from markus@
