@@ -1,3 +1,7 @@
+20010812
+ - (djm) Fix detection of long long int support. Based on patch from 
+   Michael Stone <mstone@cs.loyola.edu>. ok stevesk, tim
+
 20010808
  - (bal) Minor correction to inet_ntop.h.  _BSD_RRESVPORT_H should be
    _BSD_INET_NTOP_H.  Pointed out by Mark Miller <markm@swoon.net> 
