@@ -17,6 +17,9 @@
    - deraadt@cvs.openbsd.org 2002/06/23 09:39:55
      [ssh-keygen.c]
      u_int stuff
+   - deraadt@cvs.openbsd.org 2002/06/23 09:46:51
+     [bufaux.c servconf.c]
+     minor KNF.  things the fingers do while you read
 
 20020623
  - (stevesk) [configure.ac] bug #255 LOGIN_NEEDS_UTMPX for AIX.
