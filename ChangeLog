@@ -1,3 +1,8 @@
+20010328
+ - (djm) Reorder tests and library inclusion for Krb4/AFS to try to 
+   resolve linking conflicts with libcrypto. Report and suggested fix 
+   from Holger Trapp <Holger.Trapp@Informatik.TU-Chemnitz.DE>
+
 20010327
  - Attempt sync with sshlogin.c w/ OpenBSD (mainly CVS ID)
  - Fix pointer issues in waitpid() and wait() replaces.  Patch by Lutz 
