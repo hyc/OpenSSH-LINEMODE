@@ -268,6 +268,8 @@ void do_pam_session(char *username, const char *ttyname)
 {
 	int pam_retval;
 
+	do_pam_set_conv(&conv);
+
 	if (ttyname != NULL) {
 		debug("PAM setting tty to \"%.200s\"", ttyname);
 		pam_retval = pam_set_item(__pamh, PAM_TTY, ttyname);
@@ -288,6 +290,8 @@ void do_pam_session(char *username, const char *ttyname)
 void do_pam_setcred(void)
 {
 	int pam_retval;
+
+	do_pam_set_conv(&conv);
 
 	debug("PAM establishing creds");
 	pam_retval = pam_setcred(__pamh, PAM_ESTABLISH_CRED);
@@ -317,6 +321,8 @@ int is_pam_password_change_required(void)
 void do_pam_chauthtok(void)
 {
 	int pam_retval;
+
+	do_pam_set_conv(&conv);
 
 	if (password_change_required) {
 		pamstate = OTHER;
