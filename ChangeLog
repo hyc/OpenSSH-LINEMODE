@@ -1,3 +1,7 @@
+20041019
+ - (dtucker) [uidswap.c] Don't test dropping of gids for the root user or
+   on Cygwin.  Cygwin parts from vinschen at redhat com; ok djm@
+
 20041016
  - (djm) [auth-pam.c] snprintf->strl*, fix server message length calculations;
    ok dtucker@
