@@ -1,4 +1,8 @@
 20031117
+ - (djm) Fix early exit for root auth success when UsePAM=yes and 
+   PermitRootLogin=no
+
+20031117
  - (djm) OpenBSD CVS Sync
    - djm@cvs.openbsd.org 2003/11/03 09:03:37
      [auth-chall.c]
