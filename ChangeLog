@@ -10,6 +10,9 @@
    - markus@cvs.openbsd.org 2001/07/22 22:04:19
      [readconf.c ssh.1]
      enable challenge-response auth by default; ok millert@
+   - markus@cvs.openbsd.org 2001/07/22 22:24:16
+     [sshd.8]
+     Xr login.conf
 
 20010803
  - (djm) Fix interrupted read in entropy gatherer. Spotted by markus@ on
