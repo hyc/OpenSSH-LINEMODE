@@ -6,6 +6,9 @@
    - dtucker@cvs.openbsd.org 2004/03/08 10:17:12
      [regress/login-timeout.sh]
      Missing OBJ, from tim@.  ok markus@ (Already fixed, ID sync only)
+   - djm@cvs.openbsd.org 2004/03/30 12:41:56
+     [sftp-client.c]
+     sync comment with reality
 
 20040418
  - (dtucker) [auth-pam.c] Log username and source host for failed PAM
