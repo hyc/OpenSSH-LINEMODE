@@ -4,6 +4,7 @@
    Based partially on patch supplied by alex.kiernan at thus.net.  ok djm@
  - (tim) [configure.ac] Move libgen tests to before libwrap to unbreak
    UnixWare 2.03 using --with-tcp-wrappers.
+ - (tim) [configure.ac] Prefer setuid/setgid on UnixWare and Open Server.
 
 20030910
  - (dtucker) [configure.ac] Bug #636: Add support for Cray's new X1 machine.
