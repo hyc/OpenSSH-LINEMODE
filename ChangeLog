@@ -12,6 +12,9 @@
    - markus@cvs.openbsd.org 2001/06/16 08:58:34
      [misc.c]
      copy pw_expire and pw_change, too.
+   - markus@cvs.openbsd.org 2001/06/19 12:34:09
+     [session.c]
+     cleanup forced command handling, from dwd@bell-labs.com
 
 20010615
  - (stevesk) don't set SA_RESTART and set SIGCHLD to SIG_DFL
