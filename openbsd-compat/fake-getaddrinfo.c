@@ -36,7 +36,8 @@ freeaddrinfo(struct addrinfo *ai)
 {
 	struct addrinfo *next;
 
-	for(;ai != NULL; next = ai->ai_next) {
+	for(; ai != NULL;) {
+		next = ai->ai_next;
 		free(ai);
 		ai = next;
 	}
