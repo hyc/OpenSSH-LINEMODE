@@ -1,3 +1,7 @@
+20030131
+ - (bal) AIX 4.2.1 lacks nanosleep().  Patch to use nsleep() provided by
+   dtucker@zip.com.au
+
 20030130
  - (djm) Unbreak root password auth. Spotted by dtucker@zip.com.au
 
