@@ -28,6 +28,7 @@ RCSID("$Id$");
 
 #include "compress.h"
 #include "deattack.h"
+#include "channels.h"
 
 /*
  * This variable contains the file descriptors used for communicating with

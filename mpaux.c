@@ -31,9 +31,9 @@ RCSID("$Id$");
 
 void
 compute_session_id(unsigned char session_id[16],
-		   unsigned char cookie[8],
-		   BIGNUM* host_key_n,
-		   BIGNUM* session_key_n)
+    unsigned char cookie[8],
+    BIGNUM* host_key_n,
+    BIGNUM* session_key_n)
 {
 	unsigned int host_key_bytes = BN_num_bytes(host_key_n);
 	unsigned int session_key_bytes = BN_num_bytes(session_key_n);

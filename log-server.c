@@ -137,9 +137,11 @@ do_log(LogLevel level, const char *fmt, va_list args)
 	} else {
 		vsnprintf(msgbuf, sizeof(msgbuf), fmt, args);
 	}
-	if (log_on_stderr)
+	if (log_on_stderr) {
 		fprintf(stderr, "%s\n", msgbuf);
-	openlog(__progname, LOG_PID, log_facility);
-	syslog(pri, "%.500s", msgbuf);
-	closelog();
+	} else {
+		openlog(__progname, LOG_PID, log_facility);
+		syslog(pri, "%.500s", msgbuf);
+		closelog();
+	}
 }

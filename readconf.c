@@ -19,6 +19,7 @@ RCSID("$Id$");
 #include "ssh.h"
 #include "cipher.h"
 #include "readconf.h"
+#include "match.h"
 #include "xmalloc.h"
 
 /* Format of the configuration file:

@@ -83,4 +83,6 @@ void    chan_write_failed(Channel * c);
 void    chan_obuf_empty(Channel * c);
 
 void    chan_init_iostates(Channel * c);
+
+void	chan_delete_if_full_closed(Channel *c);
 #endif

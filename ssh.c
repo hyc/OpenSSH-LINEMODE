@@ -20,6 +20,7 @@ RCSID("$Id$");
 #include "authfd.h"
 #include "readconf.h"
 #include "uidswap.h"
+#include "channels.h"
 
 #ifdef HAVE___PROGNAME
 extern char *__progname;
