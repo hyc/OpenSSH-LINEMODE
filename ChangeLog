@@ -1,5 +1,6 @@
 20040828
- - (dtucker) Remove superfluous Cygwin #ifdef; from vinschen at redhat.com.
+ - (dtucker) [openbsd-compat/mktemp.c] Remove superfluous Cygwin #ifdef; from
+   vinschen at redhat.com.
 
 20040823
  - (djm) [ssh-rand-helper.c] Typo. Found by 
