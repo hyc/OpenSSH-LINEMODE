@@ -1,4 +1,6 @@
 20020620
+ - (bal) Fixed AIX environment handling, use setpcred() instead of existing
+   code.  (Bugzilla Bug 261)
  - (bal) OpenBSD CVS Sync
    - todd@cvs.openbsd.org 2002/06/14 21:35:00
      [monitor_wrap.c]
