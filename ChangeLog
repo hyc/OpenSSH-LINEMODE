@@ -65,6 +65,9 @@
    - markus@cvs.openbsd.org 2001/12/05 15:04:48
      [version.h]
      post 3.0.2
+   - markus@cvs.openbsd.org 2001/12/05 16:54:51
+     [compat.c match.c match.h]
+     make theo and djm happy: bye bye regexp
 
 20011126
  - (tim) [contrib/cygwin/README, openbsd-compat/bsd-cygwin_util.c,
