@@ -150,6 +150,7 @@ main() { if (NSVersionOfRunTimeLibrary("System") >= (60 << 16))
 	AC_DEFINE(SETEUID_BREAKS_SETUID)
 	AC_DEFINE(BROKEN_SETREUID)
 	AC_DEFINE(BROKEN_SETREGID)
+	AC_DEFINE_UNQUOTED(BIND_8_COMPAT, 1)
 	;;
 *-*-hpux10.26)
 	if test -z "$GCC"; then
