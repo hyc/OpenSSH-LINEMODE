@@ -21,6 +21,9 @@
    - dtucker@cvs.openbsd.org 2004/02/05 05:37:17
      [monitor.c sshd.c]
      Pass SIGALRM through to privsep child if LoginGraceTime expires. ok markus@
+   - markus@cvs.openbsd.org 2004/02/05 15:33:33
+     [progressmeter.c]
+     fix ETA for > 4GB; bugzilla #791; ok henning@ deraadt@
 
 20040129
  - (dtucker) OpenBSD CVS Sync regress/
