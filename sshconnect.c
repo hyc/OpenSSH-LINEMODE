@@ -36,6 +36,7 @@ RCSID("$Id$");
 #include "uidswap.h"
 #include "compat.h"
 #include "readconf.h"
+#include "fingerprint.h"
 
 /* Session id for the current session. */
 unsigned char session_id[16];
