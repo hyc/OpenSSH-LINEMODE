@@ -111,7 +111,6 @@ new_dh_group1()
 	seed_rng();
 	if (DH_generate_key(dh) == 0)
 		fatal("DH_generate_key");
-	seed_rng();
 
 	return dh;
 }

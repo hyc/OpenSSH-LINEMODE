@@ -96,8 +96,6 @@ rsa_generate_key(RSA *prv, RSA *pub, unsigned int bits)
 	if (key == NULL)
 		fatal("rsa_generate_key: key generation failed.");
 
-	seed_rng();
-
 	/* Copy public key parameters */
 	pub->n = BN_new();
 	BN_copy(pub->n, key->n);
