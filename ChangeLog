@@ -4,6 +4,9 @@
    - markus@cvs.openbsd.org 2002/06/23 21:34:07
      [channels.c]
      tcode is u_int
+   - markus@cvs.openbsd.org 2002/06/24 13:12:23
+     [ssh-agent.1]
+     the socket name contains ssh-agent's ppid; via mpech@ from form@
 
 20020625
  - (stevesk) [INSTALL acconfig.h configure.ac defines.h] remove --with-rsh
