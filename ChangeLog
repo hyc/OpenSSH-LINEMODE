@@ -11,6 +11,8 @@
    (default: off), implies KbdInteractiveAuthentication. Suggestion from 
    markus@
  - (djm) Include crypt.h if available in auth-passwd.c
+ - tim@mindrot.org 2001/04/25 21:38:01 [configure.in]
+   man page detection fixes for SCO
 
 20010424
  - OpenBSD CVS Sync
