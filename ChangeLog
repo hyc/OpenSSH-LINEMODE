@@ -4,6 +4,8 @@
    from Holger Trapp <Holger.Trapp@Informatik.TU-Chemnitz.DE>
  - (djm) Work around Solaris' broken struct dirent. Diagnosis and suggested
    fix from Philippe Levan <levan@epix.net>
+ - (djm) Rework krbIV tests to get us closer to building on Redhat. Still
+   doesn't work because of conflicts between krbIV's and OpenSSL's des.h
 
 20010327
  - Attempt sync with sshlogin.c w/ OpenBSD (mainly CVS ID)
