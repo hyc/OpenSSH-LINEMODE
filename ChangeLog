@@ -1,6 +1,7 @@
 20020628
  - (stevesk) [sshd_config] PAMAuthenticationViaKbdInt no; commented
    options should contain default value.  from solar.
+ - (bal) Cygwin uid0 fix by vinschen@redhat.com
 
 200206027
  - OpenBSD CVS Sync
