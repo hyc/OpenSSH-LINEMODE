@@ -1,5 +1,6 @@
 20040128
  - (dtucker) [regress/README.regress] Add tcpwrappers issue, noted by tim@
+ - (dtucker) [moduli] Import new moduli file from OpenBSD.
 
 20040127
  - (djm) OpenBSD CVS Sync
