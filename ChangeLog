@@ -2,6 +2,7 @@
  - (dtucker) [INSTALL] Reference README.privsep for the privilege separation
    requirements.  Pointed out by Bengt Svensson.
  - (dtucker) [INSTALL] Put the s/key text and URL back together.
+ - (dtucker) [INSTALL] Fix s/key text too.
 
 20050411
  - (tim) [configure.ac] UnixWare needs PASSWD_NEEDS_USERNAME
