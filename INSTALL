@@ -91,6 +91,10 @@ make install
 This will install the binaries in /opt/{bin,lib,sbin}, but will place the
 configuration files in /etc/ssh.
 
+If you are using Privilege Separation (which is enabled by default)
+then you will also need to create the user, group and directory used by
+sshd for privilege separation.  See README.privsep for details.
+
 If you are using PAM, you may need to manually install a PAM control
 file as "/etc/pam.d/sshd" (or wherever your system prefers to keep
 them).  Note that the service name used to start PAM is __progname,
