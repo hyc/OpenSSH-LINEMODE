@@ -3,7 +3,7 @@
 
 You will need working installations of Zlib and OpenSSL.
 
-Zlib 1.1.4 or greater:
+Zlib 1.1.4 or 1.2.1.2 or greater (ealier 1.2.x versions have problems):
 http://www.gzip.org/zlib/
 
 OpenSSL 0.9.6 or greater:
