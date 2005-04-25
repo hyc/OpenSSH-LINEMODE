@@ -4,6 +4,9 @@
    ncsa.uiuc.edu; ok tim@
  - (dtucker) [regress/multiplex.sh] Remove cleanup call since test-exec.sh
    will clean up anyway.  From tim@
+ - (dtucker) [regress/multiplex.sh] Put control socket in /tmp so running
+   "make tests" works even if you'r building on a filesystem that doesn't
+   support sockets.  From deengert at anl.gov, ok djm@
 
 20050424
  - (dtucker) [INSTALL configure.ac] Make zlib version check test for 1.1.4 or
