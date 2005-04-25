@@ -2,6 +2,8 @@
  - (dtucker) [regress/multiplex.sh] Use "kill -0 $pid" to check for the
    existence of a process since it's more portable.  Found by jbasney at
    ncsa.uiuc.edu; ok tim@
+ - (dtucker) [regress/multiplex.sh] Remove cleanup call since test-exec.sh
+   will clean up anyway.  From tim@
 
 20050424
  - (dtucker) [INSTALL configure.ac] Make zlib version check test for 1.1.4 or
