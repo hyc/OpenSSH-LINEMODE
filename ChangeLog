@@ -4,6 +4,10 @@
  - (djm) OpenBSD CVS Sync
    - otto@cvs.openbsd.org 2005/04/05 13:45:31
      [ssh-keygen.c]
+   - djm@cvs.openbsd.org 2005/04/06 09:43:59
+     [sshd.c]
+     avoid harmless logspam by not performing setsockopt() on non-socket;
+     ok markus@
 
 20050524
  - (djm) [contrib/caldera/openssh.spec contrib/redhat/openssh.spec]
