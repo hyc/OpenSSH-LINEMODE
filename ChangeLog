@@ -95,6 +95,8 @@
              err(1,"read");
 
      ok deraadt@, cloder@, djm@
+ - (dtucker) [regress/reexec.sh] Add ${EXEEXT} so this test also works on
+   Cygwin.
 
 20050524
  - (djm) [contrib/caldera/openssh.spec contrib/redhat/openssh.spec]
