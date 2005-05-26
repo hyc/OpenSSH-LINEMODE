@@ -1,3 +1,7 @@
+20050525
+ - (djm) [mpaux.c mpaux.h Makefile.in] Remove old mpaux.[ch] code, it has not 
+   been used for a while
+
 20050524
  - (djm) [contrib/caldera/openssh.spec contrib/redhat/openssh.spec]
          [contrib/suse/openssh.spec] Update spec file versions to 4.1p1
