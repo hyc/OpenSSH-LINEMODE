@@ -62,6 +62,9 @@
    - djm@cvs.openbsd.org 2005/05/19 02:40:52
      [sshd_config]
      whitespace nit, from grunk AT pestilenz.org
+   - djm@cvs.openbsd.org 2005/05/19 02:42:26
+     [includes.h]
+     fix cast, from grunk AT pestilenz.org
 
 20050524
  - (djm) [contrib/caldera/openssh.spec contrib/redhat/openssh.spec]
