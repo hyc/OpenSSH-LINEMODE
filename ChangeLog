@@ -16,6 +16,10 @@
      [misc.c misc.h tildexpand.c Makefile.in]
      replace tilde_expand_filename with a simpler implementation, ahead of
      more whacking; ok deraadt@
+   - jmc@cvs.openbsd.org 2005/04/14 12:30:30
+     [ssh.1]
+     arg to -b is an address, not if_name;
+     ok markus@
 
 20050524
  - (djm) [contrib/caldera/openssh.spec contrib/redhat/openssh.spec]
