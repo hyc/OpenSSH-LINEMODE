@@ -97,6 +97,10 @@
      ok deraadt@, cloder@, djm@
  - (dtucker) [regress/reexec.sh] Add ${EXEEXT} so this test also works on
    Cygwin.
+ - (dtucker) [auth-pam.c] Bug #1033: Fix warnings building with PAM on Linux:
+  warning: dereferencing type-punned pointer will break strict-aliasing rules
+  warning: passing arg 3 of `pam_get_item' from incompatible pointer type
+  The type-punned pointer fix is based on a patch from SuSE's rpm.  ok djm@
 
 20050524
  - (djm) [contrib/caldera/openssh.spec contrib/redhat/openssh.spec]
