@@ -152,6 +152,10 @@ int openpty(int *, int *, char *, struct termios *, struct winsize *);
 int snprintf(char *, size_t, const char *, ...);
 #endif 
 
+#ifndef HAVE_STRTONUM
+long long strtonum(const char *, long long, long long, const char **);
+#endif
+
 #ifndef HAVE_VSNPRINTF
 int vsnprintf(char *, size_t, const char *, va_list);
 #endif
