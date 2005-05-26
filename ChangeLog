@@ -8,6 +8,10 @@
      [sshd.c]
      avoid harmless logspam by not performing setsockopt() on non-socket;
      ok markus@
+   - dtucker@cvs.openbsd.org 2005/04/06 12:26:06
+     [ssh.c]
+     Fix debug call for port forwards; patch from pete at seebeyond.com,
+     ok djm@ (ID sync only - change already in portable)
 
 20050524
  - (djm) [contrib/caldera/openssh.spec contrib/redhat/openssh.spec]
