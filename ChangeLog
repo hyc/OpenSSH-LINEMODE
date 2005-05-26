@@ -9,6 +9,7 @@
  - (dtucker) [openbsd-compat/bsd-cygwin_util.c] Ensure sufficient memory
    allocation when retrieving core Windows environment.  Add CYGWIN variable
    to propagated variables.  Patch from vinschen at redhat.com, ok djm@
+ - Release 4.1p1
 
 20050524
  - (djm) [openbsd-compat/readpassphrase.c] bz #950: Retry tcsetattr to ensure
