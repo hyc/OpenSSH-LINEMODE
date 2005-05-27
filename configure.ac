@@ -278,7 +278,7 @@ main() { if (NSVersionOfRunTimeLibrary("System") >= (60 << 16))
 	esac
 	;;
 mips-sony-bsd|mips-sony-newsos4)
-	AC_DEFINE(HAVE_NEWS4)
+	AC_DEFINE(NEED_SETPRGP, [], [Need setpgrp to acquire controlling tty])
 	SONY=1
 	;;
 *-*-netbsd*)
@@ -477,6 +477,12 @@ mips-sony-bsd|mips-sony-newsos4)
 	AC_DEFINE(MISSING_HOWMANY)
 	AC_DEFINE(MISSING_FD_MASK)
 	;;
+
+*-*-ultrix*)
+	AC_DEFINE(BROKEN_GETGROUPS, [], [getgroups(0,NULL) will return -1])
+	AC_DEFINE(BROKEN_MMAP, [], [Ultrix mmap can't map files])
+	AC_DEFINE(NEED_SETPRGP, [], [Need setpgrp to acquire controlling tty])
+	AC_CHECK_HEADERS(sys/syslog.h)
 esac
 
 # Allow user to specify flags
@@ -929,8 +935,8 @@ AC_CHECK_FUNCS(\
 	mkdtemp mmap ngetaddrinfo nsleep ogetaddrinfo openlog_r openpty \
 	pstat prctl readpassphrase realpath recvmsg rresvport_af sendmsg \
 	setdtablesize setegid setenv seteuid setgroups setlogin setpcred \
-	setproctitle setregid setreuid setrlimit \
-	setsid setvbuf sigaction sigvec snprintf socketpair strerror \
+	setproctitle setregid setreuid setrlimit setsid setvbuf \
+	sigaction sigvec snprintf socketpair strdup strerror \
 	strlcat strlcpy strmode strnvis strtonum strtoul sysconf tcgetpgrp \
 	truncate unsetenv updwtmpx utimes vhangup vsnprintf waitpid \
 )

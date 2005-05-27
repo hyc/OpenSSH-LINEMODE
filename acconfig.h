@@ -119,9 +119,6 @@
 /* Define if you are on NeXT */
 #undef HAVE_NEXT
 
-/* Define if you are on NEWS-OS */
-#undef HAVE_NEWS4
-
 /* Define if you want to enable PAM support */
 #undef USE_PAM
 
