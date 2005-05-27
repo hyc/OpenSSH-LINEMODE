@@ -54,7 +54,11 @@ enum
 # ifdef PATH_MAX
 #  define MAXPATHLEN PATH_MAX
 # else /* PATH_MAX */
-#  define MAXPATHLEN 64 /* Should be safe */
+#  define MAXPATHLEN 64
+/* realpath uses a fixed buffer of size MAXPATHLEN, so force use of ours */
+#  ifndef BROKEN_REALPATH
+#   define BROKEN_REALPATH 1
+#  endif /* BROKEN_REALPATH */
 # endif /* PATH_MAX */
 #endif /* MAXPATHLEN */
 
