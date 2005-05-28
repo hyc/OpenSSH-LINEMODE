@@ -589,6 +589,7 @@ AC_CHECK_HEADERS( \
 	time.h \
 	tmpdir.h \
 	ttyent.h \
+	unistd.h \
 	usersec.h \
 	util.h \
 	utime.h \
