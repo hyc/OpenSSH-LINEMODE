@@ -593,7 +593,7 @@ AC_CHECK_HEADERS( \
 	utime.h \
 	utmp.h \
 	utmpx.h \
-	vis.h\
+	vis.h \
 )
 
 # sys/ptms.h requires sys/stream.h to be included first on Solaris
