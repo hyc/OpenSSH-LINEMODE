@@ -7,6 +7,9 @@
    its presence before doing AC_FUNC_GETPGRP.
  - (dtucker) [configure.ac] Merge HP-UX blocks into a common block with minor
    version-specific variations as required.
+ - (dtucker) [openbsd-compat/port-aix.h] Use the HAVE_DECL_* definitions as
+   per the autoconf man page.  Configure should always define them but it
+   doesn't hurt to check.
 
 20050527
  - (djm) [defines.h] Use our realpath if we have to define PATH_MAX, spotted by
