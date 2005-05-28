@@ -1,3 +1,7 @@
+20050528
+ - (dtucker) [configure.ac] For AC_CHECK_HEADERS() and AC_CHECK_FUNCS() have
+   one entry per line to make it easier to merge changes.  ok djm@
+
 20050527
  - (djm) [defines.h] Use our realpath if we have to define PATH_MAX, spotted by
    David Leach; ok dtucker@
