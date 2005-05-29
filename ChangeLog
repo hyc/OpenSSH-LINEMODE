@@ -4,6 +4,8 @@
    While at it, initialize the other arguments to auth functions in case they
    ever acquire this behaviour.
  - (dtucker) [openbsd-compat/port-aix.c] Whitespace cleanups while there.
+ - (dtucker) [openbsd-compat/port-aix.c] Minor correction to debug message,
+   spotted by tim@.
 
 20050528
  - (dtucker) [configure.ac] For AC_CHECK_HEADERS() and AC_CHECK_FUNCS() have
