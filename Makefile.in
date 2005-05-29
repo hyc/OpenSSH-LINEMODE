@@ -190,7 +190,7 @@ ssh_prng_cmds.out:	ssh_prng_cmds
 		$(PERL) $(srcdir)/fixprogs ssh_prng_cmds $(ENT); \
 	fi
 
-# fake rule to stop make trying to compile moduli.o into a binary "modulo"
+# fake rule to stop make trying to compile moduli.o into a binary "moduli.o"
 moduli:
 	echo
 
