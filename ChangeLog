@@ -1,6 +1,7 @@
 20050531
  - (dtucker) [contrib/aix/pam.conf] Correct comments.  From davidl at
    vintela.com.
+ - (dtucker) [mdoc2man.awk] Teach it to understand .Ox.
 
 20050530
  - (dtucker) [README] Link to new release notes.  Beter late than never...
