@@ -10,6 +10,9 @@
      must be a target directory), kill the spawned ssh child before exiting.
      This stops it trying to authenticate and spewing lots of output.
      deraadt@ ok
+   - dtucker@cvs.openbsd.org 2005/05/26 09:08:12
+     [ssh-keygen.c]
+     uint32_t -> u_int32_t for consistency; ok djm@
 
 20050531
  - (dtucker) [contrib/aix/pam.conf] Correct comments.  From davidl at
