@@ -1038,6 +1038,7 @@ AC_CHECK_FUNCS( \
 	strmode \
 	strnvis \
 	strtonum \
+	strtoll \
 	strtoul \
 	sysconf \
 	tcgetpgrp \
