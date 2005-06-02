@@ -371,6 +371,11 @@ mips-sony-bsd|mips-sony-newsos4)
 	AC_DEFINE(BROKEN_SETREUID)
 	AC_DEFINE(BROKEN_SETREGID)
 	AC_DEFINE(PASSWD_NEEDS_USERNAME, 1, [must supply username to passwd])
+	case "$host" in
+	*-*-sysv5SCO_SV*)	# SCO OpenServer 6.x
+		TEST_SHELL=/u95/bin/sh
+		;;
+	esac
 	;;
 *-*-sysv*)
 	;;
