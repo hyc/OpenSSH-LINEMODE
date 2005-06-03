@@ -1,3 +1,9 @@
+20050603
+ - (dtucker) [configure.ac] Only try gcc -std=gnu99 if LLONG_MAX isn't
+   defined, and check that it helps before keeping it in CFLAGS.  Some old
+   gcc's don't set an error code when encountering an unknown value in -std.
+   Found and tested by tim@.
+
 20050602
  - (tim) [configure.ac] Some platforms need sys/types.h for arpa/nameser.h.
    Take AC_CHECK_HEADERS test out of ultrix section. It caused other platforms
