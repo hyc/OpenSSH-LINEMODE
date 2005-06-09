@@ -168,6 +168,9 @@ char *shadow_pw(struct passwd *pw);
 /* rfc2553 socket API replacements */
 #include "fake-rfc2553.h"
 
+/* compatibility with old or broken OpenSSL versions */
+#include "openssl-compat.h"
+
 /* Routines for a single OS platform */
 #include "bsd-cray.h"
 #include "bsd-cygwin_util.h"
