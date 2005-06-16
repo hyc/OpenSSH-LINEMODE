@@ -15,6 +15,10 @@
      [clientloop.c readconf.c readconf.h ssh.c ssh_config.5]
      add ControlMaster=auto/autoask options to support opportunistic
      multiplexing; tested avsm@ and jakob@, ok markus@
+   - dtucker@cvs.openbsd.org 2005/06/09 13:43:49
+     [cipher.c]
+     Correctly initialize end of array sentinel; ok djm@
+     (Id sync only, change already in portable)
 
 20050609
  - (dtucker) [cipher.c openbsd-compat/Makefile.in
