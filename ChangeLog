@@ -1,3 +1,10 @@
+20050616
+ - (djm) OpenBSD CVS Sync
+   - jaredy@cvs.openbsd.org 2005/06/07 13:25:23
+     [progressmeter.c]
+     catch SIGWINCH and resize progress meter accordingly; ok markus dtucker
+
+
 20050609
  - (dtucker) [cipher.c openbsd-compat/Makefile.in
    openbsd-compat/openbsd-compat.h openbsd-compat/openssl-compat.{c,h}]
