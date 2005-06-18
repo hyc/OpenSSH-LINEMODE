@@ -1,3 +1,10 @@
+20050618
+ - (djm) OpenBSD CVS Sync
+   - djm@cvs.openbsd.org 2005/05/20 12:57:01;
+   [auth1.c] split protocol 1 auth methods into separate functions, makes 
+   authloop much more readable; fixes and ok markus@ (portable ok & 
+   polish dtucker@)
+
 20050617
  - (djm) OpenBSD CVS Sync
    - djm@cvs.openbsd.org 2005/06/16 03:38:36
