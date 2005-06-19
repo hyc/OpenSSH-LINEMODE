@@ -6,6 +6,8 @@
    polish dtucker@)
    - djm@cvs.openbsd.org 2005/06/17 02:44:33
    [auth1.c] make this -Wsign-compare clean; ok avsm@ markus@
+ - (djm) [loginrec.c ssh-rand-helper.c] Fix -Wsign-compare for portable,
+   tested and fixes tim@
 
 20050617
  - (djm) OpenBSD CVS Sync

@@ -82,6 +82,7 @@ AC_CHECK_DECL(LLONG_MAX, have_llong_max=1, , [#include <limits.h>])
 
 if test "$GCC" = "yes" || test "$GCC" = "egcs"; then
 	CFLAGS="$CFLAGS -Wall -Wpointer-arith -Wno-uninitialized"
+	CFLAGS="$CFLAGS -Wsign-compare"
 
 	if test -z "$have_llong_max"; then
 		# retry LLONG_MAX with -std=gnu99, needed on some Linuxes
