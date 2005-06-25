@@ -4,6 +4,9 @@
      [ssh.c sshconnect.c]
      Fix ControlPath's %p expanding to "0" for a default port,
      spotted dwmw2 AT infradead.org; ok markus@
+   - djm@cvs.openbsd.org 2005/06/18 04:30:36
+     [ssh.c ssh_config.5]
+     allow ControlPath=none, patch from dwmw2 AT infradead.org; ok dtucker@
 
 20050618
  - (djm) OpenBSD CVS Sync
