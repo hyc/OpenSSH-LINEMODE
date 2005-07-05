@@ -3,6 +3,13 @@
    - markus@cvs.openbsd.org 2005/07/01 13:19:47
      [channels.c]
      don't free() if getaddrinfo() fails; report mpech@
+   - djm@cvs.openbsd.org 2005/07/04 00:58:43
+     [channels.c clientloop.c clientloop.h misc.c misc.h ssh.c ssh_config.5]
+     implement support for X11 and agent forwarding over multiplex slave
+     connections. Because of protocol limitations, the slave connections inherit
+     the master's DISPLAY and SSH_AUTH_SOCK rather than distinctly forwarding
+     their own.
+     ok dtucker@ "put it in" deraadt@
 
 20050626
  - (djm) OpenBSD CVS Sync
