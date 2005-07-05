@@ -10,6 +10,9 @@
      the master's DISPLAY and SSH_AUTH_SOCK rather than distinctly forwarding
      their own.
      ok dtucker@ "put it in" deraadt@
+   - jmc@cvs.openbsd.org 2005/07/04 11:29:51
+     [ssh_config.5]
+     fix Xr and a little grammar;
 
 20050626
  - (djm) OpenBSD CVS Sync
