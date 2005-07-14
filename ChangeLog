@@ -20,6 +20,9 @@
    - jmc@cvs.openbsd.org 2005/07/08 12:53:10
      [ssh_config.5]
      new sentence, new line;
+   - dtucker@cvs.openbsd.org 2005/07/14 04:00:43
+     [misc.h]
+     use __sentinel__ attribute; ok deraadt@ djm@ markus@
 
 20050707
  - dtucker [auth-krb5.c auth.h gss-serv-krb5.c] Move KRB5CCNAME generation for
