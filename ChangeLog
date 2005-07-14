@@ -3,6 +3,9 @@
    - dtucker@cvs.openbsd.org 2005/07/06 09:33:05
      [ssh.1]
      clarify meaning of ssh -b ; with & ok jmc@
+   - dtucker@cvs.openbsd.org 2005/07/08 09:26:18
+     [misc.c]
+     Make comment match code; ok djm@
 
 20050707
  - dtucker [auth-krb5.c auth.h gss-serv-krb5.c] Move KRB5CCNAME generation for
