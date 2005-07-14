@@ -17,6 +17,9 @@
    - dtucker@cvs.openbsd.org 2005/07/08 10:20:41
      [ssh_config.5]
      change BindAddress to match recent ssh -b change; prompted by markus@
+   - jmc@cvs.openbsd.org 2005/07/08 12:53:10
+     [ssh_config.5]
+     new sentence, new line;
 
 20050707
  - dtucker [auth-krb5.c auth.h gss-serv-krb5.c] Move KRB5CCNAME generation for
