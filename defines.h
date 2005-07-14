@@ -436,6 +436,10 @@ struct winsize {
 # define __dead	__attribute__((noreturn))
 #endif
 
+#if !defined(HAVE_ATTRIBUTE__SENTINEL__) && !defined(__sentinel__)
+# define __sentinel__
+#endif
+
 /* *-*-nto-qnx doesn't define this macro in the system headers */
 #ifdef MISSING_HOWMANY
 # define howmany(x,y)	(((x)+((y)-1))/(y))
