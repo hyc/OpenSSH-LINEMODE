@@ -14,6 +14,9 @@
         2a) no EOF has been seen OR
         2b) there is buffered data
      report, initial fix and testing Chuck Cranor
+   - dtucker@cvs.openbsd.org 2005/07/08 10:20:41
+     [ssh_config.5]
+     change BindAddress to match recent ssh -b change; prompted by markus@
 
 20050707
  - dtucker [auth-krb5.c auth.h gss-serv-krb5.c] Move KRB5CCNAME generation for
