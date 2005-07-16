@@ -1,3 +1,8 @@
+20050716
+ - (dtucker) [auth-pam.c] Ensure that only one side of the authentication
+   socketpair stays open on in both the monitor and PAM process.  Patch from
+   Joerg Sonnenberger.
+
 20050714
  - (dtucker) OpenBSD CVS Sync
    - dtucker@cvs.openbsd.org 2005/07/06 09:33:05

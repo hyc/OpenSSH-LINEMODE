@@ -157,6 +157,7 @@ pthread_create(sp_pthread_t *thread, const void *attr __unused,
     void *(*thread_start)(void *), void *arg)
 {
 	pid_t pid;
+	struct pam_ctxt *ctx = arg;
 
 	sshpam_thread_status = -1;
 	switch ((pid = fork())) {
@@ -164,10 +165,14 @@ pthread_create(sp_pthread_t *thread, const void *attr __unused,
 		error("fork(): %s", strerror(errno));
 		return (-1);
 	case 0:
+		close(ctx->pam_psock);
+		ctx->pam_psock = -1;
 		thread_start(arg);
 		_exit(1);
 	default:
 		*thread = pid;
+		close(ctx->pam_csock);
+		ctx->pam_csock = -1;
 		sshpam_oldsig = signal(SIGCHLD, sshpam_sigchld_handler);
 		return (0);
 	}
