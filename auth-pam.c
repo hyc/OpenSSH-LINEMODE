@@ -130,7 +130,7 @@ sshpam_sigchld_handler(int sig)
 	if (cleanup_ctxt == NULL)
 		return;	/* handler called after PAM cleanup, shouldn't happen */
 	if (waitpid(cleanup_ctxt->pam_thread, &sshpam_thread_status, WNOHANG)
-	     <= 0) {
+	    <= 0) {
 		/* PAM thread has not exitted, privsep slave must have */
 		kill(cleanup_ctxt->pam_thread, SIGTERM);
 		if (waitpid(cleanup_ctxt->pam_thread, &sshpam_thread_status, 0)
@@ -780,7 +780,7 @@ sshpam_respond(void *ctx, u_int num, char **resp)
 	buffer_init(&buffer);
 	if (sshpam_authctxt->valid &&
 	    (sshpam_authctxt->pw->pw_uid != 0 ||
-	     options.permit_root_login == PERMIT_YES))
+	    options.permit_root_login == PERMIT_YES))
 		buffer_put_cstring(&buffer, *resp);
 	else
 		buffer_put_cstring(&buffer, badpw);
@@ -1144,7 +1144,7 @@ sshpam_auth_passwd(Authctxt *authctxt, const char *password)
 	 * information via timing (eg if the PAM config has a delay on fail).
 	 */
 	if (!authctxt->valid || (authctxt->pw->pw_uid == 0 &&
-	     options.permit_root_login != PERMIT_YES))
+	    options.permit_root_login != PERMIT_YES))
 		sshpam_password = badpw;
 
 	sshpam_err = pam_set_item(sshpam_handle, PAM_CONV,
@@ -1158,7 +1158,7 @@ sshpam_auth_passwd(Authctxt *authctxt, const char *password)
 	if (sshpam_err == PAM_SUCCESS && authctxt->valid) {
 		debug("PAM: password authentication accepted for %.100s",
 		    authctxt->user);
-               return 1;
+		return 1;
 	} else {
 		debug("PAM: password authentication failed for %.100s: %s",
 		    authctxt->valid ? authctxt->user : "an illegal user",
