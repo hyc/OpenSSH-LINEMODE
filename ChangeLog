@@ -1,3 +1,10 @@
+20050717
+- OpenBSD CVS Sync
+   - djm@cvs.openbsd.org 2005/07/16 01:35:24
+     [auth1.c channels.c cipher.c clientloop.c kex.c session.c ssh.c]
+     [sshconnect.c]
+     spacing
+
 20050716
  - (dtucker) [auth-pam.c] Ensure that only one side of the authentication
    socketpair stays open on in both the monitor and PAM process.  Patch from
