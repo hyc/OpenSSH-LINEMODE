@@ -22,6 +22,8 @@
      [serverloop.c session.c sftp-client.c sftp.c ssh-add.c ssh-keygen.c]
      [sshconnect.c sshconnect2.c]
      knf says that a 2nd level indent is four (not three or five) spaces
+ -(djm) [audit.c auth1.c auth2.c entropy.c loginrec.c serverloop.c]
+  [ssh-rand-helper.c] fix portable 2nd level indents at 4 spaces too
 
 20050716
  - (dtucker) [auth-pam.c] Ensure that only one side of the authentication

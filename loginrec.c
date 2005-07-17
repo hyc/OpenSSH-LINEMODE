@@ -444,7 +444,8 @@ login_write(struct logininfo *li)
 #endif
 #ifdef CUSTOM_SYS_AUTH_RECORD_LOGIN
 	if (li->type == LTYPE_LOGIN &&
-	   !sys_auth_record_login(li->username,li->hostname,li->line, &loginmsg))
+	    !sys_auth_record_login(li->username,li->hostname,li->line,
+	    &loginmsg))
 		logit("Writing login record failed for %s", li->username);
 #endif
 #ifdef SSH_AUDIT_EVENTS

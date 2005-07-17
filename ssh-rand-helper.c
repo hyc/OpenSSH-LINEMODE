@@ -398,8 +398,8 @@ hash_command_output(entropy_cmd_t *src, unsigned char *hash)
 	debug3("Time elapsed: %d msec", msec_elapsed);
 
 	if (waitpid(pid, &status, 0) == -1) {
-	       error("Couldn't wait for child '%s' completion: %s",
-		   src->cmdstring, strerror(errno));
+		error("Couldn't wait for child '%s' completion: %s",
+		    src->cmdstring, strerror(errno));
 		return 0.0;
 	}
 
