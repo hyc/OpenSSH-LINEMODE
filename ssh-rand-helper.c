@@ -600,7 +600,7 @@ prng_write_seedfile(void)
 			save_errno = errno;
 			unlink(tmpseed);
 			fatal("problem renaming PRNG seedfile from %.100s "
-			    "to %.100s (%.100s)", tmpseed, filename, 
+			    "to %.100s (%.100s)", tmpseed, filename,
 			    strerror(save_errno));
 		}
 	}

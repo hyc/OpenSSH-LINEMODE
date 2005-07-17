@@ -123,7 +123,7 @@ static struct pam_ctxt *cleanup_ctxt;
 static int sshpam_thread_status = -1;
 static mysig_t sshpam_oldsig;
 
-static void 
+static void
 sshpam_sigchld_handler(int sig)
 {
 	signal(SIGCHLD, SIG_DFL);
@@ -853,7 +853,7 @@ do_pam_account(void)
 	sshpam_err = pam_acct_mgmt(sshpam_handle, 0);
 	debug3("PAM: %s pam_acct_mgmt = %d (%s)", __func__, sshpam_err,
 	    pam_strerror(sshpam_handle, sshpam_err));
-	
+
 	if (sshpam_err != PAM_SUCCESS && sshpam_err != PAM_NEW_AUTHTOK_REQD) {
 		sshpam_account_status = 0;
 		return (sshpam_account_status);
@@ -1111,7 +1111,7 @@ sshpam_passwd_conv(int n, sshpam_const struct pam_message **msg,
 	*resp = reply;
 	return (PAM_SUCCESS);
 
- fail: 
+ fail:
 	for(i = 0; i < n; i++) {
 		if (reply[i].resp != NULL)
 			xfree(reply[i].resp);
