@@ -796,8 +796,8 @@ int main()
 	if (a == 1 && b == 1 && c >= 4)
 		exit(0);
 
-	/* 1.2.1.2 and up are OK */
-	if (v >= 1020102)
+	/* 1.2.3 and up are OK */
+	if (v >= 1020300)
 		exit(0);
 
 	exit(2);
