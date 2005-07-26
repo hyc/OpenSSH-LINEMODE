@@ -6,6 +6,15 @@
      [auth-passwd.c]
      auth_usercheck(3) can return NULL, so check for that. Report from
      mpech@. ok markus@
+   - markus@cvs.openbsd.org 2005/07/25 11:59:40
+     [kex.c kex.h myproposal.h packet.c packet.h servconf.c session.c]
+     [sshconnect2.c sshd.c sshd_config sshd_config.5]
+     add a new compression method that delays compression until the user
+     has been authenticated successfully and set compression to 'delayed'
+     for sshd.
+     this breaks older openssh clients (< 3.5) if they insist on
+     compression, so you have to re-enable compression in sshd_config.
+     ok djm@
 
 20050725
  - (dtucker) [configure.ac] Update zlib version check for CAN-2005-2096.
