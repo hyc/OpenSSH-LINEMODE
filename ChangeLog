@@ -1,6 +1,11 @@
 20050726
  - (dtucker) [configure.ac] Update zlib warning message too, pointed out by
    tim@.
+ - (djm) OpenBSD CVS Sync
+   - otto@cvs.openbsd.org 2005/07/19 15:32:26
+     [auth-passwd.c]
+     auth_usercheck(3) can return NULL, so check for that. Report from
+     mpech@. ok markus@
 
 20050725
  - (dtucker) [configure.ac] Update zlib version check for CAN-2005-2096.
