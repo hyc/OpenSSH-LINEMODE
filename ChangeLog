@@ -5,6 +5,8 @@
      Silence bogus -Wuninitialized warnings; ok djm@
  - (dtucker) [configure.ac] Enable -Wuninitialized by default when compiling
    with gcc.  ok djm@
+ - (dtucker) [configure.ac] Add a --with-Werror option to configure for
+   adding -Werror to CFLAGS when all of the configure tests are done. ok djm@
 
 20050726
  - (dtucker) [configure.ac] Update zlib warning message too, pointed out by

@@ -594,6 +594,17 @@ AC_ARG_WITH(libs,
 		fi
 	]
 )
+AC_ARG_WITH(Werror,
+	[  --with-Werror           Build main code with -Werror],
+	[
+		if test -n "$withval"  &&  test "x$withval" != "xno"; then
+			werror_flags="-Werror"
+			if "x${withval}" != "xyes"; then
+				werror_flags="$withval"
+			fi
+		fi
+	]
+)
 
 AC_MSG_CHECKING(compiler and flags for sanity)
 AC_RUN_IFELSE(
@@ -3357,6 +3368,10 @@ fi
 if test "$ac_cv_lib_pam_pam_set_item" = yes ; then
 	LIBS=`echo $LIBS | sed 's/-ldl //'`
 fi
+
+dnl Adding -Werror to CFLAGS early prevents configure tests from running.
+dnl Add now.
+CFLAGS="$CFLAGS $werror_flags"
 
 AC_EXEEXT
 AC_CONFIG_FILES([Makefile buildpkg.sh opensshd.init openbsd-compat/Makefile \
