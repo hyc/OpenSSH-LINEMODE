@@ -114,16 +114,16 @@ struct sockaddr_in6 {
 #endif /* !NI_MAXHOST */
 
 #ifndef EAI_NODATA
-# define EAI_NODATA	(MAX_INT - 1)
+# define EAI_NODATA	(INT_MAX - 1)
 #endif
 #ifndef EAI_MEMORY
-# define EAI_MEMORY	(MAX_INT - 2)
+# define EAI_MEMORY	(INT_MAX - 2)
 #endif
 #ifndef EAI_NONAME
-# define EAI_NONAME	(MAX_INT - 3)
+# define EAI_NONAME	(INT_MAX - 3)
 #endif
 #ifndef EAI_SYSTEM
-# define EAI_SYSTEM	(MAX_INT - 4)
+# define EAI_SYSTEM	(INT_MAX - 4)
 #endif
 
 #ifndef HAVE_STRUCT_ADDRINFO
