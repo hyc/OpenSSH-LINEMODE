@@ -1,3 +1,8 @@
+20050803
+ - (dtucker) [openbsd-compat/fake-rfc2553.h] Check for EAI_* defines
+   individually and use a value less likely to collide with real values from
+   netdb.h.  Fixes compile warnings on FreeBSD 5.3.  ok djm@
+
 20050802
  - (dtucker) OpenBSD CVS Sync
    - dtucker@cvs.openbsd.org 2005/07/27 10:39:03
