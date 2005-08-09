@@ -1051,6 +1051,8 @@ AC_ARG_WITH(audit,
 		AC_MSG_RESULT(debug)
 		AC_DEFINE(SSH_AUDIT_EVENTS, [], Use audit debugging module)
 		;;
+	  no)
+		;;
 	  *)
 		AC_MSG_ERROR([Unknown audit module $withval])
 		;;

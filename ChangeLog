@@ -1,3 +1,7 @@
+20050809
+ - (tim) [configure.ac] Allow --with-audit=no. OK dtucker@
+   Report by skeleten AT shillest.net
+
 20050803
  - (dtucker) [openbsd-compat/fake-rfc2553.h] Check for EAI_* defines
    individually and use a value less likely to collide with real values from
