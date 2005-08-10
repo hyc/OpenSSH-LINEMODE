@@ -62,6 +62,10 @@ enum
 # endif /* PATH_MAX */
 #endif /* MAXPATHLEN */
 
+#ifndef MAXSYMLINKS
+# define MAXSYMLINKS 5
+#endif
+
 #ifndef STDIN_FILENO
 # define STDIN_FILENO    0
 #endif

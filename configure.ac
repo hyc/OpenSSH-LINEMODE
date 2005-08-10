@@ -1085,7 +1085,6 @@ AC_CHECK_FUNCS( \
 	clock \
 	closefrom \
 	dirfd \
-	fchdir \
 	fchmod \
 	fchown \
 	freeaddrinfo \
