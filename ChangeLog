@@ -1,3 +1,7 @@
+20050810
+ - (dtucker) [configure.ac] Test libedit library and headers for compatibility.
+   Report from skeleten AT shillest.net, ok djm@
+
 20050809
  - (tim) [configure.ac] Allow --with-audit=no. OK dtucker@
    Report by skeleten AT shillest.net
