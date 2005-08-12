@@ -13,6 +13,7 @@
    - dtucker@cvs.openbsd.org 2005/08/06 10:03:12
      [servconf.c]
      Unbreak sshd ListenAddress for bare IPv6 addresses.
+     Report from Janusz Mucka; ok djm@
 
 20050810
  - (dtucker) [configure.ac] Test libedit library and headers for compatibility.
