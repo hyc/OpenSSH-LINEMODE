@@ -1,3 +1,6 @@
+20050815
+ - (tim) wrap el_end() in #ifdef USE_LIBEDIT
+
 20050812
  - (djm) OpenBSD CVS Sync
    - markus@cvs.openbsd.org 2005/07/28 17:36:22
