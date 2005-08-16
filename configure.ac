@@ -1024,15 +1024,16 @@ AC_ARG_WITH(libedit,
 			[ -lcurses ]
 		)
 		AC_MSG_CHECKING(if libedit version is compatible)
-		AC_TRY_COMPILE([#include <histedit.h>],
-		    [
+		AC_COMPILE_IFELSE(
+		    [AC_LANG_SOURCE([[
+#include <histedit.h>
 int main(void)
 {
 	int i = H_SETSIZE;
 	el_init("", NULL, NULL, NULL);
 	exit(0);
 }
-		    ],
+		    ]])],
 		    [ AC_MSG_RESULT(yes) ],
 		    [ AC_MSG_RESULT(no)
 		      AC_MSG_ERROR(libedit version is not compatible) ]
@@ -1066,6 +1067,7 @@ AC_ARG_WITH(audit,
 		AC_DEFINE(SSH_AUDIT_EVENTS, [], Use audit debugging module)
 		;;
 	  no)
+		AC_MSG_RESULT(no)
 		;;
 	  *)
 		AC_MSG_ERROR([Unknown audit module $withval])

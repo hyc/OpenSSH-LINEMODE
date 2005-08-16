@@ -1,5 +1,7 @@
 20050815
- - (tim) wrap el_end() in #ifdef USE_LIBEDIT
+ - (tim) [sftp.c] wrap el_end() in #ifdef USE_LIBEDIT
+ - (tim) [configure.ac] corrections to libedit tests. Report and patches
+   by skeleten AT shillest.net
 
 20050812
  - (djm) OpenBSD CVS Sync
