@@ -579,6 +579,23 @@ struct winsize {
 # define SSH_SYSFDMAX 10000
 #endif
 
+#if defined(__Lynx__)
+ /*
+  * LynxOS defines these in param.h which we do not want to include since
+  * it will also pull in a bunch of kernel definitions.
+  */
+# define ALIGNBYTES (sizeof(int) - 1)
+# define ALIGN(p) (((unsigned)p + ALIGNBYTES) & ~ALIGNBYTES)
+  /* Missing prototypes on LynxOS */
+  int snprintf (char *, size_t, const char *, ...);
+  int mkstemp (char *);
+  char *crypt (const char *, const char *);
+  int seteuid (uid_t);
+  int setegid (gid_t);
+  char *mkdtemp (char *);
+  int rresvport_af (int *, sa_family_t);
+  int innetgr (const char *, const char *, const char *, const char *);
+#endif
 
 /*
  * Define this to use pipes instead of socketpairs for communicating with the

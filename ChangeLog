@@ -1,3 +1,7 @@
+20050821
+ - (dtucker) [configure.ac defines.h includes.h sftp.c] Add support for
+   LynxOS, patch from Olli Savia (ops at iki.fi).  ok djm@
+
 20050816
  - (djm) [ttymodes.c] bugzilla #1054: Fix encoding of _POSIX_VDISABLE,
    from Jacob Nevins; ok dtucker@
