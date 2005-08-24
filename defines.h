@@ -62,6 +62,12 @@ enum
 # endif /* PATH_MAX */
 #endif /* MAXPATHLEN */
 
+#ifndef PATH_MAX
+# ifdef _POSIX_PATH_MAX
+# define PATH_MAX _POSIX_PATH_MAX
+# endif
+#endif
+
 #ifndef MAXSYMLINKS
 # define MAXSYMLINKS 5
 #endif
