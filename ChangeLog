@@ -2,6 +2,7 @@
  - (dtucker) [regress/test-exec.sh] Do not prepend an extra "/" to a fully-
    qualified sshd pathname since some systems (eg Cygwin) may consider "/foo"
    and "//foo" to be different.  Spotted by vinschen at redhat.com.
+ - (tim) [configure.ac ] Not all gcc's support -Wsign-compare
 
 20050821
  - (dtucker) [configure.ac defines.h includes.h sftp.c] Add support for
