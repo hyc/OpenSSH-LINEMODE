@@ -173,5 +173,6 @@ char *shadow_pw(struct passwd *pw);
 #include "bsd-cygwin_util.h"
 #include "port-irix.h"
 #include "port-aix.h"
+#include "port-uw.h"
 
 #endif /* _OPENBSD_COMPAT_H */

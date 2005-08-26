@@ -688,6 +688,10 @@ struct winsize {
 # define CUSTOM_SYS_AUTH_PASSWD 1
 #endif
 
+#ifdef UNIXWARE_LONG_PASSWORDS
+# define CUSTOM_SYS_AUTH_PASSWD 1
+#endif
+
 /* HP-UX 11.11 */
 #ifdef BTMP_FILE
 # define _PATH_BTMP BTMP_FILE
