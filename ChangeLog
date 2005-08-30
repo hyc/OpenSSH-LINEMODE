@@ -1,3 +1,7 @@
+20050829
+ - (tim) [configure.ac] ia_openinfo() seems broken on OSR6. Limit UW long
+   password support to 7.x for now.
+
 20050826
  - (tim) [CREDITS LICENCE auth.c configure.ac defines.h includes.h session.c
    openbsd-compat/Makefile.in openbsd-compat/openbsd-compat.h
