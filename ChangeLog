@@ -10,6 +10,7 @@
    - markus@cvs.openbsd.org 2005/08/31 09:28:42
      [version.h]
      4.2
+ - (dtucker) [README] Update release note URL to 4.2
 
 20050830
  - (tim) [configure.ac] Back out last change. It needs to be done differently.
