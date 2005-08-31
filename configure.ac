@@ -456,6 +456,7 @@ mips-sony-bsd|mips-sony-newsos4)
 	case "$host" in
 	*-*-sysv5SCO_SV*)	# SCO OpenServer 6.x
 		TEST_SHELL=/u95/bin/sh
+		AC_DEFINE(BROKEN_LIBIAF, 1, [ia_uinfo routines not supported by OS yet])
 		;;
 	esac
 	;;

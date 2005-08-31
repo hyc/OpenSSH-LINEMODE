@@ -1,4 +1,4 @@
-20050830
+20050831
  - (djm) OpenBSD CVS Sync
    - djm@cvs.openbsd.org 2005/08/30 22:08:05
      [gss-serv.c sshconnect2.c]
@@ -11,6 +11,10 @@
      [version.h]
      4.2
  - (dtucker) [README] Update release note URL to 4.2
+ - (tim) [configure.ac auth.c defines.h session.c openbsd-compat/port-uw.c
+   openbsd-compat/port-uw.h openbsd-compat/xcrypt.c] libiaf cleanup. Disable
+   libiaf bits for OpenServer6. Free memory allocated by ia_get_logpwd().
+   Feedback and OK dtucker@
 
 20050830
  - (tim) [configure.ac] Back out last change. It needs to be done differently.
