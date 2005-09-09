@@ -688,7 +688,7 @@ struct winsize {
 # define CUSTOM_SYS_AUTH_PASSWD 1
 #endif
 
-#if defined(HAVE_LIBIAF)  &&  !defined(BROKEN_LIBIAF)
+#ifdef HAVE_LIBIAF
 # define CUSTOM_SYS_AUTH_PASSWD 1
 #endif
 
