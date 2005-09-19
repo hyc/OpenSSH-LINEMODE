@@ -1,3 +1,7 @@
+20050919
+ - (tim) [aclocal.m4 configure.ac] Delete acconfig.h and add templates to
+   AC_DEFINE and AC_DEFINE_UNQUOTED to quiet autoconf 2.59 warning messages.
+
 20050912
  - (tim) [configure.ac] Bug 1078. Fix --without-kerberos5. Reported by
    Mike Frysinger.
