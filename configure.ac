@@ -2719,7 +2719,7 @@ AC_ARG_WITH(sectok,
 # Check whether user wants OpenSC support
 OPENSC_CONFIG="no"
 AC_ARG_WITH(opensc,
-	[--with-opensc[[=PFX]]       Enable smartcard support using OpenSC (optionally in PATH)],
+	[  --with-opensc[[=PFX]]     Enable smartcard support using OpenSC (optionally in PATH)],
 	[
 	    if test "x$withval" != "xno" ; then
 		if test "x$withval" != "xyes" ; then
