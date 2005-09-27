@@ -1,3 +1,6 @@
+20050928
+ - (dtucker) [entropy.c] Use u_char for receiving RNG seed for consistency.
+
 20050927
  - (dtucker) [entropy.c] Remove unnecessary tests for getuid and geteuid
    calls, since they can't possibly fail.  ok djm@

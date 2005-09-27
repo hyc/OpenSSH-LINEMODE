@@ -170,7 +170,7 @@ rexec_send_rng_seed(Buffer *m)
 void
 rexec_recv_rng_seed(Buffer *m)
 {
-	char *buf;
+	u_char *buf;
 	u_int len;
 
 	buf = buffer_get_string_ret(m, &len);
