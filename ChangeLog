@@ -1,3 +1,7 @@
+20050927
+ - (dtucker) [entropy.c] Remove unnecessary tests for getuid and geteuid
+   calls, since they can't possibly fail.  ok djm@
+
 20050924
  - (dtucker) [auth2.c] Move start_pam() calls out of if-else block to remove
    duplicate call.  ok djm@

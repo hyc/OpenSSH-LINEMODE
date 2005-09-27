@@ -145,10 +145,8 @@ init_rng(void)
 		    "have %lx", OPENSSL_VERSION_NUMBER, SSLeay());
 
 #ifndef OPENSSL_PRNG_ONLY
-	if ((original_uid = getuid()) == -1)
-		fatal("getuid: %s", strerror(errno));
-	if ((original_euid = geteuid()) == -1)
-		fatal("geteuid: %s", strerror(errno));
+	original_uid = getuid();
+	original_euid = geteuid();
 #endif
 }
 
