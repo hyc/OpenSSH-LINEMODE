@@ -1,6 +1,9 @@
 20050927
  - (dtucker) [entropy.c] Remove unnecessary tests for getuid and geteuid
    calls, since they can't possibly fail.  ok djm@
+ - (dtucker) [entropy.c entropy.h sshd.c] Pass RNG seed to the reexec'ed
+   process when sshd relies on ssh-random-helper.  Should result in faster
+   logins on systems without a real random device or prngd.  ok djm@
 
 20050924
  - (dtucker) [auth2.c] Move start_pam() calls out of if-else block to remove
