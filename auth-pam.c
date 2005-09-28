@@ -716,8 +716,18 @@ sshpam_query(void *ctx, char **name, char **info,
 			plen++;
 			xfree(msg);
 			break;
-		case PAM_SUCCESS:
 		case PAM_AUTH_ERR:
+			debug3("PAM: PAM_AUTH_ERR");
+			if (**prompts != NULL && strlen(**prompts) != 0) {
+				*info = **prompts;
+				**prompts = NULL;
+				*num = 0;
+				**echo_on = 0;
+				ctxt->pam_done = -1;
+				return 0;
+			}
+			/* FALLTHROUGH */
+		case PAM_SUCCESS:
 			if (**prompts != NULL) {
 				/* drain any accumulated messages */
 				debug("PAM: %s", **prompts);
