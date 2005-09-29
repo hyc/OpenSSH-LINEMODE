@@ -1,3 +1,7 @@
+20050930
+ - (dtucker) [openbsd-compat/openbsd-compat.h] Bug #1096: Add prototype
+   for strtoll.  Patch from o.flebbe at science-computing.de.
+
 20050929
  - (dtucker) [monitor_wrap.c] Remove duplicate definition of loginmsg
    introduced during sync.
