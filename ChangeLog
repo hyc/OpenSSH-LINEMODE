@@ -1,3 +1,9 @@
+20051003
+ - (dtucker) OpenBSD CVS Sync
+   - markus@cvs.openbsd.org 2005/09/07 08:53:53
+     [channels.c]
+     enforce chanid != NULL; ok djm
+
 20050930
  - (dtucker) [openbsd-compat/openbsd-compat.h] Bug #1096: Add prototype
    for strtoll.  Patch from o.flebbe at science-computing.de.
