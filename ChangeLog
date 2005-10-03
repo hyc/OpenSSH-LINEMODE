@@ -44,6 +44,8 @@
      Relocate check_ip_options call to prevent logging of garbage for
      connections with IP options set.  bz#1092 from David Leonard,
      "looks good" deraadt@
+ - (dtucker) [regress/README.regress] Bug #989: Document limitation that scp
+   is required in the system path for the multiplex test to work.
 
 20050930
  - (dtucker) [openbsd-compat/openbsd-compat.h] Bug #1096: Add prototype
