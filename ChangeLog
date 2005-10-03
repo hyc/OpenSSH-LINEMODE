@@ -36,6 +36,9 @@
    - djm@cvs.openbsd.org 2005/09/21 23:37:11
      [sshd.c]
      change label at markus@'s request
+   - jaredy@cvs.openbsd.org 2005/09/30 20:34:26
+     [ssh-keyscan.1]
+     deploy .An -nosplit; ok jmc
 
 20050930
  - (dtucker) [openbsd-compat/openbsd-compat.h] Bug #1096: Add prototype
