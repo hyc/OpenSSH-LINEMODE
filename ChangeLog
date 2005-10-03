@@ -18,6 +18,9 @@
      [sshd.c]
      stop connection abort on rekey with delayed compression enabled when
      post-auth privsep is disabled (e.g. when root is logged in); ok dtucker@
+   - djm@cvs.openbsd.org 2005/09/19 11:48:10
+     [gss-serv.c]
+     typo
 
 20050930
  - (dtucker) [openbsd-compat/openbsd-compat.h] Bug #1096: Add prototype
