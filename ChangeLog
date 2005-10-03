@@ -24,6 +24,9 @@
    - jmc@cvs.openbsd.org 2005/09/19 15:38:27
      [ssh.1]
      some more .Bk/.Ek to avoid ugly line split;
+   - jmc@cvs.openbsd.org 2005/09/19 15:42:44
+     [ssh.c]
+     update -D usage here too;
 
 20050930
  - (dtucker) [openbsd-compat/openbsd-compat.h] Bug #1096: Add prototype
