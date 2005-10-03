@@ -30,6 +30,9 @@
    - djm@cvs.openbsd.org 2005/09/19 23:31:31
      [ssh.1]
      spelling nit from stevesk@
+   - djm@cvs.openbsd.org 2005/09/21 23:36:54
+     [sshd_config.5]
+     aquire -> acquire, from stevesk@
 
 20050930
  - (dtucker) [openbsd-compat/openbsd-compat.h] Bug #1096: Add prototype
