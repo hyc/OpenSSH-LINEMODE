@@ -14,6 +14,10 @@
      [ssh_config.5 ssh.1]
      mention ability to specify bind_address for DynamicForward and -D options;
      bz#1077 spotted by Haruyama Seigo
+   - djm@cvs.openbsd.org 2005/09/19 11:47:09
+     [sshd.c]
+     stop connection abort on rekey with delayed compression enabled when
+     post-auth privsep is disabled (e.g. when root is logged in); ok dtucker@
 
 20050930
  - (dtucker) [openbsd-compat/openbsd-compat.h] Bug #1096: Add prototype
