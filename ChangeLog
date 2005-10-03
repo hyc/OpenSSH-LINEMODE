@@ -21,6 +21,9 @@
    - djm@cvs.openbsd.org 2005/09/19 11:48:10
      [gss-serv.c]
      typo
+   - jmc@cvs.openbsd.org 2005/09/19 15:38:27
+     [ssh.1]
+     some more .Bk/.Ek to avoid ugly line split;
 
 20050930
  - (dtucker) [openbsd-compat/openbsd-compat.h] Bug #1096: Add prototype
