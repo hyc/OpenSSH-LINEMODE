@@ -39,6 +39,11 @@
    - jaredy@cvs.openbsd.org 2005/09/30 20:34:26
      [ssh-keyscan.1]
      deploy .An -nosplit; ok jmc
+   - dtucker@cvs.openbsd.org 2005/10/03 07:44:42
+     [canohost.c]
+     Relocate check_ip_options call to prevent logging of garbage for
+     connections with IP options set.  bz#1092 from David Leonard,
+     "looks good" deraadt@
 
 20050930
  - (dtucker) [openbsd-compat/openbsd-compat.h] Bug #1096: Add prototype
