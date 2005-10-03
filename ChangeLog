@@ -27,6 +27,9 @@
    - jmc@cvs.openbsd.org 2005/09/19 15:42:44
      [ssh.c]
      update -D usage here too;
+   - djm@cvs.openbsd.org 2005/09/19 23:31:31
+     [ssh.1]
+     spelling nit from stevesk@
 
 20050930
  - (dtucker) [openbsd-compat/openbsd-compat.h] Bug #1096: Add prototype
