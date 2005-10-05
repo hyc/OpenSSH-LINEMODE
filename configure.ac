@@ -398,7 +398,7 @@ mips-sony-bsd|mips-sony-newsos4)
 	;;
 *-*-freebsd*)
 	check_for_libcrypt_later=1
-	AC_DEFINED(LOCKED_PASSWD_PREFIX, "*LOCKED*")
+	AC_DEFINE(LOCKED_PASSWD_PREFIX, "*LOCKED*", [Account locked with pw(1)])
 	;;
 *-*-bsdi*)
 	AC_DEFINE(SETEUID_BREAKS_SETUID)
