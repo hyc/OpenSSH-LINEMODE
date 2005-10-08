@@ -1,6 +1,7 @@
 20051008
  - (dtucker) [configure.ac] Bug #1098: define $MAIL for HP-UX; report from
    brian.smith at agilent com.
+ - (djm) [configure.ac] missing 'test' call for -with-Werror test
 
 20051005
  - (dtucker) [configure.ac sshd.8] Enable locked account check (a prepended

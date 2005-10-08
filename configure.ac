@@ -670,7 +670,7 @@ AC_ARG_WITH(Werror,
 	[
 		if test -n "$withval"  &&  test "x$withval" != "xno"; then
 			werror_flags="-Werror"
-			if "x${withval}" != "xyes"; then
+			if test "x${withval}" != "xyes"; then
 				werror_flags="$withval"
 			fi
 		fi
