@@ -1,3 +1,7 @@
+20051008
+ - (dtucker) [configure.ac] Bug #1098: define $MAIL for HP-UX; report from
+   brian.smith at agilent com.
+
 20051005
  - (dtucker) [configure.ac sshd.8] Enable locked account check (a prepended
    "*LOCKED*" string) for FreeBSD.  Patch jeremie at le-hen.org and

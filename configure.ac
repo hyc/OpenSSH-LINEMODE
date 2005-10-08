@@ -296,6 +296,7 @@ main() { if (NSVersionOfRunTimeLibrary("System") >= (60 << 16))
 	AC_DEFINE(LOCKED_PASSWD_STRING, "*",
 		[String used in /etc/passwd to denote locked account])
 	AC_DEFINE(SPT_TYPE,SPT_PSTAT)
+	MAIL="/var/mail/username"
 	LIBS="$LIBS -lsec"
 	AC_CHECK_LIB(xnet, t_error, ,
 	    AC_MSG_ERROR([*** -lxnet needed on HP-UX - check config.log ***]))
