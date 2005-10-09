@@ -1,3 +1,7 @@
+20051009
+ - (dtucker) [configure.ac defines.h openbsd-compat/vis.{c,h}] Sync current
+   versions from OpenBSD.  ok djm@
+
 20051008
  - (dtucker) [configure.ac] Bug #1098: define $MAIL for HP-UX; report from
    brian.smith at agilent com.

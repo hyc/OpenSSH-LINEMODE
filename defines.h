@@ -450,6 +450,10 @@ struct winsize {
 # define __sentinel__
 #endif
 
+#if !defined(HAVE_ATTRIBUTE__BOUNDED__) && !defined(__bounded__)
+# define __bounded__(x, y, z)
+#endif
+
 /* *-*-nto-qnx doesn't define this macro in the system headers */
 #ifdef MISSING_HOWMANY
 # define howmany(x,y)	(((x)+((y)-1))/(y))
