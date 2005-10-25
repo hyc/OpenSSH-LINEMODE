@@ -1,3 +1,8 @@
+20051025
+ - (dtucker) [configure.ac] Relocate LLONG_MAX calculation to after the
+   sizeof(long long) checks, to make fixing bug #1104 easier (no changes
+   yet).
+
 20051017
  - (dtucker) [configure.ac] Bug #1097: Fix configure for cross-compiling.
    /etc/default/login report and testing from aabaker at iee.org, corrections
