@@ -1,3 +1,8 @@
+20051102
+ - (dtucker) [openbsd-compat/bsd-misc.c] Bug #1108: fix broken strdup().
+   Reported by olavi at ipunplugged.com and antoine.brodin at laposte.net
+   via FreeBSD.
+
 20051030
  - (djm) [contrib/suse/openssh.spec contrib/suse/rc.
    sshd contrib/suse/sysconfig.ssh] Bug #1106: Updated SuSE spec and init 
