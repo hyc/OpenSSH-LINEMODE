@@ -36,6 +36,9 @@
    - stevesk@cvs.openbsd.org 2005/10/14 02:17:59
      [ssh-keygen.c ssh.c sshconnect2.c]
      no trailing "\n" for log functions; ok djm@
+   - stevesk@cvs.openbsd.org 2005/10/14 02:29:37
+     [channels.c clientloop.c]
+     free()->xfree(); ok djm@
 
 20051102
  - (dtucker) [openbsd-compat/bsd-misc.c] Bug #1108: fix broken strdup().
