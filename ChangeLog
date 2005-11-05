@@ -1,3 +1,13 @@
+20051105
+ - (djm) OpenBSD CVS Sync
+   - markus@cvs.openbsd.org 2005/10/07 11:13:57
+     [ssh-keygen.c]
+     change DSA default back to 1024, as it's defined for 1024 bits only
+     and this causes interop problems with other clients.  moreover,
+     in order to improve the security of DSA you need to change more
+     components of DSA key generation (e.g. the internal SHA1 hash);
+     ok deraadt
+
 20051102
  - (dtucker) [openbsd-compat/bsd-misc.c] Bug #1108: fix broken strdup().
    Reported by olavi at ipunplugged.com and antoine.brodin at laposte.net
