@@ -58,6 +58,10 @@
      [ssh_config.5]
      mention control socket fallback behaviour, reported by 
      tryponraj AT gmail.com
+   - djm@cvs.openbsd.org 2005/10/30 04:01:03
+     [ssh-keyscan.c]
+     make ssh-keygen discard junk from server before SSH- ident, spotted by
+     dave AT cirt.net; ok dtucker@
 
 20051102
  - (dtucker) [openbsd-compat/bsd-misc.c] Bug #1108: fix broken strdup().
