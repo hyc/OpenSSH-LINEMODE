@@ -71,6 +71,10 @@
    - jmc@cvs.openbsd.org 2005/10/30 08:43:47
      [ssh_config.5]
      remove trailing whitespace;
+   - djm@cvs.openbsd.org 2005/10/30 08:52:18
+     [clientloop.c packet.c serverloop.c session.c ssh-agent.c ssh-keygen.c]
+     [ssh.c sshconnect.c sshconnect1.c sshd.c]
+     no need to escape single quotes in comments, no binary change
 
 20051102
  - (dtucker) [openbsd-compat/bsd-misc.c] Bug #1108: fix broken strdup().
