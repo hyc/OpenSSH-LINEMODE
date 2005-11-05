@@ -98,6 +98,10 @@
      remove hardcoded hash lengths in key exchange code, allowing
      implementation of KEX methods with different hashes (e.g. SHA-256);
      ok markus@ dtucker@ stevesk@
+   - djm@cvs.openbsd.org 2005/11/05 05:01:15
+     [bufaux.c]
+     Fix leaks in error paths, bz #1109 and #1110 reported by kremenek AT
+     cs.stanford.edu; ok dtucker@
 
 20051102
  - (dtucker) [openbsd-compat/bsd-misc.c] Bug #1108: fix broken strdup().
