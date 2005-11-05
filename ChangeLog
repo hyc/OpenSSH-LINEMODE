@@ -51,6 +51,9 @@
    - stevesk@cvs.openbsd.org 2005/10/17 14:01:28
      [dns.c]
      remove #ifdef LWRES; ok jakob@
+   - stevesk@cvs.openbsd.org 2005/10/17 14:13:35
+     [dns.c dns.h]
+     more cleanups; ok jakob@
 
 20051102
  - (dtucker) [openbsd-compat/bsd-misc.c] Bug #1108: fix broken strdup().
