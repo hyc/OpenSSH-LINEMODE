@@ -39,6 +39,9 @@
    - stevesk@cvs.openbsd.org 2005/10/14 02:29:37
      [channels.c clientloop.c]
      free()->xfree(); ok djm@
+   - stevesk@cvs.openbsd.org 2005/10/15 15:28:12
+     [sshconnect.c]
+     make external definition static; ok deraadt@
 
 20051102
  - (dtucker) [openbsd-compat/bsd-misc.c] Bug #1108: fix broken strdup().
