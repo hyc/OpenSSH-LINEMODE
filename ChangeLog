@@ -103,6 +103,9 @@
      Fix leaks in error paths, bz #1109 and #1110 reported by kremenek AT
      cs.stanford.edu; ok dtucker@
  - (dtucker) [README.platform] Add PAM section.
+ - (djm) [openbsd-compat/getrrsetbyname.c] Sync to latest OpenBSD version,
+   resolving memory leak bz#1111 reported by kremenek AT cs.stanford.edu;
+   ok dtucker@
 
 20051102
  - (dtucker) [openbsd-compat/bsd-misc.c] Bug #1108: fix broken strdup().
