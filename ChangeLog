@@ -1,9 +1,11 @@
 20051110
- - (dtucker) [openbsd-compat/getenv.c] Merge changes for __findenv from
+ - (dtucker) [openbsd-compat/setenv.c] Merge changes for __findenv from
    OpenBSD getenv.c revs 1.4 - 1.8 (ANSIfication of arguments, removal of
    "register").
- - (dtucker) [openbsd-compat/getenv.c] Make __findenv static, remove
+ - (dtucker) [openbsd-compat/setenv.c] Make __findenv static, remove
    unnecessary prototype.
+ - (dtucker) [openbsd-compat/setenv.c] Sync changes from OpenBSD setenv.c
+   revs 1.7 - 1.9.
 
 20051105
  - (djm) OpenBSD CVS Sync
