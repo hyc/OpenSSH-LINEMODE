@@ -19,6 +19,8 @@
    guarantees a conflict for each and every sync.
  - (dtucker) [openbsd-compat/strlcpy.c] Update from OpenBSD 1.8 -> 1.10.
  - (dtucker) [openbsd-compat/sigact.h] Add "OPENBSD ORIGINAL" marker.
+ - (dtucker) [openbsd-compat/strmode.c] Update from OpenBSD 1.5 -> 1.7.
+   Removal of rcsid, "whiteout" inode type.
 
 20051105
  - (djm) OpenBSD CVS Sync
