@@ -12,6 +12,8 @@
    since they're not useful right now.  Patch from djm@.
  - (dtucker) [openbsd-compat/getgrouplist.c] Sync OpenBSD revs 1.10 - 1.2 (ANSI
    prototypes, removal of "register").
+ - (dtucker) [openbsd-compat/strlcat.c] Sync OpenBSD revs 1.11 - 1.12 (removal
+   of "register").
 
 20051105
  - (djm) OpenBSD CVS Sync
