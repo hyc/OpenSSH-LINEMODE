@@ -6,6 +6,8 @@
    unnecessary prototype.
  - (dtucker) [openbsd-compat/setenv.c] Sync changes from OpenBSD setenv.c
    revs 1.7 - 1.9.
+ - (dtucker) [auth-krb5.c] Fix -Wsign-compare warning in non-Heimdal path.
+   Patch from djm@.
 
 20051105
  - (djm) OpenBSD CVS Sync
