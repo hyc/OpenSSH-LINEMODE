@@ -10,6 +10,8 @@
    Patch from djm@.
  - (dtucker) [configure.ac] Disable pointer-sign warnings on gcc 4.0+
    since they're not useful right now.  Patch from djm@.
+ - (dtucker) [openbsd-compat/getgrouplist.c] Sync OpenBSD revs 1.10 - 1.2 (ANSI
+   prototypes, removal of "register").
 
 20051105
  - (djm) OpenBSD CVS Sync
