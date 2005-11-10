@@ -37,6 +37,7 @@
  - (dtucker) [openbsd-compat/inet_ntop.c] Update from OpenBSD 1.5 -> 1.7.
  - (dtucker) [openbsd-compat/daemon.c] Update from OpenBSD 1.5 -> 1.6.
  - (dtucker) [openbsd-compat/strsep.c] Update from OpenBSD 1.5 -> 1.6.
+ - (dtucker) [openbsd-compat/daemon.c] Update from OpenBSD 1.10 -> 1.13.
 
 20051105
  - (djm) OpenBSD CVS Sync
