@@ -41,6 +41,7 @@
  - (dtucker) [openbsd-compat/mktemp.c] Update from OpenBSD 1.17 -> 1.19.
  - (dtucker) [openbsd-compat/rresvport.c] Update from OpenBSD 1.6 -> 1.8.
  - (dtucker) [openbsd-compat/bindresvport.c] Add "OPENBSD ORIGINAL" marker.
+ - (dtucker) [openbsd-compat/bindresvport.c] Update from OpenBSD 1.16 -> 1.17.
 
 20051105
  - (djm) OpenBSD CVS Sync
