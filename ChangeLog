@@ -17,6 +17,7 @@
  - (dtucker) [openbsd-compat/{LOTS}] Move the "OPENBSD ORIGINAL" markers to
    after the copyright notices.  Having them at the top next to the CVSIDs
    guarantees a conflict for each and every sync.
+ - (dtucker) [openbsd-compat/strlcpy.c] Update from OpenBSD 1.8 -> 1.10.
 
 20051105
  - (djm) OpenBSD CVS Sync
