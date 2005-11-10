@@ -8,6 +8,8 @@
    revs 1.7 - 1.9.
  - (dtucker) [auth-krb5.c] Fix -Wsign-compare warning in non-Heimdal path.
    Patch from djm@.
+ - (dtucker) [configure.ac] Disable pointer-sign warnings on gcc 4.0+
+   since they're not useful right now.  Patch from djm@.
 
 20051105
  - (djm) OpenBSD CVS Sync

@@ -90,7 +90,8 @@ if test "$GCC" = "yes" || test "$GCC" = "egcs"; then
 		1.*) ;;
 		2.8* | 2.9*) CFLAGS="$CFLAGS -Wsign-compare" ;;
 		2.*) ;;
-		*) CFLAGS="$CFLAGS -Wsign-compare" ;;
+		3.*) CFLAGS="$CFLAGS -Wsign-compare" ;;
+		*) CFLAGS="$CFLAGS -Wsign-compare -Wno-pointer-sign" ;;
 	esac
 
 	if test -z "$have_llong_max"; then
