@@ -33,6 +33,7 @@
  - (dtucker) [openbsd-compat/getcwd.c] Replace lstat with fstat to match up
    with OpenBSD code since we don't support platforms without fstat any more.
  - (dtucker) [openbsd-compat/inet_aton.c] Update from OpenBSD 1.7 -> 1.9.
+ - (dtucker) [openbsd-compat/inet_nto.c] Update from OpenBSD 1.4 -> 1.6.
 
 20051105
  - (djm) OpenBSD CVS Sync
