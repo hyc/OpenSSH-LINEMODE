@@ -46,6 +46,8 @@
    Id and copyright sync only, there were no substantial changes we need.
  - (dtucker) [openbsd-compat/bsd-closefrom.c openbsd-compat/base64.c]
    -Wsign-compare fixes from djm.
+ - (dtucker) [openbsd-compat/sigact.h] Update from OpenBSD 1.2 -> 1.3.
+   Id and copyright sync only, there were no substantial changes we need.
 
 20051105
  - (djm) OpenBSD CVS Sync
