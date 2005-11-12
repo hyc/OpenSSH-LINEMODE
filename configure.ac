@@ -848,7 +848,7 @@ dnl UnixWare 2.x
 AC_CHECK_FUNC(strcasecmp,
 	[], [ AC_CHECK_LIB(resolv, strcasecmp, LIBS="$LIBS -lresolv") ]
 )
-AC_CHECK_FUNC(utimes,
+AC_CHECK_FUNCS(utimes,
 	[], [ AC_CHECK_LIB(c89, utimes, [AC_DEFINE(HAVE_UTIMES)
 					LIBS="$LIBS -lc89"]) ]
 )
@@ -1181,7 +1181,6 @@ AC_CHECK_FUNCS( \
 	truncate \
 	unsetenv \
 	updwtmpx \
-	utimes \
 	vhangup \
 	vsnprintf \
 	waitpid \
