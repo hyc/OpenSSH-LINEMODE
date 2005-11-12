@@ -85,7 +85,7 @@ AC_CHECK_DECL(LLONG_MAX, have_llong_max=1, , [#include <limits.h>])
 
 if test "$GCC" = "yes" || test "$GCC" = "egcs"; then
 	CFLAGS="$CFLAGS -Wall -Wpointer-arith -Wuninitialized"
-	GCC_VER=`$CC -v 2>&1 | awk '/gcc version /{print $3}'`
+	GCC_VER=`$CC -v 2>&1 | $AWK '/gcc version /{print $3}'`
 	case $GCC_VER in
 		1.*) ;;
 		2.8* | 2.9*) CFLAGS="$CFLAGS -Wsign-compare" ;;
