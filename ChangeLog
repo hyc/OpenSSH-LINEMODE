@@ -18,6 +18,10 @@
      information about account validity.  bz #975, patch originally from
      Senthil Kumar, sanity checked by Simon Wilkinson, tested by djm@, biorn@,
      ok markus@
+   - dtucker@cvs.openbsd.org 2005/11/22 03:36:03
+     [hostfile.c]
+     Correct format/arguments to debug call; spotted by shaw at vranix.com
+     ok djm@
 
 20051120
  - (dtucker) [openbsd-compat/openssl-compat.h] Add comment explaining what
