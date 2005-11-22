@@ -3,6 +3,9 @@
    - deraadt@cvs.openbsd.org 2005/11/12 18:37:59
      [ssh-add.c]
      space
+   - deraadt@cvs.openbsd.org 2005/11/12 18:38:15
+     [scp.c]
+     avoid close(-1), as in rcp; ok cloder
 
 20051120
  - (dtucker) [openbsd-compat/openssl-compat.h] Add comment explaining what
