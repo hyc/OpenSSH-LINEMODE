@@ -22,6 +22,8 @@
      [hostfile.c]
      Correct format/arguments to debug call; spotted by shaw at vranix.com
      ok djm@
+ - (dtucker) [loginrec.c] Add casts to prevent compiler warnings, patch
+   from shaw at vranix.com.
 
 20051120
  - (dtucker) [openbsd-compat/openssl-compat.h] Add comment explaining what
