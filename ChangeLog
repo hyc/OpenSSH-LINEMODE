@@ -1,4 +1,11 @@
 20051122
+ - (djm) [configure.ac openbsd-compat/Makefile.in openbsd-compat/bsd-asprintf.c 
+   openbsd-compat/bsd-snprintf.c openbsd-compat/openbsd-compat.h] Add an 
+   asprintf() implementation, after syncing our {v,}snprintf() implementation
+   with some extra fixes from Samba's version. With help and debugging from 
+   dtucker and tim; ok dtucker@
+
+20051122
  - (dtucker) OpenBSD CVS Sync
    - deraadt@cvs.openbsd.org 2005/11/12 18:37:59
      [ssh-add.c]

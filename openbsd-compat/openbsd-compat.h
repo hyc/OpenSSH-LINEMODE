@@ -142,6 +142,10 @@ unsigned int arc4random(void);
 void arc4random_stir(void);
 #endif /* !HAVE_ARC4RANDOM */
 
+#ifndef HAVE_ASPRINTF
+int asprintf(char **, const char *, ...);
+#endif 
+
 #ifndef HAVE_OPENPTY
 int openpty(int *, int *, char *, struct termios *, struct winsize *);
 #endif /* HAVE_OPENPTY */
@@ -158,6 +162,10 @@ long long strtoll(const char *, char **, int);
 
 #ifndef HAVE_STRTONUM
 long long strtonum(const char *, long long, long long, const char **);
+#endif
+
+#ifndef HAVE_VASPRINTF
+int vasprintf(char **, const char *, va_list);
 #endif
 
 #ifndef HAVE_VSNPRINTF
