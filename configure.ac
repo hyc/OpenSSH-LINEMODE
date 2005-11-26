@@ -181,6 +181,8 @@ case "$host" in
 	AC_DEFINE(SPT_TYPE,SPT_REUSEARGV,
 		[Define to a Set Process Title type if your system is
 		supported by bsd-setproctitle.c])
+	AC_DEFINE(SSHPAM_CHAUTHTOK_NEEDS_RUID, 1,
+	    [AIX 5.2 and 5.3 (and presumably newer) require this])
 	;;
 *-*-cygwin*)
 	check_for_libcrypt_later=1
