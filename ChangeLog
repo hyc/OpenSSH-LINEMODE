@@ -1,6 +1,8 @@
 20051128
  - (dtucker) [regress/yes-head.sh] Work around breakage caused by some
    versions of GNU head.  Based on patch from zappaman at buraphalinux.org
+ - (dtucker) [includes.h] Bug #1122: __USE_GNU is a glibc internal macro, use
+   _GNU_SOURCE instead.  Patch from t8m at centrum.cz.
  - (dtucker) OpenBSD CVS Sync
    - dtucker@cvs.openbsd.org 2005/11/28 05:16:53
      [ssh-keygen.1 ssh-keygen.c]
