@@ -5,6 +5,8 @@
    - dtucker@cvs.openbsd.org 2005/11/29 02:04:55
      [ssh-keygen.c]
      Populate default key sizes before checking them; from & ok tim@
+ - (tim) [configure.ac sshd.8] Enable locked account check (a "*LK*" string)
+   for UnixWare.
 
 20051128
  - (dtucker) [regress/yes-head.sh] Work around breakage caused by some
