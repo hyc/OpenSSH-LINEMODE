@@ -1,3 +1,7 @@
+20051129
+ - (tim) [ssh-keygen.c] Move DSA length test after setting default when
+   bits == 0.
+
 20051128
  - (dtucker) [regress/yes-head.sh] Work around breakage caused by some
    versions of GNU head.  Based on patch from zappaman at buraphalinux.org
