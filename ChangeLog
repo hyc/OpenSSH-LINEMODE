@@ -1,3 +1,7 @@
+20051201
+ - (djm) [envpass.sh] Remove regress script that was accidentally committed 
+   in top level directory and not noticed for over a year :)
+
 20051129
  - (tim) [ssh-keygen.c] Move DSA length test after setting default when
    bits == 0.
