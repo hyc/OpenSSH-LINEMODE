@@ -29,6 +29,10 @@
      - avoid line split in SYNOPSIS
      - add args to -w
      - kill trailing whitespace
+   - jmc@cvs.openbsd.org 2005/12/08 14:59:44
+     [ssh.1 ssh_config.5]
+     make `!command' a little clearer;
+     ok reyk
 
 20051201
  - (djm) [envpass.sh] Remove regress script that was accidentally committed 
