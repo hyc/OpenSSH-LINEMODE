@@ -3,6 +3,10 @@
    - jmc@cvs.openbsd.org 2005/11/30 11:18:27
      [ssh.1]
      timezone -> time zone
+   - jmc@cvs.openbsd.org 2005/11/30 11:45:20
+     [ssh.1]
+     avoid ambiguities in describing TZ;
+     ok djm@
 
 20051201
  - (djm) [envpass.sh] Remove regress script that was accidentally committed 
