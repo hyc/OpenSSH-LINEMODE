@@ -1,3 +1,9 @@
+20051213
+ - (djm) OpenBSD CVS Sync
+   - jmc@cvs.openbsd.org 2005/11/30 11:18:27
+     [ssh.1]
+     timezone -> time zone
+
 20051201
  - (djm) [envpass.sh] Remove regress script that was accidentally committed 
    in top level directory and not noticed for over a year :)
