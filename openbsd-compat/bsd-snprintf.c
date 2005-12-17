@@ -788,7 +788,7 @@ int vsnprintf (char *str, size_t count, const char *fmt, va_list args)
 #endif
 
 #if !defined(HAVE_SNPRINTF)
-int snprintf(char *str,size_t count,const char *fmt,...)
+int snprintf(char *str, size_t count, SNPRINTF_CONST char *fmt, ...)
 {
 	size_t ret;
 	va_list ap;

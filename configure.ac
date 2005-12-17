@@ -1343,6 +1343,20 @@ int main(void)
 	)
 fi
 
+# On systems where [v]snprintf is broken, but is declared in stdio,
+# check that the fmt argument is const char * or just char *.
+# This is only useful for when BROKEN_SNPRINTF
+AC_MSG_CHECKING([whether snprintf can declare const char *fmt])
+AC_COMPILE_IFELSE([AC_LANG_SOURCE([[#include <stdio.h>
+	   int snprintf(char *a, size_t b, const char *c, ...) { return 0; }
+	   int main(void) { snprintf(0, 0, 0); } 
+    ]])],
+   [AC_MSG_RESULT(yes)
+    AC_DEFINE(SNPRINTF_CONST, [const],
+              [Define as const if snprintf() can declare const char *fmt])],
+   [AC_MSG_RESULT(no)
+    AC_DEFINE(SNPRINTF_CONST, [/* not const */])])
+
 # Check for missing getpeereid (or equiv) support
 NO_PEERCHECK=""
 if test "x$ac_cv_func_getpeereid" != "xyes" ; then
