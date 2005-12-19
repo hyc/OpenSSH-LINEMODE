@@ -24,7 +24,11 @@
 # define EVP_CIPHER_CTX_get_app_data(e)		((e)->app_data)
 #endif
 
-#if OPENSSL_VERSION_NUMBER < 0x00907000L
+#if (OPENSSL_VERSION_NUMBER < 0x00907000L) || defined(OPENSSL_LOBOTOMISED_AES)
+# define USE_BUILTIN_RIJNDAEL
+#endif
+
+#ifdef USE_BUILTIN_RIJNDAEL
 # define EVP_aes_128_cbc evp_rijndael
 # define EVP_aes_192_cbc evp_rijndael
 # define EVP_aes_256_cbc evp_rijndael

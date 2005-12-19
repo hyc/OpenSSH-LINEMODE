@@ -1803,6 +1803,24 @@ Also see contrib/findssl.sh for help identifying header/library mismatches.])
 	]
 )
 
+# Check for OpenSSL without EVP_aes_{192,256}_cbc
+AC_MSG_CHECKING([whether OpenSSL has crippled AES support])
+AC_COMPILE_IFELSE(
+	[AC_LANG_SOURCE([[
+#include <string.h>
+#include <openssl/evp.h>
+int main(void) { exit(EVP_aes_192_cbc() == NULL || EVP_aes_256_cbc() == NULL)}
+	]])],
+	[
+		AC_MSG_RESULT(no)
+	],
+	[
+		AC_MSG_RESULT(yes)
+		AC_DEFINE(OPENSSL_LOBOTOMISED_AES, 1,
+		    [libcrypto is missing AES 192 and 256 bit functions])
+	]
+)
+
 # Some systems want crypt() from libcrypt, *not* the version in OpenSSL,
 # because the system crypt() is more featureful.
 if test "x$check_for_libcrypt_before" = "x1"; then
