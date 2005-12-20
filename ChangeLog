@@ -22,6 +22,9 @@
    - stevesk@cvs.openbsd.org 2005/12/17 21:36:42
      [ssh_config.5]
      spelling: intented -> intended
+   - dtucker@cvs.openbsd.org 2005/12/20 04:41:07
+     [ssh.c]
+     exit(255) on error to match description in ssh(1); bz #1137; ok deraadt@
 
 20051219
  - (dtucker) [cipher-aes.c cipher-ctr.c cipher.c configure.ac
