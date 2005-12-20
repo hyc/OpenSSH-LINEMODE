@@ -7,6 +7,9 @@
      [ssh.1]
      move the option descriptions up the page: start of a restructure;
      ok markus deraadt
+   - jmc@cvs.openbsd.org 2005/12/16 18:08:53
+     [ssh.1]
+     simplify a sentence;
 
 20051219
  - (dtucker) [cipher-aes.c cipher-ctr.c cipher.c configure.ac
