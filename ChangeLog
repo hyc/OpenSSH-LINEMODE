@@ -16,6 +16,9 @@
    - jmc@cvs.openbsd.org 2005/12/16 18:14:40
      [ssh.1]
      signpost the protocol sections;
+   - stevesk@cvs.openbsd.org 2005/12/17 21:13:05
+     [ssh_config.5 session.c]
+     spelling: fowarding, fowarded
 
 20051219
  - (dtucker) [cipher-aes.c cipher-ctr.c cipher.c configure.ac
