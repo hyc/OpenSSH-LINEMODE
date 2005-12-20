@@ -19,6 +19,9 @@
    - stevesk@cvs.openbsd.org 2005/12/17 21:13:05
      [ssh_config.5 session.c]
      spelling: fowarding, fowarded
+   - stevesk@cvs.openbsd.org 2005/12/17 21:36:42
+     [ssh_config.5]
+     spelling: intented -> intended
 
 20051219
  - (dtucker) [cipher-aes.c cipher-ctr.c cipher.c configure.ac
