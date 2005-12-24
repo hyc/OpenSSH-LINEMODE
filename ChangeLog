@@ -43,6 +43,10 @@
    - jmc@cvs.openbsd.org 2005/12/23 23:46:23
      [ssh.1]
      less mark up for -c;
+   - djm@cvs.openbsd.org 2005/12/24 02:27:41
+     [session.c sshd.c]
+     eliminate some code duplicated in privsep and non-privsep paths, and
+     explicitly clear SIGALRM handler; "groovy" deraadt@
 
 20051220
  - (dtucker) OpenBSD CVS Sync
