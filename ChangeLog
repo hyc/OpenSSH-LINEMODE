@@ -16,6 +16,9 @@
    - jmc@cvs.openbsd.org 2005/12/21 11:48:16
      [ssh.1]
      -L and -R descriptions are now above, not below, ~C description;
+   - jmc@cvs.openbsd.org 2005/12/21 11:57:25
+     [ssh.1]
+     options now described `above', rather than `later';
 
 20051220
  - (dtucker) OpenBSD CVS Sync
