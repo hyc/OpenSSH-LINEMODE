@@ -9,6 +9,10 @@
    - jmc@cvs.openbsd.org 2005/12/20 22:02:50
      [ssh.1]
      .Ss -> .Sh: subsections have not made this page more readable
+   - jmc@cvs.openbsd.org 2005/12/20 22:09:41
+     [ssh.1]
+     move info on ssh return values and config files up into the main
+     description;
 
 20051220
  - (dtucker) OpenBSD CVS Sync
