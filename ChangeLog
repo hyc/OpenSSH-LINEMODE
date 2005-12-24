@@ -13,6 +13,9 @@
      [ssh.1]
      move info on ssh return values and config files up into the main
      description;
+   - jmc@cvs.openbsd.org 2005/12/21 11:48:16
+     [ssh.1]
+     -L and -R descriptions are now above, not below, ~C description;
 
 20051220
  - (dtucker) OpenBSD CVS Sync
