@@ -1,3 +1,12 @@
+20051224
+ - (djm) OpenBSD CVS Sync
+   - jmc@cvs.openbsd.org 2005/12/20 21:59:43
+     [ssh.1]
+     merge the sections on protocols 1 and 2 into one section on
+     authentication;
+     feedback djm dtucker
+     ok deraadt markus dtucker
+
 20051220
  - (dtucker) OpenBSD CVS Sync
    - reyk@cvs.openbsd.org 2005/12/13 15:03:02
