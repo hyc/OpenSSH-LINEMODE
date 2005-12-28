@@ -1,3 +1,6 @@
+20051229
+ - (tim) [buildpkg.sh.in] grep for $SSHDUID instead of $SSHDGID on /etc/passwd
+
 20051224
  - (djm) OpenBSD CVS Sync
    - jmc@cvs.openbsd.org 2005/12/20 21:59:43
