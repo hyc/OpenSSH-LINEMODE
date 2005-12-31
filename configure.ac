@@ -327,7 +327,7 @@ main() { if (NSVersionOfRunTimeLibrary("System") >= (60 << 16))
 		;;
 	esac
 	# tun(4) forwarding compat code
-	AC_CHECK_HEADERS(linux/tun.h)
+	AC_CHECK_HEADERS(linux/if_tun.h)
 	if test "x$ac_cv_header_linux_tun_h" = "xyes" ; then
 		AC_DEFINE(SSH_TUN_LINUX, 1,
 		    [Open tunnel devices the Linux tun/tap way])
