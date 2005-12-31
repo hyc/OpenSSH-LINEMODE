@@ -13,6 +13,9 @@
      with the -b flag;
      based on a diff from john l. scarfone;
      ok djm
+   - stevesk@cvs.openbsd.org 2005/12/31 01:38:45
+     [ssh.1]
+     document -MM; ok djm@
 
 20051229
  - (tim) [buildpkg.sh.in] grep for $SSHDUID instead of $SSHDGID on /etc/passwd
