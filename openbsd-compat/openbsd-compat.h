@@ -186,5 +186,6 @@ char *shadow_pw(struct passwd *pw);
 #include "port-irix.h"
 #include "port-aix.h"
 #include "port-uw.h"
+#include "port-tun.h"
 
 #endif /* _OPENBSD_COMPAT_H */

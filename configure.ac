@@ -326,6 +326,9 @@ main() { if (NSVersionOfRunTimeLibrary("System") >= (60 << 16))
 			[Define if cmsg_type is not passed correctly])
 		;;
 	esac
+	AC_DEFINE(SSH_TUN_LINUX, 1, [Open tunnel devices the Linux tun/tap way])
+	AC_DEFINE(SSH_TUN_COMPAT_AF, 1, [Use tunnel device compatibility to OpenBSD])
+	AC_DEFINE(SSH_TUN_PREPEND_AF, 1, [Prepend the address family to IP tunnel traffic])
 	;;
 mips-sony-bsd|mips-sony-newsos4)
 	AC_DEFINE(NEED_SETPRGP, 1, [Need setpgrp to acquire controlling tty])
