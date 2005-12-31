@@ -20,6 +20,8 @@
    [serverloop.c ssh.c openbsd-compat/Makefile.in]
    [openbsd-compat/openbsd-compat.h] Implement tun(4) forwarding 
    compatability support for Linux, diff from reyk@
+ - (djm) [configure.ac] Disable Linux tun(4) compat code if linux/tun.h does
+   not exist
 
 20051229
  - (tim) [buildpkg.sh.in] grep for $SSHDUID instead of $SSHDGID on /etc/passwd
