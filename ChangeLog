@@ -5,6 +5,7 @@
          limited to IPv4 tunnels only, and most versions don't support the
          tap(4) device at all.
  - (djm) [configure.ac] Fix linux/if_tun.h test
+ - (djm) [openbsd-compat/port-tun.c] Linux needs linux/if.h too
 
 20051229
  - (djm) OpenBSD CVS Sync
