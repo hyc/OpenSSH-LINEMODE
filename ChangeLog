@@ -1,3 +1,6 @@
+20060102
+ - (djm) [README.tun] Add README.tun, missed during sync of tun(4) support
+
 20060101
  - (djm) [Makefile.in configure.ac includes.h misc.c]
          [openbsd-compat/port-tun.c openbsd-compat/port-tun.h] Add support
