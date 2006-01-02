@@ -23,6 +23,11 @@
    - djm@cvs.openbsd.org 2006/01/02 01:20:31
      [sftp-client.c sftp-common.h sftp-server.c]
      use a common max. packet length, no binary change
+   - reyk@cvs.openbsd.org 2006/01/02 07:53:44
+     [misc.c]
+     clarify tun(4) opening - set the mode and bring the interface up. also
+     (re)sets the tun(4) layer 2 LINK0 flag for existing tunnel interfaces.
+     suggested and ok by djm@
 
 20060101
  - (djm) [Makefile.in configure.ac includes.h misc.c]
