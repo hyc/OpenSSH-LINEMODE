@@ -11,6 +11,9 @@
    - jmc@cvs.openbsd.org 2005/12/31 13:44:04
      [ssh.1]
      clean up ENVIRONMENT a little;
+   - jmc@cvs.openbsd.org 2005/12/31 13:45:19
+     [ssh.1]
+     .Nm does not require an argument;
 
 20060101
  - (djm) [Makefile.in configure.ac includes.h misc.c]
