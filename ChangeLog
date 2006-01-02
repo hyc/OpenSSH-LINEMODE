@@ -1,5 +1,13 @@
 20060102
  - (djm) [README.tun] Add README.tun, missed during sync of tun(4) support
+ - (djm) OpenBSD CVS Sync
+   - jmc@cvs.openbsd.org 2005/12/31 10:46:17
+     [ssh.1]
+     merge the "LOGIN SESSION AND REMOTE EXECUTION" and "SERVER
+     AUTHENTICATION" sections into "AUTHENTICATION";
+     some rewording done to make the text read better, plus some
+     improvements from djm;
+     ok djm
 
 20060101
  - (djm) [Makefile.in configure.ac includes.h misc.c]
