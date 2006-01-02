@@ -8,6 +8,9 @@
      some rewording done to make the text read better, plus some
      improvements from djm;
      ok djm
+   - jmc@cvs.openbsd.org 2005/12/31 13:44:04
+     [ssh.1]
+     clean up ENVIRONMENT a little;
 
 20060101
  - (djm) [Makefile.in configure.ac includes.h misc.c]
