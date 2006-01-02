@@ -20,6 +20,9 @@
    - stevesk@cvs.openbsd.org 2006/01/01 10:08:48
      [misc.c]
      no trailing "\n" for debug()
+   - djm@cvs.openbsd.org 2006/01/02 01:20:31
+     [sftp-client.c sftp-common.h sftp-server.c]
+     use a common max. packet length, no binary change
 
 20060101
  - (djm) [Makefile.in configure.ac includes.h misc.c]
