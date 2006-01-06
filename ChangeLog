@@ -23,6 +23,9 @@
    - jmc@cvs.openbsd.org 2006/01/04 18:45:01
      [ssh.1]
      remove .Xr's to rsh(1) and telnet(1): they are hardly needed;
+   - jmc@cvs.openbsd.org 2006/01/04 19:40:24
+     [ssh.1]
+     +.Xr ssh-keyscan 1 ,
 
 20060103
  - (djm) [channels.c] clean up harmless merge error, from reyk@
