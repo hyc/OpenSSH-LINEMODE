@@ -15,6 +15,11 @@
    - jmc@cvs.openbsd.org 2006/01/03 16:55:18
      [ssh.1]
      tweak the description of ~/.ssh/environment
+   - jmc@cvs.openbsd.org 2006/01/04 18:42:46
+     [ssh.1]
+     chop out some duplication in the .{r,s}hosts/{h,sh}osts.equiv FILES
+     entries;
+     ok markus
 
 20060103
  - (djm) [channels.c] clean up harmless merge error, from reyk@
