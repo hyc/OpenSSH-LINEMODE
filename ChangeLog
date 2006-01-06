@@ -6,6 +6,9 @@
      this avoids nastly line wrap when we have long pathnames, and treats
      each file as a separate item;
      remove the .Pa too, since it is useless.
+   - jmc@cvs.openbsd.org 2006/01/03 16:35:30
+     [ssh.1]
+     use a larger width for the ENVIRONMENT list;
 
 20060103
  - (djm) [channels.c] clean up harmless merge error, from reyk@
