@@ -1,3 +1,12 @@
+20060106
+ - (djm) OpenBSD CVS Sync
+   - jmc@cvs.openbsd.org 2006/01/03 16:31:10
+     [ssh.1]
+     move FILES to a -compact list, and make each files an item in that list.
+     this avoids nastly line wrap when we have long pathnames, and treats
+     each file as a separate item;
+     remove the .Pa too, since it is useless.
+
 20060103
  - (djm) [channels.c] clean up harmless merge error, from reyk@
 
