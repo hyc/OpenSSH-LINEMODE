@@ -26,6 +26,9 @@
    - jmc@cvs.openbsd.org 2006/01/04 19:40:24
      [ssh.1]
      +.Xr ssh-keyscan 1 ,
+   - jmc@cvs.openbsd.org 2006/01/04 19:50:09
+     [ssh.1]
+     -.Xr gzip 1 ,
 
 20060103
  - (djm) [channels.c] clean up harmless merge error, from reyk@
