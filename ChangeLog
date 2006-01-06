@@ -20,6 +20,9 @@
      chop out some duplication in the .{r,s}hosts/{h,sh}osts.equiv FILES
      entries;
      ok markus
+   - jmc@cvs.openbsd.org 2006/01/04 18:45:01
+     [ssh.1]
+     remove .Xr's to rsh(1) and telnet(1): they are hardly needed;
 
 20060103
  - (djm) [channels.c] clean up harmless merge error, from reyk@
