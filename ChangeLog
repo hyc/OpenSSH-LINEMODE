@@ -1,3 +1,8 @@
+20060109
+ - (dtucker) [contrib/cygwin/ssh-host-config] Make sshd service depend on
+   tcpip service so it's always started after IP is up.  Patch from
+   vinschen at redhat.com.
+
 20060106
  - (djm) OpenBSD CVS Sync
    - jmc@cvs.openbsd.org 2006/01/03 16:31:10
