@@ -19,6 +19,9 @@
      refer to `TCP' rather than `TCP/IP' in the context of connection
      forwarding;
      ok markus
+   - jmc@cvs.openbsd.org 2006/01/12 22:20:00
+     [sshd.8]
+     refer to TCP forwarding, rather than TCP/IP forwarding;
 
 20060109
  - (dtucker) [contrib/cygwin/ssh-host-config] Make sshd service depend on
