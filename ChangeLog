@@ -9,6 +9,11 @@
      final round of whacking FILES for duplicate info, and some consistency
      fixes;
      ok djm
+   - jmc@cvs.openbsd.org 2006/01/12 14:44:12
+     [ssh.1]
+     split sections on tcp and x11 forwarding into two sections.
+     add an example in the tcp section, based on sth i wrote for ssh faq;
+     help + ok: djm markus dtucker
 
 20060109
  - (dtucker) [contrib/cygwin/ssh-host-config] Make sshd service depend on
