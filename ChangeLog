@@ -1,3 +1,9 @@
+20060120
+ - (dtucker) OpenBSD CVS Sync
+   - jmc@cvs.openbsd.org 2006/01/15 17:37:05
+     [ssh.1]
+     correction from deraadt
+
 20060114
  - (djm) OpenBSD CVS Sync
    - jmc@cvs.openbsd.org 2006/01/06 13:27:32
