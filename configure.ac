@@ -47,6 +47,11 @@ AC_PATH_PROG(PATH_GROUPADD_PROG, groupadd, groupadd,
 AC_PATH_PROG(PATH_USERADD_PROG, useradd, useradd,
 	[/usr/sbin${PATH_SEPARATOR}/etc])
 AC_CHECK_PROG(MAKE_PACKAGE_SUPPORTED, pkgmk, yes, no)
+if test -x /sbin/sh; then
+	AC_SUBST(STARTUP_SCRIPT_SHELL,/sbin/sh)
+else
+	AC_SUBST(STARTUP_SCRIPT_SHELL,/bin/sh)
+fi
 
 # System features
 AC_SYS_LARGEFILE
