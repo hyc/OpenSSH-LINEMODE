@@ -773,7 +773,7 @@ sshpam_respond(void *ctx, u_int num, char **resp)
 	Buffer buffer;
 	struct pam_ctxt *ctxt = ctx;
 
-	debug2("PAM: %s entering, %d responses", __func__, num);
+	debug2("PAM: %s entering, %u responses", __func__, num);
 	switch (ctxt->pam_done) {
 	case 1:
 		sshpam_authenticated = 1;
