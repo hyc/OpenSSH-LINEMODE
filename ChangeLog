@@ -66,6 +66,9 @@
    - djm@cvs.openbsd.org 2006/01/31 10:23:23
      [scp.sh]
      regression test for CVE-2006-0225 written by dtucker@
+   - djm@cvs.openbsd.org 2006/01/31 10:36:33
+     [scp.sh]
+     regress test for "scp a b c" where "c" is not a directory
 
 20060129
  - (dtucker) [configure.ac opensshd.init.in] Bug #1144: Use /bin/sh for the
