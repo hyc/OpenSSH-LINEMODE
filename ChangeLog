@@ -47,8 +47,11 @@
      force addressfamily=inet for tests, unbreaking dynamic-forward regress for
      recently committed nc SOCKS5 changes
    - djm@cvs.openbsd.org 2005/05/24 04:10:54
-     [try-ciphers.sh]
+     [regress/try-ciphers.sh]
      oops, new arcfour modes here too
+   - markus@cvs.openbsd.org 2005/06/30 11:02:37
+     [regress/scp.sh]
+     allow SUDO=sudo; from Alexander Bluhm
 
 20060129
  - (dtucker) [configure.ac opensshd.init.in] Bug #1144: Use /bin/sh for the
