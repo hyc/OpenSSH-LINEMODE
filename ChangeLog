@@ -56,6 +56,10 @@
      [regress/agent-getpeereid.sh]
      all other scripts in this dir use $SUDO, not 'sudo', so pull this even
      ok markus@
+   - dtucker@cvs.openbsd.org 2005/12/14 04:36:39
+     [regress/scp-ssh-wrapper.sh]
+     Fix assumption about how many args scp will pass; ok djm@
+     NB. ID sync only, we already had this
 
 20060129
  - (dtucker) [configure.ac opensshd.init.in] Bug #1144: Use /bin/sh for the
