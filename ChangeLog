@@ -18,6 +18,11 @@
      written with a lot of help from jakob;
      feedback dtucker/markus;
      ok markus
+   - reyk@cvs.openbsd.org 2006/01/30 12:22:22
+     [channels.c]
+     mark channel as write failed or dead instead of read failed on error
+     of the channel output filter.
+     ok markus@
 
 20060129
  - (dtucker) [configure.ac opensshd.init.in] Bug #1144: Use /bin/sh for the
