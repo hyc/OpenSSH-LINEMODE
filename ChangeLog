@@ -52,6 +52,10 @@
    - markus@cvs.openbsd.org 2005/06/30 11:02:37
      [regress/scp.sh]
      allow SUDO=sudo; from Alexander Bluhm
+   - grunk@cvs.openbsd.org 2005/11/14 21:25:56
+     [regress/agent-getpeereid.sh]
+     all other scripts in this dir use $SUDO, not 'sudo', so pull this even
+     ok markus@
 
 20060129
  - (dtucker) [configure.ac opensshd.init.in] Bug #1144: Use /bin/sh for the
