@@ -2,6 +2,12 @@
  - (djm) [regress/test-exec.sh] Try 'logname' as well as 'whoami' to 
    determine the user's login name - needed for regress tests on Solaris 
    10 and OpenSolaris
+ - (djm) OpenBSD CVS Sync
+   - jmc@cvs.openbsd.org 2006/02/01 09:06:50
+     [sshd.8]
+     - merge sections on protocols 1 and 2 into a single section
+     - remove configuration file section
+     ok markus
 
 20060131
  - (djm) OpenBSD CVS Sync
