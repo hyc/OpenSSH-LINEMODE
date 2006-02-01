@@ -16,6 +16,7 @@
    - markus@cvs.openbsd.org 2006/02/01 11:27:22
      [version.h]
      openssh 4.3
+ - (djm) Release OpenSSH 4.3p1
 
 20060131
  - (djm) OpenBSD CVS Sync
