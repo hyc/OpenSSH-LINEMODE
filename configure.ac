@@ -1832,7 +1832,7 @@ AC_COMPILE_IFELSE(
 	[AC_LANG_SOURCE([[
 #include <string.h>
 #include <openssl/evp.h>
-int main(void) { exit(EVP_aes_192_cbc() == NULL || EVP_aes_256_cbc() == NULL)}
+int main(void) { exit(EVP_aes_192_cbc() == NULL || EVP_aes_256_cbc() == NULL);}
 	]])],
 	[
 		AC_MSG_RESULT(no)
