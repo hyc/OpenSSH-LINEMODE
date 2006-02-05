@@ -577,12 +577,13 @@ mips-sony-bsd|mips-sony-newsos4)
 	AC_DEFINE(BROKEN_SETREGID)
 	;;
 
-*-*-nto-qnx)
+*-*-nto-qnx*)
 	AC_DEFINE(USE_PIPES)
 	AC_DEFINE(NO_X11_UNIX_SOCKETS)
 	AC_DEFINE(MISSING_NFDBITS, 1, [Define on *nto-qnx systems])
 	AC_DEFINE(MISSING_HOWMANY, 1, [Define on *nto-qnx systems])
 	AC_DEFINE(MISSING_FD_MASK, 1, [Define on *nto-qnx systems])
+	AC_DEFINE(DISABLE_LASTLOG)
 	;;
 
 *-*-ultrix*)
