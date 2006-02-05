@@ -15,6 +15,7 @@
 # OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
 
 AC_INIT(OpenSSH, Portable, openssh-unix-dev@mindrot.org)
+AC_REVISION($Revision$)
 AC_CONFIG_SRCDIR([ssh.c])
 
 AC_CONFIG_HEADER(config.h)
@@ -673,7 +674,6 @@ AC_CHECK_HEADERS( \
 	glob.h \
 	ia.h \
 	iaf.h \
-	lastlog.h \
 	limits.h \
 	login.h \
 	login_cap.h \
@@ -723,6 +723,13 @@ AC_CHECK_HEADERS( \
 	utmpx.h \
 	vis.h \
 )
+
+# lastlog.h requires sys/time.h to be included first on Solaris
+AC_CHECK_HEADERS(lastlog.h, [], [], [
+#ifdef HAVE_SYS_TIME_H
+# include <sys/time.h>
+#endif
+])
 
 # sys/ptms.h requires sys/stream.h to be included first on Solaris
 AC_CHECK_HEADERS(sys/ptms.h, [], [], [
