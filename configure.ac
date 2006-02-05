@@ -680,10 +680,8 @@ AC_CHECK_HEADERS( \
 	login_cap.h \
 	maillock.h \
 	ndir.h \
-	net/if.h \
 	netdb.h \
 	netgroup.h \
-	netinet/in_systm.h \
 	pam/pam_appl.h \
 	paths.h \
 	pty.h \
