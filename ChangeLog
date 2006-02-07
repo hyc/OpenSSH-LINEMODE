@@ -1,3 +1,8 @@
+20060208
+ - (tim) [session.c] Logout records were not updated on systems with
+   post auth privsep disabled due to bug 1086 changes. Analysis and patch
+   by vinschen at redhat.com. OK tim@, dtucker@.
+
 20060206
  - (tim) [configure.ac] Remove unnecessary tests for net/if.h and 
    netinet/in_systm.h. OK dtucker@.
