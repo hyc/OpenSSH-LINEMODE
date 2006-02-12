@@ -584,6 +584,7 @@ mips-sony-bsd|mips-sony-newsos4)
 	AC_DEFINE(MISSING_HOWMANY, 1, [Define on *nto-qnx systems])
 	AC_DEFINE(MISSING_FD_MASK, 1, [Define on *nto-qnx systems])
 	AC_DEFINE(DISABLE_LASTLOG)
+	enable_etc_default_login=no	# has incompatible /etc/default/login
 	;;
 
 *-*-ultrix*)
