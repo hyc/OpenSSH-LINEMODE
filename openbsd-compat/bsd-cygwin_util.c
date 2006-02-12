@@ -268,7 +268,7 @@ char **
 fetch_windows_environment(void)
 {
 	char **e, **p;
-	int i, idx = 0;
+	unsigned int i, idx = 0;
 
 	p = xmalloc((WENV_SIZ + 1) * sizeof(char *));
 	for (e = environ; *e != NULL; ++e) {

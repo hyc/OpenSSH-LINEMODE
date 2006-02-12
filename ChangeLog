@@ -1,3 +1,7 @@
+20060212
+ - (dtucker) [openbsd-compat/bsd-cygwin_util.c] Make loop counter unsigned
+   to silence compiler warning, from vinschen at redhat.com.
+
 20060208
  - (tim) [session.c] Logout records were not updated on systems with
    post auth privsep disabled due to bug 1086 changes. Analysis and patch
