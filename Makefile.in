@@ -410,6 +410,9 @@ tests:	$(TARGETS)
 		EXEEXT="$(EXEEXT)" \
 		$@
 
+compat-tests: $(LIBCOMPAT)
+	(cd openbsd-compat/regress && $(MAKE))
+
 regressclean:
 	if [ -f regress/Makefile ] && [ -r regress/Makefile ]; then \
 		(cd regress && $(MAKE) clean) \

@@ -1,3 +1,7 @@
+20060219
+ - (dtucker) [Makefile.in configure.ac, added openbsd-compat/regress/]
+   Add first attempt at regress tests for compat library.  ok djm@
+
 20060214
  - (tim) [buildpkg.sh.in] Make the names consistent.
    s/pkg_post_make_install_fixes.sh/pkg-post-make-install-fixes.sh/ OK dtucker@

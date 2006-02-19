@@ -3729,7 +3729,7 @@ CFLAGS="$CFLAGS $werror_flags"
 
 AC_EXEEXT
 AC_CONFIG_FILES([Makefile buildpkg.sh opensshd.init openbsd-compat/Makefile \
-	scard/Makefile ssh_prng_cmds survey.sh])
+	openbsd-compat/regress/Makefile scard/Makefile ssh_prng_cmds survey.sh])
 AC_OUTPUT
 
 # Print summary of options
