@@ -1834,6 +1834,24 @@ Also see contrib/findssl.sh for help identifying header/library mismatches.])
 	]
 )
 
+AC_ARG_WITH(ssl-engine,
+	[  --with-ssl-engine       Enable OpenSSL (hardware) ENGINE support ],
+	[ if test "x$withval" != "xno" ; then
+		AC_MSG_CHECKING(for OpenSSL ENGINE support)
+		AC_TRY_COMPILE(
+			[ #include <openssl/engine.h>],
+			[
+int main(void){ENGINE_load_builtin_engines();ENGINE_register_all_complete();}
+			],
+			[ AC_MSG_RESULT(yes)
+			  AC_DEFINE(USE_OPENSSL_ENGINE, 1,
+			     [Enable OpenSSL engine support])
+			],
+			[ AC_MSG_ERROR(OpenSSL ENGINE support not found)]
+		)
+	  fi ]
+)
+
 # Check for OpenSSL without EVP_aes_{192,256}_cbc
 AC_MSG_CHECKING([whether OpenSSL has crippled AES support])
 AC_COMPILE_IFELSE(

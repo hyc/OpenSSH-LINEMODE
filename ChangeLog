@@ -1,3 +1,9 @@
+20060220
+ - (dtucker) [INSTALL configure.ac openbsd-compat/openssl-compat.{c,h}]
+   Add optional enabling of OpenSSL's (hardware) Engine support, via
+   configure --with-ssl-engine.  Based in part on a diff by michal at
+   logix.cz.
+
 20060219
  - (dtucker) [Makefile.in configure.ac, added openbsd-compat/regress/]
    Add first attempt at regress tests for compat library.  ok djm@
