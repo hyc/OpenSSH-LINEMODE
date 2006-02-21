@@ -65,8 +65,13 @@ extern const EVP_CIPHER *evp_acss(void);
 #  define EVP_CIPHER_CTX_cleanup(a)	ssh_EVP_CIPHER_CTX_cleanup((a))
 # endif /* SSH_OLD_EVP */
 
-# define SSLeay_add_all_algorithms()	ssh_SSLeay_add_all_algorithms()
+# ifdef USE_OPENSSL_ENGINE
+#  ifdef SSLeay_add_all_algorithms
+#   undef SSLeay_add_all_algorithms
+#  endif
+#  define SSLeay_add_all_algorithms()	ssh_SSLeay_add_all_algorithms()
 void ssh_SSLeay_add_all_algorithms(void);
+#endif
 
 int ssh_EVP_CipherInit(EVP_CIPHER_CTX *, const EVP_CIPHER *, unsigned char *,
     unsigned char *, int);
