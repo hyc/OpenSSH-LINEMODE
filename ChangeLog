@@ -2,6 +2,8 @@
  - (dtucker) [contrib/cygwin/ssh-host-config] Require use of lastlog as a
    file rather than directory, required as Cygwin will be importing lastlog(1).
    Also tightens up permissions on the file.  Patch from vinschen@redhat.com.
+ - (dtucker) [gss-serv-krb5.c] Bug #1166: Correct #ifdefs for gssapi_krb5.h
+   includes.  Patch from gentoo.riverrat at gmail.com.
 
 20060226
  - (dtucker) [configure.ac] Bug #1156: QNX apparently needs SSHD_ACQUIRES_CTTY
