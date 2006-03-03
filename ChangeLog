@@ -48,7 +48,7 @@
    post auth privsep disabled due to bug 1086 changes. Analysis and patch
    by vinschen at redhat.com. OK tim@, dtucker@.
  - (dtucker) [configure.ac] Typo in Ultrix and NewsOS sections (NEED_SETPRGP
-   -> NEED_SETPGRP), reported by Berhard Simon.  ok tim@
+   -> NEED_SETPGRP), reported by Bernhard Simon.  ok tim@
 
 20060206
  - (tim) [configure.ac] Remove unnecessary tests for net/if.h and 
