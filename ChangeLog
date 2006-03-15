@@ -10,6 +10,9 @@
    - stevesk@cvs.openbsd.org 2006/02/07 01:08:04
      [auth-rhosts.c includes.h]
      move #include <netgroup.h> out of includes.h; ok markus@
+   - stevesk@cvs.openbsd.org 2006/02/07 01:18:09
+     [includes.h ssh-agent.c ssh-keyscan.c sshconnect2.c]
+     move #include <sys/queue.h> out of includes.h; ok markus@
 
 20060313
  - (dtucker) [configure.ac] Bug #1171: Don't use printf("%lld", longlong)
