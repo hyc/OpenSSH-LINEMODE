@@ -229,6 +229,10 @@
      Make ssh-add check file permissions before attempting to load private
      key files multiple times; it will fail anyway and this prevents confusing
      multiple prompts and warnings.  mindrot #1138, ok djm@
+   - djm@cvs.openbsd.org 2006/03/14 00:15:39
+     [canohost.c]
+     log the originating address and not just the name when a reverse
+     mapping check fails, requested by linux AT linuon.com
 
 20060313
  - (dtucker) [configure.ac] Bug #1171: Don't use printf("%lld", longlong)
