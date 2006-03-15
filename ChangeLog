@@ -17,6 +17,9 @@
      [channels.c clientloop.c clientloop.h includes.h packet.h]
      [serverloop.c sshpty.c sshpty.h sshtty.c ttymodes.c]
      move #include <termios.h> out of includes.h; ok markus@
+   - stevesk@cvs.openbsd.org 2006/02/07 01:52:50
+     [sshtty.c]
+     "log.h" not needed
 
 20060313
  - (dtucker) [configure.ac] Bug #1171: Don't use printf("%lld", longlong)
