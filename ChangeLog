@@ -265,7 +265,8 @@
    [openbsd-compat/readpassphrase.c] Lots of include fixes for
    OpenSolaris
  - (tim) [includes.h] put sys/stat.h back in to quiet some "macro redefined:"
-   warnings.
+ - (tim) [openssh/sshpty.c openssh/openbsd-compat/port-tun.c] put in some
+   includes removed from includes.h
 
 20060313
  - (dtucker) [configure.ac] Bug #1171: Don't use printf("%lld", longlong)
