@@ -154,6 +154,9 @@
      [ssh_config.5]
      add section on patterns;
      from dtucker + myself
+   - jmc@cvs.openbsd.org 2006/02/24 10:33:54
+     [sshd_config.5]
+     signpost to PATTERNS;
 
 20060313
  - (dtucker) [configure.ac] Bug #1171: Don't use printf("%lld", longlong)
