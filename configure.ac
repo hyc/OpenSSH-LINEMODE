@@ -679,7 +679,6 @@ AC_CHECK_HEADERS( \
 	iaf.h \
 	limits.h \
 	login.h \
-	login_cap.h \
 	maillock.h \
 	ndir.h \
 	netdb.h \
@@ -738,6 +737,11 @@ AC_CHECK_HEADERS(sys/ptms.h, [], [], [
 #ifdef HAVE_SYS_STREAM_H
 # include <sys/stream.h>
 #endif
+])
+
+# login_cap.h requires sys/types.h on NetBSD
+AC_CHECK_HEADERS(login_cap.h, [], [], [
+#include <sys/types.h>
 ])
 
 # Checks for libraries.
