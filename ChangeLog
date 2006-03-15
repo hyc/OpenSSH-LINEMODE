@@ -200,6 +200,9 @@
      fix logout recording when privilege separation is disabled, analysis and
      patch from vinschen at redhat.com; tested by dtucker@ ok deraadt@
      NB. ID sync only - patch already in portable
+   - djm@cvs.openbsd.org 2006/03/04 04:12:58
+     [serverloop.c]
+     move a debug() outside of a signal handler; ok markus@ a little while back
 
 20060313
  - (dtucker) [configure.ac] Bug #1171: Don't use printf("%lld", longlong)
