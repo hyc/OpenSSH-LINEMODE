@@ -669,6 +669,7 @@ dnl Checks for header files.
 AC_CHECK_HEADERS( \
 	bstring.h \
 	crypt.h \
+	crypto/sha2.h \
 	dirent.h \
 	endian.h \
 	features.h \
