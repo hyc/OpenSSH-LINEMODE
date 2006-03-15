@@ -85,6 +85,10 @@
    - jmc@cvs.openbsd.org 2006/02/12 10:52:41
      [sshd.8]
      rework the description of authorized_keys a little;
+   - jmc@cvs.openbsd.org 2006/02/12 17:57:19
+     [sshd.8]
+     sort the list of options permissable w/ authorized_keys;
+     ok djm dtucker
 
 20060313
  - (dtucker) [configure.ac] Bug #1171: Don't use printf("%lld", longlong)
