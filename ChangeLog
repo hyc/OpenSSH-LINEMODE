@@ -192,6 +192,9 @@
    - jmc@cvs.openbsd.org 2006/02/26 18:01:13
      [sshd_config.5]
      subsection is pointless here;
+   - jmc@cvs.openbsd.org 2006/02/26 18:03:10
+     [ssh_config.5]
+     comma;
 
 20060313
  - (dtucker) [configure.ac] Bug #1171: Don't use printf("%lld", longlong)
