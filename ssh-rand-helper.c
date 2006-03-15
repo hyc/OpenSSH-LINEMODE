@@ -24,6 +24,17 @@
 
 #include "includes.h"
 
+#include <sys/types.h>
+#include <sys/resource.h>
+#include <sys/stat.h>
+#include <sys/wait.h>
+
+#ifdef HAVE_SYS_UN_H
+# include <sys/un.h>
+#endif
+
+#include <signal.h>
+
 #include <openssl/rand.h>
 #include <openssl/sha.h>
 #include <openssl/crypto.h>

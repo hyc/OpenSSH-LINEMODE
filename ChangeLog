@@ -254,6 +254,7 @@
  - (djm) [loginrec.c] Need stat.h
  - (djm) [openbsd-compat/sha2.h] Avoid include macro clash with
    system sha2.h
+ - (djm) [ssh-rand-helper.c] Needs a bunch of headers
 
 20060313
  - (dtucker) [configure.ac] Bug #1171: Don't use printf("%lld", longlong)
