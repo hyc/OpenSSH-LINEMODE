@@ -160,6 +160,9 @@
    - jmc@cvs.openbsd.org 2006/02/24 10:37:07
      [ssh_config.5]
      tidy up the refs to PATTERNS;
+   - jmc@cvs.openbsd.org 2006/02/24 10:39:52
+     [sshd.8]
+     signpost to PATTERNS section;
 
 20060313
  - (dtucker) [configure.ac] Bug #1171: Don't use printf("%lld", longlong)
