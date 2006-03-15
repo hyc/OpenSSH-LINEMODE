@@ -178,6 +178,9 @@
    - jmc@cvs.openbsd.org 2006/02/24 23:51:17
      [sshd_config.5]
      oops - bits i missed;
+   - jmc@cvs.openbsd.org 2006/02/25 12:26:17
+     [ssh_config.5]
+     document the possible values for KbdInteractiveDevices;
 
 20060313
  - (dtucker) [configure.ac] Bug #1171: Don't use printf("%lld", longlong)
