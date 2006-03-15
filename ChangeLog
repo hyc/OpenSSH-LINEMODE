@@ -233,6 +233,9 @@
      [canohost.c]
      log the originating address and not just the name when a reverse
      mapping check fails, requested by linux AT linuon.com
+   - markus@cvs.openbsd.org 2006/03/14 16:32:48
+     [ssh_config.5 sshd_config.5]
+     *AliveCountMax applies to protcol v2 only; ok dtucker, djm
 
 20060313
  - (dtucker) [configure.ac] Bug #1171: Don't use printf("%lld", longlong)
