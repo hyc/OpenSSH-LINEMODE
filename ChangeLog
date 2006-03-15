@@ -116,6 +116,9 @@
    - jmc@cvs.openbsd.org 2006/02/15 16:55:33
      [sshd.8]
      remove ietf draft references; RFC list now maintained in ssh.1;
+   - jmc@cvs.openbsd.org 2006/02/16 09:05:34
+     [sshd.8]
+     sync some of the FILES entries w/ ssh.1;
 
 20060313
  - (dtucker) [configure.ac] Bug #1171: Don't use printf("%lld", longlong)
