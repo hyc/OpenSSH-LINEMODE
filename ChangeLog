@@ -269,6 +269,8 @@
    includes removed from includes.h
  - (dtucker) [configure.ac] Fix glob test conversion to AC_TRY_COMPILE
  - (djm) [includes.h] Put back paths.h, it is needed in defines.h
+ - (dtucker) [openbsd-compat/openbsd-compat.h] AIX (at least) needs
+   sys/ioctl.h for struct winsize.
 
 20060313
  - (dtucker) [configure.ac] Bug #1171: Don't use printf("%lld", longlong)

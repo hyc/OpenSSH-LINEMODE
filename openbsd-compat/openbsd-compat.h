@@ -147,6 +147,7 @@ int asprintf(char **, const char *, ...);
 #endif 
 
 #ifndef HAVE_OPENPTY
+# include <sys/ioctl.h>	/* for struct winsize */
 int openpty(int *, int *, char *, struct termios *, struct winsize *);
 #endif /* HAVE_OPENPTY */
 
