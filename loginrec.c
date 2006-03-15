@@ -147,6 +147,9 @@
 
 #include "includes.h"
 
+#include <sys/types.h>
+#include <sys/stat.h>
+
 #include "ssh.h"
 #include "xmalloc.h"
 #include "loginrec.h"
