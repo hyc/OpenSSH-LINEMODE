@@ -62,6 +62,10 @@
      [channels.c clientloop.c includes.h misc.c progressmeter.c sftp.c]
      [ssh.c sshd.c sshpty.c]
      move #include <sys/ioctl.h> out of includes.h; ok markus@
+   - stevesk@cvs.openbsd.org 2006/02/10 01:44:27
+     [includes.h monitor.c readpass.c scp.c serverloop.c session.c]
+     [sftp.c sshconnect.c sshconnect2.c sshd.c]
+     move #include <sys/wait.h> out of includes.h; ok markus@
 
 20060313
  - (dtucker) [configure.ac] Bug #1171: Don't use printf("%lld", longlong)
