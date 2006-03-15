@@ -210,6 +210,11 @@
      [sshd.c]
      don't log that we are listening on a socket before the listen() call
      actually succeeds, bz #1162 reported by Senthil Kumar; ok dtucker@
+   - dtucker@cvs.openbsd.org 2006/03/13 08:33:00
+     [packet.c]
+     Set TCP_NODELAY for all connections not just "interactive" ones.  Fixes
+     poor performance and protocol stalls under some network conditions (mindrot
+     bugs #556 and #981). Patch originally from markus@, ok djm@
 
 20060313
  - (dtucker) [configure.ac] Bug #1171: Don't use printf("%lld", longlong)
