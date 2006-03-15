@@ -31,6 +31,9 @@
      [session.c sftp.c ssh-agent.c ssh-keysign.c ssh.c sshconnect.c]
      [sshd.c sshpty.c]
      move #include <paths.h> out of includes.h; ok markus@
+   - stevesk@cvs.openbsd.org 2006/02/08 12:32:49
+     [includes.h misc.c]
+     move #include <netinet/tcp.h> out of includes.h; ok markus@
 
 20060313
  - (dtucker) [configure.ac] Bug #1171: Don't use printf("%lld", longlong)
