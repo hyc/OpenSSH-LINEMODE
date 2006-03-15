@@ -203,6 +203,9 @@
    - djm@cvs.openbsd.org 2006/03/04 04:12:58
      [serverloop.c]
      move a debug() outside of a signal handler; ok markus@ a little while back
+   - djm@cvs.openbsd.org 2006/03/12 04:23:07
+     [ssh.c]
+     knf nit
 
 20060313
  - (dtucker) [configure.ac] Bug #1171: Don't use printf("%lld", longlong)
