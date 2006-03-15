@@ -264,6 +264,8 @@
    [openbsd-compat/glob.c openbsd-compat/mktemp.c]
    [openbsd-compat/readpassphrase.c] Lots of include fixes for
    OpenSolaris
+ - (tim) [includes.h] put sys/stat.h back in to quiet some "macro redefined:"
+   warnings.
 
 20060313
  - (dtucker) [configure.ac] Bug #1171: Don't use printf("%lld", longlong)
