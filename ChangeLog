@@ -220,6 +220,10 @@
      Make ssh-keygen handle CR and CRLF line termination when converting IETF
      format keys, in adition to vanilla LF.  mindrot #1157, tested by Chris
      Pepper, ok djm@
+   - dtucker@cvs.openbsd.org 2006/03/13 10:14:29
+     [misc.c ssh_config.5 sshd_config.5]
+     Allow config directives to contain whitespace by surrounding them by double
+     quotes.  mindrot #482, man page help from jmc@, ok djm@
 
 20060313
  - (dtucker) [configure.ac] Bug #1171: Don't use printf("%lld", longlong)
