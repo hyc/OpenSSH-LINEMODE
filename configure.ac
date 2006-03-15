@@ -924,7 +924,7 @@ AC_EGREP_CPP(FOUNDIT,
 
 # Check for g.gl_matchc glob() extension
 AC_MSG_CHECKING(for gl_matchc field in glob_t)
-AC_TRY_COMPILE(FOUNDIT,
+AC_TRY_COMPILE(
 	[ #include <glob.h> ],
 	[glob_t g; g.gl_matchc = 1;],
 	[
