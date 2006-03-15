@@ -163,6 +163,9 @@
    - jmc@cvs.openbsd.org 2006/02/24 10:39:52
      [sshd.8]
      signpost to PATTERNS section;
+   - jmc@cvs.openbsd.org 2006/02/24 20:22:16
+     [ssh-keysign.8 ssh_config.5 sshd_config.5]
+     some consistency fixes;
 
 20060313
  - (dtucker) [configure.ac] Bug #1171: Don't use printf("%lld", longlong)
