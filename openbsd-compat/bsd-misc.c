@@ -16,6 +16,9 @@
  */
 
 #include "includes.h"
+
+#include <signal.h>
+
 #include "xmalloc.h"
 
 RCSID("$Id$");

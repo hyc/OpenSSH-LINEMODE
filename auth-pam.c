@@ -49,6 +49,11 @@
 #include "includes.h"
 RCSID("$Id$");
 
+#include <sys/types.h>
+#include <sys/stat.h>
+#include <sys/wait.h>
+#include <signal.h>
+
 #ifdef USE_PAM
 #if defined(HAVE_SECURITY_PAM_APPL_H)
 #include <security/pam_appl.h>
