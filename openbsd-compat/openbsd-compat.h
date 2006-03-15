@@ -38,7 +38,7 @@
 #include "readpassphrase.h"
 #include "vis.h"
 #include "getrrsetbyname.h"
-
+#include "sha2.h"
 
 #ifndef HAVE_BASENAME
 char *basename(const char *path);

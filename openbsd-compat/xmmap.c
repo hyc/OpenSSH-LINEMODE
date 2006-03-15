@@ -27,9 +27,11 @@
 
 #include "includes.h"
 
+#include <sys/types.h>
 #ifdef HAVE_SYS_MMAN_H
 #include <sys/mman.h>
 #endif
+#include <sys/stat.h>
 
 #include "log.h"
 
