@@ -40,6 +40,9 @@
    - stevesk@cvs.openbsd.org 2006/02/08 14:16:59
      [sshconnect.c]
      <openssl/bn.h> not needed
+   - stevesk@cvs.openbsd.org 2006/02/08 14:31:30
+     [includes.h ssh-agent.c ssh-keyscan.c ssh.c]
+     move #include <sys/resource.h> out of includes.h; ok markus@
 
 20060313
  - (dtucker) [configure.ac] Bug #1171: Don't use printf("%lld", longlong)
