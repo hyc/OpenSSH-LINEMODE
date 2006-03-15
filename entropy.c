@@ -24,6 +24,9 @@
 
 #include "includes.h"
 
+#include <sys/types.h>
+#include <sys/wait.h>
+
 #include <openssl/rand.h>
 #include <openssl/crypto.h>
 #include <openssl/err.h>

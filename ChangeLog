@@ -1,3 +1,6 @@
+20060316
+ - (dtucker) [entropy.c] Add headers for WIFEXITED and friends.
+
 20060315
  - (djm) OpenBSD CVS Sync:
    - msf@cvs.openbsd.org 2006/02/06 15:54:07
