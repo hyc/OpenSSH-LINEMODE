@@ -13,6 +13,10 @@
    - stevesk@cvs.openbsd.org 2006/02/07 01:18:09
      [includes.h ssh-agent.c ssh-keyscan.c sshconnect2.c]
      move #include <sys/queue.h> out of includes.h; ok markus@
+   - stevesk@cvs.openbsd.org 2006/02/07 01:42:00
+     [channels.c clientloop.c clientloop.h includes.h packet.h]
+     [serverloop.c sshpty.c sshpty.h sshtty.c ttymodes.c]
+     move #include <termios.h> out of includes.h; ok markus@
 
 20060313
  - (dtucker) [configure.ac] Bug #1171: Don't use printf("%lld", longlong)
