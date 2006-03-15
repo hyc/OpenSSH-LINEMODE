@@ -690,6 +690,7 @@ AC_CHECK_HEADERS( \
 	readpassphrase.h \
 	rpc/types.h \
 	security/pam_appl.h \
+	sha2.h \
 	shadow.h \
 	stddef.h \
 	stdint.h \
