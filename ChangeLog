@@ -206,6 +206,10 @@
    - djm@cvs.openbsd.org 2006/03/12 04:23:07
      [ssh.c]
      knf nit
+   - djm@cvs.openbsd.org 2006/03/13 08:16:00
+     [sshd.c]
+     don't log that we are listening on a socket before the listen() call
+     actually succeeds, bz #1162 reported by Senthil Kumar; ok dtucker@
 
 20060313
  - (dtucker) [configure.ac] Bug #1171: Don't use printf("%lld", longlong)
