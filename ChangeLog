@@ -2,6 +2,8 @@
  - (dtucker) [entropy.c] Add headers for WIFEXITED and friends.
  - (dtucker) [configure.ac md-sha256.c] NetBSD has sha2.h in
    /usr/include/crypto.  Hint from djm@.
+ - (tim) [kex.c myproposal.h md-sha256.c openbsd-compat/sha2.c,h]
+   Disable sha256 when openssl < 0.9.7. Patch from djm@.
 
 20060315
  - (djm) OpenBSD CVS Sync:
