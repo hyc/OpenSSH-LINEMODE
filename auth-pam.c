@@ -729,6 +729,7 @@ sshpam_query(void *ctx, char **name, char **info,
 				*num = 0;
 				**echo_on = 0;
 				ctxt->pam_done = -1;
+				xfree(msg);
 				return 0;
 			}
 			/* FALLTHROUGH */
