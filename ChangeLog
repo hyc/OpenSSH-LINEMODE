@@ -29,6 +29,9 @@
      [openbsd-compat/bsd-nextstep.c openbsd-compat/bsd-snprintf.c]
      [openbsd-compat/bsd-waitpid.c openbsd-compat/fake-rfc2553.c]
      RCSID() can die
+   - deraadt@cvs.openbsd.org 2006/03/19 18:53:12
+     [kex.h myproposal.h]
+     spacing
 
 20060318
  - (djm) [auth-pam.c] Fix memleak in error path, from Coverity via
