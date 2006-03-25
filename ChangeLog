@@ -47,6 +47,9 @@
    - deraadt@cvs.openbsd.org 2006/03/20 18:14:02
      [monitor_wrap.h sshpty.h]
      sprinkle u_int throughout pty subsystem, ok markus
+   - deraadt@cvs.openbsd.org 2006/03/20 18:26:55
+     [session.h]
+     annoying spacing fixes getting in the way of real diffs
 
 20060318
  - (djm) [auth-pam.c] Fix memleak in error path, from Coverity via
