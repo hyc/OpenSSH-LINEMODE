@@ -16,8 +16,6 @@
 
 #include "includes.h"
 
-RCSID("$Id$");
-
 #if !defined(HAVE_GETPEEREID)
 
 #if defined(SO_PEERCRED)

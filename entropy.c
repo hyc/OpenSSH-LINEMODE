@@ -51,8 +51,6 @@
  * XXX: we should tell the child how many bytes we need.
  */
 
-RCSID("$Id$");
-
 #ifndef OPENSSL_PRNG_ONLY
 #define RANDOM_SEED_SIZE 48
 static uid_t original_uid, original_euid;

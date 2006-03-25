@@ -168,8 +168,6 @@
 # include <libutil.h>
 #endif
 
-RCSID("$Id$");
-
 /**
  ** prototypes for helper functions in this file
  **/

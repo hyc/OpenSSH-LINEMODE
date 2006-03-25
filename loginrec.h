@@ -35,8 +35,6 @@
 #include <netinet/in.h>
 #include <sys/socket.h>
 
-/* RCSID("$Id$"); */
-
 /**
  ** you should use the login_* calls to work around platform dependencies
  **/

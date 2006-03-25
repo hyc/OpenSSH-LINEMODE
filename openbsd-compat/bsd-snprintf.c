@@ -89,8 +89,6 @@
 
 #include "includes.h"
 
-RCSID("$Id$");
-
 #if defined(BROKEN_SNPRINTF)		/* For those with broken snprintf() */
 # undef HAVE_SNPRINTF
 # undef HAVE_VSNPRINTF

@@ -29,8 +29,6 @@
 
 #include "includes.h"
 
-RCSID("$Id$");
-
 #ifdef HAVE_CYGWIN
 
 #include <fcntl.h>

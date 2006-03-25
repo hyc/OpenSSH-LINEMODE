@@ -43,8 +43,6 @@
 
 #include "loginrec.h"
 
-RCSID("$Id$");
-
 extern char *__progname;
 
 #define PAUSE_BEFORE_LOGOUT 3

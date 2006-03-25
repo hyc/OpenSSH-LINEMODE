@@ -23,7 +23,6 @@
  */
 
 #include "includes.h"
-RCSID("$Id$");
 
 #if defined(USE_SHADOW) && defined(HAS_SHADOW_EXPIRE)
 #include <shadow.h>

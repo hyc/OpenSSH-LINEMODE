@@ -50,8 +50,6 @@
 #include "pathnames.h"
 #include "log.h"
 
-RCSID("$Id$");
-
 /* Number of bytes we write out */
 #define OUTPUT_SEED_SIZE	48
 

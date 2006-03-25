@@ -21,8 +21,6 @@
 
 #include "xmalloc.h"
 
-RCSID("$Id$");
-
 #ifndef HAVE___PROGNAME
 char *__progname;
 #endif

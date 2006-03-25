@@ -17,8 +17,6 @@
 #include "includes.h"
 #include "log.h"
 
-RCSID("$Id$");
-
 #ifndef HAVE_ARC4RANDOM
 
 #include <openssl/rand.h>
