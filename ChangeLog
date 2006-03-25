@@ -50,6 +50,9 @@
    - deraadt@cvs.openbsd.org 2006/03/20 18:26:55
      [session.h]
      annoying spacing fixes getting in the way of real diffs
+   - deraadt@cvs.openbsd.org 2006/03/20 18:41:43
+     [dns.c]
+     cast xstrdup to propert u_char *
 
 20060318
  - (djm) [auth-pam.c] Fix memleak in error path, from Coverity via
