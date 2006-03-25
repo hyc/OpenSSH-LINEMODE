@@ -36,6 +36,10 @@
      [auth2-gss.c]
      GSSAPI related leaks detected by Coverity via elad AT netbsd.org;
      reviewed by simon AT sxw.org.uk; deraadt@ ok
+   - djm@cvs.openbsd.org 2006/03/20 04:07:49
+     [gss-genr.c]
+     more GSSAPI related leaks detected by Coverity via elad AT netbsd.org;
+     reviewed by simon AT sxw.org.uk; deraadt@ ok
 
 20060318
  - (djm) [auth-pam.c] Fix memleak in error path, from Coverity via
