@@ -86,6 +86,9 @@
      [channels.c monitor.c session.c session.h ssh-agent.c ssh-keygen.c]
      [ssh-rsa.c ssh.c sshlogin.c]
      annoying spacing fixes getting in the way of real diffs
+   - deraadt@cvs.openbsd.org 2006/03/20 18:27:50
+     [monitor.c]
+     spacing
 
 20060325
  - OpenBSD CVS Sync
