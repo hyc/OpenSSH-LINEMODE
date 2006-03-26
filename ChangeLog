@@ -186,6 +186,9 @@
      [ssh-gss.h ssh.h ssh1.h ssh2.h sshconnect.h sshlogin.h sshpty.h]
      [ttymodes.h uidswap.h uuencode.h xmalloc.h]
      standardise spacing in $OpenBSD$ tags; requested by deraadt@
+   - deraadt@cvs.openbsd.org 2006/03/26 01:31:48
+     [uuencode.c]
+     typo
 
 20060325
  - OpenBSD CVS Sync
