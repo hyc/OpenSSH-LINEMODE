@@ -153,6 +153,9 @@
    - deraadt@cvs.openbsd.org 2006/03/25 18:29:35
      [auth-rsa.c authfd.c packet.c]
      needed casts (always will be needed)
+   - deraadt@cvs.openbsd.org 2006/03/25 18:30:55
+     [clientloop.c serverloop.c]
+     spacing
 
 20060325
  - OpenBSD CVS Sync
