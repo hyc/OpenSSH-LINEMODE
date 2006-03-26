@@ -52,6 +52,10 @@
    - deraadt@cvs.openbsd.org 2006/03/19 18:59:30
      [ssh.c]
      spacing
+   - deraadt@cvs.openbsd.org 2006/03/19 18:59:09
+     [authfile.c]
+     whoever thought that break after return was a good idea needs to
+     get their head examimed
 
 20060325
  - OpenBSD CVS Sync
