@@ -168,6 +168,9 @@
    - deraadt@cvs.openbsd.org 2006/03/25 18:43:30
      [channels.c]
      use strtonum() instead of atoi() [limit X screens to 400, sorry]
+   - deraadt@cvs.openbsd.org 2006/03/25 18:56:55
+     [bufaux.c channels.c packet.c]
+     remove (char *) casts to a function that accepts void * for the arg
 
 20060325
  - OpenBSD CVS Sync
