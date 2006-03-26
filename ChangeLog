@@ -30,6 +30,10 @@
      [dh.c readconf.c servconf.c]
      potential NULL pointer dereferences detected by Coverity
      via elad AT netbsd.org; ok deraadt@
+   - djm@cvs.openbsd.org 2006/03/19 07:41:30
+     [sshconnect2.c]
+     memory leaks detected by Coverity via elad AT netbsd.org;
+     deraadt@ ok
 
 20060325
  - OpenBSD CVS Sync
