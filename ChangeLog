@@ -98,6 +98,9 @@
    - deraadt@cvs.openbsd.org 2006/03/20 18:42:27
      [canohost.c match.c ssh.c sshconnect.c]
      be strict with tolower() casting
+   - deraadt@cvs.openbsd.org 2006/03/20 18:48:34
+     [channels.c fatal.c kex.c packet.c serverloop.c]
+     spacing
 
 20060325
  - OpenBSD CVS Sync
