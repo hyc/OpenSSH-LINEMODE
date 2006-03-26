@@ -4,6 +4,10 @@
      [ssh-keygen.c]
      if no key file are given when printing the DNS host record, use the
      host key file(s) as default. ok djm@
+   - biorn@cvs.openbsd.org 2006/03/16 10:31:45
+     [scp.c]
+     Try to display errormessage even if remout == -1
+     ok djm@, markus@
 
 20060325
  - OpenBSD CVS Sync
