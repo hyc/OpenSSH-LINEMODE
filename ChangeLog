@@ -26,6 +26,10 @@
      [hostfile.c]
      FILE* leak detected by Coverity via elad AT netbsd.org;
      ok deraadt@
+   - djm@cvs.openbsd.org 2006/03/19 02:24:05
+     [dh.c readconf.c servconf.c]
+     potential NULL pointer dereferences detected by Coverity
+     via elad AT netbsd.org; ok deraadt@
 
 20060325
  - OpenBSD CVS Sync
