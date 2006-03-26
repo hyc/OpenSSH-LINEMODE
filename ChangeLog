@@ -156,6 +156,9 @@
    - deraadt@cvs.openbsd.org 2006/03/25 18:30:55
      [clientloop.c serverloop.c]
      spacing
+   - deraadt@cvs.openbsd.org 2006/03/25 18:36:15
+     [sshlogin.c sshlogin.h]
+     nicer size_t and time_t types
 
 20060325
  - OpenBSD CVS Sync
