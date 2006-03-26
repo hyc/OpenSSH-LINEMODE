@@ -11,6 +11,9 @@
    - djm@cvs.openbsd.org 2006/03/17 22:31:50
      [authfd.c]
      another unreachable found by lint
+   - djm@cvs.openbsd.org 2006/03/17 22:31:11
+     [authfd.c]
+     unreachanble statement, found by lint
 
 20060325
  - OpenBSD CVS Sync
