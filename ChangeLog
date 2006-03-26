@@ -159,6 +159,9 @@
    - deraadt@cvs.openbsd.org 2006/03/25 18:36:15
      [sshlogin.c sshlogin.h]
      nicer size_t and time_t types
+   - deraadt@cvs.openbsd.org 2006/03/25 18:40:14
+     [ssh-keygen.c]
+     cast strtonum() result to right type
 
 20060325
  - OpenBSD CVS Sync
