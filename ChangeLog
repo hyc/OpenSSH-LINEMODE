@@ -49,6 +49,9 @@
    - deraadt@cvs.openbsd.org 2006/03/19 18:59:49
      [ssh-keyscan.c]
      please lint
+   - deraadt@cvs.openbsd.org 2006/03/19 18:59:30
+     [ssh.c]
+     spacing
 
 20060325
  - OpenBSD CVS Sync
