@@ -82,6 +82,10 @@
      [auth1.c auth2.c sshd.c]
      sprinkle some ARGSUSED for table driven functions (which sometimes 
      must ignore their args)
+   - deraadt@cvs.openbsd.org 2006/03/20 18:26:55
+     [channels.c monitor.c session.c session.h ssh-agent.c ssh-keygen.c]
+     [ssh-rsa.c ssh.c sshlogin.c]
+     annoying spacing fixes getting in the way of real diffs
 
 20060325
  - OpenBSD CVS Sync
