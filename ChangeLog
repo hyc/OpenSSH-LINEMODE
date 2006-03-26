@@ -56,6 +56,11 @@
      [authfile.c]
      whoever thought that break after return was a good idea needs to
      get their head examimed
+   - djm@cvs.openbsd.org 2006/03/20 04:09:44
+     [monitor.c]
+     memory leaks detected by Coverity via elad AT netbsd.org;
+     deraadt@ ok
+     that should be all of them now
 
 20060325
  - OpenBSD CVS Sync
