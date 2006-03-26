@@ -71,6 +71,9 @@
    - deraadt@cvs.openbsd.org 2006/03/20 17:13:16
      [key.c]
      djm did a typo
+   - deraadt@cvs.openbsd.org 2006/03/20 17:17:23
+     [ssh-rsa.c]
+     in a switch (), break after return or goto is stupid
 
 20060325
  - OpenBSD CVS Sync
