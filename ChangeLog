@@ -43,6 +43,9 @@
    - deraadt@cvs.openbsd.org 2006/03/19 18:53:12
      [kex.c kex.h monitor.c myproposal.h session.c]
      spacing
+   - deraadt@cvs.openbsd.org 2006/03/19 18:56:41
+     [clientloop.c progressmeter.c serverloop.c sshd.c]
+     ARGSUSED for signal handlers
 
 20060325
  - OpenBSD CVS Sync
