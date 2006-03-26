@@ -89,6 +89,9 @@
    - deraadt@cvs.openbsd.org 2006/03/20 18:27:50
      [monitor.c]
      spacing
+   - deraadt@cvs.openbsd.org 2006/03/20 18:35:12
+     [channels.c]
+     x11_fake_data is only ever used as u_char *
 
 20060325
  - OpenBSD CVS Sync
