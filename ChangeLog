@@ -1,3 +1,10 @@
+20060326
+ - OpenBSD CVS Sync
+   - jakob@cvs.openbsd.org 2006/03/15 08:46:44
+     [ssh-keygen.c]
+     if no key file are given when printing the DNS host record, use the
+     host key file(s) as default. ok djm@
+
 20060325
  - OpenBSD CVS Sync
    - djm@cvs.openbsd.org 2006/03/16 04:24:42
