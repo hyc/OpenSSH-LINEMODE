@@ -101,6 +101,9 @@
    - deraadt@cvs.openbsd.org 2006/03/20 18:48:34
      [channels.c fatal.c kex.c packet.c serverloop.c]
      spacing
+   - deraadt@cvs.openbsd.org 2006/03/20 21:11:53
+     [ttymodes.c]
+     spacing
 
 20060325
  - OpenBSD CVS Sync
