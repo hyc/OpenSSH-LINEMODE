@@ -13,6 +13,9 @@
    - deraadt@cvs.openbsd.org 2006/03/28 00:12:31
      [README.tun ssh.c]
      spacing
+   - deraadt@cvs.openbsd.org 2006/03/28 01:52:28
+     [channels.c]
+     do not accept unreasonable X ports numbers; ok djm
 
 20060326
  - OpenBSD CVS Sync
