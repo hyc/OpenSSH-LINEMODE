@@ -1,3 +1,10 @@
+20060331
+ - OpenBSD CVS Sync
+   - deraadt@cvs.openbsd.org 2006/03/27 01:21:18
+     [xmalloc.c]
+     we can do the size & nmemb check before the integer overflow check; 
+     evol
+
 20060326
  - OpenBSD CVS Sync
    - jakob@cvs.openbsd.org 2006/03/15 08:46:44
