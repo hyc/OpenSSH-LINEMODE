@@ -34,6 +34,9 @@
      [ssh.c ssh_config.5]
      add percent escape chars to the IdentityFile option, bz #1159 based
      on a patch by imaging AT math.ualberta.ca; feedback and ok dtucker@
+   - dtucker@cvs.openbsd.org 2006/03/30 11:05:17
+     [ssh-keygen.c]
+     Correctly handle truncated files while converting keys; ok djm@
 
 20060326
  - OpenBSD CVS Sync
