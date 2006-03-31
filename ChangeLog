@@ -40,6 +40,9 @@
    - dtucker@cvs.openbsd.org 2006/03/30 11:40:21
      [auth.c monitor.c]
      Prevent duplicate log messages when privsep=yes; ok djm@
+   - jmc@cvs.openbsd.org 2006/03/31 09:09:30
+     [ssh_config.5]
+     kill trailing whitespace;
 
 20060326
  - OpenBSD CVS Sync
