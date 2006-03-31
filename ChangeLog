@@ -4,6 +4,9 @@
      [xmalloc.c]
      we can do the size & nmemb check before the integer overflow check; 
      evol
+   - deraadt@cvs.openbsd.org 2006/03/27 13:03:54
+     [dh.c]
+     use strtonum() instead of atoi(), limit dhg size to 64k; ok djm
 
 20060326
  - OpenBSD CVS Sync
