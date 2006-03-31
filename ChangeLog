@@ -20,6 +20,9 @@
      [ssh-agent.c]
      use strtonum() to parse the pid from the file, and range check it
      better; ok djm
+   - djm@cvs.openbsd.org 2006/03/30 09:41:25
+     [channels.c]
+     ARGSUSED for dispatch table-driven functions
 
 20060326
  - OpenBSD CVS Sync
