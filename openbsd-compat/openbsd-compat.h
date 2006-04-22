@@ -185,6 +185,7 @@ char *shadow_pw(struct passwd *pw);
 #include "bsd-cray.h"
 #include "bsd-cygwin_util.h"
 #include "port-irix.h"
+#include "port-linux.h"
 #include "port-aix.h"
 #include "port-uw.h"
 #include "port-tun.h"
