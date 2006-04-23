@@ -3,6 +3,9 @@
    - deraadt@cvs.openbsd.org 2006/04/01 05:42:20
      [scp.c]
      minimal lint cleanup (unused crud, and some size_t); ok djm
+   - djm@cvs.openbsd.org 2006/04/01 05:50:29
+     [scp.c]
+     xasprintification; ok deraadt@
 
 20060421
  - (djm) [Makefile.in configure.ac session.c sshpty.c]
