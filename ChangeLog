@@ -66,6 +66,9 @@
      [uidswap.c]
      use setres[ug]id() to permanently revoke privileges; ok deraadt@
      (ID Sync only - portable already uses setres[ug]id() whenever possible)
+   - stevesk@cvs.openbsd.org 2006/04/22 18:29:33
+     [crc32.c]
+     remove extra spaces
 
 20060421
  - (djm) [Makefile.in configure.ac session.c sshpty.c]
