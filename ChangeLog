@@ -69,6 +69,8 @@
    - stevesk@cvs.openbsd.org 2006/04/22 18:29:33
      [crc32.c]
      remove extra spaces
+ - (djm) [auth.h dispatch.h kex.h] sprinkle in signal.h to get
+   sig_atomic_t
 
 20060421
  - (djm) [Makefile.in configure.ac session.c sshpty.c]
