@@ -1,3 +1,9 @@
+20060423
+ - (djm) OpenBSD CVS Sync
+   - deraadt@cvs.openbsd.org 2006/04/01 05:42:20
+     [scp.c]
+     minimal lint cleanup (unused crud, and some size_t); ok djm
+
 20060421
  - (djm) [Makefile.in configure.ac session.c sshpty.c]
    [contrib/redhat/sshd.init openbsd-compat/Makefile.in]
