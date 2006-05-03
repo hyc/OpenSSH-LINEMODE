@@ -1,3 +1,8 @@
+20060503
+ - (dtucker) [packet.c] Remove in_systm.h since it's also in includes.h
+   and double including it on IRIX 5.3 causes problems.  From Georg Schwarz,
+   "no objections" tim@
+
 20060423
  - (djm) OpenBSD CVS Sync
    - deraadt@cvs.openbsd.org 2006/04/01 05:42:20
