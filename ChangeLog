@@ -1,3 +1,10 @@
+20060504
+ - (dtucker) [auth-pam.c groupaccess.c monitor.c monitor_wrap.c scard-opensc.c
+   session.c ssh-rand-helper.c sshd.c openbsd-compat/bsd-cygwin_util.c
+   openbsd-compat/setproctitle.c] Convert malloc(foo*bar) -> calloc(foo,bar)
+   in Portable-only code; since calloc zeros, remove now-redundant memsets.
+   Also add a couple of sanity checks.  With & ok djm@
+
 20060503
  - (dtucker) [packet.c] Remove in_systm.h since it's also in includes.h
    and double including it on IRIX 5.3 causes problems.  From Georg Schwarz,
