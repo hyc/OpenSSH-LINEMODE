@@ -11,6 +11,9 @@
    - djm@cvs.openbsd.org 2006/04/01 05:37:46
      [OVERVIEW]
      $OpenBSD$ in here too
+   - dtucker@cvs.openbsd.org 2006/05/06 08:35:40
+     [auth-krb5.c]
+     Add $OpenBSD$ in comment here too
 
 20060504
  - (dtucker) [auth-pam.c groupaccess.c monitor.c monitor_wrap.c scard-opensc.c
