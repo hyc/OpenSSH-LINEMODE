@@ -731,6 +731,16 @@ struct winsize {
 # undef HAVE_MMAP
 #endif
 
+#ifndef IOV_MAX
+# if defined(_XOPEN_IOV_MAX)
+#  define	IOV_MAX		_XOPEN_IOV_MAX
+# elif defined(DEF_IOV_MAX)
+#  define	IOV_MAX		DEF_IOV_MAX
+# else
+#  define	IOV_MAX		16
+# endif
+#endif
+
 /* some system headers on HP-UX define YES/NO */
 #ifdef YES
 # undef YES
