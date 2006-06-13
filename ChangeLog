@@ -34,6 +34,10 @@
      [ssh-add.c]
      Sync usage() with man page and reality.
      ok deraadt dtucker
+   - markus@cvs.openbsd.org 2006/06/01 09:21:48
+     [sshd.c]
+     call get_remote_ipaddr() early; fixes logging after client disconnects;
+     report mpf@; ok dtucker@
 
 20060521
  - (dtucker) [auth.c monitor.c] Now that we don't log from both the monitor
