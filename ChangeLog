@@ -30,6 +30,10 @@
    - jmc@cvs.openbsd.org 2006/05/29 16:13:23
      [ssh.1]
      add GSSAPI to the list of authentication methods supported;
+   - mk@cvs.openbsd.org 2006/05/30 11:46:38
+     [ssh-add.c]
+     Sync usage() with man page and reality.
+     ok deraadt dtucker
 
 20060521
  - (dtucker) [auth.c monitor.c] Now that we don't log from both the monitor
