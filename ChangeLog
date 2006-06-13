@@ -18,8 +18,11 @@
      Add gssapi-with-mic to PreferredAuthentications default list; ok jmc
    - dtucker@cvs.openbsd.org 2006/05/29 12:56:33
      [ssh_config]
-     Add GSSAPIAuthentication and GSSAPIDelegateCredentials to examples in sample
-     ssh_config.  ok markus@
+     Add GSSAPIAuthentication and GSSAPIDelegateCredentials to examples in
+     sample ssh_config.  ok markus@
+   - jmc@cvs.openbsd.org 2006/05/29 16:10:03
+     [ssh_config.5]
+     oops - previous was too long; split the list of auths up
 
 20060521
  - (dtucker) [auth.c monitor.c] Now that we don't log from both the monitor
