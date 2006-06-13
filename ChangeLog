@@ -13,6 +13,9 @@
    - miod@cvs.openbsd.org 2006/05/18 21:27:25
      [kexdhc.c kexgexc.c]
      paramter -> parameter
+   - dtucker@cvs.openbsd.org 2006/05/29 12:54:08
+     [ssh_config.5]
+     Add gssapi-with-mic to PreferredAuthentications default list; ok jmc
 
 20060521
  - (dtucker) [auth.c monitor.c] Now that we don't log from both the monitor
