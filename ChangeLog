@@ -1,3 +1,8 @@
+20060623
+ - (dtucker) [README.platform configure.ac openbsd-compat/port-tun.c] Add
+   tunnel support for Mac OS X/Darwin via a third-party tun driver.  Patch
+   from reyk@, tested by anil@
+
 20060613
  - (djm) [getput.h] This file has been replaced by functions in misc.c
  - OpenBSD CVS Sync
