@@ -2,6 +2,13 @@
  - (dtucker) [README.platform configure.ac openbsd-compat/port-tun.c] Add
    tunnel support for Mac OS X/Darwin via a third-party tun driver.  Patch
    from reyk@, tested by anil@
+ - (dtucker) [channels.c configure.ac serverloop.c] Bug #1102: Around AIX
+   4.3.3 ML3 or so, the AIX pty layer starting passing zero-length writes
+   on the pty slave as zero-length reads on the pty master, which sshd
+   interprets as the descriptor closing.  Since most things don't do zero
+   length writes this rarely matters, but occasionally it happens, and when
+   it does the SSH pty session appears to hang, so we add a special case for
+   this condition.  ok djm@
 
 20060613
  - (djm) [getput.h] This file has been replaced by functions in misc.c

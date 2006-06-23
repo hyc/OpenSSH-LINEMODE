@@ -190,6 +190,7 @@ case "$host" in
 		supported by bsd-setproctitle.c])
 	AC_DEFINE(SSHPAM_CHAUTHTOK_NEEDS_RUID, 1,
 	    [AIX 5.2 and 5.3 (and presumably newer) require this])
+	AC_DEFINE(PTY_ZEROREAD, 1, [read(1) can return 0 for a non-closed fd])
 	;;
 *-*-cygwin*)
 	check_for_libcrypt_later=1
