@@ -2,6 +2,8 @@
  - (dtucker) [configure.ac] Bug #1193: Define PASSWD_NEEDS_USERNAME on Solaris.
    Works around limitation in Solaris' passwd program for changing passwords
    where the username is longer than 8 characters.  ok djm@
+ - (dtucker) [serverloop.c] Get ifdef/ifndef the right way around for the bug
+   #1102 workaround.
 
 20060623
  - (dtucker) [README.platform configure.ac openbsd-compat/port-tun.c] Add
