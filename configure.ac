@@ -410,6 +410,8 @@ mips-sony-bsd|mips-sony-newsos4)
 	AC_DEFINE(SSHD_ACQUIRES_CTTY, 1,
 		[Define if sshd somehow reacquires a controlling TTY
 		after setsid()])
+	AC_DEFINE(PASSWD_NEEDS_USERNAME, 1, [must supply username to passwd
+		in case the name is longer than 8 chars])
 	external_path_file=/etc/default/login
 	# hardwire lastlog location (can't detect it on some versions)
 	conf_lastlog_location="/var/adm/lastlog"
