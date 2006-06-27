@@ -1623,6 +1623,7 @@ main(void)
 			AC_MSG_RESULT(no)
 			AC_DEFINE(BROKEN_GETADDRINFO)
 		],
+		[
 			AC_MSG_RESULT(cross-compiling, assuming no)
 		]
 	)

@@ -1,3 +1,7 @@
+20060627
+ - (dtucker) [configure.ac] Bug #1203: Add missing '[', which causes problems
+   with autoconf 2.60.  Patch from vapier at gentoo.org.
+
 20060625
  - (dtucker) [channels.c serverloop.c] Apply the bug #1102 workaround to ptys
    only, otherwise sshd can hang exiting non-interactive sessions.
