@@ -1,6 +1,8 @@
 20060630
  - (dtucker) [openbsd-compat/openbsd-compat.h] SNPRINTF_CONST for snprintf
    declaration too.  Patch from russ at sludge.net.
+ - (dtucker) [openbsd-compat/getrrsetbyname.c] Undef _res before defining it,
+   prevents warnings on platforms where _res is in the system headers.
 
 20060627
  - (dtucker) [configure.ac] Bug #1203: Add missing '[', which causes problems
