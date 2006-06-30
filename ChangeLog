@@ -3,6 +3,8 @@
    declaration too.  Patch from russ at sludge.net.
  - (dtucker) [openbsd-compat/getrrsetbyname.c] Undef _res before defining it,
    prevents warnings on platforms where _res is in the system headers.
+ - (dtucker) [INSTALL] Bug #1202: Note when autoconf is required and which
+   version.
 
 20060627
  - (dtucker) [configure.ac] Bug #1203: Add missing '[', which causes problems
