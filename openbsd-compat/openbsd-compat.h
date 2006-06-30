@@ -154,7 +154,7 @@ int openpty(int *, int *, char *, struct termios *, struct winsize *);
 /* #include <sys/types.h> XXX needed? For size_t */
 
 #ifndef HAVE_SNPRINTF
-int snprintf(char *, size_t, const char *, ...);
+int snprintf(char *, size_t, SNPRINTF_CONST char *, ...);
 #endif 
 
 #ifndef HAVE_STRTOLL
