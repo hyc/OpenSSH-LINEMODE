@@ -4725,4 +4725,3 @@
    - (djm) Fix quote handling in sftp; Patch from admorten AT umich.edu
 
 $Id$
-
