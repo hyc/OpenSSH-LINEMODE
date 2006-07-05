@@ -1,3 +1,7 @@
+20060705
+ - (dtucker) [ssh-rand-helper.c] Don't exit if mkdir fails because the
+   target already exists.
+
 20060630
  - (dtucker) [openbsd-compat/openbsd-compat.h] SNPRINTF_CONST for snprintf
    declaration too.  Patch from russ at sludge.net.
