@@ -135,7 +135,12 @@ case "$host" in
 		blibpath="/usr/lib:/lib"
 	fi
 	saved_LDFLAGS="$LDFLAGS"
-	for tryflags in -blibpath: -Wl,-blibpath: -Wl,-rpath, ;do
+	if test "$GCC" = "yes"; then
+		flags="-Wl,-blibpath: -Wl,-rpath, -blibpath:"
+	else
+		flags="-blibpath: -Wl,-blibpath: -Wl,-rpath,"
+	fi
+	for tryflags in $flags ;do
 		if (test -z "$blibflags"); then
 			LDFLAGS="$saved_LDFLAGS $tryflags$blibpath"
 			AC_TRY_LINK([], [], [blibflags=$tryflags])
