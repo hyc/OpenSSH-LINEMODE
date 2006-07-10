@@ -74,6 +74,9 @@
      [ssh-add.c ssh-agent.c ssh-keygen.c ssh-keysign.c ssh.c sshd.c]
      [sshlogin.c sshpty.c]
      move #include <fcntl.h> out of includes.h
+   - stevesk@cvs.openbsd.org 2006/07/09 15:27:59
+     [ssh-add.c]
+     use O_RDONLY vs. 0 in open(); no binary change
 
 20060706
  - (dtucker) [configure.ac] Try AIX blibpath test in different order when
