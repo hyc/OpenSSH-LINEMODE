@@ -30,6 +30,11 @@
      [channels.c includes.h]
      move #include <arpa/inet.h> out of includes.h; old ok djm@
      (portable needed session.c too)
+   - stevesk@cvs.openbsd.org 2006/07/05 02:42:09
+     [canohost.c hostfile.c includes.h misc.c packet.c readconf.c]
+     [serverloop.c sshconnect.c uuencode.c]
+     move #include <netinet/in.h> out of includes.h; ok deraadt@
+     (also ssh-rand-helper.c logintest.c loginrec.c)
 
 20060706
  - (dtucker) [configure.ac] Try AIX blibpath test in different order when
