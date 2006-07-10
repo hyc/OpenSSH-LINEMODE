@@ -35,6 +35,9 @@
      [serverloop.c sshconnect.c uuencode.c]
      move #include <netinet/in.h> out of includes.h; ok deraadt@
      (also ssh-rand-helper.c logintest.c loginrec.c)
+   - djm@cvs.openbsd.org 2006/07/06 10:47:05
+     [servconf.c servconf.h session.c sshd_config.5]
+     support arguments to Subsystem commands; ok markus@
 
 20060706
  - (dtucker) [configure.ac] Try AIX blibpath test in different order when
