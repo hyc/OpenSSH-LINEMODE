@@ -31,6 +31,9 @@
 
 #include "includes.h"
 
+#include <sys/types.h>
+#include <pwd.h>
+
 /* OpenBSD function replacements */
 #include "base64.h"
 #include "sigact.h"
@@ -131,8 +134,6 @@ int BSDgetopt(int argc, char * const *argv, const char *opts);
 #include "bsd-misc.h"
 #include "bsd-waitpid.h"
 
-/*#include <sys/types.h> XXX Still needed? * For uid_t, gid_t * */
-
 #ifndef HAVE_GETPEEREID
 int getpeereid(int , uid_t *, gid_t *);
 #endif 
@@ -176,7 +177,6 @@ int vsnprintf(char *, size_t, const char *, va_list);
 void *xmmap(size_t size);
 char *xcrypt(const char *password, const char *salt);
 char *shadow_pw(struct passwd *pw);
-
 
 /* rfc2553 socket API replacements */
 #include "fake-rfc2553.h"
