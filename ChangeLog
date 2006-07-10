@@ -53,6 +53,9 @@
    - stevesk@cvs.openbsd.org 2006/07/06 16:22:39
      [ssh-keygen.c]
      move #include "dns.h" up
+   - stevesk@cvs.openbsd.org 2006/07/06 17:36:37
+     [monitor_wrap.h]
+     typo in comment
 
 20060706
  - (dtucker) [configure.ac] Try AIX blibpath test in different order when
