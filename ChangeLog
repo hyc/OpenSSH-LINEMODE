@@ -50,6 +50,9 @@
      [ssh.c sshconnect.c sshconnect.h sshd.c sshpty.c sshpty.h uidswap.c]
      [uidswap.h]
      move #include <pwd.h> out of includes.h; ok markus@
+   - stevesk@cvs.openbsd.org 2006/07/06 16:22:39
+     [ssh-keygen.c]
+     move #include "dns.h" up
 
 20060706
  - (dtucker) [configure.ac] Try AIX blibpath test in different order when
