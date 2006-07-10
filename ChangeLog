@@ -56,6 +56,11 @@
    - stevesk@cvs.openbsd.org 2006/07/06 17:36:37
      [monitor_wrap.h]
      typo in comment
+   - stevesk@cvs.openbsd.org 2006/07/08 21:47:12
+     [authfd.c canohost.c clientloop.c dns.c dns.h includes.h]
+     [monitor_fdpass.c nchan.c packet.c servconf.c sftp.c ssh-agent.c]
+     [ssh-keyscan.c ssh.c sshconnect.h sshd.c sshlogin.h]
+     move #include <sys/socket.h> out of includes.h
 
 20060706
  - (dtucker) [configure.ac] Try AIX blibpath test in different order when
