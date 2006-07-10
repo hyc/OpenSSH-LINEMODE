@@ -65,6 +65,9 @@
      [monitor.c session.c]
      missed these from last commit:
      move #include <sys/socket.h> out of includes.h
+   - stevesk@cvs.openbsd.org 2006/07/08 23:30:06
+     [log.c]
+     move user includes after /usr/include files
 
 20060706
  - (dtucker) [configure.ac] Try AIX blibpath test in different order when
