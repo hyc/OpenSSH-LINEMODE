@@ -104,6 +104,8 @@
      format is unchanged, otherwise the host name or address is enclosed
      within square brackets in the same format as sshd's ListenAddress.
      Tested by many, ok markus@.
+ - (dtucker) [openbsd-compat/openbsd-compat.h] Need to include <sys/socket.h>
+   for struct sockaddr on platforms that use the fake-rfc stuff.
 
 20060706
  - (dtucker) [configure.ac] Try AIX blibpath test in different order when

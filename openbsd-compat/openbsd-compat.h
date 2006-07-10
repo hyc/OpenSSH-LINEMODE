@@ -34,6 +34,8 @@
 #include <sys/types.h>
 #include <pwd.h>
 
+#include <sys/socket.h>
+
 /* OpenBSD function replacements */
 #include "base64.h"
 #include "sigact.h"
