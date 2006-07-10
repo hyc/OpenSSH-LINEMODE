@@ -20,6 +20,9 @@
      [groupaccess.c groupaccess.h includes.h session.c sftp-common.c sshpty.c]
      move #include <grp.h> out of includes.h
      (portable needed uidswap.c too)
+   - stevesk@cvs.openbsd.org 2006/07/02 23:01:55
+     [clientloop.c ssh.1]
+     use -KR[bind_address:]port here; ok djm@
 
 20060706
  - (dtucker) [configure.ac] Try AIX blibpath test in different order when
