@@ -686,6 +686,7 @@ AC_CHECK_HEADERS( \
 	dirent.h \
 	endian.h \
 	features.h \
+	fcntl.h \
 	floatingpoint.h \
 	getopt.h \
 	glob.h \
