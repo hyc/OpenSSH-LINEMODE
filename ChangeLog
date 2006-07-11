@@ -2,6 +2,8 @@
  - (dtucker) [configure.ac ssh-keygen.c openbsd-compat/bsd-openpty.c
    openbsd-compat/daemon.c] Add includes needed by open(2).  Conditionally
    include paths.h.  Fixes build error on Solaris.
+ - (dtucker) [entropy.c] More fcntl.h, this time on AIX (and probably
+   others).
 
 20060710
  - (dtucker) [INSTALL] New autoconf version: 2.60.
