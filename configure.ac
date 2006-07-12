@@ -1285,7 +1285,11 @@ AC_CHECK_DECL(tcsendbreak,
 
 AC_CHECK_DECLS(h_errno, , ,[#include <netdb.h>])
 
-AC_CHECK_DECLS(SHUT_RD, , ,[#include <sys/socket.h>])
+AC_CHECK_DECLS(SHUT_RD, , ,
+	[
+#include <sys/types.h>
+#include <sys/socket.h>
+	])
 
 AC_CHECK_DECLS(O_NONBLOCK, , ,
 	[
