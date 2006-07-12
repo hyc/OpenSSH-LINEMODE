@@ -40,6 +40,9 @@
      [ssh.c]
      cast asterisk field precision argument to int to remove warning;
      ok markus@
+   - stevesk@cvs.openbsd.org 2006/07/11 20:27:56
+     [authfile.c ssh.c]
+     need <errno.h> here also (it's also included in <openssl/err.h>)
 
 20060711
  - (dtucker) [configure.ac ssh-keygen.c openbsd-compat/bsd-openpty.c
