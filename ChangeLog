@@ -1,7 +1,7 @@
 20060712
- - (dtucker) [configure.ac defines.h] Only define SHUT_RD (and friends) and O_NONBLOCK
-   if they're really needed.  Fixes build errors on HP-UX, old Linuxes and probably
-   more.
+ - (dtucker) [configure.ac defines.h] Only define SHUT_RD (and friends) and
+   O_NONBLOCK if they're really needed.  Fixes build errors on HP-UX, old
+   Linuxes and probably more.
 
 20060711
  - (dtucker) [configure.ac ssh-keygen.c openbsd-compat/bsd-openpty.c
