@@ -18,6 +18,11 @@
      [readpass.c log.h scp.c fatal.c xmalloc.c includes.h ssh-keyscan.c misc.c
      auth.c packet.c log.c]
      move #include <stdarg.h> out of includes.h; ok markus@
+   - dtucker@cvs.openbsd.org 2006/07/11 10:12:07
+     [ssh.c]
+     Only copy the part of environment variable that we actually use.  Prevents
+     ssh bailing when SendEnv is used and an environment variable with a really
+     long value exists.  ok djm@
 
 20060711
  - (dtucker) [configure.ac ssh-keygen.c openbsd-compat/bsd-openpty.c
