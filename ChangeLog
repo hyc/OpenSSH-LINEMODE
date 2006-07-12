@@ -55,6 +55,7 @@
      will allow port forwarding by all users except "anoncvs".
      Currently only a very small subset of directives are supported.
      ok djm@
+ - (dtucker) [openbsd-compat/xmmap.c] Include <errno.h>.
 
 20060711
  - (dtucker) [configure.ac ssh-keygen.c openbsd-compat/bsd-openpty.c

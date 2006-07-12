@@ -33,6 +33,8 @@
 #endif
 #include <sys/stat.h>
 
+#include <errno.h>
+
 #include "log.h"
 
 void *xmmap(size_t size)
