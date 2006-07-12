@@ -168,6 +168,10 @@ long long strtoll(const char *, char **, int);
 long long strtonum(const char *, long long, long long, const char **);
 #endif
 
+#if !defined(HAVE_VASPRINTF) || !defined(HAVE_VSNPRINTF)
+# include <stdarg.h>
+#endif
+
 #ifndef HAVE_VASPRINTF
 int vasprintf(char **, const char *, va_list);
 #endif
