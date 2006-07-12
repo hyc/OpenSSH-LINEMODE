@@ -1285,6 +1285,19 @@ AC_CHECK_DECL(tcsendbreak,
 
 AC_CHECK_DECLS(h_errno, , ,[#include <netdb.h>])
 
+AC_CHECK_DECLS(SHUT_RD, , ,[#include <sys/socket.h>])
+
+AC_CHECK_DECLS(O_NONBLOCK, , ,
+	[
+#include <sys/types.h>
+#ifdef HAVE_SYS_STAT_H
+# include <sys/stat.h>
+#endif
+#ifdef HAVE_FCNTL_H
+# include <fcntl.h>
+#endif
+	])
+
 AC_CHECK_FUNCS(setresuid, [
 	dnl Some platorms have setresuid that isn't implemented, test for this
 	AC_MSG_CHECKING(if setresuid seems to work)
