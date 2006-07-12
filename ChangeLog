@@ -14,6 +14,10 @@
    - jmc@cvs.openbsd.org 2006/07/10 16:04:21
      [sshd.8]
      s/and and/and/
+   - stevesk@cvs.openbsd.org 2006/07/10 16:37:36
+     [readpass.c log.h scp.c fatal.c xmalloc.c includes.h ssh-keyscan.c misc.c
+     auth.c packet.c log.c]
+     move #include <stdarg.h> out of includes.h; ok markus@
 
 20060711
  - (dtucker) [configure.ac ssh-keygen.c openbsd-compat/bsd-openpty.c
