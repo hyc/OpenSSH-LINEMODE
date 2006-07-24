@@ -49,6 +49,9 @@
    - dtucker@cvs.openbsd.org 2006/07/18 08:22:23
      [sshd_config.5]
      Clarify description of Match, with minor correction from jmc@
+   - stevesk@cvs.openbsd.org 2006/07/18 22:27:55
+     [dh.c]
+     remove unneeded includes; ok djm@
 
 20060713
  - (dtucker) [auth-krb5.c auth-pam.c] Still more errno.h
