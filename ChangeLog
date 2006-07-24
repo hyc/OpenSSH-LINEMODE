@@ -26,6 +26,17 @@
    - dtucker@cvs.openbsd.org 2006/07/17 12:02:24
      [auth-options.c]
      Use '\0' rather than 0 to terminates strings; ok djm@
+   - dtucker@cvs.openbsd.org 2006/07/17 12:06:00
+     [channels.c channels.h servconf.c sshd_config.5]
+     Add PermitOpen directive to sshd_config which is equivalent to the
+     "permitopen" key option.  Allows server admin to allow TCP port
+     forwarding only two specific host/port pairs.  Useful when combined
+     with Match.
+     If permitopen is used in both sshd_config and a key option, both
+     must allow a given connection before it will be permitted.
+     Note that users can still use external forwarders such as netcat,
+     so to be those must be controlled too for the limits to be effective.
+     Feedback & ok djm@, man page corrections & ok jmc@.
 
 20060713
  - (dtucker) [auth-krb5.c auth-pam.c] Still more errno.h
