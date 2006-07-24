@@ -52,6 +52,10 @@
    - stevesk@cvs.openbsd.org 2006/07/18 22:27:55
      [dh.c]
      remove unneeded includes; ok djm@
+   - dtucker@cvs.openbsd.org 2006/07/19 08:56:41
+     [servconf.c sshd_config.5]
+     Add support for X11Forwaring, X11DisplayOffset and X11UseLocalhost to
+     Match.  ok djm@
 
 20060713
  - (dtucker) [auth-krb5.c auth-pam.c] Still more errno.h
