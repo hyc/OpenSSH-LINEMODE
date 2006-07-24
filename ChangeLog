@@ -137,6 +137,7 @@
    forcecommand tests. Add cipher-speed.sh test (not linked in yet)
  - (dtucker) [cleanup.c] Since config.h defines _LARGE_FILES on AIX, including
    system headers before defines.h will cause conflicting definitions.
+ - (dtucker) [regress/forcecommand.sh] Portablize.
 
 20060713
  - (dtucker) [auth-krb5.c auth-pam.c] Still more errno.h
