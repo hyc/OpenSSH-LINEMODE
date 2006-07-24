@@ -73,6 +73,9 @@
    - stevesk@cvs.openbsd.org 2006/07/21 21:13:30
      [channels.c]
      more ARGSUSED (lint) for dispatch table-driven functions; ok djm@
+   - stevesk@cvs.openbsd.org 2006/07/21 21:26:55
+     [progressmeter.c]
+     ARGSUSED for signal handler
 
 20060713
  - (dtucker) [auth-krb5.c auth-pam.c] Still more errno.h
