@@ -203,7 +203,8 @@ clean:	regressclean
 distclean:	regressclean
 	rm -f *.o *.a $(TARGETS) logintest config.cache config.log
 	rm -f *.out core opensshd.init
-	rm -f Makefile buildpkg.sh config.h config.status ssh_prng_cmds survey.sh *~
+	rm -f Makefile buildpkg.sh config.h config.status ssh_prng_cmds
+	rm -f survey.sh openbsd-compat/regress/Makefile *~ 
 	rm -rf autom4te.cache
 	(cd openbsd-compat && $(MAKE) distclean)
 	(cd scard && $(MAKE) distclean)

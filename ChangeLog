@@ -129,6 +129,8 @@
    [openbsd-compat/rresvport.c]
    These look to need string.h and/or unistd.h (based on a grep for function
    names)
+ - (djm) [Makefile.in]
+   Remove generated openbsd-compat/regress/Makefile in distclean target
 
 20060713
  - (dtucker) [auth-krb5.c auth-pam.c] Still more errno.h
