@@ -70,6 +70,9 @@
      Make PermitOpen take a list of permitted ports and act more like most
      other keywords (ie the first match is the effective setting). This
      also makes it easier to override a previously set PermitOpen. ok djm@
+   - stevesk@cvs.openbsd.org 2006/07/21 21:13:30
+     [channels.c]
+     more ARGSUSED (lint) for dispatch table-driven functions; ok djm@
 
 20060713
  - (dtucker) [auth-krb5.c auth-pam.c] Still more errno.h
