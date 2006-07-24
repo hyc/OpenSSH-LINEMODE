@@ -143,15 +143,10 @@ including rpc/rpc.h breaks Solaris 6
 #define INADDR_LOOPBACK ((u_long)0x7f000001)
 #endif
 
-#ifndef __unused
-#define __unused
-#endif
-
 /* Types */
 
 /* If sys/types.h does not supply intXX_t, supply them ourselves */
 /* (or die trying) */
-
 
 #ifndef HAVE_U_INT
 typedef unsigned int u_int;

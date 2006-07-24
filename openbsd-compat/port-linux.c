@@ -23,6 +23,9 @@
 
 #include "includes.h"
 
+#include <errno.h>
+#include <string.h>
+
 #ifdef WITH_SELINUX
 #include "log.h"
 #include "port-linux.h"
