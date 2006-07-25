@@ -1,3 +1,6 @@
+20060725
+ - (dtucker) [openbsd-compat/xmmap.c] Need fcntl.h for O_RDRW.
+
 20060724
  - (djm) OpenBSD CVS Sync
    - jmc@cvs.openbsd.org 2006/07/12 13:39:55
