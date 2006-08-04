@@ -4,6 +4,9 @@
      [sshconnect.c]
      disable tunnel forwarding when no strict host key checking
      and key changed; ok djm@ markus@ dtucker@
+   - stevesk@cvs.openbsd.org 2006/07/25 02:01:34
+     [scard.c]
+     need #include <string.h>
 
 20060804
  - (dtucker) [configure.ac] The "crippled AES" test does not work on recent
