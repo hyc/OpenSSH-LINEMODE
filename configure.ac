@@ -1892,7 +1892,7 @@ int main(void){ENGINE_load_builtin_engines();ENGINE_register_all_complete();}
 
 # Check for OpenSSL without EVP_aes_{192,256}_cbc
 AC_MSG_CHECKING([whether OpenSSL has crippled AES support])
-AC_COMPILE_IFELSE(
+AC_LINK_IFELSE(
 	[AC_LANG_SOURCE([[
 #include <string.h>
 #include <openssl/evp.h>
