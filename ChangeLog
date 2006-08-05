@@ -112,6 +112,9 @@
    - dtucker@cvs.openbsd.org 2006/08/05 08:00:33
      [auth-skey.c]
      Add headers required to build with -DSKEY.  ok djm@
+   - dtucker@cvs.openbsd.org 2006/08/05 08:28:24
+     [monitor_wrap.c auth-skey.c auth2-chall.c]
+     Zap unused variables in -DSKEY code.  ok djm@
 
 20060804
  - (dtucker) [configure.ac] The "crippled AES" test does not work on recent
