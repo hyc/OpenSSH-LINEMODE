@@ -89,6 +89,7 @@
  - (djm) [auth-pam.c auth.c bufaux.h entropy.c openbsd-compat/port-tun.c]
    remove last traces of bufaux.h - it was merged into buffer.h in the big
    includes.h commit
+ - (djm) [auth.c loginrec.c] Missing netinet/in.h for loginrec
 
 20060804
  - (dtucker) [configure.ac] The "crippled AES" test does not work on recent
