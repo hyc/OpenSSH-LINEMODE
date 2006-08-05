@@ -90,6 +90,9 @@
    remove last traces of bufaux.h - it was merged into buffer.h in the big
    includes.h commit
  - (djm) [auth.c loginrec.c] Missing netinet/in.h for loginrec
+ - (djm) [openbsd-compat/regress/snprintftest.c]
+   [openbsd-compat/regress/strduptest.c] Add missing includes so they pass
+   compilation with "-Wall -Werror"
 
 20060804
  - (dtucker) [configure.ac] The "crippled AES" test does not work on recent
