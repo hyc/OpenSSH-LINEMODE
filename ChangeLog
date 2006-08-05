@@ -85,6 +85,7 @@
    - stevesk@cvs.openbsd.org 2006/08/04 20:46:05
      [monitor.c session.c ssh-agent.c]
      spaces
+ - (djm) [auth-pam.c defines.h] Move PAM related bits to auth-pam.c
 
 20060804
  - (dtucker) [configure.ac] The "crippled AES" test does not work on recent

@@ -528,19 +528,6 @@ struct winsize {
 # define optarg             BSDoptarg
 #endif
 
-/* In older versions of libpam, pam_strerror takes a single argument */
-#ifdef HAVE_OLD_PAM
-# define PAM_STRERROR(a,b) pam_strerror((b))
-#else
-# define PAM_STRERROR(a,b) pam_strerror((a),(b))
-#endif
-
-#ifdef PAM_SUN_CODEBASE
-# define PAM_MSG_MEMBER(msg, n, member) ((*(msg))[(n)].member)
-#else
-# define PAM_MSG_MEMBER(msg, n, member) ((msg)[(n)]->member)
-#endif
-
 #if defined(BROKEN_GETADDRINFO) && defined(HAVE_GETADDRINFO)
 # undef HAVE_GETADDRINFO
 #endif
