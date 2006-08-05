@@ -32,11 +32,12 @@
 #include <sys/mman.h>
 #endif
 #include <sys/stat.h>
+
 #ifdef HAVE_FCNTL_H
 # include <fcntl.h>
 #endif
-
 #include <errno.h>
+#include <stdarg.h>
 #include <string.h>
 #include <unistd.h>
 

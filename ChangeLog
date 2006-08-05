@@ -98,6 +98,8 @@
    includes for Linux in
  - (dtucker) [cleanup.c] Need defines.h for __dead.
  - (dtucker) [auth2-gss.c] We still need the #ifdef GSSAPI in -portable.
+ - (dtucker) [openbsd-compat/{bsd-arc4random.c,port-tun.c,xmmap.c}] Lots of
+   #include stdarg.h, needed for log.h.
 
 20060804
  - (dtucker) [configure.ac] The "crippled AES" test does not work on recent
