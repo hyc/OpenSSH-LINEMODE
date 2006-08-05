@@ -123,6 +123,7 @@
  - (dtucker) [openbsd-compat/fake-rfc2553.c] Add headers needed for inet_ntoa.
  - (dtucker) [auth-skey.c] monitor_wrap.h needs ssh-gss.h.
  - (dtucker) [audit.c audit.h] Repair headers.
+ - (dtucker) [audit-bsm.c] Add additional headers now required.
 
 20060804
  - (dtucker) [configure.ac] The "crippled AES" test does not work on recent
