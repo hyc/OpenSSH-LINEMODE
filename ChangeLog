@@ -102,6 +102,7 @@
    #include stdarg.h, needed for log.h.
  - (dtucker) [entropy.c] Needs unistd.h too.
  - (dtucker) [ssh-rand-helper.c] Needs stdarg.h for log.h.
+ - (dtucker) [openbsd-compat/getrrsetbyname.c] Nees stdlib.h for malloc.
 
 20060804
  - (dtucker) [configure.ac] The "crippled AES" test does not work on recent
