@@ -30,6 +30,11 @@
      avoid confusing wording in HashKnownHosts:
      originally spotted by alan amesbury;
      ok deraadt
+   - jmc@cvs.openbsd.org 2006/07/27 08:00:50
+     [ssh_config.5]
+     avoid confusing wording in HashKnownHosts:
+     originally spotted by alan amesbury;
+     ok deraadt
 
 20060804
  - (dtucker) [configure.ac] The "crippled AES" test does not work on recent
