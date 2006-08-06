@@ -723,12 +723,4 @@ struct winsize {
 # endif
 #endif
 
-/* some system headers on HP-UX define YES/NO */
-#ifdef YES
-# undef YES
-#endif
-#ifdef NO
-# undef NO
-#endif
-
 #endif /* _DEFINES_H */
