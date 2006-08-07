@@ -1,4 +1,8 @@
-2006086
+20060806
+ - (djm) [openbsd-compat/bsd-getpeereid.c] Add some headers to quiet warnings
+   on Solaris 10
+
+20060806
  - (dtucker) [defines.h] With the includes.h changes we no longer get the
    name clash on "YES" so we can remove the workaround for it.
  - (dtucker) [openbsd-compat/{bsd-asprintf.c,bsd-openpty.c,bsd-snprintf.c,
