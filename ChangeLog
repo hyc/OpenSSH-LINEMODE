@@ -1,3 +1,6 @@
+20060815
+ - (dtucker) [LICENCE] Add Reyk to the list for the compat dir.
+
 20060806
  - (djm) [openbsd-compat/bsd-getpeereid.c] Add some headers to quiet warnings
    on Solaris 10
