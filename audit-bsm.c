@@ -37,6 +37,10 @@
 #include "includes.h"
 #if defined(USE_BSM_AUDIT)
 
+#include <sys/types.h>
+
+#include <unistd.h>
+
 #include "ssh.h"
 #include "log.h"
 #include "key.h"

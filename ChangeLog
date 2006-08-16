@@ -1,3 +1,6 @@
+20060816
+ - (djm) [audit-bsm.c] Sprinkle in some headers
+
 20060815
  - (dtucker) [LICENCE] Add Reyk to the list for the compat dir.
 
