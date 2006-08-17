@@ -1,3 +1,7 @@
+20060817
+ - (dtucker) [openbsd-compat/fake-rfc2553.c openbsd-compat/setproctitle.c]
+   Include stdlib.h for malloc and friends.
+
 20060816
  - (djm) [audit-bsm.c] Sprinkle in some headers
 
