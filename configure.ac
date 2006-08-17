@@ -180,6 +180,12 @@ case "$host" in
 		[#include <usersec.h>]
 	)
 	AC_CHECK_FUNCS(setauthdb)
+	AC_CHECK_DECL(F_CLOSEM,
+	    AC_DEFINE(USE_FCNTL_CLOSEM, 1, [Use F_CLOSEM fcntl for closefrom]),
+	    [],
+	    [ #include <limits.h>
+	      #include <fcntl.h> ]
+	)
 	check_for_aix_broken_getaddrinfo=1
 	AC_DEFINE(BROKEN_REALPATH, 1, [Define if you have a broken realpath.])
 	AC_DEFINE(SETEUID_BREAKS_SETUID, 1,
