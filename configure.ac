@@ -402,6 +402,8 @@ mips-sony-bsd|mips-sony-newsos4)
 	AC_DEFINE(HAVE_ATTRIBUTE__SENTINEL__, 1, [OpenBSD's gcc has sentinel])
 	AC_DEFINE(HAVE_ATTRIBUTE__BOUNDED__, 1, [OpenBSD's gcc has bounded])
 	AC_DEFINE(SSH_TUN_OPENBSD, 1, [Open tunnel devices the OpenBSD way])
+	AC_DEFINE(SYSLOG_R_SAFE_IN_SIGHAND, 1,
+	    [syslog_r function is safe to use in in a signal handler])
 	;;
 *-*-solaris*)
 	if test "x$withval" != "xno" ; then

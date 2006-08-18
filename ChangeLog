@@ -42,6 +42,9 @@
      [gss-genr.c ssh-gss.h]
      constify host argument to match the rest of the GSSAPI functions and
      unbreak compilation with -Werror
+ - (djm) Disable sigdie() for platforms that cannot safely syslog inside
+   a signal handler (basically all of them, excepting OpenBSD);
+   ok dtucker@
 
 20060817
  - (dtucker) [openbsd-compat/fake-rfc2553.c openbsd-compat/setproctitle.c]
