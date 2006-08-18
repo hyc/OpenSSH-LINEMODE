@@ -3,6 +3,8 @@
    closefrom.c from sudo.
  - (dtucker) [openbsd-compat/bsd-closefrom.c] Comment out rcsid.
  - (dtucker) [openbsd-compat/regress/snprintftest.c] Newline on error.
+ - (dtucker) [openbsd-compat/regress/Makefile.in] Use implicit rules for the
+   test progs instead; they work better than what we have.
 
 20060817
  - (dtucker) [openbsd-compat/fake-rfc2553.c openbsd-compat/setproctitle.c]

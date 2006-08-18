@@ -26,15 +26,6 @@ t-exec:	$(TESTPROGS)
 	done
 	@echo finished compat regress tests
 
-strtonumtest: strtonumtest.c $(LIBCOMPAT)
-	$(CC) $(CFLAGS) $(CPPFLAGS) -o strtonumtest $< $(LDFLAGS)
-
-strduptest: strduptest.c $(LIBCOMPAT)
-	$(CC) $(CFLAGS) $(CPPFLAGS) -o strduptest $< $(LDFLAGS)
-
-closefromtest: closefromtest.c $(LIBCOMPAT)
-	$(CC) $(CFLAGS) $(CPPFLAGS) -o closefromtest $< $(LDFLAGS)
-
 clean:
 	rm -f *.o *.a core $(TESTPROGS) valid.out
 
