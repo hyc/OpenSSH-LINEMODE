@@ -26,6 +26,10 @@
      [log.c log.h sshd.c]
      make signal handler termination path shorter; risky code pointed out by
      mark dowd; ok djm markus
+   - markus@cvs.openbsd.org 2006/08/18 09:15:20
+     [auth.h session.c sshd.c]
+     delay authentication related cleanups until we're authenticated and
+     all alarms have been cancelled; ok deraadt
 
 20060817
  - (dtucker) [openbsd-compat/fake-rfc2553.c openbsd-compat/setproctitle.c]
