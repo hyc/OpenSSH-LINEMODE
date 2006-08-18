@@ -5,6 +5,10 @@
  - (dtucker) [openbsd-compat/regress/snprintftest.c] Newline on error.
  - (dtucker) [openbsd-compat/regress/Makefile.in] Use implicit rules for the
    test progs instead; they work better than what we have.
+ - (djm) OpenBSD CVS Sync
+   - stevesk@cvs.openbsd.org 2006/08/06 01:13:32
+     [compress.c monitor.c monitor_wrap.c]
+     "zlib.h" can be <zlib.h>; ok djm@ markus@
 
 20060817
  - (dtucker) [openbsd-compat/fake-rfc2553.c openbsd-compat/setproctitle.c]
