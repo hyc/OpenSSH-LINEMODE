@@ -22,6 +22,10 @@
      [sshd.c]
      factor inetd connection, TCP listen and main TCP accept loop out of
      main() into separate functions to improve readability; ok markus@
+   - deraadt@cvs.openbsd.org 2006/08/18 09:13:26
+     [log.c log.h sshd.c]
+     make signal handler termination path shorter; risky code pointed out by
+     mark dowd; ok djm markus
 
 20060817
  - (dtucker) [openbsd-compat/fake-rfc2553.c openbsd-compat/setproctitle.c]
