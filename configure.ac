@@ -181,7 +181,7 @@ case "$host" in
 	)
 	AC_CHECK_FUNCS(setauthdb)
 	AC_CHECK_DECL(F_CLOSEM,
-	    AC_DEFINE(USE_FCNTL_CLOSEM, 1, [Use F_CLOSEM fcntl for closefrom]),
+	    AC_DEFINE(HAVE_FCNTL_CLOSEM, 1, [Use F_CLOSEM fcntl for closefrom]),
 	    [],
 	    [ #include <limits.h>
 	      #include <fcntl.h> ]

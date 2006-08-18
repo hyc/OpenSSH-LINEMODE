@@ -1,3 +1,7 @@
+20060818
+ - (dtucker) [configure.ac openbsd-compat/bsd-closefrom.c] Resync with
+   closefrom.c from sudo.
+
 20060817
  - (dtucker) [openbsd-compat/fake-rfc2553.c openbsd-compat/setproctitle.c]
    Include stdlib.h for malloc and friends.
