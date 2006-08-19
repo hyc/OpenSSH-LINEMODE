@@ -3,6 +3,8 @@
    - djm@cvs.openbsd.org 2006/08/18 22:41:29
      [gss-genr.c]
      GSSAPI error code should be 0 and not -1; from simon@sxw.org.uk
+ - (dtucker) [openbsd-compat/regress/Makefile.in] Add $(EXEEXT) and add a
+   single rule for the test progs.
 
 20060818
  - (dtucker) [configure.ac openbsd-compat/bsd-closefrom.c] Resync with
