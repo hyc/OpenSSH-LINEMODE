@@ -1,5 +1,7 @@
 20060820
  - (dtucker) [log.c] Move ifdef to prevent unused variable warning.
+ - (dtucker) [configure.ac] Save $LIBS during PAM library tests and restore
+   afterward.  Removes the need to mangle $LIBS later to remove -lpam and -ldl.
 
 20060819
  - (djm) OpenBSD CVS Sync
