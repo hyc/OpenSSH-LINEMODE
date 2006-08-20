@@ -1966,7 +1966,7 @@ AC_ARG_WITH(pam,
 					# libdl already in LIBS
 					;;
 				*)
-					LIBPAM="-$LIBPAM -ldl"
+					LIBPAM="$LIBPAM -ldl"
 					;;
 				esac
 			fi
