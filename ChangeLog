@@ -4,6 +4,8 @@
    afterward.  Removes the need to mangle $LIBS later to remove -lpam and -ldl.
  - (dtucker) [configure.ac] Relocate --with-pam parts in preparation for
    fixing bug #1181.  No changes yet.
+ - (dtucker) [configure.ac] Bug #1181: Explicitly test to see if OpenSSL
+   (0.9.8a and presumably newer) requires -ldl to successfully link.
 
 20060819
  - (djm) OpenBSD CVS Sync

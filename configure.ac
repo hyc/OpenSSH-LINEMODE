@@ -1825,6 +1825,36 @@ Also see contrib/findssl.sh for help identifying header/library mismatches.])
 	]
 )
 
+AC_MSG_CHECKING([if programs using OpenSSL functions will link])
+AC_LINK_IFELSE(
+	[AC_LANG_SOURCE([[
+#include <openssl/evp.h>
+int main(void) { SSLeay_add_all_algorithms(); }
+	]])],
+	[
+		AC_MSG_RESULT(yes)
+	],
+	[
+		AC_MSG_RESULT(no)
+		saved_LIBS="$LIBS"
+		LIBS="$LIBS -ldl"
+		AC_MSG_CHECKING([if programs using OpenSSL need -ldl])
+		AC_LINK_IFELSE(
+			[AC_LANG_SOURCE([[
+#include <openssl/evp.h>
+int main(void) { SSLeay_add_all_algorithms(); }
+			]])],
+			[
+				AC_MSG_RESULT(yes)
+			],
+			[
+				AC_MSG_RESULT(no)
+				LIBS="$saved_LIBS"
+			]
+		)
+	]
+)
+
 AC_ARG_WITH(ssl-engine,
 	[  --with-ssl-engine       Enable OpenSSL (hardware) ENGINE support ],
 	[ if test "x$withval" != "xno" ; then
@@ -1926,12 +1956,19 @@ AC_ARG_WITH(pam,
 
 			PAM_MSG="yes"
 
+			LIBPAM="-lpam"
 			AC_DEFINE(USE_PAM, 1,
 				[Define if you want to enable PAM support])
+
 			if test $ac_cv_lib_dl_dlopen = yes; then
-				LIBPAM="-lpam -ldl"
-			else
-				LIBPAM="-lpam"
+				case "$LIBS" in
+				*-ldl*)
+					# libdl already in LIBS
+					;;
+				*)
+					LIBPAM="-$LIBPAM -ldl"
+					;;
+				esac
 			fi
 			AC_SUBST(LIBPAM)
 		fi
