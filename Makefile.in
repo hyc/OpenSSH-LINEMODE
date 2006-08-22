@@ -108,7 +108,7 @@ PATHSUBS	= \
 	-e 's|/etc/ssh/ssh_host_rsa_key|$(sysconfdir)/ssh_host_rsa_key|g' \
 	-e 's|/var/run/sshd.pid|$(piddir)/sshd.pid|g' \
 	-e 's|/etc/ssh/moduli|$(sysconfdir)/moduli|g' \
-	-e 's|/etc/sshrc|$(sysconfdir)/sshrc|g' \
+	-e 's|/etc/ssh/sshrc|$(sysconfdir)/sshrc|g' \
 	-e 's|/usr/X11R6/bin/xauth|$(XAUTH_PATH)|g' \
 	-e 's|/var/empty|$(PRIVSEP_PATH)|g' \
 	-e 's|/usr/bin:/bin:/usr/sbin:/sbin|@user_path@|g'
