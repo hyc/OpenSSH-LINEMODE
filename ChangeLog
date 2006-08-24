@@ -1,5 +1,7 @@
 20060824
  - (dtucker) [openbsd-compat/basename.c] Include errno.h.
+ - (dtucker) [openbsd-compat/bsd-misc.c] Add includes needed for select(2) on
+   older systems.
 
 20060822
  - (dtucker) [Makefile.in] Bug #1177: fix incorrect path for sshrc in
