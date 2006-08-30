@@ -4,6 +4,10 @@
      [sshd_config.5]
      Document HostbasedUsesNameFromPacketOnly.  Corrections from jmc@,
      ok jmc@ djm@
+   - dtucker@cvs.openbsd.org 2006/08/21 08:15:57
+     [sshd.8]
+     Add more detail about what permissions are and aren't accepted for
+     authorized_keys files.  Corrections jmc@, ok djm@, "looks good" jmc@
 
 20060824
  - (dtucker) [openbsd-compat/basename.c] Include errno.h.
