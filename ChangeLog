@@ -1,3 +1,10 @@
+20060830
+ - (djm) OpenBSD CVS Sync
+   - dtucker@cvs.openbsd.org 2006/08/21 08:14:01
+     [sshd_config.5]
+     Document HostbasedUsesNameFromPacketOnly.  Corrections from jmc@,
+     ok jmc@ djm@
+
 20060824
  - (dtucker) [openbsd-compat/basename.c] Include errno.h.
  - (dtucker) [openbsd-compat/bsd-misc.c] Add includes needed for select(2) on
