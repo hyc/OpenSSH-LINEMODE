@@ -26,6 +26,7 @@
    - djm@cvs.openbsd.org 2006/08/30 00:14:37
      [version.h]
      crank to 4.4
+ - (djm) [openbsd-compat/xcrypt.c] needs unistd.h
 
 20060824
  - (dtucker) [openbsd-compat/basename.c] Include errno.h.
