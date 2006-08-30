@@ -190,10 +190,12 @@ char *shadow_pw(struct passwd *pw);
 /* Routines for a single OS platform */
 #include "bsd-cray.h"
 #include "bsd-cygwin_util.h"
+
+#include "port-aix.h"
 #include "port-irix.h"
 #include "port-linux.h"
-#include "port-aix.h"
-#include "port-uw.h"
+#include "port-solaris.h"
 #include "port-tun.h"
+#include "port-uw.h"
 
 #endif /* _OPENBSD_COMPAT_H */
