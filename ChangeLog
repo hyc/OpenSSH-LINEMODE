@@ -19,6 +19,10 @@
      missing, by checking whether or not kerberos allocated us a context
      before attempting to free it.  Patch from Simon Wilkinson, tested by
      biorn@, ok djm@
+   - dtucker@cvs.openbsd.org 2006/08/30 00:06:51
+     [sshconnect2.c]
+     Fix regression where SSH2 banner is printed at loglevels ERROR and FATAL
+     where previously it weren't.  bz #1221, found by Dean Kopesky, ok djm@
 
 20060824
  - (dtucker) [openbsd-compat/basename.c] Include errno.h.
