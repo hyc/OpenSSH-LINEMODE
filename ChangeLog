@@ -8,6 +8,11 @@
      [sshd.8]
      Add more detail about what permissions are and aren't accepted for
      authorized_keys files.  Corrections jmc@, ok djm@, "looks good" jmc@
+   - djm@cvs.openbsd.org 2006/08/29 10:40:19
+     [channels.c session.c]
+     normalise some inconsistent (but harmless) NULL pointer checks
+     spotted by the Stanford SATURN tool, via Isil Dillig;
+     ok markus@ deraadt@
 
 20060824
  - (dtucker) [openbsd-compat/basename.c] Include errno.h.
