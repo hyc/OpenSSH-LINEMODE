@@ -29,6 +29,7 @@
 #ifdef HAVE_FCNTL_H
 # include <fcntl.h>
 #endif
+#include <stdarg.h>
 #include <string.h>
 #include <unistd.h>
 

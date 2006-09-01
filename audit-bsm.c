@@ -39,6 +39,7 @@
 
 #include <sys/types.h>
 
+#include <stdarg.h>
 #include <unistd.h>
 
 #include "ssh.h"

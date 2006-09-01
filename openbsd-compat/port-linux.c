@@ -24,6 +24,7 @@
 #include "includes.h"
 
 #include <errno.h>
+#include <stdarg.h>
 #include <string.h>
 
 #ifdef WITH_SELINUX

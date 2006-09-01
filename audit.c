@@ -26,6 +26,9 @@
 
 #include "includes.h"
 
+#include <stdarg.h>
+#include <string.h>
+
 #ifdef SSH_AUDIT_EVENTS
 
 #include "audit.h"
