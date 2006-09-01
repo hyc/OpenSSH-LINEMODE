@@ -17,6 +17,8 @@
  - (djm) [includes.h monitor.c openbsd-compat/bindresvport.c]
    [openbsd-compat/rresvport.c] Some more headers: netinet/in.h 
    sys/socket.h and unistd.h in various places
+ - (dtucker) [openbsd-compat/bsd-cygwin_util.c] Fix implict declaration
+   warnings for binary_open and binary_close.  Patch from Corinna Vinschen.
 
 20060831
  - (djm) [CREDITS LICENCE Makefile.in auth.c configure.ac includes.h ]
