@@ -1,3 +1,8 @@
+20060903
+ - (dtucker) [configure.ac openbsd-compat/openbsd-compat.h] Check for
+   declaration of writev(2) and declare it ourselves if necessary.  Makes
+   the atomiciov() calls build on really old systems.  ok djm@
+
 20060902
  - (dtucker) [openbsd-compat/port-irix.c] Add errno.h, found by Iain Morgan.
  - (dtucker) [ssh-keyscan.c ssh-rand-helper.c ssh.c sshconnect.c

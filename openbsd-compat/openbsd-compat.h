@@ -131,6 +131,11 @@ int getgrouplist(const char *, gid_t, gid_t *, int *);
 int BSDgetopt(int argc, char * const *argv, const char *opts);
 #endif
 
+#if defined(HAVE_DECL_WRITEV) && HAVE_DECL_WRITEV == 0
+# include <sys/types.h>
+# include <sys/uio.h>
+int writev(int, struct iovec *, int);
+#endif
 
 /* Home grown routines */
 #include "bsd-misc.h"
