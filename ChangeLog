@@ -1,3 +1,8 @@
+20060904
+ - (dtucker) [configure.ac] Define BROKEN_UPDWTMP on SCO OSR6 as the native
+   updwdtmp seems to generate invalid wtmp entries.  From Roger Cornelius,
+   ok djm@
+
 20060903
  - (dtucker) [configure.ac openbsd-compat/openbsd-compat.h] Check for
    declaration of writev(2) and declare it ourselves if necessary.  Makes

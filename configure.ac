@@ -512,6 +512,8 @@ mips-sony-bsd|mips-sony-newsos4)
 		TEST_SHELL=/u95/bin/sh
 		AC_DEFINE(BROKEN_LIBIAF, 1,
 			[ia_uinfo routines not supported by OS yet])
+		AC_DEFINES(BROKEN_UPDWTMP, 1,
+			[using updwtmp will corrupt wtmp entries])
 		;;
 	*)	AC_DEFINE(LOCKED_PASSWD_STRING, "*LK*")
 		;;
