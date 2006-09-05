@@ -1,5 +1,6 @@
 20060905
  - (dtucker) [configure.ac] s/AC_DEFINES/AC_DEFINE/ spotted by Roumen Petrov.
+ - (dtucker) [loginrec.c] Include paths.h for _PATH_BTMP.
 
 20060904
  - (dtucker) [configure.ac] Define BROKEN_UPDWTMP on SCO OSR6 as the native
