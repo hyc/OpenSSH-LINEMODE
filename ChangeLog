@@ -1,3 +1,7 @@
+20060908
+ - (dtucker) [auth-sia.c] Add includes required for build on Tru64.  Patch
+   from Chris Adams.
+
 20060907
  - (djm) [sshd.c auth.c] Set up fakepw() with privsep uid/gid, so it can
    be used to drop privilege to; fixes Solaris GSSAPI crash reported by
