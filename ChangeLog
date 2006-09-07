@@ -5,6 +5,7 @@
    NB. this change will require that the privilege separation user must
    exist on all the time, not just when UsePrivilegeSeparation=yes
  - (tim) [configure.ac] s/BROKEN_UPDWTMP/BROKEN_UPDWTMPX/ on SCO OSR6
+ - (dtucker) [loginrec.c] Wrap paths.h in HAVE_PATHS_H.
 
 20060905
  - (dtucker) [configure.ac] s/AC_DEFINES/AC_DEFINE/ spotted by Roumen Petrov.
