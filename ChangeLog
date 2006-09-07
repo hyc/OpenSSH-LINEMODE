@@ -6,6 +6,8 @@
    exist on all the time, not just when UsePrivilegeSeparation=yes
  - (tim) [configure.ac] s/BROKEN_UPDWTMP/BROKEN_UPDWTMPX/ on SCO OSR6
  - (dtucker) [loginrec.c] Wrap paths.h in HAVE_PATHS_H.
+ - (dtucker) [regress/cfgmatch.sh] stop_client is racy, so give us a better
+   chance of winning.
 
 20060905
  - (dtucker) [configure.ac] s/AC_DEFINES/AC_DEFINE/ spotted by Roumen Petrov.
