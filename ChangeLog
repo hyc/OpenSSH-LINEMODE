@@ -1,6 +1,7 @@
 20060908
  - (dtucker) [auth-sia.c] Add includes required for build on Tru64.  Patch
    from Chris Adams.
+ - (dtucker) [configure.ac] The BSM header test needs time.h in some cases.
 
 20060907
  - (djm) [sshd.c auth.c] Set up fakepw() with privsep uid/gid, so it can

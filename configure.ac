@@ -1166,7 +1166,13 @@ AC_ARG_WITH(audit,
 		AUDIT_MODULE=bsm
 		dnl    Checks for headers, libs and functions
 		AC_CHECK_HEADERS(bsm/audit.h, [],
-		    [AC_MSG_ERROR(BSM enabled and bsm/audit.h not found)])
+		    [AC_MSG_ERROR(BSM enabled and bsm/audit.h not found)],
+		    [
+#ifdef HAVE_TIME_H
+# include <time.h>
+#endif
+		    ]
+)
 		AC_CHECK_LIB(bsm, getaudit, [],
 		    [AC_MSG_ERROR(BSM enabled and required library not found)])
 		AC_CHECK_FUNCS(getaudit, [],
