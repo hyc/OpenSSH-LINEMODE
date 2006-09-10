@@ -1,3 +1,6 @@
+20060910
+ - (dtucker) [contrib/aix/buildbff.sh] Ensure that perl is available.
+
 20060909
  - (dtucker) [openbsd-compat/bsd-snprintf.c] Add stdarg.h.
  - (dtucker) [contrib/aix/buildbff.sh] Always create privsep user.

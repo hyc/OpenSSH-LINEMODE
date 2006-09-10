@@ -23,6 +23,8 @@ umask 022
 
 startdir=`pwd`
 
+perl -v >/dev/null || (echo perl required; exit 1)
+
 # Path to inventory.sh: same place as buildbff.sh
 if  echo $0 | egrep '^/'
 then
