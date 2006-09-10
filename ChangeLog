@@ -1,5 +1,6 @@
 20060910
  - (dtucker) [contrib/aix/buildbff.sh] Ensure that perl is available.
+ - (dtucker) [configure.ac] Add -lcrypt to let DragonFly build OOTB.
 
 20060909
  - (dtucker) [openbsd-compat/bsd-snprintf.c] Add stdarg.h.
