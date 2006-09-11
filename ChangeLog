@@ -1,3 +1,7 @@
+20060911
+ - (dtucker) [cipher-aes.c] Include string.h for memcpy and friends.  Noted
+   by Pekka Savola.
+
 20060910
  - (dtucker) [contrib/aix/buildbff.sh] Ensure that perl is available.
  - (dtucker) [configure.ac] Add -lcrypt to let DragonFly build OOTB.
