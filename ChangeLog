@@ -5,6 +5,7 @@
      limit maximum work performed by the CRC compensation attack detector,
      problem reported by Tavis Ormandy, Google Security Team;
      ok markus@ deraadt@
+ - (djm) Add openssh.xml to .cvsignore and sort it
 
 20060912
  - (djm) [Makefile.in buildpkg.sh.in configure.ac openssh.xml.in]
