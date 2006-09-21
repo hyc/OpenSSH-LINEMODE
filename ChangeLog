@@ -8,6 +8,8 @@
    - markus@cvs.openbsd.org 2006/09/19 21:14:08
      [packet.c]
      client NULL deref on protocol error; Tavis Ormandy, Google Security Team
+ - (dtucker) [defines.h] Include unistd.h before defining getpgrp; fixes
+   build error on Ultrix.  From Bernhard Simon.
 
 20060918
  - (dtucker) [configure.ac] On AIX, check to see if the compiler will allow

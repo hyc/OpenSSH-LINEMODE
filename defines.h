@@ -556,6 +556,7 @@ struct winsize {
 #endif /* defined(HAVE_VHANGUP) && !defined(HAVE_DEV_PTMX) */
 
 #ifndef GETPGRP_VOID
+# include <unistd.h>
 # define getpgrp() getpgrp(0)
 #endif
 
