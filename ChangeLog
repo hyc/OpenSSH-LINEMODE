@@ -1,3 +1,7 @@
+20060922
+ - (dtucker) [packet.c canohost.c] Include arpa/inet.h for htonl macros on
+   some platforms (eg HP-UX 11.00).  From santhi.amirta at gmail com.
+
 20060921
  - (dtucker) OpenBSD CVS Sync
    - otto@cvs.openbsd.org 2006/09/19 05:52:23
