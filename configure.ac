@@ -514,7 +514,6 @@ mips-sony-bsd|mips-sony-newsos4)
 	;;
 # UnixWare 1.x, UnixWare 2.x, and others based on code from Univel.
 *-*-sysv4.2*)
-	CFLAGS="$CFLAGS -Dva_list=_VA_LIST"
 	AC_DEFINE(USE_PIPES)
 	AC_DEFINE(SETEUID_BREAKS_SETUID)
 	AC_DEFINE(BROKEN_SETREUID)
