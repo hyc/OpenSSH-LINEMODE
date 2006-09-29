@@ -1916,7 +1916,7 @@ AC_ARG_WITH(ssl-engine,
 		AC_TRY_COMPILE(
 			[ #include <openssl/engine.h>],
 			[
-int main(void){ENGINE_load_builtin_engines();ENGINE_register_all_complete();}
+ENGINE_load_builtin_engines();ENGINE_register_all_complete();
 			],
 			[ AC_MSG_RESULT(yes)
 			  AC_DEFINE(USE_OPENSSL_ENGINE, 1,
