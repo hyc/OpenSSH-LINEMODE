@@ -1,3 +1,9 @@
+20061003
+ - (tim) [configure.ac] Move CHECK_HEADERS test before platform specific
+   section so additional platform specific CHECK_HEADER tests will work
+   correctly. Fixes "<net/if_tap.h> on FreeBSD" problem report by des AT des.no
+   Feedback and "seems like a good idea" dtucker@
+
 20061001
  - (dtucker) [audit-bsm.c] Include errno.h.  Pointed out by des at des.no.
 
