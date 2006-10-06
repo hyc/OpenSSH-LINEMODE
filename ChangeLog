@@ -1,3 +1,7 @@
+20061006
+ - (tim) [buildpkg.sh.in] Use uname -r instead of -v in OS_VER for Solaris.
+   Differentiate between OpenServer 5 and OpenServer 6
+
 20061003
  - (tim) [configure.ac] Move CHECK_HEADERS test before platform specific
    section so additional platform specific CHECK_HEADER tests will work
