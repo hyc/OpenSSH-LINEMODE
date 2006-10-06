@@ -1,6 +1,9 @@
 20061006
  - (tim) [buildpkg.sh.in] Use uname -r instead of -v in OS_VER for Solaris.
    Differentiate between OpenServer 5 and OpenServer 6
+ - (dtucker) [configure.ac] Set put -lselinux into $LIBS while testing for
+   SELinux functions so they're detected correctly.  Patch from pebenito at
+   gentoo.org.
 
 20061003
  - (tim) [configure.ac] Move CHECK_HEADERS test before platform specific

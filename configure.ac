@@ -3145,7 +3145,10 @@ AC_ARG_WITH(selinux,
 		    AC_MSG_ERROR(SELinux support requires selinux.h header))
 		AC_CHECK_LIB(selinux, setexeccon, [ LIBSELINUX="-lselinux" ],
 		    AC_MSG_ERROR(SELinux support requires libselinux library))
+		save_LIBS="$LIBS"
+		LIBS="$LIBS $LIBSELINUX"
 		AC_CHECK_FUNCS(getseuserbyname get_default_context_with_level)
+		LIBS="$save_LIBS"
 	fi ]
 )
 AC_SUBST(LIBSELINUX)
