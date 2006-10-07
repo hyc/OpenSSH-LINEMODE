@@ -4,6 +4,8 @@
  - (dtucker) [configure.ac] Set put -lselinux into $LIBS while testing for
    SELinux functions so they're detected correctly.  Patch from pebenito at
    gentoo.org.
+ - (tim) [buildpkg.sh.in] Some systems have really limited nawk (OpenServer).
+   Allow setting alternate awk in openssh-config.local.
 
 20061003
  - (tim) [configure.ac] Move CHECK_HEADERS test before platform specific
