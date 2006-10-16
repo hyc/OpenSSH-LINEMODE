@@ -1,3 +1,7 @@
+20061016
+ - (dtucker) [monitor_fdpass.c] Include sys/in.h, required for cmsg macros
+   on older (2.0) Linuxes.  Based on patch from thmo-13 at gmx de.
+
 20061006
  - (tim) [buildpkg.sh.in] Use uname -r instead of -v in OS_VER for Solaris.
    Differentiate between OpenServer 5 and OpenServer 6
