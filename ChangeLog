@@ -1,3 +1,11 @@
+20061018
+ - (dtucker) OpenBSD CVS Sync
+   - ray@cvs.openbsd.org 2006/09/25 04:55:38
+     [ssh-keyscan.1 ssh.1]
+     Change "a SSH" to "an SSH".  Hurray, I'm not the only one who
+     pronounces "SSH" as "ess-ess-aich".
+     OK jmc@ and stevesk@.
+
 20061016
  - (dtucker) [monitor_fdpass.c] Include sys/in.h, required for cmsg macros
    on older (2.0) Linuxes.  Based on patch from thmo-13 at gmx de.
