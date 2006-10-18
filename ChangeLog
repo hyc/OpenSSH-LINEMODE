@@ -5,6 +5,8 @@
      Change "a SSH" to "an SSH".  Hurray, I'm not the only one who
      pronounces "SSH" as "ess-ess-aich".
      OK jmc@ and stevesk@.
+ - (dtucker) [sshd.c] Reshuffle storing of pw struct; prevents warnings
+   on older versions of OS X.  ok djm@
 
 20061016
  - (dtucker) [monitor_fdpass.c] Include sys/in.h, required for cmsg macros
