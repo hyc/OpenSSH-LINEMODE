@@ -1,3 +1,11 @@
+20061023
+ - (djm) OpenBSD CVS Sync
+   - ray@cvs.openbsd.org 2006/09/30 17:48:22
+     [sftp.c]
+     Clear errno before calling the strtol functions.
+     From Paul Stoeber <x0001 at x dot de1 dot cc>.
+     OK deraadt@.
+
 20061018
  - (dtucker) OpenBSD CVS Sync
    - ray@cvs.openbsd.org 2006/09/25 04:55:38
