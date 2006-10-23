@@ -22,6 +22,9 @@
      exit instead of doing a blocking tcp send if we detect a client/server
      timeout, since the tcp sendqueue might be already full (of alive
      requests); ok dtucker, report mpf
+   - djm@cvs.openbsd.org 2006/10/22 02:25:50
+     [sftp-client.c]
+     cancel progress meter when upload write fails; ok deraadt@
 
 20061018
  - (dtucker) OpenBSD CVS Sync
