@@ -5,6 +5,10 @@
      Clear errno before calling the strtol functions.
      From Paul Stoeber <x0001 at x dot de1 dot cc>.
      OK deraadt@.
+   - djm@cvs.openbsd.org 2006/10/06 02:29:19
+     [ssh-agent.c ssh-keyscan.c ssh.c]
+     sys/resource.h needs sys/time.h; prompted by brad@
+     (NB. Id sync only for portable)
 
 20061018
  - (dtucker) OpenBSD CVS Sync
