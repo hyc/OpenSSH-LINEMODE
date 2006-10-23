@@ -13,6 +13,10 @@
      [session.c]
      xmalloc -> xcalloc that was missed previously, from portable
      (NB. Id sync only for portable, obviously)
+   - markus@cvs.openbsd.org 2006/10/10 10:12:45
+     [sshconnect.c]
+     sleep before retrying (not after) since sleep changes errno; fixes
+     pr 5250; rad@twig.com; ok dtucker djm
 
 20061018
  - (dtucker) OpenBSD CVS Sync
