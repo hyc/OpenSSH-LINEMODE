@@ -17,6 +17,11 @@
      [sshconnect.c]
      sleep before retrying (not after) since sleep changes errno; fixes
      pr 5250; rad@twig.com; ok dtucker djm
+   - markus@cvs.openbsd.org 2006/10/11 12:38:03
+     [clientloop.c serverloop.c]
+     exit instead of doing a blocking tcp send if we detect a client/server
+     timeout, since the tcp sendqueue might be already full (of alive
+     requests); ok dtucker, report mpf
 
 20061018
  - (dtucker) OpenBSD CVS Sync
