@@ -1,3 +1,6 @@
+20061027
+- (djm) [auth.c] gc some dead code
+
 20061023
  - (djm) OpenBSD CVS Sync
    - ray@cvs.openbsd.org 2006/09/30 17:48:22
