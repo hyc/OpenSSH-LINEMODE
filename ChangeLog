@@ -1,3 +1,9 @@
+20061105
+ - (djm) OpenBSD CVS Sync
+   - otto@cvs.openbsd.org 2006/10/28 18:08:10
+     [ssh.1]
+     correct/expand example of usage of -w; ok jmc@ stevesk@
+
 20061101
  - (dtucker) [openbsd-compat/port-solaris.c] Bug #1255: Make only hwerr
    events fatal in Solaris process contract support and tell it to signal
