@@ -1,3 +1,7 @@
+20061107
+ - (dtucker) [sshd.c] Use privsep_pw if we have it, but only require it
+   if we absolutely need it.  Pointed out by Corinna, ok djm@
+
 20061105
  - (djm) OpenBSD CVS Sync
    - otto@cvs.openbsd.org 2006/10/28 18:08:10
