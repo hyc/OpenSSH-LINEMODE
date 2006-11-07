@@ -6,6 +6,11 @@
      [auth-rsa.c kexgexc.c kexdhs.c key.c ssh-dss.c sshd.c kexgexs.c
      ssh-keygen.c bufbn.c moduli.c scard.c kexdhc.c sshconnect1.c dh.c rsa.c]
      add missing checks for openssl return codes; with & ok djm@
+   - markus@cvs.openbsd.org 2006/11/07 10:31:31
+     [monitor.c version.h]
+     correctly check for bad signatures in the monitor, otherwise the monitor
+     and the unpriv process can get out of sync. with dtucker@, ok djm@,
+     dtucker@
 
 20061105
  - (djm) OpenBSD CVS Sync
