@@ -13,6 +13,7 @@
      dtucker@
  - (dtucker) [README contrib/{caldera,redhat,contrib}/openssh.spec] Bump
    versions.
+ - (dtucker) Release 4.5p1.
 
 20061105
  - (djm) OpenBSD CVS Sync
