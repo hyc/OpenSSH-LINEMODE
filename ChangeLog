@@ -1,6 +1,11 @@
 20061107
  - (dtucker) [sshd.c] Use privsep_pw if we have it, but only require it
    if we absolutely need it.  Pointed out by Corinna, ok djm@
+ - (dtucker) OpenBSD CVS Sync
+   - markus@cvs.openbsd.org 2006/11/06 21:25:28
+     [auth-rsa.c kexgexc.c kexdhs.c key.c ssh-dss.c sshd.c kexgexs.c
+     ssh-keygen.c bufbn.c moduli.c scard.c kexdhc.c sshconnect1.c dh.c rsa.c]
+     add missing checks for openssl return codes; with & ok djm@
 
 20061105
  - (djm) OpenBSD CVS Sync
