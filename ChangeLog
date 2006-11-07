@@ -1,3 +1,9 @@
+20061108
+ - (dtucker) OpenBSD CVS Sync
+   - markus@cvs.openbsd.org 2006/11/07 13:02:07
+     [dh.c]
+     BN_hex2bn returns int; from dtucker@
+
 20061107
  - (dtucker) [sshd.c] Use privsep_pw if we have it, but only require it
    if we absolutely need it.  Pointed out by Corinna, ok djm@
