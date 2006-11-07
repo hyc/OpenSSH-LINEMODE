@@ -11,6 +11,8 @@
      correctly check for bad signatures in the monitor, otherwise the monitor
      and the unpriv process can get out of sync. with dtucker@, ok djm@,
      dtucker@
+ - (dtucker) [README contrib/{caldera,redhat,contrib}/openssh.spec] Bump
+   versions.
 
 20061105
  - (djm) OpenBSD CVS Sync
