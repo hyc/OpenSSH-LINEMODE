@@ -1,3 +1,8 @@
+20061205
+ - (djm) [auth.c] Fix NULL pointer dereference in fakepw().  Crash would
+   occur if the server did not have the privsep user and an invalid user
+   tried to login and both privsep and krb5 auth are disabled; ok dtucker@
+
 20061108
  - (dtucker) OpenBSD CVS Sync
    - markus@cvs.openbsd.org 2006/11/07 13:02:07
