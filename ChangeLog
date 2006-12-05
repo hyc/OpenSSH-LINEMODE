@@ -2,6 +2,7 @@
  - (djm) [auth.c] Fix NULL pointer dereference in fakepw().  Crash would
    occur if the server did not have the privsep user and an invalid user
    tried to login and both privsep and krb5 auth are disabled; ok dtucker@
+ - (djm) [bsd-asprintf.c] Better test for bad vsnprintf lengths; ok dtucker@
 
 20061108
  - (dtucker) OpenBSD CVS Sync
