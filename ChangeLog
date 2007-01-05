@@ -1,3 +1,9 @@
+20070105
+ - (djm) OpenBSD CVS Sync
+   - deraadt@cvs.openbsd.org 2006/11/14 19:41:04
+     [ssh-keygen.c]
+     use argc and argv not some made up short form
+
 20061205
  - (djm) [auth.c] Fix NULL pointer dereference in fakepw().  Crash would
    occur if the server did not have the privsep user and an invalid user
