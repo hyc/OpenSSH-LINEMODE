@@ -3,6 +3,10 @@
    - deraadt@cvs.openbsd.org 2006/11/14 19:41:04
      [ssh-keygen.c]
      use argc and argv not some made up short form
+   - ray@cvs.openbsd.org 2006/11/23 01:35:11
+     [misc.c sftp.c]
+     Don't access buf[strlen(buf) - 1] for zero-length strings.
+     ``ok by me'' djm@.
 
 20061205
  - (djm) [auth.c] Fix NULL pointer dereference in fakepw().  Crash would
