@@ -10,6 +10,13 @@
    - markus@cvs.openbsd.org 2006/12/11 21:25:46
      [ssh-keygen.1 ssh.1]
      add rfc 4716 (public key format); ok jmc
+   - djm@cvs.openbsd.org 2006/12/12 03:58:42
+     [channels.c compat.c compat.h]
+     bz #1019: some ssh.com versions apparently can't cope with the
+     remote port forwarding bind_address being a hostname, so send
+     them an address for cases where they are not explicitly
+     specified (wildcard or localhost bind).  reported by daveroth AT
+     acm.org; ok dtucker@ deraadt@
 
 20061205
  - (djm) [auth.c] Fix NULL pointer dereference in fakepw().  Crash would
