@@ -35,6 +35,9 @@
    - stevesk@cvs.openbsd.org 2007/01/03 03:01:40
      [auth2-chall.c channels.c dns.c sftp.c ssh-keygen.c ssh.c]
      spaces
+   - stevesk@cvs.openbsd.org 2007/01/03 04:09:15
+     [sftp.c]
+     ARGSUSED for lint
 
 20061205
  - (djm) [auth.c] Fix NULL pointer dereference in fakepw().  Crash would
