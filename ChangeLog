@@ -25,6 +25,10 @@
      [servconf.c]
      Make "PermitOpen all" first-match within a block to match the way other
      options work.  ok markus@ djm@
+   - jmc@cvs.openbsd.org 2007/01/02 09:57:25
+     [sshd_config.5]
+     do not use lists for SYNOPSIS;
+     from eric s. raymond via brad
 
 20061205
  - (djm) [auth.c] Fix NULL pointer dereference in fakepw().  Crash would
