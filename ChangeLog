@@ -7,6 +7,9 @@
      [misc.c sftp.c]
      Don't access buf[strlen(buf) - 1] for zero-length strings.
      ``ok by me'' djm@.
+   - markus@cvs.openbsd.org 2006/12/11 21:25:46
+     [ssh-keygen.1 ssh.1]
+     add rfc 4716 (public key format); ok jmc
 
 20061205
  - (djm) [auth.c] Fix NULL pointer dereference in fakepw().  Crash would
