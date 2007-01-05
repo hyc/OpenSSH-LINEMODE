@@ -38,6 +38,9 @@
    - stevesk@cvs.openbsd.org 2007/01/03 04:09:15
      [sftp.c]
      ARGSUSED for lint
+   - stevesk@cvs.openbsd.org 2007/01/03 07:22:36
+     [sftp-server.c]
+     spaces
 
 20061205
  - (djm) [auth.c] Fix NULL pointer dereference in fakepw().  Crash would
