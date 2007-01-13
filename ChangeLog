@@ -1,5 +1,5 @@
 20070114
- - (dtucker) [ssh-keygen.c] ac -> argv to match earlier sync.
+ - (dtucker) [ssh-keygen.c] av -> argv to match earlier sync.
 
 20070105
  - (djm) OpenBSD CVS Sync
