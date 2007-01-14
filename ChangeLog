@@ -1,5 +1,10 @@
 20070114
  - (dtucker) [ssh-keygen.c] av -> argv to match earlier sync.
+ - (djm) [openbsd-compat/bsd-snprintf.c] Fix integer overflow in return
+   value of snprintf replacement, similar to bugs in various libc
+   implementations. This overflow is not exploitable in OpenSSH. 
+   While I'm fiddling with it, make it a fair bit faster by inlining the
+   append-char routine; ok dtucker@
 
 20070105
  - (djm) OpenBSD CVS Sync
