@@ -1,3 +1,8 @@
+20070117
+ - (dtucker) [packet.c] Re-remove in_systm.h since it's already in includes.h
+   and multiple including it causes problems on old IRIXes.  (It snuck back
+   in during a sync.)  Found (again) by Georg Schwarz.
+
 20070114
  - (dtucker) [ssh-keygen.c] av -> argv to match earlier sync.
  - (djm) [openbsd-compat/bsd-snprintf.c] Fix integer overflow in return
