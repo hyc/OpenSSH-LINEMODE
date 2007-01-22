@@ -1,3 +1,7 @@
+20070122
+ - (djm) [ssh-rand-helper.8] manpage nits;
+   from dleonard AT vintela.com (bz#1529)
+
 20070117
  - (dtucker) [packet.c] Re-remove in_systm.h since it's already in includes.h
    and multiple including it causes problems on old IRIXes.  (It snuck back
