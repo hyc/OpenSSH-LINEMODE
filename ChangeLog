@@ -1,3 +1,9 @@
+20070128
+ - (djm) [channels.c serverloop.c] Fix so-called "hang on exit" (bz #52)
+   when closing a tty session when a background process still holds tty
+   fds open. Great detective work and patch by Marc Aurele La France,
+   slightly tweaked by me; ok dtucker@
+
 20070123
  - (dtucker) [openbsd-compat/bsd-snprintf.c] Static declarations for public
    library interfaces aren't very helpful. Fix up the DOPR_OUTCH macro
