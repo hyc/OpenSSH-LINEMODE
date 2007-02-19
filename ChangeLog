@@ -21,6 +21,11 @@
    - stevesk@cvs.openbsd.org 2007/01/21 01:45:35
      [readconf.c]
      spaces
+   - djm@cvs.openbsd.org 2007/01/22 11:32:50
+     [sftp-client.c]
+     return error from do_upload() when a write fails. fixes bz#1252: zero
+     exit status from sftp when uploading to a full device. report from
+     jirkat AT atlas.cz; ok dtucker@
 
 20070128
  - (djm) [channels.c serverloop.c] Fix so-called "hang on exit" (bz #52)
