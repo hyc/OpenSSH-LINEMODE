@@ -18,6 +18,9 @@
    - stevesk@cvs.openbsd.org 2007/01/21 01:41:54
      [auth-skey.c kex.c ssh-keygen.c session.c clientloop.c]
      spaces
+   - stevesk@cvs.openbsd.org 2007/01/21 01:45:35
+     [readconf.c]
+     spaces
 
 20070128
  - (djm) [channels.c serverloop.c] Fix so-called "hang on exit" (bz #52)
