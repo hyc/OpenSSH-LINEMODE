@@ -41,6 +41,8 @@
      authentication.  This allows configurations such as permitting password
      authentication from the local net only while requiring pubkey from
      offsite.  ok djm@, man page bits ok jmc@
+ - (dtucker) [contrib/findssl.sh] Add "which" as a shell function since some
+   platforms don't have it.  Patch from dleonard at vintela.com.
 
 20070128
  - (djm) [channels.c serverloop.c] Fix so-called "hang on exit" (bz #52)
