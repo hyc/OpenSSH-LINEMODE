@@ -14,6 +14,11 @@
    - dtucker@cvs.openbsd.org 2007/02/22 12:58:40
      [servconf.c]
      Check activep so Match and GatewayPorts work together; ok markus@
+   - ray@cvs.openbsd.org 2007/02/24 03:30:11
+     [moduli.c]
+     - strlen returns size_t, not int.
+     - Pass full buffer size to fgets.
+     OK djm@, millert@, and moritz@.
 
 20070219
   - (dtucker) OpenBSD CVS Sync
