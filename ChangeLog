@@ -1,3 +1,12 @@
+20070228
+ - (dtucker) OpenBSD CVS Sync
+   - dtucker@cvs.openbsd.org 2007/02/28 00:55:30
+     [ssh-agent.c]
+     Remove expired keys periodically so they don't remain in memory when
+     the agent is entirely idle, as noted by David R. Piegdon.  This is the
+     simple fix, a more efficient one will be done later.  With markus,
+     deraadt, with & ok djm.
+
 20070225
  - (dtucker) OpenBSD CVS Sync
    - djm@cvs.openbsd.org 2007/02/20 10:25:14
