@@ -1,3 +1,12 @@
+20070301
+ - (dtucker) OpenBSD CVS Sync
+   - dtucker@cvs.openbsd.org 2007/03/01 10:28:02
+     [auth2.c sshd_config.5 servconf.c]
+     Remove ChallengeResponseAuthentication support inside a Match
+     block as its interaction with KbdInteractive makes it difficult to
+     support.  Also, relocate the CR/kbdint option special-case code into
+     servconf.  "please commit" djm@, ok markus@ for the relocation.
+
 20070228
  - (dtucker) OpenBSD CVS Sync
    - dtucker@cvs.openbsd.org 2007/02/28 00:55:30
