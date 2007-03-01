@@ -6,6 +6,8 @@
      block as its interaction with KbdInteractive makes it difficult to
      support.  Also, relocate the CR/kbdint option special-case code into
      servconf.  "please commit" djm@, ok markus@ for the relocation.
+ - (tim) [buildpkg.sh.in openssh.xml.in] Clean up Solaris 10 smf(5) bits.
+   "Looks sane" dtucker@
 
 20070228
  - (dtucker) OpenBSD CVS Sync
