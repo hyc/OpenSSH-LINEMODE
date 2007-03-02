@@ -360,7 +360,7 @@ int main(void) { exit(0); }
 	;;
 *-*-cygwin*)
 	check_for_libcrypt_later=1
-	LIBS="$LIBS /usr/lib/textmode.o"
+	LIBS="$LIBS /usr/lib/textreadmode.o"
 	AC_DEFINE(HAVE_CYGWIN, 1, [Define if you are on Cygwin])
 	AC_DEFINE(USE_PIPES, 1, [Use PIPES instead of a socketpair()])
 	AC_DEFINE(DISABLE_SHADOW, 1,

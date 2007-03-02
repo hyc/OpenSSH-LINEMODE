@@ -1,3 +1,8 @@
+20070302
+ - (dtucker) [configure.ac] For Cygwin, read files in textmode (which allows
+   CRLF as well as LF lineendings) and write in binary mode.  Patch from
+   vinschen at redhat.com.
+
 20070301
  - (dtucker) OpenBSD CVS Sync
    - dtucker@cvs.openbsd.org 2007/03/01 10:28:02
