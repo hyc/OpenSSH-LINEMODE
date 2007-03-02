@@ -1,3 +1,7 @@
+20070303
+ - (dtucker) [regress/agent-ptrace.sh] Make ttrace gdb error a little more
+   general to cover newer gdb versions on HP-UX.
+
 20070302
  - (dtucker) [configure.ac] For Cygwin, read files in textmode (which allows
    CRLF as well as LF lineendings) and write in binary mode.  Patch from
