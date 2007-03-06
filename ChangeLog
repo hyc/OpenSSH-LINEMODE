@@ -3,6 +3,9 @@
    - jmc@cvs.openbsd.org 2007/03/01 16:19:33
      [sshd_config.5]
      sort the `match' keywords;
+   - djm@cvs.openbsd.org 2007/03/06 10:13:14
+     [version.h]
+     openssh-4.6; "please" deraadt@
 
 20070304
  - (djm) [configure.ac] add a --without-openssl-header-check option to
