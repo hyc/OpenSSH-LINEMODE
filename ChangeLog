@@ -1,3 +1,7 @@
+20070313
+ - (dtucker) [entropy.c scard-opensc.c ssh-rand-helper.c] Bug #1294: include
+   string.h to prevent warnings, from vapier at gentoo.org.
+
 20070306
  - (djm) OpenBSD CVS Sync
    - jmc@cvs.openbsd.org 2007/03/01 16:19:33
