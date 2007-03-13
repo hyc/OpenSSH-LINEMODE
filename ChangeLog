@@ -3,6 +3,9 @@
    string.h to prevent warnings, from vapier at gentoo.org.
  - (dtucker) [LICENCE] Add Daniel Walsh as a copyright holder for the
    selinux bits in -portable.
+ - (dtucker) [cipher-3des1.c cipher-bf1.c] The OpenSSL 0.9.8e problem in
+   bug #1291 also affects Protocol 1 3des.  While at it, use compat-openssl.h
+   in cipher-bf1.c.  Patch from Juan Gallego.
 
 20070306
  - (djm) OpenBSD CVS Sync
