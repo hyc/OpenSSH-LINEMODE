@@ -32,6 +32,8 @@
  - (dtucker) [configure.ac openbsd-compat/bsd-getpeereid.c] Bug #1287: Use
    getpeerucred to implement getpeereid (currently only Solaris 10 and up).
    Patch by Jan.Pechanec at Sun.
+ - (dtucker) [regress/agent-getpeereid.sh] Do peereid test if we have
+   HAVE_GETPEERUCRED too.  Also from Jan Pechanec.
 
 20070313
  - (dtucker) [entropy.c scard-opensc.c ssh-rand-helper.c] Bug #1294: include
