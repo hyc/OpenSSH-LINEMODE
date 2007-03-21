@@ -23,6 +23,12 @@
      [readconf.c clientloop.c]
      remove some bogus *p tests from charles longeau
      ok deraadt millert
+   - jmc@cvs.openbsd.org 2007/03/20 15:57:15
+     [sshd.8]
+     - let synopsis and description agree for -f
+     - sort FILES
+     - +.Xr ssh-keyscan 1 ,
+     from Igor Sobrado
 
 20070313
  - (dtucker) [entropy.c scard-opensc.c ssh-rand-helper.c] Bug #1294: include
