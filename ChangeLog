@@ -19,6 +19,10 @@
      the next key will expire when scanning for expired keys.  Set the select
      timeout to whichever of these two things happens next.  With djm@, with &
      ok deraadt@ markus@
+   - tedu@cvs.openbsd.org 2007/03/20 03:56:12
+     [readconf.c clientloop.c]
+     remove some bogus *p tests from charles longeau
+     ok deraadt millert
 
 20070313
  - (dtucker) [entropy.c scard-opensc.c ssh-rand-helper.c] Bug #1294: include
