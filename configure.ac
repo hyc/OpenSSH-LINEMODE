@@ -1241,6 +1241,7 @@ AC_CHECK_FUNCS( \
 	getnameinfo \
 	getopt \
 	getpeereid \
+	getpeerucred \
 	_getpty \
 	getrlimit \
 	getttyent \
@@ -1489,7 +1490,7 @@ AC_COMPILE_IFELSE([AC_LANG_SOURCE([[#include <stdio.h>
 
 # Check for missing getpeereid (or equiv) support
 NO_PEERCHECK=""
-if test "x$ac_cv_func_getpeereid" != "xyes" ; then
+if test "x$ac_cv_func_getpeereid" != "xyes" -a "x$ac_cv_func_getpeerucred" != "xyes"; then
 	AC_MSG_CHECKING([whether system supports SO_PEERCRED getsockopt])
 	AC_TRY_COMPILE(
 		[#include <sys/types.h>
@@ -4030,12 +4031,12 @@ if test ! -z "$RAND_HELPER_CMDHASH" ; then
 fi
 
 if test ! -z "$NO_PEERCHECK" ; then
-	echo "WARNING: the operating system that you are using does not "
-	echo "appear to support either the getpeereid() API nor the "
-	echo "SO_PEERCRED getsockopt() option. These facilities are used to "
-	echo "enforce security checks to prevent unauthorised connections to "
-	echo "ssh-agent. Their absence increases the risk that a malicious "
-	echo "user can connect to your agent. "
+	echo "WARNING: the operating system that you are using does not"
+	echo "appear to support getpeereid(), getpeerucred() or the"
+	echo "SO_PEERCRED getsockopt() option. These facilities are used to"
+	echo "enforce security checks to prevent unauthorised connections to"
+	echo "ssh-agent. Their absence increases the risk that a malicious"
+	echo "user can connect to your agent."
 	echo ""
 fi
 

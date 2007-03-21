@@ -29,6 +29,9 @@
      - sort FILES
      - +.Xr ssh-keyscan 1 ,
      from Igor Sobrado
+ - (dtucker) [configure.ac openbsd-compat/bsd-getpeereid.c] Bug #1287: Use
+   getpeerucred to implement getpeereid (currently only Solaris 10 and up).
+   Patch by Jan.Pechanec at Sun.
 
 20070313
  - (dtucker) [entropy.c scard-opensc.c ssh-rand-helper.c] Bug #1294: include
