@@ -1,3 +1,8 @@
+20070325
+ - (dtucker) [Makefile.in configure.ac] Replace single-purpose LIBSELINUX,
+   LIBWRAP and LIBPAM variables in Makefile with the general-purpose
+   SSHDLIBS.  "I like" djm@
+
 20070321
  - (dtucker) OpenBSD CVS Sync
    - dtucker@cvs.openbsd.org 2007/03/09 05:20:06
