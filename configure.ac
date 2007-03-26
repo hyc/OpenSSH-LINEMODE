@@ -1977,7 +1977,12 @@ fi
 # Search for SHA256 support in libc and/or OpenSSL
 AC_CHECK_FUNCS(SHA256_Update EVP_sha256)
 
-AC_CHECK_LIB(iaf, ia_openinfo)
+saved_LIBS="$LIBS"
+AC_CHECK_LIB(iaf, ia_openinfo, [
+	LIBS="$LIBS -liaf"
+	AC_CHECK_FUNCS(set_id, [SSHDLIBS="$SSHDLIBS -liaf"])
+])
+LIBS="$saved_LIBS"
 
 ### Configure cryptographic random number support
 
