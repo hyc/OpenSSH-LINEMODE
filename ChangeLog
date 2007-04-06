@@ -1,6 +1,7 @@
 20070406
  - (dtucker) [INSTALL] Update the systems that have PAM as standard.  Link
    to OpenPAM too.
+ - (dtucker) [INSTALL] prngd lives at sourceforge these days.
 
 20070326
  - (tim) [auth.c configure.ac defines.h session.c openbsd-compat/port-uw.c
