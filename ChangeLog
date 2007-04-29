@@ -14,9 +14,6 @@
  - (dtucker) [configure.ac defines.h] Have configure check for offsetof
    to prevent redefinition warnings.
 
-  20070406
-   - (dtucker) [INSTALL] Update the systems that have PAM as standard.  Link
-
 20070406
  - (dtucker) [INSTALL] Update the systems that have PAM as standard.  Link
    to OpenPAM too.
