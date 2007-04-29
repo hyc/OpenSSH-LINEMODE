@@ -1,6 +1,7 @@
 20070429
  - (dtucker) [openbsd-compat/bsd-misc.c] Include unistd.h and sys/types.h
    for select(2) prototype.
+ - (dtucker) [auth-shadow.c loginrec.c] Include time.h for time(2) prototype.
 
 20070406
  - (dtucker) [INSTALL] Update the systems that have PAM as standard.  Link
