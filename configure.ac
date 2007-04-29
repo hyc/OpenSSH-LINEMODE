@@ -3154,6 +3154,25 @@ int main()
 			[#include <arpa/nameser.h>])
 	])
 
+AC_MSG_CHECKING(if struct __res_state _res is an extern)
+AC_LINK_IFELSE([
+#include <stdio.h>
+#if HAVE_SYS_TYPES_H
+# include <sys/types.h>
+#endif
+#include <netinet/in.h>
+#include <arpa/nameser.h>
+#include <resolv.h>
+extern struct __res_state _res;
+int main() { return 0; }
+		],
+		[AC_MSG_RESULT(yes)
+		 AC_DEFINE(HAVE__RES_EXTERN, 1,
+		    [Define if you have struct __res_state _res as an extern])
+		],
+		[ AC_MSG_RESULT(no) ]
+)
+
 # Check whether user wants SELinux support
 SELINUX_MSG="no"
 LIBSELINUX=""
