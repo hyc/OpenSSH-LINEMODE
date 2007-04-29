@@ -6,6 +6,8 @@
    platform's _res if it has one.  Should fix problem of DNSSEC record lookups
    on NetBSD as reported by Curt Sampson.
  - (dtucker) [openbsd-compat/xmmap.c] Include stdlib.h for mkstemp prototype.
+ - (dtucker) [configure.ac defines.h] Have configure check for MAXSYMLINKS
+   so we don't get redefinition warnings.
 
 20070406
  - (dtucker) [INSTALL] Update the systems that have PAM as standard.  Link
