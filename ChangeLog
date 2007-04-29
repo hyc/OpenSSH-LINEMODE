@@ -8,6 +8,12 @@
  - (dtucker) [openbsd-compat/xmmap.c] Include stdlib.h for mkstemp prototype.
  - (dtucker) [configure.ac defines.h] Have configure check for MAXSYMLINKS
    so we don't get redefinition warnings.
+ - (dtucker) [openbsd-compat/xmmap.c] Include stdlib.h for mkstemp prototype.
+ - (dtucker) [configure.ac defines.h] Prevent warnings about __attribute__
+   __nonnull__ for versions of GCC that don't support it.
+
+  20070406
+   - (dtucker) [INSTALL] Update the systems that have PAM as standard.  Link
 
 20070406
  - (dtucker) [INSTALL] Update the systems that have PAM as standard.  Link
