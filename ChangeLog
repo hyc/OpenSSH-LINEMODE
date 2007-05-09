@@ -1,3 +1,6 @@
+20070509
+ - (tim) [configure.ac] Bug #1287: Add missing test for ucred.h.
+
 20070429
  - (dtucker) [openbsd-compat/bsd-misc.c] Include unistd.h and sys/types.h
    for select(2) prototype.

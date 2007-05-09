@@ -236,6 +236,7 @@ AC_CHECK_HEADERS( \
 	time.h \
 	tmpdir.h \
 	ttyent.h \
+	ucred.h \
 	unistd.h \
 	usersec.h \
 	util.h \
