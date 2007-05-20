@@ -3,6 +3,12 @@
    - stevesk@cvs.openbsd.org 2007/04/14 22:01:58
      [auth2.c]
      remove unused macro; from Dmitry V. Levin <ldv@altlinux.org>
+   - stevesk@cvs.openbsd.org 2007/04/18 01:12:43
+     [sftp-server.c]
+     cast "%llu" format spec to (unsigned long long); do not assume a
+     u_int64_t arg is the same as 'unsigned long long'.
+     from Dmitry V. Levin <ldv@altlinux.org>
+     ok markus@ 'Yes, that looks correct' millert@
 
 20070509
  - (tim) [configure.ac] Bug #1287: Add missing test for ucred.h.
