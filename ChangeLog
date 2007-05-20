@@ -1,3 +1,9 @@
+20070520
+ - (dtucker) OpenBSD CVS Sync
+   - stevesk@cvs.openbsd.org 2007/04/14 22:01:58
+     [auth2.c]
+     remove unused macro; from Dmitry V. Levin <ldv@altlinux.org>
+
 20070509
  - (tim) [configure.ac] Bug #1287: Add missing test for ucred.h.
 
