@@ -15,6 +15,13 @@
    - djm@cvs.openbsd.org 2007/05/17 07:50:31
      [log.c]
      save and restore errno when logging; ok deraadt@
+   - djm@cvs.openbsd.org 2007/05/17 07:55:29
+     [sftp-server.c]
+     bz#1286 stop reading and processing commands when input or output buffer
+     is nearly full, otherwise sftp-server would happily try to grow the
+     input/output buffers past the maximum supported by the buffer API and
+     promptly fatal()
+     based on patch from Thue Janus Kristensen; feedback & ok dtucker@
 
 20070509
  - (tim) [configure.ac] Bug #1287: Add missing test for ucred.h.
