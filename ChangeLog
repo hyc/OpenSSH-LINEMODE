@@ -38,6 +38,8 @@
      djm owes me a vb and a tism cd for breaking ssh compilation
  - (dtucker) [auth-pam.c] malloc+memset -> calloc.  Patch from
    ldv at altlinux.org.
+ - (dtucker) [auth-pam.c] Return empty string if fgets fails in
+   sshpam_tty_conv.  Patch from ldv at altlinux.org.
 
 20070509
  - (tim) [configure.ac] Bug #1287: Add missing test for ucred.h.
