@@ -36,6 +36,8 @@
    - jolan@cvs.openbsd.org 2007/05/17 23:53:41
      [sshconnect2.c]
      djm owes me a vb and a tism cd for breaking ssh compilation
+ - (dtucker) [auth-pam.c] malloc+memset -> calloc.  Patch from
+   ldv at altlinux.org.
 
 20070509
  - (tim) [configure.ac] Bug #1287: Add missing test for ucred.h.
