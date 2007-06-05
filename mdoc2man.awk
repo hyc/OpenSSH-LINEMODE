@@ -138,7 +138,7 @@ function add(str) {
 	nospace=0
     }
     if(match(words[w],"^Dd$")) {
-      if(match(words[w+1],"^\\$Mdocdate$")) {
+      if(match(words[w+1],"^\\$Mdocdate:")) {
         w++;
         if(match(words[w+4],"^\\$$")) {
           words[w+4] = ""

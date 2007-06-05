@@ -26,6 +26,8 @@
      committing at his request)
  - (dtucker) [mdoc2man.awk] Teach it to deal with $Mdocdate tags that
    OpenBSD's cvs now adds.
+ - (dtucker) [mdoc2man.awk] Remove trailing "$" from Mdocdate regex so
+   mindrot's cvs doesn't expand it on us.
 
 20070520
  - (dtucker) OpenBSD CVS Sync
