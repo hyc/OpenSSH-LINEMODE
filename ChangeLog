@@ -1,3 +1,10 @@
+20070605
+ - (dtucker) OpenBSD CVS Sync
+   - djm@cvs.openbsd.org 2007/05/22 10:18:52
+     [sshd.c]
+     zap double include; from p_nowaczyk AT o2.pl
+     (not required in -portable, Id sync only)
+
 20070520
  - (dtucker) OpenBSD CVS Sync
    - stevesk@cvs.openbsd.org 2007/04/14 22:01:58
