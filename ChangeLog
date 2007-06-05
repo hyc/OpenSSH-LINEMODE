@@ -4,6 +4,9 @@
      [sshd.c]
      zap double include; from p_nowaczyk AT o2.pl
      (not required in -portable, Id sync only)
+   - djm@cvs.openbsd.org 2007/05/30 05:58:13
+     [kex.c]
+     tidy: KNF, ARGSUSED and u_int
 
 20070520
  - (dtucker) OpenBSD CVS Sync
