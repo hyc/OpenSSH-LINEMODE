@@ -15,6 +15,9 @@
    - djm@cvs.openbsd.org 2007/05/31 23:34:29
      [packet.c]
      gc unreachable code; spotted by Tavis Ormandy
+   - djm@cvs.openbsd.org 2007/06/02 09:04:58
+     [bufbn.c]
+     memory leak on error path; from arnaud.lacombe.1 AT ulaval.ca
 
 20070520
  - (dtucker) OpenBSD CVS Sync
