@@ -28,6 +28,7 @@
    OpenBSD's cvs now adds.
  - (dtucker) [mdoc2man.awk] Remove trailing "$" from Mdocdate regex so
    mindrot's cvs doesn't expand it on us.
+ - (dtucker) [mdoc2man.awk] Add support for %R references, used for RFCs.
 
 20070520
  - (dtucker) OpenBSD CVS Sync
