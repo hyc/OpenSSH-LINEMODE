@@ -24,6 +24,8 @@
      Yields around a 12-16% end-to-end speedup for arcfour256/hmac-md5
      patch from markus@ tested dtucker@ and myself, ok markus@ and me (I'm
      committing at his request)
+ - (dtucker) [mdoc2man.awk] Teach it to deal with $Mdocdate tags that
+   OpenBSD's cvs now adds.
 
 20070520
  - (dtucker) OpenBSD CVS Sync
