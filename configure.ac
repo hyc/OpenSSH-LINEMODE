@@ -1300,6 +1300,7 @@ AC_CHECK_FUNCS( \
 	strtonum \
 	strtoll \
 	strtoul \
+	swap32 \
 	sysconf \
 	tcgetpgrp \
 	truncate \
