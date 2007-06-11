@@ -26,6 +26,9 @@
      ciphers, since groff has trouble with wide lines;
  - (djm) [configure.ac umac.c] If platform doesn't provide swap32(3), then
    fallback to provided bit-swizzing functions
+ - (dtucker) [openbsd-compat/bsd-misc.c] According to the spec the "remainder"
+   argument to nanosleep may be NULL.  Currently this never happens in OpenSSH,
+   but check anyway in case this changes or the code gets used elsewhere.
 
 20070605
  - (dtucker) OpenBSD CVS Sync
