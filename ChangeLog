@@ -29,6 +29,9 @@
  - (dtucker) [openbsd-compat/bsd-misc.c] According to the spec the "remainder"
    argument to nanosleep may be NULL.  Currently this never happens in OpenSSH,
    but check anyway in case this changes or the code gets used elsewhere.
+ - (dtucker) [includes.h] Bug #1243: HAVE_PATHS -> HAVE_PATHS_H.  Should
+   prevent warnings about redefinitions of various things in paths.h.
+   Spotted by cartmanltd at hotmail.com.
 
 20070605
  - (dtucker) OpenBSD CVS Sync
