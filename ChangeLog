@@ -20,6 +20,10 @@
      [ssh_config.5]
      put the MAC list into a display, like we do for ciphers,
      since groff has trouble handling wide lines;
+   - jmc@cvs.openbsd.org 2007/06/08 07:48:09
+     [sshd_config.5]
+     oops, here too: put the MAC list into a display, like we do for
+     ciphers, since groff has trouble with wide lines;
 
 20070605
  - (dtucker) OpenBSD CVS Sync
