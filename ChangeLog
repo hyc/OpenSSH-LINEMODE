@@ -29,6 +29,10 @@
      GSSAPIDelegateCredentials=yes. This is symmetric with -k (disable GSSAPI)
      and is useful for hosts with /home on Kerberised NFS; bz #1312
      patch from Markus.Kuhn AT cl.cam.ac.uk; ok dtucker@ markus@
+   - djm@cvs.openbsd.org 2007/06/12 11:45:27
+     [ssh.c]
+     improved exit message from multiplex slave sessions; bz #1262
+     reported by alexandre.nunes AT gmail.com; ok dtucker@
 
 20070611
  - (djm) Bugzilla #1306: silence spurious error messages from hang-on-exit
