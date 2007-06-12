@@ -1,3 +1,9 @@
+20070612
+ - (dtucker) OpenBSD CVS Sync
+   - markus@cvs.openbsd.org 2007/06/11 09:14:00
+     [channels.h]
+     increase default channel windows; ok djm
+
 20070611
  - (djm) Bugzilla #1306: silence spurious error messages from hang-on-exit
    fix; tested by dtucker@ and jochen.kirn AT gmail.com
