@@ -18,6 +18,11 @@
      depends on the platform supporting sane O_NONBLOCK semantics for open
      on FIFOs (apparently POSIX does not mandate this), which OpenBSD does.
      bz #856; report by cjwatson AT debian.org; ok markus@
+   - djm@cvs.openbsd.org 2007/06/12 11:11:08
+     [ssh.c]
+     fix slave exit value when a control master goes away without passing the
+     full exit status by ensuring that the slave reads a full int. bz#1261
+     reported by frekko AT gmail.com; ok markus@ dtucker@
 
 20070611
  - (djm) Bugzilla #1306: silence spurious error messages from hang-on-exit
