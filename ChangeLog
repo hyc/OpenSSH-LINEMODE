@@ -8,6 +8,10 @@
      better document ssh-add's -d option (delete identies from agent), bz#1224
      new text based on some provided by andrewmc-debian AT celt.dias.ie;
      ok dtucker@
+   - djm@cvs.openbsd.org 2007/06/12 08:20:00
+     [ssh-gss.h gss-serv.c gss-genr.c]
+     relocate server-only GSSAPI code from libssh to server; bz #1225
+     patch from simon AT sxw.org.uk; ok markus@ dtucker@
 
 20070611
  - (djm) Bugzilla #1306: silence spurious error messages from hang-on-exit
