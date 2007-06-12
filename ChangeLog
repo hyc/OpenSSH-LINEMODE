@@ -12,6 +12,12 @@
      [ssh-gss.h gss-serv.c gss-genr.c]
      relocate server-only GSSAPI code from libssh to server; bz #1225
      patch from simon AT sxw.org.uk; ok markus@ dtucker@
+   - djm@cvs.openbsd.org 2007/06/12 08:24:20
+     [scp.c]
+     make scp try to skip FIFOs rather than blocking when nothing is listening.
+     depends on the platform supporting sane O_NONBLOCK semantics for open
+     on FIFOs (apparently POSIX does not mandate this), which OpenBSD does.
+     bz #856; report by cjwatson AT debian.org; ok markus@
 
 20070611
  - (djm) Bugzilla #1306: silence spurious error messages from hang-on-exit
