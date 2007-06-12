@@ -43,6 +43,10 @@
    - jmc@cvs.openbsd.org 2007/06/12 13:43:55
      [ssh.1]
      add -K to SYNOPSIS;
+   - dtucker@cvs.openbsd.org 2007/06/12 13:54:28
+     [scp.c]
+     Encode filename with strnvis if the name contains a newline (which can't
+     be represented in the scp protocol), from bz #891.  ok markus@
 
 20070611
  - (djm) Bugzilla #1306: silence spurious error messages from hang-on-exit
