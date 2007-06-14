@@ -5,6 +5,9 @@
    umac support.  With tim@ djm@, ok djm.
  - (dtucker) [openbsd-compat/openssl-compat.h] Merge USE_BUILTIN_RIJNDAEL
    sections.  Fixes builds with early OpenSSL 0.9.6 versions.
+ - (dtucker) [openbsd-compat/openssl-compat.h] Remove redundant definition
+   of USE_BUILTIN_RIJNDAEL since the <0.9.6 test is covered by the
+   subsequent <0.9.7 test.
 
 20070612
  - (dtucker) OpenBSD CVS Sync
