@@ -3,6 +3,8 @@
    USE_BUILTIN_RIJNDAEL compat goop to openssl-compat.h so it can be
    shared with umac.c.  Allows building with OpenSSL 0.9.5 again including
    umac support.  With tim@ djm@, ok djm.
+ - (dtucker) [openbsd-compat/openssl-compat.h] Merge USE_BUILTIN_RIJNDAEL
+   sections.  Fixes builds with early OpenSSL 0.9.6 versions.
 
 20070612
  - (dtucker) OpenBSD CVS Sync
