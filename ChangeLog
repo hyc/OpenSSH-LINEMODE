@@ -20,6 +20,9 @@
      [channels.c]
      Correct test for window updates every three packets; prevents sending
      window updates for every single packet.  ok markus@
+   - dtucker@cvs.openbsd.org 2007/06/25 12:02:27
+     [atomicio.c]
+     Include <poll.h> like the man page says rather than <sys/poll.h>.  ok djm@
  - (dtucker) [atomicio.c] Test for EWOULDBLOCK in atomiciov to match
    atomicio.
 
