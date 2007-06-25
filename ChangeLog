@@ -1,3 +1,10 @@
+20070625
+ - (dtucker) OpenBSD CVS Sync
+   - djm@cvs.openbsd.org 2007/06/13 00:21:27
+     [scp.c]
+     don't ftruncate() non-regular files; bz#1236 reported by wood AT
+     xmission.com; ok dtucker@
+
 20070614
  - (dtucker) [cipher-ctr.c umac.c openbsd-compat/openssl-compat.h] Move the
    USE_BUILTIN_RIJNDAEL compat goop to openssl-compat.h so it can be
