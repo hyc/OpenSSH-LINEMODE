@@ -20,6 +20,8 @@
      [channels.c]
      Correct test for window updates every three packets; prevents sending
      window updates for every single packet.  ok markus@
+ - (dtucker) [atomicio.c] Test for EWOULDBLOCK in atomiciov to match
+   atomicio.
 
 20070614
  - (dtucker) [cipher-ctr.c umac.c openbsd-compat/openssl-compat.h] Move the
