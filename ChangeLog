@@ -12,6 +12,10 @@
      when waiting for the multiplex exit status, read until the master end
      writes an entire int of data *and* closes the client_fd; fixes mux
      regression spotted by dtucker, ok dtucker@
+   - djm@cvs.openbsd.org 2007/06/19 02:04:43
+     [atomicio.c]
+     if the fd passed to atomicio/atomiciov() is non blocking, then poll() to
+     avoid a spin if it is not yet ready for reading/writing; ok dtucker@
 
 20070614
  - (dtucker) [cipher-ctr.c umac.c openbsd-compat/openssl-compat.h] Move the
