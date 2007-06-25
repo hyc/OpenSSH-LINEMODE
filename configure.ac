@@ -205,6 +205,7 @@ AC_CHECK_HEADERS( \
 	netgroup.h \
 	pam/pam_appl.h \
 	paths.h \
+	poll.h \
 	pty.h \
 	readpassphrase.h \
 	rpc/types.h \
@@ -1267,6 +1268,7 @@ AC_CHECK_FUNCS( \
 	ogetaddrinfo \
 	openlog_r \
 	openpty \
+	poll \
 	prctl \
 	pstat \
 	readpassphrase \
