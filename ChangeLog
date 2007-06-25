@@ -4,6 +4,9 @@
      [scp.c]
      don't ftruncate() non-regular files; bz#1236 reported by wood AT
      xmission.com; ok dtucker@
+   - djm@cvs.openbsd.org 2007/06/14 21:43:25
+     [ssh.c]
+     handle EINTR when waiting for mux exit status properly
 
 20070614
  - (dtucker) [cipher-ctr.c umac.c openbsd-compat/openssl-compat.h] Move the
