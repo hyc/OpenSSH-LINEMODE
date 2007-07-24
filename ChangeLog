@@ -1,3 +1,6 @@
+20070724
+ - (tim) [openssh.xml.in] make FMRI match what package scripts use.
+
 20070628
  - (djm) bz#1325: Fix SELinux in permissive mode where it would
    incorrectly fatal() on errors. patch from cjwatson AT debian.org;
