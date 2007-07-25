@@ -3,7 +3,7 @@
  - (tim) [openbsd-compat/regress/closefromtest.c] Bug 1345: fix open() call.
    Report/patch by David.Leonard AT quest.com
  - (tim) [buildpkg.sh.in openssh.xml.in] Allow more flexibility where smf(5)
-   files are installed.
+ - (tim) [buildpkg.sh.in] s|$FAKE_ROOT/${sysconfdir}|$FAKE_ROOT${sysconfdir}|
 
 20070628
  - (djm) bz#1325: Fix SELinux in permissive mode where it would
