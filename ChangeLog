@@ -1,5 +1,7 @@
 20070724
  - (tim) [openssh.xml.in] make FMRI match what package scripts use.
+ - (tim) [openbsd-compat/regress/closefromtest.c] Bug 1345: fix open() call.
+   Report/patch by David.Leonard AT quest.com
 
 20070628
  - (djm) bz#1325: Fix SELinux in permissive mode where it would
