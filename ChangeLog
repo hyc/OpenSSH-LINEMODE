@@ -4,6 +4,12 @@
      [key.c]
      Delint: remove some unreachable statements, from Bret Lambert.
      OK markus@ and dtucker@.
+   - sobrado@cvs.openbsd.org 2007/08/06 19:16:06
+     [scp.1 scp.c]
+     the ellipsis is not an optional argument; while here, sync the usage
+     and synopsis of commands
+     lots of good ideas by jmc@
+     ok jmc@
 
 20070724
  - (tim) [openssh.xml.in] make FMRI match what package scripts use.
