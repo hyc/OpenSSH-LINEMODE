@@ -1,3 +1,10 @@
+20070808
+ - (djm) OpenBSD CVS Sync
+   - ray@cvs.openbsd.org 2007/07/12 05:48:05
+     [key.c]
+     Delint: remove some unreachable statements, from Bret Lambert.
+     OK markus@ and dtucker@.
+
 20070724
  - (tim) [openssh.xml.in] make FMRI match what package scripts use.
  - (tim) [openbsd-compat/regress/closefromtest.c] Bug 1345: fix open() call.
