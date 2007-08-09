@@ -1,3 +1,6 @@
+20070809
+ - (dtucker) [openbsd-compat/port-aix.c] Comment typo.
+
 20070808
  - (djm) OpenBSD CVS Sync
    - ray@cvs.openbsd.org 2007/07/12 05:48:05
