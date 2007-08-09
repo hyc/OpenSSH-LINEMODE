@@ -27,7 +27,7 @@
 20070724
  - (tim) [openssh.xml.in] make FMRI match what package scripts use.
  - (tim) [openbsd-compat/regress/closefromtest.c] Bug 1345: fix open() call.
-   Report/patch by David.Leonard AT quest.com
+   Report/patch by David.Leonard AT quest.com (and Bernhard Simon)
  - (tim) [buildpkg.sh.in openssh.xml.in] Allow more flexibility where smf(5)
  - (tim) [buildpkg.sh.in] s|$FAKE_ROOT/${sysconfdir}|$FAKE_ROOT${sysconfdir}|
 
