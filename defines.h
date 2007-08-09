@@ -321,12 +321,6 @@ struct winsize {
 #ifndef _PATH_BSHELL
 # define _PATH_BSHELL "/bin/sh"
 #endif
-#ifndef _PATH_CSHELL
-# define _PATH_CSHELL "/bin/csh"
-#endif
-#ifndef _PATH_SHELLS
-# define _PATH_SHELLS "/etc/shells"
-#endif
 
 #ifdef USER_PATH
 # ifdef _PATH_STDPATH

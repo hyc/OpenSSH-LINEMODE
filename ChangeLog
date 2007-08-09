@@ -2,6 +2,8 @@
  - (dtucker) [openbsd-compat/port-aix.c] Comment typo.
  - (dtucker) [README.platform] Document the interaction between PermitRootLogin
    and the AIX native login restrictions.
+ - (dtucker) [defines.h] Remove _PATH_{CSHELL,SHELLS} which aren't
+   used anywhere and are a potential source of warnings.
 
 20070808
  - (djm) OpenBSD CVS Sync
