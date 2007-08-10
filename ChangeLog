@@ -1,3 +1,6 @@
+20070810
+ - (dtucker) [auth-pam.c] Use sigdie here too.  ok djm@
+
 20070809
  - (dtucker) [openbsd-compat/port-aix.c] Comment typo.
  - (dtucker) [README.platform] Document the interaction between PermitRootLogin
