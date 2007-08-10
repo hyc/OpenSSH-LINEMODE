@@ -786,6 +786,11 @@ mips-sony-bsd|mips-sony-newsos4)
 	AC_DEFINE(DISABLE_LASTLOG)
 	AC_DEFINE(SSHD_ACQUIRES_CTTY)
 	enable_etc_default_login=no	# has incompatible /etc/default/login
+	case "$host" in
+	*-*-nto-qnx6*)
+		AC_DEFINE(DISABLE_FD_PASSING)
+		;;
+	esac
 	;;
 
 *-*-ultrix*)

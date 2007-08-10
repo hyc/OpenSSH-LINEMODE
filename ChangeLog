@@ -1,5 +1,7 @@
 20070810
  - (dtucker) [auth-pam.c] Use sigdie here too.  ok djm@
+ - (dtucker) [configure.ac] Bug #1343: Set DISABLE_FD_PASSING for QNX6. From 
+   Matt Kraai, ok djm@ 
 
 20070809
  - (dtucker) [openbsd-compat/port-aix.c] Comment typo.
