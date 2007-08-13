@@ -1,3 +1,8 @@
+20070813
+ - (dtucker) [session.c] Bug #1339: ensure that pam_setcred() is always
+   called with PAM_ESTABLISH_CRED at least once, which resolves a problem
+   with pam_dhkeys.  Patch from David Leonard, ok djm@
+
 20070810
  - (dtucker) [auth-pam.c] Use sigdie here too.  ok djm@
  - (dtucker) [configure.ac] Bug #1343: Set DISABLE_FD_PASSING for QNX6. From 
