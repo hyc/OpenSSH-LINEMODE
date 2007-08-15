@@ -7,6 +7,8 @@
    - markus@cvs.openbsd.org 2007/08/15 08:16:49
      [version.h]
      openssh 4.7
+ - (dtucker) [openbsd-compat/bsd-cray.c] Remove debug from signal handler.
+   ok djm@
 
 20070813
  - (dtucker) [session.c] Bug #1339: ensure that pam_setcred() is always
