@@ -7,6 +7,9 @@
    - markus@cvs.openbsd.org 2007/08/15 08:16:49
      [version.h]
      openssh 4.7
+   - stevesk@cvs.openbsd.org 2007/08/15 12:13:41
+     [ssh_config.5]
+     tun device forwarding now honours ExitOnForwardFailure; ok markus@
  - (dtucker) [openbsd-compat/bsd-cray.c] Remove debug from signal handler.
    ok djm@
  - (dtucker) [README contrib/caldera/openssh.spec contrib/redhat/openssh.spec
