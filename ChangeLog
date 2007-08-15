@@ -9,6 +9,8 @@
      openssh 4.7
  - (dtucker) [openbsd-compat/bsd-cray.c] Remove debug from signal handler.
    ok djm@
+ - (dtucker) [README contrib/caldera/openssh.spec contrib/redhat/openssh.spec
+   contrib/suse/openssh.spec] Crank version.
 
 20070813
  - (dtucker) [session.c] Bug #1339: ensure that pam_setcred() is always
