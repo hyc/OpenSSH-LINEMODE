@@ -1,3 +1,7 @@
+20070816
+ - (dtucker) [session.c] Call PAM cleanup functions for unauthenticated
+   connections too.  Based on a patch from Sandro Wefel, with & ok djm@
+
 20070815
  - (dtucker) OpenBSD CVS Sync
    - markus@cvs.openbsd.org 2007/08/15 08:14:46
