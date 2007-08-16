@@ -1,3 +1,8 @@
+20070817
+ - (dtucker) [sshd.8] Many Linux variants use a single "!" to denote locked
+   accounts and that's what the code looks for, so make man page and code
+   agree.  Pointed out by Roumen Petrov.
+
 20070816
  - (dtucker) [session.c] Call PAM cleanup functions for unauthenticated
    connections too.  Based on a patch from Sandro Wefel, with & ok djm@
