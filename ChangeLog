@@ -5,6 +5,7 @@
  - (dtucker) [INSTALL] Group the parts describing random options and PAM
    implementations together which is hopefully more coherent.
  - (dtucker) [INSTALL] the pid file is sshd.pid not ssh.pid.
+ - (dtucker) [INSTALL] Give PAM its own heading.
 
 20070816
  - (dtucker) [session.c] Call PAM cleanup functions for unauthenticated
