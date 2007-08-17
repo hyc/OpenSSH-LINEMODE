@@ -6,6 +6,7 @@
    implementations together which is hopefully more coherent.
  - (dtucker) [INSTALL] the pid file is sshd.pid not ssh.pid.
  - (dtucker) [INSTALL] Give PAM its own heading.
+ - (dtucker) [INSTALL] Link to tcpwrappers.
 
 20070816
  - (dtucker) [session.c] Call PAM cleanup functions for unauthenticated
