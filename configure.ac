@@ -2004,7 +2004,10 @@ AC_CHECK_FUNCS(SHA256_Update EVP_sha256)
 saved_LIBS="$LIBS"
 AC_CHECK_LIB(iaf, ia_openinfo, [
 	LIBS="$LIBS -liaf"
-	AC_CHECK_FUNCS(set_id, [SSHDLIBS="$SSHDLIBS -liaf"])
+	AC_CHECK_FUNCS(set_id, [SSHDLIBS="$SSHDLIBS -liaf"
+				AC_DEFINE(HAVE_LIBIAF, 1,
+        		[Define if system has libiaf that supports set_id])
+				])
 ])
 LIBS="$saved_LIBS"
 
