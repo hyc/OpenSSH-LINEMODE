@@ -223,6 +223,7 @@ AC_CHECK_HEADERS( \
 	sys/dir.h \
 	sys/mman.h \
 	sys/ndir.h \
+	sys/poll.h \
 	sys/prctl.h \
 	sys/pstat.h \
 	sys/select.h \

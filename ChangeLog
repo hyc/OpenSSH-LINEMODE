@@ -1,3 +1,7 @@
+20070927
+ - (dtucker) [configure.ac atomicio.c] Fall back to including <sys/poll.h> if
+   we don't have <poll.h> (eq QNX).  From bacon at cs nyu edu.
+
 20070921
  - (djm) [atomicio.c] Fix spin avoidance for platforms that define
    EWOULDBLOCK; patch from ben AT psc.edu
