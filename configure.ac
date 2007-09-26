@@ -786,6 +786,7 @@ mips-sony-bsd|mips-sony-newsos4)
 	AC_DEFINE(MISSING_FD_MASK, 1, [Define on *nto-qnx systems])
 	AC_DEFINE(DISABLE_LASTLOG)
 	AC_DEFINE(SSHD_ACQUIRES_CTTY)
+	AC_DEFINE(BROKEN_SHADOW_EXPIRE, 1, [QNX shadow support is broken])
 	enable_etc_default_login=no	# has incompatible /etc/default/login
 	case "$host" in
 	*-*-nto-qnx6*)

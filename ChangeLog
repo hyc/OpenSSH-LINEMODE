@@ -1,6 +1,8 @@
 20070927
  - (dtucker) [configure.ac atomicio.c] Fall back to including <sys/poll.h> if
    we don't have <poll.h> (eq QNX).  From bacon at cs nyu edu.
+ - (dtucker) [configure.ac defines.h] Shadow expiry does not work on QNX6
+   so disable it for that platform.  From bacon at cs nyu edu.
 
 20070921
  - (djm) [atomicio.c] Fix spin avoidance for platforms that define
