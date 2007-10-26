@@ -59,6 +59,9 @@
    - djm@cvs.openbsd.org 2006/08/29 09:44:00
      [regress/sftp-cmds.sh]
      clean up our mess
+   - markus@cvs.openbsd.org 2006/11/06 09:27:43
+     [regress/cfgmatch.sh]
+     fix quoting for non-(c)sh login shells.
 
 20070927
  - (dtucker) [configure.ac atomicio.c] Fall back to including <sys/poll.h> if
