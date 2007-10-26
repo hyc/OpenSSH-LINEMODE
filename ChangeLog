@@ -73,6 +73,10 @@
      [regress/sftp-cmds.sh regress/sftp-glob.sh regress/test-exec.sh]
      comprehensive tests for sftp escaping its interaction with globbing;
      ok dtucker@
+   - djm@cvs.openbsd.org 2007/10/26 05:30:01
+     [regress/sftp-glob.sh regress/test-exec.sh]
+     remove "echo -E" crap that I added in last commit and use printf(1) for
+     cases where we strictly require echo not to reprocess escape characters.
 
 20070927
  - (dtucker) [configure.ac atomicio.c] Fall back to including <sys/poll.h> if
