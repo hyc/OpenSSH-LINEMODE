@@ -1,3 +1,9 @@
+20071026
+ - (djm) OpenBSD CVS Sync
+   - stevesk@cvs.openbsd.org 2007/09/11 23:49:09
+     [sshpty.c]
+     remove #if defined block not needed; ok markus@ dtucker@
+     (NB. RCD ID sync only for portable)
 20070927
  - (dtucker) [configure.ac atomicio.c] Fall back to including <sys/poll.h> if
    we don't have <poll.h> (eq QNX).  From bacon at cs nyu edu.
