@@ -65,6 +65,10 @@
    - dtucker@cvs.openbsd.org 2006/12/13 08:36:36
      [regress/cfgmatch.sh]
      Additional test for multiple PermitOpen entries.  ok djm@
+   - pvalchev@cvs.openbsd.org 2007/06/07 19:41:46
+     [regress/cipher-speed.sh regress/try-ciphers.sh]
+     test umac-64@openssh.com
+     ok djm@
 
 20070927
  - (dtucker) [configure.ac atomicio.c] Fall back to including <sys/poll.h> if
