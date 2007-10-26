@@ -56,6 +56,9 @@
      counters. make network IO non-blocking, so a small trickle of
      reads/writes has a chance of updating the progress meter; bz #799
      ok dtucker@
+   - djm@cvs.openbsd.org 2006/08/29 09:44:00
+     [regress/sftp-cmds.sh]
+     clean up our mess
 
 20070927
  - (dtucker) [configure.ac atomicio.c] Fall back to including <sys/poll.h> if
