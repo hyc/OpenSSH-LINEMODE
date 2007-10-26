@@ -27,6 +27,9 @@
      Also fix a typo.
      Initial diff from Matthew Dempsky, input from djm.
      OK djm, markus.
+   - dtucker@cvs.openbsd.org 2007/09/29 00:25:51
+     [auth2.c]
+     Remove unused prototype.  ok djm@
 
 20070927
  - (dtucker) [configure.ac atomicio.c] Fall back to including <sys/poll.h> if
