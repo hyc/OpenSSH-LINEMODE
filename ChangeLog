@@ -37,6 +37,10 @@
      removes an unused variable
      correctly counts line number
      "looks ok" ray@ markus@
+   - markus@cvs.openbsd.org 2007/10/22 19:10:24
+     [readconf.c]
+     make sure that both the local and remote port are correct when
+     parsing -L; Jan Pechanec (bz #1378)
 
 20070927
  - (dtucker) [configure.ac atomicio.c] Fall back to including <sys/poll.h> if
