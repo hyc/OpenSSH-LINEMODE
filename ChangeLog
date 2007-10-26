@@ -69,6 +69,10 @@
      [regress/cipher-speed.sh regress/try-ciphers.sh]
      test umac-64@openssh.com
      ok djm@
+   - djm@cvs.openbsd.org 2007/10/24 03:32:35
+     [regress/sftp-cmds.sh regress/sftp-glob.sh regress/test-exec.sh]
+     comprehensive tests for sftp escaping its interaction with globbing;
+     ok dtucker@
 
 20070927
  - (dtucker) [configure.ac atomicio.c] Fall back to including <sys/poll.h> if
