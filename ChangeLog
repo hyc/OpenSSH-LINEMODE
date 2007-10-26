@@ -81,7 +81,7 @@
      [openbsd-compat/glob.c]
      unused arg in internal static API
    - jakob@cvs.openbsd.org 2007/10/11 18:36:41
-     [openbsd-compat/getrrsetbyname.c]
+     [openbsd-compat/getrrsetbyname.c openbsd-compat/getrrsetbyname.h]
      use RRSIG instead of SIG for DNSSEC. ok djm@
    - otto@cvs.openbsd.org 2006/10/21 09:55:03
      [openbsd-compat/base64.c]
