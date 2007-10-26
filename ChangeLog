@@ -80,6 +80,9 @@
    - deraadt@cvs.openbsd.org 2005/11/28 17:50:12
      [openbsd-compat/glob.c]
      unused arg in internal static API
+   - jakob@cvs.openbsd.org 2007/10/11 18:36:41
+     [openbsd-compat/getrrsetbyname.c]
+     use RRSIG instead of SIG for DNSSEC. ok djm@
  - (djm) [regress/sftp-cmds.sh]
    Use more restrictive glob to pick up test files from /bin - some platforms
    ship broken symlinks there which could spoil the test.
