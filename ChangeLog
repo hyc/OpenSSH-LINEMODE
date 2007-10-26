@@ -77,6 +77,9 @@
      [regress/sftp-glob.sh regress/test-exec.sh]
      remove "echo -E" crap that I added in last commit and use printf(1) for
      cases where we strictly require echo not to reprocess escape characters.
+   - deraadt@cvs.openbsd.org 2005/11/28 17:50:12
+     [openbsd-compat/glob.c]
+     unused arg in internal static API
  - (djm) [regress/sftp-cmds.sh]
    Use more restrictive glob to pick up test files from /bin - some platforms
    ship broken symlinks there which could spoil the test.
