@@ -4,6 +4,11 @@
      [sshpty.c]
      remove #if defined block not needed; ok markus@ dtucker@
      (NB. RCD ID sync only for portable)
+   - djm@cvs.openbsd.org 2007/09/21 03:05:23
+     [ssh_config.5]
+     document KbdInteractiveAuthentication in ssh_config.5;
+     patch from dkg AT fifthhorseman.net
+
 20070927
  - (dtucker) [configure.ac atomicio.c] Fall back to including <sys/poll.h> if
    we don't have <poll.h> (eq QNX).  From bacon at cs nyu edu.
