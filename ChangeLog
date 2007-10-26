@@ -20,6 +20,13 @@
      [ssh-agent.c]
      When adding a key that already exists, update the properties
      (time, confirm, comment) instead of discarding them. ok djm@ markus@
+   - ray@cvs.openbsd.org 2007/09/27 00:15:57
+     [dh.c]
+     Don't return -1 on error in dh_pub_is_valid(), since it evaluates
+     to true.
+     Also fix a typo.
+     Initial diff from Matthew Dempsky, input from djm.
+     OK djm, markus.
 
 20070927
  - (dtucker) [configure.ac atomicio.c] Fall back to including <sys/poll.h> if
