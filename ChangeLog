@@ -87,6 +87,10 @@
      [openbsd-compat/base64.c]
      remove calls to abort(3) that can't happen anyway; from
      <bret dot lambert at gmail.com>; ok millert@ deraadt@
+   - frantzen@@cvs.openbsd.org 2004/04/24 18:11:46
+     [openbsd-compat/tree.h]
+     sync to Niels Provos' version.  avoid unused variable warning in
+     RB_NEXT()
  - (djm) [regress/sftp-cmds.sh]
    Use more restrictive glob to pick up test files from /bin - some platforms
    ship broken symlinks there which could spoil the test.
