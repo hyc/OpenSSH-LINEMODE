@@ -16,6 +16,10 @@
      These options have been in use for some years;
      ok markus@ "no objection" millert@
      (NB. RCD ID sync only for portable)
+   - canacar@cvs.openbsd.org 2007/09/25 23:48:57
+     [ssh-agent.c]
+     When adding a key that already exists, update the properties
+     (time, confirm, comment) instead of discarding them. ok djm@ markus@
 
 20070927
  - (dtucker) [configure.ac atomicio.c] Fall back to including <sys/poll.h> if
