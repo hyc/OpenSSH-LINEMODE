@@ -33,6 +33,10 @@
    - chl@cvs.openbsd.org 2007/10/02 17:49:58
      [ssh-keygen.c]
      handles zero-sized strings that fgets can return
+     properly removes trailing newline
+     removes an unused variable
+     correctly counts line number
+     "looks ok" ray@ markus@
 
 20070927
  - (dtucker) [configure.ac atomicio.c] Fall back to including <sys/poll.h> if
