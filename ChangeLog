@@ -110,6 +110,10 @@
      referencing who knows what. Prevent these accidents by NULLing some
      fields on remove and replace. This way, either a panic or segfault
      will be produced on the faulty operation.
+   - otto@cvs.openbsd.org 2005/10/24 20:25:14
+     [openbsd-compat/sys-queue.h]
+     Partly backout. NOLIST, used in LISTs is probably interfering.
+     requested by deraadt@
  - (djm) [regress/sftp-cmds.sh]
    Use more restrictive glob to pick up test files from /bin - some platforms
    ship broken symlinks there which could spoil the test.
