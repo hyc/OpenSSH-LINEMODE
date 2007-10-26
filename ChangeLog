@@ -114,6 +114,10 @@
      [openbsd-compat/sys-queue.h]
      Partly backout. NOLIST, used in LISTs is probably interfering.
      requested by deraadt@
+   - otto@cvs.openbsd.org 2005/10/25 06:37:47
+     [openbsd-compat/sys-queue.h]
+     Some uvm problem is being exposed with the more strict macros.
+     Revert until we've found out what's causing the panics.
  - (djm) [regress/sftp-cmds.sh]
    Use more restrictive glob to pick up test files from /bin - some platforms
    ship broken symlinks there which could spoil the test.
