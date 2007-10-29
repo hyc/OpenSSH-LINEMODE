@@ -1,3 +1,10 @@
+20071030
+ - (djm) OpenBSD CVS Sync
+   - djm@cvs.openbsd.org 2007/10/29 23:49:41
+     [openbsd-compat/sys-tree.h]
+     remove extra backslash at the end of RB_PROTOTYPE, report from
+     Jan.Pechanec AT Sun.COM; ok deraadt@
+
 20071026
  - (djm) OpenBSD CVS Sync
    - stevesk@cvs.openbsd.org 2007/09/11 23:49:09
