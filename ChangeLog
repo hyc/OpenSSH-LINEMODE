@@ -23,6 +23,9 @@
    - dtucker@cvs.openbsd.org 2007/10/29 06:54:50
      [ssh.c]
      Make LocalCommand work for Protocol 1 too; ok djm@
+   - jmc@cvs.openbsd.org 2007/10/29 07:48:19
+     [ssh_config.5]
+     clean up after previous macro removal;
 
 20071030
  - (djm) OpenBSD CVS Sync
