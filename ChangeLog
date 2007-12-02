@@ -38,6 +38,9 @@
    - dtucker@cvs.openbsd.org 2007/11/03 02:00:32
      [ssh.c]
      Use xstrdup/xfree when saving pwname and pwdir; ok deraadt@
+   - deraadt@cvs.openbsd.org 2007/11/03 02:03:49
+     [ssh.c]
+     avoid errno trashing in signal handler; ok dtucker
 
 20071030
  - (djm) OpenBSD CVS Sync
