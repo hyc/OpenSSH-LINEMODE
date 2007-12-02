@@ -8,6 +8,10 @@
      [auth2-gss.c]
      Allow build without -DGSSAPI; ok deraadt@
      (Id sync only, Portable already has the ifdefs)
+   - dtucker@cvs.openbsd.org 2007/10/29 01:55:04
+     [ssh.c]
+     Plug tiny mem leaks in ControlPath and ProxyCommand option processing;
+     ok djm@
 
 20071030
  - (djm) OpenBSD CVS Sync
