@@ -30,6 +30,11 @@
      [clientloop.c]
      fix memory leak in process_cmdline(), patch from Jan.Pechanec AT Sun.COM;
      ok dtucker@
+   - deraadt@cvs.openbsd.org 2007/11/03 01:24:06
+     [ssh.c]
+     bz #1377: getpwuid results were being clobbered by another getpw* call
+     inside tilde_expand_filename(); save the data we need carefully
+     ok djm
 
 20071030
  - (djm) OpenBSD CVS Sync
