@@ -105,6 +105,15 @@ if test "$GCC" = "yes" || test "$GCC" = "egcs"; then
 		*) ;;
 	esac
 
+	AC_MSG_CHECKING(if $GCC understands -fstack-protector-all)
+	saved_CFLAGS="$CFLAGS"
+	CFLAGS="$CFLAGS -fstack-protector-all"
+	AC_TRY_COMPILE([], [ int main(void){return 0;} ],
+	    [ AC_MSG_RESULT(yes) ],
+	    [ AC_MSG_RESULT(no)
+	      CFLAGS="$saved_CFLAGS" ]
+	)
+
 	if test -z "$have_llong_max"; then
 		# retry LLONG_MAX with -std=gnu99, needed on some Linuxes
 		unset ac_cv_have_decl_LLONG_MAX
