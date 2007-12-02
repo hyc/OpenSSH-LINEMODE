@@ -3,6 +3,11 @@
    gcc supports it.  ok djm@
  - (dtucker) [scp.c] Update $OpenBSD tag missing from rev 1.175 and remove
    leftover debug code.
+ - (dtucker) OpenBSD CVS Sync
+   - dtucker@cvs.openbsd.org 2007/10/29 00:52:45
+     [auth2-gss.c]
+     Allow build without -DGSSAPI; ok deraadt@
+     (Id sync only, Portable already has the ifdefs)
 
 20071030
  - (djm) OpenBSD CVS Sync
