@@ -35,6 +35,9 @@
      bz #1377: getpwuid results were being clobbered by another getpw* call
      inside tilde_expand_filename(); save the data we need carefully
      ok djm
+   - dtucker@cvs.openbsd.org 2007/11/03 02:00:32
+     [ssh.c]
+     Use xstrdup/xfree when saving pwname and pwdir; ok deraadt@
 
 20071030
  - (djm) OpenBSD CVS Sync
