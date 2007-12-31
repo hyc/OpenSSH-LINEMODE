@@ -1,3 +1,8 @@
+20071231
+ - (dtucker) [configure.ac openbsd-compat/glob.{c,h}] Bug #1407: force use of
+   builtin glob implementation on Mac OS X.  Based on a patch from
+   vgiffin at apple.
+
 20071229
  - (dtucker) OpenBSD CVS Sync
    - djm@cvs.openbsd.org 2007/12/12 05:04:03

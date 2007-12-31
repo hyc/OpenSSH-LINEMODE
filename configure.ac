@@ -415,6 +415,7 @@ main() { if (NSVersionOfRunTimeLibrary("System") >= (60 << 16))
 	AC_DEFINE(SETEUID_BREAKS_SETUID)
 	AC_DEFINE(BROKEN_SETREUID)
 	AC_DEFINE(BROKEN_SETREGID)
+	AC_DEFINE(BROKEN_GLOB, 1, [OS X glob does not do what we expect])
 	AC_DEFINE_UNQUOTED(BIND_8_COMPAT, 1,
 		[Define if your resolver libs need this for getrrsetbyname])
 	AC_DEFINE(SSH_TUN_FREEBSD, 1, [Open tunnel devices the FreeBSD way])
