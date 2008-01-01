@@ -11,6 +11,14 @@
      to when it's enabled in the server's config.  Speeds up Protocol 2
      connections to inetd-mode servers that also allow Protocol 1.  bz #440,
      based on a patch from bruno at wolff.to, ok markus@
+   - dtucker@cvs.openbsd.org 2008/01/01 08:47:04
+     [misc.c]
+     spaces -> tabs from my previous commit
+   - dtucker@cvs.openbsd.org 2008/01/01 09:06:39
+     [scp.c]
+     If scp -p encounters a pre-epoch timestamp, use the epoch which is
+     as close as we can get given that it's used unsigned.  Add a little
+     debugging while there.  bz #828, ok djm@
 
 20071231
  - (dtucker) [configure.ac openbsd-compat/glob.{c,h}] Bug #1407: force use of
