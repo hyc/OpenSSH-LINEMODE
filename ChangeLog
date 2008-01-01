@@ -23,6 +23,9 @@
      [sshd_config.5 servconf.c]
      Allow PermitRootLogin in a Match block.  Allows for, eg, permitting root
      only from the local network.  ok markus@, man page bit ok jmc@
+   - dtucker@cvs.openbsd.org 2008/01/01 08:51:20
+     [moduli]
+     Updated moduli file; ok djm@
 
 20071231
  - (dtucker) [configure.ac openbsd-compat/glob.{c,h}] Bug #1407: force use of
