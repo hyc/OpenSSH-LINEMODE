@@ -4,6 +4,13 @@
      [readconf.c servconf.c]
      Prevent strict-aliasing warnings on newer gcc versions.  bz #1355, patch
      from Dmitry V. Levin, ok djm@
+   - dtucker@cvs.openbsd.org 2007/12/31 15:27:04
+     [sshd.c]
+     When in inetd mode, have sshd generate a Protocol 1 ephemeral server
+     key only for connections where the client chooses Protocol 1 as opposed
+     to when it's enabled in the server's config.  Speeds up Protocol 2
+     connections to inetd-mode servers that also allow Protocol 1.  bz #440,
+     based on a patch from bruno at wolff.to, ok markus@
 
 20071231
  - (dtucker) [configure.ac openbsd-compat/glob.{c,h}] Bug #1407: force use of
