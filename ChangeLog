@@ -19,6 +19,10 @@
      If scp -p encounters a pre-epoch timestamp, use the epoch which is
      as close as we can get given that it's used unsigned.  Add a little
      debugging while there.  bz #828, ok djm@
+   - dtucker@cvs.openbsd.org 2008/01/01 09:27:33
+     [sshd_config.5 servconf.c]
+     Allow PermitRootLogin in a Match block.  Allows for, eg, permitting root
+     only from the local network.  ok markus@, man page bit ok jmc@
 
 20071231
  - (dtucker) [configure.ac openbsd-compat/glob.{c,h}] Bug #1407: force use of
