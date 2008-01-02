@@ -105,7 +105,7 @@ if test "$GCC" = "yes" || test "$GCC" = "egcs"; then
 		*) ;;
 	esac
 
-	AC_MSG_CHECKING(if $GCC understands -fstack-protector-all)
+	AC_MSG_CHECKING(if $CC understands -fstack-protector-all)
 	saved_CFLAGS="$CFLAGS"
 	CFLAGS="$CFLAGS -fstack-protector-all"
 	AC_TRY_COMPILE([], [ int main(void){return 0;} ],
