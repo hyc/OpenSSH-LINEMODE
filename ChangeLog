@@ -1,6 +1,8 @@
 20080119
  - (djm) Silence noice from expr in ssh-copy-id; patch from
    mikel AT mikelward.com
+ - (djm) Only listen for IPv6 connections on AF_INET6 sockets; patch from
+   tsr2600 AT gmail.com
 
 20080102
  - (dtucker) [configure.ac] Fix message for -fstack-protector-all test.
