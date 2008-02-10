@@ -19,6 +19,10 @@
      ignore SIGPIPE in multiplex client mode - we can receive this if the
      server runs out of fds on us midway. Report and patch from
      gregory_shively AT fanniemae.com
+   - djm@cvs.openbsd.org 2008/01/19 22:04:57
+     [sftp-client.c]
+     fix remote handle leak in do_download() local file open error path;
+     report and fix from sworley AT chkno.net
 
 20080119
  - (djm) Silence noice from expr in ssh-copy-id; patch from
