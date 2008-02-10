@@ -68,6 +68,9 @@
      explain how to handle local file names containing colons;
      requested by Tamas TEVESZ
      ok dtucker
+   - markus@cvs.openbsd.org 2008/02/04 21:53:00
+     [session.c sftp-server.c sftp.h]
+     link sftp-server into sshd; feedback and ok djm@
 
 20080119
  - (djm) Silence noice from expr in ssh-copy-id; patch from
