@@ -75,6 +75,9 @@
      [ssh.1 sshd.8]
      Document the correct permissions for the ~/.ssh/ directory.
      ok jmc
+   - djm@cvs.openbsd.org 2008/02/10 09:55:37
+     [sshd_config.5]
+     mantion that "internal-sftp" is useful with ForceCommand too
 
 20080119
  - (djm) Silence noice from expr in ssh-copy-id; patch from
