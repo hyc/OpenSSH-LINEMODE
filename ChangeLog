@@ -32,6 +32,14 @@
    - djm@cvs.openbsd.org 2008/01/19 22:37:19
      [ssh-keygen.c]
      unbreak line numbering (broken in revision 1.164), fix error message
+   - djm@cvs.openbsd.org 2008/01/19 23:02:40
+     [channels.c]
+     When we added support for specified bind addresses for port forwards, we
+     added a quirk SSH_OLD_FORWARD_ADDR. There is a bug in our handling of
+     this for -L port forwards that causes the client to listen on both v4
+     and v6 addresses when connected to a server with this quirk, despite
+     having set 0.0.0.0 as a bind_address.
+     report and patch from Jan.Pechanec AT Sun.COM; ok dtucker@
 
 20080119
  - (djm) Silence noice from expr in ssh-copy-id; patch from
