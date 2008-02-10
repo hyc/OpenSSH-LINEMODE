@@ -14,6 +14,11 @@
      [clientloop.c]
      fd leak on session multiplexing error path. Report and patch from
      gregory_shively AT fanniemae.com
+   - djm@cvs.openbsd.org 2008/01/19 20:51:26
+     [ssh.c]
+     ignore SIGPIPE in multiplex client mode - we can receive this if the
+     server runs out of fds on us midway. Report and patch from
+     gregory_shively AT fanniemae.com
 
 20080119
  - (djm) Silence noice from expr in ssh-copy-id; patch from
