@@ -10,6 +10,10 @@
      [ssh.1]
      satisfy the pedants: -q does not suppress all diagnostic messages (e.g.
      some commandline parsing warnings go unconditionally to stdout).
+   - djm@cvs.openbsd.org 2008/01/19 20:48:53
+     [clientloop.c]
+     fd leak on session multiplexing error path. Report and patch from
+     gregory_shively AT fanniemae.com
 
 20080119
  - (djm) Silence noice from expr in ssh-copy-id; patch from
