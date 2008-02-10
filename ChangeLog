@@ -29,6 +29,9 @@
      hash just the specified hostname and not the entire hostspec from the
      keyfile. It may be of the form "hostname,ipaddr", which would lead to
      a hash that never matches. report and fix from jp AT devnull.cz
+   - djm@cvs.openbsd.org 2008/01/19 22:37:19
+     [ssh-keygen.c]
+     unbreak line numbering (broken in revision 1.164), fix error message
 
 20080119
  - (djm) Silence noice from expr in ssh-copy-id; patch from
