@@ -78,6 +78,10 @@
    - djm@cvs.openbsd.org 2008/02/10 09:55:37
      [sshd_config.5]
      mantion that "internal-sftp" is useful with ForceCommand too
+   - djm@cvs.openbsd.org 2008/02/10 10:54:29
+     [servconf.c session.c]
+     delay ~ expansion for ChrootDirectory so it expands to the logged-in user's
+     home, rather than the user who starts sshd (probably root)
 
 20080119
  - (djm) Silence noice from expr in ssh-copy-id; patch from
