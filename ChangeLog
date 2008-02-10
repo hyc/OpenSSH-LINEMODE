@@ -6,6 +6,10 @@
      initially from tobias@, but disabled them by placing them in
      "#ifdef notyet" which was asked by djm@
      ok djm@ tobias@
+   - djm@cvs.openbsd.org 2008/01/19 19:13:28
+     [ssh.1]
+     satisfy the pedants: -q does not suppress all diagnostic messages (e.g.
+     some commandline parsing warnings go unconditionally to stdout).
 
 20080119
  - (djm) Silence noice from expr in ssh-copy-id; patch from
