@@ -5,6 +5,9 @@
  - (dtucker) [configure.ac audit-bsm.c] Bug #1420: Add a local implementation
    of aug_get_machine for systems that don't have their own (eg OS X, FreeBSD).
    Help and testing from csjp at FreeBSD org, vgiffin at apple com.  ok djm@
+ - (dtucker) [includes.h openbsd-compat/openssl-compat.c] Bug #1437: reshuffle
+   headers so ./configure --with-ssl-engine actually works.  Patch from
+   Ian Lister.
 
 20080224
  - (tim) [contrib/cygwin/ssh-host-config]
