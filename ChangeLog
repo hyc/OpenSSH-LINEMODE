@@ -2,6 +2,9 @@
  - (dtucker) [openbsd-compat/fake-rfc2553.h] rename ssh_gai_strerror hack
    since it now conflicts with the helper function in misc.c.  From
    vinschen AT redhat.com.
+ - (dtucker) [configure.ac audit-bsm.c] Bug #1420: Add a local implementation
+   of aug_get_machine for systems that don't have their own (eg OS X, FreeBSD).
+   Help and testing from csjp at FreeBSD org, vgiffin at apple com.  ok djm@
 
 20080224
  - (tim) [contrib/cygwin/ssh-host-config]
