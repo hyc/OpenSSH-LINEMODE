@@ -1,3 +1,8 @@
+20080225
+ - (dtucker) [openbsd-compat/fake-rfc2553.h] rename ssh_gai_strerror hack
+   since it now conflicts with the helper function in misc.c.  From
+   vinschen AT redhat.com.
+
 20080224
  - (tim) [contrib/cygwin/ssh-host-config]
    Grammar changes on SYSCONFDIR LOCALSTATEDIR messages.
