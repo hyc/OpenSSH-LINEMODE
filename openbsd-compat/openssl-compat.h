@@ -79,8 +79,8 @@ extern const EVP_CIPHER *evp_acss(void);
 #  ifdef SSLeay_add_all_algorithms
 #   undef SSLeay_add_all_algorithms
 #  endif
-#  define SSLeay_add_all_algorithms()	ssh_SSLeay_add_all_algorithms()
-#endif
+#  define SSLeay_add_all_algorithms()  ssh_SSLeay_add_all_algorithms()
+# endif
 
 int ssh_EVP_CipherInit(EVP_CIPHER_CTX *, const EVP_CIPHER *, unsigned char *,
     unsigned char *, int);
