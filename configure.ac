@@ -357,7 +357,7 @@ int main(void) { exit(0); }
 		[],
 		[#include <usersec.h>]
 	)
-	AC_CHECK_FUNCS(setauthdb)
+	AC_CHECK_FUNCS(getgrset setauthdb)
 	AC_CHECK_DECL(F_CLOSEM,
 	    AC_DEFINE(HAVE_FCNTL_CLOSEM, 1, [Use F_CLOSEM fcntl for closefrom]),
 	    [],

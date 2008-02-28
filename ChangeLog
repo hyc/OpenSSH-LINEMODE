@@ -7,6 +7,10 @@
    SSLeay_add_all_algorithms as a macro already.
  - (dtucker) [key.c defines.h openbsd-compat/openssl-compat.h] Move old OpenSSL
    compat glue into openssl-compat.h.
+ - (dtucker) [configure.ac openbsd-compat/port-aix.{c,h}] Bug #1081: Implement
+   getgrouplist via getgrset on AIX, rather than iterating over getgrent.
+   This allows, eg, Match and AllowGroups directives to work with NIS and
+   LDAP groups.
 
 20080225
  - (dtucker) [openbsd-compat/fake-rfc2553.h] rename ssh_gai_strerror hack
