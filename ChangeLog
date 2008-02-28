@@ -11,6 +11,9 @@
    getgrouplist via getgrset on AIX, rather than iterating over getgrent.
    This allows, eg, Match and AllowGroups directives to work with NIS and
    LDAP groups.
+ - (dtucker) [sshd.c] Bug #1042: make log messages for tcpwrappers use the
+   same SyslogFacility as the rest of sshd.  Patch from William Knox,
+   ok djm@.
 
 20080225
  - (dtucker) [openbsd-compat/fake-rfc2553.h] rename ssh_gai_strerror hack
