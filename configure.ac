@@ -107,11 +107,15 @@ if test "$GCC" = "yes" || test "$GCC" = "egcs"; then
 
 	AC_MSG_CHECKING(if $CC understands -fstack-protector-all)
 	saved_CFLAGS="$CFLAGS"
+	saved_LDFLAGS="$LDFLAGS"
 	CFLAGS="$CFLAGS -fstack-protector-all"
-	AC_TRY_COMPILE([], [ int main(void){return 0;} ],
+	LDFLAGS="$LDFLAGS -fstack-protector-all"
+	AC_TRY_LINK([], [ int main(void){return 0;} ],
 	    [ AC_MSG_RESULT(yes) ],
 	    [ AC_MSG_RESULT(no)
-	      CFLAGS="$saved_CFLAGS" ]
+	      CFLAGS="$saved_CFLAGS"
+	      LDFLAGS="$saved_LDFLAGS"
+	     ]
 	)
 
 	if test -z "$have_llong_max"; then
