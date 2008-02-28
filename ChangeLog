@@ -5,6 +5,8 @@
    openbsd-compat/openssl-compat.{c,h}] Bug #1437 Move the OpenSSL compat
    header to after OpenSSL headers, since some versions of OpenSSL have
    SSLeay_add_all_algorithms as a macro already.
+ - (dtucker) [key.c defines.h openbsd-compat/openssl-compat.h] Move old OpenSSL
+   compat glue into openssl-compat.h.
 
 20080225
  - (dtucker) [openbsd-compat/fake-rfc2553.h] rename ssh_gai_strerror hack

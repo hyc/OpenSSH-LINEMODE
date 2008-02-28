@@ -567,11 +567,6 @@ struct winsize {
 # define CUSTOM_SSH_AUDIT_EVENTS
 #endif
 
-/* OPENSSL_free() is Free() in versions before OpenSSL 0.9.6 */
-#if !defined(OPENSSL_VERSION_NUMBER) || (OPENSSL_VERSION_NUMBER < 0x0090600f)
-# define OPENSSL_free(x) Free(x)
-#endif
-
 #if !defined(HAVE___func__) && defined(HAVE___FUNCTION__)
 #  define __func__ __FUNCTION__
 #elif !defined(HAVE___func__)

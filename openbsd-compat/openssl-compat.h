@@ -19,6 +19,11 @@
 #include "includes.h"
 #include <openssl/evp.h>
 
+/* OPENSSL_free() is Free() in versions before OpenSSL 0.9.6 */
+#if !defined(OPENSSL_VERSION_NUMBER) || (OPENSSL_VERSION_NUMBER < 0x0090600f)
+# define OPENSSL_free(x) Free(x)
+#endif
+
 #if OPENSSL_VERSION_NUMBER < 0x00906000L
 # define SSH_OLD_EVP
 # define EVP_CIPHER_CTX_get_app_data(e)		((e)->app_data)
