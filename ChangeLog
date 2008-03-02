@@ -1,3 +1,7 @@
+20080302
+ - (dtucker) [configure.ac] FreeBSD's glob() doesn't behave the way we expect
+   either, so use our own.
+
 20080229
  - (dtucker) [openbsd-compat/bsd-poll.c] We don't check for select(2) in
    configure (and there's not much point, as openssh won't work without it)
