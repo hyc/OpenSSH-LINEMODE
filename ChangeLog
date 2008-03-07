@@ -1,3 +1,10 @@
+20080307
+ - (djm) OpenBSD CVS Sync
+   - jmc@cvs.openbsd.org 2008/02/11 07:58:28
+     [ssh.1 sshd.8 sshd_config.5]
+     bump Mdocdate for pages committed in "febuary", necessary because
+     of a typo in rcs.c;
+
 20080302
  - (dtucker) [configure.ac] FreeBSD's glob() doesn't behave the way we expect
    either, so use our own.
