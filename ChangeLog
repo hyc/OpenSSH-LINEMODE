@@ -34,6 +34,9 @@
      [monitor_fdpass.c]
      use a union to ensure alignment of the cmsg (pay attention: various other
      parts of the tree need this treatment too); ok djm
+   - deraadt@cvs.openbsd.org 2008/03/04 21:15:42
+     [version.h]
+     crank version; from djm
 
 20080302
  - (dtucker) [configure.ac] FreeBSD's glob() doesn't behave the way we expect
