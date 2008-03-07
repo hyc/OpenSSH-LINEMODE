@@ -25,6 +25,11 @@
      [clientloop.c packet.c packet.h serverloop.c]
      Allow all SSH2 packet types, including UNIMPLEMENTED to reset the
      keepalive timer (bz #1307).  ok markus@
+   - djm@cvs.openbsd.org 2008/02/27 20:21:15
+     [sftp-server.c]
+     add an extension method "posix-rename@openssh.com" to perform POSIX atomic
+     rename() operations. based on patch from miklos AT szeredi.hu in bz#1400;
+     ok dtucker@ markus@
 
 20080302
  - (dtucker) [configure.ac] FreeBSD's glob() doesn't behave the way we expect
