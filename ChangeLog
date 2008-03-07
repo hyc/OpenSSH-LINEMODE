@@ -14,6 +14,9 @@
      When started in configuration test mode (-t) do not check that sshd is
      being started with an absolute path.
      ok djm
+   - markus@cvs.openbsd.org 2008/02/20 15:25:26
+     [session.c]
+     correct boolean encoding for coredump; der Mouse via dugsong
 
 20080302
  - (dtucker) [configure.ac] FreeBSD's glob() doesn't behave the way we expect
