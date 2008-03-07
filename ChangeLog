@@ -17,6 +17,10 @@
    - markus@cvs.openbsd.org 2008/02/20 15:25:26
      [session.c]
      correct boolean encoding for coredump; der Mouse via dugsong
+   - djm@cvs.openbsd.org 2008/02/22 05:58:56
+     [session.c]
+     closefrom() call was too early, delay it until just before we execute
+     the user's rc files (if any).
 
 20080302
  - (dtucker) [configure.ac] FreeBSD's glob() doesn't behave the way we expect
