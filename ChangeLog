@@ -21,6 +21,10 @@
      [session.c]
      closefrom() call was too early, delay it until just before we execute
      the user's rc files (if any).
+   - dtucker@cvs.openbsd.org 2008/02/22 20:44:02
+     [clientloop.c packet.c packet.h serverloop.c]
+     Allow all SSH2 packet types, including UNIMPLEMENTED to reset the
+     keepalive timer (bz #1307).  ok markus@
 
 20080302
  - (dtucker) [configure.ac] FreeBSD's glob() doesn't behave the way we expect
