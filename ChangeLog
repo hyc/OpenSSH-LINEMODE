@@ -9,6 +9,11 @@
      rekey arc4random and OpenSSL RNG in postauth child
      closefrom fds > 2 before shell/command execution
      ok markus@
+   - mbalmer@cvs.openbsd.org 2008/02/14 13:10:31
+     [sshd.c]
+     When started in configuration test mode (-t) do not check that sshd is
+     being started with an absolute path.
+     ok djm
 
 20080302
  - (dtucker) [configure.ac] FreeBSD's glob() doesn't behave the way we expect
