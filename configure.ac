@@ -113,16 +113,23 @@ if test "$GCC" = "yes" || test "$GCC" = "egcs"; then
 	esac
 
 	# -fstack-protector-all doesn't always work for some GCC versions
-	# and/or platforms, so we test if we can.
+	# and/or platforms, so we test if we can.  If it's not supported
+	# on a give platform gcc will emit a warning so we use -Werror.
 	if test "x$use_stack_protector" = "x1"; then
 	    for t in -fstack-protector-all -fstack-protector; do
-		AC_MSG_CHECKING(if $CC understands $t)
+		AC_MSG_CHECKING(if $CC supports $t)
 		saved_CFLAGS="$CFLAGS"
 		saved_LDFLAGS="$LDFLAGS"
-		CFLAGS="$CFLAGS $t"
-		LDFLAGS="$LDFLAGS $t"
-		AC_TRY_LINK([], [ int main(void){return 0;} ],
+		CFLAGS="$CFLAGS $t -Werror"
+		LDFLAGS="$LDFLAGS $t -Werror"
+		AC_LINK_IFELSE(
+			[AC_LANG_SOURCE([
+#include <stdlib.h>
+int main(void){return 0;}
+			 ])],
 		    [ AC_MSG_RESULT(yes)
+		      CFLAGS="$saved_CFLAGS $t"
+		      LDFLAGS="$saved_LDFLAGS $t"
 		      AC_MSG_CHECKING(if $t works)
 		      AC_RUN_IFELSE(
 			[AC_LANG_SOURCE([
@@ -134,7 +141,7 @@ int main(void){exit(0);}
 			[ AC_MSG_RESULT(no) ],
 			[ AC_MSG_WARN([cross compiling: cannot test])
 			  break ]
-		    )
+		      )
 		    ],
 		    [ AC_MSG_RESULT(no) ]
 		)

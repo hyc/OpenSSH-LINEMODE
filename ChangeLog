@@ -8,6 +8,9 @@
  - (dtucker) [openbsd-compat/regress/strtonumtest.c] Bug #1347: Use platform's
    equivalent of LLONG_MAX for the compat regression tests, which makes them
    run on AIX and HP-UX.  Patch from David Leonard.
+ - (dtucker) [configure.ac] Run stack-protector tests with -Werror to catch
+   platforms where gcc understands the option but it's not supported (and
+   thus generates a warning).
 
 20080307
  - (djm) OpenBSD CVS Sync
