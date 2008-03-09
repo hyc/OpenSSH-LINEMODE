@@ -111,8 +111,6 @@ int sshaix_getnameinfo(const struct sockaddr *, size_t, char *, size_t,
 # define HAVE_GETGROUPLIST
 # define USE_GETGRSET
 int getgrouplist(const char *, gid_t, gid_t *, int *);
-int ssh_initgroups(const char *, gid_t);
-# define initgroups(a, b) ssh_initgroups((a), (b))
 #endif
 
 #endif /* _AIX */
