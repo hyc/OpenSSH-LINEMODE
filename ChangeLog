@@ -5,6 +5,9 @@
  - (dtucker) [openbsd-compat/port-aix.{c,h}] Remove AIX specific initgroups
    implementation.  It's not needed to fix bug #1081 and breaks the build
    on some AIX configurations.
+ - (dtucker) [openbsd-compat/regress/strtonumtest.c] Bug #1347: Use platform's
+   equivalent of LLONG_MAX for the compat regression tests, which makes them
+   run on AIX and HP-UX.  Patch from David Leonard.
 
 20080307
  - (djm) OpenBSD CVS Sync
