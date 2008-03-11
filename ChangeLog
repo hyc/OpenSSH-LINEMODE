@@ -1,4 +1,4 @@
-20080312
+20080311
  - (dtucker) [auth-pam.c monitor.c session.c sshd.c] Bug #926: Move
    pam_open_session and pam_close_session into the privsep monitor, which
    will ensure that pam_session_close is called as root.  Patch from Tomas
