@@ -3,6 +3,11 @@
    - dtucker@cvs.openbsd.org 2007/10/29 06:57:13
      [regress/Makefile regress/localcommand.sh]
      Add simple regress test for LocalCommand; ok djm@
+   - jmc@cvs.openbsd.org 2007/11/25 15:35:09
+     [regress/agent-getpeereid.sh regress/agent.sh]
+     more existant -> existent, from Martynas Venckus;
+     pfctl changes: ok henning
+     ssh changes: ok deraadt
 
 20080311
  - (dtucker) [auth-pam.c monitor.c session.c sshd.c] Bug #926: Move
