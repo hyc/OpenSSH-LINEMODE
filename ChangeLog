@@ -8,6 +8,11 @@
      more existant -> existent, from Martynas Venckus;
      pfctl changes: ok henning
      ssh changes: ok deraadt
+   - djm@cvs.openbsd.org 2007/12/12 05:04:03
+     [regress/sftp-cmds.sh]
+     unbreak lls command and add a regress test that would have caught the
+     breakage; spotted by mouring@
+     NB. sftp code change already committed.
 
 20080311
  - (dtucker) [auth-pam.c monitor.c session.c sshd.c] Bug #926: Move
