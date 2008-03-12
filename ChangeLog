@@ -1,4 +1,10 @@
 20080311
+ - (djm) OpenBSD CVS Sync
+   - dtucker@cvs.openbsd.org 2007/10/29 06:57:13
+     [regress/Makefile regress/localcommand.sh]
+     Add simple regress test for LocalCommand; ok djm@
+
+20080311
  - (dtucker) [auth-pam.c monitor.c session.c sshd.c] Bug #926: Move
    pam_open_session and pam_close_session into the privsep monitor, which
    will ensure that pam_session_close is called as root.  Patch from Tomas
