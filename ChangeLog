@@ -6,7 +6,7 @@
  - (tim) [scp.c] Use poll.h if available, fall back to sys/poll.h if not. Patch
    by vinschen at redhat.com.
  - (tim) [regress/sftp-cmds.sh regress/ssh2putty.sh] Shell portability fixes
-   from imorgan at nas.nasa.gov
+   from vinschen at redhat.com and imorgan at nas.nasa.gov
 
 20080312
  - (djm) OpenBSD CVS Sync
