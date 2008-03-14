@@ -3,6 +3,8 @@
    self: make changes to Makefile.in next time, not the generated Makefile).
  - (djm) [Makefile.in regress/test-exec.sh] Find installed plink(1) and
    puttygen(1) by $PATH
+ - (tim) [scp.c] Use poll.h if available, fall back to sys/poll.h if not. Patch
+   by vinschen at redhat.com.
 
 20080312
  - (djm) OpenBSD CVS Sync
