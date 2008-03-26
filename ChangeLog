@@ -1,3 +1,9 @@
+20080327
+ - (dtucker) Cache selinux status earlier so we know if it's enabled after a
+   chroot.  Allows ChrootDirectory to work with selinux support compiled in
+   but not enabled.  Using it with selinux enabled will require some selinux
+   support inside the chroot.  "looks sane" djm@
+
 20080315
  - (djm) [regress/test-exec.sh] Quote putty-related variables in case they are
    empty; report and patch from Peter Stuge
