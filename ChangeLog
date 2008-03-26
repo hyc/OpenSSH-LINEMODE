@@ -9,6 +9,10 @@
      [ssh.1 sshd.8 sshd_config.5]
      bump Mdocdate for pages committed in "febuary", necessary because
      of a typo in rcs.c;
+   - deraadt@cvs.openbsd.org 2008/03/13 01:49:53
+     [monitor_fdpass.c]
+     Correct CMSG_SPACE and CMSG_LEN usage everywhere in the tree. Due to
+     an extensive discussion with otto, kettenis, millert, and hshoexer
 
 20080315
  - (djm) [regress/test-exec.sh] Quote putty-related variables in case they are
