@@ -4,6 +4,11 @@
    but not enabled.  Using it with selinux enabled will require some selinux
    support inside the chroot.  "looks sane" djm@
  - (djm) Fix RCS ident in sftp-server-main.c
+ - (djm) OpenBSD CVS sync:
+   - jmc@cvs.openbsd.org 2008/02/11 07:58:28
+     [ssh.1 sshd.8 sshd_config.5]
+     bump Mdocdate for pages committed in "febuary", necessary because
+     of a typo in rcs.c;
 
 20080315
  - (djm) [regress/test-exec.sh] Quote putty-related variables in case they are
