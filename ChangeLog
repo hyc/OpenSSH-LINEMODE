@@ -40,6 +40,9 @@
    - djm@cvs.openbsd.org 2008/03/25 23:01:41
      [session.c]
      last patch had backwards test; spotted by termim AT gmail.com
+   - djm@cvs.openbsd.org 2008/03/26 21:28:14
+     [auth-options.c auth-options.h session.c sshd.8]
+     add no-user-rc authorized_keys option to disable execution of ~/.ssh/rc
 
 20080315
  - (djm) [regress/test-exec.sh] Quote putty-related variables in case they are
