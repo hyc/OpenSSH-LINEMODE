@@ -92,7 +92,7 @@ AC_CHECK_DECL(LLONG_MAX, have_llong_max=1, , [#include <limits.h>])
 
 use_stack_protector=1
 AC_ARG_WITH(stackprotect,
-    [  --without-stackprotect Don't use compiler's stack protection], [
+    [  --without-stackprotect  Don't use compiler's stack protection], [
     if test "x$withval" = "xno"; then
 	use_stack_protector=0
     fi ])
