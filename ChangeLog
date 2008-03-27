@@ -52,6 +52,7 @@
      by dkrause@
  - (djm) [configure.ac] fix alignment of --without-stackprotect description
  - (djm) [configure.ac] --with-selinux too
+ - (djm) [regress/Makefile] cleanup PuTTY interop test droppings
 
 20080315
  - (djm) [regress/test-exec.sh] Quote putty-related variables in case they are
