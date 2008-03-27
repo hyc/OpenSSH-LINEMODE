@@ -3258,7 +3258,7 @@ int main() { return 0; }
 SELINUX_MSG="no"
 LIBSELINUX=""
 AC_ARG_WITH(selinux,
-	[  --with-selinux   Enable SELinux support],
+	[  --with-selinux          Enable SELinux support],
 	[ if test "x$withval" != "xno" ; then
 		save_LIBS="$LIBS"
 		AC_DEFINE(WITH_SELINUX,1,[Define if you want SELinux support.])
