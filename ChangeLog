@@ -1,3 +1,10 @@
+20080403
+ - (djm) OpenBSD CVS sync:
+   - markus@cvs.openbsd.org 2008/04/02 15:36:51
+     [channels.c]
+     avoid possible hijacking of x11-forwarded connections (back out 1.183)
+     CVE-2008-1483; ok djm@
+
 20080327
  - (dtucker) Cache selinux status earlier so we know if it's enabled after a
    chroot.  Allows ChrootDirectory to work with selinux support compiled in
