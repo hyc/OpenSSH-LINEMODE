@@ -7,6 +7,9 @@
    - jmc@cvs.openbsd.org 2008/03/27 22:37:57
      [sshd.8]
      remove trailing whitespace;
+   - djm@cvs.openbsd.org 2008/04/03 09:50:14
+     [version.h]
+     openssh-5.0
 
 20080327
  - (dtucker) Cache selinux status earlier so we know if it's enabled after a
