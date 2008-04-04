@@ -1,4 +1,8 @@
 20080403
+ - (djm) [openbsd-compat/bsd-poll.c] Include stdlib.h to avoid compile-
+   time warnings on LynxOS. Patch from ops AT iki.fi
+
+20080403
  - (djm) OpenBSD CVS sync:
    - markus@cvs.openbsd.org 2008/04/02 15:36:51
      [channels.c]
