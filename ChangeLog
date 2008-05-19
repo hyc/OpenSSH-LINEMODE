@@ -104,6 +104,13 @@
      client stderr (subject to LogLevel in the mux master) - better than
      silently failing.
      most bits ok markus@ (as part of a larger diff)
+   - djm@cvs.openbsd.org 2008/05/09 04:55:56
+     [channels.c channels.h clientloop.c serverloop.c]
+     Try additional addresses when connecting to a port forward destination
+     whose DNS name resolves to more than one address. The previous behaviour
+     was to try the first address and give up.
+     Reported by stig AT venaas.com in bz#343
+     great feedback and ok markus@
 
 20080403
  - (djm) [openbsd-compat/bsd-poll.c] Include stdlib.h to avoid compile-
