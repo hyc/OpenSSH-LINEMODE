@@ -43,6 +43,15 @@
      [ssh-keyscan.1 ssh-keyscan.c]
      default to rsa (protocol 2) keys, instead of rsa1 keys; spotted by
      larsnooden AT openoffice.org
+   - pyr@cvs.openbsd.org 2008/05/07 05:49:37
+     [servconf.c servconf.h session.c sshd_config.5]
+     Enable the AllowAgentForwarding option in sshd_config (global and match
+     context), to specify if agents should be permitted on the server.
+     As the man page states:
+     ``Note that disabling Agent forwarding does not improve security
+     unless users are also denied shell access, as they can always install
+     their own forwarders.''
+     ok djm@, ok and a mild frown markus@
 
 20080403
  - (djm) [openbsd-compat/bsd-poll.c] Include stdlib.h to avoid compile-
