@@ -1,3 +1,9 @@
+20080519
+ - (djm) [configure.ac mux.c sftp.c openbsd-compat/Makefile.in]
+   [openbsd-compat/fmt_scaled.c openbsd-compat/openbsd-compat.h]
+   Fix compilation on Linux, including pulling in fmt_scaled(3)
+   implementation from OpenBSD's libutil.
+
 20080518
  - (djm) OpenBSD CVS Sync
    - djm@cvs.openbsd.org 2008/04/04 05:14:38

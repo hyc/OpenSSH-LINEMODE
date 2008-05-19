@@ -101,6 +101,11 @@ int daemon(int nochdir, int noclose);
 char *dirname(const char *path);
 #endif
 
+#ifndef HAVE_FMT_SCALED
+#define	FMT_SCALED_STRSIZE	7
+int	fmt_scaled(long long number, char *result);
+#endif
+
 #if defined(BROKEN_INET_NTOA) || !defined(HAVE_INET_NTOA)
 char *inet_ntoa(struct in_addr in);
 #endif

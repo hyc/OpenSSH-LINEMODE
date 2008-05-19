@@ -1034,7 +1034,7 @@ dnl    Checks for libutil functions
 AC_CHECK_HEADERS(libutil.h)
 AC_SEARCH_LIBS(login, util bsd, [AC_DEFINE(HAVE_LOGIN, 1,
 	[Define if your libraries define login()])])
-AC_CHECK_FUNCS(logout updwtmp logwtmp)
+AC_CHECK_FUNCS(fmt_scaled logout updwtmp logwtmp)
 
 AC_FUNC_STRFTIME
 
