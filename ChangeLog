@@ -120,6 +120,13 @@
    - djm@cvs.openbsd.org 2008/05/09 14:26:08
      [ssh.c]
      dingo stole my diff hunk
+   - markus@cvs.openbsd.org 2008/05/09 16:16:06
+     [session.c]
+     re-add the USE_PIPES code and enable it.
+     without pipes shutdown-read from the sshd does not trigger
+     a SIGPIPE when the forked program does a write.
+     ok djm@
+     (Id sync only, USE_PIPES never left portable OpenSSH)
 
 20080403
  - (djm) [openbsd-compat/bsd-poll.c] Include stdlib.h to avoid compile-
