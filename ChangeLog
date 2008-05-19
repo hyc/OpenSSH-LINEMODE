@@ -36,6 +36,9 @@
    - djm@cvs.openbsd.org 2008/04/18 22:01:33
      [session.c]
      remove unneccessary parentheses
+   - otto@cvs.openbsd.org 2008/04/29 11:20:31
+     [monitor_mm.h]
+     garbage collect two unused fields in struct mm_master; ok markus@
 
 20080403
  - (djm) [openbsd-compat/bsd-poll.c] Include stdlib.h to avoid compile-
