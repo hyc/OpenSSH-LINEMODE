@@ -39,6 +39,10 @@
    - otto@cvs.openbsd.org 2008/04/29 11:20:31
      [monitor_mm.h]
      garbage collect two unused fields in struct mm_master; ok markus@
+   - djm@cvs.openbsd.org 2008/04/30 10:14:03
+     [ssh-keyscan.1 ssh-keyscan.c]
+     default to rsa (protocol 2) keys, instead of rsa1 keys; spotted by
+     larsnooden AT openoffice.org
 
 20080403
  - (djm) [openbsd-compat/bsd-poll.c] Include stdlib.h to avoid compile-
