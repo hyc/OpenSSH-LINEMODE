@@ -30,6 +30,9 @@
      statvfs@openssh.com to produce a df(1)-like display of filesystem
      space and inode utilisation
      ok markus@
+   - jmc@cvs.openbsd.org 2008/04/18 17:15:47
+     [sftp.1]
+     macro fixage;
 
 20080403
  - (djm) [openbsd-compat/bsd-poll.c] Include stdlib.h to avoid compile-
