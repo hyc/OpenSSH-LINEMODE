@@ -148,6 +148,9 @@
      [nchan2.ms]
      document eow message in ssh protocol 2 channel state machine;
      feedback and ok markus@
+   - djm@cvs.openbsd.org 2008/05/18 21:29:05
+     [sftp-server.c]
+     comment extension announcement
 
 20080403
  - (djm) [openbsd-compat/bsd-poll.c] Include stdlib.h to avoid compile-
