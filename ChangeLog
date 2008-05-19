@@ -4,6 +4,10 @@
      [sshd_config.5]
      ChrootDirectory is supported in Match blocks (in fact, it is most useful
      there). Spotted by Minstrel AT minstrel.org.uk
+   - djm@cvs.openbsd.org 2008/04/04 06:44:26
+     [sshd_config.5]
+     oops, some unrelated stuff crept into that commit - backout.
+     spotted by jmc@
 
 20080403
  - (djm) [openbsd-compat/bsd-poll.c] Include stdlib.h to avoid compile-
