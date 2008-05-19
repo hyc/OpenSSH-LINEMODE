@@ -117,6 +117,9 @@
      making the function names more consistent - making ssh.c and
      clientloop.c a fair bit more readable.
      ok markus@
+   - djm@cvs.openbsd.org 2008/05/09 14:26:08
+     [ssh.c]
+     dingo stole my diff hunk
 
 20080403
  - (djm) [openbsd-compat/bsd-poll.c] Include stdlib.h to avoid compile-
