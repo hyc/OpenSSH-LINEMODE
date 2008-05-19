@@ -11,6 +11,9 @@
    - djm@cvs.openbsd.org 2008/04/05 02:46:02
      [sshd_config.5]
      HostbasedAuthentication is supported under Match too
+ - (djm) [openbsd-compat/bsd-arc4random.c openbsd-compat/openbsd-compat.c]
+     [configure.ac] Implement arc4random_buf(), import implementation of
+     arc4random_uniform() from OpenBSD
 
 20080403
  - (djm) [openbsd-compat/bsd-poll.c] Include stdlib.h to avoid compile-
