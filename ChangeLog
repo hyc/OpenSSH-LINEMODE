@@ -52,6 +52,9 @@
      unless users are also denied shell access, as they can always install
      their own forwarders.''
      ok djm@, ok and a mild frown markus@
+   - pyr@cvs.openbsd.org 2008/05/07 06:43:35
+     [sshd_config]
+     push the sshd_config bits in, spotted by ajacoutot@
 
 20080403
  - (djm) [openbsd-compat/bsd-poll.c] Include stdlib.h to avoid compile-
