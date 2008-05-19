@@ -14,6 +14,7 @@
  - (djm) [openbsd-compat/bsd-arc4random.c openbsd-compat/openbsd-compat.c]
      [configure.ac] Implement arc4random_buf(), import implementation of
      arc4random_uniform() from OpenBSD
+ - (djm) [openbsd-compat/bsd-arc4random.c] Warning fixes
  - (djm) OpenBSD CVS Sync
    - djm@cvs.openbsd.org 2008/04/13 00:22:17
      [dh.c sshd.c]
