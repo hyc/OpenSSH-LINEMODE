@@ -55,6 +55,9 @@
    - pyr@cvs.openbsd.org 2008/05/07 06:43:35
      [sshd_config]
      push the sshd_config bits in, spotted by ajacoutot@
+   - jmc@cvs.openbsd.org 2008/05/07 08:00:14
+     [sshd_config.5]
+     sort;
 
 20080403
  - (djm) [openbsd-compat/bsd-poll.c] Include stdlib.h to avoid compile-
