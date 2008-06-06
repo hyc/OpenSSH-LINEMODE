@@ -1,3 +1,6 @@
+20080607
+ - (dtucker) [mux.c] Include paths.h inside ifdef HAVE_PATHS_H.
+
 20080604
  - (djm) [openbsd-compat/bsd-arc4random.c] Fix math bug that caused bias
    in arc4random_uniform with upper_bound in (2^30,2*31). Note that 
