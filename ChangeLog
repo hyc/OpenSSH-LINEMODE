@@ -1,5 +1,7 @@
 20080607
  - (dtucker) [mux.c] Include paths.h inside ifdef HAVE_PATHS_H.
+ - (dtucker) [configure.ac defines.h sftp-client.c sftp-server.c sftp.c]
+   Do not enable statvfs extensions on platforms that do not have statvfs.
 
 20080604
  - (djm) [openbsd-compat/bsd-arc4random.c] Fix math bug that caused bias

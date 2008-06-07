@@ -267,6 +267,7 @@ AC_CHECK_HEADERS( \
 	sys/cdefs.h \
 	sys/dir.h \
 	sys/mman.h \
+	sys/mount.h \
 	sys/ndir.h \
 	sys/poll.h \
 	sys/prctl.h \
@@ -276,6 +277,7 @@ AC_CHECK_HEADERS( \
 	sys/stream.h \
 	sys/stropts.h \
 	sys/strtio.h \
+	sys/statvfs.h \
 	sys/sysmacros.h \
 	sys/time.h \
 	sys/timers.h \
@@ -1354,6 +1356,8 @@ AC_CHECK_FUNCS( \
 	sigvec \
 	snprintf \
 	socketpair \
+	statfs \
+	statvfs \
 	strdup \
 	strerror \
 	strlcat \
