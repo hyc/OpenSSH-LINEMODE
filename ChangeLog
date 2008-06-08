@@ -1,3 +1,9 @@
+20080608
+ - (dtucker) [configure.ac defines.h sftp-client.c sftp-server.c sftp.c
+   openbsd-compat/Makefile.in openbsd-compat/openbsd-compat.h
+   openbsd-compat/bsd-statvfs.{c,h}] Add a null implementation of statvfs and
+   fstatvfs and remove #defines around statvfs code.  ok djm@
+
 20080607
  - (dtucker) [mux.c] Include paths.h inside ifdef HAVE_PATHS_H.
  - (dtucker) [configure.ac defines.h sftp-client.c sftp-server.c sftp.c]

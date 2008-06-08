@@ -1305,6 +1305,7 @@ AC_CHECK_FUNCS( \
 	fchmod \
 	fchown \
 	freeaddrinfo \
+	fstatvfs \
 	futimes \
 	getaddrinfo \
 	getcwd \
@@ -2651,6 +2652,18 @@ fi
 TYPE_SOCKLEN_T
 
 AC_CHECK_TYPES(sig_atomic_t,,,[#include <signal.h>])
+AC_CHECK_TYPES([fsblkcnt_t, fsfilcnt_t],,,[
+#include <sys/types.h>
+#ifdef HAVE_SYS_BITYPES_H
+#include <sys/bitypes.h>
+#endif
+#ifdef HAVE_SYS_STATFS_H
+#include <sys/statfs.h>
+#endif
+#ifdef HAVE_SYS_STATVFS_H
+#include <sys/statvfs.h>
+#endif
+])
 
 AC_CHECK_TYPES(in_addr_t,,,
 [#include <sys/types.h>
