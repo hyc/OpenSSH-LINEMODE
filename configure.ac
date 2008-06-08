@@ -3026,6 +3026,16 @@ if test "x$ac_cv_have_accrights_in_msghdr" = "xyes" ; then
 		file descriptor passing])
 fi
 
+AC_MSG_CHECKING(if f_fsid has val members)
+AC_TRY_COMPILE([
+#include <sys/types.h>
+#include <sys/statvfs.h>],
+[struct fsid_t t; t.val[0] = 0;],
+	[ AC_MSG_RESULT(yes)
+	  AC_DEFINE(FSID_HAS_VAL, 1, f_fsid has members) ],
+	[ AC_MSG_RESULT(no) ]
+)
+
 AC_CACHE_CHECK([for msg_control field in struct msghdr],
 		ac_cv_have_control_in_msghdr, [
 	AC_COMPILE_IFELSE(

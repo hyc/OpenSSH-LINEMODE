@@ -3,6 +3,9 @@
    openbsd-compat/Makefile.in openbsd-compat/openbsd-compat.h
    openbsd-compat/bsd-statvfs.{c,h}] Add a null implementation of statvfs and
    fstatvfs and remove #defines around statvfs code.  ok djm@
+ - (dtucker) [configure.ac defines.h sftp-client.c M sftp-server.c] Add a
+   macro to convert fsid to unsigned long for platforms where fsid is a
+   2-member array.
 
 20080607
  - (dtucker) [mux.c] Include paths.h inside ifdef HAVE_PATHS_H.
