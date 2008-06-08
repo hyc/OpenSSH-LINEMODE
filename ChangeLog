@@ -16,6 +16,13 @@
      support -l (print fingerprint) in combination with -F (find host) to
      search for a host in ~/.ssh/known_hosts and display its fingerprint;
      ok markus@
+   - djm@cvs.openbsd.org 2008/05/19 20:53:52
+     [clientloop.c]
+     unbreak tree by committing this bit that I missed from:
+     Fix sending tty modes when stdin is not a tty (bz#1199). Previously
+     we would send the modes corresponding to a zeroed struct termios,
+     whereas we should have been sending an empty list of modes.
+     Based on patch from daniel.ritz AT alcatel.ch; ok dtucker@ markus@ 
 
 20080604
  - (djm) [openbsd-compat/bsd-arc4random.c] Fix math bug that caused bias
