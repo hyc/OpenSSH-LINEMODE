@@ -11,8 +11,12 @@
      Also extends the sizes of the remaining 32bit wire format to 64bit,
      they're specified as unsigned long in the standard.
    - dtucker@cvs.openbsd.org 2008/06/09 13:02:39
+     [sftp-server.c]
      Extend 32bit -> 64bit values for statvfs extension missed in previous
      commit.
+   - dtucker@cvs.openbsd.org 2008/06/09 13:38:46
+     [PROTOCOL]
+     Use a $OpenBSD tag so our scripts will sync changes.
 
 20080608
  - (dtucker) [configure.ac defines.h sftp-client.c sftp-server.c sftp.c
