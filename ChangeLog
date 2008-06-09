@@ -1,3 +1,9 @@
+20080609
+ - (dtucker) OpenBSD CVS Sync
+   - dtucker@cvs.openbsd.org 2008/06/08 17:04:41
+     [sftp-server.c]
+     Add case for ENOSYS in errno_to_portable; ok deraadt
+
 20080608
  - (dtucker) [configure.ac defines.h sftp-client.c sftp-server.c sftp.c
    openbsd-compat/Makefile.in openbsd-compat/openbsd-compat.h
