@@ -38,6 +38,9 @@
    - dtucker@cvs.openbsd.org 2008/06/10 15:28:49
      [test-exec.sh]
      Add quotes
+   - dtucker@cvs.openbsd.org 2008/06/10 18:21:24
+     [ssh_config.5]
+     clarify that Host patterns are space-separated.  ok deraadt
  - (dtucker) [openbsd-compat/fake-rfc2553.h] Add sin6_scope_id to sockaddr_in6
    since the new CIDR code in addmatch.c references it.
  - (dtucker) [Makefile.in configure.ac regress/addrmatch.sh] Skip IPv6
