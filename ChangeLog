@@ -1,3 +1,15 @@
+20080610
+ - (dtucker) OpenBSD CVS Sync
+   - djm@cvs.openbsd.org 2008/06/10 03:57:27
+     [servconf.c match.h sshd_config.5]
+     support CIDR address matching in sshd_config "Match address" blocks, with
+     full support for negation and fall-back to classic wildcard matching.
+     For example:
+     Match address 192.0.2.0/24,3ffe:ffff::/32,!10.*
+         PasswordAuthentication yes
+     addrmatch.c code mostly lifted from flowd's addr.c
+     feedback and ok dtucker@
+
 20080609
  - (dtucker) OpenBSD CVS Sync
    - dtucker@cvs.openbsd.org 2008/06/08 17:04:41
