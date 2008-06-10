@@ -67,6 +67,7 @@
    specific tests on platforms that don't do IPv6.
  - (dtucker) [Makefile.in] Define TEST_SSH_IPV6 in make's arguments as well
    as environment.
+ - (dtucker) [Makefile.in] Move addrmatch.o to libssh.a where it's needed now.
 
 20080609
  - (dtucker) OpenBSD CVS Sync
