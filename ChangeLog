@@ -12,6 +12,12 @@
    - djm@cvs.openbsd.org 2008/06/10 04:17:46
      [sshd_config.5]
      better reference for pattern-list
+   - dtucker@cvs.openbsd.org 2008/06/10 04:50:25
+     [sshd.c channels.h channels.c log.c servconf.c log.h servconf.h sshd.8]
+     Add extended test mode (-T) and connection parameters for test mode (-C).
+     -T causes sshd to write its effective configuration to stdout and exit.
+     -C causes any relevant Match rules to be applied before output.  The
+     combination allows tesing of the parser and config files.  ok deraadt djm
 
 20080609
  - (dtucker) OpenBSD CVS Sync
