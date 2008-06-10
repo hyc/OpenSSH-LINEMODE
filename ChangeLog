@@ -9,6 +9,9 @@
          PasswordAuthentication yes
      addrmatch.c code mostly lifted from flowd's addr.c
      feedback and ok dtucker@
+   - djm@cvs.openbsd.org 2008/06/10 04:17:46
+     [sshd_config.5]
+     better reference for pattern-list
 
 20080609
  - (dtucker) OpenBSD CVS Sync
