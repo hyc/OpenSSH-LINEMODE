@@ -26,6 +26,9 @@
      - update usage()
      - fix SYNOPSIS, and sort options
      - some minor additional fixes
+   - dtucker@cvs.openbsd.org 2008/06/09 18:06:32
+     [regress/test-exec.sh]
+     Don't generate putty keys if we're not going to use them.  ok djm
 
 20080609
  - (dtucker) OpenBSD CVS Sync
