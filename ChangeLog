@@ -32,6 +32,8 @@
    - dtucker@cvs.openbsd.org 2008/06/10 05:23:32
      [regress/addrmatch.sh regress/Makefile]
      Regress test for Match CIDR rules.  ok djm@
+  - (dtucker) [openbsd-compat/fake-rfc2553.h] Add sin6_scope_id to sockaddr_in6
+    since the new CIDR code in addmatch.c references it.
 
 20080609
  - (dtucker) OpenBSD CVS Sync
