@@ -394,6 +394,7 @@ tests interop-tests:	$(TARGETS)
 	TEST_SSH_SFTPSERVER="$${BUILDDIR}/sftp-server"; \
 	TEST_SSH_PLINK="plink"; \
 	TEST_SSH_PUTTYGEN="puttygen"; \
+	TEST_SSH_IPV6="@TEST_SSH_IPV6@" ; \
 	cd $(srcdir)/regress || exit $$?; \
 	$(MAKE) \
 		.OBJDIR="$${BUILDDIR}/regress" \

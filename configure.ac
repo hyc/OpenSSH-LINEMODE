@@ -4068,6 +4068,13 @@ dnl Adding -Werror to CFLAGS early prevents configure tests from running.
 dnl Add now.
 CFLAGS="$CFLAGS $werror_flags"
 
+if grep "#define BROKEN_GETADDRINFO 1" confdefs.h >/dev/null || \
+    test "x$ac_cv_func_getaddrinfo" != "xyes" ; then
+	AC_SUBST(TEST_SSH_IPV6, no)
+else
+	AC_SUBST(TEST_SSH_IPV6, yes)
+fi
+
 AC_EXEEXT
 AC_CONFIG_FILES([Makefile buildpkg.sh opensshd.init openssh.xml \
 	openbsd-compat/Makefile openbsd-compat/regress/Makefile \
