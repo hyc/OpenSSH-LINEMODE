@@ -42,6 +42,8 @@
    since the new CIDR code in addmatch.c references it.
  - (dtucker) [Makefile.in configure.ac regress/addrmatch.sh] Skip IPv6
    specific tests on platforms that don't do IPv6.
+ - (dtucker) [Makefile.in] Define TEST_SSH_IPV6 in make's arguments as well
+   as environment.
 
 20080609
  - (dtucker) OpenBSD CVS Sync
