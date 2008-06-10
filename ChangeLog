@@ -18,6 +18,9 @@
      -T causes sshd to write its effective configuration to stdout and exit.
      -C causes any relevant Match rules to be applied before output.  The
      combination allows tesing of the parser and config files.  ok deraadt djm
+   - jmc@cvs.openbsd.org 2008/06/10 07:12:00
+     [sshd_config.5]
+     tweak previous;
 
 20080609
  - (dtucker) OpenBSD CVS Sync
