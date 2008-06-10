@@ -32,6 +32,9 @@
    - dtucker@cvs.openbsd.org 2008/06/10 05:23:32
      [regress/addrmatch.sh regress/Makefile]
      Regress test for Match CIDR rules.  ok djm@
+   - dtucker@cvs.openbsd.org 2008/06/10 15:21:41
+     [test-exec.sh]
+     Use a more portable construct for checking if we're running a putty test
   - (dtucker) [openbsd-compat/fake-rfc2553.h] Add sin6_scope_id to sockaddr_in6
     since the new CIDR code in addmatch.c references it.
 
