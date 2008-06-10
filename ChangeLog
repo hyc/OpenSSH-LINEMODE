@@ -29,6 +29,9 @@
    - dtucker@cvs.openbsd.org 2008/06/09 18:06:32
      [regress/test-exec.sh]
      Don't generate putty keys if we're not going to use them.  ok djm
+   - dtucker@cvs.openbsd.org 2008/06/10 05:23:32
+     [regress/addrmatch.sh regress/Makefile]
+     Regress test for Match CIDR rules.  ok djm@
 
 20080609
  - (dtucker) OpenBSD CVS Sync
