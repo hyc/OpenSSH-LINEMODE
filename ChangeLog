@@ -1,3 +1,8 @@
+20080611
+ - (djm) [channels.c configure.ac]
+   Do not set SO_REUSEADDR on wildcard X11 listeners (X11UseLocalhost=no)
+   bz#1464; ok dtucker 
+
 20080610
  - (dtucker) OpenBSD CVS Sync
    - djm@cvs.openbsd.org 2008/06/10 03:57:27

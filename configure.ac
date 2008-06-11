@@ -553,7 +553,6 @@ main() { if (NSVersionOfRunTimeLibrary("System") >= (60 << 16))
 	no_dev_ptmx=1
 	check_for_libcrypt_later=1
 	check_for_openpty_ctty_bug=1
-	AC_DEFINE(DONT_TRY_OTHER_AF, 1, [Workaround more Linux IPv6 quirks])
 	AC_DEFINE(PAM_TTY_KLUDGE, 1,
 		[Work around problematic Linux PAM modules handling of PAM_TTY])
 	AC_DEFINE(LOCKED_PASSWD_PREFIX, "!",
