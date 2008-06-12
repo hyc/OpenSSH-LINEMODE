@@ -37,6 +37,10 @@
    - otto@cvs.openbsd.org 2008/06/11 23:02:22
      [key.c]
      simpler way of computing the augmentations; ok grunk@
+   - grunk@cvs.openbsd.org 2008/06/11 23:03:56
+     [ssh_config.5]
+     CheckHostIP set to ``fingerprint'' will display both hex and random art
+     spotted by naddy@
 
 20080611
  - (djm) [channels.c configure.ac]
