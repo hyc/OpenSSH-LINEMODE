@@ -41,6 +41,12 @@
      [ssh_config.5]
      CheckHostIP set to ``fingerprint'' will display both hex and random art
      spotted by naddy@
+   - grunk@cvs.openbsd.org 2008/06/11 23:51:57
+     [key.c]
+     #define statements that are not atoms need braces around them, else they
+     will cause trouble in some cases.
+     Also do a computation of -1 once, and not in a loop several times.
+     spotted by otto@
 
 20080611
  - (djm) [channels.c configure.ac]
