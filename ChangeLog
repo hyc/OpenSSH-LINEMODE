@@ -129,6 +129,10 @@
      [clientloop.c]
      I was coalescing expected global request confirmation replies at
      the wrong end of the queue - fix; prompted by markus@
+   - grunk@cvs.openbsd.org 2008/06/12 21:14:46
+     [ssh-keygen.c]
+     make ssh-keygen -lf show the key type just as ssh-add -l would do it
+     ok djm@ markus@
   - (dtucker) [clientloop.c serverloop.c]  channel_register_filter now
     takes 2 more args.  with djm@
 
