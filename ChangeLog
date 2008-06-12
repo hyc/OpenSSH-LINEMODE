@@ -85,6 +85,9 @@
      Use this queue to verify success or failure for remote forward
      establishment in a race free way.
      ok dtucker@
+   - djm@cvs.openbsd.org 2008/06/12 04:17:47
+     [clientloop.c]
+     thall shalt not code past the eightieth column
 
 20080611
  - (djm) [channels.c configure.ac]
