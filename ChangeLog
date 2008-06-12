@@ -88,6 +88,9 @@
    - djm@cvs.openbsd.org 2008/06/12 04:17:47
      [clientloop.c]
      thall shalt not code past the eightieth column
+   - djm@cvs.openbsd.org 2008/06/12 04:24:06
+     [ssh.c]
+     thal shalt not code past the eightieth column
 
 20080611
  - (djm) [channels.c configure.ac]
