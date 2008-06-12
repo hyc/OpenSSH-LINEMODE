@@ -125,6 +125,10 @@
    - djm@cvs.openbsd.org 2008/06/12 20:47:04
      [sftp-client.c]
      print extension revisions for extensions that we understand
+   - djm@cvs.openbsd.org 2008/06/12 21:06:25
+     [clientloop.c]
+     I was coalescing expected global request confirmation replies at
+     the wrong end of the queue - fix; prompted by markus@
   - (dtucker) [clientloop.c serverloop.c]  channel_register_filter now
     takes 2 more args.  with djm@
 
