@@ -115,6 +115,9 @@
    - dtucker@cvs.openbsd.org 2008/06/12 16:35:31
      [ssh_config.5 ssh.c]
      keyword expansion for localcommand.  ok djm@
+   - jmc@cvs.openbsd.org 2008/06/12 19:10:09
+     [ssh_config.5 ssh-keygen.1]
+     tweak the ascii art text; ok grunk
   - (dtucker) [clientloop.c serverloop.c]  channel_register_filter now
     takes 2 more args.  with djm@
 
