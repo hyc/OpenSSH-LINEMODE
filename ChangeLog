@@ -91,6 +91,9 @@
    - djm@cvs.openbsd.org 2008/06/12 04:24:06
      [ssh.c]
      thal shalt not code past the eightieth column
+   - djm@cvs.openbsd.org 2008/06/12 05:15:41
+     [PROTOCOL]
+     document tun@openssh.com forwarding method
 
 20080611
  - (djm) [channels.c configure.ac]
