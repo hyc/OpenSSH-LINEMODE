@@ -1,3 +1,9 @@
+20080613
+ - (dtucker) OpenBSD CVS Sync
+   - deraadt@cvs.openbsd.org 2008/06/13 09:44:36
+     [packet.c]
+     compile on older gcc; no decl after code
+
 20080612
  - (dtucker) OpenBSD CVS Sync
    - jmc@cvs.openbsd.org 2008/06/11 07:30:37
