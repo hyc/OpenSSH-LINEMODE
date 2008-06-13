@@ -3363,12 +3363,12 @@ AC_ARG_WITH(kerberos5,
 			)
 			AC_SEARCH_LIBS(dn_expand, resolv)
 
-			AC_CHECK_LIB(gssapi,gss_init_sec_context,
+			AC_CHECK_LIB(gssapi_krb5, gss_init_sec_context,
 				[ AC_DEFINE(GSSAPI)
-				  K5LIBS="-lgssapi $K5LIBS" ],
-				[ AC_CHECK_LIB(gssapi_krb5,gss_init_sec_context,
+				  K5LIBS="-lgssapi_krb5 $K5LIBS" ],
+				[ AC_CHECK_LIB(gssapi, gss_init_sec_context,
 					[ AC_DEFINE(GSSAPI)
-					  K5LIBS="-lgssapi_krb5 $K5LIBS" ],
+					  K5LIBS="-lgssapi $K5LIBS" ],
 					AC_MSG_WARN([Cannot find any suitable gss-api library - build may fail]),
 					$K5LIBS)
 				],

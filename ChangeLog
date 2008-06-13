@@ -23,6 +23,9 @@
      Explain the use of SSH fpr visualization using random art, and cite the
      original scientific paper inspiring that technique.
      Much help with English and nroff by jmc@, thanks.
+ - (dtucker) [configure.ac] Bug #1276: avoid linking against libgssapi, which
+   despite its name doesn't seem to implement all of GSSAPI.  Patch from
+   Jan Engelhardt, sanity checked by Simon Wilkinson.
 
 20080612
  - (dtucker) OpenBSD CVS Sync
