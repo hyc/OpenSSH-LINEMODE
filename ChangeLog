@@ -143,6 +143,11 @@
      [sftp.h log.h]
      replace __dead with __attribute__((noreturn)), makes things
      a little easier to port.  Also, add it to sigdie().  ok djm@
+   - djm@cvs.openbsd.org 2008/06/13 00:16:49
+     [mux.c]
+     fall back to creating a new TCP connection on most multiplexing errors
+     (socket connect fail, invalid version, refused permittion, corrupted
+     messages, etc.); bz #1329 ok dtucker@
   - (dtucker) [clientloop.c serverloop.c]  channel_register_filter now
     takes 2 more args.  with djm@
 
