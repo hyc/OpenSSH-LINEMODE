@@ -3,6 +3,12 @@
    - deraadt@cvs.openbsd.org 2008/06/13 09:44:36
      [packet.c]
      compile on older gcc; no decl after code
+   - dtucker@cvs.openbsd.org 2008/06/13 13:56:59
+     [monitor.c]
+     Clear key options in the monitor on failed authentication, prevents
+     applying additional restrictions to non-pubkey authentications in
+     the case where pubkey fails but another method subsequently succeeds.
+     bz #1472, found by Colin Watson, ok markus@ djm@
 
 20080612
  - (dtucker) OpenBSD CVS Sync
