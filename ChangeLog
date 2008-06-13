@@ -139,6 +139,10 @@
    - ian@cvs.openbsd.org 2008/06/12 23:24:58
      [sshconnect.c]
      tweak wording in message, ok deraadt@ jmc@
+   - dtucker@cvs.openbsd.org 2008/06/13 00:12:02
+     [sftp.h log.h]
+     replace __dead with __attribute__((noreturn)), makes things
+     a little easier to port.  Also, add it to sigdie().  ok djm@
   - (dtucker) [clientloop.c serverloop.c]  channel_register_filter now
     takes 2 more args.  with djm@
 
