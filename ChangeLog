@@ -171,6 +171,8 @@
   - (dtucker) [umac.c] STORE_UINT32_REVERSED and endian_convert are never used
     on big endian machines, so ifdef them for little-endian only to prevent
     unused function warnings on big-endians.
+  - (dtucker) [openbsd-compat/setenv.c] Make offsets size_t to prevent
+    compiler warnings on some platforms.  Based on a discussion with otto@
 
 20080611
  - (djm) [channels.c configure.ac]
