@@ -160,6 +160,9 @@
     from Todd Vierling.
   - (dtucker) [auth-sia.c] Bug #1241: support password expiry on Tru64 SIA
     systems.  Patch from R. Scott Bailey.
+  - (dtucker) [umac.c] STORE_UINT32_REVERSED and endian_convert are never used
+    on big endian machines, so ifdef them for little-endian only to prevent
+    unused function warnings on big-endians.
 
 20080611
  - (djm) [channels.c configure.ac]
