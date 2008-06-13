@@ -12,6 +12,9 @@
    - dtucker@cvs.openbsd.org 2008/06/13 14:18:51
      [auth2-pubkey.c auth-rhosts.c]
      Include unistd.h for close(), prevents warnings in -portable
+   - dtucker@cvs.openbsd.org 2008/06/13 17:21:20
+     [mux.c]
+     Friendlier error messages for mux fallback.  ok djm@
 
 20080612
  - (dtucker) OpenBSD CVS Sync
