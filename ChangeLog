@@ -150,6 +150,8 @@
      messages, etc.); bz #1329 ok dtucker@
   - (dtucker) [clientloop.c serverloop.c]  channel_register_filter now
     takes 2 more args.  with djm@
+  - (dtucker) [defines.h] Bug #1112: __dead is, well dead. Based on a patch
+    from Todd Vierling.
 
 20080611
  - (djm) [channels.c configure.ac]

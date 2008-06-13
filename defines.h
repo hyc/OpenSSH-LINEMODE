@@ -431,10 +431,6 @@ struct winsize {
 # define __attribute__(x)
 #endif /* !defined(__GNUC__) || (__GNUC__ < 2) */
 
-#ifndef __dead
-# define __dead	__attribute__((noreturn))
-#endif
-
 #if !defined(HAVE_ATTRIBUTE__SENTINEL__) && !defined(__sentinel__)
 # define __sentinel__
 #endif
