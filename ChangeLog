@@ -157,6 +157,11 @@
    - dtucker@cvs.openbsd.org 2008/06/13 01:38:23
      [misc.c]
      upcast uid to long with matching %ld, prevents warnings in portable
+   - djm@cvs.openbsd.org 2008/06/13 04:40:22
+     [auth2-pubkey.c auth-rhosts.c]
+     refuse to read ~/.shosts or ~/.ssh/authorized_keys that are not
+     regular files; report from Solar Designer via Colin Watson in bz#1471
+     ok dtucker@ deraadt
   - (dtucker) [clientloop.c serverloop.c]  channel_register_filter now
     takes 2 more args.  with djm@
   - (dtucker) [defines.h] Bug #1112: __dead is, well dead. Based on a patch
