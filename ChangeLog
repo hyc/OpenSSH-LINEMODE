@@ -15,6 +15,9 @@
    - dtucker@cvs.openbsd.org 2008/06/13 17:21:20
      [mux.c]
      Friendlier error messages for mux fallback.  ok djm@
+   - dtucker@cvs.openbsd.org 2008/06/13 18:55:22
+     [scp.c]
+     Prevent -Wsign-compare warnings on LP64 systems.  bz #1192, ok deraadt@
 
 20080612
  - (dtucker) OpenBSD CVS Sync
