@@ -7,6 +7,10 @@
    - dtucker@cvs.openbsd.org 2008/06/14 17:07:11
      [sshd.c]
      ensure default umask disallows at least group and world write; ok djm@
+   - djm@cvs.openbsd.org 2008/06/14 18:33:43
+     [session.c]
+     suppress the warning message from chdir(homedir) failures
+     when chrooted (bz#1461); ok dtucker
 
 20080614
  - (djm) [openbsd-compat/sigact.c] Avoid NULL derefs in ancient sigaction
