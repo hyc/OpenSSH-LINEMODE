@@ -15,6 +15,9 @@
      [scp.1]
      Mention that scp follows symlinks during -r.  bz #1466,
      from nectar at apple
+   - dtucker@cvs.openbsd.org 2008/06/15 16:55:38
+     [sshd_config.5]
+     MaxSessions is allowed in a Match block too
 
 20080614
  - (djm) [openbsd-compat/sigact.c] Avoid NULL derefs in ancient sigaction
