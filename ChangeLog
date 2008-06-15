@@ -11,6 +11,10 @@
      [session.c]
      suppress the warning message from chdir(homedir) failures
      when chrooted (bz#1461); ok dtucker
+   - dtucker@cvs.openbsd.org 2008/06/14 19:42:10
+     [scp.1]
+     Mention that scp follows symlinks during -r.  bz #1466,
+     from nectar at apple
 
 20080614
  - (djm) [openbsd-compat/sigact.c] Avoid NULL derefs in ancient sigaction
