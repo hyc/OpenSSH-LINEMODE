@@ -1,3 +1,8 @@
+20080614
+ - (djm) [openbsd-compat/sigact.c] Avoid NULL derefs in ancient sigaction
+   replacement code; patch from ighighi AT gmail.com in bz#1240;
+   ok dtucker
+
 20080613
  - (dtucker) OpenBSD CVS Sync
    - deraadt@cvs.openbsd.org 2008/06/13 09:44:36
