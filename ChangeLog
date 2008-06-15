@@ -1,3 +1,6 @@
+20080615
+ - (dtucker) [configure.ac] Enable -fno-builtin-memset when using gcc.
+
 20080614
  - (djm) [openbsd-compat/sigact.c] Avoid NULL derefs in ancient sigaction
    replacement code; patch from ighighi AT gmail.com in bz#1240;

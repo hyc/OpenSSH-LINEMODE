@@ -112,6 +112,18 @@ if test "$GCC" = "yes" || test "$GCC" = "egcs"; then
 		*) ;;
 	esac
 
+	AC_MSG_CHECKING(if $CC accepts -fno-builtin-memset)
+	saved_CFLAGS="$CFLAGS"
+	CFLAGS="$CFLAGS -fno-builtin-memset"
+	AC_LINK_IFELSE( [AC_LANG_SOURCE([[
+#include <string.h>
+int main(void){char b[10]; memset(b, 0, sizeof(b));}
+		]])],
+		[ AC_MSG_RESULT(yes) ],
+		[ AC_MSG_RESULT(no)
+		  CFLAGS="$saved_CFLAGS" ]
+)
+
 	# -fstack-protector-all doesn't always work for some GCC versions
 	# and/or platforms, so we test if we can.  If it's not supported
 	# on a give platform gcc will emit a warning so we use -Werror.
