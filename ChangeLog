@@ -21,6 +21,12 @@
    - dtucker@cvs.openbsd.org 2008/06/15 16:58:40
      [servconf.c sshd_config.5]
      Allow MaxAuthTries within a Match block.  ok djm@
+   - djm@cvs.openbsd.org 2008/06/15 20:06:26
+     [channels.c channels.h session.c]
+     don't call isatty() on a pty master, instead pass a flag down to
+     channel_set_fds() indicating that te fds refer to a tty. Fixes a
+     hang on exit on Solaris (bz#1463) in portable but is actually
+     a generic bug; ok dtucker deraadt markus
 
 20080614
  - (djm) [openbsd-compat/sigact.c] Avoid NULL derefs in ancient sigaction
