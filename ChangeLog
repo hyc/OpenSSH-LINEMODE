@@ -1,5 +1,9 @@
 20080615
  - (dtucker) [configure.ac] Enable -fno-builtin-memset when using gcc.
+ - OpenBSD CVS Sync
+   - dtucker@cvs.openbsd.org 2008/06/14 15:49:48
+     [sshd.c]
+     wrap long line at 80 chars
 
 20080614
  - (djm) [openbsd-compat/sigact.c] Avoid NULL derefs in ancient sigaction
