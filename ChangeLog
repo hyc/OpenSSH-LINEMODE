@@ -1,3 +1,10 @@
+20080616
+ - (dtucker) OpenBSD CVS Sync
+   - dtucker@cvs.openbsd.org 2008/06/16 13:22:53
+     [session.c channels.c]
+     Rename the isatty argument to is_tty so we don't shadow
+     isatty(3).  ok markus@
+
 20080615
  - (dtucker) [configure.ac] Enable -fno-builtin-memset when using gcc.
  - OpenBSD CVS Sync
