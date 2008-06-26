@@ -1,3 +1,7 @@
+20080626
+ - (djm) [Makefile.in moduli.5] Include moduli(5) manpage from OpenBSD.
+   (bz#1372)
+
 20080616
  - (dtucker) OpenBSD CVS Sync
    - dtucker@cvs.openbsd.org 2008/06/16 13:22:53
