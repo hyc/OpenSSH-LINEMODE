@@ -342,6 +342,7 @@ fi
 %config %{SVIcdir}/sshd
 %{_libexecdir}/sftp-server
 %{_sbindir}/sshd
+%{_mandir}/man5/moduli.5.gz
 %{_mandir}/man5/sshd_config.5.gz
 %{_mandir}/man8/sftp-server.8.gz
 %{_mandir}/man8/sshd.8.gz
