@@ -3,6 +3,9 @@
    - dtucker@cvs.openbsd.org 2008/06/10 23:13:43
      [regress/Makefile regress/key-options.sh]
      Add regress test for key options.  ok djm@
+   - dtucker@cvs.openbsd.org 2008/06/11 23:11:40
+     [Makefile]
+     Don't run cipher-speed test by default; mistakenly enabled by me
 
 20080629
  - (djm) OpenBSD CVS Sync
