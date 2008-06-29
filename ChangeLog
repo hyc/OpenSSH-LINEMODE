@@ -28,6 +28,9 @@
      on every newly seen host even when the option was not enabled.
      prodded by deraadt@, discussions,
      help and ok markus@ djm@ dtucker@
+   - jmc@cvs.openbsd.org 2008/06/26 21:11:46
+     [ssh.1]
+     add VisualHostKey to the list of options listed in -o;
 
 20080628
  - (djm) [RFC.nroff contrib/cygwin/Makefile contrib/suse/openssh.spec]
