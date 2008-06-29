@@ -4,8 +4,13 @@
      [regress/Makefile regress/key-options.sh]
      Add regress test for key options.  ok djm@
    - dtucker@cvs.openbsd.org 2008/06/11 23:11:40
-     [Makefile]
+     [regress/Makefile]
      Don't run cipher-speed test by default; mistakenly enabled by me
+   - djm@cvs.openbsd.org 2008/06/28 13:57:25
+     [regress/Makefile regress/test-exec.sh regress/conch-ciphers.sh]
+     very basic regress test against Twisted Conch in "make interop"
+     target (conch is available in ports/devel/py-twisted/conch);
+     ok markus@
 
 20080629
  - (djm) OpenBSD CVS Sync
