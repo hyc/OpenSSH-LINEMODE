@@ -34,6 +34,10 @@
    - djm@cvs.openbsd.org 2008/06/28 07:25:07
      [PROTOCOL]
      spelling fixes
+   - djm@cvs.openbsd.org 2008/06/28 13:58:23
+     [ssh-agent.c]
+     refuse to add a key that has unknown constraints specified;
+     ok markus
 
 20080628
  - (djm) [RFC.nroff contrib/cygwin/Makefile contrib/suse/openssh.spec]
