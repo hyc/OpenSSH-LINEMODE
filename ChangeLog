@@ -11,6 +11,7 @@
      very basic regress test against Twisted Conch in "make interop"
      target (conch is available in ports/devel/py-twisted/conch);
      ok markus@
+ - (djm) [regress/Makefile] search for conch by path, like we do putty
 
 20080629
  - (djm) OpenBSD CVS Sync
