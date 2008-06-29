@@ -4,6 +4,10 @@
      [sftp.c]
      use optopt to get invalid flag, instead of return value of getopt,
      which is always '?';  ok djm@
+   - otto@cvs.openbsd.org 2008/06/25 11:13:43
+     [key.c]
+     add key length to visual fingerprint; zap magical constants;
+     ok grunk@ djm@
 
 20080628
  - (djm) [RFC.nroff contrib/cygwin/Makefile contrib/suse/openssh.spec]
