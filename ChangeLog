@@ -1,3 +1,10 @@
+20080629
+ - (djm) OpenBSD CVS Sync
+   - martynas@cvs.openbsd.org 2008/06/21 07:46:46
+     [sftp.c]
+     use optopt to get invalid flag, instead of return value of getopt,
+     which is always '?';  ok djm@
+
 20080628
  - (djm) [RFC.nroff contrib/cygwin/Makefile contrib/suse/openssh.spec]
    RFC.nroff lacks a license, remove it (it is long gone in OpenBSD).
