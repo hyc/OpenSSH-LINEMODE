@@ -38,6 +38,10 @@
      [ssh-agent.c]
      refuse to add a key that has unknown constraints specified;
      ok markus
+   - djm@cvs.openbsd.org 2008/06/28 14:05:15
+     [ssh-agent.c]
+     reset global compat flag after processing a protocol 2 signature
+     request with the legacy DSA encoding flag set; ok markus
 
 20080628
  - (djm) [RFC.nroff contrib/cygwin/Makefile contrib/suse/openssh.spec]
