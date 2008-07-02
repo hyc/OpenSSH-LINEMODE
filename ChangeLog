@@ -17,6 +17,10 @@
      [sshconnect.c]
      Check ExitOnForwardFailure if forwardings are disabled due to a failed
      host key check.  ok djm@
+   - dtucker@cvs.openbsd.org 2008/07/01 07:24:22
+     [sshconnect.c sshd.c]
+     Send CR LF during protocol banner exchanges, but only for Protocol 2 only,
+     in order to comply with RFC 4253.  bz #1443, ok djm@
 
 20080630
  - (djm) OpenBSD CVS Sync
