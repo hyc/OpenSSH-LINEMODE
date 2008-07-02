@@ -10,6 +10,9 @@
    - djm@cvs.openbsd.org 2008/06/30 12:16:02
      [nchan.c]
      only send eow@openssh.com notifications for session channels; ok! markus@
+   - djm@cvs.openbsd.org 2008/06/30 12:18:34
+     [PROTOCOL]
+     clarify that eow@openssh.com is only sent on session channels
 
 20080630
  - (djm) OpenBSD CVS Sync
