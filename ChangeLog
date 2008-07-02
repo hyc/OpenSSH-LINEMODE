@@ -7,6 +7,9 @@
      [serverloop.c]
      only pass channel requests on session channels through to the session
      channel handler, avoiding spurious log messages; ok! markus@
+   - djm@cvs.openbsd.org 2008/06/30 12:16:02
+     [nchan.c]
+     only send eow@openssh.com notifications for session channels; ok! markus@
 
 20080630
  - (djm) OpenBSD CVS Sync
