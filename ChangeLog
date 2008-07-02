@@ -3,6 +3,10 @@
     - djm@cvs.openbsd.org 2008/06/30 08:05:59
       [PROTOCOL.agent]
       typo: s/constraint_date/constraint_data/
+   - djm@cvs.openbsd.org 2008/06/30 12:15:39
+     [serverloop.c]
+     only pass channel requests on session channels through to the session
+     channel handler, avoiding spurious log messages; ok! markus@
 
 20080630
  - (djm) OpenBSD CVS Sync
