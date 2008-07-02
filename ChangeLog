@@ -13,6 +13,10 @@
    - djm@cvs.openbsd.org 2008/06/30 12:18:34
      [PROTOCOL]
      clarify that eow@openssh.com is only sent on session channels
+   - dtucker@cvs.openbsd.org 2008/07/01 07:20:52
+     [sshconnect.c]
+     Check ExitOnForwardFailure if forwardings are disabled due to a failed
+     host key check.  ok djm@
 
 20080630
  - (djm) OpenBSD CVS Sync
