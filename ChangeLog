@@ -21,6 +21,9 @@
      [sshconnect.c sshd.c]
      Send CR LF during protocol banner exchanges, but only for Protocol 2 only,
      in order to comply with RFC 4253.  bz #1443, ok djm@
+   - stevesk@cvs.openbsd.org 2008/07/01 23:12:47
+     [PROTOCOL.agent]
+     fix some typos; ok djm@
 
 20080630
  - (djm) OpenBSD CVS Sync
