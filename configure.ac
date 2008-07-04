@@ -841,6 +841,7 @@ mips-sony-bsd|mips-sony-newsos4)
 	AC_DEFINE(SETEUID_BREAKS_SETUID)
 	AC_DEFINE(BROKEN_SETREUID)
 	AC_DEFINE(BROKEN_SETREGID)
+	AC_DEFINE(BROKEN_READV_COMPARISON, 1, [Can't do comparisons on readv]))
 	;;
 
 *-*-nto-qnx*)

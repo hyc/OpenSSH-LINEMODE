@@ -2,6 +2,9 @@
  - (djm) [auth.c] Fixed test for locked account on HP/UX with shadowed
    passwords disabled. bz#1083 report & patch from senthilkumar_sen AT
    hotpop.com, w/ dtucker@
+ - (djm) [atomicio.c configure.ac] Disable poll() fallback in atomiciov for
+   Tru64. readv doesn't seem to be a comparable object there.
+   bz#1386, patch from dtucker@ ok me
 
 20080704
  - (dtucker) OpenBSD CVS Sync
