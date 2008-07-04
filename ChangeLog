@@ -1,3 +1,8 @@
+20080705
+ - (djm) [auth.c] Fixed test for locked account on HP/UX with shadowed
+   passwords disabled. bz#1083 report & patch from senthilkumar_sen AT
+   hotpop.com, w/ dtucker@
+
 20080704
  - (dtucker) OpenBSD CVS Sync
    - djm@cvs.openbsd.org 2008/07/02 13:30:34
