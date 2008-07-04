@@ -18,6 +18,8 @@
    - dtucker@cvs.openbsd.org 2008/07/04 03:47:02
      [monitor.c]
      Make debug a little clearer.  ok djm@
+ - (dtucker) [sftp-server.c] Bug #1447: fall back to racy rename if link
+   returns EXDEV.  Patch from Mike Garrison, ok djm@
 
 20080702
  - (dtucker) OpenBSD CVS Sync
