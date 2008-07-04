@@ -12,6 +12,9 @@
    - otto@cvs.openbsd.org 2008/07/03 21:46:58
      [auth2-pubkey.c]
      avoid nasty double free; ok dtucker@ djm@
+   - djm@cvs.openbsd.org 2008/07/04 03:44:59
+     [servconf.c groupaccess.h groupaccess.c]
+     support negation of groups in "Match group" block (bz#1315); ok dtucker@
 
 20080702
  - (dtucker) OpenBSD CVS Sync
