@@ -9,6 +9,9 @@
      enabled, delay the fork until after replies for any -R forwards have
      been seen. Allows for robust detection of -R forward failure when
      using -f (similar to bz#92); ok dtucker@
+   - otto@cvs.openbsd.org 2008/07/03 21:46:58
+     [auth2-pubkey.c]
+     avoid nasty double free; ok dtucker@ djm@
 
 20080702
  - (dtucker) OpenBSD CVS Sync
