@@ -9,6 +9,14 @@
    - djm@cvs.openbsd.org 2008/07/04 23:08:25
      [packet.c]
      handle EINTR in packet_write_poll()l ok dtucker@
+   - djm@cvs.openbsd.org 2008/07/04 23:30:16
+     [auth1.c auth2.c]
+     Make protocol 1 MaxAuthTries logic match protocol 2's.
+     Do not treat the first protocol 2 authentication attempt as
+     a failure IFF it is for method "none".
+     Makes MaxAuthTries' user-visible behaviour identical for
+     protocol 1 vs 2.
+     ok dtucker@
 
 20080704
  - (dtucker) OpenBSD CVS Sync
