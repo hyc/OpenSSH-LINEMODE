@@ -396,6 +396,7 @@ tests interop-tests:	$(TARGETS)
 	TEST_SSH_SFTPSERVER="$${BUILDDIR}/sftp-server"; \
 	TEST_SSH_PLINK="plink"; \
 	TEST_SSH_PUTTYGEN="puttygen"; \
+	TEST_SSH_CONCH="conch"; \
 	TEST_SSH_IPV6="@TEST_SSH_IPV6@" ; \
 	cd $(srcdir)/regress || exit $$?; \
 	$(MAKE) \
@@ -415,6 +416,7 @@ tests interop-tests:	$(TARGETS)
 		TEST_SSH_SFTPSERVER="$${TEST_SSH_SFTPSERVER}" \
 		TEST_SSH_PLINK="$${TEST_SSH_PLINK}" \
 		TEST_SSH_PUTTYGEN="$${TEST_SSH_PUTTYGEN}" \
+		TEST_SSH_CONCH="$${TEST_SSH_CONCH}" \
 		TEST_SSH_IPV6="@TEST_SSH_IPV6@" \
 		EXEEXT="$(EXEEXT)" \
 		$@
