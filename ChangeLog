@@ -5,6 +5,10 @@
  - (djm) [atomicio.c configure.ac] Disable poll() fallback in atomiciov for
    Tru64. readv doesn't seem to be a comparable object there.
    bz#1386, patch from dtucker@ ok me
+ - (djm) OpenBSD CVS Sync
+   - djm@cvs.openbsd.org 2008/07/04 23:08:25
+     [packet.c]
+     handle EINTR in packet_write_poll()l ok dtucker@
 
 20080704
  - (dtucker) OpenBSD CVS Sync
