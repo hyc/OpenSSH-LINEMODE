@@ -3,6 +3,12 @@
    - djm@cvs.openbsd.org 2008/07/02 13:30:34
      [auth2.c]
      really really remove the freebie "none" auth try for protocol 2
+   - djm@cvs.openbsd.org 2008/07/02 13:47:39
+     [ssh.1 ssh.c]
+     When forking after authentication ("ssh -f") with ExitOnForwardFailure
+     enabled, delay the fork until after replies for any -R forwards have
+     been seen. Allows for robust detection of -R forward failure when
+     using -f (similar to bz#92); ok dtucker@
 
 20080702
  - (dtucker) OpenBSD CVS Sync
