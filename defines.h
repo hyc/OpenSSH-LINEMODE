@@ -734,4 +734,8 @@ struct winsize {
 # endif
 #endif
 
+#ifndef EWOULDBLOCK
+# define EWOULDBLOCK EAGAIN
+#endif
+
 #endif /* _DEFINES_H */
