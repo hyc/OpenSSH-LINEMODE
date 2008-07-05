@@ -19,6 +19,9 @@
      Makes MaxAuthTries' user-visible behaviour identical for
      protocol 1 vs 2.
      ok dtucker@
+   - djm@cvs.openbsd.org 2008/07/05 05:16:01
+     [PROTOCOL]
+     grammar
 
 20080704
  - (dtucker) OpenBSD CVS Sync
