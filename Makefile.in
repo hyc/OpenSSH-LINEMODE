@@ -419,7 +419,7 @@ tests interop-tests:	$(TARGETS)
 		TEST_SSH_CONCH="$${TEST_SSH_CONCH}" \
 		TEST_SSH_IPV6="@TEST_SSH_IPV6@" \
 		EXEEXT="$(EXEEXT)" \
-		$@
+		$@ && echo all tests passed
 
 compat-tests: $(LIBCOMPAT)
 	(cd openbsd-compat/regress && $(MAKE))
