@@ -1,5 +1,8 @@
 20080709
  - (djm) [Makefile.in] Print "all tests passed" when all regress tests pass
+ - (djm) [auth1.c] Fix format string vulnerability in protocol 1 PAM
+   account check failure path. The vulnerable format buffer is supplied
+   from PAM and should not contain attacker-supplied data.
 
 20080705
  - (djm) [auth.c] Fixed test for locked account on HP/UX with shadowed
