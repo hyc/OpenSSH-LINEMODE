@@ -4,6 +4,7 @@
    account check failure path. The vulnerable format buffer is supplied
    from PAM and should not contain attacker-supplied data.
  - (djm) [auth.c] Missing unistd.h for close()
+ - (djm) [configure.ac] Add -Wformat-security to CFLAGS for gcc 3.x and 4.x
 
 20080705
  - (djm) [auth.c] Fixed test for locked account on HP/UX with shadowed

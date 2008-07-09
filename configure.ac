@@ -107,8 +107,8 @@ if test "$GCC" = "yes" || test "$GCC" = "egcs"; then
 		     no_attrib_nonnull=1
 		     ;;
 		2.*) no_attrib_nonnull=1 ;;
-		3.*) CFLAGS="$CFLAGS -Wsign-compare" ;;
-		4.*) CFLAGS="$CFLAGS -Wsign-compare -Wno-pointer-sign" ;;
+		3.*) CFLAGS="$CFLAGS -Wsign-compare -Wformat-security" ;;
+		4.*) CFLAGS="$CFLAGS -Wsign-compare -Wno-pointer-sign -Wformat-security" ;;
 		*) ;;
 	esac
 
