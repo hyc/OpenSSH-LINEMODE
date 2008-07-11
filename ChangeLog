@@ -9,6 +9,9 @@
      /*NOTREACHED*/ for lint warning:
        warning: function key_equal falls off bottom without returning value
      ok djm@
+   - markus@cvs.openbsd.org 2008/07/10 18:05:58
+     [channels.c]
+     missing bzero; from mickey; ok djm@
 
 20080709
  - (djm) [Makefile.in] Print "all tests passed" when all regress tests pass
