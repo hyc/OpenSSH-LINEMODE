@@ -4,6 +4,10 @@
      [channels.c]
      unbreak; move clearing of cctx struct to before first use
      reported by dkrause@
+   - djm@cvs.openbsd.org 2008/07/12 05:33:41
+     [scp.1]
+     better description for -i flag:
+     s/RSA authentication/public key authentication/
 
 20080711
  - (djm) OpenBSD CVS Sync
