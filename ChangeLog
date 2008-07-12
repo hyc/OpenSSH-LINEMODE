@@ -1,3 +1,10 @@
+20080712
+ - (djm) OpenBSD CVS Sync
+   - djm@cvs.openbsd.org 2008/07/12 04:52:50
+     [channels.c]
+     unbreak; move clearing of cctx struct to before first use
+     reported by dkrause@
+
 20080711
  - (djm) OpenBSD CVS Sync
    - stevesk@cvs.openbsd.org 2008/07/07 00:31:41
