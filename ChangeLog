@@ -6,6 +6,10 @@
      -v is also specified, making it consistent with the manual and other
      uses of -l.
      ok grunk@
+   - djm@cvs.openbsd.org 2008/07/13 22:13:07
+     [channels.c]
+     use struct sockaddr_storage instead of struct sockaddr for accept(2)
+     address argument. from visibilis AT yahoo.com in bz#1485; ok markus@
 
 20080712
  - (djm) OpenBSD CVS Sync
