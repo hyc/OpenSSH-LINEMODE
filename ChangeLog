@@ -15,6 +15,10 @@
      increase number of piplelined requests so they properly fill the
      (recently increased) channel window. prompted by rapier AT psc.edu;
      ok markus@
+   - djm@cvs.openbsd.org 2008/07/14 01:55:56
+     [sftp-server.8]
+     mention requirement for /dev/log inside chroot when using sftp-server
+     with ChrootDirectory
  - (djm) [openbsd-compat/bindresvport.c] Rename variables s/sin/in/ to
    avoid clash with sin(3) function; reported by
    cristian.ionescu-idbohrn AT axis.com
