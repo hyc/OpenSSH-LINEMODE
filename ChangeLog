@@ -26,6 +26,11 @@
    prototype; reported by cristian.ionescu-idbohrn AT axis.com
  - (djm) [umac.c] Rename variable s/buffer_ptr/bufp/ to avoid clash;
    reported by cristian.ionescu-idbohrn AT axis.com
+ - (djm) [contrib/cygwin/Makefile contrib/cygwin/ssh-host-config]
+   [contrib/cygwin/ssh-user-config contrib/cygwin/sshd-inetd]
+   Revamped and simplified Cygwin ssh-host-config script that uses
+   unified csih configuration tool. Requires recent Cygwin.
+   Patch from vinschen AT redhat.com
 
 20080712
  - (djm) OpenBSD CVS Sync
