@@ -10,6 +10,11 @@
      [channels.c]
      use struct sockaddr_storage instead of struct sockaddr for accept(2)
      address argument. from visibilis AT yahoo.com in bz#1485; ok markus@
+   - djm@cvs.openbsd.org 2008/07/13 22:16:03
+     [sftp.c]
+     increase number of piplelined requests so they properly fill the
+     (recently increased) channel window. prompted by rapier AT psc.edu;
+     ok markus@
 
 20080712
  - (djm) OpenBSD CVS Sync
