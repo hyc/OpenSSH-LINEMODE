@@ -129,6 +129,9 @@ struct sockaddr_in6 {
 #ifndef EAI_SYSTEM
 # define EAI_SYSTEM	(INT_MAX - 4)
 #endif
+#ifndef EAI_FAMILY
+# define EAI_FAMILY	(INT_MAX - 5)
+#endif
 
 #ifndef HAVE_STRUCT_ADDRINFO
 struct addrinfo {

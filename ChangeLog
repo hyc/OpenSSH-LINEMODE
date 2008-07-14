@@ -42,6 +42,9 @@
      [scp.1]
      better description for -i flag:
      s/RSA authentication/public key authentication/
+ - (djm) [openbsd-compat/fake-rfc2553.c openbsd-compat/fake-rfc2553.h]
+   return EAI_FAMILY when trying to lookup unsupported address family;
+   from vinschen AT redhat.com
 
 20080711
  - (djm) OpenBSD CVS Sync
