@@ -18,6 +18,8 @@
  - (djm) [openbsd-compat/bindresvport.c] Rename variables s/sin/in/ to
    avoid clash with sin(3) function; reported by
    cristian.ionescu-idbohrn AT axis.com
+ - (djm) [openbsd-compat/rresvport.c] Add unistd.h for missing close()
+   prototype; reported by cristian.ionescu-idbohrn AT axis.com
 
 20080712
  - (djm) OpenBSD CVS Sync
