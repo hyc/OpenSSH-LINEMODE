@@ -8,6 +8,9 @@
      [clientloop.c]
      rename variable first_gc -> last_gc (since it is actually the last
      in the list).
+   - djm@cvs.openbsd.org 2008/07/16 11:52:19
+     [channels.c]
+     this loop index should be automatic, not static
 
 20080714
  - (djm) OpenBSD CVS Sync
