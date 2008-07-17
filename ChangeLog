@@ -1,3 +1,9 @@
+20080717
+ - (djm) OpenBSD CVS Sync
+   - djm@cvs.openbsd.org 2008/07/17 08:48:00
+     [sshconnect2.c]
+     strnvis preauth banner; pointed out by mpf@ ok markus@
+
 20080716
  - OpenBSD CVS Sync
    - djm@cvs.openbsd.org 2008/07/15 02:23:14
