@@ -3,6 +3,10 @@
    - djm@cvs.openbsd.org 2008/07/17 08:48:00
      [sshconnect2.c]
      strnvis preauth banner; pointed out by mpf@ ok markus@
+   - djm@cvs.openbsd.org 2008/07/17 08:51:07
+     [auth2-hostbased.c]
+     strip trailing '.' from hostname when HostbasedUsesNameFromPacketOnly=yes
+     report and patch from res AT qoxp.net (bz#1200); ok markus@
 
 20080716
  - OpenBSD CVS Sync
