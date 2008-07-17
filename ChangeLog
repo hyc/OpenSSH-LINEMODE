@@ -7,6 +7,9 @@
      [auth2-hostbased.c]
      strip trailing '.' from hostname when HostbasedUsesNameFromPacketOnly=yes
      report and patch from res AT qoxp.net (bz#1200); ok markus@
+ - (dtucker) [openbsd-compat/bsd-cygwin_util.c]  Remove long-unneeded compat
+   code, replace with equivalent cygwin library call.  Patch from vinschen
+   at redhat.comi, ok djm@.
 
 20080716
  - OpenBSD CVS Sync
