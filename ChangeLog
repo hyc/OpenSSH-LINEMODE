@@ -1,3 +1,9 @@
+20080721
+ - (djm) OpenBSD CVS Sync
+   - jmc@cvs.openbsd.org 2008/07/18 22:51:01
+     [sftp-server.8]
+     no need for .Pp before or after .Sh;
+
 20080717
  - (djm) OpenBSD CVS Sync
    - djm@cvs.openbsd.org 2008/07/17 08:48:00
