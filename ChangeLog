@@ -8,6 +8,7 @@
      openssh-5.1
  - (djm) [README contrib/caldera/openssh.spec contrib/redhat/openssh.spec]
    [contrib/suse/openssh.spec] Update version number in README and RPM specs
+ - (djm) Release OpenSSH-5.1
 
 20080717
  - (djm) OpenBSD CVS Sync
