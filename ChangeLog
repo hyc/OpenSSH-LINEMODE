@@ -1,3 +1,8 @@
+20080830
+ - (dtucker) [openbsd-compat/bsd-poll.c] correctly check for number of FDs
+   larger than FD_SETSIZE (OpenSSH only ever uses poll with one fd).  Patch
+   from Nicholas Marriott.
+
 20080721
  - (djm) OpenBSD CVS Sync
    - djm@cvs.openbsd.org 2008/07/23 07:36:55
