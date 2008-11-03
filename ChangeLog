@@ -109,6 +109,10 @@
  - (djm) [contrib/caldera/ssh-host-keygen contrib/suse/rc.sshd]
    Make example scripts generate keys with default sizes rather than fixed,
    non-default 1024 bits; patch from imorgan AT nas.nasa.gov
+ - (djm) [contrib/sshd.pam.generic contrib/caldera/sshd.pam]
+   [contrib/redhat/sshd.pam] Move pam_nologin to account group from
+   incorrect auth group in example files;
+   patch from imorgan AT nas.nasa.gov
 
 20080906
  - (dtucker) [config.guess config.sub] Update to latest versions from
