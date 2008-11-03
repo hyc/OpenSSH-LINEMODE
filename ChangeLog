@@ -18,6 +18,10 @@
    - krw@cvs.openbsd.org 2008/08/02 04:29:51
      [ssh_config.5]
      whitepsace -> whitespace. From Matthew Clarke via bugs@.
+   - djm@cvs.openbsd.org 2008/08/21 04:09:57
+     [session.c]
+     allow ForceCommand internal-sftp with arguments. based on patch from
+     michael.barabanov AT gmail.com; ok markus@
 
 20080906
  - (dtucker) [config.guess config.sub] Update to latest versions from
