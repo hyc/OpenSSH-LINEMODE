@@ -7,6 +7,10 @@
    - grunk@cvs.openbsd.org 2008/07/25 06:56:35
      [ssh_config]
      Add VisualHostKey to example file, ok djm@
+   - grunk@cvs.openbsd.org 2008/07/25 07:05:16
+     [key.c]
+     In random art visualization, make sure to use the end marker only at the
+     end.  Initial diff by Dirk Loss, tweaks and ok djm@
 
 20080906
  - (dtucker) [config.guess config.sub] Update to latest versions from
