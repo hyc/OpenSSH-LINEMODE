@@ -34,6 +34,11 @@
    - millert@cvs.openbsd.org 2008/10/02 14:39:35
      [session.c]
      Convert an unchecked strdup to xstrdup.  OK deraadt@
+  - jmc@cvs.openbsd.org 2008/10/03 13:08:12
+     [sshd.8]
+     do not give an example of how to chmod files: we can presume the user
+     knows that. removes an ambiguity in the permission of authorized_keys;
+     ok deraadt
 
 20080906
  - (dtucker) [config.guess config.sub] Update to latest versions from
