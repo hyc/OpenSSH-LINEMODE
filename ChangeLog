@@ -11,6 +11,10 @@
      [key.c]
      In random art visualization, make sure to use the end marker only at the
      end.  Initial diff by Dirk Loss, tweaks and ok djm@
+  - markus@cvs.openbsd.org 2008/07/31 14:48:28
+     [sshconnect2.c]
+     don't allocate space for empty banners; report t8m at centrum.cz;
+     ok deraadt
 
 20080906
  - (dtucker) [config.guess config.sub] Update to latest versions from
