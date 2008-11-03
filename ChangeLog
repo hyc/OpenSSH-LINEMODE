@@ -22,6 +22,11 @@
      [session.c]
      allow ForceCommand internal-sftp with arguments. based on patch from
      michael.barabanov AT gmail.com; ok markus@
+   - djm@cvs.openbsd.org 2008/09/06 12:24:13
+     [kex.c]
+     OpenSSL 0.9.8h supplies a real EVP_sha256 so we do not need our
+     replacement anymore
+     (ID sync only for portable - we still need this)
 
 20080906
  - (dtucker) [config.guess config.sub] Update to latest versions from
