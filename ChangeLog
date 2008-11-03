@@ -100,6 +100,9 @@
      [ttymodes.c]
      protocol 2 tty modes support is now 7.5 years old so remove these
      debug3()s; ok deraadt@
+   - stevesk@cvs.openbsd.org 2008/11/03 01:07:02
+     [readconf.c]
+     remove valueless comment
 
 20080906
  - (dtucker) [config.guess config.sub] Update to latest versions from
