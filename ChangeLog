@@ -31,6 +31,9 @@
      [compat.c compat.h nchan.c ssh.c]
      only send eow and no-more-sessions requests to openssh 5 and newer;
      fixes interop problems with broken ssh v2 implementations; ok djm@
+   - millert@cvs.openbsd.org 2008/10/02 14:39:35
+     [session.c]
+     Convert an unchecked strdup to xstrdup.  OK deraadt@
 
 20080906
  - (dtucker) [config.guess config.sub] Update to latest versions from
