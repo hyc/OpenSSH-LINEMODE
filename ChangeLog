@@ -86,6 +86,9 @@
      [sshconnect2.c]
      sprinkle ARGSUSED on dispatch handlers
      nuke stale unusued prototype
+   - stevesk@cvs.openbsd.org 2008/11/01 06:43:33
+     [channels.c]
+     fix some typos in log messages; ok djm@
 
 20080906
  - (dtucker) [config.guess config.sub] Update to latest versions from
