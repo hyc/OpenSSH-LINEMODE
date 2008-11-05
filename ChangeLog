@@ -36,6 +36,9 @@
      space was not malloc'd in that case.
      
      ok djm@
+   - stevesk@cvs.openbsd.org 2008/11/05 03:23:09
+     [clientloop.c ssh.1]
+     add dynamic forward escape command line; ok djm@
 
 20081103
  - OpenBSD CVS Sync
