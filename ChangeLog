@@ -3,6 +3,10 @@
    - djm@cvs.openbsd.org 2008/11/03 08:59:41
      [servconf.c]
      include MaxSessions in sshd -T output; patch from imorgan AT nas.nasa.gov
+   - djm@cvs.openbsd.org 2008/11/04 07:58:09
+     [auth.c]
+     need unistd.h for close() prototype
+     (ID sync only)
 
 20081103
  - OpenBSD CVS Sync
