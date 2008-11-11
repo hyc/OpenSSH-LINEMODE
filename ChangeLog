@@ -26,6 +26,9 @@
      [channels.c]
      for sshd -T print 'permitopen any' vs. 'permitopen' for case of no
      permitopen's; ok and input dtucker@
+   - djm@cvs.openbsd.org 2008/11/10 02:06:35
+     [regress/putty-ciphers.sh]
+     PuTTY supports AES CTR modes, so interop test against them too
 
 20081105
  - OpenBSD CVS Sync
