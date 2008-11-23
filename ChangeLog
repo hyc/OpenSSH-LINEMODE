@@ -1,7 +1,7 @@
 20081123
  - (dtucker) [monitor_fdpass.c] Reduce diff vs OpenBSD by moving some
     declarations, removing an unnecessary union member and adding whitespace.
-    ok djm some time ago.
+    cmsgbuf.tmp thing spotted by des at des no, ok djm some time ago.
 
 20081118
  - (tim) [addrmatch.c configure.ac] Some platforms do not have sin6_scope_id
