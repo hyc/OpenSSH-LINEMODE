@@ -1,3 +1,8 @@
+20081123
+ - (dtucker) [monitor_fdpass.c] Reduce diff vs OpenBSD by moving some
+    declarations, removing an unnecessary union member and adding whitespace.
+    ok djm some time ago.
+
 20081118
  - (tim) [addrmatch.c configure.ac] Some platforms do not have sin6_scope_id
    member of sockaddr_in6. Also reported in Bug 1491 by David Leonard. OK and
