@@ -8,6 +8,9 @@
      packet_disconnect() on padding error, too.  should reduce the success
      probability for the CPNI-957037 Plaintext Recovery Attack to 2^-18
      ok djm@
+   - dtucker@cvs.openbsd.org 2008/11/30 11:59:26
+     [monitor_fdpass.c]
+     Retry sendmsg/recvmsg on EAGAIN and EINTR; ok djm@
 
 20081123
  - (dtucker) [monitor_fdpass.c] Reduce diff vs OpenBSD by moving some
