@@ -1,3 +1,8 @@
+20081201
+ - (dtucker) [contrib/cygwin/{Makefile,ssh-host-config}]  Add new doc files
+   and tweak the is-sshd-running check in ssh-host-config.  Patch from
+   vinschen at redhat com.
+
 20081123
  - (dtucker) [monitor_fdpass.c] Reduce diff vs OpenBSD by moving some
     declarations, removing an unnecessary union member and adding whitespace.
