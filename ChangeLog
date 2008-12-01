@@ -2,6 +2,12 @@
  - (dtucker) [contrib/cygwin/{Makefile,ssh-host-config}]  Add new doc files
    and tweak the is-sshd-running check in ssh-host-config.  Patch from
    vinschen at redhat com.
+ - (dtucker) OpenBSD CVS Sync
+   - markus@cvs.openbsd.org 2008/11/21 15:47:38
+     [packet.c]
+     packet_disconnect() on padding error, too.  should reduce the success
+     probability for the CPNI-957037 Plaintext Recovery Attack to 2^-18
+     ok djm@
 
 20081123
  - (dtucker) [monitor_fdpass.c] Reduce diff vs OpenBSD by moving some
