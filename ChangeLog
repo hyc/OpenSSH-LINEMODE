@@ -1,3 +1,8 @@
+20081208
+ - (djm) [configure.ac] bz#1538: better test for ProPolice/SSP: actually
+   use some stack in main().
+   Report and suggested fix from vapier AT gentoo.org
+
 20081201
  - (dtucker) [contrib/cygwin/{Makefile,ssh-host-config}]  Add new doc files
    and tweak the is-sshd-running check in ssh-host-config.  Patch from
