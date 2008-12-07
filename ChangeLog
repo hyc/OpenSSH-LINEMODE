@@ -2,6 +2,13 @@
  - (djm) [configure.ac] bz#1538: better test for ProPolice/SSP: actually
    use some stack in main().
    Report and suggested fix from vapier AT gentoo.org
+ - (djm) OpenBSD CVS Sync
+   - markus@cvs.openbsd.org 2008/12/02 19:01:07
+     [clientloop.c]
+     we have to use the recipient's channel number (RFC 4254) for
+     SSH2_MSG_CHANNEL_SUCCESS/SSH2_MSG_CHANNEL_FAILURE messages,
+     otherwise we trigger 'Non-public channel' error messages on sshd
+     systems with clientkeepalive enabled; noticed by sturm; ok djm;
 
 20081201
  - (dtucker) [contrib/cygwin/{Makefile,ssh-host-config}]  Add new doc files
