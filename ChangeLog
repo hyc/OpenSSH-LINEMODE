@@ -1,3 +1,13 @@
+20081209
+ - (djm) OpenBSD CVS Sync
+   - djm@cvs.openbsd.org 2008/12/09 02:38:18
+     [clientloop.c]
+     The ~C escape handler does not work correctly for multiplexed sessions -
+     it opens a commandline on the master session, instead of on the slave
+     that requested it. Disable it on slave sessions until such time as it
+     is fixed; bz#1543 report from Adrian Bridgett via Colin Watson
+     ok markus@
+
 20081208
  - (djm) [configure.ac] bz#1538: better test for ProPolice/SSP: actually
    use some stack in main().
