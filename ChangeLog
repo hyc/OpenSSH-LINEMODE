@@ -12,6 +12,12 @@
      Deal correctly with failures in remote stat() operation in sftp,
      correcting fail-on-error behaviour in batchmode. bz#1541 report and
      fix from anedvedicky AT gmail.com; ok markus@
+   - djm@cvs.openbsd.org 2008/12/09 02:58:16
+     [readconf.c]
+     don't leave junk (free'd) pointers around in Forward *fwd argument on
+     failure; avoids double-free in ~C -L handler when given an invalid
+     forwarding specification; bz#1539 report from adejong AT debian.org
+     via Colin Watson; ok markus@ dtucker@
 
 20081208
  - (djm) [configure.ac] bz#1538: better test for ProPolice/SSP: actually
