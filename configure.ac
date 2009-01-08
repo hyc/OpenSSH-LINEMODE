@@ -728,7 +728,6 @@ mips-sony-bsd|mips-sony-newsos4)
 	;;
 # UnixWare 7.x, OpenUNIX 8
 *-*-sysv5*)
-	check_for_libcrypt_later=1
 	AC_DEFINE(UNIXWARE_LONG_PASSWORDS, 1, [Support passwords > 8 chars])
 	AC_DEFINE(USE_PIPES)
 	AC_DEFINE(SETEUID_BREAKS_SETUID)
@@ -748,6 +747,7 @@ mips-sony-bsd|mips-sony-newsos4)
 			],,)
 		;;
 	*)	AC_DEFINE(LOCKED_PASSWD_STRING, "*LK*")
+		check_for_libcrypt_later=1
 		;;
 	esac
 	;;
