@@ -1,4 +1,8 @@
 20090107
+ - (djm) [uidswap.c] bz#1412: Support >16 supplemental groups in OS X.
+   Patch based on one from vgiffin AT apple.com; ok dtucker@
+
+20090107
  - (tim) [configure.ac defines.h openbsd-compat/port-uw.c
    openbsd-compat/xcrypt.c] Add SECUREWARE support to OpenServer 6 SVR5 ABI.
    OK djm@ dtucker@
