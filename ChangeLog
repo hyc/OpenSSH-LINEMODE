@@ -80,6 +80,12 @@
    - naddy@cvs.openbsd.org 2009/01/24 17:10:22
      [ssh_config.5 sshd_config.5]
      sync list of preferred ciphers; ok djm@
+   - markus@cvs.openbsd.org 2009/01/26 09:58:15
+     [cipher.c cipher.h packet.c]
+     Work around the CPNI-957037 Plaintext Recovery Attack by always
+     reading 256K of data on packet size or HMAC errors (in CBC mode only).
+     Help, feedback and ok djm@
+     Feedback from Martin Albrecht and Paterson Kenny
 
 20090107
  - (djm) [uidswap.c] bz#1412: Support >16 supplemental groups in OS X.
