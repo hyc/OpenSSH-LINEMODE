@@ -8,6 +8,12 @@
    - djm@cvs.openbsd.org 2008/12/09 04:32:22
      [auth2-chall.c]
      replace by-hand string building with xasprinf(); ok deraadt@
+   - sobrado@cvs.openbsd.org 2008/12/09 15:35:00
+     [sftp.1 sftp.c]
+     update for the synopses displayed by the 'help' command, there are a
+     few missing flags; add 'bye' to the output of 'help'; sorting and spacing.
+     jmc@ suggested replacing .Oo/.Oc with a single .Op macro.
+     ok jmc@
 
 20090107
  - (djm) [uidswap.c] bz#1412: Support >16 supplemental groups in OS X.
