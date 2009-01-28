@@ -31,6 +31,11 @@
      [sshd_config.5]
      add AllowAgentForwarding to available Match keywords list
      ok djm
+   - djm@cvs.openbsd.org 2009/01/01 21:14:35
+     [channels.c]
+     call channel destroy callbacks on receipt of open failure messages.
+     fixes client hangs when connecting to a server that has MaxSessions=0
+     set spotted by imorgan AT nas.nasa.gov; ok markus@
 
 20090107
  - (djm) [uidswap.c] bz#1412: Support >16 supplemental groups in OS X.
