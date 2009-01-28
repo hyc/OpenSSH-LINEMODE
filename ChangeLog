@@ -24,6 +24,9 @@
      [ssh-keyscan.1]
      fix example, default key type is rsa for 3+ years; from
      frederic.perrin@resel.fr
+   - stevesk@cvs.openbsd.org 2008/12/29 02:23:26
+     [pathnames.h]
+     no need to escape single quotes in comments
 
 20090107
  - (djm) [uidswap.c] bz#1412: Support >16 supplemental groups in OS X.
