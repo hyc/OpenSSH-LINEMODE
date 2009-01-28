@@ -14,6 +14,9 @@
      few missing flags; add 'bye' to the output of 'help'; sorting and spacing.
      jmc@ suggested replacing .Oo/.Oc with a single .Op macro.
      ok jmc@
+   - stevesk@cvs.openbsd.org 2008/12/09 22:37:33
+     [clientloop.c]
+     fix typo in error message
 
 20090107
  - (djm) [uidswap.c] bz#1412: Support >16 supplemental groups in OS X.
