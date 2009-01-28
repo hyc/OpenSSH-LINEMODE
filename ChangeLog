@@ -42,6 +42,10 @@
      values and not the sanity checked versions that we acutally use;
      bz#1540 reported by john.smith AT arrows.demon.co.uk
      ok markus@
+   - djm@cvs.openbsd.org 2009/01/14 01:38:06
+     [channels.c]
+     support SOCKS4A protocol, from dwmw2 AT infradead.org via bz#1482;
+     "looks ok" markus@
 
 20090107
  - (djm) [uidswap.c] bz#1412: Support >16 supplemental groups in OS X.
