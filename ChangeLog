@@ -70,6 +70,9 @@
      which in turn required some things to be converted from u_short => int
      make use of int vs. u_short consistent in some other places too
      feedback & ok markus@
+   - djm@cvs.openbsd.org 2009/01/22 10:09:16
+     [auth-options.c]
+     another chunk of a2port() diff that got away. wtfdjm??
 
 20090107
  - (djm) [uidswap.c] bz#1412: Support >16 supplemental groups in OS X.
