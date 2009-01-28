@@ -73,6 +73,10 @@
    - djm@cvs.openbsd.org 2009/01/22 10:09:16
      [auth-options.c]
      another chunk of a2port() diff that got away. wtfdjm??
+   - djm@cvs.openbsd.org 2009/01/23 07:58:11
+     [myproposal.h]
+     prefer CTR modes and revised arcfour (i.e w/ discard) modes to CBC
+     modes; ok markus@
 
 20090107
  - (djm) [uidswap.c] bz#1412: Support >16 supplemental groups in OS X.
