@@ -77,6 +77,9 @@
      [myproposal.h]
      prefer CTR modes and revised arcfour (i.e w/ discard) modes to CBC
      modes; ok markus@
+   - naddy@cvs.openbsd.org 2009/01/24 17:10:22
+     [ssh_config.5 sshd_config.5]
+     sync list of preferred ciphers; ok djm@
 
 20090107
  - (djm) [uidswap.c] bz#1412: Support >16 supplemental groups in OS X.
