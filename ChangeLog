@@ -53,6 +53,10 @@
         so move the comment.
      3) reorder so like options are together
      ok djm@
+   - djm@cvs.openbsd.org 2009/01/22 09:46:01
+     [channels.c channels.h session.c]
+     make Channel->path an allocated string, saving a few bytes here and
+     there and fixing bz#1380 in the process; ok markus@
 
 20090107
  - (djm) [uidswap.c] bz#1412: Support >16 supplemental groups in OS X.
