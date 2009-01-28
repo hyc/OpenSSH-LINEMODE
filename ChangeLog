@@ -17,6 +17,9 @@
    - stevesk@cvs.openbsd.org 2008/12/09 22:37:33
      [clientloop.c]
      fix typo in error message
+   - stevesk@cvs.openbsd.org 2008/12/10 03:55:20
+     [addrmatch.c]
+     o cannot be NULL here but use xfree() to be consistent; ok djm@
 
 20090107
  - (djm) [uidswap.c] bz#1412: Support >16 supplemental groups in OS X.
