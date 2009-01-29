@@ -1,3 +1,9 @@
+20090129
+ - (tim) [contrib/cygwin/ssh-host-config] Patch from Corinna Vinschen.
+   If the CYGWIN environment variable is empty, the installer script
+   should not install the service with an empty CYGWIN variable, but
+   rather without setting CYGWNI entirely.
+
 20090128
  - (tim) [contrib/cygwin/ssh-host-config] Patch from Corinna Vinschen.
    Changes to work on Cygwin 1.5.x as well as on the new Cygwin 1.7.x.
