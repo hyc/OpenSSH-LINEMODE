@@ -3,6 +3,7 @@
    If the CYGWIN environment variable is empty, the installer script
    should not install the service with an empty CYGWIN variable, but
    rather without setting CYGWNI entirely.
+ - (tim) [contrib/cygwin/ssh-host-config] Whitespace cleanup. No code changes.
 
 20090128
  - (tim) [contrib/cygwin/ssh-host-config] Patch from Corinna Vinschen.
