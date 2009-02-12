@@ -1,3 +1,7 @@
+20090212
+ - (djm) [sshpty.c] bz#1419: OSX uses cloning ptys that automagically
+   set ownership and modes, so avoid explicitly setting them
+
 20090201
  - (dtucker) [defines.h sshconnect.c] INET6_ADDRSTRLEN is now needed in
    channels.c too, so move the definition for non-IP6 platforms to defines.h
