@@ -477,6 +477,8 @@ main() { if (NSVersionOfRunTimeLibrary("System") >= (60 << 16))
 	AC_CHECK_DECL(AU_IPv4, [], 
 	    AC_DEFINE(AU_IPv4, 0, [System only supports IPv4 audit records])
 	    [#include <bsm/audit.h>]
+	AC_DEFINE(LASTLOG_WRITE_PUTUTXLINE, 1,
+	    [Define if pututxline updates lastlog too])
 	)
 	;;
 *-*-dragonfly*)
@@ -1508,6 +1510,8 @@ AC_CHECK_FUNCS(utmpname)
 dnl    Checks for utmpx functions
 AC_CHECK_FUNCS(endutxent getutxent getutxid getutxline pututxline )
 AC_CHECK_FUNCS(setutxent utmpxname)
+dnl    Checks for lastlog functions
+AC_CHECK_FUNCS(getlastlogxbyname)
 
 AC_CHECK_FUNC(daemon,
 	[AC_DEFINE(HAVE_DAEMON, 1, [Define if your libraries define daemon()])],
