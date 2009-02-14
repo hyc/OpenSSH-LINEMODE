@@ -14,6 +14,10 @@
      [serverloop.c]
      tighten check for -R0:... forwarding: only allow dynamic allocation
      if want_reply is set in the packet
+   - djm@cvs.openbsd.org 2009/02/12 03:26:22
+     [monitor.c]
+     some paranoia: check that the serialised key is really KEY_RSA before
+     diddling its internals
 
 20090212
  - (djm) [sshpty.c] bz#1419: OSX uses cloning ptys that automagically
