@@ -10,6 +10,10 @@
      support remote port forwarding with a zero listen port (-R0:...) to
      dyamically allocate a listen port at runtime (this is actually
      specified in rfc4254); bz#1003 ok markus@
+   - djm@cvs.openbsd.org 2009/02/12 03:16:01
+     [serverloop.c]
+     tighten check for -R0:... forwarding: only allow dynamic allocation
+     if want_reply is set in the packet
 
 20090212
  - (djm) [sshpty.c] bz#1419: OSX uses cloning ptys that automagically
