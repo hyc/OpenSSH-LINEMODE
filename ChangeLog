@@ -33,6 +33,10 @@
    - markus@cvs.openbsd.org 2009/02/13 11:50:21
      [packet.c]
      check for enc !=NULL in packet_start_discard
+   - djm@cvs.openbsd.org 2009/02/14 06:35:49
+     [PROTOCOL]
+     mention that eow and no-more-sessions extensions are sent only to
+     OpenSSH peers
 
 20090212
  - (djm) [sshpty.c] bz#1419: OSX uses cloning ptys that automagically
