@@ -24,6 +24,9 @@
    - djm@cvs.openbsd.org 2009/02/12 03:44:25
      [ssh.1]
      consistency: Dq => Ql
+   - djm@cvs.openbsd.org 2009/02/12 03:46:17
+     [ssh_config.5]
+     document RemoteForward usage with 0 listen port
 
 20090212
  - (djm) [sshpty.c] bz#1419: OSX uses cloning ptys that automagically
