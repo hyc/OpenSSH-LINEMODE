@@ -27,6 +27,9 @@
    - djm@cvs.openbsd.org 2009/02/12 03:46:17
      [ssh_config.5]
      document RemoteForward usage with 0 listen port
+   - jmc@cvs.openbsd.org 2009/02/12 07:34:20
+     [ssh_config.5]
+     kill trailing whitespace;
 
 20090212
  - (djm) [sshpty.c] bz#1419: OSX uses cloning ptys that automagically
