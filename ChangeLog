@@ -21,6 +21,9 @@
    - djm@cvs.openbsd.org 2009/02/12 03:42:09
      [ssh.1]
      document -R0:... usage
+   - djm@cvs.openbsd.org 2009/02/12 03:44:25
+     [ssh.1]
+     consistency: Dq => Ql
 
 20090212
  - (djm) [sshpty.c] bz#1419: OSX uses cloning ptys that automagically
