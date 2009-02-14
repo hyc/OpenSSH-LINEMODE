@@ -1,4 +1,11 @@
-20090205
+20090214
+ - (djm) OpenBSD CVS Sync
+   - dtucker@cvs.openbsd.org 2009/02/02 11:15:14
+     [sftp.c]
+     Initialize a few variables to prevent spurious "may be used
+     uninitialized" warnings from newer gcc's.  ok djm@
+
+20090212
  - (djm) [sshpty.c] bz#1419: OSX uses cloning ptys that automagically
    set ownership and modes, so avoid explicitly setting them
  - (djm) [configure.ac loginrec.c] bz#1421: fix lastlog support for OSX.
