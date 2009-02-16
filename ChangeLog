@@ -1,3 +1,9 @@
+20090216
+ - (djm) [regress/conch-ciphers.sh regress/putty-ciphers.sh]
+   [regress/putty-kex.sh regress/putty-transfer.sh] Downgrade disabled
+   interop tests from FATAL error to a warning. Allows some interop
+   tests to proceed if others are missing necessary prerequisites.
+
 20090214
  - (djm) OpenBSD CVS Sync
    - dtucker@cvs.openbsd.org 2009/02/02 11:15:14
