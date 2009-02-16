@@ -563,6 +563,14 @@ main() { if (NSVersionOfRunTimeLibrary("System") >= (60 << 16))
 	AC_DEFINE(WITH_ABBREV_NO_TTY)
 	AC_DEFINE(LOCKED_PASSWD_STRING, "*LK*")
 	;;
+*-*-k*bsd*-gnu | *-*-kopensolaris*-gnu)
+	check_for_libcrypt_later=1
+	AC_DEFINE(PAM_TTY_KLUDGE)
+	AC_DEFINE(LOCKED_PASSWD_PREFIX, "!")
+	AC_DEFINE(SPT_TYPE,SPT_REUSEARGV)
+	AC_DEFINE(_PATH_BTMP, "/var/log/btmp", [log for bad login attempts])
+	AC_DEFINE(USE_BTMP, 1, [Use btmp to log bad logins])
+	;;
 *-*-linux*)
 	no_dev_ptmx=1
 	check_for_libcrypt_later=1

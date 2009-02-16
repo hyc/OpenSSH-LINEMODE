@@ -3,6 +3,8 @@
    [regress/putty-kex.sh regress/putty-transfer.sh] Downgrade disabled
    interop tests from FATAL error to a warning. Allows some interop
    tests to proceed if others are missing necessary prerequisites.
+ - (djm) [configure.ac] support GNU/kFreeBSD and GNU/kOpensolaris
+   systems; patch from Aurelien Jarno via rmh AT aybabtu.com
 
 20090214
  - (djm) OpenBSD CVS Sync
