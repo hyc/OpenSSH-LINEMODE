@@ -3,6 +3,10 @@
    - djm@cvs.openbsd.org 2009/02/17 01:28:32
      [ssh_config]
      sync with revised default ciphers; pointed out by dkrause@
+   - djm@cvs.openbsd.org 2009/02/18 04:31:21
+     [schnorr.c]
+     signature should hash over the entire group, not just the generator
+     (this is still disabled code)
 
 20090216
  - (djm) [regress/conch-ciphers.sh regress/putty-ciphers.sh]
