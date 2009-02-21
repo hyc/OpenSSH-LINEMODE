@@ -1,3 +1,10 @@
+20090222
+ - (djm) OpenBSD CVS Sync
+   - tobias@cvs.openbsd.org 2009/02/21 19:32:04
+     [misc.c sftp-server-main.c ssh-keygen.c]
+     Added missing newlines in error messages.
+     ok dtucker
+
 20090221
  - (djm) OpenBSD CVS Sync
    - djm@cvs.openbsd.org 2009/02/17 01:28:32
