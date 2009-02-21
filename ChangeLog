@@ -7,6 +7,8 @@
      [schnorr.c]
      signature should hash over the entire group, not just the generator
      (this is still disabled code)
+ - (djm) [contrib/caldera/openssh.spec contrib/redhat/openssh.spec]
+   [contrib/suse/openssh.spec] Prepare for 5.2p1
 
 20090216
  - (djm) [regress/conch-ciphers.sh regress/putty-ciphers.sh]
