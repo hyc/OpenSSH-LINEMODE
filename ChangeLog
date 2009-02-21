@@ -1,3 +1,9 @@
+20090221
+ - (djm) OpenBSD CVS Sync
+   - djm@cvs.openbsd.org 2009/02/17 01:28:32
+     [ssh_config]
+     sync with revised default ciphers; pointed out by dkrause@
+
 20090216
  - (djm) [regress/conch-ciphers.sh regress/putty-ciphers.sh]
    [regress/putty-kex.sh regress/putty-transfer.sh] Downgrade disabled
