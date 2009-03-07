@@ -2076,6 +2076,23 @@ int main(void) { exit(EVP_aes_192_cbc() == NULL || EVP_aes_256_cbc() == NULL);}
 	]
 )
 
+AC_MSG_CHECKING([if EVP_DigestUpdate returns an int])
+AC_LINK_IFELSE(
+	[AC_LANG_SOURCE([[
+#include <string.h>
+#include <openssl/evp.h>
+int main(void) { if(EVP_DigestUpdate(NULL, NULL,0)) exit(0); }
+	]])],
+	[
+		AC_MSG_RESULT(yes)
+	],
+	[
+		AC_MSG_RESULT(no)
+		AC_DEFINE(OPENSSL_EVP_DIGESTUPDATE_VOID, 1,
+		    [Define if EVP_DigestUpdate returns void])
+	]
+)
+
 # Some systems want crypt() from libcrypt, *not* the version in OpenSSL,
 # because the system crypt() is more featureful.
 if test "x$check_for_libcrypt_before" = "x1"; then
