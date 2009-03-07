@@ -47,6 +47,13 @@ ssh_EVP_CIPHER_CTX_cleanup(EVP_CIPHER_CTX *evp)
 	EVP_CIPHER_CTX_cleanup(evp);
 	return 1;
 }
+
+int
+ssh_EVP_DigestUpdate(EVP_MD_CTX *ctx, const void *d, unsigned int cnt)
+{
+	EVP_DigestUpdate(ctx, d, cnt);
+	return 1;
+}
 #endif
 
 #ifdef	USE_OPENSSL_ENGINE
