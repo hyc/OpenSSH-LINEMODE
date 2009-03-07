@@ -2694,7 +2694,7 @@ AC_CHECK_TYPES([fsblkcnt_t, fsfilcnt_t],,,[
 #endif
 ])
 
-AC_CHECK_TYPES([in_addr_t in_port_t],,,
+AC_CHECK_TYPES([in_addr_t, in_port_t],,,
 [#include <sys/types.h>
 #include <netinet/in.h>])
 
