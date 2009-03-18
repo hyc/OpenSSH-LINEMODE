@@ -434,8 +434,6 @@ int main(void) { exit(0); }
 	AC_DEFINE(USE_PIPES, 1, [Use PIPES instead of a socketpair()])
 	AC_DEFINE(DISABLE_SHADOW, 1,
 		[Define if you want to disable shadow passwords])
-	AC_DEFINE(IP_TOS_IS_BROKEN, 1,
-		[Define if your system choked on IP TOS setting])
 	AC_DEFINE(NO_X11_UNIX_SOCKETS, 1,
 		[Define if X11 doesn't support AF_UNIX sockets on that system])
 	AC_DEFINE(NO_IPPORT_RESERVED_CONCEPT, 1,
@@ -446,7 +444,8 @@ int main(void) { exit(0); }
 		file descriptor passing])
 	;;
 *-*-dgux*)
-	AC_DEFINE(IP_TOS_IS_BROKEN)
+	AC_DEFINE(IP_TOS_IS_BROKEN, 1,
+		[Define if your system choked on IP TOS setting])
 	AC_DEFINE(SETEUID_BREAKS_SETUID)
 	AC_DEFINE(BROKEN_SETREUID)
 	AC_DEFINE(BROKEN_SETREGID)
