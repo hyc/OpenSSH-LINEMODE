@@ -594,6 +594,10 @@ struct winsize {
 #define FSID_TO_ULONG(f) \
 	((((u_int64_t)(f).val[0] & 0xffffffffUL) << 32) | \
 	    ((f).val[1] & 0xffffffffUL))
+#elif defined(FSID_HAS___VAL)
+#define FSID_TO_ULONG(f) \
+	((((u_int64_t)(f).__val[0] & 0xffffffffUL) << 32) | \
+	    ((f).__val[1] & 0xffffffffUL))
 #else
 # define FSID_TO_ULONG(f) ((f))
 #endif
