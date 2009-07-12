@@ -279,7 +279,6 @@ AC_CHECK_HEADERS( \
 	sys/cdefs.h \
 	sys/dir.h \
 	sys/mman.h \
-	sys/mount.h \
 	sys/ndir.h \
 	sys/poll.h \
 	sys/prctl.h \
@@ -324,6 +323,11 @@ AC_CHECK_HEADERS(sys/ptms.h, [], [], [
 # login_cap.h requires sys/types.h on NetBSD
 AC_CHECK_HEADERS(login_cap.h, [], [], [
 #include <sys/types.h>
+])
+
+# older BSDs need sys/param.h before sys/mount.h
+AC_CHECK_HEADERS(sys/mount.h, [], [], [
+#include <sys/param.h>
 ])
 
 # Messages for features tested for in target-specific section
