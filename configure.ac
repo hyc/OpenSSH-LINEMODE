@@ -982,6 +982,7 @@ AC_ARG_WITH(zlib,
 	fi ]
 )
 
+AC_CHECK_HEADER([zlib.h], ,AC_MSG_ERROR([*** zlib.h missing - please install first or check config.log ***]))
 AC_CHECK_LIB(z, deflate, ,
 	[
 		saved_CPPFLAGS="$CPPFLAGS"
@@ -1002,7 +1003,6 @@ AC_CHECK_LIB(z, deflate, ,
 		)
 	]
 )
-AC_CHECK_HEADER([zlib.h], ,AC_MSG_ERROR([*** zlib.h missing - please install first or check config.log ***]))
 
 AC_ARG_WITH(zlib-version-check,
 	[  --without-zlib-version-check Disable zlib version check],
@@ -1895,6 +1895,8 @@ AC_TRY_LINK_FUNC(RAND_add, AC_DEFINE(HAVE_OPENSSL, 1,
 			LDFLAGS="-L/usr/local/ssl/lib ${saved_LDFLAGS}"
 		fi
 		CPPFLAGS="-I/usr/local/ssl/include ${saved_CPPFLAGS}"
+		AC_CHECK_HEADER([openssl/opensslv.h], ,
+		    AC_MSG_ERROR([*** OpenSSL headers missing - please install first or check config.log ***]))
 		AC_TRY_LINK_FUNC(RAND_add, AC_DEFINE(HAVE_OPENSSL),
 			[
 				AC_MSG_ERROR([*** Can't find recent OpenSSL libcrypto (see config.log for details) ***])
