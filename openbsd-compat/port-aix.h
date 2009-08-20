@@ -71,6 +71,11 @@ int passwdexpired(char *, char **);
 # include <sys/timers.h>
 #endif
 
+/* for setpcred and friends */
+#ifdef HAVE_USERSEC_H
+# include <usersec.h>
+#endif
+
 /*
  * According to the setauthdb man page, AIX password registries must be 15
  * chars or less plus terminating NUL.
