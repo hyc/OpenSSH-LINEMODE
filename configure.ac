@@ -672,7 +672,7 @@ mips-sony-bsd|mips-sony-newsos4)
 		after setsid()])
 	AC_DEFINE(PASSWD_NEEDS_USERNAME, 1, [must supply username to passwd
 		in case the name is longer than 8 chars])
-	AC_DEFINE(BROKEN_TCGETATTR_ICANON, tcgetattr with ICANON may hang)
+	AC_DEFINE(BROKEN_TCGETATTR_ICANON, 1, [tcgetattr with ICANON may hang])
 	external_path_file=/etc/default/login
 	# hardwire lastlog location (can't detect it on some versions)
 	conf_lastlog_location="/var/adm/lastlog"
