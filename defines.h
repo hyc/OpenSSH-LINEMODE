@@ -749,4 +749,8 @@ struct winsize {
 #define INET6_ADDRSTRLEN 46
 #endif
 
+#ifndef SSH_IOBUFSZ
+# define SSH_IOBUFSZ 8192
+#endif
+
 #endif /* _DEFINES_H */
