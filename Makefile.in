@@ -242,7 +242,7 @@ check-config:
 	-$(DESTDIR)$(sbindir)/sshd -t -f $(DESTDIR)$(sysconfdir)/sshd_config
 
 scard-install:
-	(cd scard && $(MAKE) DESTDIR=$(DESTDIR) install)
+	(cd scard && env DESTDIR=$(DESTDIR) $(MAKE) DESTDIR=$(DESTDIR) install)
 
 install-files: scard-install
 	$(srcdir)/mkinstalldirs $(DESTDIR)$(bindir)
