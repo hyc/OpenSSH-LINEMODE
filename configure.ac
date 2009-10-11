@@ -1130,15 +1130,6 @@ int main(void){struct dirent d;exit(sizeof(d.d_name)<=sizeof(char));}
 	]
 )
 
-AC_CHECK_DECL(DTTOIF,
-  AC_DEFINE(DTTOIF_IN_FS_FFS_DIR_H, 1 , [DTTOIF macro in fs/ffs/dir.h]), ,
-  [
-#include <sys/types.h>
-#include <fs/ffs/dir.h>
-  ])
-
-AC_CHECK_MEMBERS([struct dirent.d_type],,, [#include <dirent.h>])
-
 AC_MSG_CHECKING([for /proc/pid/fd directory])
 if test -d "/proc/$$/fd" ; then
 	AC_DEFINE(HAVE_PROC_PID, 1, [Define if you have /proc/$pid/fd])
