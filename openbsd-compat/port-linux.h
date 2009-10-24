@@ -23,6 +23,7 @@
 int ssh_selinux_enabled(void);
 void ssh_selinux_setup_pty(char *, const char *);
 void ssh_selinux_setup_exec_context(char *);
+void ssh_selinux_change_context(const char *);
 #endif
 
 #endif /* ! _PORT_LINUX_H */
