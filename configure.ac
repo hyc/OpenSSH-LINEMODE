@@ -3295,11 +3295,18 @@ AC_ARG_WITH(opensc,
 	[  --with-opensc[[=PFX]]     Enable smartcard support using OpenSC (optionally in PATH)],
 	[
 	    if test "x$withval" != "xno" ; then
-		if test "x$withval" != "xyes" ; then
-  			OPENSC_CONFIG=$withval/bin/opensc-config
+		AC_PATH_PROG(PKGCONFIG, pkg-config, no)
+		AC_MSG_CHECKING(how to get opensc config)
+		if test "x$withval" != "xyes" -a "x$PKGCONFIG" = "xno"; then
+			OPENSC_CONFIG="$withval/bin/opensc-config"
+		elif test -f "$withval/src/libopensc/libopensc.pc"; then
+			OPENSC_CONFIG="$PKGCONFIG $withval/src/libopensc/libopensc.pc"
+		elif test "x$PKGCONFIG" != "xno"; then
+			OPENSC_CONFIG="$PKGCONFIG libopensc"
 		else
-  			AC_PATH_PROG(OPENSC_CONFIG, opensc-config, no)
+			AC_PATH_PROG(OPENSC_CONFIG, opensc-config, no)
 		fi
+		AC_MSG_RESULT($OPENSC_CONFIG)
 		if test "$OPENSC_CONFIG" != "no"; then
 			LIBOPENSC_CFLAGS=`$OPENSC_CONFIG --cflags`
 			LIBOPENSC_LIBS=`$OPENSC_CONFIG --libs`
