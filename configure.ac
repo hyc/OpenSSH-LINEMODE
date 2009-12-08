@@ -589,6 +589,7 @@ main() { if (NSVersionOfRunTimeLibrary("System") >= (60 << 16))
 		if it doesn't return EOPNOTSUPP.])
 	AC_DEFINE(_PATH_BTMP, "/var/log/btmp", [log for bad login attempts])
 	AC_DEFINE(USE_BTMP)
+	AC_DEFINE(LINUX_OOM_ADJUST, 1, [Adjust Linux out-of-memory killer])
 	inet6_default_4in6=yes
 	case `uname -r` in
 	1.*|2.0.*)

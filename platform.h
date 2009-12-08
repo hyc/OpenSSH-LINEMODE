@@ -18,6 +18,7 @@
 
 #include <sys/types.h>
 
+void platform_pre_listen(void);
 void platform_pre_fork(void);
 void platform_post_fork_parent(pid_t child_pid);
 void platform_post_fork_child(void);
