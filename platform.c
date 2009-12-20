@@ -56,3 +56,13 @@ platform_post_fork_child(void)
 	oom_adjust_restore();
 #endif
 }
+
+char *
+platform_krb5_get_principal_name(const char *pw_name)
+{
+#ifdef USE_AIX_KRB_NAME
+	return aix_krb5_get_principal_name(pw_name);
+#else
+	return NULL;
+#endif
+}
