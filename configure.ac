@@ -1623,6 +1623,11 @@ if test "x$ac_cv_func_getpeereid" != "xyes" -a "x$ac_cv_func_getpeerucred" != "x
         )
 fi
 
+AC_CHECK_DECL(SO_RDOMAIN,
+    AC_DEFINE(USE_ROUTINGDOMAIN, 1, [Enable rdomain/VRF support]), ,
+    [#include <sys/types.h>
+     #include <sys/socket.h>])
+
 dnl see whether mkstemp() requires XXXXXX
 if test "x$ac_cv_func_mkdtemp" = "xyes" ; then
 AC_MSG_CHECKING([for (overly) strict mkstemp])
