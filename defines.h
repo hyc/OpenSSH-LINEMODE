@@ -753,4 +753,8 @@ struct winsize {
 # define SSH_IOBUFSZ 8192
 #endif
 
+#ifndef PRIu64
+# define PRIu64 "llu"
+#endif
+
 #endif /* _DEFINES_H */
