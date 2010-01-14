@@ -22,5 +22,7 @@ void platform_pre_listen(void);
 void platform_pre_fork(void);
 void platform_post_fork_parent(pid_t child_pid);
 void platform_post_fork_child(void);
-char * platform_get_krb5_client(const char *);
+char *platform_get_krb5_client(const char *);
+char *platform_krb5_get_principal_name(const char *);
+
 
