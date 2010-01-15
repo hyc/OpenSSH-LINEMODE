@@ -1351,6 +1351,7 @@ AC_CHECK_FUNCS( \
 	getrlimit \
 	getttyent \
 	glob \
+	group_from_gid \
 	inet_aton \
 	inet_ntoa \
 	inet_ntop \
@@ -1377,8 +1378,10 @@ AC_CHECK_FUNCS( \
 	setegid \
 	setenv \
 	seteuid \
+	setgroupent \
 	setgroups \
 	setlogin \
+	setpassent\
 	setpcred \
 	setproctitle \
 	setregid \
@@ -1407,6 +1410,7 @@ AC_CHECK_FUNCS( \
 	truncate \
 	unsetenv \
 	updwtmpx \
+	user_from_uid \
 	vasprintf \
 	vhangup \
 	vsnprintf \
