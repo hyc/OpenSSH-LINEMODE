@@ -204,7 +204,7 @@ int vsnprintf(char *, size_t, const char *, va_list);
 char *user_from_uid(uid_t, int);
 #endif
 
-#ifndef HAVE_GROUP_FROM_GUID
+#ifndef HAVE_GROUP_FROM_GID
 char *group_from_gid(gid_t, int);
 #endif
 
