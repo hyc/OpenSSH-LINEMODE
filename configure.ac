@@ -446,7 +446,7 @@ int main(void) { exit(0); }
 	AC_DEFINE(DISABLE_FD_PASSING, 1,
 		[Define if your platform needs to skip post auth
 		file descriptor passing])
-	AC_DEFINE(SSH_IOBUFSZ, 65536, [Windows is sensitive to read buffer size])
+	AC_DEFINE(SSH_IOBUFSZ, 65535, [Windows is sensitive to read buffer size])
 	;;
 *-*-dgux*)
 	AC_DEFINE(IP_TOS_IS_BROKEN, 1,
