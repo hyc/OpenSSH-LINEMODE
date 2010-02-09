@@ -3413,9 +3413,12 @@ AC_ARG_WITH(selinux,
 		AC_DEFINE(WITH_SELINUX,1,[Define if you want SELinux support.])
 		SELINUX_MSG="yes"
 		AC_CHECK_HEADER([selinux/selinux.h], ,
-		    AC_MSG_ERROR(SELinux support requires selinux.h header))
-		AC_CHECK_LIB(selinux, setexeccon, [ LIBSELINUX="-lselinux" ],
-		    AC_MSG_ERROR(SELinux support requires libselinux library))
+			AC_MSG_ERROR(SELinux support requires selinux.h header))
+		AC_CHECK_LIB(selinux, setexeccon,
+			[ LIBSELINUX="-lselinux"
+			  LIBS="$LIBS -lselinux"
+			],
+			AC_MSG_ERROR(SELinux support requires libselinux library))
 		SSHDLIBS="$SSHDLIBS $LIBSELINUX"
 		AC_CHECK_FUNCS(getseuserbyname get_default_context_with_level)
 		LIBS="$save_LIBS"
