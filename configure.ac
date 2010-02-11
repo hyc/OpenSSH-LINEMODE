@@ -1420,6 +1420,11 @@ AC_CHECK_FUNCS( \
 	waitpid \
 )
 
+# PKCS#11 support requires dlopen() and co
+AC_SEARCH_LIBS(dlopen, dl,
+    AC_DEFINE([ENABLE_PKCS11], [], [Enable for PKCS#11 support])
+)
+
 # IRIX has a const char return value for gai_strerror()
 AC_CHECK_FUNCS(gai_strerror,[
 	AC_DEFINE(HAVE_GAI_STRERROR)
@@ -4128,10 +4133,6 @@ if grep "#define BROKEN_GETADDRINFO 1" confdefs.h >/dev/null || \
 	AC_SUBST(TEST_SSH_IPV6, no)
 else
 	AC_SUBST(TEST_SSH_IPV6, yes)
-fi
-
-if test "x$enable_pkcs11" != "xno" ; then
-	AC_DEFINE([ENABLE_PKCS11], [], [Enable for PKCS#11 support])
 fi
 
 AC_EXEEXT
