@@ -4197,6 +4197,10 @@ else
 	AC_SUBST(TEST_SSH_IPV6, yes)
 fi
 
+if test "x$enable_pkcs11" != "xno" ; then
+	AC_DEFINE([ENABLE_PKCS11], [], [Enable for PKCS#11 support])
+fi
+
 AC_EXEEXT
 AC_CONFIG_FILES([Makefile buildpkg.sh opensshd.init openssh.xml \
 	openbsd-compat/Makefile openbsd-compat/regress/Makefile \
