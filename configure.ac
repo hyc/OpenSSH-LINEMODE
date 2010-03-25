@@ -488,6 +488,12 @@ main() { if (NSVersionOfRunTimeLibrary("System") >= (60 << 16))
 *-*-dragonfly*)
 	SSHDLIBS="$SSHDLIBS -lcrypt"
 	;;
+*-*-haiku*) 
+    LIBS="$LIBS -lbsd "
+    AC_CHECK_LIB(network, socket)
+    AC_DEFINE(HAVE_U_INT64_T)
+    MANTYPE=man 
+    ;; 
 *-*-hpux*)
 	# first we define all of the options common to all HP-UX releases
 	CPPFLAGS="$CPPFLAGS -D_HPUX_SOURCE -D_XOPEN_SOURCE -D_XOPEN_SOURCE_EXTENDED=1"
