@@ -39,8 +39,11 @@ struct Session {
 	/* tty */
 	char	*term;
 	int	ptyfd, ttyfd, ptymaster;
+	int	have_extproc;
+	int set_modes;
 	u_int	row, col, xpixel, ypixel;
 	char	tty[TTYSZ];
+	void	*termios;
 
 	/* X11 */
 	u_int	display_number;

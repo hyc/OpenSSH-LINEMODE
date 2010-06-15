@@ -256,3 +256,17 @@ pty_setowner(struct passwd *pw, const char *tty)
 		}
 	}
 }
+
+void pty_line_mode(int fd, int on) {
+	struct termios tio;
+	tcgetattr(fd, &tio);
+	if (on) tio.c_lflag |= EXTPROC;
+	else tio.c_lflag &= ~EXTPROC;
+	tcsetattr(fd, TCSANOW, &tio);
+	debug("pty linemode %d", on);
+}
+
+void pty_pkt_mode(int fd) {
+	int on = 1;
+	ioctl(fd, TIOCPKT, (char *)&on);
+}

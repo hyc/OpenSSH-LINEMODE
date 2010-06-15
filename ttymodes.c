@@ -57,6 +57,7 @@
 #include "ssh1.h"
 #include "compat.h"
 #include "buffer.h"
+#include "xmalloc.h"
 
 #define TTY_OP_END		0
 /*
@@ -346,14 +347,15 @@ end:
  * manner from a packet being read.
  */
 void
-tty_parse_modes(int fd, int *n_bytes_ptr)
+tty_parse_modes(ttyext *tx, int *n_bytes_ptr)
 {
-	struct termios tio;
+	struct termios *tio;
 	int opcode, baud;
 	int n_bytes = 0;
 	int failure = 0;
 	u_int (*get_arg)(void);
 	int arg_size;
+	int fd = tx->ttyfd;
 
 	if (compat20) {
 		*n_bytes_ptr = packet_get_int();
@@ -366,19 +368,30 @@ tty_parse_modes(int fd, int *n_bytes_ptr)
 		arg_size = 1;
 	}
 
+	if (!tx->tio) {
+		tio = xmalloc(sizeof(struct termios));
+		tx->tio = tio;
+
 	/*
 	 * Get old attributes for the terminal.  We will modify these
 	 * flags. I am hoping that if there are any machine-specific
 	 * modes, they will initially have reasonable values.
 	 */
-	if (tcgetattr(fd, &tio) == -1) {
-		logit("tcgetattr: %.100s", strerror(errno));
-		failure = -1;
+		if (tcgetattr(fd, tio) == -1) {
+			logit("tcgetattr: %.100s", strerror(errno));
+			failure = -1;
+		}
+	} else {
+		tio = tx->tio;
 	}
 
 	for (;;) {
 		n_bytes += 1;
 		opcode = packet_get_char();
+#ifdef EXTPROC
+		if (opcode == 63)
+			tx->have_extproc = 1;
+#endif
 		switch (opcode) {
 		case TTY_OP_END:
 			goto set;
@@ -389,7 +402,7 @@ tty_parse_modes(int fd, int *n_bytes_ptr)
 			n_bytes += 4;
 			baud = packet_get_int();
 			if (failure != -1 &&
-			    cfsetispeed(&tio, baud_to_speed(baud)) == -1)
+			    cfsetispeed(tio, baud_to_speed(baud)) == -1)
 				error("cfsetispeed failed for %d", baud);
 			break;
 
@@ -399,22 +412,22 @@ tty_parse_modes(int fd, int *n_bytes_ptr)
 			n_bytes += 4;
 			baud = packet_get_int();
 			if (failure != -1 &&
-			    cfsetospeed(&tio, baud_to_speed(baud)) == -1)
+			    cfsetospeed(tio, baud_to_speed(baud)) == -1)
 				error("cfsetospeed failed for %d", baud);
 			break;
 
 #define TTYCHAR(NAME, OP) \
 	case OP: \
 	  n_bytes += arg_size; \
-	  tio.c_cc[NAME] = special_char_decode(get_arg()); \
+	  tio->c_cc[NAME] = special_char_decode(get_arg()); \
 	  break;
 #define TTYMODE(NAME, FIELD, OP) \
 	case OP: \
 	  n_bytes += arg_size; \
 	  if (get_arg()) \
-	    tio.FIELD |= NAME; \
+	    tio->FIELD |= NAME; \
 	  else \
-	    tio.FIELD &= ~NAME;	\
+	    tio->FIELD &= ~NAME;	\
 	  break;
 
 #include "ttymodes.h"
@@ -485,6 +498,61 @@ set:
 		return;		/* Packet parsed ok but tcgetattr() failed */
 
 	/* Set the new modes for the terminal. */
-	if (tcsetattr(fd, TCSANOW, &tio) == -1)
+	if (tcsetattr(fd, TCSANOW, tio) == -1)
 		logit("Setting tty modes failed: %.100s", strerror(errno));
+}
+
+/*
+ * Encodes difference between old and new terminal modes
+ * in a portable manner, and appends the modes to a packet
+ * being constructed.
+ */
+int
+tty_new_modes(void *old, char *cnew, int len, int all)
+{
+	struct termios *told = old, tnew = *told;
+	Buffer buf;
+	void (*put_arg)(Buffer *, u_int);
+	int ret = 0;
+
+	buffer_init(&buf);
+	if (compat20) {
+		put_arg = buffer_put_int;
+	} else {
+		put_arg = (void (*)(Buffer *, u_int)) buffer_put_char;
+	}
+
+	memcpy(&tnew, cnew, len);
+
+	/* Store values of changed mode flags. */
+#define TTYCHAR(NAME, OP) \
+	if (all || (told->c_cc[NAME] != tnew.c_cc[NAME])) { \
+		buffer_put_char(&buf, OP); \
+		put_arg(&buf, special_char_encode(tnew.c_cc[NAME])); }
+
+#define TTYMODE(NAME, FIELD, OP) \
+	if (all || (NAME != EXTPROC && (told->FIELD & NAME) != (tnew.FIELD & NAME))) { \
+		buffer_put_char(&buf, OP); \
+		put_arg(&buf, ((tnew.FIELD & NAME) != 0)); }
+
+#include "ttymodes.h"
+
+#undef TTYCHAR
+#undef TTYMODE
+
+end:
+	if (buf.end - buf.offset) {
+		ret = 1;
+
+		/* Mark end of mode data. */
+		buffer_put_char(&buf, TTY_OP_END);
+		if (compat20)
+			packet_put_string(buffer_ptr(&buf), buffer_len(&buf));
+		else
+			packet_put_raw(buffer_ptr(&buf), buffer_len(&buf));
+		memcpy(told, &tnew, sizeof(*told));
+	}
+
+	buffer_free(&buf);
+	return ret;
 }

@@ -87,8 +87,15 @@ int	 packet_remaining(void);
 void	 packet_send_ignore(int);
 void	 packet_add_padding(u_char);
 
+typedef struct ttyext {
+	int ttyfd;
+	int have_extproc;
+	struct termios *tio;
+} ttyext;
+
 void	 tty_make_modes(int, struct termios *);
-void	 tty_parse_modes(int, int *);
+void	 tty_parse_modes(ttyext *, int *);
+int	 tty_new_modes(void *old, char *buf, int len, int all);
 
 void	 packet_set_alive_timeouts(int);
 int	 packet_inc_alive_timeouts(void);

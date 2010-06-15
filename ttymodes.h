@@ -151,6 +151,9 @@ TTYMODE(ECHOKE,	c_lflag, 61)
 #if defined(PENDIN)
 TTYMODE(PENDIN,	c_lflag, 62)
 #endif /* PENDIN */
+#if defined(EXTPROC)
+TTYMODE(EXTPROC,	c_lflag, 63)
+#endif /* EXTPROC */
 
 TTYMODE(OPOST,	c_oflag, 70)
 #if defined(OLCUC)

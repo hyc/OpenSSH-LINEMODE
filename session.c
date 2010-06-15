@@ -43,6 +43,7 @@
 #include <sys/socket.h>
 #include <sys/un.h>
 #include <sys/wait.h>
+#include <sys/ioctl.h>
 
 #include <arpa/inet.h>
 
@@ -250,6 +251,41 @@ auth_input_request_forwarding(struct passwd * pw)
 		close(sock);
 	auth_sock_name = NULL;
 	auth_sock_dir = NULL;
+	return 0;
+}
+
+static int
+pty_pkt_filter(Channel *c, char *buf, int len)
+{
+	if (buf[0] & TIOCPKT_IOCTL) {
+		Session *s = c->filter_ctx;
+		/* read termios struct and send diff */
+		packet_start(SSH2_MSG_CHANNEL_REQUEST);
+		packet_put_int(c->remote_id);
+		packet_put_cstring("tty-change");
+		packet_put_char(0);
+		if (tty_new_modes(s->termios, buf+1, len-1, !s->set_modes))
+			packet_send();
+
+		s->set_modes = 1;
+		len = 1;
+	}
+	if (buf[0] & TIOCPKT_FLUSHWRITE) {
+		packet_write_wait();
+	}
+	if (buf[0] & (TIOCPKT_NOSTOP|TIOCPKT_DOSTOP)) {
+		/* send xon-xoff msg */
+		packet_start(SSH2_MSG_CHANNEL_REQUEST);
+		packet_put_int(c->remote_id);
+		packet_put_cstring("xon-xoff");
+		packet_put_char(0);
+		packet_put_char((buf[0] & TIOCPKT_DOSTOP) != 0);
+		packet_send();
+	}
+	buf++;
+	len--;
+	if (len)
+		buffer_append(&c->input, buf, len);
 	return 0;
 }
 
@@ -767,7 +803,11 @@ do_exec_pty(Session *s, const char *command)
 	s->ptymaster = ptymaster;
 	packet_set_interactive(1);
 	if (compat20) {
+		pty_pkt_mode(ptyfd);
+		if (s->have_extproc)
+			pty_line_mode(ptyfd, 1);
 		session_set_fds(s, ptyfd, fdout, -1, 1);
+		channel_register_filter(s->chanid, pty_pkt_filter, NULL, NULL, s);
 	} else {
 		server_loop(pid, ptyfd, fdout, -1);
 		/* server_loop _has_ closed ptyfd and fdout. */
@@ -2141,7 +2181,12 @@ session_pty_req(Session *s)
 	/* for SSH1 the tty modes length is not given */
 	if (!compat20)
 		n_bytes = packet_remaining();
-	tty_parse_modes(s->ttyfd, &n_bytes);
+	{
+		ttyext tx = { s->ttyfd, 0, NULL };
+		tty_parse_modes(&tx, &n_bytes);
+		s->have_extproc = tx.have_extproc;
+		s->termios = tx.tio;
+	}
 
 	if (!use_privsep)
 		pty_setowner(s->pw, s->tty);
