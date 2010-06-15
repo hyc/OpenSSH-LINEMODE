@@ -85,6 +85,7 @@
 #include <termios.h>
 #include <pwd.h>
 #include <unistd.h>
+#include <readline/readline.h>
 
 #include "openbsd-compat/sys-queue.h"
 #include "xmalloc.h"
@@ -160,6 +161,8 @@ static int connection_in;	/* Connection to server (input). */
 static int connection_out;	/* Connection to server (output). */
 static int need_rekeying;	/* Set to non-zero if rekeying is requested. */
 static int session_closed = 0;	/* In SSH2: login session closed. */
+
+static int got_prompt;
 
 static void client_init_dispatch(void);
 int	session_ident = -1;
@@ -1277,14 +1280,55 @@ client_filter_cleanup(int cid, void *ctx)
 	xfree(ctx);
 }
 
+static Buffer *rl_buf;
+static void readline_cb(char *line)
+{
+	if (!line) {
+		buffer_put_char(rl_buf, '\004');
+	} else {
+		buffer_append(rl_buf, line, strlen(line));
+		buffer_put_char(rl_buf, '\n');
+		if (*line)
+			add_history(line);
+	}
+	got_prompt = 0;
+}
+
 int
 client_simple_escape_filter(Channel *c, char *buf, int len)
 {
+	struct termios *tio;
+	int ret, oldlen;
 	if (c->extended_usage != CHAN_EXTENDED_WRITE)
 		return 0;
 
-	return process_escapes(c, &c->input, &c->output, &c->extended,
+	oldlen = c->input.end - c->input.offset;
+	ret = process_escapes(c, &c->input, &c->output, &c->extended,
 	    buf, len);
+	if (ret < 0)
+		return ret;
+	tio = get_saved_tio();
+	/* If we're canonical, use readline */
+	if ((tio->c_lflag & (ECHO|ICANON)) == (ECHO|ICANON)) {
+		if (!got_prompt) {
+			u_char *ptr = c->output.buf + c->output.end;
+			c->output.buf[c->output.end] = 0;
+			while (ptr >= c->output.buf && *ptr != '\n')
+				ptr--;
+			rl_set_prompt(ptr+1);
+			rl_already_prompted = 1;
+			got_prompt = 1;
+			rl_on_new_line_with_prompt();
+		}
+		len = c->input.end - c->input.offset - oldlen;
+		c->input.end -= len;
+		memcpy(buf, c->input.buf + c->input.end, len);
+		while (len) {
+			rl_stuff_char(*buf++);
+			rl_callback_read_char();
+			len--;
+		}
+	}
 }
 
 static void
@@ -1863,6 +1907,20 @@ client_input_channel_req(int type, u_int32_t seq, void *ctxt)
 			    __func__, id);
 		}
 		packet_check_eom();
+	} else if (strcmp(rtype, "tty-change") == 0 ) {
+		ttyext tx = { fileno(stdin), 0, get_saved_tio() };
+		int nbytes;
+		rl_deprep_terminal();
+		tty_parse_modes(&tx, &nbytes);
+		/* server supports passthru, just use cooked mode now */
+		cooked_mode();
+		if (!rl_buf) {
+			rl_callback_handler_install(NULL, readline_cb);
+			rl_already_prompted = 1;
+			rl_buf = &c->input;
+		}
+		if ((tx.tio->c_lflag & (ICANON|ECHO)) == (ICANON|ECHO))
+			rl_prep_terminal(1);
 	}
 	if (reply) {
 		packet_start(success ?
@@ -1872,6 +1930,7 @@ client_input_channel_req(int type, u_int32_t seq, void *ctxt)
 	}
 	xfree(rtype);
 }
+
 static void
 client_input_global_request(int type, u_int32_t seq, void *ctxt)
 {

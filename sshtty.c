@@ -45,7 +45,10 @@
 #include "sshpty.h"
 
 static struct termios _saved_tio;
+static struct termios _orig_tio;
 static int _in_raw_mode = 0;
+static int _saved_orig = 0;
+static int _cooked = 0;
 
 struct termios *
 get_saved_tio(void)
@@ -58,7 +61,7 @@ leave_raw_mode(int quiet)
 {
 	if (!_in_raw_mode)
 		return;
-	if (tcsetattr(fileno(stdin), TCSADRAIN, &_saved_tio) == -1) {
+	if (tcsetattr(fileno(stdin), TCSADRAIN, &_orig_tio) == -1) {
 		if (!quiet)
 			perror("tcsetattr");
 	} else
@@ -70,12 +73,18 @@ enter_raw_mode(int quiet)
 {
 	struct termios tio;
 
+	if (_cooked) return;
+
 	if (tcgetattr(fileno(stdin), &tio) == -1) {
 		if (!quiet)
 			perror("tcgetattr");
 		return;
 	}
 	_saved_tio = tio;
+	if (!_saved_orig) {
+		_saved_orig = 1;
+		_orig_tio = _saved_tio;
+	}
 	tio.c_iflag |= IGNPAR;
 	tio.c_iflag &= ~(ISTRIP | INLCR | IGNCR | ICRNL | IXON | IXANY | IXOFF);
 #ifdef IUCLC
@@ -93,4 +102,10 @@ enter_raw_mode(int quiet)
 			perror("tcsetattr");
 	} else
 		_in_raw_mode = 1;
+}
+
+void
+cooked_mode()
+{
+	_cooked = 1;
 }
