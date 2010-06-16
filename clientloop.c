@@ -1309,7 +1309,7 @@ client_simple_escape_filter(Channel *c, char *buf, int len)
 		return ret;
 	tio = get_saved_tio();
 	/* If we're canonical, use readline */
-	if ((tio->c_lflag & (ECHO|ICANON)) == (ECHO|ICANON)) {
+	if (is_cooked()) {
 		if (!got_prompt) {
 			u_char *ptr = c->output.buf + c->output.end;
 			c->output.buf[c->output.end] = 0;

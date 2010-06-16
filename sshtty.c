@@ -109,3 +109,9 @@ cooked_mode()
 {
 	_cooked = 1;
 }
+
+int
+is_cooked()
+{
+	return _cooked && ((_saved_tio.c_lflag & (ECHO|ICANON)) == (ECHO|ICANON));
+}

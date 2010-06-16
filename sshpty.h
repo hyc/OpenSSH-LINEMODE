@@ -19,6 +19,8 @@
 struct termios *get_saved_tio(void);
 void	 leave_raw_mode(int);
 void	 enter_raw_mode(int);
+void	 cooked_mode();
+int	 is_cooked();
 
 void pty_line_mode(int, int);
 void pty_pkt_mode(int);
