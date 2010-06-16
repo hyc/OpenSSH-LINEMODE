@@ -931,7 +931,7 @@ mux_master_read_cb(Channel *c)
 
 	/* Setup ctx and  */
 	if (c->mux_ctx == NULL) {
-		state = xcalloc(1, sizeof(state));
+		state = xcalloc(1, sizeof(*state));
 		c->mux_ctx = state;
 		channel_register_cleanup(c->self,
 		    mux_master_control_cleanup_cb, 0);
