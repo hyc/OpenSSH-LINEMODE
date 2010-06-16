@@ -48,7 +48,8 @@ static struct termios _saved_tio;
 static struct termios _orig_tio;
 static int _in_raw_mode = 0;
 static int _saved_orig = 0;
-static int _cooked = 0;
+static int _cooked = 0;		/* server supports linemode */
+static int _is_remote = 0;	/* we're inside a linemode session */
 
 struct termios *
 get_saved_tio(void)
@@ -59,7 +60,7 @@ get_saved_tio(void)
 void
 leave_raw_mode(int quiet)
 {
-	if (!_in_raw_mode)
+	if (!_in_raw_mode || _is_remote)
 		return;
 	if (tcsetattr(fileno(stdin), TCSADRAIN, &_orig_tio) == -1) {
 		if (!quiet)
@@ -73,7 +74,7 @@ enter_raw_mode(int quiet)
 {
 	struct termios tio;
 
-	if (_cooked) return;
+	if (_cooked || _is_remote) return;
 
 	if (tcgetattr(fileno(stdin), &tio) == -1) {
 		if (!quiet)
@@ -84,6 +85,10 @@ enter_raw_mode(int quiet)
 	if (!_saved_orig) {
 		_saved_orig = 1;
 		_orig_tio = _saved_tio;
+	}
+	if (tio.c_lflag & EXTPROC) {
+		_is_remote = 1;
+		return;
 	}
 	tio.c_iflag |= IGNPAR;
 	tio.c_iflag &= ~(ISTRIP | INLCR | IGNCR | ICRNL | IXON | IXANY | IXOFF);
@@ -107,7 +112,8 @@ enter_raw_mode(int quiet)
 void
 cooked_mode()
 {
-	_cooked = 1;
+	if (!_is_remote)
+		_cooked = 1;
 }
 
 int
