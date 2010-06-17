@@ -210,6 +210,7 @@ channel_lookup(int id)
 	case SSH_CHANNEL_OPEN:
 	case SSH_CHANNEL_INPUT_DRAINING:
 	case SSH_CHANNEL_OUTPUT_DRAINING:
+	case SSH_CHANNEL_MUX_OPEN:
 		return (c);
 	}
 	logit("Non-public channel %d, type %d.", id, c->type);
@@ -816,7 +817,8 @@ channel_pre_open(Channel *c, fd_set *readset, fd_set *writeset)
 {
 	u_int limit = compat20 ? c->remote_window : packet_get_maxsize();
 
-	if (c->istate == CHAN_INPUT_OPEN &&
+	/* rfd is -1 if input is coming from a mux client */
+	if (c->istate == CHAN_INPUT_OPEN && c->rfd != -1 &&
 	    limit > 0 &&
 	    buffer_len(&c->input) < limit &&
 	    buffer_check_alloc(&c->input, CHAN_RBUF))
@@ -833,6 +835,13 @@ channel_pre_open(Channel *c, fd_set *readset, fd_set *writeset)
 				chan_obuf_empty(c);
 		}
 	}
+	if (c->istate == CHAN_INPUT_WAIT_DRAIN) {
+		/* clear buffer immediately (discard any partial packet) */
+		buffer_clear(&c->input);
+		chan_ibuf_empty(c);
+		/* Start output drain. XXX just kill chan? */
+		chan_rcvd_oclose(c);
+	}
 	/** XXX check close conditions, too */
 	if (compat20 && c->efd != -1 && 
 	    !(c->istate == CHAN_INPUT_CLOSED && c->ostate == CHAN_OUTPUT_CLOSED)) {
@@ -845,6 +854,19 @@ channel_pre_open(Channel *c, fd_set *readset, fd_set *writeset)
 			FD_SET(c->efd, readset);
 	}
 	/* XXX: What about efd? races? */
+}
+
+static void
+channel_pre_mux_open(Channel *c, fd_set *readset, fd_set *writeset)
+{
+	u_int limit = packet_get_maxsize();
+
+	if (c->istate == CHAN_INPUT_OPEN &&
+	    limit > 0 &&
+	    buffer_len(&c->input) < limit &&
+	    buffer_check_alloc(&c->input, CHAN_RBUF))
+		FD_SET(c->rfd, readset);
+	/* mux client only handles input, output is all in mux master */
 }
 
 /* ARGSUSED */
@@ -1809,6 +1831,12 @@ channel_post_open(Channel *c, fd_set *readset, fd_set *writeset)
 	channel_check_window(c);
 }
 
+static void
+channel_post_mux_open(Channel *c, fd_set *readset, fd_set *writeset)
+{
+	channel_handle_rfd(c, readset, writeset);
+}
+
 static u_int
 read_mux(Channel *c, u_int need)
 {
@@ -1961,6 +1989,7 @@ channel_handler_init_20(void)
 	channel_pre[SSH_CHANNEL_DYNAMIC] =		&channel_pre_dynamic;
 	channel_pre[SSH_CHANNEL_MUX_LISTENER] =		&channel_pre_listener;
 	channel_pre[SSH_CHANNEL_MUX_CLIENT] =		&channel_pre_mux_client;
+	channel_pre[SSH_CHANNEL_MUX_OPEN] =		&channel_pre_mux_open;
 
 	channel_post[SSH_CHANNEL_OPEN] =		&channel_post_open;
 	channel_post[SSH_CHANNEL_PORT_LISTENER] =	&channel_post_port_listener;
@@ -1971,6 +2000,7 @@ channel_handler_init_20(void)
 	channel_post[SSH_CHANNEL_DYNAMIC] =		&channel_post_open;
 	channel_post[SSH_CHANNEL_MUX_LISTENER] =	&channel_post_mux_listener;
 	channel_post[SSH_CHANNEL_MUX_CLIENT] =		&channel_post_mux_client;
+	channel_post[SSH_CHANNEL_MUX_OPEN] =		&channel_post_mux_open;
 }
 
 static void
@@ -3195,27 +3225,6 @@ channel_connect_to(const char *host, u_short port, char *ctype, char *rname)
 		return NULL;
 	}
 	return connect_to(host, port, ctype, rname);
-}
-
-void
-channel_send_window_changes(void)
-{
-	u_int i;
-	struct winsize ws;
-
-	for (i = 0; i < channels_alloc; i++) {
-		if (channels[i] == NULL || !channels[i]->client_tty ||
-		    channels[i]->type != SSH_CHANNEL_OPEN)
-			continue;
-		if (ioctl(channels[i]->rfd, TIOCGWINSZ, &ws) < 0)
-			continue;
-		channel_request_start(i, "window-change", 0);
-		packet_put_int((u_int)ws.ws_col);
-		packet_put_int((u_int)ws.ws_row);
-		packet_put_int((u_int)ws.ws_xpixel);
-		packet_put_int((u_int)ws.ws_ypixel);
-		packet_send();
-	}
 }
 
 /* -- X11 forwarding */

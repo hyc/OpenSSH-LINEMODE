@@ -45,6 +45,8 @@ void	 client_global_request_reply_fwd(int, u_int32_t, void *);
 void	 client_session2_setup(int, int, int, const char *, struct termios *,
 	    int, Buffer *, char **);
 int	 client_request_tun_fwd(int, int, int);
+void	client_set_prompt(u_char *);
+void	client_tty_change(Channel *, Buffer *);
 
 /* Escape filter for protocol 2 sessions */
 void	*client_new_escape_filter_ctx(int);
@@ -68,3 +70,10 @@ void	 client_register_global_confirm(global_confirm_cb *, void *);
 void	muxserver_listen(void);
 void	muxclient(const char *);
 void	mux_exit_message(Channel *, int);
+
+/* Client side main loop for muxed interactive session */
+int client_mux_loop(Channel *c, int escape_char_arg, int fd, int sid);
+void mux_check_winch(int fd);
+int mux_check_channel(Channel *c, int fd, u_int sid);
+void mux_send_data(Channel *c, int fd);
+void mux_tty_change(Channel *c);

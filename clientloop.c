@@ -471,18 +471,18 @@ client_check_window_change(void)
 
 	debug2("client_check_window_change: changed");
 
-	if (compat20) {
-		channel_send_window_changes();
-	} else {
-		if (ioctl(fileno(stdin), TIOCGWINSZ, &ws) < 0)
-			return;
+	if (ioctl(fileno(stdin), TIOCGWINSZ, &ws) < 0)
+		return;
+
+	if (compat20)
+		channel_request_start(session_ident, "window-change", 0);
+	else
 		packet_start(SSH_CMSG_WINDOW_SIZE);
-		packet_put_int((u_int)ws.ws_row);
-		packet_put_int((u_int)ws.ws_col);
-		packet_put_int((u_int)ws.ws_xpixel);
-		packet_put_int((u_int)ws.ws_ypixel);
-		packet_send();
-	}
+	packet_put_int((u_int)ws.ws_row);
+	packet_put_int((u_int)ws.ws_col);
+	packet_put_int((u_int)ws.ws_xpixel);
+	packet_put_int((u_int)ws.ws_ypixel);
+	packet_send();
 }
 
 static void
@@ -1294,10 +1294,18 @@ static void readline_cb(char *line)
 	got_prompt = 0;
 }
 
+void
+client_set_prompt(u_char *prompt)
+{
+	got_prompt = 1;
+	rl_set_prompt(prompt);
+	rl_already_prompted = 1;
+	rl_on_new_line_with_prompt();
+}
+
 int
 client_simple_escape_filter(Channel *c, char *buf, int len)
 {
-	struct termios *tio;
 	int ret, oldlen;
 	if (c->extended_usage != CHAN_EXTENDED_WRITE)
 		return 0;
@@ -1307,7 +1315,6 @@ client_simple_escape_filter(Channel *c, char *buf, int len)
 	    buf, len);
 	if (ret < 0)
 		return ret;
-	tio = get_saved_tio();
 	/* If we're canonical, use readline */
 	if (is_cooked()) {
 		if (!got_prompt) {
@@ -1315,10 +1322,7 @@ client_simple_escape_filter(Channel *c, char *buf, int len)
 			c->output.buf[c->output.end] = 0;
 			while (ptr >= c->output.buf && *ptr != '\n')
 				ptr--;
-			rl_set_prompt(ptr+1);
-			rl_already_prompted = 1;
-			got_prompt = 1;
-			rl_on_new_line_with_prompt();
+			client_set_prompt(ptr+1);
 		}
 		len = c->input.end - c->input.offset - oldlen;
 		c->input.end -= len;
@@ -1329,6 +1333,7 @@ client_simple_escape_filter(Channel *c, char *buf, int len)
 			len--;
 		}
 	}
+	return ret;
 }
 
 static void
@@ -1611,6 +1616,130 @@ client_loop(int have_pty, int escape_char_arg, int ssh2_chan_id)
 	return exit_status;
 }
 
+int
+client_mux_loop(Channel *c, int escape_char_arg, int fd, int sid)
+{
+	fd_set *readset = NULL, *writeset = NULL;
+	double start_time;
+	int max_fd = 0, max_fd2 = 0;
+	u_int nalloc = 0;
+	char buf[100];
+
+	debug("Entering muxed interactive session.");
+
+	start_time = get_current_time();
+
+	/* Initialize variables. */
+	escape_pending1 = 0;
+	last_was_cr = 1;
+	exit_status = -1;
+	stdin_eof = 0;
+	buffer_high = 64 * 1024;
+	connection_in = fd;
+	max_fd = fd;
+	packet_set_connection(fd, fd);
+
+	quit_pending = 0;
+	escape_char1 = escape_char_arg;
+
+	client_init_dispatch();
+
+	session_ident = c->self;
+	channel_register_filter(session_ident,
+	    client_simple_escape_filter, NULL,
+	    client_filter_cleanup,
+	    client_new_escape_filter_ctx(escape_char_arg));
+	channel_register_cleanup(session_ident,
+	    client_channel_closed, 0);
+
+	/* Main loop of the client for the interactive session mode. */
+	while (!quit_pending) {
+
+		mux_check_winch(fd);
+
+		/*
+		 * Wait until we have something to do (something becomes
+		 * available on one of the descriptors).
+		 */
+		max_fd2 = max_fd;
+		client_wait_until_can_do_something(&readset, &writeset,
+		    &max_fd2, &nalloc, 0);
+
+		if (quit_pending)
+			break;
+
+		if (FD_ISSET(fd, readset)) {
+			int ret = mux_check_channel(c, fd, sid);
+			if (ret) return ret;
+		}
+
+		/* Do channel operations */
+		channel_after_select(readset, writeset);
+
+		if (quit_pending)
+			break;
+
+		if (buffer_len(&c->input))
+			mux_send_data(c, fd);
+
+		if (session_resumed) {
+			session_resumed = 0;
+		}
+	}
+
+	if (readset)
+		xfree(readset);
+	if (writeset)
+		xfree(writeset);
+
+	/* Terminate the session. */
+
+	/* Stop watching for window change. */
+	signal(SIGWINCH, SIG_DFL);
+
+	if (compat20) {
+		packet_start(SSH2_MSG_DISCONNECT);
+		packet_put_int(SSH2_DISCONNECT_BY_APPLICATION);
+		packet_put_cstring("disconnected by user");
+		packet_put_cstring(""); /* language tag */
+		packet_send();
+		packet_write_wait();
+	}
+
+	channel_free_all();
+
+	leave_raw_mode(force_tty_flag);
+
+	/* restore blocking io */
+	if (!isatty(fileno(stdin)))
+		unset_nonblock(fileno(stdin));
+	if (!isatty(fileno(stdout)))
+		unset_nonblock(fileno(stdout));
+	if (!isatty(fileno(stderr)))
+		unset_nonblock(fileno(stderr));
+
+	/*
+	 * If there was no shell or command requested, there will be no remote
+	 * exit status to be returned.  In that case, clear error code if the
+	 * connection was deliberately terminated at this end.
+	 */
+	if (no_shell_flag && received_signal == SIGTERM) {
+		received_signal = 0;
+		exit_status = 0;
+	}
+
+	if (received_signal)
+		fatal("Killed by signal %d.", (int) received_signal);
+
+	/* Clear and free any buffers. */
+	memset(buf, 0, sizeof(buf));
+	buffer_free(&stdin_buffer);
+
+	/* Return the exit status of the program. */
+	debug("Exit status %d", exit_status);
+	return exit_status;
+}
+
 /*********/
 
 static void
@@ -1819,6 +1948,25 @@ client_request_tun_fwd(int tun_mode, int local_tun, int remote_tun)
 	return 0;
 }
 
+void
+client_tty_change(Channel *c, Buffer *m)
+{
+	ttyext tx = { fileno(stdin), 0, get_saved_tio() };
+	int nbytes;
+	rl_deprep_terminal();
+	tty_parse_modes(&tx, m, &nbytes);
+	/* server supports passthru, just use cooked mode now */
+	if (tx.have_extproc)
+		cooked_mode();
+	if (!rl_buf) {
+		rl_callback_handler_install(NULL, readline_cb);
+		rl_already_prompted = 1;
+		rl_buf = &c->input;
+	}
+	if ((tx.tio->c_lflag & (ICANON|ECHO)) == (ICANON|ECHO))
+		rl_prep_terminal(1);
+}
+
 /* XXXX move to generic input handler */
 static void
 client_input_channel_open(int type, u_int32_t seq, void *ctxt)
@@ -1908,19 +2056,10 @@ client_input_channel_req(int type, u_int32_t seq, void *ctxt)
 		}
 		packet_check_eom();
 	} else if (strcmp(rtype, "tty-change") == 0 ) {
-		ttyext tx = { fileno(stdin), 0, get_saved_tio() };
-		int nbytes;
-		rl_deprep_terminal();
-		tty_parse_modes(&tx, &nbytes);
-		/* server supports passthru, just use cooked mode now */
-		cooked_mode();
-		if (!rl_buf) {
-			rl_callback_handler_install(NULL, readline_cb);
-			rl_already_prompted = 1;
-			rl_buf = &c->input;
-		}
-		if ((tx.tio->c_lflag & (ICANON|ECHO)) == (ICANON|ECHO))
-			rl_prep_terminal(1);
+		if (c->ctl_chan != -1)
+			mux_tty_change(c);
+		else
+			client_tty_change(c, packet_get_inpacket());
 	}
 	if (reply) {
 		packet_start(success ?

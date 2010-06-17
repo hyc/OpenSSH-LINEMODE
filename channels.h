@@ -55,7 +55,8 @@
 #define SSH_CHANNEL_ZOMBIE		14	/* Almost dead. */
 #define SSH_CHANNEL_MUX_LISTENER	15	/* Listener for mux conn. */
 #define SSH_CHANNEL_MUX_CLIENT		16	/* Conn. to mux slave */
-#define SSH_CHANNEL_MAX_TYPE		17
+#define SSH_CHANNEL_MUX_OPEN		17	/* open mux client */
+#define SSH_CHANNEL_MAX_TYPE		18
 
 struct Channel;
 typedef struct Channel Channel;
@@ -217,7 +218,6 @@ void	 channel_register_status_confirm(int, channel_confirm_cb *,
     channel_confirm_abandon_cb *, void *);
 void	 channel_cancel_cleanup(int);
 int	 channel_close_fd(int *);
-void	 channel_send_window_changes(void);
 
 /* protocol handler */
 

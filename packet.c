@@ -1886,6 +1886,18 @@ packet_get_output(void)
 }
 
 void *
+packet_get_inpacket(void)
+{
+	return (void *)&active_state->incoming_packet;
+}
+
+void *
+packet_get_outpacket(void)
+{
+	return (void *)&active_state->outgoing_packet;
+}
+
+void *
 packet_get_newkeys(int mode)
 {
 	return (void *)active_state->newkeys[mode];

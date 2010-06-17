@@ -33,6 +33,7 @@
 #include "includes.h"
 
 #include <sys/types.h>
+#include <sys/ioctl.h>
 #include <sys/param.h>
 #include <sys/stat.h>
 #include <sys/socket.h>
@@ -79,6 +80,7 @@
 #include "channels.h"
 #include "msg.h"
 #include "packet.h"
+#include "compat.h"
 #include "monitor_fdpass.h"
 #include "sshpty.h"
 #include "key.h"
@@ -135,6 +137,7 @@ static u_int muxserver_pid = 0;
 static Channel *mux_listener_channel = NULL;
 
 struct mux_master_state {
+	Channel *peer;
 	int hello_rcvd;
 };
 
@@ -146,6 +149,8 @@ struct mux_master_state {
 #define MUX_C_OPEN_FWD		0x10000006
 #define MUX_C_CLOSE_FWD		0x10000007
 #define MUX_C_NEW_STDIO_FWD	0x10000008
+#define MUX_C_DATA		0x10000009
+#define MUX_C_WINCH		0x1000000a
 #define MUX_S_OK		0x80000001
 #define MUX_S_PERMISSION_DENIED	0x80000002
 #define MUX_S_FAILURE		0x80000003
@@ -153,6 +158,8 @@ struct mux_master_state {
 #define MUX_S_ALIVE		0x80000005
 #define MUX_S_SESSION_OPENED	0x80000006
 #define MUX_S_REMOTE_PORT	0x80000007
+#define MUX_S_PROMPT	0x80000008
+#define MUX_S_TTY_CHANGE	0x80000009
 
 /* type codes for MUX_C_OPEN_FWD and MUX_C_CLOSE_FWD */
 #define MUX_FWD_LOCAL   1
@@ -161,17 +168,20 @@ struct mux_master_state {
 
 static void mux_session_confirm(int, int, void *);
 
-static int process_mux_master_hello(u_int, Channel *, Buffer *, Buffer *);
-static int process_mux_new_session(u_int, Channel *, Buffer *, Buffer *);
-static int process_mux_alive_check(u_int, Channel *, Buffer *, Buffer *);
-static int process_mux_terminate(u_int, Channel *, Buffer *, Buffer *);
-static int process_mux_open_fwd(u_int, Channel *, Buffer *, Buffer *);
-static int process_mux_close_fwd(u_int, Channel *, Buffer *, Buffer *);
-static int process_mux_stdio_fwd(u_int, Channel *, Buffer *, Buffer *);
+typedef int (muxhandler)(u_int, Channel *, Buffer *, Buffer *);
+static muxhandler process_mux_master_hello;
+static muxhandler process_mux_new_session;
+static muxhandler process_mux_alive_check;
+static muxhandler process_mux_terminate;
+static muxhandler process_mux_open_fwd;
+static muxhandler process_mux_close_fwd;
+static muxhandler process_mux_stdio_fwd;
+static muxhandler process_mux_winch;
+static muxhandler process_mux_data;
 
 static const struct {
 	u_int type;
-	int (*handler)(u_int, Channel *, Buffer *, Buffer *);
+	muxhandler *handler;
 } mux_master_handlers[] = {
 	{ MUX_MSG_HELLO, process_mux_master_hello },
 	{ MUX_C_NEW_SESSION, process_mux_new_session },
@@ -180,6 +190,8 @@ static const struct {
 	{ MUX_C_OPEN_FWD, process_mux_open_fwd },
 	{ MUX_C_CLOSE_FWD, process_mux_close_fwd },
 	{ MUX_C_NEW_STDIO_FWD, process_mux_stdio_fwd },
+	{ MUX_C_DATA, process_mux_data },
+	{ MUX_C_WINCH, process_mux_winch },
 	{ 0, NULL }
 };
 
@@ -302,6 +314,7 @@ process_mux_master_hello(u_int rid, Channel *c, Buffer *m, Buffer *r)
 static int
 process_mux_new_session(u_int rid, Channel *c, Buffer *m, Buffer *r)
 {
+	struct mux_master_state *state = (struct mux_master_state *)c->mux_ctx;
 	Channel *nc;
 	struct mux_session_confirm_ctx *cctx;
 	char *reserved, *cmd, *cp;
@@ -452,6 +465,7 @@ process_mux_new_session(u_int rid, Channel *c, Buffer *m, Buffer *r)
 
 	nc->ctl_chan = c->self;		/* link session -> control channel */
 	c->remote_id = nc->self; 	/* link control -> session channel */
+	state->peer = nc;
 
 	if (cctx->want_tty && escape_char != 0xffffffff) {
 		channel_register_filter(nc->self,
@@ -919,6 +933,37 @@ process_mux_stdio_fwd(u_int rid, Channel *c, Buffer *m, Buffer *r)
 	return 0;
 }
 
+static int
+process_mux_data(u_int rid, Channel *c, Buffer *m, Buffer *r)
+{
+	struct mux_master_state *state = (struct mux_master_state *)c->mux_ctx;
+	Channel *nc = state->peer;
+
+	buffer_append(&nc->input, buffer_ptr(m), buffer_len(m));
+	return 0;
+}
+
+static int
+process_mux_winch(u_int rid, Channel *c, Buffer *m, Buffer *r)
+{
+	struct mux_master_state *state = (struct mux_master_state *)c->mux_ctx;
+	Channel *nc = state->peer;
+	int i;
+
+	channel_request_start(nc->self, "window-change", 0);
+	i = buffer_get_int(m);
+	packet_put_int(i);	/* col */
+	i = buffer_get_int(m);
+	packet_put_int(i);	/* row */
+	i = buffer_get_int(m);
+	packet_put_int(i);	/* xpixel */
+	i = buffer_get_int(m);
+	packet_put_int(i);	/* ypixel */
+	packet_send();
+
+	return 0;
+}
+
 /* Channel callbacks fired on read/write from mux slave fd */
 static int
 mux_master_read_cb(Channel *c)
@@ -1080,6 +1125,51 @@ muxserver_listen(void)
 	    mux_listener_channel->self, mux_listener_channel->sock);
 }
 
+static u_char *
+mux_prompt_filter(Channel *c, u_char **data, u_int *dlen)
+{
+	u_char *buf = buffer_ptr(&c->output);
+	u_int len = buffer_len(&c->output);
+	if (buf[len-1] != '\n') {
+		Channel *mc;
+		u_int plen;
+
+		if ((mc = channel_by_id(c->ctl_chan)) == NULL)
+			fatal("%s: channel %d missing mux channel %d",
+				__func__, c->self, c->ctl_chan);
+
+		u_char *ptr = buf+len-1;
+		while (ptr >= buf && *ptr != '\n')
+			ptr--;
+		ptr++;
+		plen = len - (ptr - buf);
+
+		/* Append prompt message packet to control socket output queue */
+		buffer_put_int(&mc->output, plen + sizeof(int));
+		buffer_put_int(&mc->output, MUX_S_PROMPT);
+		buffer_append(&mc->output, ptr, plen);
+	}
+	*data = buf;
+	*dlen = len;
+	return buf;
+}
+
+void
+mux_tty_change(Channel *c)
+{
+	Channel *mc;
+	Buffer *p;
+
+	if ((mc = channel_by_id(c->ctl_chan)) == NULL)
+		fatal("%s: channel %d missing mux channel %d",
+			__func__, c->self, c->ctl_chan);
+
+	p = packet_get_inpacket();
+	buffer_put_int(&mc->output, buffer_len(p) + sizeof(int));
+	buffer_put_int(&mc->output, MUX_S_TTY_CHANGE);
+	buffer_append(&mc->output, buffer_ptr(p), buffer_len(p));
+}
+
 /* Callback on open confirmation in mux master for a mux client session. */
 static void
 mux_session_confirm(int id, int success, void *arg)
@@ -1129,6 +1219,13 @@ mux_session_confirm(int id, int success, void *arg)
 	client_session2_setup(id, cctx->want_tty, cctx->want_subsys,
 	    cctx->term, &cctx->tio, c->rfd, &cctx->cmd, cctx->env);
 
+	/* mux client will do all tty reads */
+	if (cctx->want_tty) {
+		close(c->rfd);
+		c->rfd = -1;
+		c->output_filter = mux_prompt_filter;
+	}
+
 	debug3("%s: sending success reply", __func__);
 	/* prepare reply */
 	buffer_init(&reply);
@@ -1177,6 +1274,14 @@ control_client_sigrelay(int signo)
 		kill(muxserver_pid, signo);
 
 	errno = save_errno;
+}
+
+static int got_winch;
+
+static void
+control_client_sigwinch(int signo)
+{
+	got_winch = 1;
 }
 
 static int
@@ -1537,6 +1642,7 @@ mux_client_request_session(int fd)
 	u_int i, rid, sid, esid, exitval, type, exitval_seen;
 	extern char **environ;
 	int devnull;
+	Channel *c;
 
 	debug3("%s: entering", __func__);
 
@@ -1630,35 +1736,51 @@ mux_client_request_session(int fd)
 	signal(SIGHUP, control_client_sighandler);
 	signal(SIGINT, control_client_sighandler);
 	signal(SIGTERM, control_client_sighandler);
-	signal(SIGWINCH, control_client_sigrelay);
 
-	if (tty_flag)
+	if (tty_flag) {
+		u_int window, packetmax;
+		signal(SIGWINCH, control_client_sigwinch);
 		enter_raw_mode(force_tty_flag);
 
-	/*
-	 * Stick around until the controlee closes the client_fd.
-	 * Before it does, it is expected to write an exit message.
-	 * This process must read the value and wait for the closure of
-	 * the client_fd; if this one closes early, the multiplex master will
-	 * terminate early too (possibly losing data).
-	 */
-	for (exitval = 255, exitval_seen = 0;;) {
-		buffer_clear(&m);
-		if (mux_client_read_packet(fd, &m) != 0)
-			break;
-		type = buffer_get_int(&m);
-		if (type != MUX_S_EXIT_MESSAGE) {
-			e = buffer_get_string(&m, NULL);
-			fatal("%s: master returned error: %s", __func__, e);
+		window = CHAN_SES_WINDOW_DEFAULT >> 1;
+		packetmax = CHAN_SES_PACKET_DEFAULT >> 1;
+
+		enable_compat20();
+		c = channel_new("session", SSH_CHANNEL_MUX_OPEN,
+			STDIN_FILENO, STDOUT_FILENO, STDERR_FILENO, window, packetmax,
+			CHAN_EXTENDED_WRITE, "mux-client-session", /*nonblock*/0);
+
+		exitval = client_mux_loop(c, options.escape_char, fd, sid);
+		if (exitval >= 0)
+			exitval_seen = 1;
+	} else {
+		signal(SIGWINCH, control_client_sigrelay);
+
+		/*
+		 * Stick around until the controlee closes the client_fd.
+		 * Before it does, it is expected to write an exit message.
+		 * This process must read the value and wait for the closure of
+		 * the client_fd; if this one closes early, the multiplex master will
+		 * terminate early too (possibly losing data).
+		 */
+		for (exitval = 255, exitval_seen = 0;;) {
+			buffer_clear(&m);
+			if (mux_client_read_packet(fd, &m) != 0)
+				break;
+			type = buffer_get_int(&m);
+			if (type != MUX_S_EXIT_MESSAGE) {
+				e = buffer_get_string(&m, NULL);
+				fatal("%s: master returned error: %s", __func__, e);
+			}
+			if ((esid = buffer_get_int(&m)) != sid)
+				fatal("%s: exit on unknown session: my id %u theirs %u",
+					__func__, sid, esid);
+			debug("%s: master session id: %u", __func__, sid);
+			if (exitval_seen)
+				fatal("%s: exitval sent twice", __func__);
+			exitval = buffer_get_int(&m);
+			exitval_seen = 1;
 		}
-		if ((esid = buffer_get_int(&m)) != sid)
-			fatal("%s: exit on unknown session: my id %u theirs %u",
-			    __func__, sid, esid);
-		debug("%s: master session id: %u", __func__, sid);
-		if (exitval_seen)
-			fatal("%s: exitval sent twice", __func__);
-		exitval = buffer_get_int(&m);
-		exitval_seen = 1;
 	}
 
 	close(fd);
@@ -1774,6 +1896,89 @@ mux_client_request_stdio_fwd(int fd)
 		    __func__, strerror(errno));
 	}
 	fatal("%s: master returned unexpected message %u", __func__, type);
+}
+
+void
+mux_check_winch(int fd)
+{
+	Buffer m;
+	struct winsize ws;
+
+	if (!got_winch)
+		return;
+
+	got_winch = 0;
+
+	if (ioctl(fileno(stdin), TIOCGWINSZ, &ws) < 0)
+		return;
+
+	buffer_init(&m);
+	buffer_put_int(&m, MUX_C_WINCH);
+	buffer_put_int(&m, 0);
+	buffer_put_int(&m, (u_int)ws.ws_row);
+	buffer_put_int(&m, (u_int)ws.ws_col);
+	buffer_put_int(&m, (u_int)ws.ws_xpixel);
+	buffer_put_int(&m, (u_int)ws.ws_ypixel);
+
+	if (mux_client_write_packet(fd, &m) != 0)
+		fatal("%s: write packet: %s", __func__, strerror(errno));
+
+	buffer_free(&m);
+}
+
+int
+mux_check_channel(Channel *c, int fd, u_int sid)
+{
+	Buffer m;
+	u_int type, esid, exitval;
+
+	buffer_init(&m);
+	if (mux_client_read_packet(fd, &m) != 0) {
+		error("%s: read from channel failed: %s",
+		    __func__, strerror(errno));
+		buffer_free(&m);
+		return -1;
+	}
+	type = buffer_get_int(&m);
+	switch(type) {
+	case MUX_S_EXIT_MESSAGE:
+		if ((esid = buffer_get_int(&m)) != sid)
+			fatal("%s: exit on unknown session: my id %u theirs %u",
+			    __func__, sid, esid);
+		debug("%s: master session id: %u", __func__, sid);
+		exitval = buffer_get_int(&m);
+		buffer_free(&m);
+		return exitval;
+	case MUX_S_PROMPT:
+		client_set_prompt(buffer_ptr(&m));
+		break;
+	case MUX_S_TTY_CHANGE:
+		client_tty_change(c, &m);
+		break;
+	default:
+		buffer_free(&m);
+		error("%s: unexpected response from channel 0x%08x",
+		    __func__, type);
+		return -1;
+	}
+	return 0;
+}
+
+void
+mux_send_data(Channel *c, int fd)
+{
+	Buffer m;
+
+	buffer_init(&m);
+	buffer_put_int(&m, MUX_C_DATA);
+	buffer_put_int(&m, 0);
+	buffer_append(&m, buffer_ptr(&c->input), buffer_len(&c->input));
+
+	if (mux_client_write_packet(fd, &m) != 0)
+		fatal("%s: write packet: %s", __func__, strerror(errno));
+
+	buffer_free(&m);
+	buffer_clear(&c->input);
 }
 
 /* Multiplex client main loop. */

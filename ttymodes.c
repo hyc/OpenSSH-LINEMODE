@@ -344,27 +344,27 @@ end:
 
 /*
  * Decodes terminal modes for the terminal referenced by fd in a portable
- * manner from a packet being read.
+ * manner from the given buffer.
  */
 void
-tty_parse_modes(ttyext *tx, int *n_bytes_ptr)
+tty_parse_modes(ttyext *tx, Buffer *m, int *n_bytes_ptr)
 {
 	struct termios *tio;
 	int opcode, baud;
 	int n_bytes = 0;
 	int failure = 0;
-	u_int (*get_arg)(void);
+	u_int (*get_arg)(Buffer *m);
 	int arg_size;
 	int fd = tx->ttyfd;
 
 	if (compat20) {
-		*n_bytes_ptr = packet_get_int();
+		*n_bytes_ptr = buffer_get_int(m);
 		if (*n_bytes_ptr == 0)
 			return;
-		get_arg = packet_get_int;
+		get_arg = buffer_get_int;
 		arg_size = 4;
 	} else {
-		get_arg = packet_get_char;
+		get_arg = buffer_get_char;
 		arg_size = 1;
 	}
 
@@ -387,10 +387,13 @@ tty_parse_modes(ttyext *tx, int *n_bytes_ptr)
 
 	for (;;) {
 		n_bytes += 1;
-		opcode = packet_get_char();
+		opcode = buffer_get_char(m);
 #ifdef EXTPROC
-		if (opcode == 63)
+		/* Don't change our extproc setting, just note it's available */
+		if (opcode == 63) {
 			tx->have_extproc = 1;
+			continue;
+		}
 #endif
 		switch (opcode) {
 		case TTY_OP_END:
@@ -400,7 +403,7 @@ tty_parse_modes(ttyext *tx, int *n_bytes_ptr)
 		case TTY_OP_ISPEED_PROTO1:
 		case TTY_OP_ISPEED_PROTO2:
 			n_bytes += 4;
-			baud = packet_get_int();
+			baud = buffer_get_int(m);
 			if (failure != -1 &&
 			    cfsetispeed(tio, baud_to_speed(baud)) == -1)
 				error("cfsetispeed failed for %d", baud);
@@ -410,7 +413,7 @@ tty_parse_modes(ttyext *tx, int *n_bytes_ptr)
 		case TTY_OP_OSPEED_PROTO1:
 		case TTY_OP_OSPEED_PROTO2:
 			n_bytes += 4;
-			baud = packet_get_int();
+			baud = buffer_get_int(m);
 			if (failure != -1 &&
 			    cfsetospeed(tio, baud_to_speed(baud)) == -1)
 				error("cfsetospeed failed for %d", baud);
@@ -419,12 +422,12 @@ tty_parse_modes(ttyext *tx, int *n_bytes_ptr)
 #define TTYCHAR(NAME, OP) \
 	case OP: \
 	  n_bytes += arg_size; \
-	  tio->c_cc[NAME] = special_char_decode(get_arg()); \
+	  tio->c_cc[NAME] = special_char_decode(get_arg(m)); \
 	  break;
 #define TTYMODE(NAME, FIELD, OP) \
 	case OP: \
 	  n_bytes += arg_size; \
-	  if (get_arg()) \
+	  if (get_arg(m)) \
 	    tio->FIELD |= NAME; \
 	  else \
 	    tio->FIELD &= ~NAME;	\
@@ -448,11 +451,11 @@ tty_parse_modes(ttyext *tx, int *n_bytes_ptr)
 				 */
 				if (opcode > 0 && opcode < 128) {
 					n_bytes += 1;
-					(void) packet_get_char();
+					(void) buffer_get_char(m);
 					break;
 				} else if (opcode >= 128 && opcode < 160) {
 					n_bytes += 4;
-					(void) packet_get_int();
+					(void) buffer_get_int(m);
 					break;
 				} else {
 					/*
@@ -476,7 +479,7 @@ tty_parse_modes(ttyext *tx, int *n_bytes_ptr)
 				 */
 				if (opcode > 0 && opcode < 160) {
 					n_bytes += 4;
-					(void) packet_get_int();
+					(void) buffer_get_int(m);
 					break;
 				} else {
 					logit("parse_tty_modes: unknown opcode %d",
@@ -531,7 +534,7 @@ tty_new_modes(void *old, char *cnew, int len, int all)
 		put_arg(&buf, special_char_encode(tnew.c_cc[NAME])); }
 
 #define TTYMODE(NAME, FIELD, OP) \
-	if (all || (NAME != EXTPROC && (told->FIELD & NAME) != (tnew.FIELD & NAME))) { \
+	if (all || (told->FIELD & NAME) != (tnew.FIELD & NAME)) { \
 		buffer_put_char(&buf, OP); \
 		put_arg(&buf, ((tnew.FIELD & NAME) != 0)); }
 

@@ -94,7 +94,7 @@ typedef struct ttyext {
 } ttyext;
 
 void	 tty_make_modes(int, struct termios *);
-void	 tty_parse_modes(ttyext *, int *);
+void	 tty_parse_modes(ttyext *, Buffer *m, int *);
 int	 tty_new_modes(void *old, char *buf, int len, int all);
 
 void	 packet_set_alive_timeouts(int);
@@ -121,5 +121,7 @@ void	 packet_restore_state(void);
 
 void	*packet_get_input(void);
 void	*packet_get_output(void);
+void	*packet_get_inpacket(void);
+void	*packet_get_outpacket(void);
 
 #endif				/* PACKET_H */
