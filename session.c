@@ -2182,7 +2182,7 @@ session_pty_req(Session *s)
 	if (!compat20)
 		n_bytes = packet_remaining();
 	{
-		ttyext tx = { s->ttyfd, 0, NULL };
+		ttyext tx = { NULL, s->ttyfd, 0 };
 		tty_parse_modes(&tx, packet_get_inpacket(), &n_bytes);
 		s->have_extproc = tx.have_extproc;
 		s->termios = tx.tio;
@@ -2296,6 +2296,31 @@ session_break_req(Session *s)
 }
 
 static int
+session_signal_req(Session *s)
+{
+#ifdef TIOCSIG
+	char *name;
+	int len;
+	int sig;
+
+	name = packet_get_string(&len);
+	packet_check_eom();
+	if (!strcmp(name, "INT"))
+		sig = SIGINT;
+	else if (!strcmp(name, "QUIT"))
+		sig = SIGQUIT;
+	else if (!strcmp(name, "TSTP"))
+		sig = SIGTSTP;
+	else sig = 0;
+	if (!sig || ioctl(s->ptyfd, TIOCSIG, &sig))
+		return 0;
+	return 1;
+#else
+	return 0;
+#endif
+}
+
+static int
 session_env_req(Session *s)
 {
 	char *name, *val;
@@ -2385,6 +2410,8 @@ session_input_channel_req(Channel *c, const char *rtype)
 		success = session_window_change_req(s);
 	} else if (strcmp(rtype, "break") == 0) {
 		success = session_break_req(s);
+	} else if (strcmp(rtype, "signal") == 0) {
+		success = session_signal_req(s);
 	}
 
 	return success;
