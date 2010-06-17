@@ -392,6 +392,8 @@ tty_parse_modes(ttyext *tx, Buffer *m, int *n_bytes_ptr)
 		/* Don't change our extproc setting, just note it's available */
 		if (opcode == 63) {
 			tx->have_extproc = 1;
+			get_arg(m);
+			n_bytes += arg_size;
 			continue;
 		}
 #endif
@@ -492,9 +494,9 @@ tty_parse_modes(ttyext *tx, Buffer *m, int *n_bytes_ptr)
 
 set:
 	if (*n_bytes_ptr != n_bytes) {
-		*n_bytes_ptr = n_bytes;
 		logit("parse_tty_modes: n_bytes_ptr != n_bytes: %d %d",
 		    *n_bytes_ptr, n_bytes);
+		*n_bytes_ptr = n_bytes;
 		return;		/* Don't process bytes passed */
 	}
 	if (failure == -1)
