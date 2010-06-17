@@ -2183,7 +2183,7 @@ session_pty_req(Session *s)
 		n_bytes = packet_remaining();
 	{
 		ttyext tx = { s->ttyfd, 0, NULL };
-		tty_parse_modes(&tx, &n_bytes);
+		tty_parse_modes(&tx, packet_get_inpacket(), &n_bytes);
 		s->have_extproc = tx.have_extproc;
 		s->termios = tx.tio;
 	}
