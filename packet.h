@@ -88,9 +88,10 @@ void	 packet_send_ignore(int);
 void	 packet_add_padding(u_char);
 
 typedef struct ttyext {
-	int ttyfd;
-	int have_extproc;
 	struct termios *tio;
+	int ttyfd;
+	int is_client;
+	int have_extproc;
 } ttyext;
 
 void	 tty_make_modes(int, struct termios *);

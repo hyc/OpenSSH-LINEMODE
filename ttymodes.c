@@ -356,6 +356,7 @@ tty_parse_modes(ttyext *tx, Buffer *m, int *n_bytes_ptr)
 	u_int (*get_arg)(Buffer *m);
 	int arg_size;
 	int fd = tx->ttyfd;
+	int isig;
 
 	if (compat20) {
 		*n_bytes_ptr = buffer_get_int(m);
@@ -502,9 +503,17 @@ set:
 	if (failure == -1)
 		return;		/* Packet parsed ok but tcgetattr() failed */
 
+	if (tx->is_client) {
+		isig = tio->c_lflag & ISIG;
+		tio->c_lflag &= ~ISIG;
+	}
+
 	/* Set the new modes for the terminal. */
 	if (tcsetattr(fd, TCSANOW, tio) == -1)
 		logit("Setting tty modes failed: %.100s", strerror(errno));
+
+	if (tx->is_client)
+		tio->c_lflag |= isig;
 }
 
 /*

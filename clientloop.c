@@ -1281,17 +1281,32 @@ client_filter_cleanup(int cid, void *ctx)
 }
 
 static Buffer *rl_buf;
+static int rl_cmp_cnt;
 static void readline_cb(char *line)
 {
 	if (!line) {
 		buffer_put_char(rl_buf, '\004');
+		got_prompt = 0;
 	} else {
 		buffer_append(rl_buf, line, strlen(line));
-		buffer_put_char(rl_buf, '\n');
-		if (*line)
-			add_history(line);
+		if (rl_cmp_cnt) {
+			buffer_put_char(rl_buf, rl_completion_invoking_key);
+		} else {
+			buffer_put_char(rl_buf, '\n');
+			if (*line)
+				add_history(line);
+			got_prompt = 0;
+		}
 	}
-	got_prompt = 0;
+}
+
+static char **
+readline_cmp(const char *text, int start, int end)
+{
+	rl_attempted_completion_over = 1;
+	rl_cmp_cnt++;
+	rl_done = 1;
+	return NULL;
 }
 
 void
@@ -1301,6 +1316,14 @@ client_set_prompt(u_char *prompt)
 	rl_set_prompt(prompt);
 	rl_already_prompted = 1;
 	rl_on_new_line_with_prompt();
+}
+
+static void
+sendsig(Channel *c, char *sig)
+{
+	channel_request_start(c->self, "signal", 0);
+	packet_put_cstring(sig);
+	packet_send();
 }
 
 int
@@ -1317,10 +1340,11 @@ client_simple_escape_filter(Channel *c, char *buf, int len)
 		return ret;
 	/* If we're canonical, use readline */
 	if (is_cooked()) {
+		struct termios *tio = get_saved_tio();
 		if (!got_prompt) {
 			u_char *ptr = c->output.buf + c->output.end;
 			c->output.buf[c->output.end] = 0;
-			while (ptr >= c->output.buf && *ptr != '\n')
+			while (ptr >= c->output.buf && *ptr != '\n' && *ptr != '\r')
 				ptr--;
 			client_set_prompt(ptr+1);
 		}
@@ -1328,6 +1352,26 @@ client_simple_escape_filter(Channel *c, char *buf, int len)
 		c->input.end -= len;
 		memcpy(buf, c->input.buf + c->input.end, len);
 		while (len) {
+			if (*buf == '\n' || *buf == '\r')
+				rl_cmp_cnt = 0;
+			while (tio->c_lflag & ISIG) {
+				if (*buf == tio->c_cc[VINTR]) {
+					rl_echo_signal_char(SIGINT);
+					sendsig(c, "INT");
+				} else if (*buf == tio->c_cc[VQUIT]) {
+					rl_echo_signal_char(SIGQUIT);
+					sendsig(c, "QUIT");
+				} else if (*buf == tio->c_cc[VSUSP]) {
+					rl_echo_signal_char(SIGTSTP);
+					sendsig(c, "TSTP");
+				} else 
+					break;
+				buf++;
+				len--;
+				rl_free_line_state();
+				break;
+			}
+
 			rl_stuff_char(*buf++);
 			rl_callback_read_char();
 			len--;
@@ -1951,7 +1995,7 @@ client_request_tun_fwd(int tun_mode, int local_tun, int remote_tun)
 void
 client_tty_change(Channel *c, Buffer *m)
 {
-	ttyext tx = { fileno(stdin), 0, get_saved_tio() };
+	ttyext tx = { get_saved_tio(), fileno(stdin), 1 };
 	int nbytes;
 	rl_deprep_terminal();
 	tty_parse_modes(&tx, m, &nbytes);
@@ -1959,11 +2003,12 @@ client_tty_change(Channel *c, Buffer *m)
 	if (tx.have_extproc)
 		cooked_mode();
 	if (!rl_buf) {
+		rl_readline_name = "OpenSSH";
 		rl_callback_handler_install(NULL, readline_cb);
-		rl_already_prompted = 1;
 		rl_buf = &c->input;
+		rl_attempted_completion_function = readline_cmp;
 	}
-	if ((tx.tio->c_lflag & (ICANON|ECHO)) == (ICANON|ECHO))
+	if (is_cooked())
 		rl_prep_terminal(1);
 }
 
