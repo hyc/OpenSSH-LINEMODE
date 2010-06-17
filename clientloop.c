@@ -1281,7 +1281,6 @@ client_filter_cleanup(int cid, void *ctx)
 }
 
 static Buffer *rl_buf;
-static int rl_cmp_cnt;
 static void readline_cb(char *line)
 {
 	if (!line) {
@@ -1289,8 +1288,9 @@ static void readline_cb(char *line)
 		got_prompt = 0;
 	} else {
 		buffer_append(rl_buf, line, strlen(line));
-		if (rl_cmp_cnt) {
+		if (rl_completion_invoking_key) {
 			buffer_put_char(rl_buf, rl_completion_invoking_key);
+			rl_completion_invoking_key = 0;
 		} else {
 			buffer_put_char(rl_buf, '\n');
 			if (*line)
@@ -1304,7 +1304,6 @@ static char **
 readline_cmp(const char *text, int start, int end)
 {
 	rl_attempted_completion_over = 1;
-	rl_cmp_cnt++;
 	rl_done = 1;
 	return NULL;
 }
@@ -1352,28 +1351,31 @@ client_simple_escape_filter(Channel *c, char *buf, int len)
 		c->input.end -= len;
 		memcpy(buf, c->input.buf + c->input.end, len);
 		while (len) {
-			if (*buf == '\n' || *buf == '\r')
-				rl_cmp_cnt = 0;
-			while (tio->c_lflag & ISIG) {
+			int sig = 0;
+			char *sigtxt;
+			if (tio->c_lflag & ISIG) {
 				if (*buf == tio->c_cc[VINTR]) {
-					rl_echo_signal_char(SIGINT);
-					sendsig(c, "INT");
+					sig = SIGINT;
+					sigtxt = "INT";
 				} else if (*buf == tio->c_cc[VQUIT]) {
-					rl_echo_signal_char(SIGQUIT);
-					sendsig(c, "QUIT");
+					sig = SIGQUIT;
+					sigtxt = "QUIT";
 				} else if (*buf == tio->c_cc[VSUSP]) {
-					rl_echo_signal_char(SIGTSTP);
-					sendsig(c, "TSTP");
-				} else 
-					break;
-				buf++;
-				len--;
-				rl_free_line_state();
-				break;
+					sig = SIGTSTP;
+					sigtxt = "TSTP";
+				}
 			}
-
-			rl_stuff_char(*buf++);
-			rl_callback_read_char();
+			if (sig) {
+				sendsig(c, sigtxt);
+				rl_echo_signal_char(sig);
+				rl_initialize();
+				rl_already_prompted = 1;
+				rl_on_new_line_with_prompt();
+				buf++;
+			} else {
+				rl_stuff_char(*buf++);
+				rl_callback_read_char();
+			}
 			len--;
 		}
 	}
@@ -2008,8 +2010,13 @@ client_tty_change(Channel *c, Buffer *m)
 		rl_buf = &c->input;
 		rl_attempted_completion_function = readline_cmp;
 	}
-	if (is_cooked())
+	if (is_cooked()) {
+		struct termios tio;
 		rl_prep_terminal(1);
+		tcgetattr(tx.ttyfd, &tio);
+		tio.c_lflag &= ~ISIG;
+		tcsetattr(tx.ttyfd, TCSANOW, &tio);
+	}
 }
 
 /* XXXX move to generic input handler */
@@ -2163,7 +2170,7 @@ client_session2_setup(int id, int want_tty, int want_subsystem,
 		packet_put_int((u_int)ws.ws_ypixel);
 		if (tiop == NULL)
 			tiop = get_saved_tio();
-		tty_make_modes(-1, tiop);
+		tty_make_modes(in_fd, tiop);
 		packet_send();
 		/* XXX wait for reply */
 		c->client_tty = 1;

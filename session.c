@@ -2312,7 +2312,7 @@ session_signal_req(Session *s)
 	else if (!strcmp(name, "TSTP"))
 		sig = SIGTSTP;
 	else sig = 0;
-	if (!sig || ioctl(s->ptyfd, TIOCSIG, &sig))
+	if (!sig || ioctl(s->ptyfd, TIOCSIG, (char *)sig))
 		return 0;
 	return 1;
 #else
