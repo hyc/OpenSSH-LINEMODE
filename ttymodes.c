@@ -522,9 +522,9 @@ set:
  * being constructed.
  */
 int
-tty_new_modes(void *old, char *cnew, int len, int all)
+tty_new_modes(void *old, int fd, int all)
 {
-	struct termios *told = old, tnew = *told;
+	struct termios *told = old, tnew;
 	Buffer buf;
 	void (*put_arg)(Buffer *, u_int);
 	int ret = 0;
@@ -536,7 +536,10 @@ tty_new_modes(void *old, char *cnew, int len, int all)
 		put_arg = (void (*)(Buffer *, u_int)) buffer_put_char;
 	}
 
-	memcpy(&tnew, cnew, len);
+	if (tcgetattr(fd, &tnew) == -1) {
+		logit("tcgetattr: %.100s", strerror(errno));
+		goto end;
+	}
 
 	/* Store values of changed mode flags. */
 #define TTYCHAR(NAME, OP) \

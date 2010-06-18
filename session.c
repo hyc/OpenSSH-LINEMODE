@@ -259,12 +259,15 @@ pty_pkt_filter(Channel *c, char *buf, int len)
 {
 	if (buf[0] & TIOCPKT_IOCTL) {
 		Session *s = c->filter_ctx;
-		/* read termios struct and send diff */
+		/* read termios struct and send diff:
+		 * BSD sends the termios data here, Linux doesn't.
+		 * Just ignore the data and explicitly retrieve it.
+		 */
 		packet_start(SSH2_MSG_CHANNEL_REQUEST);
 		packet_put_int(c->remote_id);
 		packet_put_cstring("tty-change");
 		packet_put_char(0);
-		if (tty_new_modes(s->termios, buf+1, len-1, !s->set_modes))
+		if (tty_new_modes(s->termios, c->rfd, !s->set_modes))
 			packet_send();
 
 		s->set_modes = 1;
